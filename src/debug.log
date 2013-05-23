@@ -1,0 +1,101 @@
+Debug Log []
+ Linux
+build target[linux+shadow+pam]
+Fri Nov 30 19:50:39 2012
+
+byteorder=0
+Active connection: [none]
+prescan arg=e
+prescan arg=v
+prescan arg=/
+prescan arg=t
+prescan arg=t
+prescan arg=y
+fatal[missing name in -y]=0
+sysinit jchdlr: SIG_DFL
+conbgt process group test=0
+SVR4ORPOSIX jc test...
+sysconf(_SC_JOB_CONTROL)[jc]=1
+conbgt jc=1
+conbgt jcshell=1
+conbgt isatty test=1
+conbgt backgrd=0
+congm getting modes
+sysinit ttyname(0)[/dev/pts/0]
+sysinit CTTNAM[/dev/tty]
+sysinit cttnam[/dev/pts/0]
+ttgwsiz TIOCGWINSZ=0
+ttgwsiz tt_rows=24
+ttgwsiz tt_cols=80
+sysinit uname machine[x86_64]
+sysinit uname sysname[Linux]
+sysinit uname release[2.6.32-41-generic]
+sysinit uname version[#94-Ubuntu SMP Fri Jul 6 18:00:34 UTC 2012]
+sysinit uidbuf from USER[]
+sysinit final uidbuf[caiogustavo]
+zgtdir SVORPOSIX CWDBL=4096
+sysinit startupdir[/home/caiogustavo/Dropbox/Projeto Prótese/Programando/]
+fatal[missing name in -y]=0
+lookup cache size=16
+lookup calls ....=17
+lookup cache hits=0
+lookup start hits=17
+lookup loop iterations=98
+CMSTATS[0]=-1
+CMSTATS[1]=-1
+doexit exitstat=1
+doexit code=1
+doexit xitsta=0
+doexit about to doclean
+popclvl cmdlvl=0
+popclvl cmdlvl=0
+setint=3
+conint conistate=0
+conbgt process group test=0
+SVR4ORPOSIX jc test...
+sysconf(_SC_JOB_CONTROL)[jc]=1
+conbgt jc=1
+conbgt jcshell=1
+conbgt isatty test=1
+conbgt backgrd=0
+conint backgrd=0
+conint jc=1
+conint foreground catching signals, jc=1
+concb constate=0
+concb cgmf=1
+concb backgrd=0
+concb ttyfd=-1
+concb ttfdflg=0
+concb isatty=1
+concb xsuspend=1
+concb cccbrk.c_flag=35387
+concb c_cc[VINTR]=3
+concb x=0
+concb errno=0
+concb returns=0
+popclvl xcmdsrc=0
+popclvl tlevel=-1
+cmini dpx=1
+doclean calling dologend
+dologend ftpisconnected=0
+dologend dialog=0
+dologend cxlogbuf[0]=0
+dologend ckxlogging=0
+zclose file number=9
+zclose file number=10
+zclose file number=2
+doclean chkfn ZOFILE[]=0
+doclean keep[]=2
+zclose file number=3
+zclose file number=8
+zclose file number=11
+doclean exithangup=1
+MLOOK[on_exit]=7
+conres cgmf=1
+conres constate=1
+conres isatty ok
+conres restoring tcsetattr
+conres returns=0
+doclean DeleteStartupFile[]=0
+doexit ikdbopen=0
+C-Kermit EXIT status=1

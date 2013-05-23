@@ -1,0 +1,50 @@
+#include<stdio.h>
+#include "communication.h"
+
+
+
+int i2c_dev;
+int spi_dev;
+int status;
+
+int init_devices(IMU_PARAM_STRUCT *imu_param, SPI_PARAM_STRUCT *spi_param)
+{
+  
+  if ((ioctl(i2c_dev, I2C_SLAVE, ADD_HMC5883)) < 0) {
+		perror("ioctl(I2C_SLAVE) mag");
+		return FAILURE;
+  }
+  if( (mag_init(i2c_dev, imu_param->mag.rate, imu_param->mag.range, imu_param->mag.samples_avg, imu_param->mag.meas_mode, imu_param->mag.op_mode))< 0)
+  {
+      perror("Error in magnetometer initialization");
+      return FAILURE;
+  }
+  if( ioctl(i2c_dev, I2C_SLAVE, ADD_ITG3200) < 0) {
+		perror("ioctl(I2C_SLAVE) gyr");
+		return FAILURE;
+  } 
+  if( gyr_init(i2c_dev, imu_param->gyr.rate, imu_param->gyr.lpf_bw, imu_param->gyr.clk_source, imu_param->gyr.act)<0 )
+  {
+      perror("Error in gyrometer initialization");
+      return FAILURE;
+  }
+  if ( (ioctl(i2c_dev, I2C_SLAVE, ADD_ADXL345)) < 0) {
+	perror("ioctl(I2C_SLAVE) acc");
+	return FAILURE;
+  }  
+  if( acc_init(i2c_dev, imu_param->acc.full_res, imu_param->acc.rate, imu_param->acc.range)<0)
+  {
+	perror("Error in accelerometer initialization");
+	return FAILURE;
+  }
+
+  if ((spi_dev=spi_init(spi_param->mode,spi_param->speed,spi_param->cs))<0) 
+  {
+    perror("Error in SPI device initialization");
+    return FAILURE;
+  }
+}
+
+int read_all_data()
+{
+}

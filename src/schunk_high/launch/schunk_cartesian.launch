@@ -1,0 +1,6 @@
+<launch>
+  <rosparam command="load" file="$(find schunk_low)/config/schunk2.yaml" />
+  <node name="schunk_low_node" pkg="schunk_low" type="schunk_low_control_sync" />
+  <node name="joy_nome" pkg="joy" type="joy_node" />
+  <node name="schunk_joy_high_node" pkg="schunk_joy" type="schunk_joy_high" />
+</launch>
