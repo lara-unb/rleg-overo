@@ -1,9 +1,9 @@
-/*Function: control_main
+/**Function: control_main
  * Summary:      Calculate the control signal
- * Parameters:   t_task_1_global containing the ...
- *               imu_data containing data from accelerometer, gyrometer and magnetometer
- *               eff_data containing data from load cell
- *               mra_data struct containing the control signal
+ * @param  t_task_1_global containing the ...
+ * @param  imu_data containing data from accelerometer, gyrometer and magnetometer
+ * @param  eff_data containing data from load cell
+ * @param  mra_data struct containing the control signal
  * Return:       nothing
  */
 
