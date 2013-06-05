@@ -46,12 +46,18 @@ typedef struct spi_param{
     int spi_dev;
 }SPI_PARAM_STRUCT;
 
+/**
+* Vector definition
+*/
 typedef struct dataxyz{
     short int x;
     short int y;
     short int z;
 }DATA_XYZ;
 
+/**
+* Vector definition on double
+*/
 typedef struct dataxyzdouble{
     double x;
     double y;
