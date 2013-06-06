@@ -1,10 +1,10 @@
-/*
-Author: Caio Gustavo Mesquita Ângelo
-Rev 0 - 12/11/2012
-RLEG project - 2012
-
-Implements the I2C communication between Gumstix Overo Fire and ITG3200
-*/
+/**
+ * @author Caio Gustavo Mesquita Ângelo
+ * Rev 0 - 12/11/2012
+ * RLEG project - 2012
+ * 
+ * Implements the I2C communication between Gumstix Overo Fire and ITG3200
+ */
 #include"imu_functions.h"
 
 int gyr_write_reg(int i2c_dev, uint8_t reg, uint8_t data)

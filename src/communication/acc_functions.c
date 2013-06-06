@@ -1,10 +1,11 @@
-/*
-Author: Caio Gustavo Mesquita Ângelo
-Rev 0 - 11/11/2012
-RLEG project - 2012
-
-Implements the I2C communication between Gumstix Overo Fire and ADXL345
-*/
+/**
+ * Rev 0 - 11/11/2012
+ * RLEG project - 2012
+ *
+ * Implements the I2C communication between Gumstix Overo Fire and ADXL345
+ * @author Caio Gustavo Mesquita Ângelo
+ * @headerfile imu_functions.h ""
+ */
 #include "imu_functions.h"
 
 int acc_init(int i2c_dev, uint8_t full_res, uint16_t rate, uint8_t range)
@@ -31,13 +32,13 @@ int acc_init(int i2c_dev, uint8_t full_res, uint16_t rate, uint8_t range)
   
   if((acc_write_reg(i2c_dev, ACC_DATA_FORMAT, data))<0){
     perror("Data Format unsuccesful");
-    return -1;
+    return FAILURE;
   }
   
   data=ACC_POWER_CTL_MEAS_MODE;
   if((acc_write_reg(i2c_dev, ACC_POWER_CTL, data))<0){
     perror("Power Control unsuccesful");
-    return -1;
+    return FAILURE;
   }
   
   switch(rate){
@@ -73,14 +74,14 @@ int acc_init(int i2c_dev, uint8_t full_res, uint16_t rate, uint8_t range)
       break;
     default:
       perror("Wrong rate value");
-      return -1;
+      return FAILURE;
   }
   if((acc_write_reg(i2c_dev, ACC_BW_RATE, data))<0){
     perror("Write in BW_RATE unsuccesful");
-    return -1;
+    return FAILURE;
   }
   
-  return 1;
+  return SUCCESS;
 }
 
 int acc_write_reg(int i2c_dev, uint8_t reg, uint8_t data)
@@ -94,15 +95,15 @@ int acc_write_reg(int i2c_dev, uint8_t reg, uint8_t data)
       reg==ACC_DATAX0 || reg==ACC_DATAX1 || reg==ACC_DATAY0 || reg==ACC_DATAY1 || reg==ACC_DATAZ0 || reg==ACC_DATAZ1)
   {
       perror("Write unsucessful: Read-Only Register");
-      return -1;
+      return FAILURE;
   }
 	
   if ((write(i2c_dev, &reg_data, 2)) != 2) { 		 
 	  perror("Write unsuccessful");
-	  return -1;
+	  return FAILURE;
   }
 
-  return 1;
+  return SUCCESS;
 }
 
 uint8_t* acc_read_reg(int i2c_dev, uint8_t reg, uint8_t count)
