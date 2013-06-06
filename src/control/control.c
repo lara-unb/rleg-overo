@@ -1,10 +1,12 @@
-/**Function: control_main
+/** Function: control_main
  * Summary:      Calculate the control signal
+ *
  * @param  t_task_1_global containing the ...
  * @param  imu_data containing data from accelerometer, gyrometer and magnetometer
  * @param  eff_data containing data from load cell
  * @param  mra_data struct containing the control signal
- * Return:       nothing
+ *
+ * @return  nothing
  */
 
 void control_main (t_task_1_global, &imu_data, &eff_data, &mra_data){
@@ -24,7 +26,5 @@ int heelstrike_threshold = 3;
 	} else if (t_gait>(0.6*gait_cycle) && t_gait<(0.8*gait_cycle)){
 	  mra_data.v_ctl=4000;
 	}
-
-
 
 }
