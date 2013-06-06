@@ -47,7 +47,7 @@ typedef struct spi_param{
 }SPI_PARAM_STRUCT;
 
 /**
-* Vector definition
+* A structure to represent a 3d Vector
 */
 typedef struct dataxyz{
     short int x;
@@ -64,6 +64,9 @@ typedef struct dataxyzdouble{
     double z;
 }DATA_XYZ_DOUBLE;
 
+/**
+ * Data of IMU structure
+ */
 typedef struct imu_data{
   DATA_XYZ acc;
   DATA_XYZ gyr;
@@ -97,19 +100,19 @@ typedef struct dac_data{
   int success;
 }DAC_DATA_STRUCT;
 */
+/**
+ * Struct to control MRA
+ */
 typedef struct mra_data{
-/*
-  *v_ctl is the voltage level for control output
-  *v_ctl_read is the voltage level read from the actuator
-  *new_data is the ???
-  *new_ctl is the ???
-  */
-  short int v_ctl;
-  short int v_ctl_read;
-  int new_data;
-  int new_ctl;
+  short int v_ctl; /**<Voltage level for control output */
+  short int v_ctl_read; /**< Voltage level read from the actuator*/
+  int new_data; /**<??*/
+  int new_ctl; /**<??*/
 }MRA_DATA_STRUCT;
-  // INITIALIZATION OF SENSORS AND DEVICES
+
+  /**
+   * INITIALIZATION OF SENSORS AND DEVICES
+   */
   int devices_init(IMU_PARAM_STRUCT *imu_param, SPI_PARAM_STRUCT *spi_param, MRA_DATA_STRUCT *mra_data);
   
   // READ ALL DATA FROM SENSORS AND ADC

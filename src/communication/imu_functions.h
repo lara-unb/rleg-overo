@@ -61,7 +61,7 @@ uint8_t* acc_read_reg(int i2c_dev, uint8_t reg, uint8_t count);
  * INITIALIZE ACCELEROMETER
  * @param i2c_dev Communication Port
  * @param full_res unset full resolution if value equal 0
- * @param rate Set rate (Hz), possible values:
+ * @param rate Set data output rate (Hz), possible values:
  *        (3200,1600,800,400,200,100,50,25,
  *         12: 12.5Hz,
  *         6: 6.25Hz)
@@ -108,13 +108,6 @@ int acc_read_all_data(int i2c_dev, short int *data);
  */
 short int acc_read_data(int i2c_dev, int axis);
 
-/**
- * Convert byte to hex_bin
- *
- * @param hvalue 
- *
- * @return Value converted
- */
 char* conv_byte_hex_bin(uint8_t* hvalue);
 
 /**
@@ -180,16 +173,21 @@ type: 'X' or 'Y' or 'Z' or 'T'(temperature)
 //	HMC5883 	//
 //////////////////////////
 
-/* WRITE TO REGISTER */
+/**
+ * WRITE TO REGISTER
+ */
 int mag_write_reg(int i2c_dev, uint8_t reg, uint8_t data);
 
-/* READ  COUNT 8-BIT REGISTER IN SEQUENCE*/
+/**
+ * READ  COUNT 8-BIT REGISTER IN SEQUENCE
+ *
+ * @param count number of registers in sequence (1-13)
+ */
 uint8_t* mag_read_reg(int i2c_dev, uint8_t reg, uint8_t count);
-/*
-count:	number of registers in sequence (1 - 13)
-*/
 
-/* INITIALIZE MAGNETOMETER */
+/**
+ * INITIALIZE MAGNETOMETER 
+ */
 int mag_init(int i2c_dev, uint8_t rate, uint8_t range, uint8_t samples_avg, uint8_t meas_mode, uint8_t op_mode);
 /* Parameters
 - rate (data output rate in Hz) = 3, 15, 30, 75

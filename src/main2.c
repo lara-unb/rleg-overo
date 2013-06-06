@@ -106,7 +106,7 @@ int main(void)
   imu_param.mag.op_mode=0;
   
   spi_param.mode=0;
-  spi_param.speed=1500000;
+  spi_param.speed=375000;
   spi_param.cs=0;
   
 
@@ -264,7 +264,7 @@ int periodic_task_1(void)
     }
 */
     // Calibrate and Estimate
-    calibrate_all(&imu_data);
+    //calibrate_all(&imu_data);
     //calibration_calibrate_all(&pwm_read_data, &scp1000_data, &battery_data, &gps_data, &imu_data, &pitot_data, &sonar_data, &calibration_local_coordinate_system_data, &calibration_altimeter_data, &calibration_local_fields_data, &gps_measure, &imu_measure, &magnetometer_measure);
     //estimation_update_state_estimate(&estimation_data, &gps_measure, &imu_measure, &magnetometer_measure, &sonar_measure, &calibration_local_fields_data, task_1_period_us/(double)1e6);
 
