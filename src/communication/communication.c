@@ -1,3 +1,9 @@
+/**
+ * @file communication.c
+ * @brief Communication Routines
+ * @headerfile communication.h ""
+ */
+
 #include<stdio.h>
 #include "communication.h"
 

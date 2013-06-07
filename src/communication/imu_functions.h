@@ -1,5 +1,5 @@
 /**
- * \file imu_functions.h
+ * @file imu_functions.h
  * Rev 0 - 06/11/2012
  * RLEG project - 2012
  *
@@ -48,7 +48,7 @@
  * @brief WRITE TO REGISTER 
  * @ingroup acc
  * @param i2c_dev Communication Port
- * @param[in] reg Register Command
+ * @param[in] reg Register
  * @param[in] data Data to write
  */
 int acc_write_reg(int i2c_dev, uint8_t reg, uint8_t data);
@@ -57,7 +57,7 @@ int acc_write_reg(int i2c_dev, uint8_t reg, uint8_t data);
  * @brif READ  COUNT 8-BIT REGISTER IN SEQUENCE
  * @ingroup acc
  * @param i2c_dev Communication Port
- * @param[in] reg Register Command
+ * @param[in] reg Register
  * @param[in] count Number of register in sequence (1-29)
  *
  * @return Data of register or NULL in case of any problem.
@@ -118,45 +118,77 @@ int acc_read_all_reg(int i2c_dev);
 //	ITG3200 	//
 //////////////////////////
 
-/* WRITE TO REGISTER */
+/**
+ * @defgroup gyr Functions for Gyrometer ITG3200
+ */
+
+/**
+ * @brief WRITE TO REGISTER 
+ * @ingroup gyr
+ * @param i2c_dev
+ * @param reg Register
+ * @param data Data to write in Register
+ */
 int gyr_write_reg(int i2c_dev, uint8_t reg, uint8_t data);
 
-/* READ  COUNT 8-BIT REGISTER IN SEQUENCE*/
+/**
+ * @brief READ  COUNT 8-BIT REGISTER IN SEQUENCE
+ * @ingroup gyr
+ * @param reg Register
+ * @param count number of registers in sequence
+ * @return flag with SUCCESS or FAILURE
+ * @todo Verify use of reg parameter
+ */
 uint8_t* gyr_read_reg(int i2c_dev, uint8_t reg, uint8_t count);
-/*
-count:	number of registers in sequence (1 - 9)
-*/
 
-/* INITIALIZE GYROMETER */
+/**
+ * @brief INITIALIZE GYROMETER
+ * @ingroup gyr
+ * @param lpf_bw (low pass filter bandwidth in Hz)
+ *           = 256, 188, 98, 42, 20, 10 or 5
+ * @param rate (output data rate in Hz)
+ *        <= 1000 (Fint), if lpf_bw is not 256
+ *        <= 8000 (Fint), if lpf_bw is 256
+ *        Real rate will be the closest superior rate possible,
+ *         respcting the formula Rate = Fint/n, 1<=n<=255
+ * @param clk_source =
+ *        'I'	Internal oscillator
+ *        'X'	PLL with X Gyro reference
+ *        'Y'	PLL with Y Gyro reference
+ *        'Z'	Pll with Z Gyro reference
+ *        Obs: 	It is highly recommended that the device is
+ *          configured to use one of the gyros as the
+ * 	clock reference, due to the improved stability
+ * @param act (activated gyro data) =
+ *       "XYZ"	All axes are activated
+ *       "YZ"	Only Y and Z axes are activated
+ *       "XZ"	Only X and Z axes are activated
+ *       "XY"	Only X and Y axes are activated
+ *       "X"	Only X axis is activated
+ *       "Y"	Only Y axis is activated
+ *       "Z"	Only Z axis is activated
+ *       ""	Device in very low power sleep mode
+ * @return Data of register or NULL in case of any trouble
+ */
 int gyr_init(int i2c_dev, float rate, short int lpf_bw, char clk_source, char *act);
-/* Parameters
-- lpf_bw (low pass filter bandwidth in Hz) = 256, 188, 98, 42, 20, 10 or 5
-- rate (output data rate in Hz)
-<= 1000 (Fint), if lpf_bw is not 256
-<= 8000 (Fint), if lpf_bw is 256
-Real rate will be the closest superior rate possible, respecting the formula Rate = Fint/n, 1<=n<=255
-- clk_source =
-'I'	Internal oscillator
-'X'	PLL with X Gyro reference
-'Y'	PLL with Y Gyro reference
-'Z'	Pll with Z Gyro reference
-Obs: 	It is highly recommended that the device is configured to use one of the gyros as the
-	clock reference, due to the improved stability
-- act (activated gyro data) =
-"XYZ"	All axes are activated
-"YZ"	Only Y and Z axes are activated
-"XZ"	Only X and Z axes are activated
-"XY"	Only X and Y axes are activated
-"X"	Only X axis is activated
-"Y"	Only Y axis is activated
-"Z"	Only Z axis is activated
-""	Device in very low power sleep mode
-*/
 
-/* READ ALL DATA AT ONCE (X, Y, Z and T) */
+/**
+ * @brief READ ALL DATA AT ONCE (X, Y, Z and T)
+ * @ingroup gyr
+ * @param i2c_dev
+ * @param[out] *data Vector with all data
+ * @return Flag with SUCCESS or FAILURE
+ */
 int gyr_read_all_data(int i2c_dev, short int *data);
 
-/* READ DATA (X, Y, Z or T) */
+/**
+ * @brief READ DATA (X, Y, Z or T) 
+ * @ingroup gyr
+ * @param i2c_dev
+ * @param type Define kind of read:
+ *        'X' or 'Y' or 'Z' or 'T'(temperature)
+ * @return Data
+ */
 short int gyr_read_data(int i2c_dev, int type);
 /* 
 type: 'X' or 'Y' or 'Z' or 'T'(temperature)

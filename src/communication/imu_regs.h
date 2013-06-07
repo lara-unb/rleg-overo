@@ -1,6 +1,7 @@
-/*
-Registers that are present in each device from the IMU (ADXL345, ITG3200 and HMC5883)
-*/
+/**
+ * @file imu_regs.h
+ * @brief Registers that are present in each device from the IMU (ADXL345, ITG3200 and HMC5883)
+ */
 #ifndef IMU_REGS_H
 #define IMU_REGS_H
 

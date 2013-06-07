@@ -1,3 +1,10 @@
+/**
+ * @file communication.h
+ * @author Caio Gustavo Mesquita Ângelo
+ * @date 2012-2013
+ */
+
+
 #ifndef COMMUNICATION_H
 #define COMMUNICATION_H
 
@@ -5,9 +12,6 @@
 #include "spi_functions.h"
 #include "gpio_functions.h"
 #include "imu_regs.h"
-
-#define FAILURE		-1
-#define SUCCESS		1
 
 #define GPIO_CS_S0		168	// GPIOs that select CS in Demux
 #define GPIO_CS_S1		64
@@ -17,18 +21,31 @@
 #define GPIO_DAC_SHDN		66	// GPIO that deals with DAC power
 #define GPIO_DAC_LDAC		67
 
+
+/**
+ * Configs of IMU
+ */
 typedef struct imu_param{
+    /**
+     * Accelerometer Parameters
+     */
     struct param_acc{
       uint8_t full_res;
       uint16_t rate; 
       uint8_t range;
     }acc;
+    /**
+     * Gyrometer Parameters
+     */
     struct param_gyr {
       float rate;
       short int lpf_bw;
       char clk_source;
       char *act;
     }gyr;
+    /**
+     * Magnetometer Parameters
+     */
     struct param_mag {
       uint8_t rate;
       uint8_t range;
@@ -39,6 +56,9 @@ typedef struct imu_param{
     int i2c_dev;
 }IMU_PARAM_STRUCT;
 
+/**
+ * Configs for SPI
+ */
 typedef struct spi_param{
     uint8_t mode;
     uint32_t speed;
@@ -68,9 +88,9 @@ typedef struct dataxyzdouble{
  * Data of IMU structure
  */
 typedef struct imu_data{
-  DATA_XYZ acc;
-  DATA_XYZ gyr;
-  DATA_XYZ mag;
+  DATA_XYZ acc; /**< Accel Vector*/
+  DATA_XYZ gyr; /**< Gyrometer Vector*/
+  DATA_XYZ mag; /**< Magnetormeter Vector*/
   struct calibrated{
     DATA_XYZ_DOUBLE acc;
     DATA_XYZ_DOUBLE gyr;
@@ -112,11 +132,35 @@ typedef struct mra_data{
 
   /**
    * INITIALIZATION OF SENSORS AND DEVICES
+   * @param *imu_param Structure with IMU parameters
+   * @param *spi_param Structure with SPI parameters
+   * @param *mra_data Structure to control MRA
+   * @return flag with SUCCESS or FAILURE
    */
   int devices_init(IMU_PARAM_STRUCT *imu_param, SPI_PARAM_STRUCT *spi_param, MRA_DATA_STRUCT *mra_data);
   
-  // READ ALL DATA FROM SENSORS AND ADC
+  /**
+   * READ ALL DATA FROM SENSORS AND ADC
+   * @param i2c_dev 
+   * @param spi_dev
+   * @param *imu_data
+   * @param *eff_data
+   * @param *mra_data
+   * @return flag with SUCCESS or FAILURE
+   */
   int read_all_data(int i2c_dev, int spi_dev, IMU_DATA_STRUCT *imu_data,EFF_DATA_STRUCT *eff_data, MRA_DATA_STRUCT *mra_data /*, ANG_DATA_STRUCT &ang_data*/);
+  
+ /**
+  * @brief Applies the control signal to the actuator
+  * @param spi_dev Containing SPI variable ID
+  * @param mra_data Struct containing the control signal
+  * @return nothing
+  */
   void actuate(int spi_dev, MRA_DATA_STRUCT *mra_data);
+
+  /**
+   * @brief Turn off MRA
+   * @todo Check this function
+   */
   void mra_shut_down(void);
 #endif
