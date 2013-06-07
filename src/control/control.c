@@ -8,7 +8,6 @@
  *
  * @return  nothing
  */
-
 void control_main (t_task_1_global, &imu_data, &eff_data, &mra_data){
 int t_gait = 0;
 int gait_cycle = 2000000;//Gait cycle takes 2 seconds
@@ -28,3 +27,18 @@ int heelstrike_threshold = 3;
 	}
 
 }
+
+
+/*
+ * @brief Calculate the control signal
+ *
+void control_byKneeAngle(&ang_data,&mra_data){
+  if((ang_data->velocity)>0){
+    mra_data.v_ctl = 4000;
+  }
+
+  if((ang_data->ang -ANG_MAX)< 0.1)
+    mra_data.v_ctl = 6000;
+}
+
+*/

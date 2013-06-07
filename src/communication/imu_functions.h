@@ -190,9 +190,6 @@ int gyr_read_all_data(int i2c_dev, short int *data);
  * @return Data
  */
 short int gyr_read_data(int i2c_dev, int type);
-/* 
-type: 'X' or 'Y' or 'Z' or 'T'(temperature)
-*/
 
 //////////////////////////
 //	FUNCTIONS FOR	//
@@ -241,10 +238,14 @@ int mag_init(int i2c_dev, uint8_t rate, uint8_t range, uint8_t samples_avg, uint
 7:	+- 8.1		4.35
 */
 
-/* READ ALL DATA AT ONCE (X, Y and Z) */
+/**
+ * READ ALL DATA AT ONCE (X, Y and Z)
+ */
 int mag_read_all_data(int i2c_dev, short int *data);
 
-/* READ DATA (X, Y or Z) */
+/**
+ * READ DATA (X, Y or Z)
+ */
 short int mag_read_data(int i2c_dev, int axis);
 /* 
 axis: 'X' or 'Y' or 'Z'

@@ -17,15 +17,15 @@ int gyr_write_reg(int i2c_dev, uint8_t reg, uint8_t data)
   if( !( (reg==GYR_WHO_AM_I)||((GYR_SMPLRT_DIV<=reg)&&(reg<=GYR_INT_CFG))||(reg==GYR_PWR_MGM) ) )
   {
       //perror("Write unsucessful: Not a valid writable register");
-      return -1;
+      return FAILURE;
   }
 	
   if (write(i2c_dev, &reg_data, 2) != 2) { 		 
 	  //perror("Write unsuccessful");
-	  return -1;
+	  return FAILURE;
   }
 
-  return 1;
+  return SUCESS;
 }
 
 uint8_t* gyr_read_reg(int i2c_dev, uint8_t reg, uint8_t count)
