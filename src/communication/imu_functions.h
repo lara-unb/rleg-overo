@@ -1,9 +1,11 @@
 /**
- * @author Caio Gustavo Mesquita Ângelo
+ * \file imu_functions.h
  * Rev 0 - 06/11/2012
  * RLEG project - 2012
  *
- * library of the I2C communication between Gumstix Overo Fire and 3 different devices: ADXL345, ITG3200 and HMC5883
+ * @brief library of the I2C communication between Gumstix Overo Fire and 3 different devices: ADXL345, ITG3200 and HMC5883
+ * @author Caio Gustavo Mesquita Ângelo
+ * @date 2012-2013
  */
 #ifndef IMU_FUNCTIONS_H_INCLUDED
 #define IMU_FUNCTIONS_H_INCLUDED
@@ -31,15 +33,20 @@
 #define ADD_ITG3200 0x68
 #define ADD_HMC5883 0x1E
 
-//////////////////////////
-//	FUNCTIONS FOR	//
-//	ACCELEROMETER	//
-//	ADXL345 	//
-//////////////////////////
+/////////////////////////
+//     FUNCTIONS FOR   // 
+//     ACCELEROMETER   //
+//     ADXL345         //
+/////////////////////////
 
 /**
- * WRITE TO REGISTER 
- * 
+ * @defgroup acc Functions for accelerometer ADXL345
+ */
+
+
+/**
+ * @brief WRITE TO REGISTER 
+ * @ingroup acc
  * @param i2c_dev Communication Port
  * @param[in] reg Register Command
  * @param[in] data Data to write
@@ -47,8 +54,8 @@
 int acc_write_reg(int i2c_dev, uint8_t reg, uint8_t data);
 
 /**
- * READ  COUNT 8-BIT REGISTER IN SEQUENCE
- * 
+ * @brif READ  COUNT 8-BIT REGISTER IN SEQUENCE
+ * @ingroup acc
  * @param i2c_dev Communication Port
  * @param[in] reg Register Command
  * @param[in] count Number of register in sequence (1-29)
@@ -58,9 +65,11 @@ int acc_write_reg(int i2c_dev, uint8_t reg, uint8_t data);
 uint8_t* acc_read_reg(int i2c_dev, uint8_t reg, uint8_t count);
 
 /**
- * INITIALIZE ACCELEROMETER
+ * @brief INITIALIZE ACCELEROMETER
+ * @ingroup acc
  * @param i2c_dev Communication Port
- * @param full_res unset full resolution if value equal 0
+ * @param full_res Set resolution to 10 bits if value equal 0
+ *        else set to Full resolution
  * @param rate Set data output rate (Hz), possible values:
  *        (3200,1600,800,400,200,100,50,25,
  *         12: 12.5Hz,
@@ -73,24 +82,10 @@ uint8_t* acc_read_reg(int i2c_dev, uint8_t reg, uint8_t count);
  * @return flag with SUCCESS or FAILURE
  */
 int acc_init(int i2c_dev, uint8_t full_res, uint16_t rate, uint8_t range);
-/* Parameters
-- full_res =
-0: 	10 bits
-else: 	full resolution
-- rate (Hz) = 
-3200, 1600, 800, 400, 200, 100, 50, 25
-12: 	12.5Hz
-6:	6.25Hz
-- range =
-2:	+- 2g
-4:	+- 4g
-8:	+- 8g
-else:	+- 16g
-*/
 
 /**
- * READ ALL DATA AT ONCE (X, Y and Z)
- *
+ * @brief READ ALL DATA AT ONCE (X, Y and Z)
+ * @ingroup acc
  * @param i2c_dev Communication Port
  * @param[out] data Data's vector
  * 
@@ -99,8 +94,8 @@ else:	+- 16g
 int acc_read_all_data(int i2c_dev, short int *data);
 
 /**
- * READ DATA (X, Y or Z)
- * 
+ * @brief READ DATA (X, Y or Z)
+ * @ingroup acc
  * @param i2c_dev Communication Port
  * @param[in] axis Accelerate's axis to read ('X' or 'Y' or 'Z')
  *
@@ -111,8 +106,8 @@ short int acc_read_data(int i2c_dev, int axis);
 char* conv_byte_hex_bin(uint8_t* hvalue);
 
 /**
- * Read all accelerometer data and print in stdio
- * 
+ * @brief Read all accelerometer data and print in stdio
+ * @ingroup acc
  * @param i2c_dev Communication Port
  */
 int acc_read_all_reg(int i2c_dev);
