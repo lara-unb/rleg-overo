@@ -1,0 +1,130 @@
+\hypertarget{gpio__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h}{\section{André backup conflitos/gpio\-\_\-functions (Cópia em conflito de André Carvalho 2013-\/04-\/26).h File Reference}
+\label{gpio__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h}\index{André backup conflitos/gpio\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h@{André backup conflitos/gpio\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h}}
+}
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include $<$stdint.\-h$>$}\\*
+{\ttfamily \#include $<$sys/types.\-h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\-\_\-t \hyperlink{gpio__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a267fb0bb66584f91d79ef9e1dc75c997}{gpio\-\_\-read} (uint8\-\_\-t gpio)
+\item 
+uint8\-\_\-t \hyperlink{gpio__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a9e6c28fef76e43333120a91d47d44f9f}{gpio\-\_\-write} (uint8\-\_\-t gpio, uint8\-\_\-t value)
+\item 
+uint8\-\_\-t \hyperlink{gpio__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a5ba85b445f40e170abf99251cae63ef2}{gpio\-\_\-f\-\_\-write} (uint8\-\_\-t gpio, uint8\-\_\-t value)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{gpio__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a5ba85b445f40e170abf99251cae63ef2}{\index{gpio\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h@{gpio\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h}!gpio\-\_\-f\-\_\-write@{gpio\-\_\-f\-\_\-write}}
+\index{gpio\-\_\-f\-\_\-write@{gpio\-\_\-f\-\_\-write}!gpio_functions (Cópia em conflito de André Carvalho 2013-04-26).h@{gpio\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h}}
+\subsubsection[{gpio\-\_\-f\-\_\-write}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t gpio\-\_\-f\-\_\-write (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{gpio, }
+\item[{uint8\-\_\-t}]{value}
+\end{DoxyParamCaption}
+)}}\label{gpio__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a5ba85b445f40e170abf99251cae63ef2}
+
+
+Definition at line 60 of file gpio\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c.
+
+
+\begin{DoxyCode}
+\{
+  FILE *fp\_gpio;
+  \textcolor{keywordtype}{char} path[30];
+  \textcolor{keywordtype}{char} fp\_value;
+  
+  sprintf(path,\textcolor{stringliteral}{"/sys/class/gpio/gpio%d/value"},gpio);
+  fp\_gpio=fopen(path,\textcolor{stringliteral}{"w"});
+  rewind(fp\_gpio);
+  fp\_value=0x30+value;
+  fwrite(&fp\_value, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}), 1, fp\_gpio);
+  fclose(fp\_gpio);
+  \textcolor{keywordflow}{return} 1;
+\}
+\end{DoxyCode}
+\hypertarget{gpio__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a267fb0bb66584f91d79ef9e1dc75c997}{\index{gpio\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h@{gpio\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h}!gpio\-\_\-read@{gpio\-\_\-read}}
+\index{gpio\-\_\-read@{gpio\-\_\-read}!gpio_functions (Cópia em conflito de André Carvalho 2013-04-26).h@{gpio\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h}}
+\subsubsection[{gpio\-\_\-read}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t gpio\-\_\-read (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{gpio}
+\end{DoxyParamCaption}
+)}}\label{gpio__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a267fb0bb66584f91d79ef9e1dc75c997}
+
+
+Definition at line 3 of file gpio\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c.
+
+
+\begin{DoxyCode}
+\{
+  FILE *fp\_gpio=NULL;
+  \textcolor{keywordtype}{char} path[30];
+  \textcolor{keywordtype}{char} fp\_value;
+
+  sprintf(path,\textcolor{stringliteral}{"/sys/class/gpio/gpio%d/value"},gpio);
+  \textcolor{keywordflow}{if}( (fp\_gpio=fopen(path,\textcolor{stringliteral}{"rb+"})) == NULL )
+  \{
+    printf(\textcolor{stringliteral}{"Open %s failed\(\backslash\)n"},path);
+    \textcolor{keywordflow}{return} -1;
+  \}
+  rewind(fp\_gpio);
+  fread(&fp\_value, 1, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}), fp\_gpio);
+  fclose(fp\_gpio);
+  \textcolor{keywordflow}{return} (uint8\_t)fp\_value-0x30;  
+\}
+\end{DoxyCode}
+\hypertarget{gpio__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a9e6c28fef76e43333120a91d47d44f9f}{\index{gpio\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h@{gpio\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h}!gpio\-\_\-write@{gpio\-\_\-write}}
+\index{gpio\-\_\-write@{gpio\-\_\-write}!gpio_functions (Cópia em conflito de André Carvalho 2013-04-26).h@{gpio\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h}}
+\subsubsection[{gpio\-\_\-write}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t gpio\-\_\-write (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{gpio, }
+\item[{uint8\-\_\-t}]{value}
+\end{DoxyParamCaption}
+)}}\label{gpio__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a9e6c28fef76e43333120a91d47d44f9f}
+
+
+Definition at line 21 of file gpio\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c.
+
+
+\begin{DoxyCode}
+\{
+  FILE *fp\_gpio;
+  \textcolor{keywordtype}{char} path[30];
+  \textcolor{keywordtype}{char} fp\_read[4];
+  \textcolor{keywordtype}{char} fp\_write;
+
+\textcolor{comment}{// Verifying if GPIO is set as Output}
+  sprintf(path,\textcolor{stringliteral}{"/sys/class/gpio/gpio%d/direction"},gpio);
+
+  \textcolor{keywordflow}{if}( (fp\_gpio=fopen(path,\textcolor{stringliteral}{"r"})) == NULL )
+  \{
+    printf(\textcolor{stringliteral}{"Open %s failed\(\backslash\)n"},path);
+    \textcolor{keywordflow}{return} -1;
+  \}
+  rewind(fp\_gpio);
+  fread(fp\_read, 3, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}), fp\_gpio);
+  \textcolor{keywordflow}{if}( strcmp(fp\_read,\textcolor{stringliteral}{"out"} ) )
+  \{
+    printf(\textcolor{stringliteral}{"Gpio%d is set as Input. Impossible to write."},gpio);
+    \textcolor{keywordflow}{return} -2;
+  \}
+  fclose(fp\_gpio);
+
+\textcolor{comment}{// Writing}
+  sprintf(path,\textcolor{stringliteral}{"/sys/class/gpio/gpio%d/value"},gpio);
+  
+  \textcolor{keywordflow}{if}( (fp\_gpio=fopen(path,\textcolor{stringliteral}{"w"})) == NULL )
+  \{
+    printf(\textcolor{stringliteral}{"Open %s failed\(\backslash\)n"},path);
+    \textcolor{keywordflow}{return} -1;
+  \}
+  rewind(fp\_gpio);
+  fp\_write=0x30+value;
+  fwrite(&fp\_write, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}), 1, fp\_gpio);
+  fclose(fp\_gpio);
+  \textcolor{keywordflow}{return} 1;
+\}
+\end{DoxyCode}

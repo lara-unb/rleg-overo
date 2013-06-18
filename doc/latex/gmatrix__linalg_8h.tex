@@ -1,0 +1,423 @@
+\hypertarget{gmatrix__linalg_8h}{\section{schunk\-\_\-high/include/schunk\-\_\-high/gmatrix\-\_\-linalg.h File Reference}
+\label{gmatrix__linalg_8h}\index{schunk\-\_\-high/include/schunk\-\_\-high/gmatrix\-\_\-linalg.\-h@{schunk\-\_\-high/include/schunk\-\_\-high/gmatrix\-\_\-linalg.\-h}}
+}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{gmatrix__linalg_8h_a0e3ccbc834b74902e18e778b2af192d2}{G\-M\-A\-T\-R\-I\-X\-\_\-\-L\-U\-D\-C\-M\-P}(Mat\-L\-U, Mat)~\hyperlink{gmatrix__linalg_8h_ac2a0b59034eea9aa6e295b44dae9300d}{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-L\-U\-D\-C\-M\-P}(\&Mat\-L\-U, \&Mat)
+\item 
+\#define \hyperlink{gmatrix__linalg_8h_a736e8c49bc7fa22e0f640cff35b3e443}{G\-M\-A\-T\-R\-I\-X\-\_\-\-G\-A\-U\-S\-S\-J\-O\-R\-D\-A\-N}(A\-Inv, X, A, B)~\hyperlink{gmatrix__linalg_8h_abfc3e0127df1569e2e2db1cf78aaf38e}{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-G\-A\-U\-S\-S\-J\-O\-R\-D\-A\-N}(\&A\-Inv, \&X, \&A, \&B)
+\item 
+\#define \hyperlink{gmatrix__linalg_8h_a9d9a4ca8c65f5877b3bf1870a536c483}{G\-M\-A\-T\-R\-I\-X\-\_\-\-C\-H\-O\-L\-E\-S\-K\-Y}(L, A)~\hyperlink{gmatrix__linalg_8h_a59ba4c2cab979216870f2e04a65ada87}{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-C\-H\-O\-L\-E\-S\-K\-Y}(\&L, \&A)
+\item 
+\#define \hyperlink{gmatrix__linalg_8h_a60a5345a5cf481ba912a81f986314901}{G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-T\-E\-R\-M\-I\-N\-A\-N\-T2}(Mat)~\hyperlink{gmatrix__linalg_8h_a32a5613879208f88b8221ec04f5dadd1}{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-T\-E\-R\-M\-I\-N\-A\-N\-T2}(\&Mat)
+\item 
+\#define \hyperlink{gmatrix__linalg_8h_aaa4915c2f80d192b96bac268d5325356}{G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-T\-E\-R\-M\-I\-N\-A\-N\-T3}(Mat)~\hyperlink{gmatrix__linalg_8h_ab12dedced87c4e957ed5d06a53c217d4}{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-T\-E\-R\-M\-I\-N\-A\-N\-T3}(\&Mat)
+\item 
+\#define \hyperlink{gmatrix__linalg_8h_a350d219256c729b206c1606f8f401a42}{G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-T\-E\-R\-M\-I\-N\-A\-N\-T}(Mat, Mat\-Dummy)~\hyperlink{gmatrix__linalg_8h_a0594cc86b73ae15c8f9675a6ed6575cb}{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-T\-E\-R\-M\-I\-N\-A\-N\-T}(\&Mat, \&Mat\-Dummy)
+\item 
+\#define \hyperlink{gmatrix__linalg_8h_a1148b20eb86c4eacd24309721cea065b}{G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E2\-\_\-\-C\-O\-P\-Y}(Mat\-Inverse, Mat)~\hyperlink{gmatrix__linalg_8h_a5d9db3defafaf0a8a1b45c20320f23c9}{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E2\-\_\-\-C\-O\-P\-Y}(\&Mat\-Inverse, \&Mat)
+\item 
+\#define \hyperlink{gmatrix__linalg_8h_a0da198fa5f5a0e4375b4e73fcf832f00}{G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E3\-\_\-\-C\-O\-P\-Y}(Mat\-Inverse, Mat)~\hyperlink{gmatrix__linalg_8h_aee23001f1828814bd583b5944016e8de}{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E3\-\_\-\-C\-O\-P\-Y}(\&Mat\-Inverse, \&Mat)
+\item 
+\#define \hyperlink{gmatrix__linalg_8h_af97710deefd870c62edaa33ef7e10fbe}{G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E\-\_\-\-C\-O\-P\-Y}(Mat\-Inverse, Mat)~\hyperlink{gmatrix__linalg_8h_a1d2946ff9ab4154e8f3c930eb559a0da}{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E\-\_\-\-C\-O\-P\-Y}(\&Mat\-Inverse, \&Mat)
+\item 
+\#define \hyperlink{gmatrix__linalg_8h_a867ef7319411dd33b148f76951c31df5}{G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E}(Mat)~\hyperlink{gmatrix__linalg_8h_a82f707ad433e52b2e08d22aba32c9e8a}{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E}(\&Mat)
+\item 
+\#define \hyperlink{gmatrix__linalg_8h_ac5d3390a2839cc85885af1d00b4eeed3}{G\-M\-A\-T\-R\-I\-X\-\_\-\-S\-V\-D}(U, S, V, Mat, Flag\-Sorted)~\hyperlink{gmatrix__linalg_8h_ac549c7f4bf706e7ec89de04b2573fffa}{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-S\-V\-D}(\&U,\&S,\&V,\&Mat,Flag\-Sorted)
+\item 
+\#define \hyperlink{gmatrix__linalg_8h_ad376e3dd0f4674718c130a24b018b09d}{G\-M\-A\-T\-R\-I\-X\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E}(Apinv, A, Mat\-Dummy)~\hyperlink{gmatrix__linalg_8h_a276d9ed1da72c29111d0cb8458bd555c}{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E}(\&Apinv,\&A,\&Mat\-Dummy)
+\item 
+\#define \hyperlink{gmatrix__linalg_8h_a7fe12877f673c108dc656dc59f96a968}{G\-M\-A\-T\-R\-I\-X\-\_\-\-L\-E\-F\-T\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E\-\_\-\-C\-O\-P\-Y}(Apinv, A, Mat\-Dummy)~\hyperlink{gmatrix__linalg_8h_a884b702af545a47763ca3508189c186c}{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-L\-E\-F\-T\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E\-\_\-\-C\-O\-P\-Y}(\&Apinv,\&A,\&Mat\-Dummy)
+\item 
+\#define \hyperlink{gmatrix__linalg_8h_ae8a192e9947a766e0d2fd3b2818a222f}{G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-R\-I\-V\-A\-T\-I\-V\-E\-\_\-\-L\-E\-F\-T\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E}(d\-Apinvdx, d\-Adx, A, Apinv, Mat\-Dummy1, Mat\-Dummy2)~\hyperlink{gmatrix__linalg_8h_abaae32b4655dcfcc50eb43c5936f6f7e}{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-R\-I\-V\-A\-T\-I\-V\-E\-\_\-\-L\-E\-F\-T\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E}(\&d\-Apinvdx,\&d\-Adx,\&A,\&Apinv,\&Mat\-Dummy1,\&Mat\-Dummy2)
+\item 
+\#define \hyperlink{gmatrix__linalg_8h_a57f926a489ba7dae5134fd0c117a7b32}{G\-M\-A\-T\-R\-I\-X\-\_\-\-R\-A\-N\-K\-\_\-\-F\-R\-O\-M\-S\-V\-D}(U, S, V)~\hyperlink{gmatrix__linalg_8h_a5e06452b52539b927e27800015357378}{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-R\-A\-N\-K\-\_\-\-F\-R\-O\-M\-S\-V\-D}(\&U,\&S,\&V)
+\item 
+\#define \hyperlink{gmatrix__linalg_8h_a0075b2e0feff27af3643ff2993e8e443}{G\-M\-A\-T\-R\-I\-X\-\_\-\-R\-A\-N\-K}(Mat)~\hyperlink{gmatrix__linalg_8h_aacf215a0395fa3a9bb142a7cbcd8abb4}{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-R\-A\-N\-K}(\&Mat)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{gmatrix_8h_a3b6eb94c53f70703edc155e174321477}{G\-M\-A\-T\-R\-I\-X\-\_\-\-F\-L\-O\-A\-T} \hyperlink{gmatrix__linalg_8h_ac2a0b59034eea9aa6e295b44dae9300d}{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-L\-U\-D\-C\-M\-P} (\hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} p\-Mat\-L\-U, \hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} p\-Mat)
+\item 
+void \hyperlink{gmatrix__linalg_8h_abfc3e0127df1569e2e2db1cf78aaf38e}{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-G\-A\-U\-S\-S\-J\-O\-R\-D\-A\-N} (\hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} p\-A\-Inverse, \hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} p\-X, \hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} p\-A, \hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} p\-B)
+\item 
+void \hyperlink{gmatrix__linalg_8h_a59ba4c2cab979216870f2e04a65ada87}{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-C\-H\-O\-L\-E\-S\-K\-Y} (\hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} p\-L, \hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} p\-A)
+\item 
+\hyperlink{gmatrix_8h_a3b6eb94c53f70703edc155e174321477}{G\-M\-A\-T\-R\-I\-X\-\_\-\-F\-L\-O\-A\-T} \hyperlink{gmatrix__linalg_8h_a32a5613879208f88b8221ec04f5dadd1}{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-T\-E\-R\-M\-I\-N\-A\-N\-T2} (\hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} p\-Mat)
+\item 
+\hyperlink{gmatrix_8h_a3b6eb94c53f70703edc155e174321477}{G\-M\-A\-T\-R\-I\-X\-\_\-\-F\-L\-O\-A\-T} \hyperlink{gmatrix__linalg_8h_ab12dedced87c4e957ed5d06a53c217d4}{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-T\-E\-R\-M\-I\-N\-A\-N\-T3} (\hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} p\-Mat)
+\item 
+\hyperlink{gmatrix_8h_a3b6eb94c53f70703edc155e174321477}{G\-M\-A\-T\-R\-I\-X\-\_\-\-F\-L\-O\-A\-T} \hyperlink{gmatrix__linalg_8h_a0594cc86b73ae15c8f9675a6ed6575cb}{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-T\-E\-R\-M\-I\-N\-A\-N\-T} (\hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} p\-Mat, \hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} p\-Mat\-Dummy)
+\item 
+void \hyperlink{gmatrix__linalg_8h_a5d9db3defafaf0a8a1b45c20320f23c9}{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E2\-\_\-\-C\-O\-P\-Y} (\hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} p\-Mat\-Inverse, \hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} p\-Mat)
+\item 
+void \hyperlink{gmatrix__linalg_8h_aee23001f1828814bd583b5944016e8de}{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E3\-\_\-\-C\-O\-P\-Y} (\hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} p\-Mat\-Inverse, \hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} p\-Mat)
+\item 
+void \hyperlink{gmatrix__linalg_8h_a1d2946ff9ab4154e8f3c930eb559a0da}{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E\-\_\-\-C\-O\-P\-Y} (\hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} p\-Mat\-Inverse, \hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} p\-Mat)
+\item 
+void \hyperlink{gmatrix__linalg_8h_a82f707ad433e52b2e08d22aba32c9e8a}{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E} (\hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} p\-Mat)
+\item 
+void \hyperlink{gmatrix__linalg_8h_ac549c7f4bf706e7ec89de04b2573fffa}{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-S\-V\-D} (\hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} p\-U, \hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} p\-S, \hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} p\-V, \hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} p\-Mat, unsigned char Flag\-Sorted)
+\item 
+void \hyperlink{gmatrix__linalg_8h_a276d9ed1da72c29111d0cb8458bd555c}{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E} (\hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} p\-Apinv, \hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} p\-A, \hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} p\-Mat\-Dummy)
+\item 
+void \hyperlink{gmatrix__linalg_8h_a884b702af545a47763ca3508189c186c}{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-L\-E\-F\-T\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E\-\_\-\-C\-O\-P\-Y} (\hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} p\-Apinv, \hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} p\-A, \hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} p\-Mat\-Dummy)
+\item 
+void \hyperlink{gmatrix__linalg_8h_abaae32b4655dcfcc50eb43c5936f6f7e}{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-R\-I\-V\-A\-T\-I\-V\-E\-\_\-\-L\-E\-F\-T\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E} (\hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} pd\-Apinvdx, \hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} pd\-Adx, \hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} p\-A, \hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} p\-Apinv, \hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} p\-Mat\-Dummy1, \hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} p\-Mat\-Dummy2)
+\item 
+int \hyperlink{gmatrix__linalg_8h_a5e06452b52539b927e27800015357378}{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-R\-A\-N\-K\-\_\-\-F\-R\-O\-M\-S\-V\-D} (\hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} p\-U, \hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} p\-S, \hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} p\-V)
+\item 
+int \hyperlink{gmatrix__linalg_8h_aacf215a0395fa3a9bb142a7cbcd8abb4}{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-R\-A\-N\-K} (\hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} p\-Mat)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{gmatrix__linalg_8h_a9d9a4ca8c65f5877b3bf1870a536c483}{\index{gmatrix\-\_\-linalg.\-h@{gmatrix\-\_\-linalg.\-h}!G\-M\-A\-T\-R\-I\-X\-\_\-\-C\-H\-O\-L\-E\-S\-K\-Y@{G\-M\-A\-T\-R\-I\-X\-\_\-\-C\-H\-O\-L\-E\-S\-K\-Y}}
+\index{G\-M\-A\-T\-R\-I\-X\-\_\-\-C\-H\-O\-L\-E\-S\-K\-Y@{G\-M\-A\-T\-R\-I\-X\-\_\-\-C\-H\-O\-L\-E\-S\-K\-Y}!gmatrix_linalg.h@{gmatrix\-\_\-linalg.\-h}}
+\subsubsection[{G\-M\-A\-T\-R\-I\-X\-\_\-\-C\-H\-O\-L\-E\-S\-K\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-M\-A\-T\-R\-I\-X\-\_\-\-C\-H\-O\-L\-E\-S\-K\-Y(
+\begin{DoxyParamCaption}
+\item[{}]{L, }
+\item[{}]{A}
+\end{DoxyParamCaption}
+)~{\bf P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-C\-H\-O\-L\-E\-S\-K\-Y}(\&L, \&A)}}\label{gmatrix__linalg_8h_a9d9a4ca8c65f5877b3bf1870a536c483}
+
+
+Definition at line 42 of file gmatrix\-\_\-linalg.\-h.
+
+\hypertarget{gmatrix__linalg_8h_ae8a192e9947a766e0d2fd3b2818a222f}{\index{gmatrix\-\_\-linalg.\-h@{gmatrix\-\_\-linalg.\-h}!G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-R\-I\-V\-A\-T\-I\-V\-E\-\_\-\-L\-E\-F\-T\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E@{G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-R\-I\-V\-A\-T\-I\-V\-E\-\_\-\-L\-E\-F\-T\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E}}
+\index{G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-R\-I\-V\-A\-T\-I\-V\-E\-\_\-\-L\-E\-F\-T\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E@{G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-R\-I\-V\-A\-T\-I\-V\-E\-\_\-\-L\-E\-F\-T\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E}!gmatrix_linalg.h@{gmatrix\-\_\-linalg.\-h}}
+\subsubsection[{G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-R\-I\-V\-A\-T\-I\-V\-E\-\_\-\-L\-E\-F\-T\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-R\-I\-V\-A\-T\-I\-V\-E\-\_\-\-L\-E\-F\-T\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E(
+\begin{DoxyParamCaption}
+\item[{}]{d\-Apinvdx, }
+\item[{}]{d\-Adx, }
+\item[{}]{A, }
+\item[{}]{Apinv, }
+\item[{}]{Mat\-Dummy1, }
+\item[{}]{Mat\-Dummy2}
+\end{DoxyParamCaption}
+)~{\bf P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-R\-I\-V\-A\-T\-I\-V\-E\-\_\-\-L\-E\-F\-T\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E}(\&d\-Apinvdx,\&d\-Adx,\&A,\&Apinv,\&Mat\-Dummy1,\&Mat\-Dummy2)}}\label{gmatrix__linalg_8h_ae8a192e9947a766e0d2fd3b2818a222f}
+
+
+Definition at line 75 of file gmatrix\-\_\-linalg.\-h.
+
+\hypertarget{gmatrix__linalg_8h_a350d219256c729b206c1606f8f401a42}{\index{gmatrix\-\_\-linalg.\-h@{gmatrix\-\_\-linalg.\-h}!G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-T\-E\-R\-M\-I\-N\-A\-N\-T@{G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-T\-E\-R\-M\-I\-N\-A\-N\-T}}
+\index{G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-T\-E\-R\-M\-I\-N\-A\-N\-T@{G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-T\-E\-R\-M\-I\-N\-A\-N\-T}!gmatrix_linalg.h@{gmatrix\-\_\-linalg.\-h}}
+\subsubsection[{G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-T\-E\-R\-M\-I\-N\-A\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-T\-E\-R\-M\-I\-N\-A\-N\-T(
+\begin{DoxyParamCaption}
+\item[{}]{Mat, }
+\item[{}]{Mat\-Dummy}
+\end{DoxyParamCaption}
+)~{\bf P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-T\-E\-R\-M\-I\-N\-A\-N\-T}(\&Mat, \&Mat\-Dummy)}}\label{gmatrix__linalg_8h_a350d219256c729b206c1606f8f401a42}
+
+
+Definition at line 51 of file gmatrix\-\_\-linalg.\-h.
+
+\hypertarget{gmatrix__linalg_8h_a60a5345a5cf481ba912a81f986314901}{\index{gmatrix\-\_\-linalg.\-h@{gmatrix\-\_\-linalg.\-h}!G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-T\-E\-R\-M\-I\-N\-A\-N\-T2@{G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-T\-E\-R\-M\-I\-N\-A\-N\-T2}}
+\index{G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-T\-E\-R\-M\-I\-N\-A\-N\-T2@{G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-T\-E\-R\-M\-I\-N\-A\-N\-T2}!gmatrix_linalg.h@{gmatrix\-\_\-linalg.\-h}}
+\subsubsection[{G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-T\-E\-R\-M\-I\-N\-A\-N\-T2}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-T\-E\-R\-M\-I\-N\-A\-N\-T2(
+\begin{DoxyParamCaption}
+\item[{}]{Mat}
+\end{DoxyParamCaption}
+)~{\bf P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-T\-E\-R\-M\-I\-N\-A\-N\-T2}(\&Mat)}}\label{gmatrix__linalg_8h_a60a5345a5cf481ba912a81f986314901}
+
+
+Definition at line 45 of file gmatrix\-\_\-linalg.\-h.
+
+\hypertarget{gmatrix__linalg_8h_aaa4915c2f80d192b96bac268d5325356}{\index{gmatrix\-\_\-linalg.\-h@{gmatrix\-\_\-linalg.\-h}!G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-T\-E\-R\-M\-I\-N\-A\-N\-T3@{G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-T\-E\-R\-M\-I\-N\-A\-N\-T3}}
+\index{G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-T\-E\-R\-M\-I\-N\-A\-N\-T3@{G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-T\-E\-R\-M\-I\-N\-A\-N\-T3}!gmatrix_linalg.h@{gmatrix\-\_\-linalg.\-h}}
+\subsubsection[{G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-T\-E\-R\-M\-I\-N\-A\-N\-T3}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-T\-E\-R\-M\-I\-N\-A\-N\-T3(
+\begin{DoxyParamCaption}
+\item[{}]{Mat}
+\end{DoxyParamCaption}
+)~{\bf P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-T\-E\-R\-M\-I\-N\-A\-N\-T3}(\&Mat)}}\label{gmatrix__linalg_8h_aaa4915c2f80d192b96bac268d5325356}
+
+
+Definition at line 48 of file gmatrix\-\_\-linalg.\-h.
+
+\hypertarget{gmatrix__linalg_8h_a736e8c49bc7fa22e0f640cff35b3e443}{\index{gmatrix\-\_\-linalg.\-h@{gmatrix\-\_\-linalg.\-h}!G\-M\-A\-T\-R\-I\-X\-\_\-\-G\-A\-U\-S\-S\-J\-O\-R\-D\-A\-N@{G\-M\-A\-T\-R\-I\-X\-\_\-\-G\-A\-U\-S\-S\-J\-O\-R\-D\-A\-N}}
+\index{G\-M\-A\-T\-R\-I\-X\-\_\-\-G\-A\-U\-S\-S\-J\-O\-R\-D\-A\-N@{G\-M\-A\-T\-R\-I\-X\-\_\-\-G\-A\-U\-S\-S\-J\-O\-R\-D\-A\-N}!gmatrix_linalg.h@{gmatrix\-\_\-linalg.\-h}}
+\subsubsection[{G\-M\-A\-T\-R\-I\-X\-\_\-\-G\-A\-U\-S\-S\-J\-O\-R\-D\-A\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-M\-A\-T\-R\-I\-X\-\_\-\-G\-A\-U\-S\-S\-J\-O\-R\-D\-A\-N(
+\begin{DoxyParamCaption}
+\item[{}]{A\-Inv, }
+\item[{}]{X, }
+\item[{}]{A, }
+\item[{}]{B}
+\end{DoxyParamCaption}
+)~{\bf P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-G\-A\-U\-S\-S\-J\-O\-R\-D\-A\-N}(\&A\-Inv, \&X, \&A, \&B)}}\label{gmatrix__linalg_8h_a736e8c49bc7fa22e0f640cff35b3e443}
+
+
+Definition at line 39 of file gmatrix\-\_\-linalg.\-h.
+
+\hypertarget{gmatrix__linalg_8h_a867ef7319411dd33b148f76951c31df5}{\index{gmatrix\-\_\-linalg.\-h@{gmatrix\-\_\-linalg.\-h}!G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E@{G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E}}
+\index{G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E@{G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E}!gmatrix_linalg.h@{gmatrix\-\_\-linalg.\-h}}
+\subsubsection[{G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E(
+\begin{DoxyParamCaption}
+\item[{}]{Mat}
+\end{DoxyParamCaption}
+)~{\bf P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E}(\&Mat)}}\label{gmatrix__linalg_8h_a867ef7319411dd33b148f76951c31df5}
+
+
+Definition at line 63 of file gmatrix\-\_\-linalg.\-h.
+
+\hypertarget{gmatrix__linalg_8h_a1148b20eb86c4eacd24309721cea065b}{\index{gmatrix\-\_\-linalg.\-h@{gmatrix\-\_\-linalg.\-h}!G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E2\-\_\-\-C\-O\-P\-Y@{G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E2\-\_\-\-C\-O\-P\-Y}}
+\index{G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E2\-\_\-\-C\-O\-P\-Y@{G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E2\-\_\-\-C\-O\-P\-Y}!gmatrix_linalg.h@{gmatrix\-\_\-linalg.\-h}}
+\subsubsection[{G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E2\-\_\-\-C\-O\-P\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E2\-\_\-\-C\-O\-P\-Y(
+\begin{DoxyParamCaption}
+\item[{}]{Mat\-Inverse, }
+\item[{}]{Mat}
+\end{DoxyParamCaption}
+)~{\bf P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E2\-\_\-\-C\-O\-P\-Y}(\&Mat\-Inverse, \&Mat)}}\label{gmatrix__linalg_8h_a1148b20eb86c4eacd24309721cea065b}
+
+
+Definition at line 54 of file gmatrix\-\_\-linalg.\-h.
+
+\hypertarget{gmatrix__linalg_8h_a0da198fa5f5a0e4375b4e73fcf832f00}{\index{gmatrix\-\_\-linalg.\-h@{gmatrix\-\_\-linalg.\-h}!G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E3\-\_\-\-C\-O\-P\-Y@{G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E3\-\_\-\-C\-O\-P\-Y}}
+\index{G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E3\-\_\-\-C\-O\-P\-Y@{G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E3\-\_\-\-C\-O\-P\-Y}!gmatrix_linalg.h@{gmatrix\-\_\-linalg.\-h}}
+\subsubsection[{G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E3\-\_\-\-C\-O\-P\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E3\-\_\-\-C\-O\-P\-Y(
+\begin{DoxyParamCaption}
+\item[{}]{Mat\-Inverse, }
+\item[{}]{Mat}
+\end{DoxyParamCaption}
+)~{\bf P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E3\-\_\-\-C\-O\-P\-Y}(\&Mat\-Inverse, \&Mat)}}\label{gmatrix__linalg_8h_a0da198fa5f5a0e4375b4e73fcf832f00}
+
+
+Definition at line 57 of file gmatrix\-\_\-linalg.\-h.
+
+\hypertarget{gmatrix__linalg_8h_af97710deefd870c62edaa33ef7e10fbe}{\index{gmatrix\-\_\-linalg.\-h@{gmatrix\-\_\-linalg.\-h}!G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E\-\_\-\-C\-O\-P\-Y@{G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E\-\_\-\-C\-O\-P\-Y}}
+\index{G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E\-\_\-\-C\-O\-P\-Y@{G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E\-\_\-\-C\-O\-P\-Y}!gmatrix_linalg.h@{gmatrix\-\_\-linalg.\-h}}
+\subsubsection[{G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E\-\_\-\-C\-O\-P\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E\-\_\-\-C\-O\-P\-Y(
+\begin{DoxyParamCaption}
+\item[{}]{Mat\-Inverse, }
+\item[{}]{Mat}
+\end{DoxyParamCaption}
+)~{\bf P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E\-\_\-\-C\-O\-P\-Y}(\&Mat\-Inverse, \&Mat)}}\label{gmatrix__linalg_8h_af97710deefd870c62edaa33ef7e10fbe}
+
+
+Definition at line 60 of file gmatrix\-\_\-linalg.\-h.
+
+\hypertarget{gmatrix__linalg_8h_a7fe12877f673c108dc656dc59f96a968}{\index{gmatrix\-\_\-linalg.\-h@{gmatrix\-\_\-linalg.\-h}!G\-M\-A\-T\-R\-I\-X\-\_\-\-L\-E\-F\-T\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E\-\_\-\-C\-O\-P\-Y@{G\-M\-A\-T\-R\-I\-X\-\_\-\-L\-E\-F\-T\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E\-\_\-\-C\-O\-P\-Y}}
+\index{G\-M\-A\-T\-R\-I\-X\-\_\-\-L\-E\-F\-T\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E\-\_\-\-C\-O\-P\-Y@{G\-M\-A\-T\-R\-I\-X\-\_\-\-L\-E\-F\-T\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E\-\_\-\-C\-O\-P\-Y}!gmatrix_linalg.h@{gmatrix\-\_\-linalg.\-h}}
+\subsubsection[{G\-M\-A\-T\-R\-I\-X\-\_\-\-L\-E\-F\-T\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E\-\_\-\-C\-O\-P\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-M\-A\-T\-R\-I\-X\-\_\-\-L\-E\-F\-T\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E\-\_\-\-C\-O\-P\-Y(
+\begin{DoxyParamCaption}
+\item[{}]{Apinv, }
+\item[{}]{A, }
+\item[{}]{Mat\-Dummy}
+\end{DoxyParamCaption}
+)~{\bf P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-L\-E\-F\-T\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E\-\_\-\-C\-O\-P\-Y}(\&Apinv,\&A,\&Mat\-Dummy)}}\label{gmatrix__linalg_8h_a7fe12877f673c108dc656dc59f96a968}
+
+
+Definition at line 72 of file gmatrix\-\_\-linalg.\-h.
+
+\hypertarget{gmatrix__linalg_8h_a0e3ccbc834b74902e18e778b2af192d2}{\index{gmatrix\-\_\-linalg.\-h@{gmatrix\-\_\-linalg.\-h}!G\-M\-A\-T\-R\-I\-X\-\_\-\-L\-U\-D\-C\-M\-P@{G\-M\-A\-T\-R\-I\-X\-\_\-\-L\-U\-D\-C\-M\-P}}
+\index{G\-M\-A\-T\-R\-I\-X\-\_\-\-L\-U\-D\-C\-M\-P@{G\-M\-A\-T\-R\-I\-X\-\_\-\-L\-U\-D\-C\-M\-P}!gmatrix_linalg.h@{gmatrix\-\_\-linalg.\-h}}
+\subsubsection[{G\-M\-A\-T\-R\-I\-X\-\_\-\-L\-U\-D\-C\-M\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-M\-A\-T\-R\-I\-X\-\_\-\-L\-U\-D\-C\-M\-P(
+\begin{DoxyParamCaption}
+\item[{}]{Mat\-L\-U, }
+\item[{}]{Mat}
+\end{DoxyParamCaption}
+)~{\bf P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-L\-U\-D\-C\-M\-P}(\&Mat\-L\-U, \&Mat)}}\label{gmatrix__linalg_8h_a0e3ccbc834b74902e18e778b2af192d2}
+
+
+Definition at line 36 of file gmatrix\-\_\-linalg.\-h.
+
+\hypertarget{gmatrix__linalg_8h_ad376e3dd0f4674718c130a24b018b09d}{\index{gmatrix\-\_\-linalg.\-h@{gmatrix\-\_\-linalg.\-h}!G\-M\-A\-T\-R\-I\-X\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E@{G\-M\-A\-T\-R\-I\-X\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E}}
+\index{G\-M\-A\-T\-R\-I\-X\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E@{G\-M\-A\-T\-R\-I\-X\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E}!gmatrix_linalg.h@{gmatrix\-\_\-linalg.\-h}}
+\subsubsection[{G\-M\-A\-T\-R\-I\-X\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-M\-A\-T\-R\-I\-X\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E(
+\begin{DoxyParamCaption}
+\item[{}]{Apinv, }
+\item[{}]{A, }
+\item[{}]{Mat\-Dummy}
+\end{DoxyParamCaption}
+)~{\bf P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E}(\&Apinv,\&A,\&Mat\-Dummy)}}\label{gmatrix__linalg_8h_ad376e3dd0f4674718c130a24b018b09d}
+
+
+Definition at line 69 of file gmatrix\-\_\-linalg.\-h.
+
+\hypertarget{gmatrix__linalg_8h_a0075b2e0feff27af3643ff2993e8e443}{\index{gmatrix\-\_\-linalg.\-h@{gmatrix\-\_\-linalg.\-h}!G\-M\-A\-T\-R\-I\-X\-\_\-\-R\-A\-N\-K@{G\-M\-A\-T\-R\-I\-X\-\_\-\-R\-A\-N\-K}}
+\index{G\-M\-A\-T\-R\-I\-X\-\_\-\-R\-A\-N\-K@{G\-M\-A\-T\-R\-I\-X\-\_\-\-R\-A\-N\-K}!gmatrix_linalg.h@{gmatrix\-\_\-linalg.\-h}}
+\subsubsection[{G\-M\-A\-T\-R\-I\-X\-\_\-\-R\-A\-N\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-M\-A\-T\-R\-I\-X\-\_\-\-R\-A\-N\-K(
+\begin{DoxyParamCaption}
+\item[{}]{Mat}
+\end{DoxyParamCaption}
+)~{\bf P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-R\-A\-N\-K}(\&Mat)}}\label{gmatrix__linalg_8h_a0075b2e0feff27af3643ff2993e8e443}
+
+
+Definition at line 81 of file gmatrix\-\_\-linalg.\-h.
+
+\hypertarget{gmatrix__linalg_8h_a57f926a489ba7dae5134fd0c117a7b32}{\index{gmatrix\-\_\-linalg.\-h@{gmatrix\-\_\-linalg.\-h}!G\-M\-A\-T\-R\-I\-X\-\_\-\-R\-A\-N\-K\-\_\-\-F\-R\-O\-M\-S\-V\-D@{G\-M\-A\-T\-R\-I\-X\-\_\-\-R\-A\-N\-K\-\_\-\-F\-R\-O\-M\-S\-V\-D}}
+\index{G\-M\-A\-T\-R\-I\-X\-\_\-\-R\-A\-N\-K\-\_\-\-F\-R\-O\-M\-S\-V\-D@{G\-M\-A\-T\-R\-I\-X\-\_\-\-R\-A\-N\-K\-\_\-\-F\-R\-O\-M\-S\-V\-D}!gmatrix_linalg.h@{gmatrix\-\_\-linalg.\-h}}
+\subsubsection[{G\-M\-A\-T\-R\-I\-X\-\_\-\-R\-A\-N\-K\-\_\-\-F\-R\-O\-M\-S\-V\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-M\-A\-T\-R\-I\-X\-\_\-\-R\-A\-N\-K\-\_\-\-F\-R\-O\-M\-S\-V\-D(
+\begin{DoxyParamCaption}
+\item[{}]{U, }
+\item[{}]{S, }
+\item[{}]{V}
+\end{DoxyParamCaption}
+)~{\bf P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-R\-A\-N\-K\-\_\-\-F\-R\-O\-M\-S\-V\-D}(\&U,\&S,\&V)}}\label{gmatrix__linalg_8h_a57f926a489ba7dae5134fd0c117a7b32}
+
+
+Definition at line 78 of file gmatrix\-\_\-linalg.\-h.
+
+\hypertarget{gmatrix__linalg_8h_ac5d3390a2839cc85885af1d00b4eeed3}{\index{gmatrix\-\_\-linalg.\-h@{gmatrix\-\_\-linalg.\-h}!G\-M\-A\-T\-R\-I\-X\-\_\-\-S\-V\-D@{G\-M\-A\-T\-R\-I\-X\-\_\-\-S\-V\-D}}
+\index{G\-M\-A\-T\-R\-I\-X\-\_\-\-S\-V\-D@{G\-M\-A\-T\-R\-I\-X\-\_\-\-S\-V\-D}!gmatrix_linalg.h@{gmatrix\-\_\-linalg.\-h}}
+\subsubsection[{G\-M\-A\-T\-R\-I\-X\-\_\-\-S\-V\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-M\-A\-T\-R\-I\-X\-\_\-\-S\-V\-D(
+\begin{DoxyParamCaption}
+\item[{}]{U, }
+\item[{}]{S, }
+\item[{}]{V, }
+\item[{}]{Mat, }
+\item[{}]{Flag\-Sorted}
+\end{DoxyParamCaption}
+)~{\bf P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-S\-V\-D}(\&U,\&S,\&V,\&Mat,Flag\-Sorted)}}\label{gmatrix__linalg_8h_ac5d3390a2839cc85885af1d00b4eeed3}
+
+
+Definition at line 66 of file gmatrix\-\_\-linalg.\-h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{gmatrix__linalg_8h_a59ba4c2cab979216870f2e04a65ada87}{\index{gmatrix\-\_\-linalg.\-h@{gmatrix\-\_\-linalg.\-h}!P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-C\-H\-O\-L\-E\-S\-K\-Y@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-C\-H\-O\-L\-E\-S\-K\-Y}}
+\index{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-C\-H\-O\-L\-E\-S\-K\-Y@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-C\-H\-O\-L\-E\-S\-K\-Y}!gmatrix_linalg.h@{gmatrix\-\_\-linalg.\-h}}
+\subsubsection[{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-C\-H\-O\-L\-E\-S\-K\-Y}]{\setlength{\rightskip}{0pt plus 5cm}void P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-C\-H\-O\-L\-E\-S\-K\-Y (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-G\-M\-A\-T\-R\-I\-X}}]{p\-L, }
+\item[{{\bf P\-G\-M\-A\-T\-R\-I\-X}}]{p\-A}
+\end{DoxyParamCaption}
+)}}\label{gmatrix__linalg_8h_a59ba4c2cab979216870f2e04a65ada87}
+\hypertarget{gmatrix__linalg_8h_abaae32b4655dcfcc50eb43c5936f6f7e}{\index{gmatrix\-\_\-linalg.\-h@{gmatrix\-\_\-linalg.\-h}!P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-R\-I\-V\-A\-T\-I\-V\-E\-\_\-\-L\-E\-F\-T\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-R\-I\-V\-A\-T\-I\-V\-E\-\_\-\-L\-E\-F\-T\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E}}
+\index{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-R\-I\-V\-A\-T\-I\-V\-E\-\_\-\-L\-E\-F\-T\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-R\-I\-V\-A\-T\-I\-V\-E\-\_\-\-L\-E\-F\-T\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E}!gmatrix_linalg.h@{gmatrix\-\_\-linalg.\-h}}
+\subsubsection[{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-R\-I\-V\-A\-T\-I\-V\-E\-\_\-\-L\-E\-F\-T\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}void P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-R\-I\-V\-A\-T\-I\-V\-E\-\_\-\-L\-E\-F\-T\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-G\-M\-A\-T\-R\-I\-X}}]{pd\-Apinvdx, }
+\item[{{\bf P\-G\-M\-A\-T\-R\-I\-X}}]{pd\-Adx, }
+\item[{{\bf P\-G\-M\-A\-T\-R\-I\-X}}]{p\-A, }
+\item[{{\bf P\-G\-M\-A\-T\-R\-I\-X}}]{p\-Apinv, }
+\item[{{\bf P\-G\-M\-A\-T\-R\-I\-X}}]{p\-Mat\-Dummy1, }
+\item[{{\bf P\-G\-M\-A\-T\-R\-I\-X}}]{p\-Mat\-Dummy2}
+\end{DoxyParamCaption}
+)}}\label{gmatrix__linalg_8h_abaae32b4655dcfcc50eb43c5936f6f7e}
+\hypertarget{gmatrix__linalg_8h_a0594cc86b73ae15c8f9675a6ed6575cb}{\index{gmatrix\-\_\-linalg.\-h@{gmatrix\-\_\-linalg.\-h}!P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-T\-E\-R\-M\-I\-N\-A\-N\-T@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-T\-E\-R\-M\-I\-N\-A\-N\-T}}
+\index{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-T\-E\-R\-M\-I\-N\-A\-N\-T@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-T\-E\-R\-M\-I\-N\-A\-N\-T}!gmatrix_linalg.h@{gmatrix\-\_\-linalg.\-h}}
+\subsubsection[{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-T\-E\-R\-M\-I\-N\-A\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\-M\-A\-T\-R\-I\-X\-\_\-\-F\-L\-O\-A\-T} P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-T\-E\-R\-M\-I\-N\-A\-N\-T (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-G\-M\-A\-T\-R\-I\-X}}]{p\-Mat, }
+\item[{{\bf P\-G\-M\-A\-T\-R\-I\-X}}]{p\-Mat\-Dummy}
+\end{DoxyParamCaption}
+)}}\label{gmatrix__linalg_8h_a0594cc86b73ae15c8f9675a6ed6575cb}
+\hypertarget{gmatrix__linalg_8h_a32a5613879208f88b8221ec04f5dadd1}{\index{gmatrix\-\_\-linalg.\-h@{gmatrix\-\_\-linalg.\-h}!P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-T\-E\-R\-M\-I\-N\-A\-N\-T2@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-T\-E\-R\-M\-I\-N\-A\-N\-T2}}
+\index{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-T\-E\-R\-M\-I\-N\-A\-N\-T2@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-T\-E\-R\-M\-I\-N\-A\-N\-T2}!gmatrix_linalg.h@{gmatrix\-\_\-linalg.\-h}}
+\subsubsection[{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-T\-E\-R\-M\-I\-N\-A\-N\-T2}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\-M\-A\-T\-R\-I\-X\-\_\-\-F\-L\-O\-A\-T} P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-T\-E\-R\-M\-I\-N\-A\-N\-T2 (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-G\-M\-A\-T\-R\-I\-X}}]{p\-Mat}
+\end{DoxyParamCaption}
+)}}\label{gmatrix__linalg_8h_a32a5613879208f88b8221ec04f5dadd1}
+\hypertarget{gmatrix__linalg_8h_ab12dedced87c4e957ed5d06a53c217d4}{\index{gmatrix\-\_\-linalg.\-h@{gmatrix\-\_\-linalg.\-h}!P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-T\-E\-R\-M\-I\-N\-A\-N\-T3@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-T\-E\-R\-M\-I\-N\-A\-N\-T3}}
+\index{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-T\-E\-R\-M\-I\-N\-A\-N\-T3@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-T\-E\-R\-M\-I\-N\-A\-N\-T3}!gmatrix_linalg.h@{gmatrix\-\_\-linalg.\-h}}
+\subsubsection[{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-T\-E\-R\-M\-I\-N\-A\-N\-T3}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\-M\-A\-T\-R\-I\-X\-\_\-\-F\-L\-O\-A\-T} P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-E\-T\-E\-R\-M\-I\-N\-A\-N\-T3 (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-G\-M\-A\-T\-R\-I\-X}}]{p\-Mat}
+\end{DoxyParamCaption}
+)}}\label{gmatrix__linalg_8h_ab12dedced87c4e957ed5d06a53c217d4}
+\hypertarget{gmatrix__linalg_8h_abfc3e0127df1569e2e2db1cf78aaf38e}{\index{gmatrix\-\_\-linalg.\-h@{gmatrix\-\_\-linalg.\-h}!P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-G\-A\-U\-S\-S\-J\-O\-R\-D\-A\-N@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-G\-A\-U\-S\-S\-J\-O\-R\-D\-A\-N}}
+\index{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-G\-A\-U\-S\-S\-J\-O\-R\-D\-A\-N@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-G\-A\-U\-S\-S\-J\-O\-R\-D\-A\-N}!gmatrix_linalg.h@{gmatrix\-\_\-linalg.\-h}}
+\subsubsection[{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-G\-A\-U\-S\-S\-J\-O\-R\-D\-A\-N}]{\setlength{\rightskip}{0pt plus 5cm}void P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-G\-A\-U\-S\-S\-J\-O\-R\-D\-A\-N (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-G\-M\-A\-T\-R\-I\-X}}]{p\-A\-Inverse, }
+\item[{{\bf P\-G\-M\-A\-T\-R\-I\-X}}]{p\-X, }
+\item[{{\bf P\-G\-M\-A\-T\-R\-I\-X}}]{p\-A, }
+\item[{{\bf P\-G\-M\-A\-T\-R\-I\-X}}]{p\-B}
+\end{DoxyParamCaption}
+)}}\label{gmatrix__linalg_8h_abfc3e0127df1569e2e2db1cf78aaf38e}
+\hypertarget{gmatrix__linalg_8h_a82f707ad433e52b2e08d22aba32c9e8a}{\index{gmatrix\-\_\-linalg.\-h@{gmatrix\-\_\-linalg.\-h}!P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E}}
+\index{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E}!gmatrix_linalg.h@{gmatrix\-\_\-linalg.\-h}}
+\subsubsection[{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}void P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-G\-M\-A\-T\-R\-I\-X}}]{p\-Mat}
+\end{DoxyParamCaption}
+)}}\label{gmatrix__linalg_8h_a82f707ad433e52b2e08d22aba32c9e8a}
+\hypertarget{gmatrix__linalg_8h_a5d9db3defafaf0a8a1b45c20320f23c9}{\index{gmatrix\-\_\-linalg.\-h@{gmatrix\-\_\-linalg.\-h}!P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E2\-\_\-\-C\-O\-P\-Y@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E2\-\_\-\-C\-O\-P\-Y}}
+\index{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E2\-\_\-\-C\-O\-P\-Y@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E2\-\_\-\-C\-O\-P\-Y}!gmatrix_linalg.h@{gmatrix\-\_\-linalg.\-h}}
+\subsubsection[{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E2\-\_\-\-C\-O\-P\-Y}]{\setlength{\rightskip}{0pt plus 5cm}void P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E2\-\_\-\-C\-O\-P\-Y (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-G\-M\-A\-T\-R\-I\-X}}]{p\-Mat\-Inverse, }
+\item[{{\bf P\-G\-M\-A\-T\-R\-I\-X}}]{p\-Mat}
+\end{DoxyParamCaption}
+)}}\label{gmatrix__linalg_8h_a5d9db3defafaf0a8a1b45c20320f23c9}
+\hypertarget{gmatrix__linalg_8h_aee23001f1828814bd583b5944016e8de}{\index{gmatrix\-\_\-linalg.\-h@{gmatrix\-\_\-linalg.\-h}!P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E3\-\_\-\-C\-O\-P\-Y@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E3\-\_\-\-C\-O\-P\-Y}}
+\index{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E3\-\_\-\-C\-O\-P\-Y@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E3\-\_\-\-C\-O\-P\-Y}!gmatrix_linalg.h@{gmatrix\-\_\-linalg.\-h}}
+\subsubsection[{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E3\-\_\-\-C\-O\-P\-Y}]{\setlength{\rightskip}{0pt plus 5cm}void P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E3\-\_\-\-C\-O\-P\-Y (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-G\-M\-A\-T\-R\-I\-X}}]{p\-Mat\-Inverse, }
+\item[{{\bf P\-G\-M\-A\-T\-R\-I\-X}}]{p\-Mat}
+\end{DoxyParamCaption}
+)}}\label{gmatrix__linalg_8h_aee23001f1828814bd583b5944016e8de}
+\hypertarget{gmatrix__linalg_8h_a1d2946ff9ab4154e8f3c930eb559a0da}{\index{gmatrix\-\_\-linalg.\-h@{gmatrix\-\_\-linalg.\-h}!P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E\-\_\-\-C\-O\-P\-Y@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E\-\_\-\-C\-O\-P\-Y}}
+\index{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E\-\_\-\-C\-O\-P\-Y@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E\-\_\-\-C\-O\-P\-Y}!gmatrix_linalg.h@{gmatrix\-\_\-linalg.\-h}}
+\subsubsection[{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E\-\_\-\-C\-O\-P\-Y}]{\setlength{\rightskip}{0pt plus 5cm}void P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E\-\_\-\-C\-O\-P\-Y (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-G\-M\-A\-T\-R\-I\-X}}]{p\-Mat\-Inverse, }
+\item[{{\bf P\-G\-M\-A\-T\-R\-I\-X}}]{p\-Mat}
+\end{DoxyParamCaption}
+)}}\label{gmatrix__linalg_8h_a1d2946ff9ab4154e8f3c930eb559a0da}
+
+
+Referenced by P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-R\-I\-G\-H\-T\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E().
+
+\hypertarget{gmatrix__linalg_8h_a884b702af545a47763ca3508189c186c}{\index{gmatrix\-\_\-linalg.\-h@{gmatrix\-\_\-linalg.\-h}!P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-L\-E\-F\-T\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E\-\_\-\-C\-O\-P\-Y@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-L\-E\-F\-T\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E\-\_\-\-C\-O\-P\-Y}}
+\index{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-L\-E\-F\-T\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E\-\_\-\-C\-O\-P\-Y@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-L\-E\-F\-T\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E\-\_\-\-C\-O\-P\-Y}!gmatrix_linalg.h@{gmatrix\-\_\-linalg.\-h}}
+\subsubsection[{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-L\-E\-F\-T\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E\-\_\-\-C\-O\-P\-Y}]{\setlength{\rightskip}{0pt plus 5cm}void P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-L\-E\-F\-T\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E\-\_\-\-C\-O\-P\-Y (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-G\-M\-A\-T\-R\-I\-X}}]{p\-Apinv, }
+\item[{{\bf P\-G\-M\-A\-T\-R\-I\-X}}]{p\-A, }
+\item[{{\bf P\-G\-M\-A\-T\-R\-I\-X}}]{p\-Mat\-Dummy}
+\end{DoxyParamCaption}
+)}}\label{gmatrix__linalg_8h_a884b702af545a47763ca3508189c186c}
+\hypertarget{gmatrix__linalg_8h_ac2a0b59034eea9aa6e295b44dae9300d}{\index{gmatrix\-\_\-linalg.\-h@{gmatrix\-\_\-linalg.\-h}!P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-L\-U\-D\-C\-M\-P@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-L\-U\-D\-C\-M\-P}}
+\index{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-L\-U\-D\-C\-M\-P@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-L\-U\-D\-C\-M\-P}!gmatrix_linalg.h@{gmatrix\-\_\-linalg.\-h}}
+\subsubsection[{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-L\-U\-D\-C\-M\-P}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\-M\-A\-T\-R\-I\-X\-\_\-\-F\-L\-O\-A\-T} P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-L\-U\-D\-C\-M\-P (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-G\-M\-A\-T\-R\-I\-X}}]{p\-Mat\-L\-U, }
+\item[{{\bf P\-G\-M\-A\-T\-R\-I\-X}}]{p\-Mat}
+\end{DoxyParamCaption}
+)}}\label{gmatrix__linalg_8h_ac2a0b59034eea9aa6e295b44dae9300d}
+\hypertarget{gmatrix__linalg_8h_a276d9ed1da72c29111d0cb8458bd555c}{\index{gmatrix\-\_\-linalg.\-h@{gmatrix\-\_\-linalg.\-h}!P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E}}
+\index{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E}!gmatrix_linalg.h@{gmatrix\-\_\-linalg.\-h}}
+\subsubsection[{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}void P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-G\-M\-A\-T\-R\-I\-X}}]{p\-Apinv, }
+\item[{{\bf P\-G\-M\-A\-T\-R\-I\-X}}]{p\-A, }
+\item[{{\bf P\-G\-M\-A\-T\-R\-I\-X}}]{p\-Mat\-Dummy}
+\end{DoxyParamCaption}
+)}}\label{gmatrix__linalg_8h_a276d9ed1da72c29111d0cb8458bd555c}
+\hypertarget{gmatrix__linalg_8h_aacf215a0395fa3a9bb142a7cbcd8abb4}{\index{gmatrix\-\_\-linalg.\-h@{gmatrix\-\_\-linalg.\-h}!P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-R\-A\-N\-K@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-R\-A\-N\-K}}
+\index{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-R\-A\-N\-K@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-R\-A\-N\-K}!gmatrix_linalg.h@{gmatrix\-\_\-linalg.\-h}}
+\subsubsection[{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-R\-A\-N\-K}]{\setlength{\rightskip}{0pt plus 5cm}int P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-R\-A\-N\-K (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-G\-M\-A\-T\-R\-I\-X}}]{p\-Mat}
+\end{DoxyParamCaption}
+)}}\label{gmatrix__linalg_8h_aacf215a0395fa3a9bb142a7cbcd8abb4}
+\hypertarget{gmatrix__linalg_8h_a5e06452b52539b927e27800015357378}{\index{gmatrix\-\_\-linalg.\-h@{gmatrix\-\_\-linalg.\-h}!P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-R\-A\-N\-K\-\_\-\-F\-R\-O\-M\-S\-V\-D@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-R\-A\-N\-K\-\_\-\-F\-R\-O\-M\-S\-V\-D}}
+\index{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-R\-A\-N\-K\-\_\-\-F\-R\-O\-M\-S\-V\-D@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-R\-A\-N\-K\-\_\-\-F\-R\-O\-M\-S\-V\-D}!gmatrix_linalg.h@{gmatrix\-\_\-linalg.\-h}}
+\subsubsection[{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-R\-A\-N\-K\-\_\-\-F\-R\-O\-M\-S\-V\-D}]{\setlength{\rightskip}{0pt plus 5cm}int P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-R\-A\-N\-K\-\_\-\-F\-R\-O\-M\-S\-V\-D (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-G\-M\-A\-T\-R\-I\-X}}]{p\-U, }
+\item[{{\bf P\-G\-M\-A\-T\-R\-I\-X}}]{p\-S, }
+\item[{{\bf P\-G\-M\-A\-T\-R\-I\-X}}]{p\-V}
+\end{DoxyParamCaption}
+)}}\label{gmatrix__linalg_8h_a5e06452b52539b927e27800015357378}
+\hypertarget{gmatrix__linalg_8h_ac549c7f4bf706e7ec89de04b2573fffa}{\index{gmatrix\-\_\-linalg.\-h@{gmatrix\-\_\-linalg.\-h}!P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-S\-V\-D@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-S\-V\-D}}
+\index{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-S\-V\-D@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-S\-V\-D}!gmatrix_linalg.h@{gmatrix\-\_\-linalg.\-h}}
+\subsubsection[{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-S\-V\-D}]{\setlength{\rightskip}{0pt plus 5cm}void P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-S\-V\-D (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-G\-M\-A\-T\-R\-I\-X}}]{p\-U, }
+\item[{{\bf P\-G\-M\-A\-T\-R\-I\-X}}]{p\-S, }
+\item[{{\bf P\-G\-M\-A\-T\-R\-I\-X}}]{p\-V, }
+\item[{{\bf P\-G\-M\-A\-T\-R\-I\-X}}]{p\-Mat, }
+\item[{unsigned char}]{Flag\-Sorted}
+\end{DoxyParamCaption}
+)}}\label{gmatrix__linalg_8h_ac549c7f4bf706e7ec89de04b2573fffa}
+
+
+Referenced by P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E\-\_\-\-P\-L\-U\-S().
+

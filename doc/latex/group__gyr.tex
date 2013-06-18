@@ -1,0 +1,379 @@
+\hypertarget{group__gyr}{\section{Functions for Gyrometer I\-T\-G3200}
+\label{group__gyr}\index{Functions for Gyrometer I\-T\-G3200@{Functions for Gyrometer I\-T\-G3200}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{group__gyr_ga3eba167b8ab0614bfe7bafeae8b5570d}{gyr\-\_\-write\-\_\-reg} (int \hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\-\_\-dev}, uint8\-\_\-t reg, uint8\-\_\-t data)
+\begin{DoxyCompactList}\small\item\em W\-R\-I\-T\-E T\-O R\-E\-G\-I\-S\-T\-E\-R. \end{DoxyCompactList}\item 
+uint8\-\_\-t $\ast$ \hyperlink{group__gyr_gad817a3b69d4c3026b7a9b6de32753e7b}{gyr\-\_\-read\-\_\-reg} (int \hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\-\_\-dev}, uint8\-\_\-t reg, uint8\-\_\-t count)
+\begin{DoxyCompactList}\small\item\em R\-E\-A\-D C\-O\-U\-N\-T 8-\/\-B\-I\-T R\-E\-G\-I\-S\-T\-E\-R I\-N S\-E\-Q\-U\-E\-N\-C\-E. \end{DoxyCompactList}\item 
+int \hyperlink{group__gyr_ga6d02be352b4491a236c9695a6a24d174}{gyr\-\_\-init} (int \hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\-\_\-dev}, float rate, short int lpf\-\_\-bw, char clk\-\_\-source, char $\ast$act)
+\begin{DoxyCompactList}\small\item\em I\-N\-I\-T\-I\-A\-L\-I\-Z\-E G\-Y\-R\-O\-M\-E\-T\-E\-R. \end{DoxyCompactList}\item 
+int \hyperlink{group__gyr_ga79875465c3a29fd9ec77308c80a8bc37}{gyr\-\_\-read\-\_\-all\-\_\-data} (int \hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\-\_\-dev}, short int $\ast$data)
+\begin{DoxyCompactList}\small\item\em R\-E\-A\-D A\-L\-L D\-A\-T\-A A\-T O\-N\-C\-E (X, Y, Z and T) \end{DoxyCompactList}\item 
+short int \hyperlink{group__gyr_ga271b37e9ace81b18bb2f83787247d262}{gyr\-\_\-read\-\_\-data} (int \hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\-\_\-dev}, int type)
+\begin{DoxyCompactList}\small\item\em R\-E\-A\-D D\-A\-T\-A (X, Y, Z or T) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\hypertarget{group__gyr_ga6d02be352b4491a236c9695a6a24d174}{\index{Functions for Gyrometer I\-T\-G3200@{Functions for Gyrometer I\-T\-G3200}!gyr\-\_\-init@{gyr\-\_\-init}}
+\index{gyr\-\_\-init@{gyr\-\_\-init}!Functions for Gyrometer ITG3200@{Functions for Gyrometer I\-T\-G3200}}
+\subsubsection[{gyr\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}int gyr\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{int}]{i2c\-\_\-dev, }
+\item[{float}]{rate, }
+\item[{short int}]{lpf\-\_\-bw, }
+\item[{char}]{clk\-\_\-source, }
+\item[{char $\ast$}]{act}
+\end{DoxyParamCaption}
+)}}\label{group__gyr_ga6d02be352b4491a236c9695a6a24d174}
+
+
+I\-N\-I\-T\-I\-A\-L\-I\-Z\-E G\-Y\-R\-O\-M\-E\-T\-E\-R. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lpf\-\_\-bw} & (low pass filter bandwidth in Hz) = 256, 188, 98, 42, 20, 10 or 5 \\
+\hline
+{\em rate} & (output data rate in Hz) $<$= 1000 (Fint), if lpf\-\_\-bw is not 256 $<$= 8000 (Fint), if lpf\-\_\-bw is 256 Real rate will be the closest superior rate possible, respcting the formula Rate = Fint/n, 1$<$=n$<$=255 \\
+\hline
+{\em clk\-\_\-source} & = 'I' Internal oscillator 'X' P\-L\-L with X Gyro reference 'Y' P\-L\-L with Y Gyro reference 'Z' Pll with Z Gyro reference Obs\-: It is highly recommended that the device is configured to use one of the gyros as the clock reference, due to the improved stability \\
+\hline
+{\em act} & (activated gyro data) = \char`\"{}\-X\-Y\-Z\char`\"{} All axes are activated \char`\"{}\-Y\-Z\char`\"{} Only Y and Z axes are activated \char`\"{}\-X\-Z\char`\"{} Only X and Z axes are activated \char`\"{}\-X\-Y\char`\"{} Only X and Y axes are activated \char`\"{}\-X\char`\"{} Only X axis is activated \char`\"{}\-Y\char`\"{} Only Y axis is activated \char`\"{}\-Z\char`\"{} Only Z axis is activated \char`\"{}\char`\"{} Device in very low power sleep mode \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Data of register or N\-U\-L\-L in case of any trouble 
+\end{DoxyReturn}
+
+
+Definition at line 53 of file gyr\-\_\-functions.\-c.
+
+
+\begin{DoxyCode}
+\{ 
+  uint8\_t data=0;
+  \textcolor{keywordtype}{float} Fint=1000;
+
+  \textcolor{keywordflow}{switch}(lpf\_bw)\{
+    \textcolor{keywordflow}{case} 256:
+      Fint=8000;
+      data=0x18;
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{case} 188:
+      data=0x19;
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{case} 98:
+      data=0x1A;
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{case} 42:
+      data=0x1B;
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{case} 20:
+      data=0x1C;
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{case} 10:
+      data=0x1D;
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{case} 5:
+      data=0x1E;
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{default}:
+      perror(\textcolor{stringliteral}{"Wrong low pass filter bandwidth value"});
+      \textcolor{keywordflow}{break};
+  \}
+  
+  \textcolor{keywordflow}{if}(\hyperlink{group__gyr_ga3eba167b8ab0614bfe7bafeae8b5570d}{gyr\_write\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev}, \hyperlink{communication_2imu__regs_8h_a78908b66de8b46d12895e7cb66af6f5c}{GYR\_DLPF\_FS}, data)<0
+      )\{
+    perror(\textcolor{stringliteral}{"Write in Configuration register A unsuccesful"});
+    \textcolor{keywordflow}{return} -1;
+  \}
+
+  \textcolor{keywordflow}{if}( (rate>Fint)||(rate<0) )
+  \{
+    perror(\textcolor{stringliteral}{"Wrong choice for rate"});
+    \textcolor{keywordflow}{return} -1;
+  \}
+  data=(uint8\_t)(Fint/rate - 1);
+  
+  \textcolor{keywordflow}{if}(\hyperlink{group__gyr_ga3eba167b8ab0614bfe7bafeae8b5570d}{gyr\_write\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev}, \hyperlink{communication_2imu__regs_8h_a04a18568e6e39825c98be5ec2976bec4}{GYR\_SMPLRT\_DIV}, 
+      data)<0)\{
+    perror(\textcolor{stringliteral}{"Write in configuration register B unsuccesful"});
+    \textcolor{keywordflow}{return} -1;
+  \}
+      
+  \textcolor{keywordflow}{switch}(clk\_source)\{
+    \textcolor{keywordflow}{case} \textcolor{charliteral}{'I'}:
+      data=0x00;
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{case} \textcolor{charliteral}{'X'}:
+      data=0x01;
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{case} \textcolor{charliteral}{'Y'}:
+      data=0x02;
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{case} \textcolor{charliteral}{'Z'}:
+      data=0x03;
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{default}:
+      perror(\textcolor{stringliteral}{"Wrong clk\_source value"});
+      \textcolor{keywordflow}{break};
+  \}
+      
+  \textcolor{keywordflow}{if}( strcmp(act,\textcolor{stringliteral}{"XYZ"})==0 );
+  \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}( strcmp(act,\textcolor{stringliteral}{"YZ"})==0 )
+      data=data|0x20;
+  \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}( strcmp(act,\textcolor{stringliteral}{""})==0 )
+      data=data|0x40;
+  \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}( strcmp(act,\textcolor{stringliteral}{"Y"})==0 )
+      data=data|0x28;
+  \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}( strcmp(act,\textcolor{stringliteral}{"Z"})==0 )
+      data=data|0x30;
+  \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}( strcmp(act,\textcolor{stringliteral}{"X"})==0 )
+      data=data|0x18;
+  \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}( strcmp(act,\textcolor{stringliteral}{"XY"})==0 )
+      data=data|0x08;
+  \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}( strcmp(act,\textcolor{stringliteral}{"XZ"})==0 )
+      data=data|0x10;
+  \textcolor{keywordflow}{else}\{
+    perror(\textcolor{stringliteral}{"Wrong act value in gyrometer initialization"});
+    \textcolor{keywordflow}{return} -1;
+  \}
+   
+  \textcolor{keywordflow}{if}(\hyperlink{group__gyr_ga3eba167b8ab0614bfe7bafeae8b5570d}{gyr\_write\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev}, \hyperlink{communication_2imu__regs_8h_a5eba4af610a1ec85320e940bf44855eb}{GYR\_PWR\_MGM}, data)<0
+      )\{
+    perror(\textcolor{stringliteral}{"Write in mode register unsuccesful"});
+    \textcolor{keywordflow}{return} -1;
+  \}
+  
+  \textcolor{keywordflow}{return} 1;
+\}
+\end{DoxyCode}
+\hypertarget{group__gyr_ga79875465c3a29fd9ec77308c80a8bc37}{\index{Functions for Gyrometer I\-T\-G3200@{Functions for Gyrometer I\-T\-G3200}!gyr\-\_\-read\-\_\-all\-\_\-data@{gyr\-\_\-read\-\_\-all\-\_\-data}}
+\index{gyr\-\_\-read\-\_\-all\-\_\-data@{gyr\-\_\-read\-\_\-all\-\_\-data}!Functions for Gyrometer ITG3200@{Functions for Gyrometer I\-T\-G3200}}
+\subsubsection[{gyr\-\_\-read\-\_\-all\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}int gyr\-\_\-read\-\_\-all\-\_\-data (
+\begin{DoxyParamCaption}
+\item[{int}]{i2c\-\_\-dev, }
+\item[{short int $\ast$}]{data}
+\end{DoxyParamCaption}
+)}}\label{group__gyr_ga79875465c3a29fd9ec77308c80a8bc37}
+
+
+R\-E\-A\-D A\-L\-L D\-A\-T\-A A\-T O\-N\-C\-E (X, Y, Z and T) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em i2c\-\_\-dev} & \\
+\hline
+\mbox{\tt out}  & {\em $\ast$data} & Vector with all data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Flag with S\-U\-C\-C\-E\-S\-S or F\-A\-I\-L\-U\-R\-E 
+\end{DoxyReturn}
+
+
+Definition at line 149 of file gyr\-\_\-functions.\-c.
+
+
+\begin{DoxyCode}
+\{
+  uint8\_t i;
+  uint8\_t *data8;
+  \textcolor{keyword}{union }result
+  \{
+    \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} usgnd[4];
+    \textcolor{keywordtype}{int} \textcolor{keywordtype}{short} sgnd[4];
+  \} result;
+  \textcolor{keywordflow}{if}( (data8=\hyperlink{group__gyr_gad817a3b69d4c3026b7a9b6de32753e7b}{gyr\_read\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev},\hyperlink{communication_2imu__regs_8h_a7d00eaf1ea076429433ad0c787b48200}{GYR\_TEMP\_OUT\_H}
+      ,8))==NULL)
+  \{
+    \textcolor{comment}{//perror("Read accelerometer register failed");}
+    \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
+  \}
+  \textcolor{comment}{// Result receives gyro data:}
+  \textcolor{keywordflow}{for}(i=1; i<4; i++)
+  \{
+    result.usgnd[i-1]=0;
+    result.usgnd[i-1]=result.usgnd[i-1]|((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} int)data8[i*2+1])|(((\textcolor{keywordtype}{
+      unsigned} int)data8[i*2])<<8);
+    data[i-1]=result.sgnd[i-1];
+  \}
+  \textcolor{comment}{// Result receives temperature data:}
+  result.usgnd[3]=0;
+  result.usgnd[3]=result.usgnd[3]|((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} int)data8[1])|(((\textcolor{keywordtype}{unsigned} 
+      int)data8[0])<<8);  
+  data[3]=result.sgnd[3];
+  \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};  
+\}
+\end{DoxyCode}
+\hypertarget{group__gyr_ga271b37e9ace81b18bb2f83787247d262}{\index{Functions for Gyrometer I\-T\-G3200@{Functions for Gyrometer I\-T\-G3200}!gyr\-\_\-read\-\_\-data@{gyr\-\_\-read\-\_\-data}}
+\index{gyr\-\_\-read\-\_\-data@{gyr\-\_\-read\-\_\-data}!Functions for Gyrometer ITG3200@{Functions for Gyrometer I\-T\-G3200}}
+\subsubsection[{gyr\-\_\-read\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}short int gyr\-\_\-read\-\_\-data (
+\begin{DoxyParamCaption}
+\item[{int}]{i2c\-\_\-dev, }
+\item[{int}]{type}
+\end{DoxyParamCaption}
+)}}\label{group__gyr_ga271b37e9ace81b18bb2f83787247d262}
+
+
+R\-E\-A\-D D\-A\-T\-A (X, Y, Z or T) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i2c\-\_\-dev} & \\
+\hline
+{\em type} & Define kind of read\-: 'X' or 'Y' or 'Z' or 'T'(temperature) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Data 
+\end{DoxyReturn}
+
+
+Definition at line 177 of file gyr\-\_\-functions.\-c.
+
+
+\begin{DoxyCode}
+\{
+  uint8\_t *data;
+  \textcolor{keyword}{union }result
+  \{
+    \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} usgnd;
+    \textcolor{keywordtype}{int} sgnd;
+  \}result;
+
+  \textcolor{keywordflow}{switch}(type)\{
+    \textcolor{keywordflow}{case} \textcolor{charliteral}{'X'}:
+      data=\hyperlink{group__gyr_gad817a3b69d4c3026b7a9b6de32753e7b}{gyr\_read\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev},\hyperlink{communication_2imu__regs_8h_a45d3d3c92328dd02072aae7d8cf14ad0}{GYR\_GYRO\_XOUT\_H}
+      ,2);
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{case} \textcolor{charliteral}{'Y'}:
+      data=\hyperlink{group__gyr_gad817a3b69d4c3026b7a9b6de32753e7b}{gyr\_read\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev},\hyperlink{communication_2imu__regs_8h_a7664c10b8291231d44694e154c218fab}{GYR\_GYRO\_YOUT\_H}
+      ,2);
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{case} \textcolor{charliteral}{'Z'}:
+      data=\hyperlink{group__gyr_gad817a3b69d4c3026b7a9b6de32753e7b}{gyr\_read\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev},\hyperlink{communication_2imu__regs_8h_ae4d2753664f152db1bef259f99975b4c}{GYR\_GYRO\_ZOUT\_H}
+      ,2);
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{case} \textcolor{charliteral}{'T'}:
+      data=\hyperlink{group__gyr_gad817a3b69d4c3026b7a9b6de32753e7b}{gyr\_read\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev},\hyperlink{communication_2imu__regs_8h_a7d00eaf1ea076429433ad0c787b48200}{GYR\_TEMP\_OUT\_H}
+      ,2);
+    \textcolor{keywordflow}{default}:
+      \textcolor{comment}{//perror("Wrong argument for type in gyr\_read\_data");}
+      \textcolor{keywordflow}{return} -1;
+  \}
+  result.usgnd=0;
+  result.usgnd=result.usgnd|(((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} int)data[1]))|(((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \textcolor{keywordtype}{
+      int})data[0])<<8);
+  \textcolor{keywordflow}{return} result.sgnd;
+\}
+\end{DoxyCode}
+\hypertarget{group__gyr_gad817a3b69d4c3026b7a9b6de32753e7b}{\index{Functions for Gyrometer I\-T\-G3200@{Functions for Gyrometer I\-T\-G3200}!gyr\-\_\-read\-\_\-reg@{gyr\-\_\-read\-\_\-reg}}
+\index{gyr\-\_\-read\-\_\-reg@{gyr\-\_\-read\-\_\-reg}!Functions for Gyrometer ITG3200@{Functions for Gyrometer I\-T\-G3200}}
+\subsubsection[{gyr\-\_\-read\-\_\-reg}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t$\ast$ gyr\-\_\-read\-\_\-reg (
+\begin{DoxyParamCaption}
+\item[{int}]{i2c\-\_\-dev, }
+\item[{uint8\-\_\-t}]{reg, }
+\item[{uint8\-\_\-t}]{count}
+\end{DoxyParamCaption}
+)}}\label{group__gyr_gad817a3b69d4c3026b7a9b6de32753e7b}
+
+
+R\-E\-A\-D C\-O\-U\-N\-T 8-\/\-B\-I\-T R\-E\-G\-I\-S\-T\-E\-R I\-N S\-E\-Q\-U\-E\-N\-C\-E. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reg} & Register \\
+\hline
+{\em count} & number of registers in sequence \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+flag with S\-U\-C\-C\-E\-S\-S or F\-A\-I\-L\-U\-R\-E 
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000002}{Todo}]Verify use of reg parameter \end{DoxyRefDesc}
+
+
+Definition at line 31 of file gyr\-\_\-functions.\-c.
+
+
+\begin{DoxyCode}
+\{
+  uint8\_t data[9];
+  \textcolor{keywordtype}{int} i;
+
+  \textcolor{comment}{//data=(uint8\_t*)malloc((count+1)*sizeof(data));}
+  
+  data[0] = reg;
+
+  \textcolor{keywordflow}{if} (write(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev}, &data, 1) != 1) \{            
+        \textcolor{comment}{//perror("write before read");}
+        \textcolor{keywordflow}{return} NULL;
+  \}
+  data[0] = 0;
+  \textcolor{keywordflow}{if} (read(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev}, &data, count) != count) \{
+        \textcolor{comment}{//perror("read");}
+        \textcolor{keywordflow}{return} NULL;    
+  \}
+
+  \textcolor{keywordflow}{return} data;
+\}
+\end{DoxyCode}
+\hypertarget{group__gyr_ga3eba167b8ab0614bfe7bafeae8b5570d}{\index{Functions for Gyrometer I\-T\-G3200@{Functions for Gyrometer I\-T\-G3200}!gyr\-\_\-write\-\_\-reg@{gyr\-\_\-write\-\_\-reg}}
+\index{gyr\-\_\-write\-\_\-reg@{gyr\-\_\-write\-\_\-reg}!Functions for Gyrometer ITG3200@{Functions for Gyrometer I\-T\-G3200}}
+\subsubsection[{gyr\-\_\-write\-\_\-reg}]{\setlength{\rightskip}{0pt plus 5cm}int gyr\-\_\-write\-\_\-reg (
+\begin{DoxyParamCaption}
+\item[{int}]{i2c\-\_\-dev, }
+\item[{uint8\-\_\-t}]{reg, }
+\item[{uint8\-\_\-t}]{data}
+\end{DoxyParamCaption}
+)}}\label{group__gyr_ga3eba167b8ab0614bfe7bafeae8b5570d}
+
+
+W\-R\-I\-T\-E T\-O R\-E\-G\-I\-S\-T\-E\-R. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i2c\-\_\-dev} & \\
+\hline
+{\em reg} & Register \\
+\hline
+{\em data} & Data to write in Register\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Caio Gustavo Mesquita Ângelo Rev 0 -\/ 12/11/2012 R\-L\-E\-G project -\/ 2012
+\end{DoxyAuthor}
+Implements the I2\-C communication between Gumstix Overo Fire and I\-T\-G3200 
+
+Definition at line 10 of file gyr\-\_\-functions.\-c.
+
+
+\begin{DoxyCode}
+\{
+  uint8\_t reg\_data[2];
+
+  reg\_data[0] = reg;
+  reg\_data[1] = data;
+
+  \textcolor{keywordflow}{if}( !( (reg==\hyperlink{communication_2imu__regs_8h_ab2499ff4167376accdbdec09f5e1b021}{GYR\_WHO\_AM\_I})||((\hyperlink{communication_2imu__regs_8h_a04a18568e6e39825c98be5ec2976bec4}{GYR\_SMPLRT\_DIV}<=reg)
+      &&(reg<=\hyperlink{communication_2imu__regs_8h_ad0b8386ab023e17beb305025abf96e18}{GYR\_INT\_CFG}))||(reg==\hyperlink{communication_2imu__regs_8h_a5eba4af610a1ec85320e940bf44855eb}{GYR\_PWR\_MGM}) ) )
+  \{
+      \textcolor{comment}{//perror("Write unsucessful: Not a valid writable register");}
+      \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
+  \}
+        
+  \textcolor{keywordflow}{if} (write(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev}, &reg\_data, 2) != 2) \{                
+          \textcolor{comment}{//perror("Write unsuccessful");}
+          \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
+  \}
+
+  \textcolor{keywordflow}{return} SUCESS;
+\}
+\end{DoxyCode}

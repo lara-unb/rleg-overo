@@ -1,0 +1,463 @@
+\hypertarget{dualquaternion_8c}{\section{schunk\-\_\-high/src/quaternion/dualquaternion.c File Reference}
+\label{dualquaternion_8c}\index{schunk\-\_\-high/src/quaternion/dualquaternion.\-c@{schunk\-\_\-high/src/quaternion/dualquaternion.\-c}}
+}
+{\ttfamily \#include $<$schunk\-\_\-high/dualquaternion.\-h$>$}\\*
+{\ttfamily \#include $<$schunk\-\_\-high/quaternion.\-h$>$}\\*
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{dualquaternion_8c_aa93f0eb578d23995850d61f7d61c55c1}{F\-A\-L\-S\-E}~0
+\begin{DoxyCompactList}\small\item\em Dual\-Quaternion Library. \end{DoxyCompactList}\item 
+\#define \hyperlink{dualquaternion_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{T\-R\-U\-E}~1
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structDQ}{D\-Q} $\ast$ \hyperlink{dualquaternion_8c_aaa019fc9bc7de2150887a4b323cedc50}{D\-Q\-\_\-alloc} ()
+\begin{DoxyCompactList}\small\item\em Allocates a Dual Quaternion. \end{DoxyCompactList}\item 
+\hyperlink{structDQ}{D\-Q} $\ast$ \hyperlink{dualquaternion_8c_a8b1057516bdc2c0cb14127791cf356cf}{D\-Q\-\_\-create} (double a, double b, double c, double d, double e, double f, double g, double h)
+\begin{DoxyCompactList}\small\item\em Allocated and initializes a Dual\-Quaternion. \end{DoxyCompactList}\item 
+\hyperlink{structDQ}{D\-Q} $\ast$ \hyperlink{dualquaternion_8c_a6a31e7cb25e1ad1ea6e55ffc22cb4657}{D\-Q\-\_\-create\-From\-Quaternion} (\hyperlink{structQ}{Q} $\ast$t, \hyperlink{structQ}{Q} $\ast$r)
+\begin{DoxyCompactList}\small\item\em Allocated and initializes a Dual\-Quaternion. \end{DoxyCompactList}\item 
+\hyperlink{structQ}{Q} $\ast$ \hyperlink{dualquaternion_8c_a35b3966af2f77ad5a8f47126948720fb}{D\-Q\-\_\-get\-R} (\hyperlink{structDQ}{D\-Q} $\ast$dq)
+\begin{DoxyCompactList}\small\item\em Dual\-Quaternion Rotation. \end{DoxyCompactList}\item 
+\hyperlink{structQ}{Q} $\ast$ \hyperlink{dualquaternion_8c_a80e2f2aded851388d4f18d486a0b9455}{D\-Q\-\_\-get\-T} (\hyperlink{structDQ}{D\-Q} $\ast$dq)
+\begin{DoxyCompactList}\small\item\em Dual\-Quaternion Translation considering a translation followed by a rotation. \end{DoxyCompactList}\item 
+\hyperlink{structDQ}{D\-Q} $\ast$ \hyperlink{dualquaternion_8c_a1d21b6cb665c04de4be5aca50804caf4}{D\-Q\-\_\-free} (\hyperlink{structDQ}{D\-Q} $\ast$dq)
+\begin{DoxyCompactList}\small\item\em Free's an Allocated Dual\-Quaternion. \end{DoxyCompactList}\item 
+\hyperlink{structDQ}{D\-Q} $\ast$ \hyperlink{dualquaternion_8c_a6618a3e5a7446724565f92271068a985}{D\-Q\-\_\-mult} (\hyperlink{structDQ}{D\-Q} $\ast$a, \hyperlink{structDQ}{D\-Q} $\ast$b, int free\-A, int free\-B)
+\begin{DoxyCompactList}\small\item\em Dual\-Quaternion Multiplication. \end{DoxyCompactList}\item 
+double \hyperlink{dualquaternion_8c_a30322537a067df9c54aa58cb37acb80e}{D\-Q\-\_\-get\-Pitch\-Angle} (\hyperlink{structDQ}{D\-Q} $\ast$dq)
+\begin{DoxyCompactList}\small\item\em Gets the \char`\"{}\-P\-I\-T\-C\-H\char`\"{} angle. \end{DoxyCompactList}\item 
+void \hyperlink{dualquaternion_8c_a32bd8ae3088e7d0d6157cbee1109ec35}{D\-Q\-\_\-print} (\hyperlink{structDQ}{D\-Q} $\ast$dq)
+\begin{DoxyCompactList}\small\item\em Prints a Dual\-Quaternion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{dualquaternion_8c_aa93f0eb578d23995850d61f7d61c55c1}{\index{dualquaternion.\-c@{dualquaternion.\-c}!F\-A\-L\-S\-E@{F\-A\-L\-S\-E}}
+\index{F\-A\-L\-S\-E@{F\-A\-L\-S\-E}!dualquaternion.c@{dualquaternion.\-c}}
+\subsubsection[{F\-A\-L\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-A\-L\-S\-E~0}}\label{dualquaternion_8c_aa93f0eb578d23995850d61f7d61c55c1}
+
+
+Dual\-Quaternion Library. 
+
+Dual\-Quaternion Allocation, Creation and relevant Operations. Uses the Quaternion Library.
+
+\begin{DoxyAuthor}{Author}
+Murilo Marques Marinho. 
+\end{DoxyAuthor}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{quaternion_8c}{quaternion.\-c} 
+\end{DoxySeeAlso}
+
+
+Definition at line 12 of file dualquaternion.\-c.
+
+
+
+Referenced by D\-Q\-\_\-create\-From\-Quaternion(), D\-Q\-\_\-get\-T(), and D\-Q\-\_\-mult().
+
+\hypertarget{dualquaternion_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{\index{dualquaternion.\-c@{dualquaternion.\-c}!T\-R\-U\-E@{T\-R\-U\-E}}
+\index{T\-R\-U\-E@{T\-R\-U\-E}!dualquaternion.c@{dualquaternion.\-c}}
+\subsubsection[{T\-R\-U\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-R\-U\-E~1}}\label{dualquaternion_8c_aa8cecfc5c5c054d2875c03e77b7be15d}
+
+
+Definition at line 15 of file dualquaternion.\-c.
+
+
+
+Referenced by D\-Q\-\_\-create\-From\-Quaternion(), D\-Q\-\_\-get\-T(), and D\-Q\-\_\-mult().
+
+
+
+\subsection{Function Documentation}
+\hypertarget{dualquaternion_8c_aaa019fc9bc7de2150887a4b323cedc50}{\index{dualquaternion.\-c@{dualquaternion.\-c}!D\-Q\-\_\-alloc@{D\-Q\-\_\-alloc}}
+\index{D\-Q\-\_\-alloc@{D\-Q\-\_\-alloc}!dualquaternion.c@{dualquaternion.\-c}}
+\subsubsection[{D\-Q\-\_\-alloc}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-Q}$\ast$ D\-Q\-\_\-alloc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{dualquaternion_8c_aaa019fc9bc7de2150887a4b323cedc50}
+
+
+Allocates a Dual Quaternion. 
+
+Does not initialize any of it's components.
+
+\begin{DoxyReturn}{Returns}
+A Dual\-Quaternion$\ast$ to a the newly allocated memory region. 
+\end{DoxyReturn}
+
+
+Definition at line 30 of file dualquaternion.\-c.
+
+
+
+Referenced by D\-Q\-\_\-create(), D\-Q\-\_\-create\-From\-Quaternion(), D\-Q\-\_\-mult(), and Link\-\_\-\-D\-Q\-F\-T().
+
+
+\begin{DoxyCode}
+              \{
+        \textcolor{keywordflow}{return} (\hyperlink{structDQ}{DQ}*)malloc(\textcolor{keyword}{sizeof}(\hyperlink{structDQ}{DQ}));
+\}
+\end{DoxyCode}
+\hypertarget{dualquaternion_8c_a8b1057516bdc2c0cb14127791cf356cf}{\index{dualquaternion.\-c@{dualquaternion.\-c}!D\-Q\-\_\-create@{D\-Q\-\_\-create}}
+\index{D\-Q\-\_\-create@{D\-Q\-\_\-create}!dualquaternion.c@{dualquaternion.\-c}}
+\subsubsection[{D\-Q\-\_\-create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-Q}$\ast$ D\-Q\-\_\-create (
+\begin{DoxyParamCaption}
+\item[{double}]{a, }
+\item[{double}]{b, }
+\item[{double}]{c, }
+\item[{double}]{d, }
+\item[{double}]{e, }
+\item[{double}]{f, }
+\item[{double}]{g, }
+\item[{double}]{h}
+\end{DoxyParamCaption}
+)}}\label{dualquaternion_8c_a8b1057516bdc2c0cb14127791cf356cf}
+
+
+Allocated and initializes a Dual\-Quaternion. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Primary part scalar part \\
+\hline
+{\em b} & Primary part i part \\
+\hline
+{\em c} & Primary part j part \\
+\hline
+{\em d} & Primary part k part \\
+\hline
+{\em e} & Dual part scalar part \\
+\hline
+{\em f} & Dual part i part \\
+\hline
+{\em g} & Dual part j part \\
+\hline
+{\em h} & Dual part k part \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A Dual\-Quaternion = \mbox{[}a b c d e f g h\mbox{]}' 
+\end{DoxyReturn}
+
+
+Definition at line 47 of file dualquaternion.\-c.
+
+
+
+References D\-Q\-::d, D\-Q\-\_\-alloc(), D\-Q\-::p, and Q\-\_\-create().
+
+
+
+Referenced by Cartesian\-\_\-pose\-\_\-controller\-::print\-Pose(), Robot\-\_\-\-F\-K\-M(), Robot\-\_\-get\-A\-Jacobian(), Robot\-\_\-get\-G\-Jacobian(), and Robot\-\_\-get\-P().
+
+
+\begin{DoxyCode}
+                                                                               
+                    \{
+        \hyperlink{structDQ}{DQ}* dq = \hyperlink{dualquaternion_8h_aaa019fc9bc7de2150887a4b323cedc50}{DQ\_alloc}();
+        dq->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p} = \hyperlink{quaternion_8h_a84783e9bd4743081f08605d38779a07e}{Q\_create}(a,b,c,d);     
+        dq->\hyperlink{structDQ_a535cdb52876521fd6abbfcf211a7c702}{d} = \hyperlink{quaternion_8h_a84783e9bd4743081f08605d38779a07e}{Q\_create}(e,f,g,h);
+        \textcolor{keywordflow}{return} dq;
+\}
+\end{DoxyCode}
+\hypertarget{dualquaternion_8c_a6a31e7cb25e1ad1ea6e55ffc22cb4657}{\index{dualquaternion.\-c@{dualquaternion.\-c}!D\-Q\-\_\-create\-From\-Quaternion@{D\-Q\-\_\-create\-From\-Quaternion}}
+\index{D\-Q\-\_\-create\-From\-Quaternion@{D\-Q\-\_\-create\-From\-Quaternion}!dualquaternion.c@{dualquaternion.\-c}}
+\subsubsection[{D\-Q\-\_\-create\-From\-Quaternion}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-Q}$\ast$ D\-Q\-\_\-create\-From\-Quaternion (
+\begin{DoxyParamCaption}
+\item[{{\bf Q} $\ast$}]{t, }
+\item[{{\bf Q} $\ast$}]{r}
+\end{DoxyParamCaption}
+)}}\label{dualquaternion_8c_a6a31e7cb25e1ad1ea6e55ffc22cb4657}
+
+
+Allocated and initializes a Dual\-Quaternion. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & The quaternion representing the translation. \\
+\hline
+{\em b} & The quaternion representing the rotation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A Dual\-Quaternion = \mbox{[}\mbox{]} 
+\end{DoxyReturn}
+
+
+Definition at line 61 of file dualquaternion.\-c.
+
+
+
+References D\-Q\-::d, D\-Q\-\_\-alloc(), F\-A\-L\-S\-E, D\-Q\-::p, Q\-\_\-copy(), Q\-\_\-mult(), Q\-\_\-multd(), and T\-R\-U\-E.
+
+
+\begin{DoxyCode}
+                                       \{
+        \hyperlink{structDQ}{DQ}* dq = \hyperlink{dualquaternion_8h_aaa019fc9bc7de2150887a4b323cedc50}{DQ\_alloc}();
+        \textcolor{comment}{//Primary part is r}
+        dq->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p} = \hyperlink{quaternion_8h_a7220df72e5bbbdcb37aa6c10c873465b}{Q\_copy}(r);
+        \textcolor{comment}{//Dual part is (1/2)*(t*r)}
+        \hyperlink{structQ}{Q}* temp = \hyperlink{quaternion_8h_a1cb224f6a30ff843d54647642c84e737}{Q\_mult}(t,r,\hyperlink{dualquaternion_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE},\hyperlink{dualquaternion_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+        dq->\hyperlink{structDQ_a535cdb52876521fd6abbfcf211a7c702}{d} = \hyperlink{quaternion_8h_a2384fed3e10ec7a91e6d4e9deae3d8b9}{Q\_multd}(0.5,temp,\hyperlink{dualquaternion_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+        \textcolor{keywordflow}{return} dq;
+\}
+\end{DoxyCode}
+\hypertarget{dualquaternion_8c_a1d21b6cb665c04de4be5aca50804caf4}{\index{dualquaternion.\-c@{dualquaternion.\-c}!D\-Q\-\_\-free@{D\-Q\-\_\-free}}
+\index{D\-Q\-\_\-free@{D\-Q\-\_\-free}!dualquaternion.c@{dualquaternion.\-c}}
+\subsubsection[{D\-Q\-\_\-free}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-Q}$\ast$ D\-Q\-\_\-free (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-Q} $\ast$}]{dq}
+\end{DoxyParamCaption}
+)}}\label{dualquaternion_8c_a1d21b6cb665c04de4be5aca50804caf4}
+
+
+Free's an Allocated Dual\-Quaternion. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dq} & a Dual\-Quaternion$\ast$ to the Allocated region to be freed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\-U\-L\-L 
+\end{DoxyReturn}
+
+
+Definition at line 104 of file dualquaternion.\-c.
+
+
+
+References D\-Q\-::d, D\-Q\-::p, and Q\-\_\-free().
+
+
+
+Referenced by Cartesian\-\_\-pose\-\_\-controller\-::control(), D\-Q\-\_\-mult(), main(), Cartesian\-\_\-pose\-\_\-controller\-::print\-Pose(), Robot\-\_\-get\-A\-Jacobian(), Robot\-\_\-get\-G\-Jacobian(), and Robot\-\_\-get\-O\-Jacobian\-Angle\-P().
+
+
+\begin{DoxyCode}
+                   \{
+        \hyperlink{quaternion_8h_a69ecc76f665022f81be1702c20865de4}{Q\_free}(dq->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p});
+        \hyperlink{quaternion_8h_a69ecc76f665022f81be1702c20865de4}{Q\_free}(dq->\hyperlink{structDQ_a535cdb52876521fd6abbfcf211a7c702}{d});
+        free(dq);
+        \textcolor{keywordflow}{return} NULL;
+\}
+\end{DoxyCode}
+\hypertarget{dualquaternion_8c_a30322537a067df9c54aa58cb37acb80e}{\index{dualquaternion.\-c@{dualquaternion.\-c}!D\-Q\-\_\-get\-Pitch\-Angle@{D\-Q\-\_\-get\-Pitch\-Angle}}
+\index{D\-Q\-\_\-get\-Pitch\-Angle@{D\-Q\-\_\-get\-Pitch\-Angle}!dualquaternion.c@{dualquaternion.\-c}}
+\subsubsection[{D\-Q\-\_\-get\-Pitch\-Angle}]{\setlength{\rightskip}{0pt plus 5cm}double D\-Q\-\_\-get\-Pitch\-Angle (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-Q} $\ast$}]{dq}
+\end{DoxyParamCaption}
+)}}\label{dualquaternion_8c_a30322537a067df9c54aa58cb37acb80e}
+
+
+Gets the \char`\"{}\-P\-I\-T\-C\-H\char`\"{} angle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dq} & The Dual\-Quaternion representing the rotation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a Double with the desired value in radians. 
+\end{DoxyReturn}
+
+
+Definition at line 150 of file dualquaternion.\-c.
+
+
+
+References D\-Q\-::p, and Q\-\_\-get\-Pitch\-Angle().
+
+
+
+Referenced by main().
+
+
+\begin{DoxyCode}
+                               \{
+
+        \textcolor{keywordflow}{return} \hyperlink{quaternion_8h_a0aa9e1db8e5d2177cbd62077eb6e7e52}{Q\_getPitchAngle}(dq->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p});
+        
+\}
+\end{DoxyCode}
+\hypertarget{dualquaternion_8c_a35b3966af2f77ad5a8f47126948720fb}{\index{dualquaternion.\-c@{dualquaternion.\-c}!D\-Q\-\_\-get\-R@{D\-Q\-\_\-get\-R}}
+\index{D\-Q\-\_\-get\-R@{D\-Q\-\_\-get\-R}!dualquaternion.c@{dualquaternion.\-c}}
+\subsubsection[{D\-Q\-\_\-get\-R}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q}$\ast$ D\-Q\-\_\-get\-R (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-Q} $\ast$}]{dq}
+\end{DoxyParamCaption}
+)}}\label{dualquaternion_8c_a35b3966af2f77ad5a8f47126948720fb}
+
+
+Dual\-Quaternion Rotation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dq} & A Dual\-Quaternion. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a Unity Quaternion representing dq's Rotation. 
+\end{DoxyReturn}
+
+
+Definition at line 77 of file dualquaternion.\-c.
+
+
+
+References D\-Q\-::p, and Q\-\_\-copy().
+
+
+
+Referenced by Cartesian\-\_\-pose\-\_\-controller\-::print\-Pose().
+
+
+\begin{DoxyCode}
+                  \{
+        \hyperlink{structQ}{Q}* r = \hyperlink{quaternion_8h_a7220df72e5bbbdcb37aa6c10c873465b}{Q\_copy}(dq->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p});
+        \textcolor{keywordflow}{return} r;
+\}
+\end{DoxyCode}
+\hypertarget{dualquaternion_8c_a80e2f2aded851388d4f18d486a0b9455}{\index{dualquaternion.\-c@{dualquaternion.\-c}!D\-Q\-\_\-get\-T@{D\-Q\-\_\-get\-T}}
+\index{D\-Q\-\_\-get\-T@{D\-Q\-\_\-get\-T}!dualquaternion.c@{dualquaternion.\-c}}
+\subsubsection[{D\-Q\-\_\-get\-T}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q}$\ast$ D\-Q\-\_\-get\-T (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-Q} $\ast$}]{dq}
+\end{DoxyParamCaption}
+)}}\label{dualquaternion_8c_a80e2f2aded851388d4f18d486a0b9455}
+
+
+Dual\-Quaternion Translation considering a translation followed by a rotation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dq} & The Dual\-Quaternion from which you want to get the translation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A Quaternion representing the translation. 
+\end{DoxyReturn}
+
+
+Definition at line 88 of file dualquaternion.\-c.
+
+
+
+References D\-Q\-::d, F\-A\-L\-S\-E, D\-Q\-::p, Q\-\_\-get\-Conj(), Q\-\_\-mult(), Q\-\_\-multd(), and T\-R\-U\-E.
+
+
+
+Referenced by main(), Cartesian\-\_\-pose\-\_\-controller\-::print\-Pose(), and Robot\-\_\-get\-G\-Jacobian().
+
+
+\begin{DoxyCode}
+                  \{
+        \hyperlink{structQ}{Q}* t;
+
+        \textcolor{comment}{//2*(dq->d*(dq->p)')}
+        t = \hyperlink{quaternion_8h_a2384fed3e10ec7a91e6d4e9deae3d8b9}{Q\_multd}(2,\hyperlink{quaternion_8h_a1cb224f6a30ff843d54647642c84e737}{Q\_mult}(dq->\hyperlink{structDQ_a535cdb52876521fd6abbfcf211a7c702}{d},\hyperlink{quaternion_8h_ac9d0d4ab98e4353ba0feca69adde42f8}{Q\_getConj}(dq->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p},\hyperlink{dualquaternion_8c_aa93f0eb578d23995850d61f7d61c55c1}{
+      FALSE}),\hyperlink{dualquaternion_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE},\hyperlink{dualquaternion_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE}),\hyperlink{dualquaternion_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+
+        \textcolor{keywordflow}{return} t;
+\}
+\end{DoxyCode}
+\hypertarget{dualquaternion_8c_a6618a3e5a7446724565f92271068a985}{\index{dualquaternion.\-c@{dualquaternion.\-c}!D\-Q\-\_\-mult@{D\-Q\-\_\-mult}}
+\index{D\-Q\-\_\-mult@{D\-Q\-\_\-mult}!dualquaternion.c@{dualquaternion.\-c}}
+\subsubsection[{D\-Q\-\_\-mult}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-Q}$\ast$ D\-Q\-\_\-mult (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-Q} $\ast$}]{a, }
+\item[{{\bf D\-Q} $\ast$}]{b, }
+\item[{int}]{free\-A, }
+\item[{int}]{free\-B}
+\end{DoxyParamCaption}
+)}}\label{dualquaternion_8c_a6618a3e5a7446724565f92271068a985}
+
+
+Dual\-Quaternion Multiplication. 
+
+It uses the expanded H+ operator on the first term to make the multiplication. Remember that Dual\-Quaternion Multiplication is not commutative in general.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & The first Dual\-Quaternion \\
+\hline
+{\em b} & The second Dual\-Quaternion \\
+\hline
+{\em free\-A} & T\-R\-U\-E if you want to free a from memory. \\
+\hline
+{\em free\-B} & T\-R\-U\-E if you want to free b from memory.  c = a$\ast$b \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 123 of file dualquaternion.\-c.
+
+
+
+References D\-Q\-::d, D\-Q\-\_\-alloc(), D\-Q\-\_\-free(), F\-A\-L\-S\-E, D\-Q\-::p, Q\-\_\-add(), Q\-\_\-mult(), and T\-R\-U\-E.
+
+
+
+Referenced by Robot\-\_\-\-F\-K\-M(), Robot\-\_\-get\-A\-Jacobian(), and Robot\-\_\-get\-G\-Jacobian().
+
+
+\begin{DoxyCode}
+                                               \{
+
+        \textcolor{comment}{//Alloc}
+        \hyperlink{structDQ}{DQ}* c = \hyperlink{dualquaternion_8h_aaa019fc9bc7de2150887a4b323cedc50}{DQ\_alloc}();
+        \hyperlink{structQ}{Q}* temp1;
+        \hyperlink{structQ}{Q}* temp2;
+        
+        \textcolor{comment}{//Primary Part = P(a)*P(b).}
+        c->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p} = \hyperlink{quaternion_8h_a1cb224f6a30ff843d54647642c84e737}{Q\_mult}(a->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p},b->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p},\hyperlink{dualquaternion_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE},\hyperlink{dualquaternion_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+        
+        \textcolor{comment}{//Dual Part    = P(a)*D(b) + D(a)*P(b)}
+    temp1 = \hyperlink{quaternion_8h_a1cb224f6a30ff843d54647642c84e737}{Q\_mult}(a->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p},b->\hyperlink{structDQ_a535cdb52876521fd6abbfcf211a7c702}{d},\hyperlink{dualquaternion_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE},\hyperlink{dualquaternion_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+        temp2 = \hyperlink{quaternion_8h_a1cb224f6a30ff843d54647642c84e737}{Q\_mult}(a->\hyperlink{structDQ_a535cdb52876521fd6abbfcf211a7c702}{d},b->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p},\hyperlink{dualquaternion_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE},\hyperlink{dualquaternion_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+        c->\hyperlink{structDQ_a535cdb52876521fd6abbfcf211a7c702}{d}  = \hyperlink{quaternion_8h_a729fe3e2a8b70d933b53990ba245ea15}{Q\_add}(temp1,temp2,\hyperlink{dualquaternion_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE},\hyperlink{dualquaternion_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+
+        \textcolor{keywordflow}{if}(freeA)\{\hyperlink{dualquaternion_8h_a1d21b6cb665c04de4be5aca50804caf4}{DQ\_free}(a);\}
+        \textcolor{keywordflow}{if}(freeB)\{\hyperlink{dualquaternion_8h_a1d21b6cb665c04de4be5aca50804caf4}{DQ\_free}(b);\}
+        
+        \textcolor{keywordflow}{return} c;
+\}
+\end{DoxyCode}
+\hypertarget{dualquaternion_8c_a32bd8ae3088e7d0d6157cbee1109ec35}{\index{dualquaternion.\-c@{dualquaternion.\-c}!D\-Q\-\_\-print@{D\-Q\-\_\-print}}
+\index{D\-Q\-\_\-print@{D\-Q\-\_\-print}!dualquaternion.c@{dualquaternion.\-c}}
+\subsubsection[{D\-Q\-\_\-print}]{\setlength{\rightskip}{0pt plus 5cm}void D\-Q\-\_\-print (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-Q} $\ast$}]{dq}
+\end{DoxyParamCaption}
+)}}\label{dualquaternion_8c_a32bd8ae3088e7d0d6157cbee1109ec35}
+
+
+Prints a Dual\-Quaternion. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dq} & The Dual\-Quaternion to be printed. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 162 of file dualquaternion.\-c.
+
+
+
+References D\-Q\-::d, D\-Q\-::p, and Q\-::v.
+
+
+\begin{DoxyCode}
+                     \{
+        printf(\textcolor{stringliteral}{"\(\backslash\)t[%e %e %e %e  %e %e %e %e]\(\backslash\)n"},dq->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0],dq->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1],dq
+      ->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2],dq->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3],dq->\hyperlink{structDQ_a535cdb52876521fd6abbfcf211a7c702}{d}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0],dq->\hyperlink{structDQ_a535cdb52876521fd6abbfcf211a7c702}{d}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1],dq->\hyperlink{structDQ_a535cdb52876521fd6abbfcf211a7c702}{d}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2],dq->\hyperlink{structDQ_a535cdb52876521fd6abbfcf211a7c702}{d}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3]
+      );
+\}
+\end{DoxyCode}

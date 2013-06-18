@@ -1,0 +1,593 @@
+\hypertarget{gmatrix__plus_8h}{\section{schunk\-\_\-high/include/schunk\-\_\-high/gmatrix\-\_\-plus.h File Reference}
+\label{gmatrix__plus_8h}\index{schunk\-\_\-high/include/schunk\-\_\-high/gmatrix\-\_\-plus.\-h@{schunk\-\_\-high/include/schunk\-\_\-high/gmatrix\-\_\-plus.\-h}}
+}
+{\ttfamily \#include \char`\"{}gmatrix.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}gmatrix\-\_\-linalg.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dualquaternion.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{gmatrix__plus_8h_a3d48348c3e25d1724058c2cf2364e42e}{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-S\-E\-T\-\_\-\-C\-O\-L\-U\-M\-N\-\_\-\-B\-Y\-\_\-\-D\-Q} (\hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} Pmat, int col, \hyperlink{structDQ}{D\-Q} $\ast$dq)
+\item 
+\hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} \hyperlink{gmatrix__plus_8h_a22f3571af4a9f493e44fcd3184a2f3f0}{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-C\-R\-E\-A\-T\-E\-\_\-\-D\-I\-A\-G\-\_\-\-F\-R\-O\-M\-\_\-\-A\-R\-R\-A\-Y} (int Dim, \hyperlink{gmatrix_8h_a3b6eb94c53f70703edc155e174321477}{G\-M\-A\-T\-R\-I\-X\-\_\-\-F\-L\-O\-A\-T} $\ast$Array)
+\item 
+\hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} \hyperlink{gmatrix__plus_8h_aa5949db3f7d590bbe912a05b5a9055ed}{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-C\-R\-E\-A\-T\-E\-\_\-\-F\-R\-O\-M\-\_\-\-A\-R\-R\-A\-Y} (int Nr, int Nc, \hyperlink{gmatrix_8h_a3b6eb94c53f70703edc155e174321477}{G\-M\-A\-T\-R\-I\-X\-\_\-\-F\-L\-O\-A\-T} $\ast$Array)
+\item 
+\hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} \hyperlink{gmatrix__plus_8h_a6cacc3f1b48d458d5cfc9e03159e3d81}{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-C\-R\-E\-A\-T\-E\-\_\-\-Z\-E\-R\-O\-E\-S} (int Nr, int Nc)
+\item 
+\hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} \hyperlink{gmatrix__plus_8h_a146d9062e4325cc3b97990ae51b96d95}{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-S\-U\-B\-T\-R\-A\-C\-T\-\_\-\-C\-O\-P\-Y\-\_\-\-F\-R\-E\-E} (\hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} p\-Mat\-A, \hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} p\-Mat\-B, int free\-A, int free\-B)
+\item 
+\hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} \hyperlink{gmatrix__plus_8h_aa1123306aa55d942955e09156db757a3}{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-A\-D\-D\-\_\-\-C\-O\-P\-Y\-\_\-\-F\-R\-E\-E} (\hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} p\-Mat\-A, \hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} p\-Mat\-B, int free\-A, int free\-B)
+\item 
+\hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} \hyperlink{gmatrix__plus_8h_a17b482a0aaa68d1f4c1c30a1a72dacbb}{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-M\-U\-L\-T\-I\-P\-L\-Y\-\_\-\-C\-O\-P\-Y\-\_\-\-F\-R\-E\-E} (\hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} p\-Mat\-A, \hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} p\-Mat\-B, int free\-A, int free\-B)
+\item 
+\hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} \hyperlink{gmatrix__plus_8h_a371a0bfffdb84cf1596ca60bbf7fce93}{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-M\-U\-L\-T\-I\-P\-L\-Y\-\_\-\-C\-O\-N\-S\-T\-\_\-\-C\-O\-P\-Y\-\_\-\-F\-R\-E\-E} (\hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} p\-Mat, \hyperlink{gmatrix_8h_a3b6eb94c53f70703edc155e174321477}{G\-M\-A\-T\-R\-I\-X\-\_\-\-F\-L\-O\-A\-T} a, int free\-Mat)
+\item 
+\hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} \hyperlink{gmatrix__plus_8h_a9a93e1e198422eb488592340f48d59d6}{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E\-\_\-\-P\-L\-U\-S} (\hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} p\-A)
+\item 
+\hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} \hyperlink{gmatrix__plus_8h_a73bceba2ac1f3a5589628d0f2e4081fa}{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-A\-M\-P\-E\-D\-\_\-\-L\-E\-A\-S\-T\-S\-Q\-U\-A\-R\-E\-S\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E} (\hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} p\-Mat, double k)
+\begin{DoxyCompactList}\small\item\em J = J$^\wedge$\-T(J.\-J$^\wedge$\-T + k$^\wedge$2.I)−1 Siciliano E\-Q. \end{DoxyCompactList}\item 
+\hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} \hyperlink{gmatrix__plus_8h_a4785be0fc969b516ff9c22b6736738ab}{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-R\-I\-G\-H\-T\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E} (\hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} p\-Mat)
+\begin{DoxyCompactList}\small\item\em J$^\wedge$cross = J$^\wedge$\-T(J$\ast$\-J$^\wedge$\-T)$^\wedge$-\/1 Siciliano E\-Q. \end{DoxyCompactList}\item 
+\hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} \hyperlink{gmatrix__plus_8h_a7211c5dcc80f641d83bf771de5b226fa}{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-R\-I\-G\-H\-T\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E\-\_\-\-N\-U\-L\-L\-S\-P\-A\-C\-E\-\_\-\-P\-R\-O\-J\-E\-C\-T\-O\-R} (\hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} p\-Mat)
+\begin{DoxyCompactList}\small\item\em (In -\/ J$^\wedge$cross$\ast$\-J) Siciliano E\-Q. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{gmatrix__plus_8h_aa1123306aa55d942955e09156db757a3}{\index{gmatrix\-\_\-plus.\-h@{gmatrix\-\_\-plus.\-h}!P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-A\-D\-D\-\_\-\-C\-O\-P\-Y\-\_\-\-F\-R\-E\-E@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-A\-D\-D\-\_\-\-C\-O\-P\-Y\-\_\-\-F\-R\-E\-E}}
+\index{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-A\-D\-D\-\_\-\-C\-O\-P\-Y\-\_\-\-F\-R\-E\-E@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-A\-D\-D\-\_\-\-C\-O\-P\-Y\-\_\-\-F\-R\-E\-E}!gmatrix_plus.h@{gmatrix\-\_\-plus.\-h}}
+\subsubsection[{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-A\-D\-D\-\_\-\-C\-O\-P\-Y\-\_\-\-F\-R\-E\-E}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\-G\-M\-A\-T\-R\-I\-X} P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-A\-D\-D\-\_\-\-C\-O\-P\-Y\-\_\-\-F\-R\-E\-E (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-G\-M\-A\-T\-R\-I\-X}}]{p\-Mat\-A, }
+\item[{{\bf P\-G\-M\-A\-T\-R\-I\-X}}]{p\-Mat\-B, }
+\item[{int}]{free\-A, }
+\item[{int}]{free\-B}
+\end{DoxyParamCaption}
+)}}\label{gmatrix__plus_8h_aa1123306aa55d942955e09156db757a3}
+
+
+Definition at line 87 of file gmatrix\-\_\-plus.\-c.
+
+
+
+References G\-M\-A\-T\-R\-I\-X\-::\-Nc, G\-M\-A\-T\-R\-I\-X\-::\-Nr, P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-A\-D\-D\-\_\-\-C\-O\-P\-Y(), P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-C\-R\-E\-A\-T\-E\-\_\-\-Z\-E\-R\-O\-E\-S(), and P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-F\-R\-E\-E().
+
+
+
+Referenced by Cartesian\-\_\-pose\-\_\-controller\-::control(), Cartesian\-\_\-velocity\-\_\-controller\-::control(), main(), and P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-A\-M\-P\-E\-D\-\_\-\-L\-E\-A\-S\-T\-S\-Q\-U\-A\-R\-E\-S\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E().
+
+
+\begin{DoxyCode}
+                                                                               
+            \{
+                
+        \hyperlink{structGMATRIX}{PGMATRIX} pMatRes = \hyperlink{gmatrix__plus_8h_a6cacc3f1b48d458d5cfc9e03159e3d81}{PGMATRIX\_CREATE\_ZEROES}
+      (pMatA->\hyperlink{structGMATRIX_ad0cd3f750b92dcd404d04ddc2ec5b5d6}{Nr},pMatA->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc});
+
+        \hyperlink{gmatrix_8h_a742534e0a7ae5f8300fd21538cd7a9d0}{PGMATRIX\_ADD\_COPY}(pMatRes, pMatA, pMatB);
+
+        \textcolor{keywordflow}{if}(freeA)\{\hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(pMatA);\}
+        \textcolor{keywordflow}{if}(freeB)\{\hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(pMatB);\}
+
+        \textcolor{keywordflow}{return} pMatRes;
+\}
+\end{DoxyCode}
+\hypertarget{gmatrix__plus_8h_a22f3571af4a9f493e44fcd3184a2f3f0}{\index{gmatrix\-\_\-plus.\-h@{gmatrix\-\_\-plus.\-h}!P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-C\-R\-E\-A\-T\-E\-\_\-\-D\-I\-A\-G\-\_\-\-F\-R\-O\-M\-\_\-\-A\-R\-R\-A\-Y@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-C\-R\-E\-A\-T\-E\-\_\-\-D\-I\-A\-G\-\_\-\-F\-R\-O\-M\-\_\-\-A\-R\-R\-A\-Y}}
+\index{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-C\-R\-E\-A\-T\-E\-\_\-\-D\-I\-A\-G\-\_\-\-F\-R\-O\-M\-\_\-\-A\-R\-R\-A\-Y@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-C\-R\-E\-A\-T\-E\-\_\-\-D\-I\-A\-G\-\_\-\-F\-R\-O\-M\-\_\-\-A\-R\-R\-A\-Y}!gmatrix_plus.h@{gmatrix\-\_\-plus.\-h}}
+\subsubsection[{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-C\-R\-E\-A\-T\-E\-\_\-\-D\-I\-A\-G\-\_\-\-F\-R\-O\-M\-\_\-\-A\-R\-R\-A\-Y}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\-G\-M\-A\-T\-R\-I\-X} P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-C\-R\-E\-A\-T\-E\-\_\-\-D\-I\-A\-G\-\_\-\-F\-R\-O\-M\-\_\-\-A\-R\-R\-A\-Y (
+\begin{DoxyParamCaption}
+\item[{int}]{Dim, }
+\item[{{\bf G\-M\-A\-T\-R\-I\-X\-\_\-\-F\-L\-O\-A\-T} $\ast$}]{Array}
+\end{DoxyParamCaption}
+)}}\label{gmatrix__plus_8h_a22f3571af4a9f493e44fcd3184a2f3f0}
+
+
+Definition at line 32 of file gmatrix\-\_\-plus.\-c.
+
+
+
+References P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-A\-L\-L\-O\-C(), and P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-A\-T\-A.
+
+
+
+Referenced by Cartesian\-\_\-controller\-::\-Cartesian\-\_\-controller(), and main().
+
+
+\begin{DoxyCode}
+                                                                       \{
+        
+        \textcolor{keywordtype}{int} i = 0, j = 0;
+
+        \hyperlink{structGMATRIX}{PGMATRIX} Pmat = \hyperlink{gmatrix_8h_adf8dc9cfae5700de80c88604082ffa10}{PGMATRIX\_ALLOC}(Dim,Dim);
+
+        \textcolor{keywordflow}{for}(i = 0;i<Dim;i++)\{
+                \textcolor{keywordflow}{for}(j=0;j<Dim;j++)\{
+                        \textcolor{keywordflow}{if}( i == j)\{
+                                \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Pmat,i+1,j+1) = 
+      Array[i];
+                        \}
+                        \textcolor{keywordflow}{else}\{
+                                \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Pmat,i+1,j+1) = 0;
+                        \}
+                \}
+        \}
+
+        \textcolor{keywordflow}{return} Pmat;
+\}
+\end{DoxyCode}
+\hypertarget{gmatrix__plus_8h_aa5949db3f7d590bbe912a05b5a9055ed}{\index{gmatrix\-\_\-plus.\-h@{gmatrix\-\_\-plus.\-h}!P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-C\-R\-E\-A\-T\-E\-\_\-\-F\-R\-O\-M\-\_\-\-A\-R\-R\-A\-Y@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-C\-R\-E\-A\-T\-E\-\_\-\-F\-R\-O\-M\-\_\-\-A\-R\-R\-A\-Y}}
+\index{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-C\-R\-E\-A\-T\-E\-\_\-\-F\-R\-O\-M\-\_\-\-A\-R\-R\-A\-Y@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-C\-R\-E\-A\-T\-E\-\_\-\-F\-R\-O\-M\-\_\-\-A\-R\-R\-A\-Y}!gmatrix_plus.h@{gmatrix\-\_\-plus.\-h}}
+\subsubsection[{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-C\-R\-E\-A\-T\-E\-\_\-\-F\-R\-O\-M\-\_\-\-A\-R\-R\-A\-Y}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\-G\-M\-A\-T\-R\-I\-X} P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-C\-R\-E\-A\-T\-E\-\_\-\-F\-R\-O\-M\-\_\-\-A\-R\-R\-A\-Y (
+\begin{DoxyParamCaption}
+\item[{int}]{Nr, }
+\item[{int}]{Nc, }
+\item[{{\bf G\-M\-A\-T\-R\-I\-X\-\_\-\-F\-L\-O\-A\-T} $\ast$}]{Array}
+\end{DoxyParamCaption}
+)}}\label{gmatrix__plus_8h_aa5949db3f7d590bbe912a05b5a9055ed}
+
+
+Definition at line 52 of file gmatrix\-\_\-plus.\-c.
+
+
+
+References P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-A\-L\-L\-O\-C(), and P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-A\-T\-A.
+
+
+
+Referenced by main().
+
+
+\begin{DoxyCode}
+                                                                         \{
+        
+        \textcolor{keywordtype}{int} i = 0, j = 0;
+
+        \hyperlink{structGMATRIX}{PGMATRIX} Pmat = \hyperlink{gmatrix_8h_adf8dc9cfae5700de80c88604082ffa10}{PGMATRIX\_ALLOC}(Nr,Nc);
+
+        \textcolor{keywordflow}{for}(i = 0;i<Nr;i++)\{
+                \textcolor{keywordflow}{for}(j=0;j<Nc;j++)\{
+                                \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Pmat,i+1,j+1) = 
+      Array[i+j];
+                \}
+        \}
+
+        \textcolor{keywordflow}{return} Pmat;
+\}
+\end{DoxyCode}
+\hypertarget{gmatrix__plus_8h_a6cacc3f1b48d458d5cfc9e03159e3d81}{\index{gmatrix\-\_\-plus.\-h@{gmatrix\-\_\-plus.\-h}!P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-C\-R\-E\-A\-T\-E\-\_\-\-Z\-E\-R\-O\-E\-S@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-C\-R\-E\-A\-T\-E\-\_\-\-Z\-E\-R\-O\-E\-S}}
+\index{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-C\-R\-E\-A\-T\-E\-\_\-\-Z\-E\-R\-O\-E\-S@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-C\-R\-E\-A\-T\-E\-\_\-\-Z\-E\-R\-O\-E\-S}!gmatrix_plus.h@{gmatrix\-\_\-plus.\-h}}
+\subsubsection[{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-C\-R\-E\-A\-T\-E\-\_\-\-Z\-E\-R\-O\-E\-S}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\-G\-M\-A\-T\-R\-I\-X} P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-C\-R\-E\-A\-T\-E\-\_\-\-Z\-E\-R\-O\-E\-S (
+\begin{DoxyParamCaption}
+\item[{int}]{Nr, }
+\item[{int}]{Nc}
+\end{DoxyParamCaption}
+)}}\label{gmatrix__plus_8h_a6cacc3f1b48d458d5cfc9e03159e3d81}
+
+
+Definition at line 67 of file gmatrix\-\_\-plus.\-c.
+
+
+
+References P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-A\-L\-L\-O\-C(), and P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-Z\-E\-R\-O\-E\-S().
+
+
+
+Referenced by Cartesian\-\_\-controller\-::\-Cartesian\-\_\-controller(), main(), P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-A\-D\-D\-\_\-\-C\-O\-P\-Y\-\_\-\-F\-R\-E\-E(), P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-M\-U\-L\-T\-I\-P\-L\-Y\-\_\-\-C\-O\-N\-S\-T\-\_\-\-C\-O\-P\-Y\-\_\-\-F\-R\-E\-E(), P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-M\-U\-L\-T\-I\-P\-L\-Y\-\_\-\-C\-O\-P\-Y\-\_\-\-F\-R\-E\-E(), P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E\-\_\-\-P\-L\-U\-S(), and P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-S\-U\-B\-T\-R\-A\-C\-T\-\_\-\-C\-O\-P\-Y\-\_\-\-F\-R\-E\-E().
+
+
+\begin{DoxyCode}
+                                               \{
+
+        \hyperlink{structGMATRIX}{PGMATRIX} pMat = \hyperlink{gmatrix_8h_adf8dc9cfae5700de80c88604082ffa10}{PGMATRIX\_ALLOC}(Nr,Nc);
+        \hyperlink{gmatrix_8h_a9b78ef8288b8e5448313d92d7427366d}{PGMATRIX\_ZEROES}(pMat);
+
+        \textcolor{keywordflow}{return} pMat;
+\}
+\end{DoxyCode}
+\hypertarget{gmatrix__plus_8h_a73bceba2ac1f3a5589628d0f2e4081fa}{\index{gmatrix\-\_\-plus.\-h@{gmatrix\-\_\-plus.\-h}!P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-A\-M\-P\-E\-D\-\_\-\-L\-E\-A\-S\-T\-S\-Q\-U\-A\-R\-E\-S\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-A\-M\-P\-E\-D\-\_\-\-L\-E\-A\-S\-T\-S\-Q\-U\-A\-R\-E\-S\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E}}
+\index{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-A\-M\-P\-E\-D\-\_\-\-L\-E\-A\-S\-T\-S\-Q\-U\-A\-R\-E\-S\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-A\-M\-P\-E\-D\-\_\-\-L\-E\-A\-S\-T\-S\-Q\-U\-A\-R\-E\-S\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E}!gmatrix_plus.h@{gmatrix\-\_\-plus.\-h}}
+\subsubsection[{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-A\-M\-P\-E\-D\-\_\-\-L\-E\-A\-S\-T\-S\-Q\-U\-A\-R\-E\-S\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\-G\-M\-A\-T\-R\-I\-X} P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-A\-M\-P\-E\-D\-\_\-\-L\-E\-A\-S\-T\-S\-Q\-U\-A\-R\-E\-S\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-G\-M\-A\-T\-R\-I\-X}}]{p\-Mat, }
+\item[{double}]{k}
+\end{DoxyParamCaption}
+)}}\label{gmatrix__plus_8h_a73bceba2ac1f3a5589628d0f2e4081fa}
+
+
+J = J$^\wedge$\-T(J.\-J$^\wedge$\-T + k$^\wedge$2.I)−1 Siciliano E\-Q. 
+
+3.\-59 
+
+Definition at line 179 of file gmatrix\-\_\-plus.\-c.
+
+
+
+References F\-A\-L\-S\-E, G\-M\-A\-T\-R\-I\-X\-::\-Nc, G\-M\-A\-T\-R\-I\-X\-::\-Nr, P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-A\-D\-D\-\_\-\-C\-O\-P\-Y\-\_\-\-F\-R\-E\-E(), P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-A\-L\-L\-O\-C(), P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-A\-T\-A, P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-F\-R\-E\-E(), P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-M\-U\-L\-T\-I\-P\-L\-Y\-\_\-\-C\-O\-P\-Y\-\_\-\-F\-R\-E\-E(), P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E\-\_\-\-P\-L\-U\-S(), P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-T\-R\-A\-N\-S\-P\-O\-S\-E\-\_\-\-C\-O\-P\-Y(), and T\-R\-U\-E.
+
+
+
+Referenced by Cartesian\-\_\-pose\-\_\-controller\-::control(), Cartesian\-\_\-velocity\-\_\-controller\-::control(), and main().
+
+
+\begin{DoxyCode}
+                                                                            \{
+
+
+        \hyperlink{structGMATRIX}{PGMATRIX} pApinv  = NULL;
+        \hyperlink{structGMATRIX}{PGMATRIX} pAux1   = NULL;
+        \hyperlink{structGMATRIX}{PGMATRIX} kI      = NULL;
+        \hyperlink{structGMATRIX}{PGMATRIX} pT      = NULL;
+        \hyperlink{structGMATRIX}{PGMATRIX} pMatRes = NULL;
+        \textcolor{keywordtype}{int} i=0,j=0;
+        \textcolor{keywordtype}{double} ksqr      = 0;
+
+        kI = \hyperlink{gmatrix_8h_adf8dc9cfae5700de80c88604082ffa10}{PGMATRIX\_ALLOC}(pMat->\hyperlink{structGMATRIX_ad0cd3f750b92dcd404d04ddc2ec5b5d6}{Nr},pMat->\hyperlink{structGMATRIX_ad0cd3f750b92dcd404d04ddc2ec5b5d6}{Nr});
+        pT = \hyperlink{gmatrix_8h_adf8dc9cfae5700de80c88604082ffa10}{PGMATRIX\_ALLOC}(pMat->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc},pMat->\hyperlink{structGMATRIX_ad0cd3f750b92dcd404d04ddc2ec5b5d6}{Nr});
+
+        ksqr = ((k)*(k));
+
+        \textcolor{keywordflow}{for}(i=0;i<pMat->\hyperlink{structGMATRIX_ad0cd3f750b92dcd404d04ddc2ec5b5d6}{Nr};i++)\{
+
+                \textcolor{keywordflow}{for}(j=0;j<pMat->\hyperlink{structGMATRIX_ad0cd3f750b92dcd404d04ddc2ec5b5d6}{Nr};j++)\{
+                        \textcolor{keywordflow}{if}(i==j)\{
+                                \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(kI,i+1,j+1) = ksqr;
+                        \}
+                        \textcolor{keywordflow}{else}\{
+                                \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(kI,i+1,j+1) = 0;
+                        \}
+                \}
+        \}
+
+        \hyperlink{gmatrix_8h_acc0c1227b2661cf404175b537c35cd10}{PGMATRIX\_TRANSPOSE\_COPY}(pT,pMat);
+
+        pAux1 = \hyperlink{gmatrix__plus_8h_a17b482a0aaa68d1f4c1c30a1a72dacbb}{PGMATRIX\_MULTIPLY\_COPY\_FREE}(pMat,pT,
+      \hyperlink{gmatrix__plus_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE},\hyperlink{gmatrix__plus_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+        
+        pAux1 = \hyperlink{gmatrix__plus_8h_aa1123306aa55d942955e09156db757a3}{PGMATRIX\_ADD\_COPY\_FREE}(pAux1,kI,\hyperlink{gmatrix__plus_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE},
+      \hyperlink{gmatrix__plus_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+
+        pApinv = \hyperlink{gmatrix__plus_8h_a9a93e1e198422eb488592340f48d59d6}{PGMATRIX\_PSEUDOINVERSE\_PLUS}(pAux1);
+        \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(pAux1);
+
+        pMatRes = \hyperlink{gmatrix__plus_8h_a17b482a0aaa68d1f4c1c30a1a72dacbb}{PGMATRIX\_MULTIPLY\_COPY\_FREE}(pT,
+      pApinv,\hyperlink{gmatrix__plus_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE},\hyperlink{gmatrix__plus_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+
+        \textcolor{keywordflow}{return} pMatRes;
+\}
+\end{DoxyCode}
+\hypertarget{gmatrix__plus_8h_a371a0bfffdb84cf1596ca60bbf7fce93}{\index{gmatrix\-\_\-plus.\-h@{gmatrix\-\_\-plus.\-h}!P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-M\-U\-L\-T\-I\-P\-L\-Y\-\_\-\-C\-O\-N\-S\-T\-\_\-\-C\-O\-P\-Y\-\_\-\-F\-R\-E\-E@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-M\-U\-L\-T\-I\-P\-L\-Y\-\_\-\-C\-O\-N\-S\-T\-\_\-\-C\-O\-P\-Y\-\_\-\-F\-R\-E\-E}}
+\index{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-M\-U\-L\-T\-I\-P\-L\-Y\-\_\-\-C\-O\-N\-S\-T\-\_\-\-C\-O\-P\-Y\-\_\-\-F\-R\-E\-E@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-M\-U\-L\-T\-I\-P\-L\-Y\-\_\-\-C\-O\-N\-S\-T\-\_\-\-C\-O\-P\-Y\-\_\-\-F\-R\-E\-E}!gmatrix_plus.h@{gmatrix\-\_\-plus.\-h}}
+\subsubsection[{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-M\-U\-L\-T\-I\-P\-L\-Y\-\_\-\-C\-O\-N\-S\-T\-\_\-\-C\-O\-P\-Y\-\_\-\-F\-R\-E\-E}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\-G\-M\-A\-T\-R\-I\-X} P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-M\-U\-L\-T\-I\-P\-L\-Y\-\_\-\-C\-O\-N\-S\-T\-\_\-\-C\-O\-P\-Y\-\_\-\-F\-R\-E\-E (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-G\-M\-A\-T\-R\-I\-X}}]{p\-Mat, }
+\item[{{\bf G\-M\-A\-T\-R\-I\-X\-\_\-\-F\-L\-O\-A\-T}}]{a, }
+\item[{int}]{free\-Mat}
+\end{DoxyParamCaption}
+)}}\label{gmatrix__plus_8h_a371a0bfffdb84cf1596ca60bbf7fce93}
+
+
+Definition at line 111 of file gmatrix\-\_\-plus.\-c.
+
+
+
+References G\-M\-A\-T\-R\-I\-X\-::\-Nc, G\-M\-A\-T\-R\-I\-X\-::\-Nr, P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-C\-O\-P\-Y(), P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-C\-R\-E\-A\-T\-E\-\_\-\-Z\-E\-R\-O\-E\-S(), P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-F\-R\-E\-E(), and P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-M\-U\-L\-T\-I\-P\-L\-Y\-\_\-\-C\-O\-N\-S\-T().
+
+
+
+Referenced by Cartesian\-\_\-pose\-\_\-controller\-::control(), Cartesian\-\_\-velocity\-\_\-controller\-::control(), and main().
+
+
+\begin{DoxyCode}
+                                                                               
+              \{
+
+        \hyperlink{structGMATRIX}{PGMATRIX} pMatRes = \hyperlink{gmatrix__plus_8h_a6cacc3f1b48d458d5cfc9e03159e3d81}{PGMATRIX\_CREATE\_ZEROES}
+      (pMat->\hyperlink{structGMATRIX_ad0cd3f750b92dcd404d04ddc2ec5b5d6}{Nr},pMat->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc});
+
+        \hyperlink{gmatrix_8h_a44bb4db341b4b4a005d69d49eb76624b}{PGMATRIX\_COPY}(pMatRes,pMat);
+        \hyperlink{gmatrix_8h_a1846d69369b550d1b4a9106467f5f2af}{PGMATRIX\_MULTIPLY\_CONST}(pMatRes, a );
+
+        \textcolor{keywordflow}{if}(freeMat)\{\hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(pMat);\}
+
+        \textcolor{keywordflow}{return} pMatRes;
+\}
+\end{DoxyCode}
+\hypertarget{gmatrix__plus_8h_a17b482a0aaa68d1f4c1c30a1a72dacbb}{\index{gmatrix\-\_\-plus.\-h@{gmatrix\-\_\-plus.\-h}!P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-M\-U\-L\-T\-I\-P\-L\-Y\-\_\-\-C\-O\-P\-Y\-\_\-\-F\-R\-E\-E@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-M\-U\-L\-T\-I\-P\-L\-Y\-\_\-\-C\-O\-P\-Y\-\_\-\-F\-R\-E\-E}}
+\index{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-M\-U\-L\-T\-I\-P\-L\-Y\-\_\-\-C\-O\-P\-Y\-\_\-\-F\-R\-E\-E@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-M\-U\-L\-T\-I\-P\-L\-Y\-\_\-\-C\-O\-P\-Y\-\_\-\-F\-R\-E\-E}!gmatrix_plus.h@{gmatrix\-\_\-plus.\-h}}
+\subsubsection[{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-M\-U\-L\-T\-I\-P\-L\-Y\-\_\-\-C\-O\-P\-Y\-\_\-\-F\-R\-E\-E}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\-G\-M\-A\-T\-R\-I\-X} P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-M\-U\-L\-T\-I\-P\-L\-Y\-\_\-\-C\-O\-P\-Y\-\_\-\-F\-R\-E\-E (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-G\-M\-A\-T\-R\-I\-X}}]{p\-Mat\-A, }
+\item[{{\bf P\-G\-M\-A\-T\-R\-I\-X}}]{p\-Mat\-B, }
+\item[{int}]{free\-A, }
+\item[{int}]{free\-B}
+\end{DoxyParamCaption}
+)}}\label{gmatrix__plus_8h_a17b482a0aaa68d1f4c1c30a1a72dacbb}
+
+
+Definition at line 99 of file gmatrix\-\_\-plus.\-c.
+
+
+
+References G\-M\-A\-T\-R\-I\-X\-::\-Nc, G\-M\-A\-T\-R\-I\-X\-::\-Nr, P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-C\-R\-E\-A\-T\-E\-\_\-\-Z\-E\-R\-O\-E\-S(), P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-F\-R\-E\-E(), and P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-M\-U\-L\-T\-I\-P\-L\-Y\-\_\-\-C\-O\-P\-Y().
+
+
+
+Referenced by Cartesian\-\_\-pose\-\_\-controller\-::control(), Cartesian\-\_\-velocity\-\_\-controller\-::control(), main(), P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-A\-M\-P\-E\-D\-\_\-\-L\-E\-A\-S\-T\-S\-Q\-U\-A\-R\-E\-S\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E(), P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-R\-I\-G\-H\-T\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E(), and P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-R\-I\-G\-H\-T\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E\-\_\-\-N\-U\-L\-L\-S\-P\-A\-C\-E\-\_\-\-P\-R\-O\-J\-E\-C\-T\-O\-R().
+
+
+\begin{DoxyCode}
+                                                                               
+                 \{
+                
+        \hyperlink{structGMATRIX}{PGMATRIX} pMatRes = \hyperlink{gmatrix__plus_8h_a6cacc3f1b48d458d5cfc9e03159e3d81}{PGMATRIX\_CREATE\_ZEROES}
+      (pMatA->\hyperlink{structGMATRIX_ad0cd3f750b92dcd404d04ddc2ec5b5d6}{Nr},pMatB->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc});
+
+        \hyperlink{gmatrix_8h_ab8b0e8fdbcef816db4f0c9c235ddfbc8}{PGMATRIX\_MULTIPLY\_COPY}(pMatRes, pMatA, pMatB);
+
+        \textcolor{keywordflow}{if}(freeA)\{\hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(pMatA);\}
+        \textcolor{keywordflow}{if}(freeB)\{\hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(pMatB);\}
+
+        \textcolor{keywordflow}{return} pMatRes;
+\}
+\end{DoxyCode}
+\hypertarget{gmatrix__plus_8h_a9a93e1e198422eb488592340f48d59d6}{\index{gmatrix\-\_\-plus.\-h@{gmatrix\-\_\-plus.\-h}!P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E\-\_\-\-P\-L\-U\-S@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E\-\_\-\-P\-L\-U\-S}}
+\index{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E\-\_\-\-P\-L\-U\-S@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E\-\_\-\-P\-L\-U\-S}!gmatrix_plus.h@{gmatrix\-\_\-plus.\-h}}
+\subsubsection[{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E\-\_\-\-P\-L\-U\-S}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\-G\-M\-A\-T\-R\-I\-X} P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E\-\_\-\-P\-L\-U\-S (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-G\-M\-A\-T\-R\-I\-X}}]{p\-A}
+\end{DoxyParamCaption}
+)}}\label{gmatrix__plus_8h_a9a93e1e198422eb488592340f48d59d6}
+
+
+Definition at line 123 of file gmatrix\-\_\-plus.\-c.
+
+
+
+References F\-A\-L\-S\-E, G\-M\-A\-T\-R\-I\-X\-\_\-\-A\-S\-S\-E\-R\-T, G\-M\-A\-T\-R\-I\-X\-\_\-\-F\-L\-O\-A\-T, G\-M\-A\-T\-R\-I\-X\-M\-A\-C\-R\-O\-\_\-\-M\-A\-X, G\-M\-A\-T\-R\-I\-X\-::\-Max\-Size, G\-M\-A\-T\-R\-I\-X\-::\-Nc, G\-M\-A\-T\-R\-I\-X\-::\-Nr, P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-A\-L\-L\-O\-C(), P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-C\-R\-E\-A\-T\-E\-\_\-\-Z\-E\-R\-O\-E\-S(), P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-A\-T\-A, P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-F\-R\-E\-E(), P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-M\-U\-L\-T\-I\-P\-L\-Y\-\_\-\-C\-O\-P\-Y\-\_\-\-E\-X\-T\-E\-N\-D\-E\-D(), P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-S\-V\-D(), and T\-R\-U\-E.
+
+
+
+Referenced by P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-A\-M\-P\-E\-D\-\_\-\-L\-E\-A\-S\-T\-S\-Q\-U\-A\-R\-E\-S\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E().
+
+
+\begin{DoxyCode}
+\{
+        \textcolor{keywordtype}{int} n;
+        \hyperlink{gmatrix_8h_a3b6eb94c53f70703edc155e174321477}{GMATRIX\_FLOAT} tol, norm;
+        \hyperlink{structGMATRIX}{PGMATRIX} pU;
+        \hyperlink{structGMATRIX}{PGMATRIX} pS;
+        \hyperlink{structGMATRIX}{PGMATRIX} pV;
+        \hyperlink{structGMATRIX}{PGMATRIX} pApinv;
+        \hyperlink{structGMATRIX}{PGMATRIX} pMatDummy;
+
+        pApinv    = \hyperlink{gmatrix__plus_8h_a6cacc3f1b48d458d5cfc9e03159e3d81}{PGMATRIX\_CREATE\_ZEROES}(pA->\hyperlink{structGMATRIX_ad0cd3f750b92dcd404d04ddc2ec5b5d6}{Nr},pA->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{
+      Nc});
+        pMatDummy = \hyperlink{gmatrix__plus_8h_a6cacc3f1b48d458d5cfc9e03159e3d81}{PGMATRIX\_CREATE\_ZEROES}(pA->\hyperlink{structGMATRIX_ad0cd3f750b92dcd404d04ddc2ec5b5d6}{Nr},pA->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{
+      Nc});
+
+        \hyperlink{gmatrix_8h_a4fda4272d6c3c60d6b28638268da17b2}{GMATRIX\_ASSERT}(\textcolor{stringliteral}{"PGMATRIX\_PSEUDOINVERSE"},pA->\hyperlink{structGMATRIX_ad0cd3f750b92dcd404d04ddc2ec5b5d6}{Nr} <= 0);
+        \hyperlink{gmatrix_8h_a4fda4272d6c3c60d6b28638268da17b2}{GMATRIX\_ASSERT}(\textcolor{stringliteral}{"PGMATRIX\_PSEUDOINVERSE"},pA->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc} <= 0);
+        \hyperlink{gmatrix_8h_a4fda4272d6c3c60d6b28638268da17b2}{GMATRIX\_ASSERT}(\textcolor{stringliteral}{"PGMATRIX\_PSEUDOINVERSE"},pMatDummy->\hyperlink{structGMATRIX_a1533cd0d810051967bf2e9e301e870b0}{
+      MaxSize} < pA->\hyperlink{structGMATRIX_ad0cd3f750b92dcd404d04ddc2ec5b5d6}{Nr}*pA->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc});
+
+        pU = \hyperlink{gmatrix_8h_adf8dc9cfae5700de80c88604082ffa10}{PGMATRIX\_ALLOC}(pA->\hyperlink{structGMATRIX_ad0cd3f750b92dcd404d04ddc2ec5b5d6}{Nr},pA->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc});
+        pS = \hyperlink{gmatrix_8h_adf8dc9cfae5700de80c88604082ffa10}{PGMATRIX\_ALLOC}(pA->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc},pA->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc});
+        pV = \hyperlink{gmatrix_8h_adf8dc9cfae5700de80c88604082ffa10}{PGMATRIX\_ALLOC}(pA->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc},pA->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc});
+
+        \textcolor{comment}{// Compute SVD:}
+        \hyperlink{gmatrix__linalg_8h_ac549c7f4bf706e7ec89de04b2573fffa}{PGMATRIX\_SVD}(pU,pS,pV,pA,\hyperlink{gmatrix__plus_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+        \textcolor{comment}{// Compute norm:}
+        norm = (\hyperlink{gmatrix_8h_a3b6eb94c53f70703edc155e174321477}{GMATRIX\_FLOAT})(fabs(\hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(pS,
+      1,1)));
+        \textcolor{keywordflow}{for}(n=2;n<=pA->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc};++n)\{
+                norm = \hyperlink{gmatrix_8h_a0f3bfa57d69162710d0aa7002b12a589}{GMATRIXMACRO\_MAX}(norm,(\hyperlink{gmatrix_8h_a3b6eb94c53f70703edc155e174321477}{GMATRIX\_FLOAT}
+      )(fabs(\hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(pS,n,n))));
+        \}
+        \textcolor{comment}{// Compute tolerance:}
+        tol = (\hyperlink{gmatrix_8h_a0f3bfa57d69162710d0aa7002b12a589}{GMATRIXMACRO\_MAX}(pA->\hyperlink{structGMATRIX_ad0cd3f750b92dcd404d04ddc2ec5b5d6}{Nr},pA->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc})) * norm * (
+      \hyperlink{gmatrix_8h_a3b6eb94c53f70703edc155e174321477}{GMATRIX\_FLOAT})(1e-12);
+
+        \textcolor{comment}{// Compute inv(S):}
+        \textcolor{keywordflow}{for}(n=1;n<=pA->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc};++n)\{
+                \textcolor{keywordflow}{if} (fabs(\hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(pS,n,n))<=tol)\{
+                        \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(pS,n,n) = 0.0;
+                \}
+                \textcolor{keywordflow}{else}\{
+                        \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(pS,n,n) = (\hyperlink{gmatrix_8h_a3b6eb94c53f70703edc155e174321477}{GMATRIX\_FLOAT}
+      )(1.0) / \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(pS,n,n);
+                \}
+        \}
+        \textcolor{comment}{// Compute pinv:}
+        \hyperlink{gmatrix_8h_a9e709a477348c680c0a9ad5eab2725f6}{PGMATRIX\_MULTIPLY\_COPY\_EXTENDED}(
+      pMatDummy,pS,\hyperlink{gmatrix__plus_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE},pU,\hyperlink{gmatrix__plus_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+        \hyperlink{gmatrix_8h_a9e709a477348c680c0a9ad5eab2725f6}{PGMATRIX\_MULTIPLY\_COPY\_EXTENDED}(pApinv,
+      pV,\hyperlink{gmatrix__plus_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE},pMatDummy,\hyperlink{gmatrix__plus_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+
+        \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(pU);
+        \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(pS);
+        \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(pV);
+        \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(pMatDummy);
+
+        \textcolor{keywordflow}{return} pApinv;
+\}
+\end{DoxyCode}
+\hypertarget{gmatrix__plus_8h_a4785be0fc969b516ff9c22b6736738ab}{\index{gmatrix\-\_\-plus.\-h@{gmatrix\-\_\-plus.\-h}!P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-R\-I\-G\-H\-T\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-R\-I\-G\-H\-T\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E}}
+\index{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-R\-I\-G\-H\-T\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-R\-I\-G\-H\-T\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E}!gmatrix_plus.h@{gmatrix\-\_\-plus.\-h}}
+\subsubsection[{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-R\-I\-G\-H\-T\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\-G\-M\-A\-T\-R\-I\-X} P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-R\-I\-G\-H\-T\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-G\-M\-A\-T\-R\-I\-X}}]{p\-Mat}
+\end{DoxyParamCaption}
+)}}\label{gmatrix__plus_8h_a4785be0fc969b516ff9c22b6736738ab}
+
+
+J$^\wedge$cross = J$^\wedge$\-T(J$\ast$\-J$^\wedge$\-T)$^\wedge$-\/1 Siciliano E\-Q. 
+
+3.\-52 
+
+Definition at line 226 of file gmatrix\-\_\-plus.\-c.
+
+
+
+References F\-A\-L\-S\-E, G\-M\-A\-T\-R\-I\-X\-::\-Nc, G\-M\-A\-T\-R\-I\-X\-::\-Nr, P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-A\-L\-L\-O\-C(), P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-F\-R\-E\-E(), P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-I\-N\-V\-E\-R\-S\-E\-\_\-\-C\-O\-P\-Y(), P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-M\-U\-L\-T\-I\-P\-L\-Y\-\_\-\-C\-O\-P\-Y\-\_\-\-F\-R\-E\-E(), P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-T\-R\-A\-N\-S\-P\-O\-S\-E\-\_\-\-C\-O\-P\-Y(), and T\-R\-U\-E.
+
+
+
+Referenced by P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-R\-I\-G\-H\-T\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E\-\_\-\-N\-U\-L\-L\-S\-P\-A\-C\-E\-\_\-\-P\-R\-O\-J\-E\-C\-T\-O\-R().
+
+
+\begin{DoxyCode}
+                                                    \{
+
+        \hyperlink{structGMATRIX}{PGMATRIX} pApinv  = NULL;
+        \hyperlink{structGMATRIX}{PGMATRIX} pAux1   = NULL;
+        \hyperlink{structGMATRIX}{PGMATRIX} pT      = NULL;
+        \hyperlink{structGMATRIX}{PGMATRIX} pMatRes = NULL;
+
+        pT = \hyperlink{gmatrix_8h_adf8dc9cfae5700de80c88604082ffa10}{PGMATRIX\_ALLOC}(pMat->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc},pMat->\hyperlink{structGMATRIX_ad0cd3f750b92dcd404d04ddc2ec5b5d6}{Nr});
+
+        \hyperlink{gmatrix_8h_acc0c1227b2661cf404175b537c35cd10}{PGMATRIX\_TRANSPOSE\_COPY}(pT,pMat);
+
+        pAux1 = \hyperlink{gmatrix__plus_8h_a17b482a0aaa68d1f4c1c30a1a72dacbb}{PGMATRIX\_MULTIPLY\_COPY\_FREE}(pMat,pT,
+      \hyperlink{gmatrix__plus_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE},\hyperlink{gmatrix__plus_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+        
+        pApinv = \hyperlink{gmatrix_8h_adf8dc9cfae5700de80c88604082ffa10}{PGMATRIX\_ALLOC}(pAux1->\hyperlink{structGMATRIX_ad0cd3f750b92dcd404d04ddc2ec5b5d6}{Nr},pAux1->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc});
+        \hyperlink{gmatrix__linalg_8h_a1d2946ff9ab4154e8f3c930eb559a0da}{PGMATRIX\_INVERSE\_COPY}(pApinv,pAux1);
+
+        \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(pAux1);
+
+        pMatRes = \hyperlink{gmatrix__plus_8h_a17b482a0aaa68d1f4c1c30a1a72dacbb}{PGMATRIX\_MULTIPLY\_COPY\_FREE}(pT,
+      pApinv,\hyperlink{gmatrix__plus_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE},\hyperlink{gmatrix__plus_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+
+        \textcolor{keywordflow}{return} pMatRes;
+
+\}
+\end{DoxyCode}
+\hypertarget{gmatrix__plus_8h_a7211c5dcc80f641d83bf771de5b226fa}{\index{gmatrix\-\_\-plus.\-h@{gmatrix\-\_\-plus.\-h}!P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-R\-I\-G\-H\-T\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E\-\_\-\-N\-U\-L\-L\-S\-P\-A\-C\-E\-\_\-\-P\-R\-O\-J\-E\-C\-T\-O\-R@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-R\-I\-G\-H\-T\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E\-\_\-\-N\-U\-L\-L\-S\-P\-A\-C\-E\-\_\-\-P\-R\-O\-J\-E\-C\-T\-O\-R}}
+\index{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-R\-I\-G\-H\-T\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E\-\_\-\-N\-U\-L\-L\-S\-P\-A\-C\-E\-\_\-\-P\-R\-O\-J\-E\-C\-T\-O\-R@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-R\-I\-G\-H\-T\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E\-\_\-\-N\-U\-L\-L\-S\-P\-A\-C\-E\-\_\-\-P\-R\-O\-J\-E\-C\-T\-O\-R}!gmatrix_plus.h@{gmatrix\-\_\-plus.\-h}}
+\subsubsection[{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-R\-I\-G\-H\-T\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E\-\_\-\-N\-U\-L\-L\-S\-P\-A\-C\-E\-\_\-\-P\-R\-O\-J\-E\-C\-T\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\-G\-M\-A\-T\-R\-I\-X} P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-R\-I\-G\-H\-T\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E\-\_\-\-N\-U\-L\-L\-S\-P\-A\-C\-E\-\_\-\-P\-R\-O\-J\-E\-C\-T\-O\-R (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-G\-M\-A\-T\-R\-I\-X}}]{p\-Mat}
+\end{DoxyParamCaption}
+)}}\label{gmatrix__plus_8h_a7211c5dcc80f641d83bf771de5b226fa}
+
+
+(In -\/ J$^\wedge$cross$\ast$\-J) Siciliano E\-Q. 
+
+3.\-54 
+
+Definition at line 255 of file gmatrix\-\_\-plus.\-c.
+
+
+
+References F\-A\-L\-S\-E, G\-M\-A\-T\-R\-I\-X\-::\-Nc, P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-A\-L\-L\-O\-C(), P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-A\-T\-A, P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-M\-U\-L\-T\-I\-P\-L\-Y\-\_\-\-C\-O\-P\-Y\-\_\-\-F\-R\-E\-E(), P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-R\-I\-G\-H\-T\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E(), P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-S\-U\-B\-T\-R\-A\-C\-T\-\_\-\-C\-O\-P\-Y\-\_\-\-F\-R\-E\-E(), and T\-R\-U\-E.
+
+
+\begin{DoxyCode}
+                                                                        \{
+
+
+        \hyperlink{structGMATRIX}{PGMATRIX} pApinv  = NULL;
+        \hyperlink{structGMATRIX}{PGMATRIX} pAux1   = NULL;
+        \hyperlink{structGMATRIX}{PGMATRIX} In      = NULL;
+        \hyperlink{structGMATRIX}{PGMATRIX} pMatRes = NULL;
+        \textcolor{keywordtype}{int} i=0,j=0;
+
+        In = \hyperlink{gmatrix_8h_adf8dc9cfae5700de80c88604082ffa10}{PGMATRIX\_ALLOC}(pMat->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc},pMat->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc});
+
+        \textcolor{keywordflow}{for}(i=0;i<pMat->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc};i++)\{
+
+                \textcolor{keywordflow}{for}(j=0;j<pMat->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc};j++)\{
+                        \textcolor{keywordflow}{if}(i==j)\{
+                                \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(In,i+1,j+1) = 1;
+                        \}
+                        \textcolor{keywordflow}{else}\{
+                                \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(In,i+1,j+1) = 0;
+                        \}
+                \}
+        \}
+
+        pApinv = \hyperlink{gmatrix__plus_8h_a4785be0fc969b516ff9c22b6736738ab}{PGMATRIX\_RIGHT\_PSEUDOINVERSE}(pMat)
+      ;
+
+        pAux1 = \hyperlink{gmatrix__plus_8h_a17b482a0aaa68d1f4c1c30a1a72dacbb}{PGMATRIX\_MULTIPLY\_COPY\_FREE}(pApinv,
+      pMat,\hyperlink{gmatrix__plus_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE},\hyperlink{gmatrix__plus_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+        
+        pMatRes = \hyperlink{gmatrix__plus_8h_a146d9062e4325cc3b97990ae51b96d95}{PGMATRIX\_SUBTRACT\_COPY\_FREE}(In,
+      pAux1,\hyperlink{gmatrix__plus_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE},\hyperlink{gmatrix__plus_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+
+        \textcolor{keywordflow}{return} pMatRes;
+\}
+\end{DoxyCode}
+\hypertarget{gmatrix__plus_8h_a3d48348c3e25d1724058c2cf2364e42e}{\index{gmatrix\-\_\-plus.\-h@{gmatrix\-\_\-plus.\-h}!P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-S\-E\-T\-\_\-\-C\-O\-L\-U\-M\-N\-\_\-\-B\-Y\-\_\-\-D\-Q@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-S\-E\-T\-\_\-\-C\-O\-L\-U\-M\-N\-\_\-\-B\-Y\-\_\-\-D\-Q}}
+\index{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-S\-E\-T\-\_\-\-C\-O\-L\-U\-M\-N\-\_\-\-B\-Y\-\_\-\-D\-Q@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-S\-E\-T\-\_\-\-C\-O\-L\-U\-M\-N\-\_\-\-B\-Y\-\_\-\-D\-Q}!gmatrix_plus.h@{gmatrix\-\_\-plus.\-h}}
+\subsubsection[{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-S\-E\-T\-\_\-\-C\-O\-L\-U\-M\-N\-\_\-\-B\-Y\-\_\-\-D\-Q}]{\setlength{\rightskip}{0pt plus 5cm}void P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-S\-E\-T\-\_\-\-C\-O\-L\-U\-M\-N\-\_\-\-B\-Y\-\_\-\-D\-Q (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-G\-M\-A\-T\-R\-I\-X}}]{Pmat, }
+\item[{int}]{col, }
+\item[{{\bf D\-Q} $\ast$}]{dq}
+\end{DoxyParamCaption}
+)}}\label{gmatrix__plus_8h_a3d48348c3e25d1724058c2cf2364e42e}
+
+
+Definition at line 17 of file gmatrix\-\_\-plus.\-c.
+
+
+
+References D\-Q\-::d, G\-M\-A\-T\-R\-I\-X\-\_\-\-A\-S\-S\-E\-R\-T, G\-M\-A\-T\-R\-I\-X\-::\-Nc, G\-M\-A\-T\-R\-I\-X\-::\-Nr, D\-Q\-::p, P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-A\-T\-A, and Q\-::v.
+
+
+\begin{DoxyCode}
+                                                               \{
+
+        \hyperlink{gmatrix_8h_a4fda4272d6c3c60d6b28638268da17b2}{GMATRIX\_ASSERT}(\textcolor{stringliteral}{"PGMATRIX\_SET\_COLUMN\_BY\_DQ"},(col > Pmat->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{
+      Nc})&&(Pmat->\hyperlink{structGMATRIX_ad0cd3f750b92dcd404d04ddc2ec5b5d6}{Nr} != 8));
+
+        \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Pmat,1,col) = dq->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0];
+        \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Pmat,2,col) = dq->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1];
+        \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Pmat,3,col) = dq->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2];
+        \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Pmat,4,col) = dq->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3];
+        \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Pmat,5,col) = dq->\hyperlink{structDQ_a535cdb52876521fd6abbfcf211a7c702}{d}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0];
+        \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Pmat,6,col) = dq->\hyperlink{structDQ_a535cdb52876521fd6abbfcf211a7c702}{d}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1];
+        \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Pmat,7,col) = dq->\hyperlink{structDQ_a535cdb52876521fd6abbfcf211a7c702}{d}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2];
+        \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Pmat,8,col) = dq->\hyperlink{structDQ_a535cdb52876521fd6abbfcf211a7c702}{d}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3];
+
+\}
+\end{DoxyCode}
+\hypertarget{gmatrix__plus_8h_a146d9062e4325cc3b97990ae51b96d95}{\index{gmatrix\-\_\-plus.\-h@{gmatrix\-\_\-plus.\-h}!P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-S\-U\-B\-T\-R\-A\-C\-T\-\_\-\-C\-O\-P\-Y\-\_\-\-F\-R\-E\-E@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-S\-U\-B\-T\-R\-A\-C\-T\-\_\-\-C\-O\-P\-Y\-\_\-\-F\-R\-E\-E}}
+\index{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-S\-U\-B\-T\-R\-A\-C\-T\-\_\-\-C\-O\-P\-Y\-\_\-\-F\-R\-E\-E@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-S\-U\-B\-T\-R\-A\-C\-T\-\_\-\-C\-O\-P\-Y\-\_\-\-F\-R\-E\-E}!gmatrix_plus.h@{gmatrix\-\_\-plus.\-h}}
+\subsubsection[{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-S\-U\-B\-T\-R\-A\-C\-T\-\_\-\-C\-O\-P\-Y\-\_\-\-F\-R\-E\-E}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\-G\-M\-A\-T\-R\-I\-X} P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-S\-U\-B\-T\-R\-A\-C\-T\-\_\-\-C\-O\-P\-Y\-\_\-\-F\-R\-E\-E (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-G\-M\-A\-T\-R\-I\-X}}]{p\-Mat\-A, }
+\item[{{\bf P\-G\-M\-A\-T\-R\-I\-X}}]{p\-Mat\-B, }
+\item[{int}]{free\-A, }
+\item[{int}]{free\-B}
+\end{DoxyParamCaption}
+)}}\label{gmatrix__plus_8h_a146d9062e4325cc3b97990ae51b96d95}
+
+
+Definition at line 75 of file gmatrix\-\_\-plus.\-c.
+
+
+
+References G\-M\-A\-T\-R\-I\-X\-::\-Nc, G\-M\-A\-T\-R\-I\-X\-::\-Nr, P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-C\-R\-E\-A\-T\-E\-\_\-\-Z\-E\-R\-O\-E\-S(), P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-F\-R\-E\-E(), and P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-S\-U\-B\-T\-R\-A\-C\-T\-\_\-\-C\-O\-P\-Y.
+
+
+
+Referenced by Cartesian\-\_\-pose\-\_\-controller\-::control(), Cartesian\-\_\-velocity\-\_\-controller\-::control(), main(), and P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-R\-I\-G\-H\-T\-\_\-\-P\-S\-E\-U\-D\-O\-I\-N\-V\-E\-R\-S\-E\-\_\-\-N\-U\-L\-L\-S\-P\-A\-C\-E\-\_\-\-P\-R\-O\-J\-E\-C\-T\-O\-R().
+
+
+\begin{DoxyCode}
+                                                                               
+                 \{
+        
+        \hyperlink{structGMATRIX}{PGMATRIX} pMatRes = \hyperlink{gmatrix__plus_8h_a6cacc3f1b48d458d5cfc9e03159e3d81}{PGMATRIX\_CREATE\_ZEROES}
+      (pMatA->\hyperlink{structGMATRIX_ad0cd3f750b92dcd404d04ddc2ec5b5d6}{Nr},pMatA->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc});
+
+        \hyperlink{gmatrix_8h_ab834f22f7bb435b8524456cc0bb3a5cc}{PGMATRIX\_SUBTRACT\_COPY}(pMatRes, pMatA, pMatB);
+
+        \textcolor{keywordflow}{if}(freeA)\{\hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(pMatA);\}
+        \textcolor{keywordflow}{if}(freeB)\{\hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(pMatB);\}
+
+        \textcolor{keywordflow}{return} pMatRes;
+\}
+\end{DoxyCode}

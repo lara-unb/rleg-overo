@@ -1,0 +1,80 @@
+\hypertarget{calibration_2calibration_8c}{\section{calibration/calibration.c File Reference}
+\label{calibration_2calibration_8c}\index{calibration/calibration.\-c@{calibration/calibration.\-c}}
+}
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}calibration.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{calibration_2calibration_8c_a043045246cf217758281222214c4addc}{calibrate\-\_\-all} (\hyperlink{structIMU__DATA__STRUCT}{I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$\hyperlink{threads__linux_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\-\_\-data})
+\item 
+void \hyperlink{calibration_2calibration_8c_aecfc81d152db2843b5d1517729804d63}{calibrate\-\_\-imu} (\hyperlink{structIMU__DATA__STRUCT}{I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$\hyperlink{threads__linux_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\-\_\-data})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{calibration_2calibration_8c_a043045246cf217758281222214c4addc}{\index{calibration/calibration.\-c@{calibration/calibration.\-c}!calibrate\-\_\-all@{calibrate\-\_\-all}}
+\index{calibrate\-\_\-all@{calibrate\-\_\-all}!calibration/calibration.c@{calibration/calibration.\-c}}
+\subsubsection[{calibrate\-\_\-all}]{\setlength{\rightskip}{0pt plus 5cm}void calibrate\-\_\-all (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$}]{imu\-\_\-data}
+\end{DoxyParamCaption}
+)}}\label{calibration_2calibration_8c_a043045246cf217758281222214c4addc}
+
+
+Definition at line 8 of file calibration.\-c.
+
+
+\begin{DoxyCode}
+\{
+  \hyperlink{calibration_2calibration_8c_aecfc81d152db2843b5d1517729804d63}{calibrate\_imu}(imu\_data);
+  \textcolor{keywordflow}{return};
+\}
+\end{DoxyCode}
+\hypertarget{calibration_2calibration_8c_aecfc81d152db2843b5d1517729804d63}{\index{calibration/calibration.\-c@{calibration/calibration.\-c}!calibrate\-\_\-imu@{calibrate\-\_\-imu}}
+\index{calibrate\-\_\-imu@{calibrate\-\_\-imu}!calibration/calibration.c@{calibration/calibration.\-c}}
+\subsubsection[{calibrate\-\_\-imu}]{\setlength{\rightskip}{0pt plus 5cm}void calibrate\-\_\-imu (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$}]{imu\-\_\-data}
+\end{DoxyParamCaption}
+)}}\label{calibration_2calibration_8c_aecfc81d152db2843b5d1517729804d63}
+
+
+Definition at line 14 of file calibration.\-c.
+
+
+
+Referenced by calibrate\-\_\-all().
+
+
+\begin{DoxyCode}
+\{
+  \textcolor{comment}{// With this parameters, the vectors of acceleration and magnetic field will
+       have norm = 1 theorically (i.e. in g or G)}
+  imu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a281a7fdb40a05ed97388f18b9bb90c81}{acc}.\hyperlink{structDATA__XYZ__DOUBLE_a22868cc99a423900e7b82d015a5eb91f}{x} = ((double)imu\_data->\hyperlink{structIMU__DATA__STRUCT_a448f284bf44eb503affda586ad5fa9d2}{acc}.\hyperlink{structDATA__XYZ_a54c1596e9f9969fd9c21e8458024ecfb}{x}-\hyperlink{calibration_2calibration_8h_a355ea8f6ceed1e1d419a3ea2271bfca3}{ACC\_BIAS\_X}
+      )/\hyperlink{calibration_2calibration_8h_a76e6967cb5a86ec34986b4583ac09831}{ACC\_FS\_X};
+  imu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a281a7fdb40a05ed97388f18b9bb90c81}{acc}.\hyperlink{structDATA__XYZ__DOUBLE_a198a27b5df3b5b0bf461b0e481e22a82}{y} = ((double)imu\_data->\hyperlink{structIMU__DATA__STRUCT_a448f284bf44eb503affda586ad5fa9d2}{acc}.\hyperlink{structDATA__XYZ_a94bbb1c889bf53eb6a5fffa2b39322cf}{y}-\hyperlink{calibration_2calibration_8h_a34180f1c97e84a814ef181f62bf4b68f}{ACC\_BIAS\_Y}
+      )/\hyperlink{calibration_2calibration_8h_a13d3aaab3b5800b11351cbd1246c8918}{ACC\_FS\_Y};
+  imu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a281a7fdb40a05ed97388f18b9bb90c81}{acc}.\hyperlink{structDATA__XYZ__DOUBLE_a9556e8868c223ff3e28756ea18a284c0}{z} = ((double)imu\_data->\hyperlink{structIMU__DATA__STRUCT_a448f284bf44eb503affda586ad5fa9d2}{acc}.\hyperlink{structDATA__XYZ_a69e89ab0ec6e5d72fc5d54f62cc07fb5}{z}-\hyperlink{calibration_2calibration_8h_a794f762650b6f228ffb8d50d1323dbea}{ACC\_BIAS\_Z}
+      )/\hyperlink{calibration_2calibration_8h_af1d3370cc0958289199c8c13470602d4}{ACC\_FS\_Z};
+  
+  imu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a2fde6c6759e0fda17e272c32096cb9ec}{mag}.\hyperlink{structDATA__XYZ__DOUBLE_a22868cc99a423900e7b82d015a5eb91f}{x} = ((double)imu\_data->\hyperlink{structIMU__DATA__STRUCT_a40c7df8b6d49297aa52873cfd9b60daa}{mag}.\hyperlink{structDATA__XYZ_a54c1596e9f9969fd9c21e8458024ecfb}{x}-\hyperlink{calibration_2calibration_8h_a355ea8f6ceed1e1d419a3ea2271bfca3}{ACC\_BIAS\_X}
+      )/\hyperlink{calibration_2calibration_8h_a76e6967cb5a86ec34986b4583ac09831}{ACC\_FS\_X};
+  imu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a2fde6c6759e0fda17e272c32096cb9ec}{mag}.\hyperlink{structDATA__XYZ__DOUBLE_a198a27b5df3b5b0bf461b0e481e22a82}{y} = ((double)imu\_data->\hyperlink{structIMU__DATA__STRUCT_a40c7df8b6d49297aa52873cfd9b60daa}{mag}.\hyperlink{structDATA__XYZ_a94bbb1c889bf53eb6a5fffa2b39322cf}{y}-\hyperlink{calibration_2calibration_8h_a34180f1c97e84a814ef181f62bf4b68f}{ACC\_BIAS\_Y}
+      )/\hyperlink{calibration_2calibration_8h_a13d3aaab3b5800b11351cbd1246c8918}{ACC\_FS\_Y};
+  imu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a2fde6c6759e0fda17e272c32096cb9ec}{mag}.\hyperlink{structDATA__XYZ__DOUBLE_a9556e8868c223ff3e28756ea18a284c0}{z} = ((double)imu\_data->\hyperlink{structIMU__DATA__STRUCT_a40c7df8b6d49297aa52873cfd9b60daa}{mag}.\hyperlink{structDATA__XYZ_a69e89ab0ec6e5d72fc5d54f62cc07fb5}{z}-\hyperlink{calibration_2calibration_8h_a794f762650b6f228ffb8d50d1323dbea}{ACC\_BIAS\_Z}
+      )/\hyperlink{calibration_2calibration_8h_af1d3370cc0958289199c8c13470602d4}{ACC\_FS\_Z};
+  
+  \textcolor{comment}{// With this parameters, we consider right datasheet scale and we get in
+       rad/s}
+  imu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a8a54aded6ce608f1b7d2b4a0c52c248b}{gyr}.\hyperlink{structDATA__XYZ__DOUBLE_a22868cc99a423900e7b82d015a5eb91f}{x} = ((double)imu\_data->\hyperlink{structIMU__DATA__STRUCT_a0c1ac26626e4434a2ee124a1928a23a1}{gyr}.\hyperlink{structDATA__XYZ_a54c1596e9f9969fd9c21e8458024ecfb}{x}-\hyperlink{calibration_2calibration_8h_a69780ffe3a15aad4121fed56d5e47377}{GYR\_BIAS\_X}
+      )/\hyperlink{calibration_2calibration_8h_a8fe84f8c6d39f41d8622fd0cbce3a522}{GYR\_FS\_X};
+  imu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a8a54aded6ce608f1b7d2b4a0c52c248b}{gyr}.\hyperlink{structDATA__XYZ__DOUBLE_a198a27b5df3b5b0bf461b0e481e22a82}{y} = ((double)imu\_data->\hyperlink{structIMU__DATA__STRUCT_a0c1ac26626e4434a2ee124a1928a23a1}{gyr}.\hyperlink{structDATA__XYZ_a94bbb1c889bf53eb6a5fffa2b39322cf}{y}-\hyperlink{calibration_2calibration_8h_a69780ffe3a15aad4121fed56d5e47377}{GYR\_BIAS\_X}
+      )/\hyperlink{calibration_2calibration_8h_a4be2e0fa7596546bb4699862d0fe4183}{GYR\_FS\_Y};
+  imu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a8a54aded6ce608f1b7d2b4a0c52c248b}{gyr}.\hyperlink{structDATA__XYZ__DOUBLE_a9556e8868c223ff3e28756ea18a284c0}{z} = ((double)imu\_data->\hyperlink{structIMU__DATA__STRUCT_a0c1ac26626e4434a2ee124a1928a23a1}{gyr}.\hyperlink{structDATA__XYZ_a69e89ab0ec6e5d72fc5d54f62cc07fb5}{z}-\hyperlink{calibration_2calibration_8h_a69780ffe3a15aad4121fed56d5e47377}{GYR\_BIAS\_X}
+      )/\hyperlink{calibration_2calibration_8h_aaee2ece0c43cc20d7c531ab79dcd06c8}{GYR\_FS\_Z};
+  
+  \textcolor{keywordflow}{return};
+\}
+\end{DoxyCode}

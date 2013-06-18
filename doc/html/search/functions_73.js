@@ -1,0 +1,8 @@
+var searchData=
+[
+  ['sendjointpositionstoschunk',['sendJointPositionsToSchunk',['../classCartesian__controller.html#ae845f67c81c2649bfbaccf95230f2599',1,'Cartesian_controller']]],
+  ['setschunkvelocitiesandsend',['setSchunkVelocitiesAndSend',['../classCartesian__controller.html#a40d17a9794af8a9a607618bf0ee5efff',1,'Cartesian_controller']]],
+  ['spi_5fend',['spi_end',['../communication_2spi__functions_8c.html#a3fb02c6fc5990df81645306a81291624',1,'spi_end(int spi_dev):&#160;spi_functions.c'],['../communication_2spi__functions_8h.html#a3fb02c6fc5990df81645306a81291624',1,'spi_end(int spi_dev):&#160;spi_functions.c'],['../CommunicationV0_2spi__functions_8c.html#a3fb02c6fc5990df81645306a81291624',1,'spi_end(int spi_dev):&#160;spi_functions.c'],['../CommunicationV0_2spi__functions_8h.html#a3fb02c6fc5990df81645306a81291624',1,'spi_end(int spi_dev):&#160;spi_functions.c']]],
+  ['spi_5finit',['spi_init',['../communication_2spi__functions_8c.html#a70764aca888e93b0329e7a62c9312704',1,'spi_init(uint8_t mode, uint32_t speed, uint8_t cs):&#160;spi_functions.c'],['../communication_2spi__functions_8h.html#a70764aca888e93b0329e7a62c9312704',1,'spi_init(uint8_t mode, uint32_t speed, uint8_t cs):&#160;spi_functions.c'],['../CommunicationV0_2spi__functions_8c.html#a70764aca888e93b0329e7a62c9312704',1,'spi_init(uint8_t mode, uint32_t speed, uint8_t cs):&#160;spi_functions.c'],['../CommunicationV0_2spi__functions_8h.html#a70764aca888e93b0329e7a62c9312704',1,'spi_init(uint8_t mode, uint32_t speed, uint8_t cs):&#160;spi_functions.c']]],
+  ['stopschunk',['stopSchunk',['../classCartesian__controller.html#a3ba54e8b35632526c5e8eb2ab5d7de0d',1,'Cartesian_controller']]]
+];

@@ -1,0 +1,400 @@
+\hypertarget{communication_2communication_8h}{\section{communication/communication.h File Reference}
+\label{communication_2communication_8h}\index{communication/communication.\-h@{communication/communication.\-h}}
+}
+{\ttfamily \#include \char`\"{}imu\-\_\-functions.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}spi\-\_\-functions.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}gpio\-\_\-functions.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}imu\-\_\-regs.\-h\char`\"{}}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structIMU__PARAM__STRUCT}{I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T}
+\begin{DoxyCompactList}\small\item\em Configs of I\-M\-U. \end{DoxyCompactList}\item 
+struct \hyperlink{structIMU__PARAM__STRUCT_1_1param__acc}{I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::param\-\_\-acc}
+\begin{DoxyCompactList}\small\item\em Accelerometer Parameters. \end{DoxyCompactList}\item 
+struct \hyperlink{structIMU__PARAM__STRUCT_1_1param__gyr}{I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::param\-\_\-gyr}
+\begin{DoxyCompactList}\small\item\em Gyrometer Parameters. \end{DoxyCompactList}\item 
+struct \hyperlink{structIMU__PARAM__STRUCT_1_1param__mag}{I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::param\-\_\-mag}
+\begin{DoxyCompactList}\small\item\em Magnetometer Parameters. \end{DoxyCompactList}\item 
+struct \hyperlink{structSPI__PARAM__STRUCT}{S\-P\-I\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T}
+\begin{DoxyCompactList}\small\item\em Configs for S\-P\-I. \end{DoxyCompactList}\item 
+struct \hyperlink{structDATA__XYZ}{D\-A\-T\-A\-\_\-\-X\-Y\-Z}
+\begin{DoxyCompactList}\small\item\em A structure to represent a 3d Vector. \end{DoxyCompactList}\item 
+struct \hyperlink{structDATA__XYZ__DOUBLE}{D\-A\-T\-A\-\_\-\-X\-Y\-Z\-\_\-\-D\-O\-U\-B\-L\-E}
+\begin{DoxyCompactList}\small\item\em Vector definition on double. \end{DoxyCompactList}\item 
+struct \hyperlink{structIMU__DATA__STRUCT}{I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T}
+\begin{DoxyCompactList}\small\item\em Data of I\-M\-U structure. \end{DoxyCompactList}\item 
+struct \hyperlink{structIMU__DATA__STRUCT_1_1calibrated}{I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::calibrated}
+\item 
+struct \hyperlink{structEFF__DATA__STRUCT}{E\-F\-F\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T}
+\item 
+struct \hyperlink{structMRA__DATA__STRUCT}{M\-R\-A\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T}
+\begin{DoxyCompactList}\small\item\em Struct to control M\-R\-A. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{communication_2communication_8h_a48ea000c2b251ce26ea35d300f319651}{G\-P\-I\-O\-\_\-\-C\-S\-\_\-\-S0}~168
+\item 
+\#define \hyperlink{communication_2communication_8h_a7672ba13ff6f297c347790586c9a02e0}{G\-P\-I\-O\-\_\-\-C\-S\-\_\-\-S1}~64
+\item 
+\#define \hyperlink{communication_2communication_8h_a94b6d57532d1db55dc4efd9fb234f156}{G\-P\-I\-O\-\_\-\-C\-S\-\_\-\-S2}~176
+\item 
+\#define \hyperlink{communication_2communication_8h_ad774f00fc71216488e24a803bf4eb6aa}{G\-P\-I\-O\-\_\-\-C\-S\-\_\-\-S3}~65
+\item 
+\#define \hyperlink{communication_2communication_8h_a99fc26a9596a1cb1f0f9936dbb8ccca6}{G\-P\-I\-O\-\_\-\-D\-A\-C\-\_\-\-S\-H\-D\-N}~66
+\item 
+\#define \hyperlink{communication_2communication_8h_a014b45373b6ab21c681fc378bd8203f9}{G\-P\-I\-O\-\_\-\-D\-A\-C\-\_\-\-L\-D\-A\-C}~67
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{communication_2communication_8h_a2d1e523ff70db11ca4096f97af5da000}{devices\-\_\-init} (\hyperlink{structIMU__PARAM__STRUCT}{I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$\hyperlink{main2_8c_a9c6b2109fb9402446f92995db60951b5}{imu\-\_\-param}, \hyperlink{structSPI__PARAM__STRUCT}{S\-P\-I\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$\hyperlink{main2_8c_adec2468b88cf50b20e5cf399a3b7e994}{spi\-\_\-param}, \hyperlink{structMRA__DATA__STRUCT}{M\-R\-A\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$\hyperlink{main2_8c_abc42e18d2909e9bc119316283f4ed9db}{mra\-\_\-data})
+\begin{DoxyCompactList}\small\item\em I\-N\-I\-T\-I\-A\-L\-I\-Z\-A\-T\-I\-O\-N O\-F S\-E\-N\-S\-O\-R\-S A\-N\-D D\-E\-V\-I\-C\-E\-S. \end{DoxyCompactList}\item 
+int \hyperlink{communication_2communication_8h_a5f0316a5f70c7e369541e996802603b4}{read\-\_\-all\-\_\-data} (int \hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\-\_\-dev}, int \hyperlink{CommunicationV0_2communication_8c_a4788f0a5355494bc6c13690e28f43783}{spi\-\_\-dev}, \hyperlink{structIMU__DATA__STRUCT}{I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$\hyperlink{threads__linux_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\-\_\-data}, \hyperlink{structEFF__DATA__STRUCT}{E\-F\-F\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$\hyperlink{main2_8c_a5650ece8c3a277c7f158d75ae65265fa}{eff\-\_\-data}, \hyperlink{structMRA__DATA__STRUCT}{M\-R\-A\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$\hyperlink{main2_8c_abc42e18d2909e9bc119316283f4ed9db}{mra\-\_\-data})
+\begin{DoxyCompactList}\small\item\em R\-E\-A\-D A\-L\-L D\-A\-T\-A F\-R\-O\-M S\-E\-N\-S\-O\-R\-S A\-N\-D A\-D\-C. \end{DoxyCompactList}\item 
+void \hyperlink{communication_2communication_8h_a1d5f01d0124cff7030b5c4951b4bbefa}{actuate} (int \hyperlink{CommunicationV0_2communication_8c_a4788f0a5355494bc6c13690e28f43783}{spi\-\_\-dev}, \hyperlink{structMRA__DATA__STRUCT}{M\-R\-A\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$\hyperlink{main2_8c_abc42e18d2909e9bc119316283f4ed9db}{mra\-\_\-data})
+\begin{DoxyCompactList}\small\item\em Applies the control signal to the actuator. \end{DoxyCompactList}\item 
+void \hyperlink{communication_2communication_8h_a8da2a9706cfdbe1a7fae96aac9e4f516}{mra\-\_\-shut\-\_\-down} (void)
+\begin{DoxyCompactList}\small\item\em Turn off M\-R\-A. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{communication_2communication_8h_a48ea000c2b251ce26ea35d300f319651}{\index{communication/communication.\-h@{communication/communication.\-h}!G\-P\-I\-O\-\_\-\-C\-S\-\_\-\-S0@{G\-P\-I\-O\-\_\-\-C\-S\-\_\-\-S0}}
+\index{G\-P\-I\-O\-\_\-\-C\-S\-\_\-\-S0@{G\-P\-I\-O\-\_\-\-C\-S\-\_\-\-S0}!communication/communication.h@{communication/communication.\-h}}
+\subsubsection[{G\-P\-I\-O\-\_\-\-C\-S\-\_\-\-S0}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-P\-I\-O\-\_\-\-C\-S\-\_\-\-S0~168}}\label{communication_2communication_8h_a48ea000c2b251ce26ea35d300f319651}
+
+
+Definition at line 16 of file communication.\-h.
+
+\hypertarget{communication_2communication_8h_a7672ba13ff6f297c347790586c9a02e0}{\index{communication/communication.\-h@{communication/communication.\-h}!G\-P\-I\-O\-\_\-\-C\-S\-\_\-\-S1@{G\-P\-I\-O\-\_\-\-C\-S\-\_\-\-S1}}
+\index{G\-P\-I\-O\-\_\-\-C\-S\-\_\-\-S1@{G\-P\-I\-O\-\_\-\-C\-S\-\_\-\-S1}!communication/communication.h@{communication/communication.\-h}}
+\subsubsection[{G\-P\-I\-O\-\_\-\-C\-S\-\_\-\-S1}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-P\-I\-O\-\_\-\-C\-S\-\_\-\-S1~64}}\label{communication_2communication_8h_a7672ba13ff6f297c347790586c9a02e0}
+
+
+Definition at line 17 of file communication.\-h.
+
+\hypertarget{communication_2communication_8h_a94b6d57532d1db55dc4efd9fb234f156}{\index{communication/communication.\-h@{communication/communication.\-h}!G\-P\-I\-O\-\_\-\-C\-S\-\_\-\-S2@{G\-P\-I\-O\-\_\-\-C\-S\-\_\-\-S2}}
+\index{G\-P\-I\-O\-\_\-\-C\-S\-\_\-\-S2@{G\-P\-I\-O\-\_\-\-C\-S\-\_\-\-S2}!communication/communication.h@{communication/communication.\-h}}
+\subsubsection[{G\-P\-I\-O\-\_\-\-C\-S\-\_\-\-S2}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-P\-I\-O\-\_\-\-C\-S\-\_\-\-S2~176}}\label{communication_2communication_8h_a94b6d57532d1db55dc4efd9fb234f156}
+
+
+Definition at line 18 of file communication.\-h.
+
+\hypertarget{communication_2communication_8h_ad774f00fc71216488e24a803bf4eb6aa}{\index{communication/communication.\-h@{communication/communication.\-h}!G\-P\-I\-O\-\_\-\-C\-S\-\_\-\-S3@{G\-P\-I\-O\-\_\-\-C\-S\-\_\-\-S3}}
+\index{G\-P\-I\-O\-\_\-\-C\-S\-\_\-\-S3@{G\-P\-I\-O\-\_\-\-C\-S\-\_\-\-S3}!communication/communication.h@{communication/communication.\-h}}
+\subsubsection[{G\-P\-I\-O\-\_\-\-C\-S\-\_\-\-S3}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-P\-I\-O\-\_\-\-C\-S\-\_\-\-S3~65}}\label{communication_2communication_8h_ad774f00fc71216488e24a803bf4eb6aa}
+
+
+Definition at line 19 of file communication.\-h.
+
+\hypertarget{communication_2communication_8h_a014b45373b6ab21c681fc378bd8203f9}{\index{communication/communication.\-h@{communication/communication.\-h}!G\-P\-I\-O\-\_\-\-D\-A\-C\-\_\-\-L\-D\-A\-C@{G\-P\-I\-O\-\_\-\-D\-A\-C\-\_\-\-L\-D\-A\-C}}
+\index{G\-P\-I\-O\-\_\-\-D\-A\-C\-\_\-\-L\-D\-A\-C@{G\-P\-I\-O\-\_\-\-D\-A\-C\-\_\-\-L\-D\-A\-C}!communication/communication.h@{communication/communication.\-h}}
+\subsubsection[{G\-P\-I\-O\-\_\-\-D\-A\-C\-\_\-\-L\-D\-A\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-P\-I\-O\-\_\-\-D\-A\-C\-\_\-\-L\-D\-A\-C~67}}\label{communication_2communication_8h_a014b45373b6ab21c681fc378bd8203f9}
+
+
+Definition at line 22 of file communication.\-h.
+
+\hypertarget{communication_2communication_8h_a99fc26a9596a1cb1f0f9936dbb8ccca6}{\index{communication/communication.\-h@{communication/communication.\-h}!G\-P\-I\-O\-\_\-\-D\-A\-C\-\_\-\-S\-H\-D\-N@{G\-P\-I\-O\-\_\-\-D\-A\-C\-\_\-\-S\-H\-D\-N}}
+\index{G\-P\-I\-O\-\_\-\-D\-A\-C\-\_\-\-S\-H\-D\-N@{G\-P\-I\-O\-\_\-\-D\-A\-C\-\_\-\-S\-H\-D\-N}!communication/communication.h@{communication/communication.\-h}}
+\subsubsection[{G\-P\-I\-O\-\_\-\-D\-A\-C\-\_\-\-S\-H\-D\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-P\-I\-O\-\_\-\-D\-A\-C\-\_\-\-S\-H\-D\-N~66}}\label{communication_2communication_8h_a99fc26a9596a1cb1f0f9936dbb8ccca6}
+
+
+Definition at line 21 of file communication.\-h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{communication_2communication_8h_a1d5f01d0124cff7030b5c4951b4bbefa}{\index{communication/communication.\-h@{communication/communication.\-h}!actuate@{actuate}}
+\index{actuate@{actuate}!communication/communication.h@{communication/communication.\-h}}
+\subsubsection[{actuate}]{\setlength{\rightskip}{0pt plus 5cm}void actuate (
+\begin{DoxyParamCaption}
+\item[{int}]{spi\-\_\-dev, }
+\item[{{\bf M\-R\-A\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$}]{mra\-\_\-data}
+\end{DoxyParamCaption}
+)}}\label{communication_2communication_8h_a1d5f01d0124cff7030b5c4951b4bbefa}
+
+
+Applies the control signal to the actuator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spi\-\_\-dev} & Containing S\-P\-I variable I\-D \\
+\hline
+{\em mra\-\_\-data} & Struct containing the control signal \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+
+
+Definition at line 135 of file communication (\-Cópia em conflito de Caio Gustavo Mesquita Angelo 2013-\/05-\/17).\-c.
+
+
+
+References dac\-\_\-write(), F\-A\-I\-L\-U\-R\-E, G\-P\-I\-O\-\_\-\-C\-S\-\_\-\-S0, G\-P\-I\-O\-\_\-\-C\-S\-\_\-\-S1, G\-P\-I\-O\-\_\-\-C\-S\-\_\-\-S2, G\-P\-I\-O\-\_\-\-C\-S\-\_\-\-S3, G\-P\-I\-O\-\_\-\-D\-A\-C\-\_\-\-S\-H\-D\-N, gpio\-\_\-write(), M\-R\-A\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::new\-\_\-ctl, S\-U\-C\-C\-E\-S\-S, and M\-R\-A\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::v\-\_\-ctl.
+
+
+
+Referenced by devices\-\_\-init(), and periodic\-\_\-task\-\_\-1().
+
+
+\begin{DoxyCode}
+\{
+  \textcolor{comment}{//printf("i = %d\(\backslash\)n",i);}
+  \textcolor{comment}{//i++;}
+  \textcolor{keywordflow}{if}( \hyperlink{communication_2gpio__functions_8c_a9672ca43e65fa527cd6bf43db9aea594}{gpio\_write}(\hyperlink{communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8h_a99fc26a9596a1cb1f0f9936dbb8ccca6}{GPIO\_DAC\_SHDN},1)==\hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE} )
+        mra\_data->\hyperlink{structMRA__DATA__STRUCT_a5b1af89ee717f5b14c18e8ac12e93e75}{new\_ctl}=\hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
+  \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}( (\hyperlink{communication_2gpio__functions_8c_a9672ca43e65fa527cd6bf43db9aea594}{gpio\_write}(\hyperlink{communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8h_ad774f00fc71216488e24a803bf4eb6aa}{GPIO\_CS\_S3},1)==\hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE}) || (
+      \hyperlink{communication_2gpio__functions_8c_a9672ca43e65fa527cd6bf43db9aea594}{gpio\_write}(\hyperlink{communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8h_a94b6d57532d1db55dc4efd9fb234f156}{GPIO\_CS\_S2},0)==\hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE}) || (\hyperlink{communication_2gpio__functions_8c_a9672ca43e65fa527cd6bf43db9aea594}{gpio\_write}
+      (\hyperlink{communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8h_a7672ba13ff6f297c347790586c9a02e0}{GPIO\_CS\_S1},1)==\hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE}) || (\hyperlink{communication_2gpio__functions_8c_a9672ca43e65fa527cd6bf43db9aea594}{gpio\_write}(\hyperlink{communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8h_a48ea000c2b251ce26ea35d300f319651}{GPIO\_CS\_S0}
+      ,0)==\hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE}) )
+        mra\_data->\hyperlink{structMRA__DATA__STRUCT_a5b1af89ee717f5b14c18e8ac12e93e75}{new\_ctl}=\hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
+  \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}( (\hyperlink{communication_2spi__functions_8c_a5c52e64c336d59215ce0a4b6f340dc9f}{dac\_write}(\hyperlink{CommunicationV0_2communication_8c_a4788f0a5355494bc6c13690e28f43783}{spi\_dev},0,1,mra\_data->\hyperlink{structMRA__DATA__STRUCT_a64b4e6bb604e58de593a60c87942b966}{v\_ctl}))==
+      \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE} )
+        mra\_data->\hyperlink{structMRA__DATA__STRUCT_a5b1af89ee717f5b14c18e8ac12e93e75}{new\_ctl}=\hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
+\textcolor{comment}{//  else if( (dac\_write(spi\_dev,1,1,mra\_data->???))==FAILURE )}
+\textcolor{comment}{//      mra\_data->success=FAILURE;}
+  mra\_data->\hyperlink{structMRA__DATA__STRUCT_a5b1af89ee717f5b14c18e8ac12e93e75}{new\_ctl}=\hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};
+  \textcolor{keywordflow}{return};
+\}
+\end{DoxyCode}
+\hypertarget{communication_2communication_8h_a2d1e523ff70db11ca4096f97af5da000}{\index{communication/communication.\-h@{communication/communication.\-h}!devices\-\_\-init@{devices\-\_\-init}}
+\index{devices\-\_\-init@{devices\-\_\-init}!communication/communication.h@{communication/communication.\-h}}
+\subsubsection[{devices\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}int devices\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$}]{imu\-\_\-param, }
+\item[{{\bf S\-P\-I\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$}]{spi\-\_\-param, }
+\item[{{\bf M\-R\-A\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$}]{mra\-\_\-data}
+\end{DoxyParamCaption}
+)}}\label{communication_2communication_8h_a2d1e523ff70db11ca4096f97af5da000}
+
+
+I\-N\-I\-T\-I\-A\-L\-I\-Z\-A\-T\-I\-O\-N O\-F S\-E\-N\-S\-O\-R\-S A\-N\-D D\-E\-V\-I\-C\-E\-S. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$imu\-\_\-param} & Structure with I\-M\-U parameters \\
+\hline
+{\em $\ast$spi\-\_\-param} & Structure with S\-P\-I parameters \\
+\hline
+{\em $\ast$mra\-\_\-data} & Structure to control M\-R\-A \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+flag with S\-U\-C\-C\-E\-S\-S or F\-A\-I\-L\-U\-R\-E 
+\end{DoxyReturn}
+
+
+Definition at line 7 of file communication (\-Cópia em conflito de Caio Gustavo Mesquita Angelo 2013-\/05-\/17).\-c.
+
+
+
+References I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::acc, acc\-\_\-init(), I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::param\-\_\-gyr\-::act, actuate(), A\-D\-D\-\_\-\-A\-D\-X\-L345, A\-D\-D\-\_\-\-H\-M\-C5883, A\-D\-D\-\_\-\-I\-T\-G3200, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::param\-\_\-gyr\-::clk\-\_\-source, S\-P\-I\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::cs, F\-A\-I\-L\-U\-R\-E, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::param\-\_\-acc\-::full\-\_\-res, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::gyr, gyr\-\_\-init(), I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::i2c\-\_\-dev, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::param\-\_\-gyr\-::lpf\-\_\-bw, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::mag, mag\-\_\-init(), I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::param\-\_\-mag\-::meas\-\_\-mode, S\-P\-I\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::mode, M\-R\-A\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::new\-\_\-ctl, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::param\-\_\-mag\-::op\-\_\-mode, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::param\-\_\-acc\-::range, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::param\-\_\-mag\-::range, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::param\-\_\-acc\-::rate, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::param\-\_\-gyr\-::rate, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::param\-\_\-mag\-::rate, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::param\-\_\-mag\-::samples\-\_\-avg, S\-P\-I\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::speed, S\-P\-I\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::spi\-\_\-dev, spi\-\_\-init(), S\-U\-C\-C\-E\-S\-S, and M\-R\-A\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::v\-\_\-ctl.
+
+
+
+Referenced by main(), and periodic\-\_\-task\-\_\-2().
+
+
+\begin{DoxyCode}
+\{
+  
+  \textcolor{keywordflow}{if}( (imu\_param->\hyperlink{structIMU__PARAM__STRUCT_a8a870f383fc9ba0b682fdc9b8c0d2734}{i2c\_dev} = open(\textcolor{stringliteral}{"/dev/i2c-3"}, O\_RDWR))<0 )
+  \{
+    perror(\textcolor{stringliteral}{"Failed to open i2c\_dev"});
+    \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
+  \}
+
+  \textcolor{keywordflow}{if} ((ioctl(imu\_param->\hyperlink{structIMU__PARAM__STRUCT_a8a870f383fc9ba0b682fdc9b8c0d2734}{i2c\_dev}, I2C\_SLAVE, \hyperlink{communication_2imu__functions_8h_a383c09d3e3bbe30097f7eb8d081fb856}{ADD\_HMC5883})) < 0
+      ) \{
+                perror(\textcolor{stringliteral}{"ioctl(I2C\_SLAVE) mag"});
+                \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
+  \}
+
+  \textcolor{keywordflow}{if}( (\hyperlink{communication_2imu__functions_8h_a014f908c9faa37c1ec75177a17012a01}{mag\_init}(imu\_param->\hyperlink{structIMU__PARAM__STRUCT_a8a870f383fc9ba0b682fdc9b8c0d2734}{i2c\_dev}, imu\_param->\hyperlink{structIMU__PARAM__STRUCT_a26b277dcaf05f3842995df888225f6f4}{mag}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__mag_a234de95423b604b05b851ef90890cea1}{rate}, 
+      imu\_param->\hyperlink{structIMU__PARAM__STRUCT_a26b277dcaf05f3842995df888225f6f4}{mag}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__mag_a40ad27ebdb5fde35257b1dc52e40f476}{range}, imu\_param->\hyperlink{structIMU__PARAM__STRUCT_a26b277dcaf05f3842995df888225f6f4}{mag}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__mag_a52c22cae6940eb39fb72aca66cfeba9a}{samples\_avg}, 
+      imu\_param->\hyperlink{structIMU__PARAM__STRUCT_a26b277dcaf05f3842995df888225f6f4}{mag}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__mag_a1f3536709c05310005d648f339d70c54}{meas\_mode}, imu\_param->\hyperlink{structIMU__PARAM__STRUCT_a26b277dcaf05f3842995df888225f6f4}{mag}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__mag_a39b83b3e9ff5bdcafed0bdf6a2de584b}{op\_mode}))< 0)
+  \{
+      perror(\textcolor{stringliteral}{"Error in magnetometer initialization"});
+      \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
+  \}  
+
+  \textcolor{keywordflow}{if}( ioctl(imu\_param->\hyperlink{structIMU__PARAM__STRUCT_a8a870f383fc9ba0b682fdc9b8c0d2734}{i2c\_dev}, I2C\_SLAVE, \hyperlink{communication_2imu__functions_8h_ab9fd1068a3f5fcba24d92918aaf0dcb5}{ADD\_ITG3200}) < 0) 
+      \{
+                perror(\textcolor{stringliteral}{"ioctl(I2C\_SLAVE) gyr"});
+                \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
+  \} 
+
+  \textcolor{keywordflow}{if}( \hyperlink{group__gyr_ga6d02be352b4491a236c9695a6a24d174}{gyr\_init}(imu\_param->\hyperlink{structIMU__PARAM__STRUCT_a8a870f383fc9ba0b682fdc9b8c0d2734}{i2c\_dev}, imu\_param->\hyperlink{structIMU__PARAM__STRUCT_a5a4557868f1af679a1098808397b02ec}{gyr}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__gyr_a5aa70e1e9634411c89aacfbc570cc91c}{rate}, 
+      imu\_param->\hyperlink{structIMU__PARAM__STRUCT_a5a4557868f1af679a1098808397b02ec}{gyr}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__gyr_aa612f7299b43a1bf1fc597688c2fa02d}{lpf\_bw}, imu\_param->\hyperlink{structIMU__PARAM__STRUCT_a5a4557868f1af679a1098808397b02ec}{gyr}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__gyr_aca3b791cb480f2da4703d4c256a7de48}{clk\_source}, imu\_param
+      ->\hyperlink{structIMU__PARAM__STRUCT_a5a4557868f1af679a1098808397b02ec}{gyr}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__gyr_a8b583edb905ed922572e46453e7d4adf}{act})<0 )
+  \{
+      perror(\textcolor{stringliteral}{"Error in gyrometer initialization"});
+      \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
+  \}
+
+  \textcolor{keywordflow}{if} ( (ioctl(imu\_param->\hyperlink{structIMU__PARAM__STRUCT_a8a870f383fc9ba0b682fdc9b8c0d2734}{i2c\_dev}, I2C\_SLAVE, \hyperlink{communication_2imu__functions_8h_a909f4a5773e20e672cdb4088e1cfa22f}{ADD\_ADXL345})) < 
+      0) \{
+        perror(\textcolor{stringliteral}{"ioctl(I2C\_SLAVE) acc"});
+        \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
+  \}  
+
+  \textcolor{keywordflow}{if}( \hyperlink{group__acc_gae8f9cc6e0d15e61039d846305f86f073}{acc\_init}(imu\_param->\hyperlink{structIMU__PARAM__STRUCT_a8a870f383fc9ba0b682fdc9b8c0d2734}{i2c\_dev}, imu\_param->\hyperlink{structIMU__PARAM__STRUCT_a92172e4757d0f8f9135a659e406c12e5}{acc}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__acc_af57da5d956ffa7e49a184326b6b9c738}{full\_res}
+      , imu\_param->\hyperlink{structIMU__PARAM__STRUCT_a92172e4757d0f8f9135a659e406c12e5}{acc}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__acc_a30e6a318cad098cd8379416705820f95}{rate}, imu\_param->\hyperlink{structIMU__PARAM__STRUCT_a92172e4757d0f8f9135a659e406c12e5}{acc}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__acc_a26199b298ef2d353192dfbc706bce8cf}{range})<0)
+  \{
+        perror(\textcolor{stringliteral}{"Error in accelerometer initialization"});
+        \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
+  \}
+
+  \textcolor{keywordflow}{if} ((spi\_param->\hyperlink{structSPI__PARAM__STRUCT_abe385c44333d268d17cf648c8e371cad}{spi\_dev}=\hyperlink{communication_2spi__functions_8c_a70764aca888e93b0329e7a62c9312704}{spi\_init}(spi\_param->\hyperlink{structSPI__PARAM__STRUCT_a82c546c99f6c3daed73c1e23426be847}{mode},spi\_param
+      ->\hyperlink{structSPI__PARAM__STRUCT_a53a8d386594a81eb9bc6f971bfe36c54}{speed},spi\_param->\hyperlink{structSPI__PARAM__STRUCT_ae0d62e0a5554783d710b677a017e246f}{cs}))<0) 
+  \{
+    perror(\textcolor{stringliteral}{"Error in SPI device initialization"});
+    \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
+  \}
+
+  \textcolor{comment}{//Enable DAC and writing 0}
+  mra\_data->\hyperlink{structMRA__DATA__STRUCT_a64b4e6bb604e58de593a60c87942b966}{v\_ctl}=0;
+\textcolor{comment}{//  mra\_data->Out\_1=0;}
+
+  \hyperlink{communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8c_a1d5f01d0124cff7030b5c4951b4bbefa}{actuate}(spi\_param->\hyperlink{structSPI__PARAM__STRUCT_abe385c44333d268d17cf648c8e371cad}{spi\_dev}, mra\_data);
+  \textcolor{keywordflow}{if}( mra\_data->\hyperlink{structMRA__DATA__STRUCT_a5b1af89ee717f5b14c18e8ac12e93e75}{new\_ctl} == \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE} )
+  \{
+        perror(\textcolor{stringliteral}{"Error in MRA initialization"});
+        \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
+  \}
+  \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};
+\}
+\end{DoxyCode}
+\hypertarget{communication_2communication_8h_a8da2a9706cfdbe1a7fae96aac9e4f516}{\index{communication/communication.\-h@{communication/communication.\-h}!mra\-\_\-shut\-\_\-down@{mra\-\_\-shut\-\_\-down}}
+\index{mra\-\_\-shut\-\_\-down@{mra\-\_\-shut\-\_\-down}!communication/communication.h@{communication/communication.\-h}}
+\subsubsection[{mra\-\_\-shut\-\_\-down}]{\setlength{\rightskip}{0pt plus 5cm}void mra\-\_\-shut\-\_\-down (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{communication_2communication_8h_a8da2a9706cfdbe1a7fae96aac9e4f516}
+
+
+Turn off M\-R\-A. 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000001}{Todo}]Check this function \end{DoxyRefDesc}
+\hypertarget{communication_2communication_8h_a5f0316a5f70c7e369541e996802603b4}{\index{communication/communication.\-h@{communication/communication.\-h}!read\-\_\-all\-\_\-data@{read\-\_\-all\-\_\-data}}
+\index{read\-\_\-all\-\_\-data@{read\-\_\-all\-\_\-data}!communication/communication.h@{communication/communication.\-h}}
+\subsubsection[{read\-\_\-all\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}int read\-\_\-all\-\_\-data (
+\begin{DoxyParamCaption}
+\item[{int}]{i2c\-\_\-dev, }
+\item[{int}]{spi\-\_\-dev, }
+\item[{{\bf I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$}]{imu\-\_\-data, }
+\item[{{\bf E\-F\-F\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$}]{eff\-\_\-data, }
+\item[{{\bf M\-R\-A\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$}]{mra\-\_\-data}
+\end{DoxyParamCaption}
+)}}\label{communication_2communication_8h_a5f0316a5f70c7e369541e996802603b4}
+
+
+R\-E\-A\-D A\-L\-L D\-A\-T\-A F\-R\-O\-M S\-E\-N\-S\-O\-R\-S A\-N\-D A\-D\-C. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i2c\-\_\-dev} & \\
+\hline
+{\em spi\-\_\-dev} & \\
+\hline
+{\em $\ast$imu\-\_\-data} & \\
+\hline
+{\em $\ast$eff\-\_\-data} & \\
+\hline
+{\em $\ast$mra\-\_\-data} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+flag with S\-U\-C\-C\-E\-S\-S or F\-A\-I\-L\-U\-R\-E 
+\end{DoxyReturn}
+
+
+Definition at line 68 of file communication (\-Cópia em conflito de Caio Gustavo Mesquita Angelo 2013-\/05-\/17).\-c.
+
+
+
+References I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::acc, acc\-\_\-read\-\_\-all\-\_\-data(), adc\-\_\-read(), A\-D\-D\-\_\-\-A\-D\-X\-L345, A\-D\-D\-\_\-\-H\-M\-C5883, A\-D\-D\-\_\-\-I\-T\-G3200, E\-F\-F\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::\-F, F\-A\-I\-L\-U\-R\-E, G\-P\-I\-O\-\_\-\-C\-S\-\_\-\-S0, G\-P\-I\-O\-\_\-\-C\-S\-\_\-\-S1, G\-P\-I\-O\-\_\-\-C\-S\-\_\-\-S2, G\-P\-I\-O\-\_\-\-C\-S\-\_\-\-S3, gpio\-\_\-write(), I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::gyr, gyr\-\_\-read\-\_\-all\-\_\-data(), I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::mag, mag\-\_\-read\-\_\-all\-\_\-data(), I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::new\-\_\-data, E\-F\-F\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::new\-\_\-data, M\-R\-A\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::new\-\_\-data, S\-U\-C\-C\-E\-S\-S, I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::temp, M\-R\-A\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::v\-\_\-ctl\-\_\-read, D\-A\-T\-A\-\_\-\-X\-Y\-Z\-::x, D\-A\-T\-A\-\_\-\-X\-Y\-Z\-::y, and D\-A\-T\-A\-\_\-\-X\-Y\-Z\-::z.
+
+
+
+Referenced by main(), and periodic\-\_\-task\-\_\-1().
+
+
+\begin{DoxyCode}
+\{
+  \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} data[4];
+  \textcolor{keywordtype}{int} f=0;
+  \textcolor{comment}{// Read IMU data}
+  imu\_data->\hyperlink{structIMU__DATA__STRUCT_a99924252176326418863e511d4fa437b}{new\_data}=\hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};
+  
+  \textcolor{keywordflow}{if} ( (ioctl(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev}, I2C\_SLAVE, \hyperlink{communication_2imu__functions_8h_a909f4a5773e20e672cdb4088e1cfa22f}{ADD\_ADXL345}))<0) 
+        imu\_data->\hyperlink{structIMU__DATA__STRUCT_a99924252176326418863e511d4fa437b}{new\_data}=0;
+  \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}( (\hyperlink{group__acc_ga013bb5ed8a763883fc440549d2b1a6ce}{acc\_read\_all\_data}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev},data))==\hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE}
+       )
+  \{
+        imu\_data->\hyperlink{structIMU__DATA__STRUCT_a99924252176326418863e511d4fa437b}{new\_data}=0;
+        \textcolor{comment}{//printf("\(\backslash\)nimu\_data->new\_data = %d\(\backslash\)n",imu\_data->new\_data);}
+        \textcolor{comment}{//f=1;}
+  \}
+  \textcolor{keywordflow}{else}\{
+    imu\_data->\hyperlink{structIMU__DATA__STRUCT_a448f284bf44eb503affda586ad5fa9d2}{acc}.\hyperlink{structDATA__XYZ_a54c1596e9f9969fd9c21e8458024ecfb}{x}=data[0];
+    imu\_data->\hyperlink{structIMU__DATA__STRUCT_a448f284bf44eb503affda586ad5fa9d2}{acc}.\hyperlink{structDATA__XYZ_a94bbb1c889bf53eb6a5fffa2b39322cf}{y}=data[1];
+    imu\_data->\hyperlink{structIMU__DATA__STRUCT_a448f284bf44eb503affda586ad5fa9d2}{acc}.\hyperlink{structDATA__XYZ_a69e89ab0ec6e5d72fc5d54f62cc07fb5}{z}=data[2];  
+  \}
+  
+  \textcolor{keywordflow}{if} ( (ioctl(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev}, I2C\_SLAVE, \hyperlink{communication_2imu__functions_8h_ab9fd1068a3f5fcba24d92918aaf0dcb5}{ADD\_ITG3200})) < 0) 
+        imu\_data->\hyperlink{structIMU__DATA__STRUCT_a99924252176326418863e511d4fa437b}{new\_data}=0;
+  \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}( (\hyperlink{group__gyr_ga79875465c3a29fd9ec77308c80a8bc37}{gyr\_read\_all\_data}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev},data))==\hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE}
+       )
+        imu\_data->\hyperlink{structIMU__DATA__STRUCT_a99924252176326418863e511d4fa437b}{new\_data}=0;
+  \textcolor{keywordflow}{else}\{
+    imu\_data->\hyperlink{structIMU__DATA__STRUCT_a0c1ac26626e4434a2ee124a1928a23a1}{gyr}.\hyperlink{structDATA__XYZ_a54c1596e9f9969fd9c21e8458024ecfb}{x}=data[0];
+    imu\_data->\hyperlink{structIMU__DATA__STRUCT_a0c1ac26626e4434a2ee124a1928a23a1}{gyr}.\hyperlink{structDATA__XYZ_a94bbb1c889bf53eb6a5fffa2b39322cf}{y}=data[1];
+    imu\_data->\hyperlink{structIMU__DATA__STRUCT_a0c1ac26626e4434a2ee124a1928a23a1}{gyr}.\hyperlink{structDATA__XYZ_a69e89ab0ec6e5d72fc5d54f62cc07fb5}{z}=data[2];
+    imu\_data->\hyperlink{structIMU__DATA__STRUCT_a81e1dbf765c1d947ca6076aa1bbc73e7}{temp}=data[3];
+  \}
+  
+  \textcolor{keywordflow}{if} ( (ioctl(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev}, I2C\_SLAVE, \hyperlink{communication_2imu__functions_8h_a383c09d3e3bbe30097f7eb8d081fb856}{ADD\_HMC5883})) < 0) 
+        imu\_data->\hyperlink{structIMU__DATA__STRUCT_a99924252176326418863e511d4fa437b}{new\_data}=0;
+  \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}( (\hyperlink{communication_2imu__functions_8h_ab42ae0d0a2a6f37cf36d856c072b7f34}{mag\_read\_all\_data}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev},data))==\hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE}
+       )
+        imu\_data->\hyperlink{structIMU__DATA__STRUCT_a99924252176326418863e511d4fa437b}{new\_data}=0;
+  \textcolor{keywordflow}{else}\{
+    imu\_data->\hyperlink{structIMU__DATA__STRUCT_a40c7df8b6d49297aa52873cfd9b60daa}{mag}.\hyperlink{structDATA__XYZ_a54c1596e9f9969fd9c21e8458024ecfb}{x}=data[0];
+    imu\_data->\hyperlink{structIMU__DATA__STRUCT_a40c7df8b6d49297aa52873cfd9b60daa}{mag}.\hyperlink{structDATA__XYZ_a94bbb1c889bf53eb6a5fffa2b39322cf}{y}=data[1];
+    imu\_data->\hyperlink{structIMU__DATA__STRUCT_a40c7df8b6d49297aa52873cfd9b60daa}{mag}.\hyperlink{structDATA__XYZ_a69e89ab0ec6e5d72fc5d54f62cc07fb5}{z}=data[2];
+  \}
+  
+  \textcolor{comment}{//Read Efforts data}
+  eff\_data->\hyperlink{structEFF__DATA__STRUCT_aa42ebc512dd79fa6ebf998162a149446}{new\_data}=\hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};
+  
+  \textcolor{keywordflow}{if}( (\hyperlink{communication_2gpio__functions_8c_a9672ca43e65fa527cd6bf43db9aea594}{gpio\_write}(\hyperlink{communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8h_ad774f00fc71216488e24a803bf4eb6aa}{GPIO\_CS\_S3},1)==\hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE}) || (
+      \hyperlink{communication_2gpio__functions_8c_a9672ca43e65fa527cd6bf43db9aea594}{gpio\_write}(\hyperlink{communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8h_a94b6d57532d1db55dc4efd9fb234f156}{GPIO\_CS\_S2},1)==\hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE}) || (\hyperlink{communication_2gpio__functions_8c_a9672ca43e65fa527cd6bf43db9aea594}{gpio\_write}
+      (\hyperlink{communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8h_a7672ba13ff6f297c347790586c9a02e0}{GPIO\_CS\_S1},1)==\hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE}) || (\hyperlink{communication_2gpio__functions_8c_a9672ca43e65fa527cd6bf43db9aea594}{gpio\_write}(\hyperlink{communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8h_a48ea000c2b251ce26ea35d300f319651}{GPIO\_CS\_S0}
+      ,0)==\hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE}))
+        eff\_data->\hyperlink{structEFF__DATA__STRUCT_aa42ebc512dd79fa6ebf998162a149446}{new\_data}=\hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
+  \textcolor{keywordflow}{else}\{ 
+    \textcolor{keywordflow}{if}( (\hyperlink{communication_2spi__functions_8c_ae385345c227d9f67ab490b94ed628988}{adc\_read}(\hyperlink{CommunicationV0_2communication_8c_a4788f0a5355494bc6c13690e28f43783}{spi\_dev},0,1,data))==\hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE} )
+        eff\_data->\hyperlink{structEFF__DATA__STRUCT_aa42ebc512dd79fa6ebf998162a149446}{new\_data}=\hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
+    \textcolor{keywordflow}{else} eff\_data->\hyperlink{structEFF__DATA__STRUCT_abe8952947b54bf9c247f3429ee3aeb44}{F}.\hyperlink{structDATA__XYZ_a54c1596e9f9969fd9c21e8458024ecfb}{x}=data[0];
+  \textcolor{comment}{//Read MR actuator voltage control}
+    \textcolor{keywordflow}{if}( (\hyperlink{communication_2spi__functions_8c_ae385345c227d9f67ab490b94ed628988}{adc\_read}(\hyperlink{CommunicationV0_2communication_8c_a4788f0a5355494bc6c13690e28f43783}{spi\_dev},7,1,data))==\hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS} )
+    \{
+        mra\_data->\hyperlink{structMRA__DATA__STRUCT_a3a31d57268c33b21ac915fdc27dfe474}{v\_ctl\_read}=data[0];
+        mra\_data->\hyperlink{structMRA__DATA__STRUCT_afca6e851d302f3a786885a4e1eec79d7}{new\_data}=\hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};
+    \}
+  \}
+  \textcolor{comment}{//if( f==1 )}
+    \textcolor{comment}{//printf("imu\_data->new\_data antes do return= %d\(\backslash\)n",imu\_data->new\_data);}
+
+  \textcolor{keywordflow}{if}( imu\_data->\hyperlink{structIMU__DATA__STRUCT_a99924252176326418863e511d4fa437b}{new\_data}==\hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE} || eff\_data->\hyperlink{structEFF__DATA__STRUCT_aa42ebc512dd79fa6ebf998162a149446}{new\_data}
+      ==\hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE} || mra\_data->\hyperlink{structMRA__DATA__STRUCT_afca6e851d302f3a786885a4e1eec79d7}{new\_data}==\hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE} )
+    \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
+    
+  \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};
+\}
+\end{DoxyCode}

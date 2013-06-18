@@ -1,0 +1,52 @@
+\hypertarget{acc__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c}{\section{André backup conflitos/acc\-\_\-functions (Cópia em conflito de André Carvalho 2013-\/04-\/26).c File Reference}
+\label{acc__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c}\index{André backup conflitos/acc\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c@{André backup conflitos/acc\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c}}
+}
+{\ttfamily \#include \char`\"{}imu\-\_\-functions.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{group__acc_gae8f9cc6e0d15e61039d846305f86f073}{acc\-\_\-init} (int \hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\-\_\-dev}, uint8\-\_\-t full\-\_\-res, uint16\-\_\-t rate, uint8\-\_\-t range)
+\begin{DoxyCompactList}\small\item\em I\-N\-I\-T\-I\-A\-L\-I\-Z\-E A\-C\-C\-E\-L\-E\-R\-O\-M\-E\-T\-E\-R. \end{DoxyCompactList}\item 
+int \hyperlink{group__acc_ga534116416343122de29a5b6ade6876bd}{acc\-\_\-write\-\_\-reg} (int \hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\-\_\-dev}, uint8\-\_\-t reg, uint8\-\_\-t data)
+\begin{DoxyCompactList}\small\item\em W\-R\-I\-T\-E T\-O R\-E\-G\-I\-S\-T\-E\-R. \end{DoxyCompactList}\item 
+uint8\-\_\-t $\ast$ \hyperlink{group__acc_ga2a91c44eebbe44f4d3b8c508633512f9}{acc\-\_\-read\-\_\-reg} (int \hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\-\_\-dev}, uint8\-\_\-t reg, uint8\-\_\-t count)
+\begin{DoxyCompactList}\small\item\em R\-E\-A\-D C\-O\-U\-N\-T 8-\/\-B\-I\-T R\-E\-G\-I\-S\-T\-E\-R I\-N S\-E\-Q\-U\-E\-N\-C\-E \end{DoxyCompactList}\item 
+short int \hyperlink{group__acc_ga041d6953f2bfc8c5efa4d5bbac812305}{acc\-\_\-read\-\_\-data} (int \hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\-\_\-dev}, int axis)
+\begin{DoxyCompactList}\small\item\em R\-E\-A\-D D\-A\-T\-A (X, Y or Z) \end{DoxyCompactList}\item 
+uint8\-\_\-t \hyperlink{group__acc_ga013bb5ed8a763883fc440549d2b1a6ce}{acc\-\_\-read\-\_\-all\-\_\-data} (int \hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\-\_\-dev}, short int $\ast$data)
+\begin{DoxyCompactList}\small\item\em R\-E\-A\-D A\-L\-L D\-A\-T\-A A\-T O\-N\-C\-E (X, Y and Z) \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{acc__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\-\_\-byte\-\_\-hex\-\_\-bin} (uint8\-\_\-t $\ast$hvalue)
+\item 
+int \hyperlink{group__acc_ga8509cccabb08e7267677f66f25718731}{acc\-\_\-read\-\_\-all\-\_\-reg} (int \hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\-\_\-dev})
+\begin{DoxyCompactList}\small\item\em Read all accelerometer data and print in stdio. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{acc__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{\index{acc\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c@{acc\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c}!conv\-\_\-byte\-\_\-hex\-\_\-bin@{conv\-\_\-byte\-\_\-hex\-\_\-bin}}
+\index{conv\-\_\-byte\-\_\-hex\-\_\-bin@{conv\-\_\-byte\-\_\-hex\-\_\-bin}!acc_functions (Cópia em conflito de André Carvalho 2013-04-26).c@{acc\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c}}
+\subsubsection[{conv\-\_\-byte\-\_\-hex\-\_\-bin}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ conv\-\_\-byte\-\_\-hex\-\_\-bin (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t $\ast$}]{hvalue}
+\end{DoxyParamCaption}
+)}}\label{acc__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}
+
+
+Definition at line 183 of file acc\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c.
+
+
+
+Referenced by acc\-\_\-read\-\_\-all\-\_\-reg().
+
+
+\begin{DoxyCode}
+\{
+  \textcolor{keywordtype}{char} \hyperlink{spi__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a46a6da6b1936191571fd30b2a749f38c}{bits}[9];
+  \textcolor{keywordtype}{int} i;
+  \textcolor{keywordflow}{for}( i=0; i<8; i++)
+  \{
+    bits[i]=((*hvalue)<<i)>>7+\hyperlink{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_aa3f75ad2972ec8996ce5206feac0e52c}{ASCII\_0};
+  \}
+  bits[8]=\textcolor{charliteral}{'\(\backslash\)0'};
+  \textcolor{keywordflow}{return} \hyperlink{spi__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a46a6da6b1936191571fd30b2a749f38c}{bits};
+\}
+\end{DoxyCode}

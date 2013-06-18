@@ -1,0 +1,546 @@
+\hypertarget{datalogger_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c}{\section{André backup conflitos/datalogger (Cópia em conflito de André Carvalho 2013-\/04-\/26).c File Reference}
+\label{datalogger_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c}\index{André backup conflitos/datalogger (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c@{André backup conflitos/datalogger (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c}}
+}
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include $<$pthread.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}gqueue.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}gmatlabdatafile.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}gdatalogger.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}gmatrix.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}imu.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}magnetometer.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}sonar.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}gps.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}sensors.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}calibration.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}estimation.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}control.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}datalogger.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{datalogger_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a54b06d9395b2e370a5a72beb7f9524b2}{datalogger\-\_\-lock\-\_\-mutex} (void)
+\item 
+int \hyperlink{datalogger_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a85453211c0c809083c36cc56b275aeeb}{datalogger\-\_\-unlock\-\_\-mutex} (void)
+\item 
+int \hyperlink{datalogger_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a1977ef253746fd8c008a3641d9822551}{datalogger\-\_\-init} (void)
+\item 
+int \hyperlink{datalogger_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_ad22dbe9e235e7ae5737a23796d13ffbd}{datalogger\-\_\-close} (void)
+\item 
+int \hyperlink{datalogger_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a2aedecfce53e1935a41615ceaf378013}{datalogger\-\_\-write\-\_\-file} (void)
+\item 
+int \hyperlink{datalogger_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a25bb814a0877f419ae09b08cd7e91ee9}{datalogger\-\_\-update\-\_\-\-I\-P\-C} (void)
+\item 
+int \hyperlink{datalogger_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_ad7096326080dae8d80f5842297768fd8}{datalogger\-\_\-update} (double t\-\_\-s, double t\-\_\-control\-\_\-exec\-\_\-s, double t\-\_\-ui\-\_\-exec\-\_\-s, double t0\-\_\-s, \hyperlink{structIMU__DATA__STRUCT}{I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$pimu\-\_\-data, \hyperlink{structEFF__DATA__STRUCT}{E\-F\-F\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$peff\-\_\-data)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structGDATALOGGER}{G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R} \hyperlink{datalogger_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{g\-Data\-Logger}
+\item 
+unsigned int \hyperlink{datalogger_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a35e8fbe04b90452afdc3c1be16ff6187}{datalogger\-\_\-initialized} = \hyperlink{datalogger_8h_a4602a65fdfa920dfe832cfa50b7ee4c8}{D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-N\-O\-T\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-D}
+\item 
+unsigned int \hyperlink{datalogger_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a185c3ede96449d14f330fe5ac664e799}{datalogger\-\_\-running} = \hyperlink{datalogger_8h_a1a224da36800f52f56f30619849f7f5d}{D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-N\-O\-T\-\_\-\-R\-U\-N\-N\-I\-N\-G}
+\item 
+pthread\-\_\-mutex\-\_\-t \hyperlink{datalogger_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a824d6f7fd1d3898ba0b1100ba37875c6}{datalogger\-\_\-mutex} = P\-T\-H\-R\-E\-A\-D\-\_\-\-M\-U\-T\-E\-X\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-R
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{datalogger_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_ad22dbe9e235e7ae5737a23796d13ffbd}{\index{datalogger (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c@{datalogger (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c}!datalogger\-\_\-close@{datalogger\-\_\-close}}
+\index{datalogger\-\_\-close@{datalogger\-\_\-close}!datalogger (Cópia em conflito de André Carvalho 2013-04-26).c@{datalogger (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c}}
+\subsubsection[{datalogger\-\_\-close}]{\setlength{\rightskip}{0pt plus 5cm}int datalogger\-\_\-close (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{datalogger_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_ad22dbe9e235e7ae5737a23796d13ffbd}
+
+
+Definition at line 203 of file datalogger (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c.
+
+
+
+References D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-E\-R\-R\-O\-R\-\_\-\-N\-O\-T\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-D, datalogger\-\_\-initialized, D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-D, datalogger\-\_\-lock\-\_\-mutex(), datalogger\-\_\-mutex, D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-N\-O\-T\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-D, D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S, datalogger\-\_\-unlock\-\_\-mutex(), g\-Data\-Logger\-\_\-\-Close(), and g\-Data\-Logger\-\_\-\-Matfile\-Update().
+
+
+\begin{DoxyCode}
+\{
+\textcolor{preprocessor}{    #if DATALOGGER\_MODULE\_ENABLED}
+\textcolor{preprocessor}{}        \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8c_a54b06d9395b2e370a5a72beb7f9524b2}{datalogger\_lock\_mutex}();
+        \textcolor{keywordflow}{if}(\hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8c_a35e8fbe04b90452afdc3c1be16ff6187}{datalogger\_initialized} != 
+      \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8h_a684c343d340004b77ca2b782934c96ca}{DATALOGGER\_INITIALIZED})
+    \{
+            \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8c_a85453211c0c809083c36cc56b275aeeb}{datalogger\_unlock\_mutex}();
+        \textcolor{keywordflow}{return} \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8h_a60df7fe0e61b757ad6a9db106b0eb43e}{DATALOGGER\_ERROR\_NOT\_INITIALIZED}
+      ;
+    \}
+
+    \hyperlink{gdatalogger_8c_a05dc8ce832b941280d7de26057992640}{gDataLogger\_MatfileUpdate}(&\hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger})
+      ; \textcolor{comment}{// Update data}
+    \hyperlink{gdatalogger_8c_a0ac95f84c6ee484c4ad0351530f1c468}{gDataLogger\_Close}(&\hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}); \textcolor{comment}{// Close
+       datalogger}
+
+    \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8c_a35e8fbe04b90452afdc3c1be16ff6187}{datalogger\_initialized} = \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8h_a4602a65fdfa920dfe832cfa50b7ee4c8}{DATALOGGER\_NOT\_INITIALIZED}
+      ;
+    \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8c_a85453211c0c809083c36cc56b275aeeb}{datalogger\_unlock\_mutex}();
+
+\textcolor{preprocessor}{        #if ANU\_COMPILE\_FOR\_XENOMAI}
+\textcolor{preprocessor}{}    rt\_mutex\_delete(&\hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8c_a824d6f7fd1d3898ba0b1100ba37875c6}{datalogger\_mutex});
+\textcolor{preprocessor}{        #endif  //ANU\_COMPILE\_FOR\_XENOMAI}
+\textcolor{preprocessor}{}
+\textcolor{preprocessor}{    #endif //DATALOGGER\_MODULE\_ENABLED}
+\textcolor{preprocessor}{}
+    \textcolor{keywordflow}{return} \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8h_abddebaf71d26d40183fccbb1a766b983}{DATALOGGER\_SUCCESS};
+\}
+\end{DoxyCode}
+\hypertarget{datalogger_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a1977ef253746fd8c008a3641d9822551}{\index{datalogger (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c@{datalogger (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c}!datalogger\-\_\-init@{datalogger\-\_\-init}}
+\index{datalogger\-\_\-init@{datalogger\-\_\-init}!datalogger (Cópia em conflito de André Carvalho 2013-04-26).c@{datalogger (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c}}
+\subsubsection[{datalogger\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}int datalogger\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{datalogger_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a1977ef253746fd8c008a3641d9822551}
+
+
+Definition at line 37 of file datalogger (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c.
+
+
+
+References D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-F\-A\-I\-L\-U\-R\-E, datalogger\-\_\-file\-\_\-exists(), D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-F\-I\-L\-E\-\_\-\-N\-A\-M\-E, D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-F\-O\-L\-D\-E\-R, datalogger\-\_\-initialized, D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-D, datalogger\-\_\-lock\-\_\-mutex(), D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-L\-O\-G\-\_\-\-A\-N\-A\-L\-O\-G\-\_\-\-I\-N\-P\-U\-T\-S, D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-L\-O\-G\-\_\-\-E\-X\-E\-C\-T\-I\-M\-E\-S, D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-L\-O\-G\-\_\-\-R\-A\-W\-\_\-\-I\-M\-U, D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-L\-O\-G\-\_\-\-T\-I\-M\-E, datalogger\-\_\-mutex, D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-N\-O\-T\-\_\-\-R\-U\-N\-N\-I\-N\-G, datalogger\-\_\-running, D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-S\-T\-A\-N\-D\-A\-R\-D\-\_\-\-Q\-U\-E\-U\-E\-\_\-\-S\-I\-Z\-E, D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S, datalogger\-\_\-unlock\-\_\-mutex(), g\-Data\-Logger\-\_\-\-Declare\-Variable(), g\-Data\-Logger\-\_\-\-Init(), and g\-Data\-Logger\-\_\-\-Insert\-Variable().
+
+
+\begin{DoxyCode}
+\{
+\textcolor{preprocessor}{    #if DATALOGGER\_MODULE\_ENABLED}
+\textcolor{preprocessor}{}    \textcolor{keywordtype}{double} enabled\_variables[16][1];
+    \textcolor{keywordtype}{char} datalogger\_filename[256];
+\textcolor{preprocessor}{        #if ANU\_COMPILE\_FOR\_XENOMAI}
+\textcolor{preprocessor}{}    rt\_mutex\_create(&\hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8c_a824d6f7fd1d3898ba0b1100ba37875c6}{datalogger\_mutex},\textcolor{stringliteral}{"Data Logger Mutex"});
+\textcolor{preprocessor}{        #endif}
+\textcolor{preprocessor}{}    \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8c_a54b06d9395b2e370a5a72beb7f9524b2}{datalogger\_lock\_mutex}();
+
+    \textcolor{keywordflow}{if}(\hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8c_a35e8fbe04b90452afdc3c1be16ff6187}{datalogger\_initialized} == \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8h_a684c343d340004b77ca2b782934c96ca}{DATALOGGER\_INITIALIZED}
+      )
+    \{
+        \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8c_a85453211c0c809083c36cc56b275aeeb}{datalogger\_unlock\_mutex}();
+        \textcolor{keywordflow}{return} \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8h_ac52138ca42979f6e1f1d589020ff9f83}{DATALOGGER\_FAILURE};
+    \}
+
+    \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8c_a185c3ede96449d14f330fe5ac664e799}{datalogger\_running} = \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8h_a1a224da36800f52f56f30619849f7f5d}{DATALOGGER\_NOT\_RUNNING}
+      ;
+
+        \textcolor{comment}{// Init datalogger}
+    strcpy(datalogger\_filename, \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8h_a29791c024463d251eeab6973a0299e7b}{DATALOGGER\_FOLDER});
+    strcat(datalogger\_filename, \textcolor{stringliteral}{"/"});
+    strcat(datalogger\_filename, \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8h_a23bf1fb88a2adab92e7c477d927b241c}{DATALOGGER\_FILE\_NAME});
+    strcat(datalogger\_filename, \textcolor{stringliteral}{".mat"});
+\textcolor{preprocessor}{        #if DATALOGGER\_ENABLE\_NEW\_FILE\_ENNUMERATION}
+\textcolor{preprocessor}{}    \textcolor{keywordtype}{char} datalogger\_tmp[256];
+    \textcolor{keywordtype}{int} i = 0;
+    \textcolor{keywordflow}{if}(\hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8c_a29bc3190cba1f225ad3b2eed899a6762}{datalogger\_file\_exists}(datalogger\_filename) == 
+      \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8h_abddebaf71d26d40183fccbb1a766b983}{DATALOGGER\_SUCCESS}) \textcolor{comment}{// File exists}
+    \{
+        strcpy(datalogger\_tmp, \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8h_a29791c024463d251eeab6973a0299e7b}{DATALOGGER\_FOLDER});
+        strcat(datalogger\_tmp, \textcolor{stringliteral}{"/"});
+        strcat(datalogger\_tmp, \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8h_a23bf1fb88a2adab92e7c477d927b241c}{DATALOGGER\_FILE\_NAME});
+        strcat(datalogger\_tmp, \textcolor{stringliteral}{"\_%d.mat"});
+        \textcolor{keywordflow}{do}
+        \{
+            sprintf(datalogger\_filename, datalogger\_tmp, ++i);
+        \}
+        \textcolor{keywordflow}{while}((\hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8c_a29bc3190cba1f225ad3b2eed899a6762}{datalogger\_file\_exists}(datalogger\_filename
+      ) == \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8h_abddebaf71d26d40183fccbb1a766b983}{DATALOGGER\_SUCCESS}) && (i<100));
+        \textcolor{keywordflow}{if}(i == 100)
+        \{
+            \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8c_a85453211c0c809083c36cc56b275aeeb}{datalogger\_unlock\_mutex}();
+            \textcolor{keywordflow}{return} \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8h_ac52138ca42979f6e1f1d589020ff9f83}{DATALOGGER\_FAILURE};
+        \}
+    \}
+\textcolor{preprocessor}{        #endif //DATALOGGER\_ENABLE\_NEW\_FILE\_ENNUMERATION}
+\textcolor{preprocessor}{}
+    \textcolor{keywordflow}{if}(!\hyperlink{gdatalogger_8c_ab5eeb22d60836d57bae0dde821337045}{gDataLogger\_Init}(&\hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}, 
+      datalogger\_filename, NULL))
+    \{
+        \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8c_a85453211c0c809083c36cc56b275aeeb}{datalogger\_unlock\_mutex}();
+        \textcolor{keywordflow}{return} \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8h_ac52138ca42979f6e1f1d589020ff9f83}{DATALOGGER\_FAILURE};
+    \}
+
+        \textcolor{comment}{// Declare variables}
+        \textcolor{comment}{// Arguments for gDataLogger\_DeclareVariable:}
+        \textcolor{comment}{// datalogger pointer, variable name, units, number of rows, number of
+       columns, queue size}
+
+        \textcolor{comment}{// Variable that tells MATLAB which variables are enabled}
+        enabled\_variables[0][0] = (double) \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8h_a9796dd7063d48a850456a4542c5a5fb5}{DATALOGGER\_LOG\_TIME}
+      ;
+    enabled\_variables[1][0] = (double) \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8h_ade62d89afc68e01d78fa75ae491a9980}{DATALOGGER\_LOG\_EXECTIMES}
+      ;
+    enabled\_variables[2][0] = (double) \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8h_a1c623aa143d8b2e0d507e23425a02275}{DATALOGGER\_LOG\_RAW\_IMU}
+      ;
+    \textcolor{comment}{//enabled\_variables[3][0] = (double) DATALOGGER\_LOG\_CALIBRATED\_IMU;}
+    enabled\_variables[3][0] = (double) \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8h_adb4db87329e3e60d7824a86d8a4576d9}{DATALOGGER\_LOG\_ANALOG\_INPUTS}
+      ;
+    \textcolor{comment}{//enabled\_variables[12][0] = (double)
+       DATALOGGER\_LOG\_LOCAL\_COORDINATE\_SYSTEM;}
+    \textcolor{comment}{//enabled\_variables[13][0] = (double) DATALOGGER\_LOG\_LOCAL\_FIELDS;}
+    \textcolor{comment}{//enabled\_variables[14][0] = (double) DATALOGGER\_LOG\_ESTIMATOR;}
+    \textcolor{comment}{//enabled\_variables[15][0] = (double) DATALOGGER\_LOG\_CONTROLLERS;}
+
+    \hyperlink{gdatalogger_8c_a3f8f2b3c3f5edc72c3a1887965a544c1}{gDataLogger\_DeclareVariable}(&\hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"enabled\_vars"}, \textcolor{stringliteral}{""}, 16, 1, 1);
+    \hyperlink{gdatalogger_8c_a32674e7c2afa8b78e99a0070cf4bcaf9}{gDataLogger\_InsertVariable}(&\hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"enabled\_vars"}, &enabled\_variables[0][0]);
+
+\textcolor{preprocessor}{        #if DATALOGGER\_LOG\_TIME}
+\textcolor{preprocessor}{}        \hyperlink{gdatalogger_8c_a3f8f2b3c3f5edc72c3a1887965a544c1}{gDataLogger\_DeclareVariable}(&\hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"t"}, \textcolor{stringliteral}{"s"}, 1, 1, \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8h_ac244ccff7e47d7f9e79c1b606664f4fa}{DATALOGGER\_STANDARD\_QUEUE\_SIZE});
+    \hyperlink{gdatalogger_8c_a3f8f2b3c3f5edc72c3a1887965a544c1}{gDataLogger\_DeclareVariable}(&\hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"Ts"}, \textcolor{stringliteral}{"s"}, 1, 1, 1);
+\textcolor{preprocessor}{    #endif // DATALOGGER\_LOG\_TIME}
+\textcolor{preprocessor}{}
+\textcolor{preprocessor}{    #if DATALOGGER\_LOG\_EXECTIMES}
+\textcolor{preprocessor}{}    \hyperlink{gdatalogger_8c_a3f8f2b3c3f5edc72c3a1887965a544c1}{gDataLogger\_DeclareVariable}(&\hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"t\_control\_exec"}, \textcolor{stringliteral}{"s"}, 1, 1, \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8h_ac244ccff7e47d7f9e79c1b606664f4fa}{DATALOGGER\_STANDARD\_QUEUE\_SIZE}
+      );
+    \hyperlink{gdatalogger_8c_a3f8f2b3c3f5edc72c3a1887965a544c1}{gDataLogger\_DeclareVariable}(&\hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"t\_ui\_exec"}, \textcolor{stringliteral}{"s"}, 1, 1, \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8h_ac244ccff7e47d7f9e79c1b606664f4fa}{DATALOGGER\_STANDARD\_QUEUE\_SIZE}
+      );
+\textcolor{preprocessor}{    #endif // DATALOGGER\_LOG\_EXECTIMES}
+\textcolor{preprocessor}{}
+\textcolor{preprocessor}{        #if DATALOGGER\_LOG\_RAW\_IMU}
+\textcolor{preprocessor}{}        \hyperlink{gdatalogger_8c_a3f8f2b3c3f5edc72c3a1887965a544c1}{gDataLogger\_DeclareVariable}(&\hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"imu\_accelerometer\_x\_raw"}, \textcolor{stringliteral}{"raw"}, 1, 1, \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8h_ac244ccff7e47d7f9e79c1b606664f4fa}{DATALOGGER\_STANDARD\_QUEUE\_SIZE}
+      );
+        \hyperlink{gdatalogger_8c_a3f8f2b3c3f5edc72c3a1887965a544c1}{gDataLogger\_DeclareVariable}(&\hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"imu\_accelerometer\_y\_raw"}, \textcolor{stringliteral}{"raw"}, 1, 1, \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8h_ac244ccff7e47d7f9e79c1b606664f4fa}{DATALOGGER\_STANDARD\_QUEUE\_SIZE}
+      );
+        \hyperlink{gdatalogger_8c_a3f8f2b3c3f5edc72c3a1887965a544c1}{gDataLogger\_DeclareVariable}(&\hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"imu\_accelerometer\_z\_raw"}, \textcolor{stringliteral}{"raw"}, 1, 1, \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8h_ac244ccff7e47d7f9e79c1b606664f4fa}{DATALOGGER\_STANDARD\_QUEUE\_SIZE}
+      );
+        \hyperlink{gdatalogger_8c_a3f8f2b3c3f5edc72c3a1887965a544c1}{gDataLogger\_DeclareVariable}(&\hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"imu\_magnetometer\_x\_raw"}, \textcolor{stringliteral}{"raw"}, 1, 1, \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8h_ac244ccff7e47d7f9e79c1b606664f4fa}{DATALOGGER\_STANDARD\_QUEUE\_SIZE}
+      );
+        \hyperlink{gdatalogger_8c_a3f8f2b3c3f5edc72c3a1887965a544c1}{gDataLogger\_DeclareVariable}(&\hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"imu\_magnetometer\_y\_raw"}, \textcolor{stringliteral}{"raw"}, 1, 1, \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8h_ac244ccff7e47d7f9e79c1b606664f4fa}{DATALOGGER\_STANDARD\_QUEUE\_SIZE}
+      );
+        \hyperlink{gdatalogger_8c_a3f8f2b3c3f5edc72c3a1887965a544c1}{gDataLogger\_DeclareVariable}(&\hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"imu\_magnetometer\_z\_raw"}, \textcolor{stringliteral}{"raw"}, 1, 1, \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8h_ac244ccff7e47d7f9e79c1b606664f4fa}{DATALOGGER\_STANDARD\_QUEUE\_SIZE}
+      );
+        \hyperlink{gdatalogger_8c_a3f8f2b3c3f5edc72c3a1887965a544c1}{gDataLogger\_DeclareVariable}(&\hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"imu\_gyrometer\_x\_raw"}, \textcolor{stringliteral}{"raw"}, 1, 1, \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8h_ac244ccff7e47d7f9e79c1b606664f4fa}{DATALOGGER\_STANDARD\_QUEUE\_SIZE}
+      );
+        \hyperlink{gdatalogger_8c_a3f8f2b3c3f5edc72c3a1887965a544c1}{gDataLogger\_DeclareVariable}(&\hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"imu\_gyrometer\_y\_raw"}, \textcolor{stringliteral}{"raw"}, 1, 1, \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8h_ac244ccff7e47d7f9e79c1b606664f4fa}{DATALOGGER\_STANDARD\_QUEUE\_SIZE}
+      );
+        \hyperlink{gdatalogger_8c_a3f8f2b3c3f5edc72c3a1887965a544c1}{gDataLogger\_DeclareVariable}(&\hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"imu\_gyrometer\_z\_raw"}, \textcolor{stringliteral}{"raw"}, 1, 1, \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8h_ac244ccff7e47d7f9e79c1b606664f4fa}{DATALOGGER\_STANDARD\_QUEUE\_SIZE}
+      );
+    \hyperlink{gdatalogger_8c_a3f8f2b3c3f5edc72c3a1887965a544c1}{gDataLogger\_DeclareVariable}(&\hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"imu\_valid\_data"}, \textcolor{stringliteral}{""}, 1, 1, \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8h_ac244ccff7e47d7f9e79c1b606664f4fa}{DATALOGGER\_STANDARD\_QUEUE\_SIZE}
+      );
+\textcolor{preprocessor}{        #endif // DATALOGGER\_LOG\_IMU}
+\textcolor{preprocessor}{}        
+\textcolor{preprocessor}{    #if DATALOGGER\_LOG\_EFFORTS}
+\textcolor{preprocessor}{}    \hyperlink{gdatalogger_8c_a3f8f2b3c3f5edc72c3a1887965a544c1}{gDataLogger\_DeclareVariable}(&\hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"Vin0"}, \textcolor{stringliteral}{"mV"}, 1, 1, \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8h_ac244ccff7e47d7f9e79c1b606664f4fa}{DATALOGGER\_STANDARD\_QUEUE\_SIZE}
+      );
+\textcolor{preprocessor}{    #endif}
+\textcolor{preprocessor}{}\textcolor{comment}{/*}
+\textcolor{comment}{    #if DATALOGGER\_LOG\_CALIBRATED\_IMU}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "imu\_accelerometer\_x\_ms2", "ms2",
+       1, 1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "imu\_accelerometer\_y\_ms2", "ms2",
+       1, 1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "imu\_accelerometer\_z\_ms2", "ms2",
+       1, 1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "imu\_magnetometer\_x\_uT", "uT", 1,
+       1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "imu\_magnetometer\_y\_uT", "uT", 1,
+       1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "imu\_magnetometer\_z\_uT", "uT", 1,
+       1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "imu\_gyrometer\_x\_rads", "rads",
+       1, 1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "imu\_gyrometer\_y\_rads", "rads",
+       1, 1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "imu\_gyrometer\_z\_rads", "rads",
+       1, 1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger,
+       "imu\_calibrated\_valid\_accelerometer\_data", "", 1, 1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger,
+       "imu\_calibrated\_valid\_gyrometer\_data", "", 1, 1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger,
+       "imu\_calibrated\_valid\_magnetometer\_data", "", 1, 1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    #endif // DATALOGGER\_LOG\_CALIBRATED\_IMU}
+\textcolor{comment}{}
+\textcolor{comment}{}
+\textcolor{comment}{}
+\textcolor{comment}{    #if DATALOGGER\_LOG\_LOCAL\_COORDINATE\_SYSTEM}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "initial\_altitude", "m", 1, 1,
+       1);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "initial\_latitude", "radians", 1,
+       1, 1);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "initial\_longitude", "radians",
+       1, 1, 1);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "initial\_ecef\_x", "m", 1, 1, 1);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "initial\_ecef\_y", "m", 1, 1, 1);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "initial\_ecef\_z", "m", 1, 1, 1);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "rotation\_matrix", "matrix", 3,
+       3, 1);}
+\textcolor{comment}{    #endif // DATALOGGER\_LOG\_LOCAL\_COORDINATE\_SYSTEM}
+\textcolor{comment}{}
+\textcolor{comment}{    #if DATALOGGER\_LOG\_LOCAL\_FIELDS}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "local\_magnetic", "field", 3, 1,
+       1);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "local\_gravity", "field", 3, 1,
+       1);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "magnetic\_magnitude", "uT", 1, 1,
+       1);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "gravity\_magnitude", "ms2", 1, 1,
+       1);}
+\textcolor{comment}{    #endif // DATALOGGER\_LOG\_LOCAL\_FIELDS}
+\textcolor{comment}{}
+\textcolor{comment}{    #if DATALOGGER\_LOG\_ESTIMATOR}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "estimated\_roll\_angle\_radians",
+       "radians", 1, 1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "estimated\_pitch\_angle\_radians",
+       "radians", 1, 1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "estimated\_yaw\_angle\_radians",
+       "radians", 1, 1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "estimated\_q0", "quaternion", 1,
+       1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "estimated\_q1", "quaternion", 1,
+       1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "estimated\_q2", "quaternion", 1,
+       1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "estimated\_q3", "quaternion", 1,
+       1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "estimated\_x\_position\_meters",
+       "meters", 1, 1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "estimated\_y\_position\_meters",
+       "meters", 1, 1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "estimated\_z\_position\_meters",
+       "meters", 1, 1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger,
+       "estimated\_x\_velocity\_meters\_second", "meters", 1, 1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger,
+       "estimated\_y\_velocity\_meters\_second", "meters", 1, 1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger,
+       "estimated\_z\_velocity\_meters\_second", "meters", 1, 1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    #endif // DATALOGGER\_LOG\_ESTIMATOR}
+\textcolor{comment}{}
+\textcolor{comment}{    #if DATALOGGER\_LOG\_CONTROLLERS}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger,
+       "control\_roll\_angle\_trim\_radians", "radians", 1, 1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger,
+       "control\_pitch\_angle\_trim\_radians", "radians", 1, 1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "control\_yaw\_angle\_trim\_radians",
+       "radians", 1, 1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "control\_left\_aileron\_trim",
+       "us", 1, 1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "control\_right\_aileron\_trim",
+       "us", 1, 1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "control\_elevator\_trim", "us", 1,
+       1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "control\_rudder\_trim", "us", 1,
+       1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger,
+       "control\_roll\_angle\_reference\_radians", "radians", 1, 1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger,
+       "control\_pitch\_angle\_reference\_radians", "radians", 1, 1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger,
+       "control\_yaw\_angle\_reference\_radians", "radians", 1, 1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    #endif // DATALOGGER\_LOG\_CONTROLLERS}
+\textcolor{comment}{*/}
+    \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8c_a35e8fbe04b90452afdc3c1be16ff6187}{datalogger\_initialized} = \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8h_a684c343d340004b77ca2b782934c96ca}{DATALOGGER\_INITIALIZED}
+      ;
+    \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8c_a85453211c0c809083c36cc56b275aeeb}{datalogger\_unlock\_mutex}();
+\textcolor{preprocessor}{    #endif //DATALOGGER\_MODULE\_ENABLED}
+\textcolor{preprocessor}{}
+    \textcolor{keywordflow}{return} \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8h_abddebaf71d26d40183fccbb1a766b983}{DATALOGGER\_SUCCESS};
+\}
+\end{DoxyCode}
+\hypertarget{datalogger_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a54b06d9395b2e370a5a72beb7f9524b2}{\index{datalogger (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c@{datalogger (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c}!datalogger\-\_\-lock\-\_\-mutex@{datalogger\-\_\-lock\-\_\-mutex}}
+\index{datalogger\-\_\-lock\-\_\-mutex@{datalogger\-\_\-lock\-\_\-mutex}!datalogger (Cópia em conflito de André Carvalho 2013-04-26).c@{datalogger (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c}}
+\subsubsection[{datalogger\-\_\-lock\-\_\-mutex}]{\setlength{\rightskip}{0pt plus 5cm}int datalogger\-\_\-lock\-\_\-mutex (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{datalogger_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a54b06d9395b2e370a5a72beb7f9524b2}
+
+
+Definition at line 599 of file datalogger (\-Caio-\/\-P\-C's conflicted copy 2012-\/11-\/23).\-c.
+
+
+
+References datalogger\-\_\-mutex, and D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S.
+
+
+
+Referenced by datalogger\-\_\-close(), datalogger\-\_\-init(), datalogger\-\_\-set\-\_\-initial\-\_\-filter\-\_\-parameters(), datalogger\-\_\-set\-\_\-local\-\_\-coordinate\-\_\-system(), datalogger\-\_\-set\-\_\-local\-\_\-fields(), datalogger\-\_\-set\-\_\-\-Ts(), datalogger\-\_\-start(), datalogger\-\_\-status(), datalogger\-\_\-stop(), datalogger\-\_\-update(), datalogger\-\_\-update\-\_\-\-I\-P\-C(), and datalogger\-\_\-write\-\_\-file().
+
+
+\begin{DoxyCode}
+\{
+\textcolor{preprocessor}{        #if ANU\_COMPILE\_FOR\_XENOMAI}
+\textcolor{preprocessor}{}        rt\_mutex\_acquire(&\hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8c_a824d6f7fd1d3898ba0b1100ba37875c6}{datalogger\_mutex},TM\_INFINITE);
+\textcolor{preprocessor}{        #else}
+\textcolor{preprocessor}{}        pthread\_mutex\_lock(&\hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8c_a824d6f7fd1d3898ba0b1100ba37875c6}{datalogger\_mutex});
+\textcolor{preprocessor}{        #endif}
+\textcolor{preprocessor}{}        \textcolor{keywordflow}{return} \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8h_abddebaf71d26d40183fccbb1a766b983}{DATALOGGER\_SUCCESS};
+\}
+\end{DoxyCode}
+\hypertarget{datalogger_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a85453211c0c809083c36cc56b275aeeb}{\index{datalogger (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c@{datalogger (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c}!datalogger\-\_\-unlock\-\_\-mutex@{datalogger\-\_\-unlock\-\_\-mutex}}
+\index{datalogger\-\_\-unlock\-\_\-mutex@{datalogger\-\_\-unlock\-\_\-mutex}!datalogger (Cópia em conflito de André Carvalho 2013-04-26).c@{datalogger (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c}}
+\subsubsection[{datalogger\-\_\-unlock\-\_\-mutex}]{\setlength{\rightskip}{0pt plus 5cm}int datalogger\-\_\-unlock\-\_\-mutex (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{datalogger_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a85453211c0c809083c36cc56b275aeeb}
+
+
+Definition at line 609 of file datalogger (\-Caio-\/\-P\-C's conflicted copy 2012-\/11-\/23).\-c.
+
+
+
+References datalogger\-\_\-mutex, and D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S.
+
+
+
+Referenced by datalogger\-\_\-close(), datalogger\-\_\-init(), datalogger\-\_\-set\-\_\-initial\-\_\-filter\-\_\-parameters(), datalogger\-\_\-set\-\_\-local\-\_\-coordinate\-\_\-system(), datalogger\-\_\-set\-\_\-local\-\_\-fields(), datalogger\-\_\-set\-\_\-\-Ts(), datalogger\-\_\-start(), datalogger\-\_\-status(), datalogger\-\_\-stop(), datalogger\-\_\-update(), datalogger\-\_\-update\-\_\-\-I\-P\-C(), and datalogger\-\_\-write\-\_\-file().
+
+
+\begin{DoxyCode}
+\{
+\textcolor{preprocessor}{        #if ANU\_COMPILE\_FOR\_XENOMAI}
+\textcolor{preprocessor}{}        rt\_mutex\_release(&\hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8c_a824d6f7fd1d3898ba0b1100ba37875c6}{datalogger\_mutex});
+\textcolor{preprocessor}{        #else}
+\textcolor{preprocessor}{}        pthread\_mutex\_unlock(&\hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8c_a824d6f7fd1d3898ba0b1100ba37875c6}{datalogger\_mutex});
+\textcolor{preprocessor}{        #endif}
+\textcolor{preprocessor}{}        \textcolor{keywordflow}{return} \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8h_abddebaf71d26d40183fccbb1a766b983}{DATALOGGER\_SUCCESS};
+\}
+\end{DoxyCode}
+\hypertarget{datalogger_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_ad7096326080dae8d80f5842297768fd8}{\index{datalogger (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c@{datalogger (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c}!datalogger\-\_\-update@{datalogger\-\_\-update}}
+\index{datalogger\-\_\-update@{datalogger\-\_\-update}!datalogger (Cópia em conflito de André Carvalho 2013-04-26).c@{datalogger (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c}}
+\subsubsection[{datalogger\-\_\-update}]{\setlength{\rightskip}{0pt plus 5cm}int datalogger\-\_\-update (
+\begin{DoxyParamCaption}
+\item[{double}]{t\-\_\-s, }
+\item[{double}]{t\-\_\-control\-\_\-exec\-\_\-s, }
+\item[{double}]{t\-\_\-ui\-\_\-exec\-\_\-s, }
+\item[{double}]{t0\-\_\-s, }
+\item[{{\bf I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$}]{pimu\-\_\-data, }
+\item[{{\bf E\-F\-F\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$}]{peff\-\_\-data}
+\end{DoxyParamCaption}
+)}}\label{datalogger_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_ad7096326080dae8d80f5842297768fd8}
+
+
+Definition at line 261 of file datalogger (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c.
+
+
+
+References I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::acc, D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-E\-R\-R\-O\-R\-\_\-\-N\-O\-T\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-D, datalogger\-\_\-initialized, D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-D, datalogger\-\_\-lock\-\_\-mutex(), D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S, datalogger\-\_\-unlock\-\_\-mutex(), E\-F\-F\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::\-F, g\-Data\-Logger\-\_\-\-Insert\-Variable(), I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::gyr, I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::mag, I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::new\-\_\-data, E\-F\-F\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::new\-\_\-data, D\-A\-T\-A\-\_\-\-X\-Y\-Z\-::x, D\-A\-T\-A\-\_\-\-X\-Y\-Z\-::y, and D\-A\-T\-A\-\_\-\-X\-Y\-Z\-::z.
+
+\hypertarget{datalogger_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a25bb814a0877f419ae09b08cd7e91ee9}{\index{datalogger (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c@{datalogger (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c}!datalogger\-\_\-update\-\_\-\-I\-P\-C@{datalogger\-\_\-update\-\_\-\-I\-P\-C}}
+\index{datalogger\-\_\-update\-\_\-\-I\-P\-C@{datalogger\-\_\-update\-\_\-\-I\-P\-C}!datalogger (Cópia em conflito de André Carvalho 2013-04-26).c@{datalogger (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c}}
+\subsubsection[{datalogger\-\_\-update\-\_\-\-I\-P\-C}]{\setlength{\rightskip}{0pt plus 5cm}int datalogger\-\_\-update\-\_\-\-I\-P\-C (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{datalogger_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a25bb814a0877f419ae09b08cd7e91ee9}
+
+
+Definition at line 245 of file datalogger (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c.
+
+
+
+References D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-E\-R\-R\-O\-R\-\_\-\-N\-O\-T\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-D, datalogger\-\_\-initialized, D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-D, datalogger\-\_\-lock\-\_\-mutex(), D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S, datalogger\-\_\-unlock\-\_\-mutex(), and g\-Data\-Logger\-\_\-\-I\-P\-C\-Update().
+
+
+\begin{DoxyCode}
+\{
+\textcolor{preprocessor}{    #if DATALOGGER\_MODULE\_ENABLED}
+\textcolor{preprocessor}{}    \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8c_a54b06d9395b2e370a5a72beb7f9524b2}{datalogger\_lock\_mutex}();
+    \textcolor{keywordflow}{if}(\hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8c_a35e8fbe04b90452afdc3c1be16ff6187}{datalogger\_initialized} != \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8h_a684c343d340004b77ca2b782934c96ca}{DATALOGGER\_INITIALIZED}
+      )
+    \{
+        \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8c_a85453211c0c809083c36cc56b275aeeb}{datalogger\_unlock\_mutex}();
+        \textcolor{keywordflow}{return} \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8h_a60df7fe0e61b757ad6a9db106b0eb43e}{DATALOGGER\_ERROR\_NOT\_INITIALIZED}
+      ;
+    \}
+
+    \hyperlink{gdatalogger_8c_afa42a993493cf98d32da11e4279816f7}{gDataLogger\_IPCUpdate}(&\hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}); \textcolor{comment}{//
+       Manages IPC}
+    \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8c_a85453211c0c809083c36cc56b275aeeb}{datalogger\_unlock\_mutex}();
+\textcolor{preprocessor}{    #endif}
+\textcolor{preprocessor}{}    \textcolor{keywordflow}{return} \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8h_abddebaf71d26d40183fccbb1a766b983}{DATALOGGER\_SUCCESS};
+\}
+\end{DoxyCode}
+\hypertarget{datalogger_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a2aedecfce53e1935a41615ceaf378013}{\index{datalogger (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c@{datalogger (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c}!datalogger\-\_\-write\-\_\-file@{datalogger\-\_\-write\-\_\-file}}
+\index{datalogger\-\_\-write\-\_\-file@{datalogger\-\_\-write\-\_\-file}!datalogger (Cópia em conflito de André Carvalho 2013-04-26).c@{datalogger (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c}}
+\subsubsection[{datalogger\-\_\-write\-\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}int datalogger\-\_\-write\-\_\-file (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{datalogger_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a2aedecfce53e1935a41615ceaf378013}
+
+
+Definition at line 228 of file datalogger (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c.
+
+
+
+References D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-E\-R\-R\-O\-R\-\_\-\-N\-O\-T\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-D, datalogger\-\_\-initialized, D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-D, datalogger\-\_\-lock\-\_\-mutex(), D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S, datalogger\-\_\-unlock\-\_\-mutex(), and g\-Data\-Logger\-\_\-\-Matfile\-Update().
+
+
+\begin{DoxyCode}
+\{
+\textcolor{preprocessor}{    #if DATALOGGER\_MODULE\_ENABLED}
+\textcolor{preprocessor}{}    \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8c_a54b06d9395b2e370a5a72beb7f9524b2}{datalogger\_lock\_mutex}();
+    \textcolor{keywordflow}{if}(\hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8c_a35e8fbe04b90452afdc3c1be16ff6187}{datalogger\_initialized} != \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8h_a684c343d340004b77ca2b782934c96ca}{DATALOGGER\_INITIALIZED}
+      )
+    \{
+        \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8c_a85453211c0c809083c36cc56b275aeeb}{datalogger\_unlock\_mutex}();
+        \textcolor{keywordflow}{return} \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8h_a60df7fe0e61b757ad6a9db106b0eb43e}{DATALOGGER\_ERROR\_NOT\_INITIALIZED}
+      ;
+    \}
+
+    \hyperlink{gdatalogger_8c_a05dc8ce832b941280d7de26057992640}{gDataLogger\_MatfileUpdate}(&\hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger})
+      ; \textcolor{comment}{// Empty buffers in the file}
+    \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8c_a85453211c0c809083c36cc56b275aeeb}{datalogger\_unlock\_mutex}();
+\textcolor{preprocessor}{    #endif}
+\textcolor{preprocessor}{}
+    \textcolor{keywordflow}{return} \hyperlink{datalogger_01_07Caio-PC's_01conflicted_01copy_012012-11-23_08_8h_abddebaf71d26d40183fccbb1a766b983}{DATALOGGER\_SUCCESS};
+\}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\hypertarget{datalogger_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a35e8fbe04b90452afdc3c1be16ff6187}{\index{datalogger (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c@{datalogger (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c}!datalogger\-\_\-initialized@{datalogger\-\_\-initialized}}
+\index{datalogger\-\_\-initialized@{datalogger\-\_\-initialized}!datalogger (Cópia em conflito de André Carvalho 2013-04-26).c@{datalogger (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c}}
+\subsubsection[{datalogger\-\_\-initialized}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int datalogger\-\_\-initialized = {\bf D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-N\-O\-T\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-D}}}\label{datalogger_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a35e8fbe04b90452afdc3c1be16ff6187}
+
+
+Definition at line 25 of file datalogger (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c.
+
+\hypertarget{datalogger_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a824d6f7fd1d3898ba0b1100ba37875c6}{\index{datalogger (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c@{datalogger (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c}!datalogger\-\_\-mutex@{datalogger\-\_\-mutex}}
+\index{datalogger\-\_\-mutex@{datalogger\-\_\-mutex}!datalogger (Cópia em conflito de André Carvalho 2013-04-26).c@{datalogger (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c}}
+\subsubsection[{datalogger\-\_\-mutex}]{\setlength{\rightskip}{0pt plus 5cm}pthread\-\_\-mutex\-\_\-t datalogger\-\_\-mutex = P\-T\-H\-R\-E\-A\-D\-\_\-\-M\-U\-T\-E\-X\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-R}}\label{datalogger_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a824d6f7fd1d3898ba0b1100ba37875c6}
+
+
+Definition at line 30 of file datalogger (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c.
+
+\hypertarget{datalogger_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a185c3ede96449d14f330fe5ac664e799}{\index{datalogger (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c@{datalogger (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c}!datalogger\-\_\-running@{datalogger\-\_\-running}}
+\index{datalogger\-\_\-running@{datalogger\-\_\-running}!datalogger (Cópia em conflito de André Carvalho 2013-04-26).c@{datalogger (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c}}
+\subsubsection[{datalogger\-\_\-running}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int datalogger\-\_\-running = {\bf D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-N\-O\-T\-\_\-\-R\-U\-N\-N\-I\-N\-G}}}\label{datalogger_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a185c3ede96449d14f330fe5ac664e799}
+
+
+Definition at line 26 of file datalogger (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c.
+
+\hypertarget{datalogger_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{\index{datalogger (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c@{datalogger (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c}!g\-Data\-Logger@{g\-Data\-Logger}}
+\index{g\-Data\-Logger@{g\-Data\-Logger}!datalogger (Cópia em conflito de André Carvalho 2013-04-26).c@{datalogger (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c}}
+\subsubsection[{g\-Data\-Logger}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R} g\-Data\-Logger}}\label{datalogger_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_abe3b9c2c4e21e79c7b046b5986d13acc}
+
+
+Definition at line 24 of file datalogger (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c.
+

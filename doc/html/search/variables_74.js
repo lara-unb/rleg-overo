@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['t',['T',['../classCartesian__controller.html#a35c6ddbb9624878f2807ff644a33e832',1,'Cartesian_controller']]],
+  ['t0',['t0',['../main2_8c.html#a86c2efd6da48b362806cdbb5b1e711d8',1,'t0():&#160;main2.c'],['../threads__linux_8c.html#a86c2efd6da48b362806cdbb5b1e711d8',1,'t0():&#160;threads_linux.c']]],
+  ['t_5ftask_5f1_5fexec_5fglobal',['T_task_1_exec_global',['../main2_8c.html#acdaa4a9b0e1be3dfa53b52df6410ad3b',1,'T_task_1_exec_global():&#160;main2.c'],['../threads__linux_8c.html#acdaa4a9b0e1be3dfa53b52df6410ad3b',1,'T_task_1_exec_global():&#160;threads_linux.c']]],
+  ['t_5ftask_5f1_5fglobal',['t_task_1_global',['../main2_8c.html#a2a2a647912528f7aa86812528dbfe02f',1,'t_task_1_global():&#160;main2.c'],['../threads__linux_8c.html#a2a2a647912528f7aa86812528dbfe02f',1,'t_task_1_global():&#160;threads_linux.c']]],
+  ['t_5ftask_5f1_5fmax_5fglobal',['T_task_1_max_global',['../main2_8c.html#aa714e30d738039b5bf665742beb31739',1,'T_task_1_max_global():&#160;main2.c'],['../threads__linux_8c.html#aa714e30d738039b5bf665742beb31739',1,'T_task_1_max_global():&#160;threads_linux.c']]],
+  ['t_5ftask_5f1_5fmean_5fglobal',['T_task_1_mean_global',['../main2_8c.html#a738c330c86a365e72ce29ebca3f1e572',1,'T_task_1_mean_global():&#160;main2.c'],['../threads__linux_8c.html#a738c330c86a365e72ce29ebca3f1e572',1,'T_task_1_mean_global():&#160;threads_linux.c']]],
+  ['t_5ftask_5f1_5fmin_5fglobal',['T_task_1_min_global',['../main2_8c.html#a86222e255aeeb47598a4fc91ab6c2b1a',1,'T_task_1_min_global():&#160;main2.c'],['../threads__linux_8c.html#a86222e255aeeb47598a4fc91ab6c2b1a',1,'T_task_1_min_global():&#160;threads_linux.c']]],
+  ['t_5ftask_5f2_5fexec_5fglobal',['T_task_2_exec_global',['../main2_8c.html#a9629c77cd3dba9d47d15c2e51bdde09d',1,'T_task_2_exec_global():&#160;main2.c'],['../threads__linux_8c.html#a9629c77cd3dba9d47d15c2e51bdde09d',1,'T_task_2_exec_global():&#160;threads_linux.c']]],
+  ['t_5ftask_5f2_5fglobal',['t_task_2_global',['../main2_8c.html#a08f794ff34d918d3d34d771e11e4aba3',1,'t_task_2_global():&#160;main2.c'],['../threads__linux_8c.html#a08f794ff34d918d3d34d771e11e4aba3',1,'t_task_2_global():&#160;threads_linux.c']]],
+  ['t_5ftask_5f2_5fmax_5fglobal',['T_task_2_max_global',['../main2_8c.html#a1cd82006c46f46176730e876d272cc14',1,'T_task_2_max_global():&#160;main2.c'],['../threads__linux_8c.html#a1cd82006c46f46176730e876d272cc14',1,'T_task_2_max_global():&#160;threads_linux.c']]],
+  ['t_5ftask_5f2_5fmean_5fglobal',['T_task_2_mean_global',['../main2_8c.html#af4e19d5a9b24aa56c8ebff6ad1aa2b95',1,'T_task_2_mean_global():&#160;main2.c'],['../threads__linux_8c.html#af4e19d5a9b24aa56c8ebff6ad1aa2b95',1,'T_task_2_mean_global():&#160;threads_linux.c']]],
+  ['t_5ftask_5f2_5fmin_5fglobal',['T_task_2_min_global',['../main2_8c.html#ab7712cb13ce6206dd138a51e2053e36c',1,'T_task_2_min_global():&#160;main2.c'],['../threads__linux_8c.html#ab7712cb13ce6206dd138a51e2053e36c',1,'T_task_2_min_global():&#160;threads_linux.c']]],
+  ['task_5f1_5fperiod_5fus',['task_1_period_us',['../main2_8c.html#afffc21b0b726e6f4a572d0eefd3b5d69',1,'task_1_period_us():&#160;main2.c'],['../threads__linux_8c.html#afffc21b0b726e6f4a572d0eefd3b5d69',1,'task_1_period_us():&#160;threads_linux.c']]],
+  ['task_5f2_5fperiod_5fus',['task_2_period_us',['../main2_8c.html#a5166d431d5448a1538e75f5469c19c7b',1,'task_2_period_us():&#160;main2.c'],['../threads__linux_8c.html#a5166d431d5448a1538e75f5469c19c7b',1,'task_2_period_us():&#160;threads_linux.c']]],
+  ['telemetry_5fmode',['telemetry_mode',['../main2_8c.html#a5045187bb0afe92c41ce73bc602fd3ca',1,'telemetry_mode():&#160;main2.c'],['../threads__linux_8c.html#a5045187bb0afe92c41ce73bc602fd3ca',1,'telemetry_mode():&#160;threads_linux.c'],['../ui_8c.html#a5045187bb0afe92c41ce73bc602fd3ca',1,'telemetry_mode():&#160;main2.c']]],
+  ['temp',['temp',['../structIMU__DATA__STRUCT.html#a81e1dbf765c1d947ca6076aa1bbc73e7',1,'IMU_DATA_STRUCT']]],
+  ['theta',['theta',['../structLink.html#a88e705bc7fb6c7c8c7fa6987b52667d6',1,'Link']]],
+  ['thetas',['Thetas',['../classCartesian__controller.html#a0a0f818dad601cd9e3e26cb6959b8eb6',1,'Cartesian_controller']]],
+  ['timer_5ftask_5f1',['timer_task_1',['../main2_8c.html#a904a157c5d5f94416cd450f511635af1',1,'timer_task_1():&#160;main2.c'],['../threads__linux_8c.html#a904a157c5d5f94416cd450f511635af1',1,'timer_task_1():&#160;threads_linux.c']]],
+  ['timer_5ftask_5f2',['timer_task_2',['../main2_8c.html#adf6e8e22925f399f086dea8671f39c08',1,'timer_task_2():&#160;main2.c'],['../threads__linux_8c.html#adf6e8e22925f399f086dea8671f39c08',1,'timer_task_2():&#160;threads_linux.c']]],
+  ['total',['total',['../main2_8c.html#ac7af894858cf396a219d632f40afdc8d',1,'total():&#160;main2.c'],['../threads__linux_8c.html#ac7af894858cf396a219d632f40afdc8d',1,'total():&#160;threads_linux.c']]],
+  ['type',['type',['../structMATLAB__DATAHEAD.html#ad3587e58da5ca6cbe3cd98d5e2f46202',1,'MATLAB_DATAHEAD::type()'],['../structGMATRIX__MATLAB__DATAHEAD.html#a20df828adf57355259f96b10f8f7a1ab',1,'GMATRIX_MATLAB_DATAHEAD::type()']]]
+];

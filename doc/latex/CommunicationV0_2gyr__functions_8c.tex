@@ -1,0 +1,17 @@
+\hypertarget{CommunicationV0_2gyr__functions_8c}{\section{Communication\-V0/gyr\-\_\-functions.c File Reference}
+\label{CommunicationV0_2gyr__functions_8c}\index{Communication\-V0/gyr\-\_\-functions.\-c@{Communication\-V0/gyr\-\_\-functions.\-c}}
+}
+{\ttfamily \#include \char`\"{}imu\-\_\-functions.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{group__gyr_ga3eba167b8ab0614bfe7bafeae8b5570d}{gyr\-\_\-write\-\_\-reg} (int \hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\-\_\-dev}, uint8\-\_\-t reg, uint8\-\_\-t data)
+\begin{DoxyCompactList}\small\item\em W\-R\-I\-T\-E T\-O R\-E\-G\-I\-S\-T\-E\-R. \end{DoxyCompactList}\item 
+uint8\-\_\-t $\ast$ \hyperlink{group__gyr_gad817a3b69d4c3026b7a9b6de32753e7b}{gyr\-\_\-read\-\_\-reg} (int \hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\-\_\-dev}, uint8\-\_\-t reg, uint8\-\_\-t count)
+\begin{DoxyCompactList}\small\item\em R\-E\-A\-D C\-O\-U\-N\-T 8-\/\-B\-I\-T R\-E\-G\-I\-S\-T\-E\-R I\-N S\-E\-Q\-U\-E\-N\-C\-E. \end{DoxyCompactList}\item 
+int \hyperlink{group__gyr_ga6d02be352b4491a236c9695a6a24d174}{gyr\-\_\-init} (int \hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\-\_\-dev}, float rate, short int lpf\-\_\-bw, char clk\-\_\-source, char $\ast$act)
+\begin{DoxyCompactList}\small\item\em I\-N\-I\-T\-I\-A\-L\-I\-Z\-E G\-Y\-R\-O\-M\-E\-T\-E\-R. \end{DoxyCompactList}\item 
+uint8\-\_\-t \hyperlink{group__gyr_ga79875465c3a29fd9ec77308c80a8bc37}{gyr\-\_\-read\-\_\-all\-\_\-data} (int \hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\-\_\-dev}, short int $\ast$data)
+\begin{DoxyCompactList}\small\item\em R\-E\-A\-D A\-L\-L D\-A\-T\-A A\-T O\-N\-C\-E (X, Y, Z and T) \end{DoxyCompactList}\item 
+short int \hyperlink{group__gyr_ga271b37e9ace81b18bb2f83787247d262}{gyr\-\_\-read\-\_\-data} (int \hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\-\_\-dev}, int type)
+\begin{DoxyCompactList}\small\item\em R\-E\-A\-D D\-A\-T\-A (X, Y, Z or T) \end{DoxyCompactList}\end{DoxyCompactItemize}

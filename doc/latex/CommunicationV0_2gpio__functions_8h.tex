@@ -1,0 +1,151 @@
+\hypertarget{CommunicationV0_2gpio__functions_8h}{\section{Communication\-V0/gpio\-\_\-functions.h File Reference}
+\label{CommunicationV0_2gpio__functions_8h}\index{Communication\-V0/gpio\-\_\-functions.\-h@{Communication\-V0/gpio\-\_\-functions.\-h}}
+}
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include $<$stdint.\-h$>$}\\*
+{\ttfamily \#include $<$sys/types.\-h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{CommunicationV0_2gpio__functions_8h_ae18413a0edf151e47a7aa6be21c5144a}{gpio\-\_\-read} (uint8\-\_\-t gpio)
+\item 
+int \hyperlink{CommunicationV0_2gpio__functions_8h_a9672ca43e65fa527cd6bf43db9aea594}{gpio\-\_\-write} (uint8\-\_\-t gpio, uint8\-\_\-t value)
+\item 
+int \hyperlink{CommunicationV0_2gpio__functions_8h_a95e72f46197cf1c0d985f760c7c4b35a}{gpio\-\_\-f\-\_\-write} (uint8\-\_\-t gpio, uint8\-\_\-t value)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{CommunicationV0_2gpio__functions_8h_a95e72f46197cf1c0d985f760c7c4b35a}{\index{Communication\-V0/gpio\-\_\-functions.\-h@{Communication\-V0/gpio\-\_\-functions.\-h}!gpio\-\_\-f\-\_\-write@{gpio\-\_\-f\-\_\-write}}
+\index{gpio\-\_\-f\-\_\-write@{gpio\-\_\-f\-\_\-write}!CommunicationV0/gpio_functions.h@{Communication\-V0/gpio\-\_\-functions.\-h}}
+\subsubsection[{gpio\-\_\-f\-\_\-write}]{\setlength{\rightskip}{0pt plus 5cm}int gpio\-\_\-f\-\_\-write (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{gpio, }
+\item[{uint8\-\_\-t}]{value}
+\end{DoxyParamCaption}
+)}}\label{CommunicationV0_2gpio__functions_8h_a95e72f46197cf1c0d985f760c7c4b35a}
+
+
+Definition at line 61 of file gpio\-\_\-functions.\-c.
+
+
+
+References S\-U\-C\-C\-E\-S\-S.
+
+
+\begin{DoxyCode}
+\{
+  FILE *fp\_gpio;
+  \textcolor{keywordtype}{char} path[30];
+  \textcolor{keywordtype}{char} fp\_value;
+  
+  sprintf(path,\textcolor{stringliteral}{"/sys/class/gpio/gpio%d/value"},gpio);
+  fp\_gpio=fopen(path,\textcolor{stringliteral}{"w"});
+  rewind(fp\_gpio);
+  fp\_value=0x30+value;
+  fwrite(&fp\_value, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}), 1, fp\_gpio);
+  fclose(fp\_gpio);
+  \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};
+\}
+\end{DoxyCode}
+\hypertarget{CommunicationV0_2gpio__functions_8h_ae18413a0edf151e47a7aa6be21c5144a}{\index{Communication\-V0/gpio\-\_\-functions.\-h@{Communication\-V0/gpio\-\_\-functions.\-h}!gpio\-\_\-read@{gpio\-\_\-read}}
+\index{gpio\-\_\-read@{gpio\-\_\-read}!CommunicationV0/gpio_functions.h@{Communication\-V0/gpio\-\_\-functions.\-h}}
+\subsubsection[{gpio\-\_\-read}]{\setlength{\rightskip}{0pt plus 5cm}int gpio\-\_\-read (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{gpio}
+\end{DoxyParamCaption}
+)}}\label{CommunicationV0_2gpio__functions_8h_ae18413a0edf151e47a7aa6be21c5144a}
+
+
+Definition at line 3 of file gpio\-\_\-functions.\-c.
+
+
+
+References F\-A\-I\-L\-U\-R\-E.
+
+
+
+Referenced by dac\-\_\-shut\-\_\-down().
+
+
+\begin{DoxyCode}
+\{
+  FILE *fp\_gpio=NULL;
+  \textcolor{keywordtype}{char} path[30];
+  \textcolor{keywordtype}{char} fp\_value;
+
+  sprintf(path,\textcolor{stringliteral}{"/sys/class/gpio/gpio%d/value"},gpio);
+  \textcolor{keywordflow}{if}( (fp\_gpio=fopen(path,\textcolor{stringliteral}{"rb+"})) == NULL )
+  \{
+    \textcolor{comment}{//printf("Open %s failed\(\backslash\)n",path);}
+    \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
+  \}
+  rewind(fp\_gpio);
+  fread(&fp\_value, 1, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}), fp\_gpio);
+  fclose(fp\_gpio);
+  \textcolor{keywordflow}{return} (uint8\_t)fp\_value-0x30;  
+\}
+\end{DoxyCode}
+\hypertarget{CommunicationV0_2gpio__functions_8h_a9672ca43e65fa527cd6bf43db9aea594}{\index{Communication\-V0/gpio\-\_\-functions.\-h@{Communication\-V0/gpio\-\_\-functions.\-h}!gpio\-\_\-write@{gpio\-\_\-write}}
+\index{gpio\-\_\-write@{gpio\-\_\-write}!CommunicationV0/gpio_functions.h@{Communication\-V0/gpio\-\_\-functions.\-h}}
+\subsubsection[{gpio\-\_\-write}]{\setlength{\rightskip}{0pt plus 5cm}int gpio\-\_\-write (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{gpio, }
+\item[{uint8\-\_\-t}]{value}
+\end{DoxyParamCaption}
+)}}\label{CommunicationV0_2gpio__functions_8h_a9672ca43e65fa527cd6bf43db9aea594}
+
+
+Definition at line 21 of file gpio\-\_\-functions.\-c.
+
+
+
+References F\-A\-I\-L\-U\-R\-E, and S\-U\-C\-C\-E\-S\-S.
+
+
+
+Referenced by actuate(), dac\-\_\-shut\-\_\-down(), and read\-\_\-all\-\_\-data().
+
+
+\begin{DoxyCode}
+\{
+  FILE *fp\_gpio;
+  \textcolor{keywordtype}{char} path[30];
+  \textcolor{keywordtype}{char} fp\_read[4];
+  \textcolor{keywordtype}{char} s\_out[]=\textcolor{stringliteral}{"out"};
+  \textcolor{keywordtype}{char} fp\_write;
+
+\textcolor{comment}{// Verifying if GPIO is set as Output}
+  sprintf(path,\textcolor{stringliteral}{"/sys/class/gpio/gpio%d/direction"},gpio);
+
+  \textcolor{keywordflow}{if}( (fp\_gpio=fopen(path,\textcolor{stringliteral}{"r"})) == NULL )
+  \{
+    \textcolor{comment}{//printf("Open %s failed\(\backslash\)n",path);}
+    \textcolor{keywordflow}{return} -1;
+  \}
+  rewind(fp\_gpio);
+  fread(fp\_read, 3, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}), fp\_gpio);
+  \textcolor{keywordflow}{if}( strncmp(fp\_read,s\_out,3 ) )
+  \{
+    \textcolor{comment}{//printf("Gpio%d is set as Input. Impossible to write.",gpio);}
+    \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
+  \}
+  fclose(fp\_gpio);
+
+\textcolor{comment}{// Writing}
+  sprintf(path,\textcolor{stringliteral}{"/sys/class/gpio/gpio%d/value"},gpio);
+  
+  \textcolor{keywordflow}{if}( (fp\_gpio=fopen(path,\textcolor{stringliteral}{"w"})) == NULL )
+  \{
+    \textcolor{comment}{//printf("Open %s failed\(\backslash\)n",path);}
+    \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
+  \}
+  rewind(fp\_gpio);
+  fp\_write=0x30+value;
+  fwrite(&fp\_write, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}), 1, fp\_gpio);
+  fclose(fp\_gpio);
+  \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};
+\}
+\end{DoxyCode}

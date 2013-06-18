@@ -1,0 +1,138 @@
+\hypertarget{CommunicationV0_2gpio__functions_8c}{\section{Communication\-V0/gpio\-\_\-functions.c File Reference}
+\label{CommunicationV0_2gpio__functions_8c}\index{Communication\-V0/gpio\-\_\-functions.\-c@{Communication\-V0/gpio\-\_\-functions.\-c}}
+}
+{\ttfamily \#include \char`\"{}gpio\-\_\-functions.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{CommunicationV0_2gpio__functions_8c_ae18413a0edf151e47a7aa6be21c5144a}{gpio\-\_\-read} (uint8\-\_\-t gpio)
+\item 
+int \hyperlink{CommunicationV0_2gpio__functions_8c_a9672ca43e65fa527cd6bf43db9aea594}{gpio\-\_\-write} (uint8\-\_\-t gpio, uint8\-\_\-t value)
+\item 
+int \hyperlink{CommunicationV0_2gpio__functions_8c_a95e72f46197cf1c0d985f760c7c4b35a}{gpio\-\_\-f\-\_\-write} (uint8\-\_\-t gpio, uint8\-\_\-t value)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{CommunicationV0_2gpio__functions_8c_a95e72f46197cf1c0d985f760c7c4b35a}{\index{Communication\-V0/gpio\-\_\-functions.\-c@{Communication\-V0/gpio\-\_\-functions.\-c}!gpio\-\_\-f\-\_\-write@{gpio\-\_\-f\-\_\-write}}
+\index{gpio\-\_\-f\-\_\-write@{gpio\-\_\-f\-\_\-write}!CommunicationV0/gpio_functions.c@{Communication\-V0/gpio\-\_\-functions.\-c}}
+\subsubsection[{gpio\-\_\-f\-\_\-write}]{\setlength{\rightskip}{0pt plus 5cm}int gpio\-\_\-f\-\_\-write (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{gpio, }
+\item[{uint8\-\_\-t}]{value}
+\end{DoxyParamCaption}
+)}}\label{CommunicationV0_2gpio__functions_8c_a95e72f46197cf1c0d985f760c7c4b35a}
+
+
+Definition at line 60 of file gpio\-\_\-functions.\-c.
+
+
+
+References S\-U\-C\-C\-E\-S\-S.
+
+
+\begin{DoxyCode}
+\{
+  FILE *fp\_gpio;
+  \textcolor{keywordtype}{char} path[30];
+  \textcolor{keywordtype}{char} fp\_value;
+  
+  sprintf(path,\textcolor{stringliteral}{"/sys/class/gpio/gpio%d/value"},gpio);
+  fp\_gpio=fopen(path,\textcolor{stringliteral}{"w"});
+  rewind(fp\_gpio);
+  fp\_value=0x30+value;
+  fwrite(&fp\_value, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}), 1, fp\_gpio);
+  fclose(fp\_gpio);
+  \textcolor{keywordflow}{return} 1;
+\}
+\end{DoxyCode}
+\hypertarget{CommunicationV0_2gpio__functions_8c_ae18413a0edf151e47a7aa6be21c5144a}{\index{Communication\-V0/gpio\-\_\-functions.\-c@{Communication\-V0/gpio\-\_\-functions.\-c}!gpio\-\_\-read@{gpio\-\_\-read}}
+\index{gpio\-\_\-read@{gpio\-\_\-read}!CommunicationV0/gpio_functions.c@{Communication\-V0/gpio\-\_\-functions.\-c}}
+\subsubsection[{gpio\-\_\-read}]{\setlength{\rightskip}{0pt plus 5cm}int gpio\-\_\-read (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{gpio}
+\end{DoxyParamCaption}
+)}}\label{CommunicationV0_2gpio__functions_8c_ae18413a0edf151e47a7aa6be21c5144a}
+
+
+Definition at line 3 of file gpio\-\_\-functions.\-c.
+
+
+
+References F\-A\-I\-L\-U\-R\-E.
+
+
+\begin{DoxyCode}
+\{
+  FILE *fp\_gpio=NULL;
+  \textcolor{keywordtype}{char} path[30];
+  \textcolor{keywordtype}{char} fp\_value;
+
+  sprintf(path,\textcolor{stringliteral}{"/sys/class/gpio/gpio%d/value"},gpio);
+  \textcolor{keywordflow}{if}( (fp\_gpio=fopen(path,\textcolor{stringliteral}{"rb+"})) == NULL )
+  \{
+    printf(\textcolor{stringliteral}{"Open %s failed\(\backslash\)n"},path);
+    \textcolor{keywordflow}{return} -1;
+  \}
+  rewind(fp\_gpio);
+  fread(&fp\_value, 1, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}), fp\_gpio);
+  fclose(fp\_gpio);
+  \textcolor{keywordflow}{return} (uint8\_t)fp\_value-0x30;  
+\}
+\end{DoxyCode}
+\hypertarget{CommunicationV0_2gpio__functions_8c_a9672ca43e65fa527cd6bf43db9aea594}{\index{Communication\-V0/gpio\-\_\-functions.\-c@{Communication\-V0/gpio\-\_\-functions.\-c}!gpio\-\_\-write@{gpio\-\_\-write}}
+\index{gpio\-\_\-write@{gpio\-\_\-write}!CommunicationV0/gpio_functions.c@{Communication\-V0/gpio\-\_\-functions.\-c}}
+\subsubsection[{gpio\-\_\-write}]{\setlength{\rightskip}{0pt plus 5cm}int gpio\-\_\-write (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{gpio, }
+\item[{uint8\-\_\-t}]{value}
+\end{DoxyParamCaption}
+)}}\label{CommunicationV0_2gpio__functions_8c_a9672ca43e65fa527cd6bf43db9aea594}
+
+
+Definition at line 21 of file gpio\-\_\-functions.\-c.
+
+
+
+References F\-A\-I\-L\-U\-R\-E, and S\-U\-C\-C\-E\-S\-S.
+
+
+\begin{DoxyCode}
+\{
+  FILE *fp\_gpio;
+  \textcolor{keywordtype}{char} path[30];
+  \textcolor{keywordtype}{char} fp\_read[4];
+  \textcolor{keywordtype}{char} fp\_write;
+
+\textcolor{comment}{// Verifying if GPIO is set as Output}
+  sprintf(path,\textcolor{stringliteral}{"/sys/class/gpio/gpio%d/direction"},gpio);
+
+  \textcolor{keywordflow}{if}( (fp\_gpio=fopen(path,\textcolor{stringliteral}{"r"})) == NULL )
+  \{
+    printf(\textcolor{stringliteral}{"Open %s failed\(\backslash\)n"},path);
+    \textcolor{keywordflow}{return} -1;
+  \}
+  rewind(fp\_gpio);
+  fread(fp\_read, 3, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}), fp\_gpio);
+  \textcolor{keywordflow}{if}( strcmp(fp\_read,\textcolor{stringliteral}{"out"} ) )
+  \{
+    printf(\textcolor{stringliteral}{"Gpio%d is set as Input. Impossible to write."},gpio);
+    \textcolor{keywordflow}{return} -2;
+  \}
+  fclose(fp\_gpio);
+
+\textcolor{comment}{// Writing}
+  sprintf(path,\textcolor{stringliteral}{"/sys/class/gpio/gpio%d/value"},gpio);
+  
+  \textcolor{keywordflow}{if}( (fp\_gpio=fopen(path,\textcolor{stringliteral}{"w"})) == NULL )
+  \{
+    printf(\textcolor{stringliteral}{"Open %s failed\(\backslash\)n"},path);
+    \textcolor{keywordflow}{return} -1;
+  \}
+  rewind(fp\_gpio);
+  fp\_write=0x30+value;
+  fwrite(&fp\_write, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}), 1, fp\_gpio);
+  fclose(fp\_gpio);
+  \textcolor{keywordflow}{return} 1;
+\}
+\end{DoxyCode}

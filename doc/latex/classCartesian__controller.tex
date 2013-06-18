@@ -1,0 +1,1011 @@
+\hypertarget{classCartesian__controller}{\section{Cartesian\-\_\-controller Class Reference}
+\label{classCartesian__controller}\index{Cartesian\-\_\-controller@{Cartesian\-\_\-controller}}
+}
+
+
+{\ttfamily \#include \char`\"{}cartesian\-\_\-controller.\-h\char`\"{}}
+
+Inheritance diagram for Cartesian\-\_\-controller\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classCartesian__controller}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCartesian__controller_a71055bb1cbf01ced9e64bb1d184b68fe}{Cartesian\-\_\-controller} (\hyperlink{structRobot}{Robot} $\ast$\hyperlink{classCartesian__controller_a5562129951bd802e4ded77fc716c87a0}{r}, int ref\-Size, double K\-P\mbox{[}$\,$\mbox{]}, double K\-I\mbox{[}$\,$\mbox{]}, double K\-D\mbox{[}$\,$\mbox{]}, double \hyperlink{classCartesian__controller_a35c6ddbb9624878f2807ff644a33e832}{T})
+\item 
+\hyperlink{classCartesian__controller_ac29863d92d56a5998ba39ddb58f4a09e}{$\sim$\-Cartesian\-\_\-controller} ()
+\item 
+virtual void \hyperlink{classCartesian__controller_a8809167cab6d338a957439141fa2bf6c}{control} ()=0
+\end{DoxyCompactItemize}
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structRobot}{Robot} $\ast$ \hyperlink{classCartesian__controller_a5562129951bd802e4ded77fc716c87a0}{r}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classCartesian__controller_aaf006f80e89c08cf040956afbb4cf3c0}{change\-Schunk\-Mode} (int mode)
+\begin{DoxyCompactList}\small\item\em Other packages. \end{DoxyCompactList}\item 
+bool \hyperlink{classCartesian__controller_a0d7a63bac84715f6742db738df246f91}{get\-Schunk\-Positions\-And\-Velocities\-And\-Update\-Thetas\-And\-D\-Thetas} ()
+\begin{DoxyCompactList}\small\item\em Asks Schunk's its joint's positions and velocities, them it updates the internal P\-G\-M\-A\-T\-R\-I\-Xs Theta and D\-Thetas. \end{DoxyCompactList}\item 
+void \hyperlink{classCartesian__controller_a40d17a9794af8a9a607618bf0ee5efff}{set\-Schunk\-Velocities\-And\-Send} (double sat\-\_\-vel)
+\begin{DoxyCompactList}\small\item\em Updates the Schunk velocities msg to be sent to Schunk, but not before saturating it. \end{DoxyCompactList}\item 
+void \hyperlink{classCartesian__controller_ae845f67c81c2649bfbaccf95230f2599}{send\-Joint\-Positions\-To\-Schunk} (std\-::vector$<$ double $>$ positions)
+\item 
+bool \hyperlink{classCartesian__controller_a3ba54e8b35632526c5e8eb2ab5d7de0d}{stop\-Schunk} ()
+\item 
+void \hyperlink{classCartesian__controller_a8c0f0b41de9f4f8b2e3aa327e7c6b50c}{control\-Clean\-Up} ()
+\begin{DoxyCompactList}\small\item\em De-\/allocs unfreed matrices in the end of the control loop. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classCartesian__controller_ab9ed5a808da204dbc612d313dc7332f4}{ros\-\_\-pub\-\_\-buffer}
+\item 
+bool \hyperlink{classCartesian__controller_a3c0a72214891f68e2bad63bf2b688f9c}{end\-\_\-control}
+\item 
+ros\-::\-Node\-Handle \hyperlink{classCartesian__controller_ad90134b232217e84cb58137a9d2030bb}{schunk\-\_\-low\-\_\-mode\-Changer\-\_\-nh}
+\item 
+ros\-::\-Callback\-Queue \hyperlink{classCartesian__controller_adf47dc3a09bd9650015b25870054b60d}{mode\-Changer\-\_\-queue}
+\item 
+ros\-::\-Service\-Client \hyperlink{classCartesian__controller_aee1fc445b64c534847ff0012132a5d2c}{schunk\-\_\-mode\-Changer\-\_\-client}
+\item 
+schunk\-\_\-low\-::\-Control\-Mode \hyperlink{classCartesian__controller_a960d66580ba058d3337c89bdf8099948}{schunk\-\_\-mode\-Changer\-\_\-msg}
+\item 
+ros\-::\-Node\-Handle \hyperlink{classCartesian__controller_aeed01809bd5240663c7acfade245a386}{schunk\-\_\-low\-\_\-pos\-Vel\-Getter\-\_\-nh}
+\item 
+ros\-::\-Callback\-Queue \hyperlink{classCartesian__controller_a144c7faad45f3d070624452c1f02ba15}{pos\-Vel\-Getter\-\_\-queue}
+\item 
+ros\-::\-Service\-Client \hyperlink{classCartesian__controller_a5c1d9386bc5f219f2edc0d5d1b21f0da}{schunk\-\_\-pos\-Vel\-Getter\-\_\-client}
+\item 
+schunk\-\_\-low\-::\-Get\-Pos\-Vel \hyperlink{classCartesian__controller_ae368dcf84dae528612c617cc92fbb69f}{schunk\-\_\-pos\-Vel\-Getter\-\_\-msg}
+\item 
+ros\-::\-Node\-Handle \hyperlink{classCartesian__controller_a7df4ce63bf0551bfa7061bc718cd68d2}{schunk\-\_\-low\-\_\-publisher\-\_\-nh}
+\item 
+ros\-::\-Callback\-Queue \hyperlink{classCartesian__controller_a041a2eb6657c9b036a512fb21e9f5086}{publisher\-\_\-queue}
+\item 
+ros\-::\-Publisher \hyperlink{classCartesian__controller_aa6ce9cffdd307127ed814d6e5132eba2}{schunk\-\_\-low\-\_\-pub}
+\item 
+schunk\-\_\-msgs\-::\-Velocities \hyperlink{classCartesian__controller_af59178c57bdd73d9eb474577247bbe40}{schunk\-\_\-low\-\_\-velocities\-\_\-msg}
+\item 
+ros\-::\-Node\-Handle \hyperlink{classCartesian__controller_aabe48e7ab08b0235d4cd94213b8faf5d}{schunk\-\_\-low\-\_\-pos\-\_\-publisher\-\_\-nh}
+\item 
+ros\-::\-Callback\-Queue \hyperlink{classCartesian__controller_adbb9cddf4092cba9042294740c5371eb}{pos\-\_\-publisher\-\_\-queue}
+\item 
+ros\-::\-Publisher \hyperlink{classCartesian__controller_af06313084ef058d1f979fddeb33d5100}{schunk\-\_\-low\-\_\-pos\-\_\-pub}
+\item 
+schunk\-\_\-msgs\-::\-Positions \hyperlink{classCartesian__controller_a2dd700542bd6243eef10d34811055584}{schunk\-\_\-low\-\_\-positions\-\_\-msg}
+\item 
+ros\-::\-Node\-Handle \hyperlink{classCartesian__controller_a57b1869ec960e75e435e1f882a02d80e}{schunk\-\_\-low\-\_\-stopper\-\_\-nh}
+\item 
+ros\-::\-Callback\-Queue \hyperlink{classCartesian__controller_a52eb090400d8dafaa22aecb037788a66}{stopper\-\_\-queue}
+\item 
+ros\-::\-Service\-Client \hyperlink{classCartesian__controller_a4ea7350e0f797c49bc51d3433a761aff}{schunk\-\_\-stopper\-\_\-client}
+\item 
+schunk\-\_\-low\-::\-Stop \hyperlink{classCartesian__controller_a29581ed2f2d8bb97c55e16868bbcc8bd}{schunk\-\_\-stopper\-\_\-msg}
+\item 
+\hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} \hyperlink{classCartesian__controller_a98fdac06d136ac3dba0102d97cd5dd36}{S\-J}
+\item 
+\hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} \hyperlink{classCartesian__controller_a78073f51064a05d72c41723a93d9079f}{Kp}
+\item 
+\hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} \hyperlink{classCartesian__controller_a70e495f39da706f1b589684f58343b9e}{Ki}
+\item 
+\hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} \hyperlink{classCartesian__controller_a62394cef8a9a29eac18319a4ad579c4c}{Kd}
+\item 
+\hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} \hyperlink{classCartesian__controller_a0a0f818dad601cd9e3e26cb6959b8eb6}{Thetas}
+\item 
+\hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} \hyperlink{classCartesian__controller_a5d6419e62e130150edfcbd82b1dadcae}{D\-Thetas}
+\item 
+\hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} \hyperlink{classCartesian__controller_abb248cb3215a574fe8e1bb8fb0b8626d}{D\-\_\-ref}
+\item 
+\hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} \hyperlink{classCartesian__controller_a8c470b652ce436d8e48f126073fc2593}{D}
+\item 
+\hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} \hyperlink{classCartesian__controller_ab3f08ecf10cb2486e8bfc61f07e2bde6}{Err}
+\item 
+\hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} \hyperlink{classCartesian__controller_a6d9471a983f6cb6c642bf8dea0d540af}{Err\-\_\-ant}
+\item 
+\hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} \hyperlink{classCartesian__controller_a248174c6399a8933bfcc8f1b0b39af5e}{Err\-\_\-int}
+\item 
+\hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} \hyperlink{classCartesian__controller_a37edb9c6e2a5066f74941e3659f68cbc}{aux1}
+\item 
+\hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} \hyperlink{classCartesian__controller_af73a0c910cd80ed2f84974b65beba450}{aux2}
+\item 
+\hyperlink{gmatrix_8h_ad8edc274a17feb9e4fca93e620253bed}{P\-G\-M\-A\-T\-R\-I\-X} \hyperlink{classCartesian__controller_aa37c15fcd53a60ecce106cd9b39d3501}{aux3}
+\item 
+double \hyperlink{classCartesian__controller_a35c6ddbb9624878f2807ff644a33e832}{T}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 8 of file cartesian\-\_\-controller.\-h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCartesian__controller_a71055bb1cbf01ced9e64bb1d184b68fe}{\index{Cartesian\-\_\-controller@{Cartesian\-\_\-controller}!Cartesian\-\_\-controller@{Cartesian\-\_\-controller}}
+\index{Cartesian\-\_\-controller@{Cartesian\-\_\-controller}!Cartesian_controller@{Cartesian\-\_\-controller}}
+\subsubsection[{Cartesian\-\_\-controller}]{\setlength{\rightskip}{0pt plus 5cm}Cartesian\-\_\-controller\-::\-Cartesian\-\_\-controller (
+\begin{DoxyParamCaption}
+\item[{{\bf Robot} $\ast$}]{r, }
+\item[{int}]{ref\-Size, }
+\item[{double}]{K\-P\mbox{[}$\,$\mbox{]}, }
+\item[{double}]{K\-I\mbox{[}$\,$\mbox{]}, }
+\item[{double}]{K\-D\mbox{[}$\,$\mbox{]}, }
+\item[{double}]{T}
+\end{DoxyParamCaption}
+)}}\label{classCartesian__controller_a71055bb1cbf01ced9e64bb1d184b68fe}
+
+
+Definition at line 174 of file cartesian\-\_\-controller.\-cpp.
+
+
+
+References aux1, aux2, aux3, D, D\-\_\-ref, Robot\-::dofs, D\-Thetas, end\-\_\-control, Err, Err\-\_\-ant, Err\-\_\-int, Kd, Ki, Kp, mode\-Changer\-\_\-queue, P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-C\-R\-E\-A\-T\-E\-\_\-\-D\-I\-A\-G\-\_\-\-F\-R\-O\-M\-\_\-\-A\-R\-R\-A\-Y(), P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-C\-R\-E\-A\-T\-E\-\_\-\-Z\-E\-R\-O\-E\-S(), pos\-\_\-publisher\-\_\-queue, pos\-Vel\-Getter\-\_\-queue, publisher\-\_\-queue, r, ros\-\_\-pub\-\_\-buffer, schunk\-\_\-low\-\_\-mode\-Changer\-\_\-nh, schunk\-\_\-low\-\_\-pos\-\_\-pub, schunk\-\_\-low\-\_\-pos\-\_\-publisher\-\_\-nh, schunk\-\_\-low\-\_\-positions\-\_\-msg, schunk\-\_\-low\-\_\-pos\-Vel\-Getter\-\_\-nh, schunk\-\_\-low\-\_\-pub, schunk\-\_\-low\-\_\-publisher\-\_\-nh, schunk\-\_\-low\-\_\-stopper\-\_\-nh, schunk\-\_\-low\-\_\-velocities\-\_\-msg, schunk\-\_\-mode\-Changer\-\_\-client, schunk\-\_\-pos\-Vel\-Getter\-\_\-client, schunk\-\_\-stopper\-\_\-client, S\-J, stopper\-\_\-queue, T, and Thetas.
+
+
+\begin{DoxyCode}
+                                                                               
+                                       \{
+
+        \textcolor{comment}{/******************************}
+\textcolor{comment}{                 VARIABLES}
+\textcolor{comment}{        *******************************/}
+
+        this->r = \hyperlink{classCartesian__controller_a5562129951bd802e4ded77fc716c87a0}{r};
+        this->\hyperlink{classCartesian__controller_a3c0a72214891f68e2bad63bf2b688f9c}{end\_control} = \textcolor{keyword}{false};
+
+        \textcolor{comment}{/******************************}
+\textcolor{comment}{                  ROS VARIABLES}
+\textcolor{comment}{        *******************************/}
+
+        \textcolor{comment}{//Consts (No reason having a queue)}
+        \hyperlink{classCartesian__controller_ab9ed5a808da204dbc612d313dc7332f4}{ros\_pub\_buffer} = 1;
+
+        \textcolor{comment}{//Set Queues}
+        this->\hyperlink{classCartesian__controller_ad90134b232217e84cb58137a9d2030bb}{schunk\_low\_modeChanger\_nh}.
+      setCallbackQueue(&this->\hyperlink{classCartesian__controller_adf47dc3a09bd9650015b25870054b60d}{modeChanger\_queue});
+        this->\hyperlink{classCartesian__controller_aeed01809bd5240663c7acfade245a386}{schunk\_low\_posVelGetter\_nh}.
+      setCallbackQueue(&this->\hyperlink{classCartesian__controller_a144c7faad45f3d070624452c1f02ba15}{posVelGetter\_queue});
+        this->\hyperlink{classCartesian__controller_a57b1869ec960e75e435e1f882a02d80e}{schunk\_low\_stopper\_nh}.setCallbackQueue(&
+      this->\hyperlink{classCartesian__controller_a52eb090400d8dafaa22aecb037788a66}{stopper\_queue});
+
+        this->\hyperlink{classCartesian__controller_aabe48e7ab08b0235d4cd94213b8faf5d}{schunk\_low\_pos\_publisher\_nh}.
+      setCallbackQueue(&this->\hyperlink{classCartesian__controller_adbb9cddf4092cba9042294740c5371eb}{pos\_publisher\_queue});
+        this->\hyperlink{classCartesian__controller_a7df4ce63bf0551bfa7061bc718cd68d2}{schunk\_low\_publisher\_nh}.setCallbackQueue(&
+      this->\hyperlink{classCartesian__controller_a041a2eb6657c9b036a512fb21e9f5086}{publisher\_queue});
+
+        \textcolor{comment}{//Publisher}
+        this->\hyperlink{classCartesian__controller_aa6ce9cffdd307127ed814d6e5132eba2}{schunk\_low\_pub}                       = this->
+      \hyperlink{classCartesian__controller_a7df4ce63bf0551bfa7061bc718cd68d2}{schunk\_low\_publisher\_nh}.advertise<
+      schunk\_msgs::Velocities>(\textcolor{stringliteral}{"schunk\_velocities\_control"}, \hyperlink{classCartesian__controller_ab9ed5a808da204dbc612d313dc7332f4}{ros\_pub\_buffer});
+        this->\hyperlink{classCartesian__controller_af06313084ef058d1f979fddeb33d5100}{schunk\_low\_pos\_pub}                   = this->
+      \hyperlink{classCartesian__controller_aabe48e7ab08b0235d4cd94213b8faf5d}{schunk\_low\_pos\_publisher\_nh}.advertise<
+      schunk\_msgs::Positions>(\textcolor{stringliteral}{"schunk\_positions\_control"}, \hyperlink{classCartesian__controller_ab9ed5a808da204dbc612d313dc7332f4}{ros\_pub\_buffer});
+
+        \textcolor{comment}{//ServiceClients}
+        this->\hyperlink{classCartesian__controller_aee1fc445b64c534847ff0012132a5d2c}{schunk\_modeChanger\_client}               
+      = this->\hyperlink{classCartesian__controller_ad90134b232217e84cb58137a9d2030bb}{schunk\_low\_modeChanger\_nh}.serviceClient<
+      schunk\_low::ControlMode>(\textcolor{stringliteral}{"schunk\_set\_control\_mode"});
+        this->\hyperlink{classCartesian__controller_a5c1d9386bc5f219f2edc0d5d1b21f0da}{schunk\_posVelGetter\_client}             
+      = this->\hyperlink{classCartesian__controller_aeed01809bd5240663c7acfade245a386}{schunk\_low\_posVelGetter\_nh}.serviceClient<
+      schunk\_low::GetPosVel>(\textcolor{stringliteral}{"schunk\_get\_pos\_vel"}, \textcolor{keyword}{true});
+        this->\hyperlink{classCartesian__controller_a4ea7350e0f797c49bc51d3433a761aff}{schunk\_stopper\_client}                = 
+      this->\hyperlink{classCartesian__controller_a57b1869ec960e75e435e1f882a02d80e}{schunk\_low\_stopper\_nh}.serviceClient<schunk\_low::Stop>(\textcolor{stringliteral}{"
+      schunk\_stop"});
+
+        \textcolor{comment}{//Velocity object TODO: change this to something not constant.}
+        \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < 8; i++)\{
+                this->\hyperlink{classCartesian__controller_af59178c57bdd73d9eb474577247bbe40}{schunk\_low\_velocities\_msg}.
+      velocities.push\_back(0.0);
+                this->\hyperlink{classCartesian__controller_a2dd700542bd6243eef10d34811055584}{schunk\_low\_positions\_msg}.
+      positions.push\_back(0.0);
+        \}
+
+        \textcolor{comment}{//Velocity topic password}
+        this->\hyperlink{classCartesian__controller_af59178c57bdd73d9eb474577247bbe40}{schunk\_low\_velocities\_msg}.password = 
+      SchunkLowControl::kPasswordVelocityCallback;
+        this->\hyperlink{classCartesian__controller_a2dd700542bd6243eef10d34811055584}{schunk\_low\_positions\_msg}.password  = 
+      SchunkLowControl::kPasswordPositionCallback;
+
+        \textcolor{comment}{/******************************}
+\textcolor{comment}{                KINEMATIC VARIABLES}
+\textcolor{comment}{        *******************************/}
+
+        this->\hyperlink{classCartesian__controller_a35c6ddbb9624878f2807ff644a33e832}{T} = \hyperlink{classCartesian__controller_a35c6ddbb9624878f2807ff644a33e832}{T};
+
+        \textcolor{comment}{//Jacobian}
+        this->\hyperlink{classCartesian__controller_a98fdac06d136ac3dba0102d97cd5dd36}{SJ} = NULL;
+        \textcolor{comment}{//PID Errors Initialize.}
+        this->\hyperlink{classCartesian__controller_a78073f51064a05d72c41723a93d9079f}{Kp} = \hyperlink{gmatrix__plus_8h_a22f3571af4a9f493e44fcd3184a2f3f0}{PGMATRIX\_CREATE\_DIAG\_FROM\_ARRAY}
+      (refSize,KP);
+        this->\hyperlink{classCartesian__controller_a70e495f39da706f1b589684f58343b9e}{Ki} = \hyperlink{gmatrix__plus_8h_a22f3571af4a9f493e44fcd3184a2f3f0}{PGMATRIX\_CREATE\_DIAG\_FROM\_ARRAY}
+      (refSize,KI);
+        this->\hyperlink{classCartesian__controller_a62394cef8a9a29eac18319a4ad579c4c}{Kd} = \hyperlink{gmatrix__plus_8h_a22f3571af4a9f493e44fcd3184a2f3f0}{PGMATRIX\_CREATE\_DIAG\_FROM\_ARRAY}
+      (refSize,KD);
+
+        \textcolor{comment}{//Thetas.}
+        this->\hyperlink{classCartesian__controller_a0a0f818dad601cd9e3e26cb6959b8eb6}{Thetas} = \hyperlink{gmatrix__plus_8h_a6cacc3f1b48d458d5cfc9e03159e3d81}{PGMATRIX\_CREATE\_ZEROES}(r->
+      \hyperlink{structRobot_a51d4a86ac5314a1ed8614d5664c80747}{dofs},1);
+        this->\hyperlink{classCartesian__controller_a5d6419e62e130150edfcbd82b1dadcae}{DThetas} = \hyperlink{gmatrix__plus_8h_a6cacc3f1b48d458d5cfc9e03159e3d81}{PGMATRIX\_CREATE\_ZEROES}(r->
+      \hyperlink{structRobot_a51d4a86ac5314a1ed8614d5664c80747}{dofs},1);
+        \textcolor{comment}{//Reference Signal.}
+        this->\hyperlink{classCartesian__controller_abb248cb3215a574fe8e1bb8fb0b8626d}{D\_ref} = \hyperlink{gmatrix__plus_8h_a6cacc3f1b48d458d5cfc9e03159e3d81}{PGMATRIX\_CREATE\_ZEROES}(refSize
+      ,1);
+        \textcolor{comment}{//Measured Values}
+        this->\hyperlink{classCartesian__controller_a8c470b652ce436d8e48f126073fc2593}{D} = \hyperlink{gmatrix__plus_8h_a6cacc3f1b48d458d5cfc9e03159e3d81}{PGMATRIX\_CREATE\_ZEROES}(refSize,1);
+        \textcolor{comment}{//Errors}
+        this->\hyperlink{classCartesian__controller_ab3f08ecf10cb2486e8bfc61f07e2bde6}{Err}     = \hyperlink{gmatrix__plus_8h_a6cacc3f1b48d458d5cfc9e03159e3d81}{PGMATRIX\_CREATE\_ZEROES}(refSize
+      ,1);
+        this->\hyperlink{classCartesian__controller_a6d9471a983f6cb6c642bf8dea0d540af}{Err\_ant} = \hyperlink{gmatrix__plus_8h_a6cacc3f1b48d458d5cfc9e03159e3d81}{PGMATRIX\_CREATE\_ZEROES}(
+      refSize,1);
+        this->\hyperlink{classCartesian__controller_a248174c6399a8933bfcc8f1b0b39af5e}{Err\_int} = \hyperlink{gmatrix__plus_8h_a6cacc3f1b48d458d5cfc9e03159e3d81}{PGMATRIX\_CREATE\_ZEROES}(
+      refSize,1);
+        \textcolor{comment}{//Aux}
+        this->\hyperlink{classCartesian__controller_a37edb9c6e2a5066f74941e3659f68cbc}{aux1} = NULL;
+        this->\hyperlink{classCartesian__controller_af73a0c910cd80ed2f84974b65beba450}{aux2} = NULL;
+        this->\hyperlink{classCartesian__controller_aa37c15fcd53a60ecce106cd9b39d3501}{aux3} = NULL;
+
+        \textcolor{comment}{/******************************}
+\textcolor{comment}{                DUAL MODE VARIABLES}
+\textcolor{comment}{        *******************************/}
+        \textcolor{comment}{//int current\_operation\_mode = this->HIGH\_MODE;}
+
+\}
+\end{DoxyCode}
+\hypertarget{classCartesian__controller_ac29863d92d56a5998ba39ddb58f4a09e}{\index{Cartesian\-\_\-controller@{Cartesian\-\_\-controller}!$\sim$\-Cartesian\-\_\-controller@{$\sim$\-Cartesian\-\_\-controller}}
+\index{$\sim$\-Cartesian\-\_\-controller@{$\sim$\-Cartesian\-\_\-controller}!Cartesian_controller@{Cartesian\-\_\-controller}}
+\subsubsection[{$\sim$\-Cartesian\-\_\-controller}]{\setlength{\rightskip}{0pt plus 5cm}Cartesian\-\_\-controller\-::$\sim$\-Cartesian\-\_\-controller (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classCartesian__controller_ac29863d92d56a5998ba39ddb58f4a09e}
+
+
+Definition at line 171 of file cartesian\-\_\-controller.\-cpp.
+
+
+\begin{DoxyCode}
+                                           \{
+\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCartesian__controller_aaf006f80e89c08cf040956afbb4cf3c0}{\index{Cartesian\-\_\-controller@{Cartesian\-\_\-controller}!change\-Schunk\-Mode@{change\-Schunk\-Mode}}
+\index{change\-Schunk\-Mode@{change\-Schunk\-Mode}!Cartesian_controller@{Cartesian\-\_\-controller}}
+\subsubsection[{change\-Schunk\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}bool Cartesian\-\_\-controller\-::change\-Schunk\-Mode (
+\begin{DoxyParamCaption}
+\item[{int}]{mode}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCartesian__controller_aaf006f80e89c08cf040956afbb4cf3c0}
+
+
+Other packages. 
+
+Internal Calls schunk\-\_\-low service to change Schunk's control mode. 
+\begin{DoxyParams}{Parameters}
+{\em mode} & Schunk's mode you want to change to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the service was called succesfully, false otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 35 of file cartesian\-\_\-controller.\-cpp.
+
+
+
+References mode\-Changer\-\_\-queue, schunk\-\_\-mode\-Changer\-\_\-client, schunk\-\_\-mode\-Changer\-\_\-msg, and stop\-Schunk().
+
+
+
+Referenced by Cartesian\-\_\-pose\-\_\-controller\-::control(), and Cartesian\-\_\-velocity\-\_\-controller\-::control().
+
+
+\begin{DoxyCode}
+                                                   \{
+
+        \textcolor{comment}{//Create Service Object and initialize}
+        \hyperlink{classCartesian__controller_a960d66580ba058d3337c89bdf8099948}{schunk\_modeChanger\_msg}.request.mode = mode;
+
+        \textcolor{comment}{//Call Service with initialized Service Object}
+        \textcolor{keywordflow}{if} (!\hyperlink{classCartesian__controller_aee1fc445b64c534847ff0012132a5d2c}{schunk\_modeChanger\_client}.call(
+      \hyperlink{classCartesian__controller_a960d66580ba058d3337c89bdf8099948}{schunk\_modeChanger\_msg}))
+        \{
+                ROS\_ERROR\_STREAM(\textcolor{stringliteral}{"Unable to change schunk\_low control mode,
+       aborting."});
+                \hyperlink{classCartesian__controller_a3ba54e8b35632526c5e8eb2ab5d7de0d}{stopSchunk}();
+                \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+        \}
+
+        \hyperlink{classCartesian__controller_adf47dc3a09bd9650015b25870054b60d}{modeChanger\_queue}.callAvailable(ros::WallDuration(0));
+
+        \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+\}
+\end{DoxyCode}
+\hypertarget{classCartesian__controller_a8809167cab6d338a957439141fa2bf6c}{\index{Cartesian\-\_\-controller@{Cartesian\-\_\-controller}!control@{control}}
+\index{control@{control}!Cartesian_controller@{Cartesian\-\_\-controller}}
+\subsubsection[{control}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Cartesian\-\_\-controller\-::control (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classCartesian__controller_a8809167cab6d338a957439141fa2bf6c}
+
+
+Implemented in \hyperlink{classCartesian__velocity__controller_a249bd167cd995e16906731172d1bc516}{Cartesian\-\_\-velocity\-\_\-controller}, and \hyperlink{classCartesian__pose__controller_ab937d166862f2756eb3d08f37a0a090d}{Cartesian\-\_\-pose\-\_\-controller}.
+
+\hypertarget{classCartesian__controller_a8c0f0b41de9f4f8b2e3aa327e7c6b50c}{\index{Cartesian\-\_\-controller@{Cartesian\-\_\-controller}!control\-Clean\-Up@{control\-Clean\-Up}}
+\index{control\-Clean\-Up@{control\-Clean\-Up}!Cartesian_controller@{Cartesian\-\_\-controller}}
+\subsubsection[{control\-Clean\-Up}]{\setlength{\rightskip}{0pt plus 5cm}void Cartesian\-\_\-controller\-::control\-Clean\-Up (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCartesian__controller_a8c0f0b41de9f4f8b2e3aa327e7c6b50c}
+
+
+De-\/allocs unfreed matrices in the end of the control loop. 
+
+
+
+Definition at line 148 of file cartesian\-\_\-controller.\-cpp.
+
+
+
+References D, D\-\_\-ref, D\-Thetas, Err, Err\-\_\-ant, Err\-\_\-int, Kd, Ki, Kp, P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-F\-R\-E\-E(), r, Robot\-\_\-free(), S\-J, and Thetas.
+
+
+
+Referenced by Cartesian\-\_\-pose\-\_\-controller\-::control(), and Cartesian\-\_\-velocity\-\_\-controller\-::control().
+
+
+\begin{DoxyCode}
+                                         \{
+
+        \textcolor{comment}{//Last Memory Free Procedure.}
+        \textcolor{comment}{//Jacobians}
+        \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(\hyperlink{classCartesian__controller_a98fdac06d136ac3dba0102d97cd5dd36}{SJ});
+        \textcolor{comment}{//Errors}
+        \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(\hyperlink{classCartesian__controller_ab3f08ecf10cb2486e8bfc61f07e2bde6}{Err});
+        \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(\hyperlink{classCartesian__controller_a6d9471a983f6cb6c642bf8dea0d540af}{Err\_ant});
+        \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(\hyperlink{classCartesian__controller_a248174c6399a8933bfcc8f1b0b39af5e}{Err\_int});
+        \textcolor{comment}{//Var}
+        \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(\hyperlink{classCartesian__controller_a5d6419e62e130150edfcbd82b1dadcae}{DThetas});
+        \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(\hyperlink{classCartesian__controller_a0a0f818dad601cd9e3e26cb6959b8eb6}{Thetas});
+        \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(\hyperlink{classCartesian__controller_abb248cb3215a574fe8e1bb8fb0b8626d}{D\_ref});
+        \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(\hyperlink{classCartesian__controller_a8c470b652ce436d8e48f126073fc2593}{D});
+        \textcolor{comment}{//PID}
+        \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(\hyperlink{classCartesian__controller_a78073f51064a05d72c41723a93d9079f}{Kp});
+        \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(\hyperlink{classCartesian__controller_a70e495f39da706f1b589684f58343b9e}{Ki});
+        \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(\hyperlink{classCartesian__controller_a62394cef8a9a29eac18319a4ad579c4c}{Kd});
+        \textcolor{comment}{//Robot}
+        \hyperlink{robot_8h_a31f8aee15b6c24f89ab51b1bc1341f33}{Robot\_free}(\hyperlink{classCartesian__controller_a5562129951bd802e4ded77fc716c87a0}{r});
+
+\}
+\end{DoxyCode}
+\hypertarget{classCartesian__controller_a0d7a63bac84715f6742db738df246f91}{\index{Cartesian\-\_\-controller@{Cartesian\-\_\-controller}!get\-Schunk\-Positions\-And\-Velocities\-And\-Update\-Thetas\-And\-D\-Thetas@{get\-Schunk\-Positions\-And\-Velocities\-And\-Update\-Thetas\-And\-D\-Thetas}}
+\index{get\-Schunk\-Positions\-And\-Velocities\-And\-Update\-Thetas\-And\-D\-Thetas@{get\-Schunk\-Positions\-And\-Velocities\-And\-Update\-Thetas\-And\-D\-Thetas}!Cartesian_controller@{Cartesian\-\_\-controller}}
+\subsubsection[{get\-Schunk\-Positions\-And\-Velocities\-And\-Update\-Thetas\-And\-D\-Thetas}]{\setlength{\rightskip}{0pt plus 5cm}bool Cartesian\-\_\-controller\-::get\-Schunk\-Positions\-And\-Velocities\-And\-Update\-Thetas\-And\-D\-Thetas (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCartesian__controller_a0d7a63bac84715f6742db738df246f91}
+
+
+Asks Schunk's its joint's positions and velocities, them it updates the internal P\-G\-M\-A\-T\-R\-I\-Xs Theta and D\-Thetas. 
+
+\begin{DoxyReturn}{Returns}
+true if the service was called succesfully, false otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 127 of file cartesian\-\_\-controller.\-cpp.
+
+
+
+References Robot\-::dofs, D\-Thetas, P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-A\-T\-A, pos\-Vel\-Getter\-\_\-queue, r, schunk\-\_\-pos\-Vel\-Getter\-\_\-client, schunk\-\_\-pos\-Vel\-Getter\-\_\-msg, stop\-Schunk(), and Thetas.
+
+
+
+Referenced by Cartesian\-\_\-pose\-\_\-controller\-::control(), and Cartesian\-\_\-velocity\-\_\-controller\-::control().
+
+
+\begin{DoxyCode}
+                                                                               
+          \{
+
+        \textcolor{keywordflow}{if}(!\hyperlink{classCartesian__controller_a5c1d9386bc5f219f2edc0d5d1b21f0da}{schunk\_posVelGetter\_client}.call(
+      \hyperlink{classCartesian__controller_ae368dcf84dae528612c617cc92fbb69f}{schunk\_posVelGetter\_msg}))\{
+                ROS\_ERROR\_STREAM(\textcolor{stringliteral}{"Couldn't get schunk's positions and
+       velocities, aborting"});
+                \hyperlink{classCartesian__controller_a3ba54e8b35632526c5e8eb2ab5d7de0d}{stopSchunk}();
+                \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+        \}
+        \textcolor{keywordflow}{else}\{
+                \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < \hyperlink{classCartesian__controller_a5562129951bd802e4ded77fc716c87a0}{r}->\hyperlink{structRobot_a51d4a86ac5314a1ed8614d5664c80747}{dofs}; i++)\{
+                        \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(\hyperlink{classCartesian__controller_a0a0f818dad601cd9e3e26cb6959b8eb6}{Thetas},i+1,1) = 
+      \hyperlink{classCartesian__controller_ae368dcf84dae528612c617cc92fbb69f}{schunk\_posVelGetter\_msg}.response.positions[i];
+                        \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(\hyperlink{classCartesian__controller_a5d6419e62e130150edfcbd82b1dadcae}{DThetas},i+1,1) = 
+      \hyperlink{classCartesian__controller_ae368dcf84dae528612c617cc92fbb69f}{schunk\_posVelGetter\_msg}.response.velocities[i];
+                \}
+        \}
+
+        \hyperlink{classCartesian__controller_a144c7faad45f3d070624452c1f02ba15}{posVelGetter\_queue}.callAvailable(ros::WallDuration(0)
+      );
+        \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+\}
+\end{DoxyCode}
+\hypertarget{classCartesian__controller_ae845f67c81c2649bfbaccf95230f2599}{\index{Cartesian\-\_\-controller@{Cartesian\-\_\-controller}!send\-Joint\-Positions\-To\-Schunk@{send\-Joint\-Positions\-To\-Schunk}}
+\index{send\-Joint\-Positions\-To\-Schunk@{send\-Joint\-Positions\-To\-Schunk}!Cartesian_controller@{Cartesian\-\_\-controller}}
+\subsubsection[{send\-Joint\-Positions\-To\-Schunk}]{\setlength{\rightskip}{0pt plus 5cm}void Cartesian\-\_\-controller\-::send\-Joint\-Positions\-To\-Schunk (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ double $>$}]{positions}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCartesian__controller_ae845f67c81c2649bfbaccf95230f2599}
+
+
+Definition at line 106 of file cartesian\-\_\-controller.\-cpp.
+
+
+
+References pos\-\_\-publisher\-\_\-queue, schunk\-\_\-low\-\_\-pos\-\_\-pub, and schunk\-\_\-low\-\_\-positions\-\_\-msg.
+
+
+
+Referenced by Cartesian\-\_\-pose\-\_\-controller\-::control().
+
+
+\begin{DoxyCode}
+                                                                               
+       \{
+
+        \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < 8; j++)\{
+                \hyperlink{classCartesian__controller_a2dd700542bd6243eef10d34811055584}{schunk\_low\_positions\_msg}.positions[j]=
+      positions[j];
+                ROS\_INFO\_STREAM(\textcolor{stringliteral}{"Positions sent : "} << j << \textcolor{stringliteral}{" = "} << positions[
+      j]);
+        \}
+
+        \textcolor{comment}{//Send}
+        \textcolor{comment}{// Update schunk\_low\_positions\_msg header}
+        \hyperlink{classCartesian__controller_a2dd700542bd6243eef10d34811055584}{schunk\_low\_positions\_msg}.header.stamp = 
+      ros::Time::now();
+        \textcolor{comment}{// Publish}
+        \hyperlink{classCartesian__controller_af06313084ef058d1f979fddeb33d5100}{schunk\_low\_pos\_pub}.publish(\hyperlink{classCartesian__controller_a2dd700542bd6243eef10d34811055584}{schunk\_low\_positions\_msg}
+      );
+        \textcolor{comment}{// Call!}
+        \hyperlink{classCartesian__controller_adbb9cddf4092cba9042294740c5371eb}{pos\_publisher\_queue}.callAvailable(ros::WallDuration(
+      0));
+
+\}
+\end{DoxyCode}
+\hypertarget{classCartesian__controller_a40d17a9794af8a9a607618bf0ee5efff}{\index{Cartesian\-\_\-controller@{Cartesian\-\_\-controller}!set\-Schunk\-Velocities\-And\-Send@{set\-Schunk\-Velocities\-And\-Send}}
+\index{set\-Schunk\-Velocities\-And\-Send@{set\-Schunk\-Velocities\-And\-Send}!Cartesian_controller@{Cartesian\-\_\-controller}}
+\subsubsection[{set\-Schunk\-Velocities\-And\-Send}]{\setlength{\rightskip}{0pt plus 5cm}void Cartesian\-\_\-controller\-::set\-Schunk\-Velocities\-And\-Send (
+\begin{DoxyParamCaption}
+\item[{double}]{sat\-\_\-vel}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCartesian__controller_a40d17a9794af8a9a607618bf0ee5efff}
+
+
+Updates the Schunk velocities msg to be sent to Schunk, but not before saturating it. 
+
+Other work in the velocities msg before sending should be done here. 
+
+Definition at line 81 of file cartesian\-\_\-controller.\-cpp.
+
+
+
+References Robot\-::dofs, D\-Thetas, P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-A\-T\-A, publisher\-\_\-queue, r, schunk\-\_\-low\-\_\-pub, and schunk\-\_\-low\-\_\-velocities\-\_\-msg.
+
+
+
+Referenced by Cartesian\-\_\-pose\-\_\-controller\-::control(), and Cartesian\-\_\-velocity\-\_\-controller\-::control().
+
+
+\begin{DoxyCode}
+                                                                   \{
+
+        \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < \hyperlink{classCartesian__controller_a5562129951bd802e4ded77fc716c87a0}{r}->\hyperlink{structRobot_a51d4a86ac5314a1ed8614d5664c80747}{dofs}; j++)\{
+                \hyperlink{classCartesian__controller_af59178c57bdd73d9eb474577247bbe40}{schunk\_low\_velocities\_msg}.velocities[j
+      ]=\hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(\hyperlink{classCartesian__controller_a5d6419e62e130150edfcbd82b1dadcae}{DThetas},j+1,1);
+
+                \textcolor{keywordflow}{if}(\hyperlink{classCartesian__controller_af59178c57bdd73d9eb474577247bbe40}{schunk\_low\_velocities\_msg}.
+      velocities[j] > sat\_vel)\{
+                        \hyperlink{classCartesian__controller_af59178c57bdd73d9eb474577247bbe40}{schunk\_low\_velocities\_msg}.
+      velocities[j] = sat\_vel;
+                        \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(\hyperlink{classCartesian__controller_a5d6419e62e130150edfcbd82b1dadcae}{DThetas},j+1,1) = 
+      sat\_vel;
+                \}
+                \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{classCartesian__controller_af59178c57bdd73d9eb474577247bbe40}{schunk\_low\_velocities\_msg}.
+      velocities[j] < -sat\_vel)\{
+                        \hyperlink{classCartesian__controller_af59178c57bdd73d9eb474577247bbe40}{schunk\_low\_velocities\_msg}.
+      velocities[j] = -sat\_vel;
+                        \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(\hyperlink{classCartesian__controller_a5d6419e62e130150edfcbd82b1dadcae}{DThetas},j+1,1) = -
+      sat\_vel;
+                \}
+        \}
+
+        \textcolor{comment}{//Send}
+        \hyperlink{classCartesian__controller_af59178c57bdd73d9eb474577247bbe40}{schunk\_low\_velocities\_msg}.header.stamp = 
+      ros::Time::now();
+        \hyperlink{classCartesian__controller_aa6ce9cffdd307127ed814d6e5132eba2}{schunk\_low\_pub}.publish(\hyperlink{classCartesian__controller_af59178c57bdd73d9eb474577247bbe40}{schunk\_low\_velocities\_msg}
+      );
+        \hyperlink{classCartesian__controller_a041a2eb6657c9b036a512fb21e9f5086}{publisher\_queue}.callAvailable(ros::WallDuration(0));
+
+\}
+\end{DoxyCode}
+\hypertarget{classCartesian__controller_a3ba54e8b35632526c5e8eb2ab5d7de0d}{\index{Cartesian\-\_\-controller@{Cartesian\-\_\-controller}!stop\-Schunk@{stop\-Schunk}}
+\index{stop\-Schunk@{stop\-Schunk}!Cartesian_controller@{Cartesian\-\_\-controller}}
+\subsubsection[{stop\-Schunk}]{\setlength{\rightskip}{0pt plus 5cm}bool Cartesian\-\_\-controller\-::stop\-Schunk (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCartesian__controller_a3ba54e8b35632526c5e8eb2ab5d7de0d}
+
+
+Definition at line 55 of file cartesian\-\_\-controller.\-cpp.
+
+
+
+References end\-\_\-control, schunk\-\_\-stopper\-\_\-client, schunk\-\_\-stopper\-\_\-msg, and stopper\-\_\-queue.
+
+
+
+Referenced by change\-Schunk\-Mode(), get\-Schunk\-Positions\-And\-Velocities\-And\-Update\-Thetas\-And\-D\-Thetas(), and Cartesian\-\_\-velocity\-\_\-controller\-::reference\-Update\-Callback().
+
+
+\begin{DoxyCode}
+                                     \{
+
+        ROS\_ERROR\_STREAM(\textcolor{stringliteral}{"STOPPING SCHUNK NOW!"});
+
+        \textcolor{comment}{//Call end to the rest of the program}
+        \hyperlink{classCartesian__controller_a3c0a72214891f68e2bad63bf2b688f9c}{end\_control} = \textcolor{keyword}{true};
+
+        \textcolor{comment}{//Call Service with initialized Service Object}
+        \textcolor{keywordflow}{if} (!\hyperlink{classCartesian__controller_a4ea7350e0f797c49bc51d3433a761aff}{schunk\_stopper\_client}.call(\hyperlink{classCartesian__controller_a29581ed2f2d8bb97c55e16868bbcc8bd}{schunk\_stopper\_msg}
+      ))
+        \{
+                ROS\_ERROR\_STREAM(\textcolor{stringliteral}{"FAILED TO STOP SCHUNK! WILL TRY FOREVER"});
+                \hyperlink{classCartesian__controller_a3ba54e8b35632526c5e8eb2ab5d7de0d}{stopSchunk}();
+                \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+        \}
+
+        \hyperlink{classCartesian__controller_a52eb090400d8dafaa22aecb037788a66}{stopper\_queue}.callAvailable(ros::WallDuration(0));
+
+        \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+\}
+\end{DoxyCode}
+
+
+\subsection{Field Documentation}
+\hypertarget{classCartesian__controller_a37edb9c6e2a5066f74941e3659f68cbc}{\index{Cartesian\-\_\-controller@{Cartesian\-\_\-controller}!aux1@{aux1}}
+\index{aux1@{aux1}!Cartesian_controller@{Cartesian\-\_\-controller}}
+\subsubsection[{aux1}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\-G\-M\-A\-T\-R\-I\-X} Cartesian\-\_\-controller\-::aux1\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCartesian__controller_a37edb9c6e2a5066f74941e3659f68cbc}
+
+
+Definition at line 62 of file cartesian\-\_\-controller.\-h.
+
+
+
+Referenced by Cartesian\-\_\-controller(), Cartesian\-\_\-pose\-\_\-controller\-::control(), and Cartesian\-\_\-velocity\-\_\-controller\-::control().
+
+\hypertarget{classCartesian__controller_af73a0c910cd80ed2f84974b65beba450}{\index{Cartesian\-\_\-controller@{Cartesian\-\_\-controller}!aux2@{aux2}}
+\index{aux2@{aux2}!Cartesian_controller@{Cartesian\-\_\-controller}}
+\subsubsection[{aux2}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\-G\-M\-A\-T\-R\-I\-X} Cartesian\-\_\-controller\-::aux2\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCartesian__controller_af73a0c910cd80ed2f84974b65beba450}
+
+
+Definition at line 63 of file cartesian\-\_\-controller.\-h.
+
+
+
+Referenced by Cartesian\-\_\-controller(), Cartesian\-\_\-pose\-\_\-controller\-::control(), and Cartesian\-\_\-velocity\-\_\-controller\-::control().
+
+\hypertarget{classCartesian__controller_aa37c15fcd53a60ecce106cd9b39d3501}{\index{Cartesian\-\_\-controller@{Cartesian\-\_\-controller}!aux3@{aux3}}
+\index{aux3@{aux3}!Cartesian_controller@{Cartesian\-\_\-controller}}
+\subsubsection[{aux3}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\-G\-M\-A\-T\-R\-I\-X} Cartesian\-\_\-controller\-::aux3\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCartesian__controller_aa37c15fcd53a60ecce106cd9b39d3501}
+
+
+Definition at line 64 of file cartesian\-\_\-controller.\-h.
+
+
+
+Referenced by Cartesian\-\_\-controller(), Cartesian\-\_\-pose\-\_\-controller\-::control(), and Cartesian\-\_\-velocity\-\_\-controller\-::control().
+
+\hypertarget{classCartesian__controller_a8c470b652ce436d8e48f126073fc2593}{\index{Cartesian\-\_\-controller@{Cartesian\-\_\-controller}!D@{D}}
+\index{D@{D}!Cartesian_controller@{Cartesian\-\_\-controller}}
+\subsubsection[{D}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\-G\-M\-A\-T\-R\-I\-X} Cartesian\-\_\-controller\-::\-D\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCartesian__controller_a8c470b652ce436d8e48f126073fc2593}
+
+
+Definition at line 56 of file cartesian\-\_\-controller.\-h.
+
+
+
+Referenced by Cartesian\-\_\-controller(), Cartesian\-\_\-pose\-\_\-controller\-::control(), Cartesian\-\_\-velocity\-\_\-controller\-::control(), control\-Clean\-Up(), and Cartesian\-\_\-pose\-\_\-controller\-::print\-Pose().
+
+\hypertarget{classCartesian__controller_abb248cb3215a574fe8e1bb8fb0b8626d}{\index{Cartesian\-\_\-controller@{Cartesian\-\_\-controller}!D\-\_\-ref@{D\-\_\-ref}}
+\index{D\-\_\-ref@{D\-\_\-ref}!Cartesian_controller@{Cartesian\-\_\-controller}}
+\subsubsection[{D\-\_\-ref}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\-G\-M\-A\-T\-R\-I\-X} Cartesian\-\_\-controller\-::\-D\-\_\-ref\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCartesian__controller_abb248cb3215a574fe8e1bb8fb0b8626d}
+
+
+Definition at line 54 of file cartesian\-\_\-controller.\-h.
+
+
+
+Referenced by Cartesian\-\_\-controller(), Cartesian\-\_\-pose\-\_\-controller\-::control(), Cartesian\-\_\-velocity\-\_\-controller\-::control(), control\-Clean\-Up(), Cartesian\-\_\-pose\-\_\-controller\-::update\-References(), and Cartesian\-\_\-velocity\-\_\-controller\-::update\-References().
+
+\hypertarget{classCartesian__controller_a5d6419e62e130150edfcbd82b1dadcae}{\index{Cartesian\-\_\-controller@{Cartesian\-\_\-controller}!D\-Thetas@{D\-Thetas}}
+\index{D\-Thetas@{D\-Thetas}!Cartesian_controller@{Cartesian\-\_\-controller}}
+\subsubsection[{D\-Thetas}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\-G\-M\-A\-T\-R\-I\-X} Cartesian\-\_\-controller\-::\-D\-Thetas\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCartesian__controller_a5d6419e62e130150edfcbd82b1dadcae}
+
+
+Definition at line 52 of file cartesian\-\_\-controller.\-h.
+
+
+
+Referenced by Cartesian\-\_\-controller(), Cartesian\-\_\-pose\-\_\-controller\-::control(), Cartesian\-\_\-velocity\-\_\-controller\-::control(), control\-Clean\-Up(), get\-Schunk\-Positions\-And\-Velocities\-And\-Update\-Thetas\-And\-D\-Thetas(), and set\-Schunk\-Velocities\-And\-Send().
+
+\hypertarget{classCartesian__controller_a3c0a72214891f68e2bad63bf2b688f9c}{\index{Cartesian\-\_\-controller@{Cartesian\-\_\-controller}!end\-\_\-control@{end\-\_\-control}}
+\index{end\-\_\-control@{end\-\_\-control}!Cartesian_controller@{Cartesian\-\_\-controller}}
+\subsubsection[{end\-\_\-control}]{\setlength{\rightskip}{0pt plus 5cm}bool Cartesian\-\_\-controller\-::end\-\_\-control\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCartesian__controller_a3c0a72214891f68e2bad63bf2b688f9c}
+
+
+Definition at line 15 of file cartesian\-\_\-controller.\-h.
+
+
+
+Referenced by Cartesian\-\_\-controller(), Cartesian\-\_\-velocity\-\_\-controller\-::control(), and stop\-Schunk().
+
+\hypertarget{classCartesian__controller_ab3f08ecf10cb2486e8bfc61f07e2bde6}{\index{Cartesian\-\_\-controller@{Cartesian\-\_\-controller}!Err@{Err}}
+\index{Err@{Err}!Cartesian_controller@{Cartesian\-\_\-controller}}
+\subsubsection[{Err}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\-G\-M\-A\-T\-R\-I\-X} Cartesian\-\_\-controller\-::\-Err\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCartesian__controller_ab3f08ecf10cb2486e8bfc61f07e2bde6}
+
+
+Definition at line 58 of file cartesian\-\_\-controller.\-h.
+
+
+
+Referenced by Cartesian\-\_\-controller(), Cartesian\-\_\-pose\-\_\-controller\-::control(), Cartesian\-\_\-velocity\-\_\-controller\-::control(), control\-Clean\-Up(), and Cartesian\-\_\-velocity\-\_\-controller\-::print\-Vel().
+
+\hypertarget{classCartesian__controller_a6d9471a983f6cb6c642bf8dea0d540af}{\index{Cartesian\-\_\-controller@{Cartesian\-\_\-controller}!Err\-\_\-ant@{Err\-\_\-ant}}
+\index{Err\-\_\-ant@{Err\-\_\-ant}!Cartesian_controller@{Cartesian\-\_\-controller}}
+\subsubsection[{Err\-\_\-ant}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\-G\-M\-A\-T\-R\-I\-X} Cartesian\-\_\-controller\-::\-Err\-\_\-ant\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCartesian__controller_a6d9471a983f6cb6c642bf8dea0d540af}
+
+
+Definition at line 59 of file cartesian\-\_\-controller.\-h.
+
+
+
+Referenced by Cartesian\-\_\-controller(), Cartesian\-\_\-pose\-\_\-controller\-::control(), Cartesian\-\_\-velocity\-\_\-controller\-::control(), and control\-Clean\-Up().
+
+\hypertarget{classCartesian__controller_a248174c6399a8933bfcc8f1b0b39af5e}{\index{Cartesian\-\_\-controller@{Cartesian\-\_\-controller}!Err\-\_\-int@{Err\-\_\-int}}
+\index{Err\-\_\-int@{Err\-\_\-int}!Cartesian_controller@{Cartesian\-\_\-controller}}
+\subsubsection[{Err\-\_\-int}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\-G\-M\-A\-T\-R\-I\-X} Cartesian\-\_\-controller\-::\-Err\-\_\-int\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCartesian__controller_a248174c6399a8933bfcc8f1b0b39af5e}
+
+
+Definition at line 60 of file cartesian\-\_\-controller.\-h.
+
+
+
+Referenced by Cartesian\-\_\-controller(), Cartesian\-\_\-pose\-\_\-controller\-::control(), Cartesian\-\_\-velocity\-\_\-controller\-::control(), and control\-Clean\-Up().
+
+\hypertarget{classCartesian__controller_a62394cef8a9a29eac18319a4ad579c4c}{\index{Cartesian\-\_\-controller@{Cartesian\-\_\-controller}!Kd@{Kd}}
+\index{Kd@{Kd}!Cartesian_controller@{Cartesian\-\_\-controller}}
+\subsubsection[{Kd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\-G\-M\-A\-T\-R\-I\-X} Cartesian\-\_\-controller\-::\-Kd\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCartesian__controller_a62394cef8a9a29eac18319a4ad579c4c}
+
+
+Definition at line 49 of file cartesian\-\_\-controller.\-h.
+
+
+
+Referenced by Cartesian\-\_\-controller(), Cartesian\-\_\-pose\-\_\-controller\-::control(), Cartesian\-\_\-velocity\-\_\-controller\-::control(), and control\-Clean\-Up().
+
+\hypertarget{classCartesian__controller_a70e495f39da706f1b589684f58343b9e}{\index{Cartesian\-\_\-controller@{Cartesian\-\_\-controller}!Ki@{Ki}}
+\index{Ki@{Ki}!Cartesian_controller@{Cartesian\-\_\-controller}}
+\subsubsection[{Ki}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\-G\-M\-A\-T\-R\-I\-X} Cartesian\-\_\-controller\-::\-Ki\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCartesian__controller_a70e495f39da706f1b589684f58343b9e}
+
+
+Definition at line 48 of file cartesian\-\_\-controller.\-h.
+
+
+
+Referenced by Cartesian\-\_\-controller(), Cartesian\-\_\-pose\-\_\-controller\-::control(), Cartesian\-\_\-velocity\-\_\-controller\-::control(), and control\-Clean\-Up().
+
+\hypertarget{classCartesian__controller_a78073f51064a05d72c41723a93d9079f}{\index{Cartesian\-\_\-controller@{Cartesian\-\_\-controller}!Kp@{Kp}}
+\index{Kp@{Kp}!Cartesian_controller@{Cartesian\-\_\-controller}}
+\subsubsection[{Kp}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\-G\-M\-A\-T\-R\-I\-X} Cartesian\-\_\-controller\-::\-Kp\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCartesian__controller_a78073f51064a05d72c41723a93d9079f}
+
+
+Definition at line 47 of file cartesian\-\_\-controller.\-h.
+
+
+
+Referenced by Cartesian\-\_\-controller(), Cartesian\-\_\-pose\-\_\-controller\-::control(), Cartesian\-\_\-velocity\-\_\-controller\-::control(), and control\-Clean\-Up().
+
+\hypertarget{classCartesian__controller_adf47dc3a09bd9650015b25870054b60d}{\index{Cartesian\-\_\-controller@{Cartesian\-\_\-controller}!mode\-Changer\-\_\-queue@{mode\-Changer\-\_\-queue}}
+\index{mode\-Changer\-\_\-queue@{mode\-Changer\-\_\-queue}!Cartesian_controller@{Cartesian\-\_\-controller}}
+\subsubsection[{mode\-Changer\-\_\-queue}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Callback\-Queue Cartesian\-\_\-controller\-::mode\-Changer\-\_\-queue\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCartesian__controller_adf47dc3a09bd9650015b25870054b60d}
+
+
+Definition at line 19 of file cartesian\-\_\-controller.\-h.
+
+
+
+Referenced by Cartesian\-\_\-controller(), and change\-Schunk\-Mode().
+
+\hypertarget{classCartesian__controller_adbb9cddf4092cba9042294740c5371eb}{\index{Cartesian\-\_\-controller@{Cartesian\-\_\-controller}!pos\-\_\-publisher\-\_\-queue@{pos\-\_\-publisher\-\_\-queue}}
+\index{pos\-\_\-publisher\-\_\-queue@{pos\-\_\-publisher\-\_\-queue}!Cartesian_controller@{Cartesian\-\_\-controller}}
+\subsubsection[{pos\-\_\-publisher\-\_\-queue}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Callback\-Queue Cartesian\-\_\-controller\-::pos\-\_\-publisher\-\_\-queue\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCartesian__controller_adbb9cddf4092cba9042294740c5371eb}
+
+
+Definition at line 34 of file cartesian\-\_\-controller.\-h.
+
+
+
+Referenced by Cartesian\-\_\-controller(), and send\-Joint\-Positions\-To\-Schunk().
+
+\hypertarget{classCartesian__controller_a144c7faad45f3d070624452c1f02ba15}{\index{Cartesian\-\_\-controller@{Cartesian\-\_\-controller}!pos\-Vel\-Getter\-\_\-queue@{pos\-Vel\-Getter\-\_\-queue}}
+\index{pos\-Vel\-Getter\-\_\-queue@{pos\-Vel\-Getter\-\_\-queue}!Cartesian_controller@{Cartesian\-\_\-controller}}
+\subsubsection[{pos\-Vel\-Getter\-\_\-queue}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Callback\-Queue Cartesian\-\_\-controller\-::pos\-Vel\-Getter\-\_\-queue\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCartesian__controller_a144c7faad45f3d070624452c1f02ba15}
+
+
+Definition at line 24 of file cartesian\-\_\-controller.\-h.
+
+
+
+Referenced by Cartesian\-\_\-controller(), and get\-Schunk\-Positions\-And\-Velocities\-And\-Update\-Thetas\-And\-D\-Thetas().
+
+\hypertarget{classCartesian__controller_a041a2eb6657c9b036a512fb21e9f5086}{\index{Cartesian\-\_\-controller@{Cartesian\-\_\-controller}!publisher\-\_\-queue@{publisher\-\_\-queue}}
+\index{publisher\-\_\-queue@{publisher\-\_\-queue}!Cartesian_controller@{Cartesian\-\_\-controller}}
+\subsubsection[{publisher\-\_\-queue}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Callback\-Queue Cartesian\-\_\-controller\-::publisher\-\_\-queue\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCartesian__controller_a041a2eb6657c9b036a512fb21e9f5086}
+
+
+Definition at line 29 of file cartesian\-\_\-controller.\-h.
+
+
+
+Referenced by Cartesian\-\_\-controller(), and set\-Schunk\-Velocities\-And\-Send().
+
+\hypertarget{classCartesian__controller_a5562129951bd802e4ded77fc716c87a0}{\index{Cartesian\-\_\-controller@{Cartesian\-\_\-controller}!r@{r}}
+\index{r@{r}!Cartesian_controller@{Cartesian\-\_\-controller}}
+\subsubsection[{r}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Robot}$\ast$ Cartesian\-\_\-controller\-::r}}\label{classCartesian__controller_a5562129951bd802e4ded77fc716c87a0}
+
+
+Definition at line 93 of file cartesian\-\_\-controller.\-h.
+
+
+
+Referenced by Cartesian\-\_\-controller(), Cartesian\-\_\-pose\-\_\-controller\-::control(), Cartesian\-\_\-velocity\-\_\-controller\-::control(), control\-Clean\-Up(), get\-Schunk\-Positions\-And\-Velocities\-And\-Update\-Thetas\-And\-D\-Thetas(), and set\-Schunk\-Velocities\-And\-Send().
+
+\hypertarget{classCartesian__controller_ab9ed5a808da204dbc612d313dc7332f4}{\index{Cartesian\-\_\-controller@{Cartesian\-\_\-controller}!ros\-\_\-pub\-\_\-buffer@{ros\-\_\-pub\-\_\-buffer}}
+\index{ros\-\_\-pub\-\_\-buffer@{ros\-\_\-pub\-\_\-buffer}!Cartesian_controller@{Cartesian\-\_\-controller}}
+\subsubsection[{ros\-\_\-pub\-\_\-buffer}]{\setlength{\rightskip}{0pt plus 5cm}int Cartesian\-\_\-controller\-::ros\-\_\-pub\-\_\-buffer\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCartesian__controller_ab9ed5a808da204dbc612d313dc7332f4}
+
+
+Definition at line 12 of file cartesian\-\_\-controller.\-h.
+
+
+
+Referenced by Cartesian\-\_\-controller(), Cartesian\-\_\-pose\-\_\-controller\-::\-Cartesian\-\_\-pose\-\_\-controller(), and Cartesian\-\_\-velocity\-\_\-controller\-::\-Cartesian\-\_\-velocity\-\_\-controller().
+
+\hypertarget{classCartesian__controller_ad90134b232217e84cb58137a9d2030bb}{\index{Cartesian\-\_\-controller@{Cartesian\-\_\-controller}!schunk\-\_\-low\-\_\-mode\-Changer\-\_\-nh@{schunk\-\_\-low\-\_\-mode\-Changer\-\_\-nh}}
+\index{schunk\-\_\-low\-\_\-mode\-Changer\-\_\-nh@{schunk\-\_\-low\-\_\-mode\-Changer\-\_\-nh}!Cartesian_controller@{Cartesian\-\_\-controller}}
+\subsubsection[{schunk\-\_\-low\-\_\-mode\-Changer\-\_\-nh}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Node\-Handle Cartesian\-\_\-controller\-::schunk\-\_\-low\-\_\-mode\-Changer\-\_\-nh\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCartesian__controller_ad90134b232217e84cb58137a9d2030bb}
+
+
+Definition at line 18 of file cartesian\-\_\-controller.\-h.
+
+
+
+Referenced by Cartesian\-\_\-controller().
+
+\hypertarget{classCartesian__controller_af06313084ef058d1f979fddeb33d5100}{\index{Cartesian\-\_\-controller@{Cartesian\-\_\-controller}!schunk\-\_\-low\-\_\-pos\-\_\-pub@{schunk\-\_\-low\-\_\-pos\-\_\-pub}}
+\index{schunk\-\_\-low\-\_\-pos\-\_\-pub@{schunk\-\_\-low\-\_\-pos\-\_\-pub}!Cartesian_controller@{Cartesian\-\_\-controller}}
+\subsubsection[{schunk\-\_\-low\-\_\-pos\-\_\-pub}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Publisher Cartesian\-\_\-controller\-::schunk\-\_\-low\-\_\-pos\-\_\-pub\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCartesian__controller_af06313084ef058d1f979fddeb33d5100}
+
+
+Definition at line 35 of file cartesian\-\_\-controller.\-h.
+
+
+
+Referenced by Cartesian\-\_\-controller(), and send\-Joint\-Positions\-To\-Schunk().
+
+\hypertarget{classCartesian__controller_aabe48e7ab08b0235d4cd94213b8faf5d}{\index{Cartesian\-\_\-controller@{Cartesian\-\_\-controller}!schunk\-\_\-low\-\_\-pos\-\_\-publisher\-\_\-nh@{schunk\-\_\-low\-\_\-pos\-\_\-publisher\-\_\-nh}}
+\index{schunk\-\_\-low\-\_\-pos\-\_\-publisher\-\_\-nh@{schunk\-\_\-low\-\_\-pos\-\_\-publisher\-\_\-nh}!Cartesian_controller@{Cartesian\-\_\-controller}}
+\subsubsection[{schunk\-\_\-low\-\_\-pos\-\_\-publisher\-\_\-nh}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Node\-Handle Cartesian\-\_\-controller\-::schunk\-\_\-low\-\_\-pos\-\_\-publisher\-\_\-nh\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCartesian__controller_aabe48e7ab08b0235d4cd94213b8faf5d}
+
+
+Definition at line 33 of file cartesian\-\_\-controller.\-h.
+
+
+
+Referenced by Cartesian\-\_\-controller().
+
+\hypertarget{classCartesian__controller_a2dd700542bd6243eef10d34811055584}{\index{Cartesian\-\_\-controller@{Cartesian\-\_\-controller}!schunk\-\_\-low\-\_\-positions\-\_\-msg@{schunk\-\_\-low\-\_\-positions\-\_\-msg}}
+\index{schunk\-\_\-low\-\_\-positions\-\_\-msg@{schunk\-\_\-low\-\_\-positions\-\_\-msg}!Cartesian_controller@{Cartesian\-\_\-controller}}
+\subsubsection[{schunk\-\_\-low\-\_\-positions\-\_\-msg}]{\setlength{\rightskip}{0pt plus 5cm}schunk\-\_\-msgs\-::\-Positions Cartesian\-\_\-controller\-::schunk\-\_\-low\-\_\-positions\-\_\-msg\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCartesian__controller_a2dd700542bd6243eef10d34811055584}
+
+
+Definition at line 36 of file cartesian\-\_\-controller.\-h.
+
+
+
+Referenced by Cartesian\-\_\-controller(), and send\-Joint\-Positions\-To\-Schunk().
+
+\hypertarget{classCartesian__controller_aeed01809bd5240663c7acfade245a386}{\index{Cartesian\-\_\-controller@{Cartesian\-\_\-controller}!schunk\-\_\-low\-\_\-pos\-Vel\-Getter\-\_\-nh@{schunk\-\_\-low\-\_\-pos\-Vel\-Getter\-\_\-nh}}
+\index{schunk\-\_\-low\-\_\-pos\-Vel\-Getter\-\_\-nh@{schunk\-\_\-low\-\_\-pos\-Vel\-Getter\-\_\-nh}!Cartesian_controller@{Cartesian\-\_\-controller}}
+\subsubsection[{schunk\-\_\-low\-\_\-pos\-Vel\-Getter\-\_\-nh}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Node\-Handle Cartesian\-\_\-controller\-::schunk\-\_\-low\-\_\-pos\-Vel\-Getter\-\_\-nh\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCartesian__controller_aeed01809bd5240663c7acfade245a386}
+
+
+Definition at line 23 of file cartesian\-\_\-controller.\-h.
+
+
+
+Referenced by Cartesian\-\_\-controller().
+
+\hypertarget{classCartesian__controller_aa6ce9cffdd307127ed814d6e5132eba2}{\index{Cartesian\-\_\-controller@{Cartesian\-\_\-controller}!schunk\-\_\-low\-\_\-pub@{schunk\-\_\-low\-\_\-pub}}
+\index{schunk\-\_\-low\-\_\-pub@{schunk\-\_\-low\-\_\-pub}!Cartesian_controller@{Cartesian\-\_\-controller}}
+\subsubsection[{schunk\-\_\-low\-\_\-pub}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Publisher Cartesian\-\_\-controller\-::schunk\-\_\-low\-\_\-pub\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCartesian__controller_aa6ce9cffdd307127ed814d6e5132eba2}
+
+
+Definition at line 30 of file cartesian\-\_\-controller.\-h.
+
+
+
+Referenced by Cartesian\-\_\-controller(), and set\-Schunk\-Velocities\-And\-Send().
+
+\hypertarget{classCartesian__controller_a7df4ce63bf0551bfa7061bc718cd68d2}{\index{Cartesian\-\_\-controller@{Cartesian\-\_\-controller}!schunk\-\_\-low\-\_\-publisher\-\_\-nh@{schunk\-\_\-low\-\_\-publisher\-\_\-nh}}
+\index{schunk\-\_\-low\-\_\-publisher\-\_\-nh@{schunk\-\_\-low\-\_\-publisher\-\_\-nh}!Cartesian_controller@{Cartesian\-\_\-controller}}
+\subsubsection[{schunk\-\_\-low\-\_\-publisher\-\_\-nh}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Node\-Handle Cartesian\-\_\-controller\-::schunk\-\_\-low\-\_\-publisher\-\_\-nh\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCartesian__controller_a7df4ce63bf0551bfa7061bc718cd68d2}
+
+
+Definition at line 28 of file cartesian\-\_\-controller.\-h.
+
+
+
+Referenced by Cartesian\-\_\-controller().
+
+\hypertarget{classCartesian__controller_a57b1869ec960e75e435e1f882a02d80e}{\index{Cartesian\-\_\-controller@{Cartesian\-\_\-controller}!schunk\-\_\-low\-\_\-stopper\-\_\-nh@{schunk\-\_\-low\-\_\-stopper\-\_\-nh}}
+\index{schunk\-\_\-low\-\_\-stopper\-\_\-nh@{schunk\-\_\-low\-\_\-stopper\-\_\-nh}!Cartesian_controller@{Cartesian\-\_\-controller}}
+\subsubsection[{schunk\-\_\-low\-\_\-stopper\-\_\-nh}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Node\-Handle Cartesian\-\_\-controller\-::schunk\-\_\-low\-\_\-stopper\-\_\-nh\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCartesian__controller_a57b1869ec960e75e435e1f882a02d80e}
+
+
+Definition at line 38 of file cartesian\-\_\-controller.\-h.
+
+
+
+Referenced by Cartesian\-\_\-controller().
+
+\hypertarget{classCartesian__controller_af59178c57bdd73d9eb474577247bbe40}{\index{Cartesian\-\_\-controller@{Cartesian\-\_\-controller}!schunk\-\_\-low\-\_\-velocities\-\_\-msg@{schunk\-\_\-low\-\_\-velocities\-\_\-msg}}
+\index{schunk\-\_\-low\-\_\-velocities\-\_\-msg@{schunk\-\_\-low\-\_\-velocities\-\_\-msg}!Cartesian_controller@{Cartesian\-\_\-controller}}
+\subsubsection[{schunk\-\_\-low\-\_\-velocities\-\_\-msg}]{\setlength{\rightskip}{0pt plus 5cm}schunk\-\_\-msgs\-::\-Velocities Cartesian\-\_\-controller\-::schunk\-\_\-low\-\_\-velocities\-\_\-msg\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCartesian__controller_af59178c57bdd73d9eb474577247bbe40}
+
+
+Definition at line 31 of file cartesian\-\_\-controller.\-h.
+
+
+
+Referenced by Cartesian\-\_\-controller(), and set\-Schunk\-Velocities\-And\-Send().
+
+\hypertarget{classCartesian__controller_aee1fc445b64c534847ff0012132a5d2c}{\index{Cartesian\-\_\-controller@{Cartesian\-\_\-controller}!schunk\-\_\-mode\-Changer\-\_\-client@{schunk\-\_\-mode\-Changer\-\_\-client}}
+\index{schunk\-\_\-mode\-Changer\-\_\-client@{schunk\-\_\-mode\-Changer\-\_\-client}!Cartesian_controller@{Cartesian\-\_\-controller}}
+\subsubsection[{schunk\-\_\-mode\-Changer\-\_\-client}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Service\-Client Cartesian\-\_\-controller\-::schunk\-\_\-mode\-Changer\-\_\-client\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCartesian__controller_aee1fc445b64c534847ff0012132a5d2c}
+
+
+Definition at line 20 of file cartesian\-\_\-controller.\-h.
+
+
+
+Referenced by Cartesian\-\_\-controller(), and change\-Schunk\-Mode().
+
+\hypertarget{classCartesian__controller_a960d66580ba058d3337c89bdf8099948}{\index{Cartesian\-\_\-controller@{Cartesian\-\_\-controller}!schunk\-\_\-mode\-Changer\-\_\-msg@{schunk\-\_\-mode\-Changer\-\_\-msg}}
+\index{schunk\-\_\-mode\-Changer\-\_\-msg@{schunk\-\_\-mode\-Changer\-\_\-msg}!Cartesian_controller@{Cartesian\-\_\-controller}}
+\subsubsection[{schunk\-\_\-mode\-Changer\-\_\-msg}]{\setlength{\rightskip}{0pt plus 5cm}schunk\-\_\-low\-::\-Control\-Mode Cartesian\-\_\-controller\-::schunk\-\_\-mode\-Changer\-\_\-msg\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCartesian__controller_a960d66580ba058d3337c89bdf8099948}
+
+
+Definition at line 21 of file cartesian\-\_\-controller.\-h.
+
+
+
+Referenced by change\-Schunk\-Mode().
+
+\hypertarget{classCartesian__controller_a5c1d9386bc5f219f2edc0d5d1b21f0da}{\index{Cartesian\-\_\-controller@{Cartesian\-\_\-controller}!schunk\-\_\-pos\-Vel\-Getter\-\_\-client@{schunk\-\_\-pos\-Vel\-Getter\-\_\-client}}
+\index{schunk\-\_\-pos\-Vel\-Getter\-\_\-client@{schunk\-\_\-pos\-Vel\-Getter\-\_\-client}!Cartesian_controller@{Cartesian\-\_\-controller}}
+\subsubsection[{schunk\-\_\-pos\-Vel\-Getter\-\_\-client}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Service\-Client Cartesian\-\_\-controller\-::schunk\-\_\-pos\-Vel\-Getter\-\_\-client\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCartesian__controller_a5c1d9386bc5f219f2edc0d5d1b21f0da}
+
+
+Definition at line 25 of file cartesian\-\_\-controller.\-h.
+
+
+
+Referenced by Cartesian\-\_\-controller(), and get\-Schunk\-Positions\-And\-Velocities\-And\-Update\-Thetas\-And\-D\-Thetas().
+
+\hypertarget{classCartesian__controller_ae368dcf84dae528612c617cc92fbb69f}{\index{Cartesian\-\_\-controller@{Cartesian\-\_\-controller}!schunk\-\_\-pos\-Vel\-Getter\-\_\-msg@{schunk\-\_\-pos\-Vel\-Getter\-\_\-msg}}
+\index{schunk\-\_\-pos\-Vel\-Getter\-\_\-msg@{schunk\-\_\-pos\-Vel\-Getter\-\_\-msg}!Cartesian_controller@{Cartesian\-\_\-controller}}
+\subsubsection[{schunk\-\_\-pos\-Vel\-Getter\-\_\-msg}]{\setlength{\rightskip}{0pt plus 5cm}schunk\-\_\-low\-::\-Get\-Pos\-Vel Cartesian\-\_\-controller\-::schunk\-\_\-pos\-Vel\-Getter\-\_\-msg\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCartesian__controller_ae368dcf84dae528612c617cc92fbb69f}
+
+
+Definition at line 26 of file cartesian\-\_\-controller.\-h.
+
+
+
+Referenced by get\-Schunk\-Positions\-And\-Velocities\-And\-Update\-Thetas\-And\-D\-Thetas().
+
+\hypertarget{classCartesian__controller_a4ea7350e0f797c49bc51d3433a761aff}{\index{Cartesian\-\_\-controller@{Cartesian\-\_\-controller}!schunk\-\_\-stopper\-\_\-client@{schunk\-\_\-stopper\-\_\-client}}
+\index{schunk\-\_\-stopper\-\_\-client@{schunk\-\_\-stopper\-\_\-client}!Cartesian_controller@{Cartesian\-\_\-controller}}
+\subsubsection[{schunk\-\_\-stopper\-\_\-client}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Service\-Client Cartesian\-\_\-controller\-::schunk\-\_\-stopper\-\_\-client\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCartesian__controller_a4ea7350e0f797c49bc51d3433a761aff}
+
+
+Definition at line 40 of file cartesian\-\_\-controller.\-h.
+
+
+
+Referenced by Cartesian\-\_\-controller(), and stop\-Schunk().
+
+\hypertarget{classCartesian__controller_a29581ed2f2d8bb97c55e16868bbcc8bd}{\index{Cartesian\-\_\-controller@{Cartesian\-\_\-controller}!schunk\-\_\-stopper\-\_\-msg@{schunk\-\_\-stopper\-\_\-msg}}
+\index{schunk\-\_\-stopper\-\_\-msg@{schunk\-\_\-stopper\-\_\-msg}!Cartesian_controller@{Cartesian\-\_\-controller}}
+\subsubsection[{schunk\-\_\-stopper\-\_\-msg}]{\setlength{\rightskip}{0pt plus 5cm}schunk\-\_\-low\-::\-Stop Cartesian\-\_\-controller\-::schunk\-\_\-stopper\-\_\-msg\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCartesian__controller_a29581ed2f2d8bb97c55e16868bbcc8bd}
+
+
+Definition at line 41 of file cartesian\-\_\-controller.\-h.
+
+
+
+Referenced by stop\-Schunk().
+
+\hypertarget{classCartesian__controller_a98fdac06d136ac3dba0102d97cd5dd36}{\index{Cartesian\-\_\-controller@{Cartesian\-\_\-controller}!S\-J@{S\-J}}
+\index{S\-J@{S\-J}!Cartesian_controller@{Cartesian\-\_\-controller}}
+\subsubsection[{S\-J}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\-G\-M\-A\-T\-R\-I\-X} Cartesian\-\_\-controller\-::\-S\-J\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCartesian__controller_a98fdac06d136ac3dba0102d97cd5dd36}
+
+
+Definition at line 45 of file cartesian\-\_\-controller.\-h.
+
+
+
+Referenced by Cartesian\-\_\-controller(), Cartesian\-\_\-pose\-\_\-controller\-::control(), Cartesian\-\_\-velocity\-\_\-controller\-::control(), and control\-Clean\-Up().
+
+\hypertarget{classCartesian__controller_a52eb090400d8dafaa22aecb037788a66}{\index{Cartesian\-\_\-controller@{Cartesian\-\_\-controller}!stopper\-\_\-queue@{stopper\-\_\-queue}}
+\index{stopper\-\_\-queue@{stopper\-\_\-queue}!Cartesian_controller@{Cartesian\-\_\-controller}}
+\subsubsection[{stopper\-\_\-queue}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Callback\-Queue Cartesian\-\_\-controller\-::stopper\-\_\-queue\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCartesian__controller_a52eb090400d8dafaa22aecb037788a66}
+
+
+Definition at line 39 of file cartesian\-\_\-controller.\-h.
+
+
+
+Referenced by Cartesian\-\_\-controller(), and stop\-Schunk().
+
+\hypertarget{classCartesian__controller_a35c6ddbb9624878f2807ff644a33e832}{\index{Cartesian\-\_\-controller@{Cartesian\-\_\-controller}!T@{T}}
+\index{T@{T}!Cartesian_controller@{Cartesian\-\_\-controller}}
+\subsubsection[{T}]{\setlength{\rightskip}{0pt plus 5cm}double Cartesian\-\_\-controller\-::\-T\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCartesian__controller_a35c6ddbb9624878f2807ff644a33e832}
+
+
+Definition at line 67 of file cartesian\-\_\-controller.\-h.
+
+
+
+Referenced by Cartesian\-\_\-controller(), Cartesian\-\_\-pose\-\_\-controller\-::control(), and Cartesian\-\_\-velocity\-\_\-controller\-::control().
+
+\hypertarget{classCartesian__controller_a0a0f818dad601cd9e3e26cb6959b8eb6}{\index{Cartesian\-\_\-controller@{Cartesian\-\_\-controller}!Thetas@{Thetas}}
+\index{Thetas@{Thetas}!Cartesian_controller@{Cartesian\-\_\-controller}}
+\subsubsection[{Thetas}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\-G\-M\-A\-T\-R\-I\-X} Cartesian\-\_\-controller\-::\-Thetas\hspace{0.3cm}{\ttfamily [protected]}}}\label{classCartesian__controller_a0a0f818dad601cd9e3e26cb6959b8eb6}
+
+
+Definition at line 51 of file cartesian\-\_\-controller.\-h.
+
+
+
+Referenced by Cartesian\-\_\-controller(), Cartesian\-\_\-pose\-\_\-controller\-::control(), Cartesian\-\_\-velocity\-\_\-controller\-::control(), control\-Clean\-Up(), and get\-Schunk\-Positions\-And\-Velocities\-And\-Update\-Thetas\-And\-D\-Thetas().
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+schunk\-\_\-high/include/schunk\-\_\-high/\hyperlink{cartesian__controller_8h}{cartesian\-\_\-controller.\-h}\item 
+schunk\-\_\-high/src/\hyperlink{cartesian__controller_8cpp}{cartesian\-\_\-controller.\-cpp}\end{DoxyCompactItemize}

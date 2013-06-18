@@ -1,0 +1,243 @@
+\hypertarget{CommunicationV0_2spi__functions_8h}{\section{Communication\-V0/spi\-\_\-functions.h File Reference}
+\label{CommunicationV0_2spi__functions_8h}\index{Communication\-V0/spi\-\_\-functions.\-h@{Communication\-V0/spi\-\_\-functions.\-h}}
+}
+{\ttfamily \#include $<$stdint.\-h$>$}\\*
+{\ttfamily \#include $<$unistd.\-h$>$}\\*
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$getopt.\-h$>$}\\*
+{\ttfamily \#include $<$fcntl.\-h$>$}\\*
+{\ttfamily \#include $<$sys/ioctl.\-h$>$}\\*
+{\ttfamily \#include $<$linux/types.\-h$>$}\\*
+{\ttfamily \#include $<$linux/spi/spidev.\-h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{CommunicationV0_2spi__functions_8h_a25f003de16c08a4888b69f619d70f427}{A\-R\-R\-A\-Y\-\_\-\-S\-I\-Z\-E}(a)~(sizeof(a) / sizeof((a)\mbox{[}0\mbox{]}))
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{CommunicationV0_2spi__functions_8h_a70764aca888e93b0329e7a62c9312704}{spi\-\_\-init} (uint8\-\_\-t mode, uint32\-\_\-t speed, uint8\-\_\-t cs)
+\item 
+void \hyperlink{CommunicationV0_2spi__functions_8h_a3fb02c6fc5990df81645306a81291624}{spi\-\_\-end} (int \hyperlink{CommunicationV0_2communication_8c_a4788f0a5355494bc6c13690e28f43783}{spi\-\_\-dev})
+\item 
+short int \hyperlink{CommunicationV0_2spi__functions_8h_a405e3e13b63a628c1be12ccba7e2ebbf}{adc\-\_\-read} (int \hyperlink{CommunicationV0_2communication_8c_a4788f0a5355494bc6c13690e28f43783}{spi\-\_\-dev}, uint8\-\_\-t ch, uint8\-\_\-t sgl)
+\item 
+uint8\-\_\-t \hyperlink{CommunicationV0_2spi__functions_8h_a9fe5e6b0c564de89398a80e1689b717f}{dac\-\_\-write} (int \hyperlink{CommunicationV0_2communication_8c_a4788f0a5355494bc6c13690e28f43783}{spi\-\_\-dev}, uint8\-\_\-t ch, uint8\-\_\-t \-\_\-shdn, unsigned short int data)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{CommunicationV0_2spi__functions_8h_a25f003de16c08a4888b69f619d70f427}{\index{Communication\-V0/spi\-\_\-functions.\-h@{Communication\-V0/spi\-\_\-functions.\-h}!A\-R\-R\-A\-Y\-\_\-\-S\-I\-Z\-E@{A\-R\-R\-A\-Y\-\_\-\-S\-I\-Z\-E}}
+\index{A\-R\-R\-A\-Y\-\_\-\-S\-I\-Z\-E@{A\-R\-R\-A\-Y\-\_\-\-S\-I\-Z\-E}!CommunicationV0/spi_functions.h@{Communication\-V0/spi\-\_\-functions.\-h}}
+\subsubsection[{A\-R\-R\-A\-Y\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-R\-R\-A\-Y\-\_\-\-S\-I\-Z\-E(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~(sizeof(a) / sizeof((a)\mbox{[}0\mbox{]}))}}\label{CommunicationV0_2spi__functions_8h_a25f003de16c08a4888b69f619d70f427}
+
+
+Definition at line 29 of file spi\-\_\-functions.\-h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{CommunicationV0_2spi__functions_8h_a405e3e13b63a628c1be12ccba7e2ebbf}{\index{Communication\-V0/spi\-\_\-functions.\-h@{Communication\-V0/spi\-\_\-functions.\-h}!adc\-\_\-read@{adc\-\_\-read}}
+\index{adc\-\_\-read@{adc\-\_\-read}!CommunicationV0/spi_functions.h@{Communication\-V0/spi\-\_\-functions.\-h}}
+\subsubsection[{adc\-\_\-read}]{\setlength{\rightskip}{0pt plus 5cm}short int adc\-\_\-read (
+\begin{DoxyParamCaption}
+\item[{int}]{spi\-\_\-dev, }
+\item[{uint8\-\_\-t}]{ch, }
+\item[{uint8\-\_\-t}]{sgl}
+\end{DoxyParamCaption}
+)}}\label{CommunicationV0_2spi__functions_8h_a405e3e13b63a628c1be12ccba7e2ebbf}
+
+
+Definition at line 165 of file spi\-\_\-functions.\-c.
+
+
+
+References A\-R\-R\-A\-Y\-\_\-\-S\-I\-Z\-E, delay, and pabort().
+
+
+\begin{DoxyCode}
+\{
+        \textcolor{keywordtype}{int} ret;
+        \textcolor{keywordflow}{if}( ch<0 || ch>7 ) \textcolor{keywordflow}{return} \hyperlink{communication_2spi__functions_8c_aabfca8320b0c76774f01467703e17302}{pabort}(\textcolor{stringliteral}{"Wrong channel value for ADC"});
+        uint8\_t tx[] = \{(ch>>2)|(sgl<<1)|0x04, ch<<6, 0x00,\};
+        uint8\_t rx[\hyperlink{communication_2spi__functions_8h_a25f003de16c08a4888b69f619d70f427}{ARRAY\_SIZE}(tx)] = \{0, \};
+        \textcolor{keyword}{struct }spi\_ioc\_transfer tr = \{
+                .tx\_buf = (\textcolor{keywordtype}{unsigned} long)tx,
+                .rx\_buf = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long})rx,
+                .len = \hyperlink{communication_2spi__functions_8h_a25f003de16c08a4888b69f619d70f427}{ARRAY\_SIZE}(tx),
+                .delay\_usecs = \hyperlink{CommunicationV0_2spi__functions_8c_adc4674f6ea53803d98fa2ec36759e77d}{delay},
+                .speed\_hz = 0,
+                .bits\_per\_word = 0,
+        \};
+
+        ret = ioctl(\hyperlink{CommunicationV0_2communication_8c_a4788f0a5355494bc6c13690e28f43783}{spi\_dev}, SPI\_IOC\_MESSAGE(1), &tr);
+        \textcolor{keywordflow}{if} (ret == 1) \textcolor{keywordflow}{return} \hyperlink{communication_2spi__functions_8c_aabfca8320b0c76774f01467703e17302}{pabort}(\textcolor{stringliteral}{"can't send spi message"});
+\textcolor{comment}{//printf("\(\backslash\)nRx = 0x%X 0x%X 0x%X\(\backslash\)n",rx[0],rx[1],rx[2]);}
+\textcolor{comment}{//printf("\(\backslash\)nValor retornado pelo conversor AD:
+       %d\(\backslash\)n\(\backslash\)n",rx[2]+((rx[1]&0x0F)<<8));}
+        \textcolor{keywordflow}{return} rx[2]+((rx[1]&0x0F)<<8);
+\}
+\end{DoxyCode}
+\hypertarget{CommunicationV0_2spi__functions_8h_a9fe5e6b0c564de89398a80e1689b717f}{\index{Communication\-V0/spi\-\_\-functions.\-h@{Communication\-V0/spi\-\_\-functions.\-h}!dac\-\_\-write@{dac\-\_\-write}}
+\index{dac\-\_\-write@{dac\-\_\-write}!CommunicationV0/spi_functions.h@{Communication\-V0/spi\-\_\-functions.\-h}}
+\subsubsection[{dac\-\_\-write}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t dac\-\_\-write (
+\begin{DoxyParamCaption}
+\item[{int}]{spi\-\_\-dev, }
+\item[{uint8\-\_\-t}]{ch, }
+\item[{uint8\-\_\-t}]{\-\_\-shdn, }
+\item[{unsigned short int}]{data}
+\end{DoxyParamCaption}
+)}}\label{CommunicationV0_2spi__functions_8h_a9fe5e6b0c564de89398a80e1689b717f}
+
+
+Definition at line 196 of file spi\-\_\-functions.\-c.
+
+
+
+References A\-R\-R\-A\-Y\-\_\-\-S\-I\-Z\-E, delay, F\-A\-I\-L\-U\-R\-E, and pabort().
+
+
+
+Referenced by actuate().
+
+
+\begin{DoxyCode}
+\{
+        \textcolor{keywordtype}{int} ret;
+        \textcolor{keyword}{union }txunion\{
+        \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} data16;
+        uint8\_t data8[2];
+        \}txunion;
+        \textcolor{keywordflow}{if}( ch<0 || ch>1 ) \textcolor{keywordflow}{return} \hyperlink{communication_2spi__functions_8c_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};\textcolor{comment}{//pabort("Wrong channel value
+       for DAC");}
+        \textcolor{keywordflow}{if}( data>4095 ) \textcolor{keywordflow}{return} \hyperlink{communication_2spi__functions_8c_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};\textcolor{comment}{//pabort("Value exceeded for
+       DAC"); }
+        txunion.data16 = 0x6000|(ch<<15)|(\_shdn<<12)|(data&0x0FFF);
+        uint8\_t tx[] = \{txunion.data8[1], txunion.data8[0]\};
+        uint8\_t rx[\hyperlink{communication_2spi__functions_8h_a25f003de16c08a4888b69f619d70f427}{ARRAY\_SIZE}(tx)] = \{0, \};
+        \textcolor{keyword}{struct }spi\_ioc\_transfer tr = \{
+                .tx\_buf = (\textcolor{keywordtype}{unsigned} long)tx,
+                .rx\_buf = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long})rx,
+                .len = \hyperlink{communication_2spi__functions_8h_a25f003de16c08a4888b69f619d70f427}{ARRAY\_SIZE}(tx),
+                .delay\_usecs = \hyperlink{communication_2spi__functions_8c_adc4674f6ea53803d98fa2ec36759e77d}{delay},
+                .speed\_hz = 0,
+                .bits\_per\_word = 0,
+        \};
+
+        ret = ioctl(\hyperlink{CommunicationV0_2communication_8c_a4788f0a5355494bc6c13690e28f43783}{spi\_dev}, SPI\_IOC\_MESSAGE(1), &tr);
+        \textcolor{keywordflow}{if} (ret == 1) \textcolor{keywordflow}{return} \hyperlink{communication_2spi__functions_8c_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};\textcolor{comment}{//pabort("can't send spi message");}
+\textcolor{comment}{//printf("\(\backslash\)nRx = 0x%X 0x%X 0x%X\(\backslash\)n",rx[0],rx[1],rx[2]);}
+\textcolor{comment}{//printf("\(\backslash\)nValor retornado pelo conversor AD:
+       %d\(\backslash\)n\(\backslash\)n",rx[2]+((rx[1]&0x0F)<<8));}
+        \textcolor{keywordflow}{return} 1;
+\}
+\end{DoxyCode}
+\hypertarget{CommunicationV0_2spi__functions_8h_a3fb02c6fc5990df81645306a81291624}{\index{Communication\-V0/spi\-\_\-functions.\-h@{Communication\-V0/spi\-\_\-functions.\-h}!spi\-\_\-end@{spi\-\_\-end}}
+\index{spi\-\_\-end@{spi\-\_\-end}!CommunicationV0/spi_functions.h@{Communication\-V0/spi\-\_\-functions.\-h}}
+\subsubsection[{spi\-\_\-end}]{\setlength{\rightskip}{0pt plus 5cm}void spi\-\_\-end (
+\begin{DoxyParamCaption}
+\item[{int}]{spi\-\_\-dev}
+\end{DoxyParamCaption}
+)}}\label{CommunicationV0_2spi__functions_8h_a3fb02c6fc5990df81645306a81291624}
+
+
+Definition at line 162 of file spi\-\_\-functions.\-c.
+
+
+\begin{DoxyCode}
+\{
+  close(\hyperlink{CommunicationV0_2communication_8c_a4788f0a5355494bc6c13690e28f43783}{spi\_dev});
+  \textcolor{keywordflow}{return};
+\}
+\end{DoxyCode}
+\hypertarget{CommunicationV0_2spi__functions_8h_a70764aca888e93b0329e7a62c9312704}{\index{Communication\-V0/spi\-\_\-functions.\-h@{Communication\-V0/spi\-\_\-functions.\-h}!spi\-\_\-init@{spi\-\_\-init}}
+\index{spi\-\_\-init@{spi\-\_\-init}!CommunicationV0/spi_functions.h@{Communication\-V0/spi\-\_\-functions.\-h}}
+\subsubsection[{spi\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}int spi\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{mode, }
+\item[{uint32\-\_\-t}]{speed, }
+\item[{uint8\-\_\-t}]{cs}
+\end{DoxyParamCaption}
+)}}\label{CommunicationV0_2spi__functions_8h_a70764aca888e93b0329e7a62c9312704}
+
+
+Definition at line 99 of file spi\-\_\-functions.\-c.
+
+
+
+References bits, pabort(), and spi\-\_\-dev.
+
+
+
+Referenced by devices\-\_\-init().
+
+
+\begin{DoxyCode}
+\{
+        \textcolor{keywordtype}{int} ret = 0;
+        \textcolor{keywordtype}{int} \hyperlink{CommunicationV0_2communication_8c_a4788f0a5355494bc6c13690e28f43783}{spi\_dev};
+        \textcolor{keywordtype}{char} *device;
+
+        \textcolor{comment}{//parse\_opts(argc, argv);}
+        \textcolor{keywordflow}{switch}(cs)\{
+          \textcolor{keywordflow}{case} 0:
+            device = \textcolor{stringliteral}{"/dev/spidev1.0"};
+            \textcolor{keywordflow}{break};
+          \textcolor{keywordflow}{case} 1:
+            device = \textcolor{stringliteral}{"/dev/spidev1.1"};
+            \textcolor{keywordflow}{break};
+          \textcolor{keywordflow}{default}:
+            \textcolor{keywordflow}{return} \hyperlink{communication_2spi__functions_8c_aabfca8320b0c76774f01467703e17302}{pabort}(\textcolor{stringliteral}{"invalid chip select value"});
+        \}
+            
+        
+        spi\_dev = open(device, O\_RDWR);
+        \textcolor{keywordflow}{if} (spi\_dev < 0)
+                \textcolor{keywordflow}{return} \hyperlink{communication_2spi__functions_8c_aabfca8320b0c76774f01467703e17302}{pabort}(\textcolor{stringliteral}{"can't open device"});
+\textcolor{comment}{//printf("\(\backslash\)nspi\_dev = %d\(\backslash\)n",spi\_dev);}
+        \textcolor{comment}{/*}
+\textcolor{comment}{         * spi mode}
+\textcolor{comment}{         */}
+        ret = ioctl(spi\_dev, SPI\_IOC\_WR\_MODE, &mode);
+        \textcolor{keywordflow}{if} (ret == -1)
+                \textcolor{keywordflow}{return} \hyperlink{communication_2spi__functions_8c_aabfca8320b0c76774f01467703e17302}{pabort}(\textcolor{stringliteral}{"can't set spi mode"});
+
+        ret = ioctl(spi\_dev, SPI\_IOC\_RD\_MODE, &mode);
+        \textcolor{keywordflow}{if} (ret == -1)
+                \textcolor{keywordflow}{return} \hyperlink{communication_2spi__functions_8c_aabfca8320b0c76774f01467703e17302}{pabort}(\textcolor{stringliteral}{"can't get spi mode"});
+
+        \textcolor{comment}{/*}
+\textcolor{comment}{         * bits per word}
+\textcolor{comment}{         */}
+        ret = ioctl(spi\_dev, SPI\_IOC\_WR\_BITS\_PER\_WORD, &\hyperlink{communication_2spi__functions_8c_a46a6da6b1936191571fd30b2a749f38c}{bits});
+        \textcolor{keywordflow}{if} (ret == -1)
+                \textcolor{keywordflow}{return} \hyperlink{communication_2spi__functions_8c_aabfca8320b0c76774f01467703e17302}{pabort}(\textcolor{stringliteral}{"can't set bits per word"});
+
+        ret = ioctl(spi\_dev, SPI\_IOC\_RD\_BITS\_PER\_WORD, &\hyperlink{communication_2spi__functions_8c_a46a6da6b1936191571fd30b2a749f38c}{bits});
+        \textcolor{keywordflow}{if} (ret == -1)
+                \textcolor{keywordflow}{return} \hyperlink{communication_2spi__functions_8c_aabfca8320b0c76774f01467703e17302}{pabort}(\textcolor{stringliteral}{"can't get bits per word"});
+
+        \textcolor{comment}{/*}
+\textcolor{comment}{         * max speed hz}
+\textcolor{comment}{         */}
+        ret = ioctl(spi\_dev, SPI\_IOC\_WR\_MAX\_SPEED\_HZ, &speed);
+        \textcolor{keywordflow}{if} (ret == -1)
+                \textcolor{keywordflow}{return} \hyperlink{communication_2spi__functions_8c_aabfca8320b0c76774f01467703e17302}{pabort}(\textcolor{stringliteral}{"can't set max speed hz"});
+
+        ret = ioctl(spi\_dev, SPI\_IOC\_RD\_MAX\_SPEED\_HZ, &speed);
+        \textcolor{keywordflow}{if} (ret == -1)
+                \textcolor{keywordflow}{return} \hyperlink{communication_2spi__functions_8c_aabfca8320b0c76774f01467703e17302}{pabort}(\textcolor{stringliteral}{"can't get max speed hz"});
+
+        \textcolor{comment}{//printf("spi mode: %d\(\backslash\)n", mode);}
+        \textcolor{comment}{//printf("bits per word: %d\(\backslash\)n", bits);}
+        \textcolor{comment}{//printf("max speed: %d Hz (%d KHz)\(\backslash\)n", speed, speed/1000);}
+
+        \textcolor{keywordflow}{return} \hyperlink{CommunicationV0_2communication_8c_a4788f0a5355494bc6c13690e28f43783}{spi\_dev};
+\}
+\end{DoxyCode}

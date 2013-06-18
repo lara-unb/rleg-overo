@@ -1,0 +1,893 @@
+\hypertarget{gdatalogger_8h}{\section{gdatalogger/gdatalogger.h File Reference}
+\label{gdatalogger_8h}\index{gdatalogger/gdatalogger.\-h@{gdatalogger/gdatalogger.\-h}}
+}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structGDATALOGGERVARIABLE}{G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-V\-A\-R\-I\-A\-B\-L\-E}
+\item 
+struct \hyperlink{structGDATALOGGER}{G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R}
+\item 
+struct \hyperlink{structGDATALOGGERIPC__SHM}{G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-I\-P\-C\-\_\-\-S\-H\-M}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{gdatalogger_8h_a2ddc529b6734b7a9222a5fbd1305581e}{G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-M\-A\-X\-V\-A\-R\-I\-A\-B\-L\-E\-S}~150
+\item 
+\#define \hyperlink{gdatalogger_8h_addb46d3c73aa6e1b2a3dfb4de2211424}{Q\-U\-E\-U\-E\-\_\-\-M\-A\-X\-D\-E\-S\-T\-I\-N\-A\-T\-I\-O\-N\-S}~4
+\item 
+\#define \hyperlink{gdatalogger_8h_a56fdd07b22a8488e0d8f2c1a53fe20cc}{Q\-U\-E\-U\-E\-\_\-\-D\-E\-S\-T\-I\-N\-A\-T\-I\-O\-N\-\_\-\-F\-I\-L\-E}~\hyperlink{gqueue_8h_a8b86910c01a28f01838c038cc34672e1}{Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-\_\-0}
+\item 
+\#define \hyperlink{gdatalogger_8h_ad022a1a3ec941cb515402542b2d8a1c4}{Q\-U\-E\-U\-E\-\_\-\-D\-E\-S\-T\-I\-N\-A\-T\-I\-O\-N\-\_\-\-I\-P\-C}~\hyperlink{gqueue_8h_aaaaea04d929e35142e01be4c56516370}{Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-\_\-1}
+\item 
+\#define \hyperlink{gdatalogger_8h_a846b906ef420cb120cc8ae822bf2ab80}{Q\-U\-E\-U\-E\-\_\-\-D\-E\-S\-T\-I\-N\-A\-T\-I\-O\-N\-\_\-\-U\-S\-E\-R1}~\hyperlink{gqueue_8h_abf70c568abf45a19626d44ae6ce335f1}{Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-\_\-2}
+\item 
+\#define \hyperlink{gdatalogger_8h_a87a1b67f6568d2978d23385e37a6eb02}{Q\-U\-E\-U\-E\-\_\-\-D\-E\-S\-T\-I\-N\-A\-T\-I\-O\-N\-\_\-\-U\-S\-E\-R2}~\hyperlink{gqueue_8h_a59e133f0d1912726949366d6b08cd3f5}{Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-\_\-3}
+\item 
+\#define \hyperlink{gdatalogger_8h_a00f4336631a938f844b41833ca088ca2}{G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-M\-A\-X\-Q\-U\-E\-U\-E\-S\-I\-Z\-E}~1000
+\item 
+\#define \hyperlink{gdatalogger_8h_af1565d64ddabc6f1a1c3fc5fa3e7a123}{G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-F\-L\-A\-G\-I\-D\-D\-L\-E}~0
+\item 
+\#define \hyperlink{gdatalogger_8h_af760bb7f990f73e634afb534bc64068e}{G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-F\-L\-A\-G\-R\-E\-Q\-U\-E\-S\-T\-D\-A\-T\-A}~1
+\item 
+\#define \hyperlink{gdatalogger_8h_a3ffb6bf6a27e2f09d4a3fcac933f8dd4}{G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-F\-L\-A\-G\-D\-A\-T\-A\-A\-V\-A\-I\-L\-A\-B\-L\-E}~2
+\item 
+\#define \hyperlink{gdatalogger_8h_ade1120d52c09baae1bd54b6a1efbf97b}{G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-F\-L\-A\-G\-N\-O\-T\-E\-X\-I\-S\-T}~3
+\item 
+\#define \hyperlink{gdatalogger_8h_a719ff7948a9cc265bd0c180f521ad069}{G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-F\-L\-A\-G\-T\-I\-M\-E\-O\-U\-T}~4
+\item 
+\#define \hyperlink{gdatalogger_8h_aa0e5ac4945c0f7143f7337d187cb07ae}{G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-S\-T\-A\-T\-E\-F\-I\-L\-E}~\char`\"{}/gdatalogger.\-shm\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \\*
+\hyperlink{structGDATALOGGERVARIABLE}{G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-V\-A\-R\-I\-A\-B\-L\-E} $\ast$ \hyperlink{gdatalogger_8h_a6ad1b1fa4c8c70b9aa6487a0095e6a89}{P\-G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-V\-A\-R\-I\-A\-B\-L\-E}
+\item 
+typedef struct \hyperlink{structGDATALOGGER}{G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R} $\ast$ \hyperlink{gdatalogger_8h_af0f750acdddf86730aeeec5c2b5254b4}{P\-G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{gdatalogger_8h_ab5eeb22d60836d57bae0dde821337045}{g\-Data\-Logger\-\_\-\-Init} (\hyperlink{gdatalogger_8h_af0f750acdddf86730aeeec5c2b5254b4}{P\-G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R} pg\-Data\-Logger, char $\ast$filename, char $\ast$dirname)
+\item 
+int \hyperlink{gdatalogger_8h_a3f8f2b3c3f5edc72c3a1887965a544c1}{g\-Data\-Logger\-\_\-\-Declare\-Variable} (\hyperlink{gdatalogger_8h_af0f750acdddf86730aeeec5c2b5254b4}{P\-G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R} pg\-Data\-Logger, char $\ast$varname, char $\ast$varunit, int nrows, int ncols, int queuesize)
+\item 
+int \hyperlink{gdatalogger_8h_a32674e7c2afa8b78e99a0070cf4bcaf9}{g\-Data\-Logger\-\_\-\-Insert\-Variable} (\hyperlink{gdatalogger_8h_af0f750acdddf86730aeeec5c2b5254b4}{P\-G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R} pg\-Data\-Logger, char $\ast$varname, double $\ast$varvalue)
+\item 
+int \hyperlink{gdatalogger_8h_a555a2628f1bfa33692e5f51961d287a5}{g\-Data\-Logger\-\_\-\-I\-P\-C\-\_\-\-Retrieve\-Variable} (char $\ast$varname, char $\ast$varunit, double $\ast$pbuffer, int $\ast$bufferlen)
+\item 
+int \hyperlink{gdatalogger_8h_a05dc8ce832b941280d7de26057992640}{g\-Data\-Logger\-\_\-\-Matfile\-Update} (\hyperlink{gdatalogger_8h_af0f750acdddf86730aeeec5c2b5254b4}{P\-G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R} pg\-Data\-Logger)
+\item 
+int \hyperlink{gdatalogger_8h_afa42a993493cf98d32da11e4279816f7}{g\-Data\-Logger\-\_\-\-I\-P\-C\-Update} (\hyperlink{gdatalogger_8h_af0f750acdddf86730aeeec5c2b5254b4}{P\-G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R} pg\-Data\-Logger)
+\item 
+int \hyperlink{gdatalogger_8h_a0ac95f84c6ee484c4ad0351530f1c468}{g\-Data\-Logger\-\_\-\-Close} (\hyperlink{gdatalogger_8h_af0f750acdddf86730aeeec5c2b5254b4}{P\-G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R} pg\-Data\-Logger)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{gdatalogger_8h_a3ffb6bf6a27e2f09d4a3fcac933f8dd4}{\index{gdatalogger.\-h@{gdatalogger.\-h}!G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-F\-L\-A\-G\-D\-A\-T\-A\-A\-V\-A\-I\-L\-A\-B\-L\-E@{G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-F\-L\-A\-G\-D\-A\-T\-A\-A\-V\-A\-I\-L\-A\-B\-L\-E}}
+\index{G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-F\-L\-A\-G\-D\-A\-T\-A\-A\-V\-A\-I\-L\-A\-B\-L\-E@{G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-F\-L\-A\-G\-D\-A\-T\-A\-A\-V\-A\-I\-L\-A\-B\-L\-E}!gdatalogger.h@{gdatalogger.\-h}}
+\subsubsection[{G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-F\-L\-A\-G\-D\-A\-T\-A\-A\-V\-A\-I\-L\-A\-B\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-F\-L\-A\-G\-D\-A\-T\-A\-A\-V\-A\-I\-L\-A\-B\-L\-E~2}}\label{gdatalogger_8h_a3ffb6bf6a27e2f09d4a3fcac933f8dd4}
+
+
+Definition at line 41 of file gdatalogger.\-h.
+
+
+
+Referenced by g\-Data\-Logger\-\_\-\-I\-P\-C\-\_\-\-Retrieve\-Variable(), and g\-Data\-Logger\-\_\-\-I\-P\-C\-Update().
+
+\hypertarget{gdatalogger_8h_af1565d64ddabc6f1a1c3fc5fa3e7a123}{\index{gdatalogger.\-h@{gdatalogger.\-h}!G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-F\-L\-A\-G\-I\-D\-D\-L\-E@{G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-F\-L\-A\-G\-I\-D\-D\-L\-E}}
+\index{G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-F\-L\-A\-G\-I\-D\-D\-L\-E@{G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-F\-L\-A\-G\-I\-D\-D\-L\-E}!gdatalogger.h@{gdatalogger.\-h}}
+\subsubsection[{G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-F\-L\-A\-G\-I\-D\-D\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-F\-L\-A\-G\-I\-D\-D\-L\-E~0}}\label{gdatalogger_8h_af1565d64ddabc6f1a1c3fc5fa3e7a123}
+
+
+Definition at line 39 of file gdatalogger.\-h.
+
+
+
+Referenced by g\-Data\-Logger\-\_\-\-Init(), and g\-Data\-Logger\-\_\-\-I\-P\-C\-\_\-\-Retrieve\-Variable().
+
+\hypertarget{gdatalogger_8h_ade1120d52c09baae1bd54b6a1efbf97b}{\index{gdatalogger.\-h@{gdatalogger.\-h}!G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-F\-L\-A\-G\-N\-O\-T\-E\-X\-I\-S\-T@{G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-F\-L\-A\-G\-N\-O\-T\-E\-X\-I\-S\-T}}
+\index{G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-F\-L\-A\-G\-N\-O\-T\-E\-X\-I\-S\-T@{G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-F\-L\-A\-G\-N\-O\-T\-E\-X\-I\-S\-T}!gdatalogger.h@{gdatalogger.\-h}}
+\subsubsection[{G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-F\-L\-A\-G\-N\-O\-T\-E\-X\-I\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-F\-L\-A\-G\-N\-O\-T\-E\-X\-I\-S\-T~3}}\label{gdatalogger_8h_ade1120d52c09baae1bd54b6a1efbf97b}
+
+
+Definition at line 42 of file gdatalogger.\-h.
+
+
+
+Referenced by g\-Data\-Logger\-\_\-\-I\-P\-C\-\_\-\-Retrieve\-Variable(), and g\-Data\-Logger\-\_\-\-I\-P\-C\-Update().
+
+\hypertarget{gdatalogger_8h_af760bb7f990f73e634afb534bc64068e}{\index{gdatalogger.\-h@{gdatalogger.\-h}!G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-F\-L\-A\-G\-R\-E\-Q\-U\-E\-S\-T\-D\-A\-T\-A@{G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-F\-L\-A\-G\-R\-E\-Q\-U\-E\-S\-T\-D\-A\-T\-A}}
+\index{G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-F\-L\-A\-G\-R\-E\-Q\-U\-E\-S\-T\-D\-A\-T\-A@{G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-F\-L\-A\-G\-R\-E\-Q\-U\-E\-S\-T\-D\-A\-T\-A}!gdatalogger.h@{gdatalogger.\-h}}
+\subsubsection[{G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-F\-L\-A\-G\-R\-E\-Q\-U\-E\-S\-T\-D\-A\-T\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-F\-L\-A\-G\-R\-E\-Q\-U\-E\-S\-T\-D\-A\-T\-A~1}}\label{gdatalogger_8h_af760bb7f990f73e634afb534bc64068e}
+
+
+Definition at line 40 of file gdatalogger.\-h.
+
+
+
+Referenced by g\-Data\-Logger\-\_\-\-I\-P\-C\-\_\-\-Retrieve\-Variable(), and g\-Data\-Logger\-\_\-\-I\-P\-C\-Update().
+
+\hypertarget{gdatalogger_8h_a719ff7948a9cc265bd0c180f521ad069}{\index{gdatalogger.\-h@{gdatalogger.\-h}!G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-F\-L\-A\-G\-T\-I\-M\-E\-O\-U\-T@{G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-F\-L\-A\-G\-T\-I\-M\-E\-O\-U\-T}}
+\index{G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-F\-L\-A\-G\-T\-I\-M\-E\-O\-U\-T@{G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-F\-L\-A\-G\-T\-I\-M\-E\-O\-U\-T}!gdatalogger.h@{gdatalogger.\-h}}
+\subsubsection[{G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-F\-L\-A\-G\-T\-I\-M\-E\-O\-U\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-F\-L\-A\-G\-T\-I\-M\-E\-O\-U\-T~4}}\label{gdatalogger_8h_a719ff7948a9cc265bd0c180f521ad069}
+
+
+Definition at line 43 of file gdatalogger.\-h.
+
+
+
+Referenced by g\-Data\-Logger\-\_\-\-I\-P\-C\-\_\-\-Retrieve\-Variable().
+
+\hypertarget{gdatalogger_8h_a00f4336631a938f844b41833ca088ca2}{\index{gdatalogger.\-h@{gdatalogger.\-h}!G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-M\-A\-X\-Q\-U\-E\-U\-E\-S\-I\-Z\-E@{G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-M\-A\-X\-Q\-U\-E\-U\-E\-S\-I\-Z\-E}}
+\index{G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-M\-A\-X\-Q\-U\-E\-U\-E\-S\-I\-Z\-E@{G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-M\-A\-X\-Q\-U\-E\-U\-E\-S\-I\-Z\-E}!gdatalogger.h@{gdatalogger.\-h}}
+\subsubsection[{G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-M\-A\-X\-Q\-U\-E\-U\-E\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-M\-A\-X\-Q\-U\-E\-U\-E\-S\-I\-Z\-E~1000}}\label{gdatalogger_8h_a00f4336631a938f844b41833ca088ca2}
+
+
+Definition at line 38 of file gdatalogger.\-h.
+
+\hypertarget{gdatalogger_8h_aa0e5ac4945c0f7143f7337d187cb07ae}{\index{gdatalogger.\-h@{gdatalogger.\-h}!G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-S\-T\-A\-T\-E\-F\-I\-L\-E@{G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-S\-T\-A\-T\-E\-F\-I\-L\-E}}
+\index{G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-S\-T\-A\-T\-E\-F\-I\-L\-E@{G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-S\-T\-A\-T\-E\-F\-I\-L\-E}!gdatalogger.h@{gdatalogger.\-h}}
+\subsubsection[{G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-S\-T\-A\-T\-E\-F\-I\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-S\-T\-A\-T\-E\-F\-I\-L\-E~\char`\"{}/gdatalogger.\-shm\char`\"{}}}\label{gdatalogger_8h_aa0e5ac4945c0f7143f7337d187cb07ae}
+
+
+Definition at line 56 of file gdatalogger.\-h.
+
+
+
+Referenced by g\-Data\-Logger\-\_\-\-Close(), and g\-Data\-Logger\-\_\-\-Init().
+
+\hypertarget{gdatalogger_8h_a2ddc529b6734b7a9222a5fbd1305581e}{\index{gdatalogger.\-h@{gdatalogger.\-h}!G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-M\-A\-X\-V\-A\-R\-I\-A\-B\-L\-E\-S@{G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-M\-A\-X\-V\-A\-R\-I\-A\-B\-L\-E\-S}}
+\index{G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-M\-A\-X\-V\-A\-R\-I\-A\-B\-L\-E\-S@{G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-M\-A\-X\-V\-A\-R\-I\-A\-B\-L\-E\-S}!gdatalogger.h@{gdatalogger.\-h}}
+\subsubsection[{G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-M\-A\-X\-V\-A\-R\-I\-A\-B\-L\-E\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-M\-A\-X\-V\-A\-R\-I\-A\-B\-L\-E\-S~150}}\label{gdatalogger_8h_a2ddc529b6734b7a9222a5fbd1305581e}
+
+
+Definition at line 13 of file gdatalogger.\-h.
+
+
+
+Referenced by g\-Data\-Logger\-\_\-\-Declare\-Variable(), and g\-Data\-Logger\-\_\-\-Init().
+
+\hypertarget{gdatalogger_8h_a56fdd07b22a8488e0d8f2c1a53fe20cc}{\index{gdatalogger.\-h@{gdatalogger.\-h}!Q\-U\-E\-U\-E\-\_\-\-D\-E\-S\-T\-I\-N\-A\-T\-I\-O\-N\-\_\-\-F\-I\-L\-E@{Q\-U\-E\-U\-E\-\_\-\-D\-E\-S\-T\-I\-N\-A\-T\-I\-O\-N\-\_\-\-F\-I\-L\-E}}
+\index{Q\-U\-E\-U\-E\-\_\-\-D\-E\-S\-T\-I\-N\-A\-T\-I\-O\-N\-\_\-\-F\-I\-L\-E@{Q\-U\-E\-U\-E\-\_\-\-D\-E\-S\-T\-I\-N\-A\-T\-I\-O\-N\-\_\-\-F\-I\-L\-E}!gdatalogger.h@{gdatalogger.\-h}}
+\subsubsection[{Q\-U\-E\-U\-E\-\_\-\-D\-E\-S\-T\-I\-N\-A\-T\-I\-O\-N\-\_\-\-F\-I\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Q\-U\-E\-U\-E\-\_\-\-D\-E\-S\-T\-I\-N\-A\-T\-I\-O\-N\-\_\-\-F\-I\-L\-E~{\bf Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-\_\-0}}}\label{gdatalogger_8h_a56fdd07b22a8488e0d8f2c1a53fe20cc}
+
+
+Definition at line 33 of file gdatalogger.\-h.
+
+
+
+Referenced by g\-Data\-Logger\-\_\-\-Insert\-Variable(), and g\-Data\-Logger\-\_\-\-Matfile\-Update().
+
+\hypertarget{gdatalogger_8h_ad022a1a3ec941cb515402542b2d8a1c4}{\index{gdatalogger.\-h@{gdatalogger.\-h}!Q\-U\-E\-U\-E\-\_\-\-D\-E\-S\-T\-I\-N\-A\-T\-I\-O\-N\-\_\-\-I\-P\-C@{Q\-U\-E\-U\-E\-\_\-\-D\-E\-S\-T\-I\-N\-A\-T\-I\-O\-N\-\_\-\-I\-P\-C}}
+\index{Q\-U\-E\-U\-E\-\_\-\-D\-E\-S\-T\-I\-N\-A\-T\-I\-O\-N\-\_\-\-I\-P\-C@{Q\-U\-E\-U\-E\-\_\-\-D\-E\-S\-T\-I\-N\-A\-T\-I\-O\-N\-\_\-\-I\-P\-C}!gdatalogger.h@{gdatalogger.\-h}}
+\subsubsection[{Q\-U\-E\-U\-E\-\_\-\-D\-E\-S\-T\-I\-N\-A\-T\-I\-O\-N\-\_\-\-I\-P\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define Q\-U\-E\-U\-E\-\_\-\-D\-E\-S\-T\-I\-N\-A\-T\-I\-O\-N\-\_\-\-I\-P\-C~{\bf Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-\_\-1}}}\label{gdatalogger_8h_ad022a1a3ec941cb515402542b2d8a1c4}
+
+
+Definition at line 34 of file gdatalogger.\-h.
+
+
+
+Referenced by g\-Data\-Logger\-\_\-\-I\-P\-C\-Update().
+
+\hypertarget{gdatalogger_8h_a846b906ef420cb120cc8ae822bf2ab80}{\index{gdatalogger.\-h@{gdatalogger.\-h}!Q\-U\-E\-U\-E\-\_\-\-D\-E\-S\-T\-I\-N\-A\-T\-I\-O\-N\-\_\-\-U\-S\-E\-R1@{Q\-U\-E\-U\-E\-\_\-\-D\-E\-S\-T\-I\-N\-A\-T\-I\-O\-N\-\_\-\-U\-S\-E\-R1}}
+\index{Q\-U\-E\-U\-E\-\_\-\-D\-E\-S\-T\-I\-N\-A\-T\-I\-O\-N\-\_\-\-U\-S\-E\-R1@{Q\-U\-E\-U\-E\-\_\-\-D\-E\-S\-T\-I\-N\-A\-T\-I\-O\-N\-\_\-\-U\-S\-E\-R1}!gdatalogger.h@{gdatalogger.\-h}}
+\subsubsection[{Q\-U\-E\-U\-E\-\_\-\-D\-E\-S\-T\-I\-N\-A\-T\-I\-O\-N\-\_\-\-U\-S\-E\-R1}]{\setlength{\rightskip}{0pt plus 5cm}\#define Q\-U\-E\-U\-E\-\_\-\-D\-E\-S\-T\-I\-N\-A\-T\-I\-O\-N\-\_\-\-U\-S\-E\-R1~{\bf Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-\_\-2}}}\label{gdatalogger_8h_a846b906ef420cb120cc8ae822bf2ab80}
+
+
+Definition at line 35 of file gdatalogger.\-h.
+
+\hypertarget{gdatalogger_8h_a87a1b67f6568d2978d23385e37a6eb02}{\index{gdatalogger.\-h@{gdatalogger.\-h}!Q\-U\-E\-U\-E\-\_\-\-D\-E\-S\-T\-I\-N\-A\-T\-I\-O\-N\-\_\-\-U\-S\-E\-R2@{Q\-U\-E\-U\-E\-\_\-\-D\-E\-S\-T\-I\-N\-A\-T\-I\-O\-N\-\_\-\-U\-S\-E\-R2}}
+\index{Q\-U\-E\-U\-E\-\_\-\-D\-E\-S\-T\-I\-N\-A\-T\-I\-O\-N\-\_\-\-U\-S\-E\-R2@{Q\-U\-E\-U\-E\-\_\-\-D\-E\-S\-T\-I\-N\-A\-T\-I\-O\-N\-\_\-\-U\-S\-E\-R2}!gdatalogger.h@{gdatalogger.\-h}}
+\subsubsection[{Q\-U\-E\-U\-E\-\_\-\-D\-E\-S\-T\-I\-N\-A\-T\-I\-O\-N\-\_\-\-U\-S\-E\-R2}]{\setlength{\rightskip}{0pt plus 5cm}\#define Q\-U\-E\-U\-E\-\_\-\-D\-E\-S\-T\-I\-N\-A\-T\-I\-O\-N\-\_\-\-U\-S\-E\-R2~{\bf Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-\_\-3}}}\label{gdatalogger_8h_a87a1b67f6568d2978d23385e37a6eb02}
+
+
+Definition at line 36 of file gdatalogger.\-h.
+
+\hypertarget{gdatalogger_8h_addb46d3c73aa6e1b2a3dfb4de2211424}{\index{gdatalogger.\-h@{gdatalogger.\-h}!Q\-U\-E\-U\-E\-\_\-\-M\-A\-X\-D\-E\-S\-T\-I\-N\-A\-T\-I\-O\-N\-S@{Q\-U\-E\-U\-E\-\_\-\-M\-A\-X\-D\-E\-S\-T\-I\-N\-A\-T\-I\-O\-N\-S}}
+\index{Q\-U\-E\-U\-E\-\_\-\-M\-A\-X\-D\-E\-S\-T\-I\-N\-A\-T\-I\-O\-N\-S@{Q\-U\-E\-U\-E\-\_\-\-M\-A\-X\-D\-E\-S\-T\-I\-N\-A\-T\-I\-O\-N\-S}!gdatalogger.h@{gdatalogger.\-h}}
+\subsubsection[{Q\-U\-E\-U\-E\-\_\-\-M\-A\-X\-D\-E\-S\-T\-I\-N\-A\-T\-I\-O\-N\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define Q\-U\-E\-U\-E\-\_\-\-M\-A\-X\-D\-E\-S\-T\-I\-N\-A\-T\-I\-O\-N\-S~4}}\label{gdatalogger_8h_addb46d3c73aa6e1b2a3dfb4de2211424}
+
+
+Definition at line 32 of file gdatalogger.\-h.
+
+
+
+Referenced by g\-Data\-Logger\-\_\-\-Declare\-Variable().
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{gdatalogger_8h_af0f750acdddf86730aeeec5c2b5254b4}{\index{gdatalogger.\-h@{gdatalogger.\-h}!P\-G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R@{P\-G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R}}
+\index{P\-G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R@{P\-G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R}!gdatalogger.h@{gdatalogger.\-h}}
+\subsubsection[{P\-G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}typedef  struct {\bf G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R}$\ast$ {\bf P\-G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R}}}\label{gdatalogger_8h_af0f750acdddf86730aeeec5c2b5254b4}
+\hypertarget{gdatalogger_8h_a6ad1b1fa4c8c70b9aa6487a0095e6a89}{\index{gdatalogger.\-h@{gdatalogger.\-h}!P\-G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-V\-A\-R\-I\-A\-B\-L\-E@{P\-G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-V\-A\-R\-I\-A\-B\-L\-E}}
+\index{P\-G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-V\-A\-R\-I\-A\-B\-L\-E@{P\-G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-V\-A\-R\-I\-A\-B\-L\-E}!gdatalogger.h@{gdatalogger.\-h}}
+\subsubsection[{P\-G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-V\-A\-R\-I\-A\-B\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}typedef  struct {\bf G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-V\-A\-R\-I\-A\-B\-L\-E}$\ast$ {\bf P\-G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-V\-A\-R\-I\-A\-B\-L\-E}}}\label{gdatalogger_8h_a6ad1b1fa4c8c70b9aa6487a0095e6a89}
+
+
+\subsection{Function Documentation}
+\hypertarget{gdatalogger_8h_a0ac95f84c6ee484c4ad0351530f1c468}{\index{gdatalogger.\-h@{gdatalogger.\-h}!g\-Data\-Logger\-\_\-\-Close@{g\-Data\-Logger\-\_\-\-Close}}
+\index{g\-Data\-Logger\-\_\-\-Close@{g\-Data\-Logger\-\_\-\-Close}!gdatalogger.h@{gdatalogger.\-h}}
+\subsubsection[{g\-Data\-Logger\-\_\-\-Close}]{\setlength{\rightskip}{0pt plus 5cm}int g\-Data\-Logger\-\_\-\-Close (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R}}]{pg\-Data\-Logger}
+\end{DoxyParamCaption}
+)}}\label{gdatalogger_8h_a0ac95f84c6ee484c4ad0351530f1c468}
+
+
+Definition at line 362 of file gdatalogger.\-c.
+
+
+
+References G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-V\-A\-R\-I\-A\-B\-L\-E\-::\-Circular\-Queue, G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-S\-T\-A\-T\-E\-F\-I\-L\-E, g\-Data\-Logger\-\_\-\-Matfile\-Update(), g\-Data\-Logger\-I\-P\-C\-\_\-\-S\-H\-M\-\_\-fd, g\-Data\-Logger\-I\-P\-C\-\_\-\-S\-H\-M\-\_\-flagmodeserver, g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Close(), g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Save\-Vector(), G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-::\-G\-Matlab\-Data\-File\-Config, G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-V\-A\-R\-I\-A\-B\-L\-E\-::\-G\-Matlab\-Data\-File\-Index, G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-V\-A\-R\-I\-A\-B\-L\-E\-::\-Has\-Been\-Written, G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-::m\-\_\-\-Number\-Of\-Variables, G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-V\-A\-R\-I\-A\-B\-L\-E\-::\-Nc, G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-V\-A\-R\-I\-A\-B\-L\-E\-::\-Nr, T\-R\-U\-E, G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-V\-A\-R\-I\-A\-B\-L\-E\-::\-Variable\-Name, G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-::\-Variables, and G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-V\-A\-R\-I\-A\-B\-L\-E\-::\-Variable\-Unit.
+
+
+
+Referenced by datalogger\-\_\-close().
+
+
+\begin{DoxyCode}
+\{
+        \textcolor{keywordtype}{int} nvar,datasize;
+        \textcolor{keywordtype}{double} v;
+    \textcolor{keywordtype}{double} *value;
+        \textcolor{keywordtype}{char} matvarname[70];
+
+        \textcolor{comment}{/* Garante salvar ultimos dados inseridos: */}
+        \textcolor{keywordflow}{if}(pgDataLogger!=NULL)\{
+                \hyperlink{gdatalogger_8c_a05dc8ce832b941280d7de26057992640}{gDataLogger\_MatfileUpdate}(pgDataLogger
+      );
+
+                \textcolor{comment}{/* Se for um unico escalar, trata de forma especial: */}
+        \textcolor{keywordflow}{for}(nvar=0;nvar<pgDataLogger->\hyperlink{structGDATALOGGER_a2ac727ee6c50f7e04030cbe531158f08}{m\_NumberOfVariables};++
+      nvar)\{
+            \textcolor{keywordflow}{if}((pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}[nvar].\hyperlink{structGDATALOGGERVARIABLE_abd1db7599f09e121cd125e665cb9c460}{Nc} == 1)&&(
+      pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}[nvar].\hyperlink{structGDATALOGGERVARIABLE_a68c3eb0f57a786afe9a2658fc42b61d6}{Nr} == 1))\{
+                    \textcolor{keywordflow}{if}(pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}[nvar].\hyperlink{structGDATALOGGERVARIABLE_ad982aef10e8496c2a1c6b9bb1f1dc5c3}{HasBeenWritten}
+       == 1)\{
+                        value = (\textcolor{keywordtype}{double} *) malloc(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}));
+                        value[0] = pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}[nvar].
+      \hyperlink{structGDATALOGGERVARIABLE_ae17ad02442f31da9518c99ce13607c8b}{CircularQueue}[0];
+                        sprintf(matvarname,\textcolor{stringliteral}{"%s\_%li\_%li"},pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}
+      [nvar].\hyperlink{structGDATALOGGERVARIABLE_a336b7b6cbfc9cdebc7e1ade3de17ac3f}{VariableName}, (\textcolor{keywordtype}{long} \textcolor{keywordtype}{int})0, (\textcolor{keywordtype}{long} \textcolor{keywordtype}{int})0);
+                        \hyperlink{gmatlabdatafile_8c_a3ecf28836f545707551fe8b8005c8954}{gMATLABDataFile\_SaveVector}(&
+      pgDataLogger->\hyperlink{structGDATALOGGER_a062fd3836dbd0b1bec129ab372bff04a}{GMatlabDataFileConfig}, matvarname, value, 1);
+                        free(value);
+                        pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}[nvar].
+      \hyperlink{structGDATALOGGERVARIABLE_aa1cd5b838d8655734e7d4499b25bf22a}{GMatlabDataFileIndex} = 1;
+                    \}
+            \}
+        \}
+
+                \textcolor{comment}{/* Cria variaveis que indicam o numero de cada variavel salva: 
+      */}
+                \textcolor{keywordflow}{for}(nvar=0;nvar<pgDataLogger->\hyperlink{structGDATALOGGER_a2ac727ee6c50f7e04030cbe531158f08}{m\_NumberOfVariables}
+      ;++nvar)\{
+                        v = (double)(pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}[nvar].
+      \hyperlink{structGDATALOGGERVARIABLE_aa1cd5b838d8655734e7d4499b25bf22a}{GMatlabDataFileIndex});
+                        datasize = 1;
+                        sprintf(matvarname,\textcolor{stringliteral}{"%s\_size"},pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}
+      [nvar].\hyperlink{structGDATALOGGERVARIABLE_a336b7b6cbfc9cdebc7e1ade3de17ac3f}{VariableName});
+                        \hyperlink{gmatlabdatafile_8c_a3ecf28836f545707551fe8b8005c8954}{gMATLABDataFile\_SaveVector}(&
+      pgDataLogger->\hyperlink{structGDATALOGGER_a062fd3836dbd0b1bec129ab372bff04a}{GMatlabDataFileConfig}, matvarname, &v, 
+      datasize);
+                \}
+
+                \textcolor{comment}{/* Salva o numero de linhas: */}
+                \textcolor{keywordflow}{for}(nvar=0;nvar<pgDataLogger->\hyperlink{structGDATALOGGER_a2ac727ee6c50f7e04030cbe531158f08}{m\_NumberOfVariables}
+      ;++nvar)\{
+                        v = (double)(pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}[nvar].\hyperlink{structGDATALOGGERVARIABLE_a68c3eb0f57a786afe9a2658fc42b61d6}{Nr}
+      );
+                        datasize = 1;
+                        sprintf(matvarname,\textcolor{stringliteral}{"%s\_nr"},pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}
+      [nvar].\hyperlink{structGDATALOGGERVARIABLE_a336b7b6cbfc9cdebc7e1ade3de17ac3f}{VariableName});
+                        \hyperlink{gmatlabdatafile_8c_a3ecf28836f545707551fe8b8005c8954}{gMATLABDataFile\_SaveVector}(&
+      pgDataLogger->\hyperlink{structGDATALOGGER_a062fd3836dbd0b1bec129ab372bff04a}{GMatlabDataFileConfig}, matvarname, &v, 
+      datasize);
+                \}
+
+                \textcolor{comment}{/* Salva o numero de colunas: */}
+                \textcolor{keywordflow}{for}(nvar=0;nvar<pgDataLogger->\hyperlink{structGDATALOGGER_a2ac727ee6c50f7e04030cbe531158f08}{m\_NumberOfVariables}
+      ;++nvar)\{
+                        v = (double)(pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}[nvar].\hyperlink{structGDATALOGGERVARIABLE_abd1db7599f09e121cd125e665cb9c460}{Nc}
+      );
+                        datasize = 1;
+                        sprintf(matvarname,\textcolor{stringliteral}{"%s\_nc"},pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}
+      [nvar].\hyperlink{structGDATALOGGERVARIABLE_a336b7b6cbfc9cdebc7e1ade3de17ac3f}{VariableName});
+                        \hyperlink{gmatlabdatafile_8c_a3ecf28836f545707551fe8b8005c8954}{gMATLABDataFile\_SaveVector}(&
+      pgDataLogger->\hyperlink{structGDATALOGGER_a062fd3836dbd0b1bec129ab372bff04a}{GMatlabDataFileConfig}, matvarname, &v, 
+      datasize);
+                \}
+
+                \textcolor{comment}{/* Fecha o arquivo. */}
+                \hyperlink{gmatlabdatafile_8c_ad38283a16cbd66a2834b2ca9f5c6c6e0}{gMATLABDataFile\_Close}(&pgDataLogger->
+      \hyperlink{structGDATALOGGER_a062fd3836dbd0b1bec129ab372bff04a}{GMatlabDataFileConfig});
+
+                \textcolor{comment}{/* Deletar as filas: */}
+                \textcolor{keywordflow}{for}(nvar=0;nvar<pgDataLogger->\hyperlink{structGDATALOGGER_a2ac727ee6c50f7e04030cbe531158f08}{m\_NumberOfVariables}
+      ;++nvar)\{
+                        sprintf(pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}[nvar].
+      \hyperlink{structGDATALOGGERVARIABLE_a336b7b6cbfc9cdebc7e1ade3de17ac3f}{VariableName},\textcolor{stringliteral}{" "});
+                        sprintf(pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}[nvar].
+      \hyperlink{structGDATALOGGERVARIABLE_a0d42da63f3f904774cbf2ee8d92ee135}{VariableUnit},\textcolor{stringliteral}{" "});
+                        free(pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}[nvar].
+      \hyperlink{structGDATALOGGERVARIABLE_ae17ad02442f31da9518c99ce13607c8b}{CircularQueue});
+                        pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}[nvar].\hyperlink{structGDATALOGGERVARIABLE_ae17ad02442f31da9518c99ce13607c8b}{CircularQueue}
+       = NULL;
+                        pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}[nvar].
+      \hyperlink{structGDATALOGGERVARIABLE_aa1cd5b838d8655734e7d4499b25bf22a}{GMatlabDataFileIndex} = 0;
+                \}
+                pgDataLogger->\hyperlink{structGDATALOGGER_a2ac727ee6c50f7e04030cbe531158f08}{m\_NumberOfVariables} = 0;
+        \}
+        
+        \textcolor{comment}{/* IPC: */}
+\textcolor{preprocessor}{#if DATALOGGER\_COMPILE\_FOR\_XENOMAI}
+\textcolor{preprocessor}{}        \textcolor{keywordflow}{if}(\hyperlink{gdatalogger_8c_ab05e4213b873bbf0185738b7fd8a6e4a}{gDataLoggerIPC\_SHM\_flagmodeserver})\{
+                rt\_heap\_free(&gDataLoggerIPC\_SHM\_hd,\hyperlink{gdatalogger_8c_af7df326df930ef7f72e0a173e443db7e}{pgDataLoggerIPC\_SHM}
+      );
+                rt\_heap\_delete(&gDataLoggerIPC\_SHM\_hd);
+        \} \textcolor{keywordflow}{else}\{
+                rt\_heap\_unbind(&gDataLoggerIPC\_SHM\_hd);
+        \}
+\textcolor{preprocessor}{#else}
+\textcolor{preprocessor}{}        munmap(\hyperlink{gdatalogger_8c_af7df326df930ef7f72e0a173e443db7e}{pgDataLoggerIPC\_SHM}, \textcolor{keyword}{sizeof}(\hyperlink{structGDATALOGGERIPC__SHM}{
+      GDATALOGGERIPC\_SHM}));
+        close(\hyperlink{gdatalogger_8c_a0400c04ba687b9806fc9543f817388d0}{gDataLoggerIPC\_SHM\_fd});
+        shm\_unlink(\hyperlink{gdatalogger_8h_aa0e5ac4945c0f7143f7337d187cb07ae}{GDATALOGGER\_IPC\_STATEFILE});
+\textcolor{preprocessor}{#endif}
+\textcolor{preprocessor}{}        
+        \textcolor{keywordflow}{return}(\hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+\}
+\end{DoxyCode}
+\hypertarget{gdatalogger_8h_a3f8f2b3c3f5edc72c3a1887965a544c1}{\index{gdatalogger.\-h@{gdatalogger.\-h}!g\-Data\-Logger\-\_\-\-Declare\-Variable@{g\-Data\-Logger\-\_\-\-Declare\-Variable}}
+\index{g\-Data\-Logger\-\_\-\-Declare\-Variable@{g\-Data\-Logger\-\_\-\-Declare\-Variable}!gdatalogger.h@{gdatalogger.\-h}}
+\subsubsection[{g\-Data\-Logger\-\_\-\-Declare\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}int g\-Data\-Logger\-\_\-\-Declare\-Variable (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R}}]{pg\-Data\-Logger, }
+\item[{char $\ast$}]{varname, }
+\item[{char $\ast$}]{varunit, }
+\item[{int}]{nrows, }
+\item[{int}]{ncols, }
+\item[{int}]{queuesize}
+\end{DoxyParamCaption}
+)}}\label{gdatalogger_8h_a3f8f2b3c3f5edc72c3a1887965a544c1}
+
+
+Definition at line 173 of file gdatalogger.\-c.
+
+
+
+References G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-V\-A\-R\-I\-A\-B\-L\-E\-::\-Circular\-Queue, G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-V\-A\-R\-I\-A\-B\-L\-E\-::\-Circular\-Queue\-Control, F\-A\-L\-S\-E, G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-M\-A\-X\-V\-A\-R\-I\-A\-B\-L\-E\-S, G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-V\-A\-R\-I\-A\-B\-L\-E\-::\-G\-Matlab\-Data\-File\-Index, g\-Q\-U\-E\-U\-E\-\_\-\-Init(), G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-::m\-\_\-\-Number\-Of\-Variables, G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-V\-A\-R\-I\-A\-B\-L\-E\-::\-Nc, G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-V\-A\-R\-I\-A\-B\-L\-E\-::\-Nr, Q\-U\-E\-U\-E\-\_\-\-M\-A\-X\-D\-E\-S\-T\-I\-N\-A\-T\-I\-O\-N\-S, T\-R\-U\-E, G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-V\-A\-R\-I\-A\-B\-L\-E\-::\-Variable\-Name, G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-::\-Variables, and G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-V\-A\-R\-I\-A\-B\-L\-E\-::\-Variable\-Unit.
+
+
+
+Referenced by datalogger\-\_\-init().
+
+
+\begin{DoxyCode}
+\{
+        \textcolor{keywordflow}{if}(pgDataLogger->\hyperlink{structGDATALOGGER_a2ac727ee6c50f7e04030cbe531158f08}{m\_NumberOfVariables}>=
+      \hyperlink{gdatalogger_8h_a2ddc529b6734b7a9222a5fbd1305581e}{GDATALOGGER\_MAXVARIABLES}-1)\{
+                \textcolor{keywordflow}{return}(\hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+        \}
+        queuesize = queuesize * nrows * ncols; \textcolor{comment}{/* no caso, o tamanho da fila eh
+       calculado em numero de elementos double. */}
+        sprintf(pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}[pgDataLogger->
+      \hyperlink{structGDATALOGGER_a2ac727ee6c50f7e04030cbe531158f08}{m\_NumberOfVariables}].\hyperlink{structGDATALOGGERVARIABLE_a336b7b6cbfc9cdebc7e1ade3de17ac3f}{VariableName},\textcolor{stringliteral}{"%s"},varname);
+        sprintf(pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}[pgDataLogger->
+      \hyperlink{structGDATALOGGER_a2ac727ee6c50f7e04030cbe531158f08}{m\_NumberOfVariables}].\hyperlink{structGDATALOGGERVARIABLE_a0d42da63f3f904774cbf2ee8d92ee135}{VariableUnit},\textcolor{stringliteral}{"%s"},varunit);
+        pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}[pgDataLogger->\hyperlink{structGDATALOGGER_a2ac727ee6c50f7e04030cbe531158f08}{m\_NumberOfVariables}
+      ].\hyperlink{structGDATALOGGERVARIABLE_ae17ad02442f31da9518c99ce13607c8b}{CircularQueue} = (\textcolor{keywordtype}{double} *) malloc(queuesize * nrows * ncols * \textcolor{keyword}{
+      sizeof}(\textcolor{keywordtype}{double}));
+        \textcolor{keywordflow}{if}(pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}[pgDataLogger->\hyperlink{structGDATALOGGER_a2ac727ee6c50f7e04030cbe531158f08}{m\_NumberOfVariables}
+      ].\hyperlink{structGDATALOGGERVARIABLE_ae17ad02442f31da9518c99ce13607c8b}{CircularQueue}==NULL)\{
+                \textcolor{keywordflow}{return}(\hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+        \}
+        pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}[pgDataLogger->\hyperlink{structGDATALOGGER_a2ac727ee6c50f7e04030cbe531158f08}{m\_NumberOfVariables}
+      ].\hyperlink{structGDATALOGGERVARIABLE_a68c3eb0f57a786afe9a2658fc42b61d6}{Nr} = nrows;
+        pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}[pgDataLogger->\hyperlink{structGDATALOGGER_a2ac727ee6c50f7e04030cbe531158f08}{m\_NumberOfVariables}
+      ].\hyperlink{structGDATALOGGERVARIABLE_abd1db7599f09e121cd125e665cb9c460}{Nc} = ncols;
+        \hyperlink{gqueue_8c_a6edb74779d40a7a4328e32012fad8c0c}{gQUEUE\_Init}(&pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}[pgDataLogger->
+      \hyperlink{structGDATALOGGER_a2ac727ee6c50f7e04030cbe531158f08}{m\_NumberOfVariables}].\hyperlink{structGDATALOGGERVARIABLE_a1a50747d2223f228288b4656470d9bbc}{CircularQueueControl}
+      , queuesize, \hyperlink{gdatalogger_8h_addb46d3c73aa6e1b2a3dfb4de2211424}{QUEUE\_MAXDESTINATIONS});
+        pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}[pgDataLogger->\hyperlink{structGDATALOGGER_a2ac727ee6c50f7e04030cbe531158f08}{m\_NumberOfVariables}
+      ].\hyperlink{structGDATALOGGERVARIABLE_aa1cd5b838d8655734e7d4499b25bf22a}{GMatlabDataFileIndex} = 0;
+        
+        ++pgDataLogger->\hyperlink{structGDATALOGGER_a2ac727ee6c50f7e04030cbe531158f08}{m\_NumberOfVariables};
+
+        \textcolor{keywordflow}{return}(\hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+\}
+\end{DoxyCode}
+\hypertarget{gdatalogger_8h_ab5eeb22d60836d57bae0dde821337045}{\index{gdatalogger.\-h@{gdatalogger.\-h}!g\-Data\-Logger\-\_\-\-Init@{g\-Data\-Logger\-\_\-\-Init}}
+\index{g\-Data\-Logger\-\_\-\-Init@{g\-Data\-Logger\-\_\-\-Init}!gdatalogger.h@{gdatalogger.\-h}}
+\subsubsection[{g\-Data\-Logger\-\_\-\-Init}]{\setlength{\rightskip}{0pt plus 5cm}int g\-Data\-Logger\-\_\-\-Init (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R}}]{pg\-Data\-Logger, }
+\item[{char $\ast$}]{filename, }
+\item[{char $\ast$}]{dirname}
+\end{DoxyParamCaption}
+)}}\label{gdatalogger_8h_ab5eeb22d60836d57bae0dde821337045}
+
+
+Definition at line 42 of file gdatalogger.\-c.
+
+
+
+References G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-V\-A\-R\-I\-A\-B\-L\-E\-::\-Circular\-Queue, F\-A\-L\-S\-E, G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-I\-P\-C\-\_\-\-S\-H\-M\-::\-Flag, G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-F\-L\-A\-G\-I\-D\-D\-L\-E, G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-S\-T\-A\-T\-E\-F\-I\-L\-E, G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-M\-A\-X\-V\-A\-R\-I\-A\-B\-L\-E\-S, g\-Data\-Logger\-I\-P\-C\-\_\-\-S\-H\-M\-\_\-fd, g\-Data\-Logger\-I\-P\-C\-\_\-\-S\-H\-M\-\_\-flagmodeserver, g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Open\-Write(), G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-::\-G\-Matlab\-Data\-File\-Config, G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-V\-A\-R\-I\-A\-B\-L\-E\-::\-G\-Matlab\-Data\-File\-Index, G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-V\-A\-R\-I\-A\-B\-L\-E\-::\-Has\-Been\-Written, G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-::m\-\_\-\-Number\-Of\-Variables, G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-V\-A\-R\-I\-A\-B\-L\-E\-::\-Nc, G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-V\-A\-R\-I\-A\-B\-L\-E\-::\-Nr, status, T\-R\-U\-E, G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-V\-A\-R\-I\-A\-B\-L\-E\-::\-Variable\-Name, G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-::\-Variables, and G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-V\-A\-R\-I\-A\-B\-L\-E\-::\-Variable\-Unit.
+
+
+
+Referenced by datalogger\-\_\-init().
+
+
+\begin{DoxyCode}
+\{
+        \textcolor{keywordtype}{int} i;
+        \textcolor{keywordtype}{int} first = 0;
+\textcolor{preprocessor}{#if DATALOGGER\_COMPILE\_FOR\_XENOMAI}
+\textcolor{preprocessor}{}        \textcolor{keywordtype}{int} err;
+\textcolor{preprocessor}{#else}
+\textcolor{preprocessor}{}        \textcolor{keywordtype}{int} \hyperlink{communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8c_a6e27f49150e9a14580fb313cc2777e00}{status} = 0;
+\textcolor{preprocessor}{#endif}
+\textcolor{preprocessor}{}
+        \textcolor{comment}{/* GQueue */}
+        \textcolor{keywordflow}{if}(pgDataLogger!=NULL)\{
+                \textcolor{keywordflow}{for} (i=0;i<\hyperlink{gdatalogger_8h_a2ddc529b6734b7a9222a5fbd1305581e}{GDATALOGGER\_MAXVARIABLES};++i
+      )\{
+                        sprintf(pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}[i].\hyperlink{structGDATALOGGERVARIABLE_a336b7b6cbfc9cdebc7e1ade3de17ac3f}{
+      VariableName},\textcolor{stringliteral}{" "});
+                        sprintf(pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}[i].\hyperlink{structGDATALOGGERVARIABLE_a0d42da63f3f904774cbf2ee8d92ee135}{
+      VariableUnit},\textcolor{stringliteral}{" "});
+                        pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}[i].\hyperlink{structGDATALOGGERVARIABLE_ae17ad02442f31da9518c99ce13607c8b}{CircularQueue}
+       = NULL;
+                        pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}[i].\hyperlink{structGDATALOGGERVARIABLE_aa1cd5b838d8655734e7d4499b25bf22a}{
+      GMatlabDataFileIndex} = 0;
+                        pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}[i].\hyperlink{structGDATALOGGERVARIABLE_abd1db7599f09e121cd125e665cb9c460}{Nc} = 1;
+                        pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}[i].\hyperlink{structGDATALOGGERVARIABLE_a68c3eb0f57a786afe9a2658fc42b61d6}{Nr} = 1;
+            pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}[i].\hyperlink{structGDATALOGGERVARIABLE_ad982aef10e8496c2a1c6b9bb1f1dc5c3}{HasBeenWritten} = 
+      0;
+                \}
+                pgDataLogger->\hyperlink{structGDATALOGGER_a2ac727ee6c50f7e04030cbe531158f08}{m\_NumberOfVariables} = 0;
+        \}
+
+        \textcolor{comment}{/* IPC */}
+\textcolor{preprocessor}{#if DATALOGGER\_COMPILE\_FOR\_XENOMAI}
+\textcolor{preprocessor}{}        \textcolor{keywordflow}{if}(pgDataLogger!=NULL)\{
+                \textcolor{comment}{/* cria memoria compartilhada */}
+                \textcolor{keywordtype}{int} heapsize;
+                \textcolor{keywordflow}{if}(\textcolor{keyword}{sizeof}(\hyperlink{structGDATALOGGERIPC__SHM}{GDATALOGGERIPC\_SHM}) > ((256*1024)))
+      \{
+                        heapsize = \textcolor{keyword}{sizeof}(\hyperlink{structGDATALOGGERIPC__SHM}{GDATALOGGERIPC\_SHM})
+      ;
+                \}
+                \textcolor{keywordflow}{else}\{
+                        heapsize = ((256*1024));
+                \}
+                
+                \textcolor{keywordflow}{if}((err=rt\_heap\_create(&gDataLoggerIPC\_SHM\_hd,
+      \hyperlink{gdatalogger_8h_aa0e5ac4945c0f7143f7337d187cb07ae}{GDATALOGGER\_IPC\_STATEFILE},\textcolor{keyword}{sizeof}(\hyperlink{structGDATALOGGERIPC__SHM}{GDATALOGGERIPC\_SHM}
+      ),H\_SHARED))!=0)\{
+                        printf(\textcolor{stringliteral}{"gDataLogger\_Init: Could not create xenomai heap
+       object (return %i)\(\backslash\)n"}, err);
+                        printf(\textcolor{stringliteral}{"\(\backslash\)n EEXIST = %i"},EEXIST);
+                        printf(\textcolor{stringliteral}{"\(\backslash\)n EINVAL = %i"},EINVAL);
+                        printf(\textcolor{stringliteral}{"\(\backslash\)n ENOMEM = %i"},ENOMEM);
+                        printf(\textcolor{stringliteral}{"\(\backslash\)n EPERM = %i"},EPERM);
+                        printf(\textcolor{stringliteral}{"\(\backslash\)n EIDRM = %i"},EIDRM);
+                        printf(\textcolor{stringliteral}{"\(\backslash\)n ENOSYS = %i"},ENOSYS);
+                        \textcolor{keywordflow}{if}(err==-EEXIST)\{
+                                err=rt\_heap\_delete(&gDataLoggerIPC\_SHM\_hd);
+                                printf(\textcolor{stringliteral}{"gDataLogger\_Init: Deleting xenomai heap
+       object (return %i)\(\backslash\)n"}, err);
+                        \}
+                        \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+                \}
+
+                \textcolor{keywordflow}{if}(rt\_heap\_alloc(&gDataLoggerIPC\_SHM\_hd,\textcolor{keyword}{sizeof}(
+      \hyperlink{structGDATALOGGERIPC__SHM}{GDATALOGGERIPC\_SHM}),TM\_NONBLOCK,(\textcolor{keywordtype}{void}**)&\hyperlink{gdatalogger_8c_af7df326df930ef7f72e0a173e443db7e}{pgDataLoggerIPC\_SHM}
+      )!=0)\{
+                        printf(\textcolor{stringliteral}{"gDataLogger\_Init: Could not allocated xenomai
+       heap object. (return %i)\(\backslash\)n"}, err);
+                        \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+                \}
+
+                first = 1; \textcolor{comment}{/* We are the first instance */}
+                \hyperlink{gdatalogger_8c_ab05e4213b873bbf0185738b7fd8a6e4a}{gDataLoggerIPC\_SHM\_flagmodeserver}
+       = 1;
+        \}
+        \textcolor{keywordflow}{else}\{
+                \textcolor{comment}{/* abre memoria compartilhada */}
+                \textcolor{keywordflow}{if}((err=rt\_heap\_bind(&gDataLoggerIPC\_SHM\_hd,
+      \hyperlink{gdatalogger_8h_aa0e5ac4945c0f7143f7337d187cb07ae}{GDATALOGGER\_IPC\_STATEFILE},TM\_NONBLOCK))!=0)\{
+                        \textcolor{comment}{/* printf("gDataLogger\_Init: Could not create xenomai
+       heap object (return %i)\(\backslash\)n", err); */}
+\textcolor{comment}{/*                      printf("\(\backslash\)n EEXIST = %i",EEXIST);}
+\textcolor{comment}{                        printf("\(\backslash\)n EINVAL = %i",EINVAL);}
+\textcolor{comment}{                        printf("\(\backslash\)n ENOMEM = %i",ENOMEM);}
+\textcolor{comment}{                        printf("\(\backslash\)n EPERM = %i",EPERM);}
+\textcolor{comment}{                        printf("\(\backslash\)n EIDRM = %i",EIDRM);}
+\textcolor{comment}{                        printf("\(\backslash\)n ENOSYS = %i",ENOSYS);*/}
+                        \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+                \}
+
+                \textcolor{keywordflow}{if}(rt\_heap\_alloc(&gDataLoggerIPC\_SHM\_hd,0,TM\_NONBLOCK,(\textcolor{keywordtype}{void}**)&
+      \hyperlink{gdatalogger_8c_af7df326df930ef7f72e0a173e443db7e}{pgDataLoggerIPC\_SHM})!=0)\{
+                        printf(\textcolor{stringliteral}{"gDataLogger\_Init: Could not allocated xenomai
+       heap object. (return %i)\(\backslash\)n"}, err);
+                        \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+                \}
+
+                \hyperlink{gdatalogger_8c_ab05e4213b873bbf0185738b7fd8a6e4a}{gDataLoggerIPC\_SHM\_flagmodeserver}
+       = 0;
+        \}
+
+\textcolor{preprocessor}{#else}
+\textcolor{preprocessor}{}        \textcolor{comment}{/* Try to open the shm instance with  O\_EXCL, this tests if the shm is
+       already opened by someone else */}
+        \textcolor{keywordflow}{if}((\hyperlink{gdatalogger_8c_a0400c04ba687b9806fc9543f817388d0}{gDataLoggerIPC\_SHM\_fd} = shm\_open(
+      \hyperlink{gdatalogger_8h_aa0e5ac4945c0f7143f7337d187cb07ae}{GDATALOGGER\_IPC\_STATEFILE}, (O\_CREAT | O\_RDWR),(S\_IREAD
+       | S\_IWRITE))) < 0) \{
+                \textcolor{comment}{/* Try to open the shm instance normally and share it with
+       existing clients */}
+                printf(\textcolor{stringliteral}{"gDataLogger\_Init: Could not create shm object. %s\(\backslash\)n"}, 
+      strerror(errno));
+                \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+        \}       
+        \textcolor{keywordflow}{if}(pgDataLogger!=NULL)\{
+                \hyperlink{gdatalogger_8c_ab05e4213b873bbf0185738b7fd8a6e4a}{gDataLoggerIPC\_SHM\_flagmodeserver}
+       = 1;
+                first = 1;
+        \} \textcolor{keywordflow}{else}\{
+                \hyperlink{gdatalogger_8c_ab05e4213b873bbf0185738b7fd8a6e4a}{gDataLoggerIPC\_SHM\_flagmodeserver}
+       = 0;
+                first = 0;
+        \}
+\textcolor{comment}{/*      if((gDataLoggerIPC\_SHM\_fd = shm\_open(GDATALOGGER\_IPC\_STATEFILE,
+       (O\_CREAT | O\_EXCL | O\_RDWR),(S\_IREAD | S\_IWRITE))) > 0 ) \{}
+\textcolor{comment}{*/}                first = 1; \textcolor{comment}{/* We are the first instance */}
+\textcolor{comment}{/*                gDataLoggerIPC\_SHM\_flagmodeserver = 1;}
+\textcolor{comment}{        \}}
+\textcolor{comment}{        else if((gDataLoggerIPC\_SHM\_fd = shm\_open(GDATALOGGER\_IPC\_STATEFILE,
+       (O\_CREAT | O\_RDWR),(S\_IREAD | S\_IWRITE))) < 0) \{}
+\textcolor{comment}{*/}              \textcolor{comment}{/* Try to open the shm instance normally and share it with
+       existing clients */}
+\textcolor{comment}{/*              printf("gDataLogger\_Init: Could not create shm object. %s\(\backslash\)n",
+       strerror(errno));}
+\textcolor{comment}{                return FALSE;}
+\textcolor{comment}{        \} }
+\textcolor{comment}{*/}      \textcolor{comment}{/* Set the size of the SHM to be the size of the struct. */}
+        status = ftruncate(\hyperlink{gdatalogger_8c_a0400c04ba687b9806fc9543f817388d0}{gDataLoggerIPC\_SHM\_fd}, \textcolor{keyword}{sizeof}(
+      \hyperlink{structGDATALOGGERIPC__SHM}{GDATALOGGERIPC\_SHM}));
+
+        \textcolor{comment}{/* Connect the conf pointer to set to the shared memory area, with
+       desired permissions */}
+        \textcolor{keywordflow}{if}((\hyperlink{gdatalogger_8c_af7df326df930ef7f72e0a173e443db7e}{pgDataLoggerIPC\_SHM} =  mmap(0, \textcolor{keyword}{sizeof}(
+      \hyperlink{structGDATALOGGERIPC__SHM}{GDATALOGGERIPC\_SHM}), (PROT\_READ | PROT\_WRITE), MAP\_SHARED, 
+      \hyperlink{gdatalogger_8c_a0400c04ba687b9806fc9543f817388d0}{gDataLoggerIPC\_SHM\_fd}, 0)) == MAP\_FAILED) \{
+                \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+        \}
+
+        \textcolor{comment}{/* Set permission so all can read/write to shared memory */}
+    status = fchmod(\hyperlink{gdatalogger_8c_a0400c04ba687b9806fc9543f817388d0}{gDataLoggerIPC\_SHM\_fd}, (S\_IRUSR|
+      S\_IWUSR|S\_IXUSR|S\_IRGRP|S\_IWGRP|S\_IXGRP|S\_IROTH|S\_IWOTH|S\_IXOTH));
+
+\textcolor{preprocessor}{#endif}
+\textcolor{preprocessor}{}        
+        \textcolor{keywordflow}{if}(first)\{
+                \hyperlink{gdatalogger_8c_af7df326df930ef7f72e0a173e443db7e}{pgDataLoggerIPC\_SHM}->\hyperlink{structGDATALOGGERIPC__SHM_a346eca077a97246740a6ed4f7c08833c}{Flag} = 
+      \hyperlink{gdatalogger_8h_af1565d64ddabc6f1a1c3fc5fa3e7a123}{GDATALOGGER\_IPC\_FLAGIDDLE};
+        \}
+
+        \textcolor{comment}{/* GMatlabDataFile */}
+        \textcolor{keywordflow}{if}((pgDataLogger!=NULL)&&(filename!=NULL))\{
+                \textcolor{keywordflow}{return}(\hyperlink{gmatlabdatafile_8c_af53051d93a0e13032b8735451b077fb9}{gMATLABDataFile\_OpenWrite}(&
+      pgDataLogger->\hyperlink{structGDATALOGGER_a062fd3836dbd0b1bec129ab372bff04a}{GMatlabDataFileConfig}, filename, dirname));
+        \}
+        
+        \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
+\}
+\end{DoxyCode}
+\hypertarget{gdatalogger_8h_a32674e7c2afa8b78e99a0070cf4bcaf9}{\index{gdatalogger.\-h@{gdatalogger.\-h}!g\-Data\-Logger\-\_\-\-Insert\-Variable@{g\-Data\-Logger\-\_\-\-Insert\-Variable}}
+\index{g\-Data\-Logger\-\_\-\-Insert\-Variable@{g\-Data\-Logger\-\_\-\-Insert\-Variable}!gdatalogger.h@{gdatalogger.\-h}}
+\subsubsection[{g\-Data\-Logger\-\_\-\-Insert\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}int g\-Data\-Logger\-\_\-\-Insert\-Variable (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R}}]{pg\-Data\-Logger, }
+\item[{char $\ast$}]{varname, }
+\item[{double $\ast$}]{varvalue}
+\end{DoxyParamCaption}
+)}}\label{gdatalogger_8h_a32674e7c2afa8b78e99a0070cf4bcaf9}
+
+
+Definition at line 199 of file gdatalogger.\-c.
+
+
+
+References G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-V\-A\-R\-I\-A\-B\-L\-E\-::\-Circular\-Queue, G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-V\-A\-R\-I\-A\-B\-L\-E\-::\-Circular\-Queue\-Control, F\-A\-L\-S\-E, G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L\-::\-Flag\-Full, g\-Data\-Logger\-\_\-\-Matfile\-Update(), g\-Q\-U\-E\-U\-E\-\_\-\-Request\-Write\-Index(), G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-V\-A\-R\-I\-A\-B\-L\-E\-::\-Has\-Been\-Written, G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-::m\-\_\-\-Number\-Of\-Variables, G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-V\-A\-R\-I\-A\-B\-L\-E\-::\-Nc, G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-V\-A\-R\-I\-A\-B\-L\-E\-::\-Nr, Q\-U\-E\-U\-E\-\_\-\-D\-E\-S\-T\-I\-N\-A\-T\-I\-O\-N\-\_\-\-F\-I\-L\-E, T\-R\-U\-E, G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-V\-A\-R\-I\-A\-B\-L\-E\-::\-Variable\-Name, and G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-::\-Variables.
+
+
+
+Referenced by datalogger\-\_\-init(), datalogger\-\_\-set\-\_\-\-Ts(), and datalogger\-\_\-update().
+
+
+\begin{DoxyCode}
+\{
+        \textcolor{keywordtype}{int} queueindex,varindex,n;
+        \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} nr,nc;
+        \textcolor{keywordtype}{int} FlagQueueFull;
+        
+        \textcolor{comment}{/* Procura pela variavel */}
+        varindex = -1;
+        \textcolor{keywordflow}{for}(n=0;n<pgDataLogger->\hyperlink{structGDATALOGGER_a2ac727ee6c50f7e04030cbe531158f08}{m\_NumberOfVariables};++n)\{
+                \textcolor{keywordflow}{if}(strcmp(varname,pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}[n].
+      \hyperlink{structGDATALOGGERVARIABLE_a336b7b6cbfc9cdebc7e1ade3de17ac3f}{VariableName})==0)\{
+                        varindex = n;
+                        \textcolor{keywordflow}{break};
+                \}
+        \}
+        \textcolor{keywordflow}{if}(varindex<0)\{
+                \textcolor{keywordflow}{return}(\hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+        \}
+
+    \textcolor{keywordflow}{if}(pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}[varindex].\hyperlink{structGDATALOGGERVARIABLE_ad982aef10e8496c2a1c6b9bb1f1dc5c3}{HasBeenWritten} 
+      == 1) pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}[varindex].\hyperlink{structGDATALOGGERVARIABLE_ad982aef10e8496c2a1c6b9bb1f1dc5c3}{HasBeenWritten} = 
+      2; \textcolor{comment}{// Second write}
+    \textcolor{keywordflow}{if}(pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}[varindex].\hyperlink{structGDATALOGGERVARIABLE_ad982aef10e8496c2a1c6b9bb1f1dc5c3}{HasBeenWritten} 
+      == 0) pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}[varindex].\hyperlink{structGDATALOGGERVARIABLE_ad982aef10e8496c2a1c6b9bb1f1dc5c3}{HasBeenWritten} = 
+      1; \textcolor{comment}{// First write (1 data point)}
+
+        \textcolor{comment}{/* Insere o conteudo */}
+        \textcolor{keywordflow}{for}(nr=0;nr<pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}[varindex].\hyperlink{structGDATALOGGERVARIABLE_a68c3eb0f57a786afe9a2658fc42b61d6}{Nr};++nr)\{
+                \textcolor{keywordflow}{for}(nc=0;nc<pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}[varindex].\hyperlink{structGDATALOGGERVARIABLE_abd1db7599f09e121cd125e665cb9c460}{Nc};++
+      nc)\{
+                        FlagQueueFull = \hyperlink{gqueue_8c_a7324fa957e7713c05cab4eb7993dc2ee}{gQUEUE\_RequestWriteIndex}
+      (&pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}[varindex].\hyperlink{structGDATALOGGERVARIABLE_a1a50747d2223f228288b4656470d9bbc}{CircularQueueControl}
+      , &queueindex);
+
+                        pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}[varindex].\hyperlink{structGDATALOGGERVARIABLE_ae17ad02442f31da9518c99ce13607c8b}{
+      CircularQueue}[queueindex] = varvalue[nr+(nc)*pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}[
+      varindex].\hyperlink{structGDATALOGGERVARIABLE_a68c3eb0f57a786afe9a2658fc42b61d6}{Nr}];
+
+                        \textcolor{keywordflow}{if}(!FlagQueueFull)\{
+                                \textcolor{comment}{/* The queue is full. Test if it is the reading
+       head associated to matlab data files. */}
+                                \textcolor{keywordflow}{if}(pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}[varindex].
+      \hyperlink{structGDATALOGGERVARIABLE_a1a50747d2223f228288b4656470d9bbc}{CircularQueueControl}.\hyperlink{structGQUEUECONTROL_a5f54a26afa8554ed2f161b83aba14f5c}{FlagFull}[\hyperlink{gdatalogger_8h_a56fdd07b22a8488e0d8f2c1a53fe20cc}{
+      QUEUE\_DESTINATION\_FILE}]==\hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE})\{
+                                        \textcolor{comment}{/* Empty in matlab data file. */}
+                                        \hyperlink{gdatalogger_8c_a05dc8ce832b941280d7de26057992640}{gDataLogger\_MatfileUpdate}
+      (pgDataLogger);
+                                        \textcolor{comment}{/* Clear flag: */}
+                                        pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}[
+      varindex].\hyperlink{structGDATALOGGERVARIABLE_a1a50747d2223f228288b4656470d9bbc}{CircularQueueControl}.\hyperlink{structGQUEUECONTROL_a5f54a26afa8554ed2f161b83aba14f5c}{FlagFull}[
+      \hyperlink{gdatalogger_8h_a56fdd07b22a8488e0d8f2c1a53fe20cc}{QUEUE\_DESTINATION\_FILE}] = \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+                                \}
+                        \}
+                \}
+        \}
+
+        \textcolor{keywordflow}{return}(\hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+\}
+\end{DoxyCode}
+\hypertarget{gdatalogger_8h_a555a2628f1bfa33692e5f51961d287a5}{\index{gdatalogger.\-h@{gdatalogger.\-h}!g\-Data\-Logger\-\_\-\-I\-P\-C\-\_\-\-Retrieve\-Variable@{g\-Data\-Logger\-\_\-\-I\-P\-C\-\_\-\-Retrieve\-Variable}}
+\index{g\-Data\-Logger\-\_\-\-I\-P\-C\-\_\-\-Retrieve\-Variable@{g\-Data\-Logger\-\_\-\-I\-P\-C\-\_\-\-Retrieve\-Variable}!gdatalogger.h@{gdatalogger.\-h}}
+\subsubsection[{g\-Data\-Logger\-\_\-\-I\-P\-C\-\_\-\-Retrieve\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}int g\-Data\-Logger\-\_\-\-I\-P\-C\-\_\-\-Retrieve\-Variable (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{varname, }
+\item[{char $\ast$}]{varunit, }
+\item[{double $\ast$}]{pbuffer, }
+\item[{int $\ast$}]{bufferlen}
+\end{DoxyParamCaption}
+)}}\label{gdatalogger_8h_a555a2628f1bfa33692e5f51961d287a5}
+
+
+Definition at line 319 of file gdatalogger.\-c.
+
+
+
+References G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-I\-P\-C\-\_\-\-S\-H\-M\-::\-Flag, G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-F\-L\-A\-G\-D\-A\-T\-A\-A\-V\-A\-I\-L\-A\-B\-L\-E, G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-F\-L\-A\-G\-I\-D\-D\-L\-E, G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-F\-L\-A\-G\-N\-O\-T\-E\-X\-I\-S\-T, G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-F\-L\-A\-G\-R\-E\-Q\-U\-E\-S\-T\-D\-A\-T\-A, G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-F\-L\-A\-G\-T\-I\-M\-E\-O\-U\-T, G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-I\-P\-C\-\_\-\-S\-H\-M\-::\-Queue\-Data, G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-I\-P\-C\-\_\-\-S\-H\-M\-::\-Queue\-Size, G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-I\-P\-C\-\_\-\-S\-H\-M\-::\-Variable\-Name, and G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-I\-P\-C\-\_\-\-S\-H\-M\-::\-Variable\-Unit.
+
+
+\begin{DoxyCode}
+\{
+        \textcolor{keywordtype}{int} counter;
+        
+        sprintf(\hyperlink{gdatalogger_8c_af7df326df930ef7f72e0a173e443db7e}{pgDataLoggerIPC\_SHM}->\hyperlink{structGDATALOGGERIPC__SHM_afb130e15f688a18e52e2037f4bb17e89}{VariableName}
+      , \textcolor{stringliteral}{"%s"}, varname);
+        \hyperlink{gdatalogger_8c_af7df326df930ef7f72e0a173e443db7e}{pgDataLoggerIPC\_SHM}->\hyperlink{structGDATALOGGERIPC__SHM_a346eca077a97246740a6ed4f7c08833c}{Flag} = 
+      \hyperlink{gdatalogger_8h_af760bb7f990f73e634afb534bc64068e}{GDATALOGGER\_IPC\_FLAGREQUESTDATA};
+        
+\textcolor{comment}{/*      printf("\(\backslash\)ngDataLogger\_IPC\_RetrieveVariable: solicitação feita pela
+       variavel %s",varname); */}
+
+        counter = 0;
+        \textcolor{keywordflow}{while}(\hyperlink{gdatalogger_8c_af7df326df930ef7f72e0a173e443db7e}{pgDataLoggerIPC\_SHM}->\hyperlink{structGDATALOGGERIPC__SHM_a346eca077a97246740a6ed4f7c08833c}{Flag} == 
+      \hyperlink{gdatalogger_8h_af760bb7f990f73e634afb534bc64068e}{GDATALOGGER\_IPC\_FLAGREQUESTDATA})\{
+                usleep(10000);
+                \textcolor{keywordflow}{if}(++counter > 100)\{
+                        *bufferlen = 0;
+                        \hyperlink{gdatalogger_8c_af7df326df930ef7f72e0a173e443db7e}{pgDataLoggerIPC\_SHM}->\hyperlink{structGDATALOGGERIPC__SHM_a346eca077a97246740a6ed4f7c08833c}{Flag} = 
+      \hyperlink{gdatalogger_8h_af1565d64ddabc6f1a1c3fc5fa3e7a123}{GDATALOGGER\_IPC\_FLAGIDDLE};
+                        \textcolor{comment}{/* printf("\(\backslash\)ngDataLogger\_IPC\_RetrieveVariable:
+       solicitação não atendida"); */}
+                        \textcolor{keywordflow}{return} \hyperlink{gdatalogger_8h_a719ff7948a9cc265bd0c180f521ad069}{GDATALOGGER\_IPC\_FLAGTIMEOUT}
+      ;
+                \}
+        \}
+        
+        \textcolor{keywordflow}{if}(\hyperlink{gdatalogger_8c_af7df326df930ef7f72e0a173e443db7e}{pgDataLoggerIPC\_SHM}->\hyperlink{structGDATALOGGERIPC__SHM_a346eca077a97246740a6ed4f7c08833c}{Flag}==
+      \hyperlink{gdatalogger_8h_a3ffb6bf6a27e2f09d4a3fcac933f8dd4}{GDATALOGGER\_IPC\_FLAGDATAAVAILABLE})\{
+                memcpy(pbuffer,\hyperlink{gdatalogger_8c_af7df326df930ef7f72e0a173e443db7e}{pgDataLoggerIPC\_SHM}->\hyperlink{structGDATALOGGERIPC__SHM_ac495752de142e6697c08f713505ed55c}{
+      QueueData}, \hyperlink{gdatalogger_8c_af7df326df930ef7f72e0a173e443db7e}{pgDataLoggerIPC\_SHM}->\hyperlink{structGDATALOGGERIPC__SHM_a7d392777d231e1b0cece66cb51b0945b}{QueueSize} * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{
+      double}));
+                sprintf(varunit, \textcolor{stringliteral}{"%s"}, \hyperlink{gdatalogger_8c_af7df326df930ef7f72e0a173e443db7e}{pgDataLoggerIPC\_SHM}->
+      \hyperlink{structGDATALOGGERIPC__SHM_a8efd7b2ed8ff087f9694cb47a8c25a13}{VariableUnit});
+                *bufferlen = \hyperlink{gdatalogger_8c_af7df326df930ef7f72e0a173e443db7e}{pgDataLoggerIPC\_SHM}->\hyperlink{structGDATALOGGERIPC__SHM_a7d392777d231e1b0cece66cb51b0945b}{QueueSize}
+      ;
+                \hyperlink{gdatalogger_8c_af7df326df930ef7f72e0a173e443db7e}{pgDataLoggerIPC\_SHM}->\hyperlink{structGDATALOGGERIPC__SHM_a346eca077a97246740a6ed4f7c08833c}{Flag} = 
+      \hyperlink{gdatalogger_8h_af1565d64ddabc6f1a1c3fc5fa3e7a123}{GDATALOGGER\_IPC\_FLAGIDDLE};
+                \textcolor{keywordflow}{return} \hyperlink{gdatalogger_8h_a3ffb6bf6a27e2f09d4a3fcac933f8dd4}{GDATALOGGER\_IPC\_FLAGDATAAVAILABLE}
+      ;
+        \}
+
+        \textcolor{keywordflow}{if}(\hyperlink{gdatalogger_8c_af7df326df930ef7f72e0a173e443db7e}{pgDataLoggerIPC\_SHM}->\hyperlink{structGDATALOGGERIPC__SHM_a346eca077a97246740a6ed4f7c08833c}{Flag}==
+      \hyperlink{gdatalogger_8h_ade1120d52c09baae1bd54b6a1efbf97b}{GDATALOGGER\_IPC\_FLAGNOTEXIST})\{
+                *bufferlen = 0;
+                \hyperlink{gdatalogger_8c_af7df326df930ef7f72e0a173e443db7e}{pgDataLoggerIPC\_SHM}->\hyperlink{structGDATALOGGERIPC__SHM_a346eca077a97246740a6ed4f7c08833c}{Flag} = 
+      \hyperlink{gdatalogger_8h_af1565d64ddabc6f1a1c3fc5fa3e7a123}{GDATALOGGER\_IPC\_FLAGIDDLE};
+                \textcolor{keywordflow}{return} \hyperlink{gdatalogger_8h_ade1120d52c09baae1bd54b6a1efbf97b}{GDATALOGGER\_IPC\_FLAGNOTEXIST}
+      ;
+        \}
+        
+        *bufferlen = 0;
+        \hyperlink{gdatalogger_8c_af7df326df930ef7f72e0a173e443db7e}{pgDataLoggerIPC\_SHM}->\hyperlink{structGDATALOGGERIPC__SHM_a346eca077a97246740a6ed4f7c08833c}{Flag} = 
+      \hyperlink{gdatalogger_8h_af1565d64ddabc6f1a1c3fc5fa3e7a123}{GDATALOGGER\_IPC\_FLAGIDDLE};
+        \textcolor{keywordflow}{return} \hyperlink{gdatalogger_8h_af1565d64ddabc6f1a1c3fc5fa3e7a123}{GDATALOGGER\_IPC\_FLAGIDDLE};
+\}
+\end{DoxyCode}
+\hypertarget{gdatalogger_8h_afa42a993493cf98d32da11e4279816f7}{\index{gdatalogger.\-h@{gdatalogger.\-h}!g\-Data\-Logger\-\_\-\-I\-P\-C\-Update@{g\-Data\-Logger\-\_\-\-I\-P\-C\-Update}}
+\index{g\-Data\-Logger\-\_\-\-I\-P\-C\-Update@{g\-Data\-Logger\-\_\-\-I\-P\-C\-Update}!gdatalogger.h@{gdatalogger.\-h}}
+\subsubsection[{g\-Data\-Logger\-\_\-\-I\-P\-C\-Update}]{\setlength{\rightskip}{0pt plus 5cm}int g\-Data\-Logger\-\_\-\-I\-P\-C\-Update (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R}}]{pg\-Data\-Logger}
+\end{DoxyParamCaption}
+)}}\label{gdatalogger_8h_afa42a993493cf98d32da11e4279816f7}
+
+
+Definition at line 274 of file gdatalogger.\-c.
+
+
+
+References G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-V\-A\-R\-I\-A\-B\-L\-E\-::\-Circular\-Queue, G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-V\-A\-R\-I\-A\-B\-L\-E\-::\-Circular\-Queue\-Control, F\-A\-L\-S\-E, G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-I\-P\-C\-\_\-\-S\-H\-M\-::\-Flag, G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-F\-L\-A\-G\-D\-A\-T\-A\-A\-V\-A\-I\-L\-A\-B\-L\-E, G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-F\-L\-A\-G\-N\-O\-T\-E\-X\-I\-S\-T, G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-P\-C\-\_\-\-F\-L\-A\-G\-R\-E\-Q\-U\-E\-S\-T\-D\-A\-T\-A, g\-Data\-Logger\-I\-P\-C\-\_\-\-S\-H\-M\-\_\-flagmodeserver, g\-Q\-U\-E\-U\-E\-\_\-\-Get\-Number\-Of\-Unread\-Data(), g\-Q\-U\-E\-U\-E\-\_\-\-Request\-Read\-Index(), G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-::m\-\_\-\-Number\-Of\-Variables, Q\-U\-E\-U\-E\-\_\-\-D\-E\-S\-T\-I\-N\-A\-T\-I\-O\-N\-\_\-\-I\-P\-C, G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-I\-P\-C\-\_\-\-S\-H\-M\-::\-Queue\-Data, G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-I\-P\-C\-\_\-\-S\-H\-M\-::\-Queue\-Size, T\-R\-U\-E, G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-V\-A\-R\-I\-A\-B\-L\-E\-::\-Variable\-Name, G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-I\-P\-C\-\_\-\-S\-H\-M\-::\-Variable\-Name, G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-::\-Variables, G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-V\-A\-R\-I\-A\-B\-L\-E\-::\-Variable\-Unit, and G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-I\-P\-C\-\_\-\-S\-H\-M\-::\-Variable\-Unit.
+
+
+
+Referenced by datalogger\-\_\-update\-\_\-\-I\-P\-C().
+
+
+\begin{DoxyCode}
+\{
+        \textcolor{keywordtype}{int} QueueIndex,nvar,n,i;
+
+        \textcolor{comment}{/********** IPC **********/}
+        \textcolor{keywordflow}{if}(\hyperlink{gdatalogger_8c_ab05e4213b873bbf0185738b7fd8a6e4a}{gDataLoggerIPC\_SHM\_flagmodeserver}==
+      0)\{
+                \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+        \}
+        
+        \textcolor{keywordflow}{if}(\hyperlink{gdatalogger_8c_af7df326df930ef7f72e0a173e443db7e}{pgDataLoggerIPC\_SHM}->\hyperlink{structGDATALOGGERIPC__SHM_a346eca077a97246740a6ed4f7c08833c}{Flag} == 
+      \hyperlink{gdatalogger_8h_af760bb7f990f73e634afb534bc64068e}{GDATALOGGER\_IPC\_FLAGREQUESTDATA})\{
+                
+                \textcolor{comment}{/* Procura pela variavel */}
+                nvar = -1;
+                \textcolor{keywordflow}{for}(n=0;n<pgDataLogger->\hyperlink{structGDATALOGGER_a2ac727ee6c50f7e04030cbe531158f08}{m\_NumberOfVariables};
+      ++n)\{
+                        \textcolor{keywordflow}{if}(strcmp(\hyperlink{gdatalogger_8c_af7df326df930ef7f72e0a173e443db7e}{pgDataLoggerIPC\_SHM}->
+      \hyperlink{structGDATALOGGERIPC__SHM_afb130e15f688a18e52e2037f4bb17e89}{VariableName},pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}[n].\hyperlink{structGDATALOGGERVARIABLE_a336b7b6cbfc9cdebc7e1ade3de17ac3f}{VariableName}
+      )==0)\{
+                                nvar = n;
+                                \textcolor{keywordflow}{break};
+                        \}
+                \}
+                \textcolor{keywordflow}{if}(nvar<0)\{
+                        \hyperlink{gdatalogger_8c_af7df326df930ef7f72e0a173e443db7e}{pgDataLoggerIPC\_SHM}->\hyperlink{structGDATALOGGERIPC__SHM_a346eca077a97246740a6ed4f7c08833c}{Flag} = 
+      \hyperlink{gdatalogger_8h_ade1120d52c09baae1bd54b6a1efbf97b}{GDATALOGGER\_IPC\_FLAGNOTEXIST};
+                        \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE}; 
+                \}
+
+                \textcolor{comment}{/* Metodo otimizado, que salva em uma variavel MATLAB todas as
+       ultimas leituras. */}
+                \textcolor{keywordflow}{if}(!\hyperlink{gqueue_8c_a7138af0e73adef329c891210ba747a2e}{gQUEUE\_GetNumberOfUnreadData}(&
+      pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}[nvar].\hyperlink{structGDATALOGGERVARIABLE_a1a50747d2223f228288b4656470d9bbc}{CircularQueueControl}, 
+      \hyperlink{gdatalogger_8h_ad022a1a3ec941cb515402542b2d8a1c4}{QUEUE\_DESTINATION\_IPC}, &\hyperlink{gdatalogger_8c_af7df326df930ef7f72e0a173e443db7e}{pgDataLoggerIPC\_SHM}
+      ->\hyperlink{structGDATALOGGERIPC__SHM_a7d392777d231e1b0cece66cb51b0945b}{QueueSize}))\{
+                        \hyperlink{gdatalogger_8c_af7df326df930ef7f72e0a173e443db7e}{pgDataLoggerIPC\_SHM}->\hyperlink{structGDATALOGGERIPC__SHM_a7d392777d231e1b0cece66cb51b0945b}{QueueSize}
+       = 0;
+                \}
+                \textcolor{keywordflow}{if}(\hyperlink{gdatalogger_8c_af7df326df930ef7f72e0a173e443db7e}{pgDataLoggerIPC\_SHM}->\hyperlink{structGDATALOGGERIPC__SHM_a7d392777d231e1b0cece66cb51b0945b}{QueueSize}>0
+      )\{ \textcolor{comment}{/* Existem dados a serem salvos. */}
+                        \textcolor{keywordflow}{for}(i=0;i<\hyperlink{gdatalogger_8c_af7df326df930ef7f72e0a173e443db7e}{pgDataLoggerIPC\_SHM}->
+      \hyperlink{structGDATALOGGERIPC__SHM_a7d392777d231e1b0cece66cb51b0945b}{QueueSize};++i)\{
+                                \hyperlink{gqueue_8c_ab5ba087de92285fb4f9ed8c46440ac6f}{gQUEUE\_RequestReadIndex}(
+      &pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}[nvar].\hyperlink{structGDATALOGGERVARIABLE_a1a50747d2223f228288b4656470d9bbc}{CircularQueueControl}
+      , \hyperlink{gdatalogger_8h_ad022a1a3ec941cb515402542b2d8a1c4}{QUEUE\_DESTINATION\_IPC}, &QueueIndex);
+                                \hyperlink{gdatalogger_8c_af7df326df930ef7f72e0a173e443db7e}{pgDataLoggerIPC\_SHM}->
+      \hyperlink{structGDATALOGGERIPC__SHM_ac495752de142e6697c08f713505ed55c}{QueueData}[i] = pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}[nvar].\hyperlink{structGDATALOGGERVARIABLE_ae17ad02442f31da9518c99ce13607c8b}{CircularQueue}
+      [QueueIndex];
+                        \}
+                \}
+                
+                sprintf(\hyperlink{gdatalogger_8c_af7df326df930ef7f72e0a173e443db7e}{pgDataLoggerIPC\_SHM}->\hyperlink{structGDATALOGGERIPC__SHM_a8efd7b2ed8ff087f9694cb47a8c25a13}{VariableUnit}
+      , \textcolor{stringliteral}{"%s"}, pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}[nvar].\hyperlink{structGDATALOGGERVARIABLE_a0d42da63f3f904774cbf2ee8d92ee135}{VariableUnit});
+                \hyperlink{gdatalogger_8c_af7df326df930ef7f72e0a173e443db7e}{pgDataLoggerIPC\_SHM}->\hyperlink{structGDATALOGGERIPC__SHM_a346eca077a97246740a6ed4f7c08833c}{Flag} = 
+      \hyperlink{gdatalogger_8h_a3ffb6bf6a27e2f09d4a3fcac933f8dd4}{GDATALOGGER\_IPC\_FLAGDATAAVAILABLE};
+        \}
+
+        \textcolor{keywordflow}{return}(\hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+\}
+\end{DoxyCode}
+\hypertarget{gdatalogger_8h_a05dc8ce832b941280d7de26057992640}{\index{gdatalogger.\-h@{gdatalogger.\-h}!g\-Data\-Logger\-\_\-\-Matfile\-Update@{g\-Data\-Logger\-\_\-\-Matfile\-Update}}
+\index{g\-Data\-Logger\-\_\-\-Matfile\-Update@{g\-Data\-Logger\-\_\-\-Matfile\-Update}!gdatalogger.h@{gdatalogger.\-h}}
+\subsubsection[{g\-Data\-Logger\-\_\-\-Matfile\-Update}]{\setlength{\rightskip}{0pt plus 5cm}int g\-Data\-Logger\-\_\-\-Matfile\-Update (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R}}]{pg\-Data\-Logger}
+\end{DoxyParamCaption}
+)}}\label{gdatalogger_8h_a05dc8ce832b941280d7de26057992640}
+
+
+Definition at line 245 of file gdatalogger.\-c.
+
+
+
+References G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-V\-A\-R\-I\-A\-B\-L\-E\-::\-Circular\-Queue, G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-V\-A\-R\-I\-A\-B\-L\-E\-::\-Circular\-Queue\-Control, F\-A\-L\-S\-E, g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Save\-Vector(), G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-::\-G\-Matlab\-Data\-File\-Config, G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-V\-A\-R\-I\-A\-B\-L\-E\-::\-G\-Matlab\-Data\-File\-Index, g\-Q\-U\-E\-U\-E\-\_\-\-Get\-Number\-Of\-Unread\-Data(), g\-Q\-U\-E\-U\-E\-\_\-\-Request\-Read\-Index(), G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-::m\-\_\-\-Number\-Of\-Variables, Q\-U\-E\-U\-E\-\_\-\-D\-E\-S\-T\-I\-N\-A\-T\-I\-O\-N\-\_\-\-F\-I\-L\-E, T\-R\-U\-E, G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-V\-A\-R\-I\-A\-B\-L\-E\-::\-Variable\-Name, and G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-::\-Variables.
+
+
+
+Referenced by datalogger\-\_\-close(), datalogger\-\_\-write\-\_\-file(), g\-Data\-Logger\-\_\-\-Close(), and g\-Data\-Logger\-\_\-\-Insert\-Variable().
+
+
+\begin{DoxyCode}
+\{
+        \textcolor{keywordtype}{int} QueueIndex,nvar,datasize,i;
+        \textcolor{keywordtype}{double} *v;
+        \textcolor{keywordtype}{char} matvarname[70];
+
+        \textcolor{comment}{/********** MATFILE **********/}
+        \textcolor{comment}{/* Esvaziar queues de todas as variaveis que vao para o arquivo: */}
+        \textcolor{keywordflow}{for}(nvar=0;nvar<pgDataLogger->\hyperlink{structGDATALOGGER_a2ac727ee6c50f7e04030cbe531158f08}{m\_NumberOfVariables};++
+      nvar)\{
+                \textcolor{comment}{/* Metodo otimizado, que salva em uma variavel MATLAB todas as
+       ultimas leituras. */}
+                \textcolor{keywordflow}{if}(!\hyperlink{gqueue_8c_a7138af0e73adef329c891210ba747a2e}{gQUEUE\_GetNumberOfUnreadData}(&
+      pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}[nvar].\hyperlink{structGDATALOGGERVARIABLE_a1a50747d2223f228288b4656470d9bbc}{CircularQueueControl}, 
+      \hyperlink{gdatalogger_8h_a56fdd07b22a8488e0d8f2c1a53fe20cc}{QUEUE\_DESTINATION\_FILE}, &datasize))\{
+                        \textcolor{keywordflow}{return}(\hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+                \}
+                \textcolor{keywordflow}{if}(datasize>0)\{ \textcolor{comment}{/* Existem dados a serem salvos. */}
+                        v = (\textcolor{keywordtype}{double} *) malloc(datasize * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}));
+                        \textcolor{keywordflow}{for}(i=0;i<datasize;++i)\{
+                                \hyperlink{gqueue_8c_ab5ba087de92285fb4f9ed8c46440ac6f}{gQUEUE\_RequestReadIndex}(
+      &pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}[nvar].\hyperlink{structGDATALOGGERVARIABLE_a1a50747d2223f228288b4656470d9bbc}{CircularQueueControl}
+      , \hyperlink{gdatalogger_8h_a56fdd07b22a8488e0d8f2c1a53fe20cc}{QUEUE\_DESTINATION\_FILE}, &QueueIndex);
+                                v[i] = pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}[nvar].
+      \hyperlink{structGDATALOGGERVARIABLE_ae17ad02442f31da9518c99ce13607c8b}{CircularQueue}[QueueIndex];
+                        \}
+                        sprintf(matvarname,\textcolor{stringliteral}{"%s\_%li\_%li"},pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}
+      [nvar].\hyperlink{structGDATALOGGERVARIABLE_a336b7b6cbfc9cdebc7e1ade3de17ac3f}{VariableName},pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}[nvar].
+      \hyperlink{structGDATALOGGERVARIABLE_aa1cd5b838d8655734e7d4499b25bf22a}{GMatlabDataFileIndex},pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}[nvar]
+      .\hyperlink{structGDATALOGGERVARIABLE_aa1cd5b838d8655734e7d4499b25bf22a}{GMatlabDataFileIndex}+datasize-1);
+                        \hyperlink{gmatlabdatafile_8c_a3ecf28836f545707551fe8b8005c8954}{gMATLABDataFile\_SaveVector}(&
+      pgDataLogger->\hyperlink{structGDATALOGGER_a062fd3836dbd0b1bec129ab372bff04a}{GMatlabDataFileConfig}, matvarname, v, datasize
+      );
+                        free(v);
+                        pgDataLogger->\hyperlink{structGDATALOGGER_a6af9584d8665205b950cb2dcc5f90a94}{Variables}[nvar].
+      \hyperlink{structGDATALOGGERVARIABLE_aa1cd5b838d8655734e7d4499b25bf22a}{GMatlabDataFileIndex} += datasize;
+                \}
+        \}
+
+        \textcolor{keywordflow}{return}(\hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+\}
+\end{DoxyCode}

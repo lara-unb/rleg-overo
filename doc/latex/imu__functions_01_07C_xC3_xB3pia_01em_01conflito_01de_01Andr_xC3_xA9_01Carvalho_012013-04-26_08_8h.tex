@@ -1,0 +1,1052 @@
+\hypertarget{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h}{\section{André backup conflitos/imu\-\_\-functions (Cópia em conflito de André Carvalho 2013-\/04-\/26).h File Reference}
+\label{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h}\index{André backup conflitos/imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h@{André backup conflitos/imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h}}
+}
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$stdint.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include $<$errno.\-h$>$}\\*
+{\ttfamily \#include $<$unistd.\-h$>$}\\*
+{\ttfamily \#include $<$sys/types.\-h$>$}\\*
+{\ttfamily \#include $<$sys/stat.\-h$>$}\\*
+{\ttfamily \#include $<$sys/ioctl.\-h$>$}\\*
+{\ttfamily \#include $<$fcntl.\-h$>$}\\*
+{\ttfamily \#include $<$linux/i2c-\/dev.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}imu\-\_\-regs.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_aa3f75ad2972ec8996ce5206feac0e52c}{A\-S\-C\-I\-I\-\_\-0}~0x30
+\item 
+\#define \hyperlink{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_aa90cac659d18e8ef6294c7ae337f6b58}{S\-U\-C\-C\-E\-S\-S}~1
+\item 
+\#define \hyperlink{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a6d58f9ac447476b4e084d7ca383f5183}{F\-A\-I\-L\-U\-R\-E}~-\/1
+\item 
+\#define \hyperlink{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a909f4a5773e20e672cdb4088e1cfa22f}{A\-D\-D\-\_\-\-A\-D\-X\-L345}~0x53
+\item 
+\#define \hyperlink{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_ab9fd1068a3f5fcba24d92918aaf0dcb5}{A\-D\-D\-\_\-\-I\-T\-G3200}~0x68
+\item 
+\#define \hyperlink{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a383c09d3e3bbe30097f7eb8d081fb856}{A\-D\-D\-\_\-\-H\-M\-C5883}~0x1\-E
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a534116416343122de29a5b6ade6876bd}{acc\-\_\-write\-\_\-reg} (int \hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\-\_\-dev}, uint8\-\_\-t reg, uint8\-\_\-t data)
+\item 
+uint8\-\_\-t $\ast$ \hyperlink{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a2a91c44eebbe44f4d3b8c508633512f9}{acc\-\_\-read\-\_\-reg} (int \hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\-\_\-dev}, uint8\-\_\-t reg, uint8\-\_\-t count)
+\item 
+int \hyperlink{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_ae8f9cc6e0d15e61039d846305f86f073}{acc\-\_\-init} (int \hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\-\_\-dev}, uint8\-\_\-t full\-\_\-res, uint16\-\_\-t rate, uint8\-\_\-t range)
+\begin{DoxyCompactList}\small\item\em Rev 0 -\/ 11/11/2012 R\-L\-E\-G project -\/ 2012. \end{DoxyCompactList}\item 
+uint8\-\_\-t \hyperlink{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a78334a746af1665a280d12195f48db02}{acc\-\_\-read\-\_\-all\-\_\-data} (int \hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\-\_\-dev}, short int $\ast$data)
+\item 
+short int \hyperlink{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a041d6953f2bfc8c5efa4d5bbac812305}{acc\-\_\-read\-\_\-data} (int \hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\-\_\-dev}, int axis)
+\item 
+char $\ast$ \hyperlink{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\-\_\-byte\-\_\-hex\-\_\-bin} (uint8\-\_\-t $\ast$hvalue)
+\item 
+int \hyperlink{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a8509cccabb08e7267677f66f25718731}{acc\-\_\-read\-\_\-all\-\_\-reg} (int \hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\-\_\-dev})
+\item 
+int \hyperlink{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a3eba167b8ab0614bfe7bafeae8b5570d}{gyr\-\_\-write\-\_\-reg} (int \hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\-\_\-dev}, uint8\-\_\-t reg, uint8\-\_\-t data)
+\item 
+uint8\-\_\-t $\ast$ \hyperlink{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_ad817a3b69d4c3026b7a9b6de32753e7b}{gyr\-\_\-read\-\_\-reg} (int \hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\-\_\-dev}, uint8\-\_\-t reg, uint8\-\_\-t count)
+\item 
+int \hyperlink{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a6d02be352b4491a236c9695a6a24d174}{gyr\-\_\-init} (int \hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\-\_\-dev}, float rate, short int lpf\-\_\-bw, char clk\-\_\-source, char $\ast$act)
+\item 
+uint8\-\_\-t \hyperlink{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a710fbc7095ccd58ffa65d2240030a0ab}{gyr\-\_\-read\-\_\-all\-\_\-data} (int \hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\-\_\-dev}, short int $\ast$data)
+\item 
+short int \hyperlink{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a271b37e9ace81b18bb2f83787247d262}{gyr\-\_\-read\-\_\-data} (int \hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\-\_\-dev}, int type)
+\item 
+int \hyperlink{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_ab5d0ae421cd4bb10b1b7a1eda167416b}{mag\-\_\-write\-\_\-reg} (int \hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\-\_\-dev}, uint8\-\_\-t reg, uint8\-\_\-t data)
+\begin{DoxyCompactList}\small\item\em Rev 0 -\/ 11/11/2012 R\-L\-E\-G project -\/ 2012. \end{DoxyCompactList}\item 
+uint8\-\_\-t $\ast$ \hyperlink{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a6830eaeae2298320e1e8c902e4edd709}{mag\-\_\-read\-\_\-reg} (int \hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\-\_\-dev}, uint8\-\_\-t reg, uint8\-\_\-t count)
+\item 
+int \hyperlink{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a014f908c9faa37c1ec75177a17012a01}{mag\-\_\-init} (int \hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\-\_\-dev}, uint8\-\_\-t rate, uint8\-\_\-t range, uint8\-\_\-t samples\-\_\-avg, uint8\-\_\-t meas\-\_\-mode, uint8\-\_\-t op\-\_\-mode)
+\item 
+uint8\-\_\-t \hyperlink{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a8f2fd896caf1216ba82e535e6251692f}{mag\-\_\-read\-\_\-all\-\_\-data} (int \hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\-\_\-dev}, short int $\ast$data)
+\item 
+short int \hyperlink{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a542a31ccd07cd2c3e8e2b68cdb6d219e}{mag\-\_\-read\-\_\-data} (int \hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\-\_\-dev}, int axis)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a909f4a5773e20e672cdb4088e1cfa22f}{\index{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h@{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h}!A\-D\-D\-\_\-\-A\-D\-X\-L345@{A\-D\-D\-\_\-\-A\-D\-X\-L345}}
+\index{A\-D\-D\-\_\-\-A\-D\-X\-L345@{A\-D\-D\-\_\-\-A\-D\-X\-L345}!imu_functions (Cópia em conflito de André Carvalho 2013-04-26).h@{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h}}
+\subsubsection[{A\-D\-D\-\_\-\-A\-D\-X\-L345}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-D\-D\-\_\-\-A\-D\-X\-L345~0x53}}\label{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a909f4a5773e20e672cdb4088e1cfa22f}
+
+
+Definition at line 30 of file imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h.
+
+
+
+Referenced by devices\-\_\-init(), main(), and read\-\_\-all\-\_\-data().
+
+\hypertarget{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a383c09d3e3bbe30097f7eb8d081fb856}{\index{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h@{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h}!A\-D\-D\-\_\-\-H\-M\-C5883@{A\-D\-D\-\_\-\-H\-M\-C5883}}
+\index{A\-D\-D\-\_\-\-H\-M\-C5883@{A\-D\-D\-\_\-\-H\-M\-C5883}!imu_functions (Cópia em conflito de André Carvalho 2013-04-26).h@{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h}}
+\subsubsection[{A\-D\-D\-\_\-\-H\-M\-C5883}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-D\-D\-\_\-\-H\-M\-C5883~0x1\-E}}\label{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a383c09d3e3bbe30097f7eb8d081fb856}
+
+
+Definition at line 32 of file imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h.
+
+
+
+Referenced by devices\-\_\-init(), main(), and read\-\_\-all\-\_\-data().
+
+\hypertarget{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_ab9fd1068a3f5fcba24d92918aaf0dcb5}{\index{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h@{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h}!A\-D\-D\-\_\-\-I\-T\-G3200@{A\-D\-D\-\_\-\-I\-T\-G3200}}
+\index{A\-D\-D\-\_\-\-I\-T\-G3200@{A\-D\-D\-\_\-\-I\-T\-G3200}!imu_functions (Cópia em conflito de André Carvalho 2013-04-26).h@{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h}}
+\subsubsection[{A\-D\-D\-\_\-\-I\-T\-G3200}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-D\-D\-\_\-\-I\-T\-G3200~0x68}}\label{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_ab9fd1068a3f5fcba24d92918aaf0dcb5}
+
+
+Definition at line 31 of file imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h.
+
+
+
+Referenced by devices\-\_\-init(), main(), and read\-\_\-all\-\_\-data().
+
+\hypertarget{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_aa3f75ad2972ec8996ce5206feac0e52c}{\index{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h@{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h}!A\-S\-C\-I\-I\-\_\-0@{A\-S\-C\-I\-I\-\_\-0}}
+\index{A\-S\-C\-I\-I\-\_\-0@{A\-S\-C\-I\-I\-\_\-0}!imu_functions (Cópia em conflito de André Carvalho 2013-04-26).h@{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h}}
+\subsubsection[{A\-S\-C\-I\-I\-\_\-0}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-S\-C\-I\-I\-\_\-0~0x30}}\label{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_aa3f75ad2972ec8996ce5206feac0e52c}
+
+
+Definition at line 25 of file imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h.
+
+
+
+Referenced by conv\-\_\-byte\-\_\-hex\-\_\-bin().
+
+\hypertarget{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a6d58f9ac447476b4e084d7ca383f5183}{\index{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h@{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h}!F\-A\-I\-L\-U\-R\-E@{F\-A\-I\-L\-U\-R\-E}}
+\index{F\-A\-I\-L\-U\-R\-E@{F\-A\-I\-L\-U\-R\-E}!imu_functions (Cópia em conflito de André Carvalho 2013-04-26).h@{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h}}
+\subsubsection[{F\-A\-I\-L\-U\-R\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-A\-I\-L\-U\-R\-E~-\/1}}\label{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a6d58f9ac447476b4e084d7ca383f5183}
+
+
+Definition at line 28 of file imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h.
+
+\hypertarget{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_aa90cac659d18e8ef6294c7ae337f6b58}{\index{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h@{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h}!S\-U\-C\-C\-E\-S\-S@{S\-U\-C\-C\-E\-S\-S}}
+\index{S\-U\-C\-C\-E\-S\-S@{S\-U\-C\-C\-E\-S\-S}!imu_functions (Cópia em conflito de André Carvalho 2013-04-26).h@{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h}}
+\subsubsection[{S\-U\-C\-C\-E\-S\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-U\-C\-C\-E\-S\-S~1}}\label{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_aa90cac659d18e8ef6294c7ae337f6b58}
+
+
+Definition at line 27 of file imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_ae8f9cc6e0d15e61039d846305f86f073}{\index{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h@{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h}!acc\-\_\-init@{acc\-\_\-init}}
+\index{acc\-\_\-init@{acc\-\_\-init}!imu_functions (Cópia em conflito de André Carvalho 2013-04-26).h@{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h}}
+\subsubsection[{acc\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}int acc\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{int}]{i2c\-\_\-dev, }
+\item[{uint8\-\_\-t}]{full\-\_\-res, }
+\item[{uint16\-\_\-t}]{rate, }
+\item[{uint8\-\_\-t}]{range}
+\end{DoxyParamCaption}
+)}}\label{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_ae8f9cc6e0d15e61039d846305f86f073}
+
+
+Rev 0 -\/ 11/11/2012 R\-L\-E\-G project -\/ 2012. 
+
+Implements the I2\-C communication between Gumstix Overo Fire and A\-D\-X\-L345 \begin{DoxyAuthor}{Author}
+Caio Gustavo Mesquita Ângelo 
+\end{DoxyAuthor}
+
+
+Definition at line 10 of file acc\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c.
+
+
+\begin{DoxyCode}
+\{ 
+  uint8\_t data=0;
+
+  \textcolor{keywordflow}{switch}(range)\{
+    \textcolor{keywordflow}{case} 2:
+      data=0x08;;
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{case} 4:
+      data=0x09;
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{case} 8:
+      data=0x0A;
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{default}:
+      data=0x0B;
+      \textcolor{keywordflow}{break};
+  \}
+  
+  \textcolor{keywordflow}{if}(full\_res==0)
+    data=data&(0xF7);
+  
+  \textcolor{keywordflow}{if}((\hyperlink{group__acc_ga534116416343122de29a5b6ade6876bd}{acc\_write\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev}, \hyperlink{communication_2imu__regs_8h_ab4eb7fc69b2a37ee750d3400fc2c53a1}{ACC\_DATA\_FORMAT}
+      , data))<0)\{
+    perror(\textcolor{stringliteral}{"Data Format unsuccesful"});
+    \textcolor{keywordflow}{return} -1;
+  \}
+  
+  data=\hyperlink{communication_2imu__regs_8h_a9a841ba3e094b01ea439584e12b25894}{ACC\_POWER\_CTL\_MEAS\_MODE};
+  \textcolor{keywordflow}{if}((\hyperlink{group__acc_ga534116416343122de29a5b6ade6876bd}{acc\_write\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev}, \hyperlink{communication_2imu__regs_8h_ad857d62b61f349216faeda06eff5f9c6}{ACC\_POWER\_CTL}, 
+      data))<0)\{
+    perror(\textcolor{stringliteral}{"Power Control unsuccesful"});
+    \textcolor{keywordflow}{return} -1;
+  \}
+  
+  \textcolor{keywordflow}{switch}(rate)\{
+    \textcolor{keywordflow}{case} 100:
+      data=0x0A;
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{case} 3200:
+      data=0x0F;;
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{case} 1600:
+      data=0x0E;
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{case} 800:
+      data=0x0D;
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{case} 400:
+      data=0x0C;
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{case} 200:
+      data=0x0B;
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{case} 50:
+      data=0x09;
+      \textcolor{keywordflow}{break}; 
+    \textcolor{keywordflow}{case} 25:
+      data=0x08;
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{case} 12:
+      data=0x07;
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{case} 6:
+      data=0x06;
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{default}:
+      perror(\textcolor{stringliteral}{"Wrong rate value"});
+      \textcolor{keywordflow}{return} -1;
+  \}
+  \textcolor{keywordflow}{if}((\hyperlink{group__acc_ga534116416343122de29a5b6ade6876bd}{acc\_write\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev}, \hyperlink{communication_2imu__regs_8h_afbbb5a3aa097a32f98c47158141a882f}{ACC\_BW\_RATE}, data))
+      <0)\{
+    perror(\textcolor{stringliteral}{"Write in BW\_RATE unsuccesful"});
+    \textcolor{keywordflow}{return} -1;
+  \}
+  
+  \textcolor{keywordflow}{return} 1;
+\}
+\end{DoxyCode}
+\hypertarget{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a78334a746af1665a280d12195f48db02}{\index{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h@{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h}!acc\-\_\-read\-\_\-all\-\_\-data@{acc\-\_\-read\-\_\-all\-\_\-data}}
+\index{acc\-\_\-read\-\_\-all\-\_\-data@{acc\-\_\-read\-\_\-all\-\_\-data}!imu_functions (Cópia em conflito de André Carvalho 2013-04-26).h@{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h}}
+\subsubsection[{acc\-\_\-read\-\_\-all\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t acc\-\_\-read\-\_\-all\-\_\-data (
+\begin{DoxyParamCaption}
+\item[{int}]{i2c\-\_\-dev, }
+\item[{short int $\ast$}]{data}
+\end{DoxyParamCaption}
+)}}\label{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a78334a746af1665a280d12195f48db02}
+
+
+Definition at line 158 of file acc\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c.
+
+
+\begin{DoxyCode}
+\{
+  \textcolor{keywordtype}{int} i;
+  uint8\_t *data8;
+  \textcolor{keyword}{union }result
+  \{
+    \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} usgnd[3];
+    \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} sgnd[3];
+  \} result;
+  \textcolor{comment}{//result=(union result*)malloc(3*sizeof(union result));}
+  \textcolor{keywordflow}{if}( (data8=\hyperlink{group__acc_ga2a91c44eebbe44f4d3b8c508633512f9}{acc\_read\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev},\hyperlink{communication_2imu__regs_8h_afae448fbad872220013e5c3abf0f3d9f}{ACC\_DATAX0},6))==
+      NULL )
+  \{
+    perror(\textcolor{stringliteral}{"Read accelerometer register failed"});
+    \textcolor{keywordflow}{return} \hyperlink{communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-04-28_08_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
+  \}
+  \textcolor{comment}{//result.usgnd=(unsigned int*)malloc(3*sizeof(unsigned int));}
+  \textcolor{keywordflow}{for}(i=0; i<3; i++)
+  \{
+    result.usgnd[i]=0;
+    result.usgnd[i]=result.usgnd[i]|((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} int)data8[i*2])|(((\textcolor{keywordtype}{
+      unsigned} \textcolor{keywordtype}{short} int)data8[i*2+1])<<8);
+    data[i]=result.sgnd[i];
+  \}
+  \textcolor{keywordflow}{return} \hyperlink{communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-04-28_08_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};  
+\}
+\end{DoxyCode}
+\hypertarget{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a8509cccabb08e7267677f66f25718731}{\index{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h@{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h}!acc\-\_\-read\-\_\-all\-\_\-reg@{acc\-\_\-read\-\_\-all\-\_\-reg}}
+\index{acc\-\_\-read\-\_\-all\-\_\-reg@{acc\-\_\-read\-\_\-all\-\_\-reg}!imu_functions (Cópia em conflito de André Carvalho 2013-04-26).h@{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h}}
+\subsubsection[{acc\-\_\-read\-\_\-all\-\_\-reg}]{\setlength{\rightskip}{0pt plus 5cm}int acc\-\_\-read\-\_\-all\-\_\-reg (
+\begin{DoxyParamCaption}
+\item[{int}]{i2c\-\_\-dev}
+\end{DoxyParamCaption}
+)}}\label{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a8509cccabb08e7267677f66f25718731}
+
+
+Definition at line 195 of file acc\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c.
+
+
+\begin{DoxyCode}
+\{
+  uint8\_t *hvalue0, *hvalue1, *hvalue;
+  \textcolor{keywordtype}{int} i;
+  
+  hvalue0=\hyperlink{group__acc_ga2a91c44eebbe44f4d3b8c508633512f9}{acc\_read\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev},\hyperlink{communication_2imu__regs_8h_a007fa8d8ef9d89127ae5da32a2f42283}{ACC\_DEVID},1);
+  printf(\textcolor{stringliteral}{"\(\backslash\)nhey"});
+  printf(\textcolor{stringliteral}{"\(\backslash\)nhey3"});
+  printf(\textcolor{stringliteral}{"\(\backslash\)nhey2"});
+  printf(\textcolor{stringliteral}{"\(\backslash\)nhey3"});
+  hvalue1=\hyperlink{group__acc_ga2a91c44eebbe44f4d3b8c508633512f9}{acc\_read\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev},\hyperlink{communication_2imu__regs_8h_afa5af181c4af31e22baa9bd20ff322ef}{ACC\_THRESH\_TAP},
+       29);
+  printf(\textcolor{stringliteral}{"\(\backslash\)nhey3"});
+  \textcolor{comment}{//hvalue--;}
+  hvalue=(uint8\_t*)malloc(30*\textcolor{keyword}{sizeof}(uint8\_t));
+  hvalue[0]=hvalue0[0];
+  \textcolor{keywordflow}{for}( i=0; i<29; i++)
+    hvalue[i+1]=hvalue1[i];
+  printf(\textcolor{stringliteral}{"\(\backslash\)nhey4"});
+  printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_DEVID = 0x%02X = %s"}, hvalue0[0],\hyperlink{acc__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}
+      (hvalue0));
+  printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_THRESH\_TAP = 0x%02X = %s"}, hvalue1[0],\hyperlink{acc__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}
+      (hvalue+1));
+  printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_OFSX = 0x%02X = %s"}, hvalue[2],\hyperlink{acc__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}
+      (hvalue+2));
+  printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_OFSY = 0x%02X = %s"}, hvalue[3],\hyperlink{acc__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}
+      (hvalue+3));
+  printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_OFSZ = 0x%02X = %s"}, hvalue[4],\hyperlink{acc__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}
+      (hvalue+4));
+  printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_DUR = 0x%02X = %s"}, hvalue[5],\hyperlink{acc__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}
+      (hvalue+5));
+  printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_LATENT = 0x%02X = %s"}, hvalue[6],\hyperlink{acc__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}
+      (hvalue+6));
+  printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_WINDOW = 0x%02X = %s"}, hvalue[7],\hyperlink{acc__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}
+      (hvalue+7));
+  printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_THRESH\_ACT = 0x%02X = %s"}, hvalue[8],\hyperlink{acc__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}
+      (hvalue+8));
+  printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_THRESH\_INACT = 0x%02X = %s"}, hvalue[9],\hyperlink{acc__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}
+      (hvalue+9));
+  printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_TIME\_INACT = 0x%02X = %s"}, hvalue[10],\hyperlink{acc__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}
+      (hvalue+10));
+  printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_ACT\_INACT\_CTL = 0x%02X = %s"}, hvalue[11],\hyperlink{acc__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}
+      (hvalue+11));
+  printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_THRESH\_FF = 0x%02X = %s"}, hvalue[12],\hyperlink{acc__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}
+      (hvalue+12));
+  printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_TIME\_FF = 0x%02X = %s"}, hvalue[13],\hyperlink{acc__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}
+      (hvalue+13));
+  printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_TAP\_AXES = 0x%02X = %s"}, hvalue[14],\hyperlink{acc__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}
+      (hvalue+14));
+  printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_ACT\_TAP\_STATUS = 0x%02X = %s"}, hvalue[15],\hyperlink{acc__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}
+      (hvalue+15));
+  printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_BW\_RATE = 0x%02X = %s"}, hvalue[16],\hyperlink{acc__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}
+      (hvalue+16));
+  printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_POWER\_CTL = 0x%02X = %s"}, hvalue[17],\hyperlink{acc__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}
+      (hvalue+17));
+  printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_INT\_ENABLE = 0x%02X = %s"}, hvalue[18],\hyperlink{acc__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}
+      (hvalue+18));
+  printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_INT\_MAP = 0x%02X = %s"}, hvalue[19],\hyperlink{acc__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}
+      (hvalue+19));
+  printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_INT\_SOURCE = 0x%02X = %s"}, hvalue[20],\hyperlink{acc__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}
+      (hvalue+20));
+  printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_DATA\_FORMAT = 0x%02X = %s"}, hvalue1[20],\hyperlink{acc__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}
+      (hvalue1+21));
+  printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_DATAX0 = 0x%02X = %s"}, hvalue1[21],\hyperlink{acc__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}
+      (hvalue1+22));
+  printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_DATAX1 = 0x%02X = %s"}, hvalue1[22],\hyperlink{acc__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}
+      (hvalue1+23));
+  printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_DATAY0 = 0x%02X = %s"}, hvalue1[23],\hyperlink{acc__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}
+      (hvalue1+24));
+  printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_DATAY1 = 0x%02X = %s"}, hvalue1[24],\hyperlink{acc__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}
+      (hvalue1+25));
+  printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_DATAZ0 = 0x%02X = %s"}, hvalue1[25],\hyperlink{acc__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}
+      (hvalue1+26));
+  printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_DATAZ1 = 0x%02X = %s"}, hvalue1[26],\hyperlink{acc__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}
+      (hvalue1+27));
+  printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_FIFO\_CTL = 0x%02X = %s"}, hvalue[28],\hyperlink{acc__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}
+      (hvalue+28));
+  printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_FIFO\_STATUS = 0x%02X = %s"}, hvalue[29],\hyperlink{acc__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}
+      (hvalue+29));
+  \textcolor{keywordflow}{return} 1;
+\}
+\end{DoxyCode}
+\hypertarget{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a041d6953f2bfc8c5efa4d5bbac812305}{\index{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h@{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h}!acc\-\_\-read\-\_\-data@{acc\-\_\-read\-\_\-data}}
+\index{acc\-\_\-read\-\_\-data@{acc\-\_\-read\-\_\-data}!imu_functions (Cópia em conflito de André Carvalho 2013-04-26).h@{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h}}
+\subsubsection[{acc\-\_\-read\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}short int acc\-\_\-read\-\_\-data (
+\begin{DoxyParamCaption}
+\item[{int}]{i2c\-\_\-dev, }
+\item[{int}]{axis}
+\end{DoxyParamCaption}
+)}}\label{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a041d6953f2bfc8c5efa4d5bbac812305}
+
+
+Definition at line 130 of file acc\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c.
+
+
+\begin{DoxyCode}
+\{
+  uint8\_t *data;
+  \textcolor{keyword}{union }result
+  \{
+    \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} usgnd;
+    \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} sgnd;
+  \}result;
+
+  \textcolor{keywordflow}{switch}(axis)\{
+    \textcolor{keywordflow}{case} \textcolor{charliteral}{'X'}:
+      data=\hyperlink{group__acc_ga2a91c44eebbe44f4d3b8c508633512f9}{acc\_read\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev},\hyperlink{communication_2imu__regs_8h_afae448fbad872220013e5c3abf0f3d9f}{ACC\_DATAX0},2);
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{case} \textcolor{charliteral}{'Y'}:
+      data=\hyperlink{group__acc_ga2a91c44eebbe44f4d3b8c508633512f9}{acc\_read\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev},\hyperlink{communication_2imu__regs_8h_a6aa168a0f3e35bfee4da87c32dcb4b46}{ACC\_DATAY0},2);
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{case} \textcolor{charliteral}{'Z'}:
+      data=\hyperlink{group__acc_ga2a91c44eebbe44f4d3b8c508633512f9}{acc\_read\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev},\hyperlink{communication_2imu__regs_8h_ab87ce2339aeb4adb7fb71daa80f3bc68}{ACC\_DATAZ0},2);
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{default}:
+      perror(\textcolor{stringliteral}{"Wrong argument for axis in acc\_read\_data"});
+      \textcolor{keywordflow}{return} -1;
+  \}
+  result.usgnd=0;
+  result.usgnd=result.usgnd|(((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} int)data[0]))|(((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \textcolor{keywordtype}{
+      int})data[1])<<8);
+  \textcolor{keywordflow}{return} result.sgnd;
+\}
+\end{DoxyCode}
+\hypertarget{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a2a91c44eebbe44f4d3b8c508633512f9}{\index{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h@{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h}!acc\-\_\-read\-\_\-reg@{acc\-\_\-read\-\_\-reg}}
+\index{acc\-\_\-read\-\_\-reg@{acc\-\_\-read\-\_\-reg}!imu_functions (Cópia em conflito de André Carvalho 2013-04-26).h@{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h}}
+\subsubsection[{acc\-\_\-read\-\_\-reg}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t$\ast$ acc\-\_\-read\-\_\-reg (
+\begin{DoxyParamCaption}
+\item[{int}]{i2c\-\_\-dev, }
+\item[{uint8\-\_\-t}]{reg, }
+\item[{uint8\-\_\-t}]{count}
+\end{DoxyParamCaption}
+)}}\label{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a2a91c44eebbe44f4d3b8c508633512f9}
+
+
+Definition at line 108 of file acc\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c.
+
+
+\begin{DoxyCode}
+\{
+  uint8\_t data[29];
+  \textcolor{keywordtype}{int} i;
+
+  \textcolor{comment}{//data=(uint8\_t*)malloc((count+1)*sizeof(data));}
+  
+  data[0] = reg;
+
+  \textcolor{keywordflow}{if} ((write(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev}, &data, 1)) != 1) \{                  
+        perror(\textcolor{stringliteral}{"write before read"});
+        \textcolor{keywordflow}{return} NULL;
+  \}
+  data[0] = 0;
+  \textcolor{keywordflow}{if} ((read(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev}, &data, count)) != count) \{
+        perror(\textcolor{stringliteral}{"read"});
+        \textcolor{keywordflow}{return} NULL;    
+  \}
+
+  \textcolor{keywordflow}{return} data;
+\}
+\end{DoxyCode}
+\hypertarget{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a534116416343122de29a5b6ade6876bd}{\index{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h@{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h}!acc\-\_\-write\-\_\-reg@{acc\-\_\-write\-\_\-reg}}
+\index{acc\-\_\-write\-\_\-reg@{acc\-\_\-write\-\_\-reg}!imu_functions (Cópia em conflito de André Carvalho 2013-04-26).h@{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h}}
+\subsubsection[{acc\-\_\-write\-\_\-reg}]{\setlength{\rightskip}{0pt plus 5cm}int acc\-\_\-write\-\_\-reg (
+\begin{DoxyParamCaption}
+\item[{int}]{i2c\-\_\-dev, }
+\item[{uint8\-\_\-t}]{reg, }
+\item[{uint8\-\_\-t}]{data}
+\end{DoxyParamCaption}
+)}}\label{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a534116416343122de29a5b6ade6876bd}
+
+
+Definition at line 86 of file acc\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c.
+
+
+\begin{DoxyCode}
+\{
+  uint8\_t reg\_data[2];
+
+  reg\_data[0] = reg;
+  reg\_data[1] = data;
+
+  \textcolor{keywordflow}{if}( reg==\hyperlink{communication_2imu__regs_8h_a007fa8d8ef9d89127ae5da32a2f42283}{ACC\_DEVID} || reg==\hyperlink{communication_2imu__regs_8h_a823b94e47b6d728fdf91d386d69db3e9}{ACC\_ACT\_TAP\_STATUS} || 
+      reg==\hyperlink{communication_2imu__regs_8h_a7f9415e11f76d0666b842a875f5f5fd8}{ACC\_INT\_SOURCE} || reg==\hyperlink{communication_2imu__regs_8h_acb0760254230c73d4744bae2059e7367}{ACC\_FIFO\_STATUS} ||
+      reg==\hyperlink{communication_2imu__regs_8h_afae448fbad872220013e5c3abf0f3d9f}{ACC\_DATAX0} || reg==\hyperlink{communication_2imu__regs_8h_a63d0e7c719fabce83422ef9856302129}{ACC\_DATAX1} || reg==\hyperlink{communication_2imu__regs_8h_a6aa168a0f3e35bfee4da87c32dcb4b46}{ACC\_DATAY0}
+       || reg==\hyperlink{communication_2imu__regs_8h_a587970363cd2aeb2535ac314e98a2825}{ACC\_DATAY1} || reg==\hyperlink{communication_2imu__regs_8h_ab87ce2339aeb4adb7fb71daa80f3bc68}{ACC\_DATAZ0} || reg==\hyperlink{communication_2imu__regs_8h_afa9ea1f66d9d28dbb328498d6f7fa43d}{ACC\_DATAZ1}
+      )
+  \{
+      perror(\textcolor{stringliteral}{"Write unsucessful: Read-Only Register"});
+      \textcolor{keywordflow}{return} -1;
+  \}
+        
+  \textcolor{keywordflow}{if} ((write(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev}, &reg\_data, 2)) != 2) \{              
+          perror(\textcolor{stringliteral}{"Write unsuccessful"});
+          \textcolor{keywordflow}{return} -1;
+  \}
+
+  \textcolor{keywordflow}{return} 1;
+\}
+\end{DoxyCode}
+\hypertarget{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a1a6b2f719b4fef8f97d6d1b8f495148e}{\index{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h@{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h}!conv\-\_\-byte\-\_\-hex\-\_\-bin@{conv\-\_\-byte\-\_\-hex\-\_\-bin}}
+\index{conv\-\_\-byte\-\_\-hex\-\_\-bin@{conv\-\_\-byte\-\_\-hex\-\_\-bin}!imu_functions (Cópia em conflito de André Carvalho 2013-04-26).h@{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h}}
+\subsubsection[{conv\-\_\-byte\-\_\-hex\-\_\-bin}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ conv\-\_\-byte\-\_\-hex\-\_\-bin (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t $\ast$}]{hvalue}
+\end{DoxyParamCaption}
+)}}\label{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a1a6b2f719b4fef8f97d6d1b8f495148e}
+
+
+Definition at line 183 of file acc\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c.
+
+
+\begin{DoxyCode}
+\{
+  \textcolor{keywordtype}{char} \hyperlink{spi__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a46a6da6b1936191571fd30b2a749f38c}{bits}[9];
+  \textcolor{keywordtype}{int} i;
+  \textcolor{keywordflow}{for}( i=0; i<8; i++)
+  \{
+    bits[i]=((*hvalue)<<i)>>7+\hyperlink{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_aa3f75ad2972ec8996ce5206feac0e52c}{ASCII\_0};
+  \}
+  bits[8]=\textcolor{charliteral}{'\(\backslash\)0'};
+  \textcolor{keywordflow}{return} \hyperlink{spi__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8c_a46a6da6b1936191571fd30b2a749f38c}{bits};
+\}
+\end{DoxyCode}
+\hypertarget{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a6d02be352b4491a236c9695a6a24d174}{\index{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h@{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h}!gyr\-\_\-init@{gyr\-\_\-init}}
+\index{gyr\-\_\-init@{gyr\-\_\-init}!imu_functions (Cópia em conflito de André Carvalho 2013-04-26).h@{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h}}
+\subsubsection[{gyr\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}int gyr\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{int}]{i2c\-\_\-dev, }
+\item[{float}]{rate, }
+\item[{short int}]{lpf\-\_\-bw, }
+\item[{char}]{clk\-\_\-source, }
+\item[{char $\ast$}]{act}
+\end{DoxyParamCaption}
+)}}\label{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a6d02be352b4491a236c9695a6a24d174}
+
+
+Definition at line 53 of file gyr\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c.
+
+
+\begin{DoxyCode}
+\{ 
+  uint8\_t data=0;
+  \textcolor{keywordtype}{float} Fint=1000;
+
+  \textcolor{keywordflow}{switch}(lpf\_bw)\{
+    \textcolor{keywordflow}{case} 256:
+      Fint=8000;
+      data=0x18;
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{case} 188:
+      data=0x19;
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{case} 98:
+      data=0x1A;
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{case} 42:
+      data=0x1B;
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{case} 20:
+      data=0x1C;
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{case} 10:
+      data=0x1D;
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{case} 5:
+      data=0x1E;
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{default}:
+      perror(\textcolor{stringliteral}{"Wrong low pass filter bandwidth value"});
+      \textcolor{keywordflow}{break};
+  \}
+  
+  \textcolor{keywordflow}{if}(\hyperlink{group__gyr_ga3eba167b8ab0614bfe7bafeae8b5570d}{gyr\_write\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev}, \hyperlink{communication_2imu__regs_8h_a78908b66de8b46d12895e7cb66af6f5c}{GYR\_DLPF\_FS}, data)<0
+      )\{
+    perror(\textcolor{stringliteral}{"Write in Configuration register A unsuccesful"});
+    \textcolor{keywordflow}{return} -1;
+  \}
+
+  \textcolor{keywordflow}{if}( (rate>Fint)||(rate<0) )
+  \{
+    perror(\textcolor{stringliteral}{"Wrong choice for rate"});
+    \textcolor{keywordflow}{return} -1;
+  \}
+  data=(uint8\_t)(Fint/rate - 1);
+  
+  \textcolor{keywordflow}{if}(\hyperlink{group__gyr_ga3eba167b8ab0614bfe7bafeae8b5570d}{gyr\_write\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev}, \hyperlink{communication_2imu__regs_8h_a04a18568e6e39825c98be5ec2976bec4}{GYR\_SMPLRT\_DIV}, 
+      data)<0)\{
+    perror(\textcolor{stringliteral}{"Write in configuration register B unsuccesful"});
+    \textcolor{keywordflow}{return} -1;
+  \}
+      
+  \textcolor{keywordflow}{switch}(clk\_source)\{
+    \textcolor{keywordflow}{case} \textcolor{charliteral}{'I'}:
+      data=0x00;
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{case} \textcolor{charliteral}{'X'}:
+      data=0x01;
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{case} \textcolor{charliteral}{'Y'}:
+      data=0x02;
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{case} \textcolor{charliteral}{'Z'}:
+      data=0x03;
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{default}:
+      perror(\textcolor{stringliteral}{"Wrong clk\_source value"});
+      \textcolor{keywordflow}{break};
+  \}
+      
+  \textcolor{keywordflow}{if}( strcmp(act,\textcolor{stringliteral}{"XYZ"})==0 );
+  \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}( strcmp(act,\textcolor{stringliteral}{"YZ"})==0 )
+      data=data|0x20;
+  \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}( strcmp(act,\textcolor{stringliteral}{""})==0 )
+      data=data|0x40;
+  \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}( strcmp(act,\textcolor{stringliteral}{"Y"})==0 )
+      data=data|0x28;
+  \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}( strcmp(act,\textcolor{stringliteral}{"Z"})==0 )
+      data=data|0x30;
+  \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}( strcmp(act,\textcolor{stringliteral}{"X"})==0 )
+      data=data|0x18;
+  \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}( strcmp(act,\textcolor{stringliteral}{"XY"})==0 )
+      data=data|0x08;
+  \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}( strcmp(act,\textcolor{stringliteral}{"XZ"})==0 )
+      data=data|0x10;
+  \textcolor{keywordflow}{else}\{
+    perror(\textcolor{stringliteral}{"Wrong act value in gyrometer initialization"});
+    \textcolor{keywordflow}{return} -1;
+  \}
+   
+  \textcolor{keywordflow}{if}(\hyperlink{group__gyr_ga3eba167b8ab0614bfe7bafeae8b5570d}{gyr\_write\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev}, \hyperlink{communication_2imu__regs_8h_a5eba4af610a1ec85320e940bf44855eb}{GYR\_PWR\_MGM}, data)<0
+      )\{
+    perror(\textcolor{stringliteral}{"Write in mode register unsuccesful"});
+    \textcolor{keywordflow}{return} -1;
+  \}
+  
+  \textcolor{keywordflow}{return} 1;
+\}
+\end{DoxyCode}
+\hypertarget{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a710fbc7095ccd58ffa65d2240030a0ab}{\index{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h@{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h}!gyr\-\_\-read\-\_\-all\-\_\-data@{gyr\-\_\-read\-\_\-all\-\_\-data}}
+\index{gyr\-\_\-read\-\_\-all\-\_\-data@{gyr\-\_\-read\-\_\-all\-\_\-data}!imu_functions (Cópia em conflito de André Carvalho 2013-04-26).h@{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h}}
+\subsubsection[{gyr\-\_\-read\-\_\-all\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t gyr\-\_\-read\-\_\-all\-\_\-data (
+\begin{DoxyParamCaption}
+\item[{int}]{i2c\-\_\-dev, }
+\item[{short int $\ast$}]{data}
+\end{DoxyParamCaption}
+)}}\label{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a710fbc7095ccd58ffa65d2240030a0ab}
+
+
+Definition at line 149 of file gyr\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c.
+
+
+\begin{DoxyCode}
+\{
+  uint8\_t i;
+  uint8\_t *data8;
+  \textcolor{keyword}{union }result
+  \{
+    \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} usgnd[4];
+    \textcolor{keywordtype}{int} \textcolor{keywordtype}{short} sgnd[4];
+  \} result;
+  \textcolor{keywordflow}{if}( (data8=\hyperlink{group__gyr_gad817a3b69d4c3026b7a9b6de32753e7b}{gyr\_read\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev},\hyperlink{communication_2imu__regs_8h_a7d00eaf1ea076429433ad0c787b48200}{GYR\_TEMP\_OUT\_H}
+      ,8))==NULL)
+  \{
+    perror(\textcolor{stringliteral}{"Read accelerometer register failed"});
+    \textcolor{keywordflow}{return} \hyperlink{communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-04-28_08_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
+  \}
+  \textcolor{comment}{// Result receives gyro data:}
+  \textcolor{keywordflow}{for}(i=1; i<4; i++)
+  \{
+    result.usgnd[i-1]=0;
+    result.usgnd[i-1]=result.usgnd[i-1]|((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} int)data8[i*2+1])|(((\textcolor{keywordtype}{
+      unsigned} int)data8[i*2])<<8);
+    data[i-1]=result.sgnd[i-1];
+  \}
+  \textcolor{comment}{// Result receives temperature data:}
+  result.usgnd[3]=0;
+  result.usgnd[3]=result.usgnd[3]|((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} int)data8[1])|(((\textcolor{keywordtype}{unsigned} 
+      int)data8[0])<<8);  
+  data[3]=result.sgnd[3];
+  \textcolor{keywordflow}{return} \hyperlink{communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-04-28_08_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};  
+\}
+\end{DoxyCode}
+\hypertarget{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a271b37e9ace81b18bb2f83787247d262}{\index{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h@{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h}!gyr\-\_\-read\-\_\-data@{gyr\-\_\-read\-\_\-data}}
+\index{gyr\-\_\-read\-\_\-data@{gyr\-\_\-read\-\_\-data}!imu_functions (Cópia em conflito de André Carvalho 2013-04-26).h@{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h}}
+\subsubsection[{gyr\-\_\-read\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}short int gyr\-\_\-read\-\_\-data (
+\begin{DoxyParamCaption}
+\item[{int}]{i2c\-\_\-dev, }
+\item[{int}]{type}
+\end{DoxyParamCaption}
+)}}\label{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a271b37e9ace81b18bb2f83787247d262}
+
+
+Definition at line 177 of file gyr\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c.
+
+
+\begin{DoxyCode}
+\{
+  uint8\_t *data;
+  \textcolor{keyword}{union }result
+  \{
+    \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} usgnd;
+    \textcolor{keywordtype}{int} sgnd;
+  \}result;
+
+  \textcolor{keywordflow}{switch}(type)\{
+    \textcolor{keywordflow}{case} \textcolor{charliteral}{'X'}:
+      data=\hyperlink{group__gyr_gad817a3b69d4c3026b7a9b6de32753e7b}{gyr\_read\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev},\hyperlink{communication_2imu__regs_8h_a45d3d3c92328dd02072aae7d8cf14ad0}{GYR\_GYRO\_XOUT\_H}
+      ,2);
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{case} \textcolor{charliteral}{'Y'}:
+      data=\hyperlink{group__gyr_gad817a3b69d4c3026b7a9b6de32753e7b}{gyr\_read\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev},\hyperlink{communication_2imu__regs_8h_a7664c10b8291231d44694e154c218fab}{GYR\_GYRO\_YOUT\_H}
+      ,2);
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{case} \textcolor{charliteral}{'Z'}:
+      data=\hyperlink{group__gyr_gad817a3b69d4c3026b7a9b6de32753e7b}{gyr\_read\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev},\hyperlink{communication_2imu__regs_8h_ae4d2753664f152db1bef259f99975b4c}{GYR\_GYRO\_ZOUT\_H}
+      ,2);
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{case} \textcolor{charliteral}{'T'}:
+      data=\hyperlink{group__gyr_gad817a3b69d4c3026b7a9b6de32753e7b}{gyr\_read\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev},\hyperlink{communication_2imu__regs_8h_a7d00eaf1ea076429433ad0c787b48200}{GYR\_TEMP\_OUT\_H}
+      ,2);
+    \textcolor{keywordflow}{default}:
+      perror(\textcolor{stringliteral}{"Wrong argument for type in gyr\_read\_data"});
+      \textcolor{keywordflow}{return} -1;
+  \}
+  result.usgnd=0;
+  result.usgnd=result.usgnd|(((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} int)data[1]))|(((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \textcolor{keywordtype}{
+      int})data[0])<<8);
+  \textcolor{keywordflow}{return} result.sgnd;
+\}\end{DoxyCode}
+\hypertarget{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_ad817a3b69d4c3026b7a9b6de32753e7b}{\index{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h@{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h}!gyr\-\_\-read\-\_\-reg@{gyr\-\_\-read\-\_\-reg}}
+\index{gyr\-\_\-read\-\_\-reg@{gyr\-\_\-read\-\_\-reg}!imu_functions (Cópia em conflito de André Carvalho 2013-04-26).h@{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h}}
+\subsubsection[{gyr\-\_\-read\-\_\-reg}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t$\ast$ gyr\-\_\-read\-\_\-reg (
+\begin{DoxyParamCaption}
+\item[{int}]{i2c\-\_\-dev, }
+\item[{uint8\-\_\-t}]{reg, }
+\item[{uint8\-\_\-t}]{count}
+\end{DoxyParamCaption}
+)}}\label{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_ad817a3b69d4c3026b7a9b6de32753e7b}
+
+
+Definition at line 31 of file gyr\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c.
+
+
+\begin{DoxyCode}
+\{
+  uint8\_t data[9];
+  \textcolor{keywordtype}{int} i;
+
+  \textcolor{comment}{//data=(uint8\_t*)malloc((count+1)*sizeof(data));}
+  
+  data[0] = reg;
+
+  \textcolor{keywordflow}{if} (write(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev}, &data, 1) != 1) \{            
+        perror(\textcolor{stringliteral}{"write before read"});
+        \textcolor{keywordflow}{return} NULL;
+  \}
+  data[0] = 0;
+  \textcolor{keywordflow}{if} (read(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev}, &data, count) != count) \{
+        perror(\textcolor{stringliteral}{"read"});
+        \textcolor{keywordflow}{return} NULL;    
+  \}
+
+  \textcolor{keywordflow}{return} data;
+\}
+\end{DoxyCode}
+\hypertarget{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a3eba167b8ab0614bfe7bafeae8b5570d}{\index{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h@{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h}!gyr\-\_\-write\-\_\-reg@{gyr\-\_\-write\-\_\-reg}}
+\index{gyr\-\_\-write\-\_\-reg@{gyr\-\_\-write\-\_\-reg}!imu_functions (Cópia em conflito de André Carvalho 2013-04-26).h@{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h}}
+\subsubsection[{gyr\-\_\-write\-\_\-reg}]{\setlength{\rightskip}{0pt plus 5cm}int gyr\-\_\-write\-\_\-reg (
+\begin{DoxyParamCaption}
+\item[{int}]{i2c\-\_\-dev, }
+\item[{uint8\-\_\-t}]{reg, }
+\item[{uint8\-\_\-t}]{data}
+\end{DoxyParamCaption}
+)}}\label{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a3eba167b8ab0614bfe7bafeae8b5570d}
+\begin{DoxyAuthor}{Author}
+Caio Gustavo Mesquita Ângelo Rev 0 -\/ 12/11/2012 R\-L\-E\-G project -\/ 2012
+\end{DoxyAuthor}
+Implements the I2\-C communication between Gumstix Overo Fire and I\-T\-G3200 
+
+Definition at line 10 of file gyr\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c.
+
+
+\begin{DoxyCode}
+\{
+  uint8\_t reg\_data[2];
+
+  reg\_data[0] = reg;
+  reg\_data[1] = data;
+
+  \textcolor{keywordflow}{if}( !( (reg==\hyperlink{communication_2imu__regs_8h_ab2499ff4167376accdbdec09f5e1b021}{GYR\_WHO\_AM\_I})||((\hyperlink{communication_2imu__regs_8h_a04a18568e6e39825c98be5ec2976bec4}{GYR\_SMPLRT\_DIV}<=reg)
+      &&(reg<=\hyperlink{communication_2imu__regs_8h_ad0b8386ab023e17beb305025abf96e18}{GYR\_INT\_CFG}))||(reg==\hyperlink{communication_2imu__regs_8h_a5eba4af610a1ec85320e940bf44855eb}{GYR\_PWR\_MGM}) ) )
+  \{
+      perror(\textcolor{stringliteral}{"Write unsucessful: Not a valid writable register"});
+      \textcolor{keywordflow}{return} -1;
+  \}
+        
+  \textcolor{keywordflow}{if} (write(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev}, &reg\_data, 2) != 2) \{                
+          perror(\textcolor{stringliteral}{"Write unsuccessful"});
+          \textcolor{keywordflow}{return} -1;
+  \}
+
+  \textcolor{keywordflow}{return} 1;
+\}
+\end{DoxyCode}
+\hypertarget{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a014f908c9faa37c1ec75177a17012a01}{\index{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h@{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h}!mag\-\_\-init@{mag\-\_\-init}}
+\index{mag\-\_\-init@{mag\-\_\-init}!imu_functions (Cópia em conflito de André Carvalho 2013-04-26).h@{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h}}
+\subsubsection[{mag\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}int mag\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{int}]{i2c\-\_\-dev, }
+\item[{uint8\-\_\-t}]{rate, }
+\item[{uint8\-\_\-t}]{range, }
+\item[{uint8\-\_\-t}]{samples\-\_\-avg, }
+\item[{uint8\-\_\-t}]{meas\-\_\-mode, }
+\item[{uint8\-\_\-t}]{op\-\_\-mode}
+\end{DoxyParamCaption}
+)}}\label{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a014f908c9faa37c1ec75177a17012a01}
+
+
+Definition at line 53 of file mag\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c.
+
+
+
+Referenced by devices\-\_\-init(), and main().
+
+
+\begin{DoxyCode}
+\{ 
+  uint8\_t data=0;
+
+  \textcolor{keywordflow}{switch}(rate)\{
+    \textcolor{keywordflow}{case} 15:
+      data=0x10;
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{case} 0:
+      data=0x00;
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{case} 1:
+      data=0x04;
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{case} 3:
+      data=0x08;
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{case} 7:
+      data=0x0C;
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{case} 30:
+      data=0x14;
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{case} 75:
+      data=0x18;
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{default}:
+      perror(\textcolor{stringliteral}{"Wrong rate value"});
+      \textcolor{keywordflow}{break};
+  \}
+  
+  \textcolor{keywordflow}{switch}(samples\_avg)\{
+    \textcolor{keywordflow}{case} 8:
+      data=data|0x60;
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{case} 1:
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{case} 2:
+      data=data|0x20;
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{case} 4:
+      data=data|0x40;
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{default}:
+      perror(\textcolor{stringliteral}{"Wrong samples\_avg value"});
+      \textcolor{keywordflow}{break};
+  \}
+  
+  data+=meas\_mode;
+  
+  \textcolor{keywordflow}{if}(\hyperlink{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_ab5d0ae421cd4bb10b1b7a1eda167416b}{mag\_write\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev}, \hyperlink{communication_2imu__regs_8h_a4c80cd6ce866f16a3d999ee2c5635ec9}{MAG\_CONFIG\_A}, data)
+      <0)\{
+    perror(\textcolor{stringliteral}{"Write in Configuration register A unsuccesful"});
+    \textcolor{keywordflow}{return} -1;
+  \}
+  
+  \textcolor{keywordflow}{if}(\hyperlink{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_ab5d0ae421cd4bb10b1b7a1eda167416b}{mag\_write\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev}, \hyperlink{communication_2imu__regs_8h_a094173f77219df894d97eed44405d942}{MAG\_CONFIG\_B}, range
+      <<5)<0)\{
+    perror(\textcolor{stringliteral}{"Write in configuration register B unsuccesful"});
+    \textcolor{keywordflow}{return} -1;
+  \}
+  
+  \textcolor{keywordflow}{if}(\hyperlink{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_ab5d0ae421cd4bb10b1b7a1eda167416b}{mag\_write\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev}, \hyperlink{communication_2imu__regs_8h_a0173afba6efc0e164495bf506a9758d2}{MAG\_MODE}, op\_mode)<0)\{
+    perror(\textcolor{stringliteral}{"Write in mode register unsuccesful"});
+    \textcolor{keywordflow}{return} -1;
+  \}
+  
+  \textcolor{keywordflow}{return} 1;
+\}
+\end{DoxyCode}
+\hypertarget{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a8f2fd896caf1216ba82e535e6251692f}{\index{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h@{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h}!mag\-\_\-read\-\_\-all\-\_\-data@{mag\-\_\-read\-\_\-all\-\_\-data}}
+\index{mag\-\_\-read\-\_\-all\-\_\-data@{mag\-\_\-read\-\_\-all\-\_\-data}!imu_functions (Cópia em conflito de André Carvalho 2013-04-26).h@{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h}}
+\subsubsection[{mag\-\_\-read\-\_\-all\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t mag\-\_\-read\-\_\-all\-\_\-data (
+\begin{DoxyParamCaption}
+\item[{int}]{i2c\-\_\-dev, }
+\item[{short int $\ast$}]{data}
+\end{DoxyParamCaption}
+)}}\label{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a8f2fd896caf1216ba82e535e6251692f}
+
+
+Definition at line 121 of file mag\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c.
+
+
+
+Referenced by main(), and read\-\_\-all\-\_\-data().
+
+
+\begin{DoxyCode}
+\{
+  uint8\_t i, j;
+  uint8\_t *data8;
+  \textcolor{keyword}{union }result
+  \{
+    \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} usgnd[3];
+    \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} sgnd[3];
+  \} result;
+  \textcolor{comment}{//result=(union result*)malloc(3*sizeof(union result));}
+  \textcolor{keywordflow}{if}( (data8=\hyperlink{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a6830eaeae2298320e1e8c902e4edd709}{mag\_read\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev},\hyperlink{communication_2imu__regs_8h_a4f883328e7ae117996e334145ddd0032}{MAG\_DATAX1},6))==
+      NULL)
+  \{
+    perror(\textcolor{stringliteral}{"Read accelerometer register failed"});
+    \textcolor{keywordflow}{return} \hyperlink{communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-04-28_08_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
+  \}
+  \textcolor{comment}{//result.usgnd=(unsigned int*)malloc(3*sizeof(unsigned int));}
+  j=0;
+  \textcolor{keywordflow}{for}(i=0; i<3; i++)
+  \{
+    result.usgnd[j]=0;
+    result.usgnd[j]=result.usgnd[j]|((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} int)data8[i*2+1])|(((\textcolor{keywordtype}{
+      unsigned} int)data8[i*2])<<8);
+    data[j]=result.sgnd[j];
+    j=2-i; \textcolor{comment}{// trick used to change the sorting of the data from XZY to XYZ}
+  \}
+  \textcolor{keywordflow}{return} \hyperlink{communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-04-28_08_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};  
+\}
+\end{DoxyCode}
+\hypertarget{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a542a31ccd07cd2c3e8e2b68cdb6d219e}{\index{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h@{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h}!mag\-\_\-read\-\_\-data@{mag\-\_\-read\-\_\-data}}
+\index{mag\-\_\-read\-\_\-data@{mag\-\_\-read\-\_\-data}!imu_functions (Cópia em conflito de André Carvalho 2013-04-26).h@{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h}}
+\subsubsection[{mag\-\_\-read\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}short int mag\-\_\-read\-\_\-data (
+\begin{DoxyParamCaption}
+\item[{int}]{i2c\-\_\-dev, }
+\item[{int}]{axis}
+\end{DoxyParamCaption}
+)}}\label{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a542a31ccd07cd2c3e8e2b68cdb6d219e}
+
+
+Definition at line 148 of file mag\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c.
+
+
+\begin{DoxyCode}
+\{
+  uint8\_t *data;
+  \textcolor{keyword}{union }result
+  \{
+    \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} usgnd;
+    \textcolor{keywordtype}{int} sgnd;
+  \}result;
+
+  \textcolor{keywordflow}{switch}(axis)\{
+    \textcolor{keywordflow}{case} \textcolor{charliteral}{'X'}:
+      data=\hyperlink{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a6830eaeae2298320e1e8c902e4edd709}{mag\_read\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev},\hyperlink{communication_2imu__regs_8h_a4f883328e7ae117996e334145ddd0032}{MAG\_DATAX1},2);
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{case} \textcolor{charliteral}{'Y'}:
+      data=\hyperlink{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a6830eaeae2298320e1e8c902e4edd709}{mag\_read\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev},\hyperlink{communication_2imu__regs_8h_ae218906702b1e40c2b6970f97dd0cfe4}{MAG\_DATAY1},2);
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{case} \textcolor{charliteral}{'Z'}:
+      data=\hyperlink{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a6830eaeae2298320e1e8c902e4edd709}{mag\_read\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev},\hyperlink{communication_2imu__regs_8h_a81d7d9236ec69a1a229e4fa7c6299fde}{MAG\_DATAZ1},2);
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{default}:
+      perror(\textcolor{stringliteral}{"Wrong argument for axis in mag\_read\_data"});
+      \textcolor{keywordflow}{return} -1;
+  \}
+  result.usgnd=0;
+  result.usgnd=result.usgnd|(((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} int)data[1]))|(((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \textcolor{keywordtype}{
+      int})data[0])<<8);
+  \textcolor{keywordflow}{return} result.sgnd;
+\}\end{DoxyCode}
+\hypertarget{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a6830eaeae2298320e1e8c902e4edd709}{\index{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h@{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h}!mag\-\_\-read\-\_\-reg@{mag\-\_\-read\-\_\-reg}}
+\index{mag\-\_\-read\-\_\-reg@{mag\-\_\-read\-\_\-reg}!imu_functions (Cópia em conflito de André Carvalho 2013-04-26).h@{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h}}
+\subsubsection[{mag\-\_\-read\-\_\-reg}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t$\ast$ mag\-\_\-read\-\_\-reg (
+\begin{DoxyParamCaption}
+\item[{int}]{i2c\-\_\-dev, }
+\item[{uint8\-\_\-t}]{reg, }
+\item[{uint8\-\_\-t}]{count}
+\end{DoxyParamCaption}
+)}}\label{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_a6830eaeae2298320e1e8c902e4edd709}
+
+
+Definition at line 31 of file mag\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c.
+
+
+
+Referenced by mag\-\_\-read\-\_\-all\-\_\-data(), and mag\-\_\-read\-\_\-data().
+
+
+\begin{DoxyCode}
+\{
+  uint8\_t data[13];
+  \textcolor{keywordtype}{int} i;
+
+  \textcolor{comment}{//data=(uint8\_t*)malloc((count+1)*sizeof(data));}
+  
+  data[0] = reg;
+
+  \textcolor{keywordflow}{if} (write(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev}, &data, 1) != 1) \{            
+        perror(\textcolor{stringliteral}{"write before read"});
+        \textcolor{keywordflow}{return} NULL;
+  \}
+  data[0] = 0;
+  \textcolor{keywordflow}{if} (read(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev}, &data, count) != count) \{
+        perror(\textcolor{stringliteral}{"read"});
+        \textcolor{keywordflow}{return} NULL;    
+  \}
+
+  \textcolor{keywordflow}{return} data;
+\}
+\end{DoxyCode}
+\hypertarget{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_ab5d0ae421cd4bb10b1b7a1eda167416b}{\index{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h@{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h}!mag\-\_\-write\-\_\-reg@{mag\-\_\-write\-\_\-reg}}
+\index{mag\-\_\-write\-\_\-reg@{mag\-\_\-write\-\_\-reg}!imu_functions (Cópia em conflito de André Carvalho 2013-04-26).h@{imu\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-h}}
+\subsubsection[{mag\-\_\-write\-\_\-reg}]{\setlength{\rightskip}{0pt plus 5cm}int mag\-\_\-write\-\_\-reg (
+\begin{DoxyParamCaption}
+\item[{int}]{i2c\-\_\-dev, }
+\item[{uint8\-\_\-t}]{reg, }
+\item[{uint8\-\_\-t}]{data}
+\end{DoxyParamCaption}
+)}}\label{imu__functions_01_07C_xC3_xB3pia_01em_01conflito_01de_01Andr_xC3_xA9_01Carvalho_012013-04-26_08_8h_ab5d0ae421cd4bb10b1b7a1eda167416b}
+
+
+Rev 0 -\/ 11/11/2012 R\-L\-E\-G project -\/ 2012. 
+
+Implements the I2\-C communication between Gumstix Overo Fire and H\-M\-C5883 \begin{DoxyAuthor}{Author}
+Caio Gustavo Mesquita Ângelo 
+\end{DoxyAuthor}
+
+
+Definition at line 10 of file mag\-\_\-functions (\-Cópia em conflito de André Carvalho 2013-\/04-\/26).\-c.
+
+
+
+Referenced by mag\-\_\-init().
+
+
+\begin{DoxyCode}
+\{
+  uint8\_t reg\_data[2];
+
+  reg\_data[0] = reg;
+  reg\_data[1] = data;
+
+  \textcolor{keywordflow}{if}( \hyperlink{communication_2imu__regs_8h_a0173afba6efc0e164495bf506a9758d2}{MAG\_MODE}<reg )
+  \{
+      perror(\textcolor{stringliteral}{"Write unsucessful: Not a valid writable register"});
+      \textcolor{keywordflow}{return} -1;
+  \}
+        
+  \textcolor{keywordflow}{if} (write(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev}, &reg\_data, 2) != 2) \{                
+          perror(\textcolor{stringliteral}{"Write unsuccessful"});
+          \textcolor{keywordflow}{return} -1;
+  \}
+
+  \textcolor{keywordflow}{return} 1;
+\}
+\end{DoxyCode}

@@ -1,0 +1,291 @@
+\hypertarget{gmatlabdatafile_8h}{\section{gdatalogger/gmatlabdatafile.h File Reference}
+\label{gmatlabdatafile_8h}\index{gdatalogger/gmatlabdatafile.\-h@{gdatalogger/gmatlabdatafile.\-h}}
+}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structGMATLABDATAFILECONFIG}{G\-M\-A\-T\-L\-A\-B\-D\-A\-T\-A\-F\-I\-L\-E\-C\-O\-N\-F\-I\-G}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{T\-R\-U\-E}~1
+\item 
+\#define \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{F\-A\-L\-S\-E}~0
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \\*
+\hyperlink{structGMATLABDATAFILECONFIG}{G\-M\-A\-T\-L\-A\-B\-D\-A\-T\-A\-F\-I\-L\-E\-C\-O\-N\-F\-I\-G} $\ast$ \hyperlink{gmatlabdatafile_8h_ad671f2b5835bd3d8489ff011d38eace0}{P\-G\-M\-A\-T\-L\-A\-B\-D\-A\-T\-A\-F\-I\-L\-E\-C\-O\-N\-F\-I\-G}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{gmatlabdatafile_8h_af53051d93a0e13032b8735451b077fb9}{g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Open\-Write} (\hyperlink{gmatlabdatafile_8h_ad671f2b5835bd3d8489ff011d38eace0}{P\-G\-M\-A\-T\-L\-A\-B\-D\-A\-T\-A\-F\-I\-L\-E\-C\-O\-N\-F\-I\-G} p\-G\-Matlab\-Data\-File\-Config, char $\ast$filename, char $\ast$dirname)
+\item 
+int \hyperlink{gmatlabdatafile_8h_a82d0dd8169ca82a67bb2d78ee1efbafe}{g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Open\-Read} (\hyperlink{gmatlabdatafile_8h_ad671f2b5835bd3d8489ff011d38eace0}{P\-G\-M\-A\-T\-L\-A\-B\-D\-A\-T\-A\-F\-I\-L\-E\-C\-O\-N\-F\-I\-G} p\-G\-Matlab\-Data\-File\-Config, char $\ast$filename, char $\ast$dirname)
+\item 
+void \hyperlink{gmatlabdatafile_8h_ad38283a16cbd66a2834b2ca9f5c6c6e0}{g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Close} (\hyperlink{gmatlabdatafile_8h_ad671f2b5835bd3d8489ff011d38eace0}{P\-G\-M\-A\-T\-L\-A\-B\-D\-A\-T\-A\-F\-I\-L\-E\-C\-O\-N\-F\-I\-G} p\-G\-Matlab\-Data\-File\-Config)
+\item 
+int \hyperlink{gmatlabdatafile_8h_a3ecf28836f545707551fe8b8005c8954}{g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Save\-Vector} (\hyperlink{gmatlabdatafile_8h_ad671f2b5835bd3d8489ff011d38eace0}{P\-G\-M\-A\-T\-L\-A\-B\-D\-A\-T\-A\-F\-I\-L\-E\-C\-O\-N\-F\-I\-G} p\-G\-Matlab\-Data\-File\-Config, const char $\ast$varname, double $\ast$v, long nlin)
+\item 
+int \hyperlink{gmatlabdatafile_8h_a4c928bd4ef71adea00c53f157ab00bea}{g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Save\-Matrix} (\hyperlink{gmatlabdatafile_8h_ad671f2b5835bd3d8489ff011d38eace0}{P\-G\-M\-A\-T\-L\-A\-B\-D\-A\-T\-A\-F\-I\-L\-E\-C\-O\-N\-F\-I\-G} p\-G\-Matlab\-Data\-File\-Config, const char $\ast$varname, double $\ast$$\ast$m, long nlin, long ncol)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{\index{gmatlabdatafile.\-h@{gmatlabdatafile.\-h}!F\-A\-L\-S\-E@{F\-A\-L\-S\-E}}
+\index{F\-A\-L\-S\-E@{F\-A\-L\-S\-E}!gmatlabdatafile.h@{gmatlabdatafile.\-h}}
+\subsubsection[{F\-A\-L\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-A\-L\-S\-E~0}}\label{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}
+
+
+Definition at line 11 of file gmatlabdatafile.\-h.
+
+
+
+Referenced by Cartesian\-\_\-pose\-\_\-controller\-::control(), Cartesian\-\_\-velocity\-\_\-controller\-::control(), g\-Data\-Logger\-\_\-\-Declare\-Variable(), g\-Data\-Logger\-\_\-\-Init(), g\-Data\-Logger\-\_\-\-Insert\-Variable(), g\-Data\-Logger\-\_\-\-I\-P\-C\-Update(), g\-Data\-Logger\-\_\-\-Matfile\-Update(), g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Open\-Read(), g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Open\-Write(), g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Save\-Matrix(), g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Save\-Vector(), g\-Q\-U\-E\-U\-E\-\_\-\-Get\-Number\-Of\-Unread\-Data(), g\-Q\-U\-E\-U\-E\-\_\-\-Get\-Read\-Index(), g\-Q\-U\-E\-U\-E\-\_\-\-Get\-Write\-Index(), g\-Q\-U\-E\-U\-E\-\_\-\-Init(), g\-Q\-U\-E\-U\-E\-\_\-\-Request\-Last\-Read\-Index(), g\-Q\-U\-E\-U\-E\-\_\-\-Request\-Read\-Index(), g\-Q\-U\-E\-U\-E\-\_\-\-Request\-Write\-Index(), and g\-Q\-U\-E\-U\-E\-\_\-\-Unwrap\-Read\-Index().
+
+\hypertarget{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{\index{gmatlabdatafile.\-h@{gmatlabdatafile.\-h}!T\-R\-U\-E@{T\-R\-U\-E}}
+\index{T\-R\-U\-E@{T\-R\-U\-E}!gmatlabdatafile.h@{gmatlabdatafile.\-h}}
+\subsubsection[{T\-R\-U\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-R\-U\-E~1}}\label{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}
+
+
+Definition at line 10 of file gmatlabdatafile.\-h.
+
+
+
+Referenced by Cartesian\-\_\-pose\-\_\-controller\-::control(), Cartesian\-\_\-velocity\-\_\-controller\-::control(), g\-Data\-Logger\-\_\-\-Close(), g\-Data\-Logger\-\_\-\-Declare\-Variable(), g\-Data\-Logger\-\_\-\-Init(), g\-Data\-Logger\-\_\-\-Insert\-Variable(), g\-Data\-Logger\-\_\-\-I\-P\-C\-Update(), g\-Data\-Logger\-\_\-\-Matfile\-Update(), g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Open\-Read(), g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Open\-Write(), g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Save\-Matrix(), g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Save\-Vector(), g\-Q\-U\-E\-U\-E\-\_\-\-Get\-Number\-Of\-Unread\-Data(), g\-Q\-U\-E\-U\-E\-\_\-\-Get\-Read\-Index(), g\-Q\-U\-E\-U\-E\-\_\-\-Get\-Write\-Index(), g\-Q\-U\-E\-U\-E\-\_\-\-Init(), g\-Q\-U\-E\-U\-E\-\_\-\-Request\-Last\-Read\-Index(), g\-Q\-U\-E\-U\-E\-\_\-\-Request\-Read\-Index(), g\-Q\-U\-E\-U\-E\-\_\-\-Request\-Write\-Index(), g\-Q\-U\-E\-U\-E\-\_\-\-Unwrap\-Read\-Index(), g\-Q\-U\-E\-U\-E\-\_\-\-Unwrap\-Write\-Index(), and ui\-\_\-init().
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{gmatlabdatafile_8h_ad671f2b5835bd3d8489ff011d38eace0}{\index{gmatlabdatafile.\-h@{gmatlabdatafile.\-h}!P\-G\-M\-A\-T\-L\-A\-B\-D\-A\-T\-A\-F\-I\-L\-E\-C\-O\-N\-F\-I\-G@{P\-G\-M\-A\-T\-L\-A\-B\-D\-A\-T\-A\-F\-I\-L\-E\-C\-O\-N\-F\-I\-G}}
+\index{P\-G\-M\-A\-T\-L\-A\-B\-D\-A\-T\-A\-F\-I\-L\-E\-C\-O\-N\-F\-I\-G@{P\-G\-M\-A\-T\-L\-A\-B\-D\-A\-T\-A\-F\-I\-L\-E\-C\-O\-N\-F\-I\-G}!gmatlabdatafile.h@{gmatlabdatafile.\-h}}
+\subsubsection[{P\-G\-M\-A\-T\-L\-A\-B\-D\-A\-T\-A\-F\-I\-L\-E\-C\-O\-N\-F\-I\-G}]{\setlength{\rightskip}{0pt plus 5cm}typedef  struct {\bf G\-M\-A\-T\-L\-A\-B\-D\-A\-T\-A\-F\-I\-L\-E\-C\-O\-N\-F\-I\-G} $\ast$ {\bf P\-G\-M\-A\-T\-L\-A\-B\-D\-A\-T\-A\-F\-I\-L\-E\-C\-O\-N\-F\-I\-G}}}\label{gmatlabdatafile_8h_ad671f2b5835bd3d8489ff011d38eace0}
+
+
+\subsection{Function Documentation}
+\hypertarget{gmatlabdatafile_8h_ad38283a16cbd66a2834b2ca9f5c6c6e0}{\index{gmatlabdatafile.\-h@{gmatlabdatafile.\-h}!g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Close@{g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Close}}
+\index{g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Close@{g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Close}!gmatlabdatafile.h@{gmatlabdatafile.\-h}}
+\subsubsection[{g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Close}]{\setlength{\rightskip}{0pt plus 5cm}void g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Close (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-G\-M\-A\-T\-L\-A\-B\-D\-A\-T\-A\-F\-I\-L\-E\-C\-O\-N\-F\-I\-G}}]{p\-G\-Matlab\-Data\-File\-Config}
+\end{DoxyParamCaption}
+)}}\label{gmatlabdatafile_8h_ad38283a16cbd66a2834b2ca9f5c6c6e0}
+
+
+Definition at line 58 of file gmatlabdatafile.\-c.
+
+
+
+References G\-M\-A\-T\-L\-A\-B\-D\-A\-T\-A\-F\-I\-L\-E\-C\-O\-N\-F\-I\-G\-::fp.
+
+
+
+Referenced by g\-Data\-Logger\-\_\-\-Close().
+
+
+\begin{DoxyCode}
+\{
+        fclose(pGMatlabDataFileConfig->\hyperlink{structGMATLABDATAFILECONFIG_a900bde88d01e7b5380101446c89a06a6}{fp});
+
+\}
+\end{DoxyCode}
+\hypertarget{gmatlabdatafile_8h_a82d0dd8169ca82a67bb2d78ee1efbafe}{\index{gmatlabdatafile.\-h@{gmatlabdatafile.\-h}!g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Open\-Read@{g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Open\-Read}}
+\index{g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Open\-Read@{g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Open\-Read}!gmatlabdatafile.h@{gmatlabdatafile.\-h}}
+\subsubsection[{g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Open\-Read}]{\setlength{\rightskip}{0pt plus 5cm}int g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Open\-Read (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-G\-M\-A\-T\-L\-A\-B\-D\-A\-T\-A\-F\-I\-L\-E\-C\-O\-N\-F\-I\-G}}]{p\-G\-Matlab\-Data\-File\-Config, }
+\item[{char $\ast$}]{filename, }
+\item[{char $\ast$}]{dirname}
+\end{DoxyParamCaption}
+)}}\label{gmatlabdatafile_8h_a82d0dd8169ca82a67bb2d78ee1efbafe}
+
+
+Definition at line 40 of file gmatlabdatafile.\-c.
+
+
+
+References F\-A\-L\-S\-E, G\-M\-A\-T\-L\-A\-B\-D\-A\-T\-A\-F\-I\-L\-E\-C\-O\-N\-F\-I\-G\-::\-File\-Name, G\-M\-A\-T\-L\-A\-B\-D\-A\-T\-A\-F\-I\-L\-E\-C\-O\-N\-F\-I\-G\-::\-Flag\-Still\-Not\-Saved, G\-M\-A\-T\-L\-A\-B\-D\-A\-T\-A\-F\-I\-L\-E\-C\-O\-N\-F\-I\-G\-::fp, and T\-R\-U\-E.
+
+
+\begin{DoxyCode}
+\{
+        pGMatlabDataFileConfig->\hyperlink{structGMATLABDATAFILECONFIG_ada4eb3a8fbcfdcb41723f31d09e0bd19}{FileName}[0] = \textcolor{charliteral}{'\(\backslash\)0'};
+        \textcolor{keywordflow}{if}(dirname!=NULL)
+                sprintf(pGMatlabDataFileConfig->\hyperlink{structGMATLABDATAFILECONFIG_ada4eb3a8fbcfdcb41723f31d09e0bd19}{FileName},\textcolor{stringliteral}{"%s"},dirname);
+        strcat(pGMatlabDataFileConfig->\hyperlink{structGMATLABDATAFILECONFIG_ada4eb3a8fbcfdcb41723f31d09e0bd19}{FileName},filename);
+        pGMatlabDataFileConfig->\hyperlink{structGMATLABDATAFILECONFIG_a58d1c2a70b22c7c08eccaaea77990db2}{FlagStillNotSaved} = \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
+
+        pGMatlabDataFileConfig->\hyperlink{structGMATLABDATAFILECONFIG_a900bde88d01e7b5380101446c89a06a6}{fp} = fopen(pGMatlabDataFileConfig->\hyperlink{structGMATLABDATAFILECONFIG_ada4eb3a8fbcfdcb41723f31d09e0bd19}{FileName}
+      , \textcolor{stringliteral}{"r"});
+        \textcolor{keywordflow}{if}(pGMatlabDataFileConfig->\hyperlink{structGMATLABDATAFILECONFIG_a900bde88d01e7b5380101446c89a06a6}{fp}==NULL)\{
+                \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+        \}
+        rewind(pGMatlabDataFileConfig->\hyperlink{structGMATLABDATAFILECONFIG_a900bde88d01e7b5380101446c89a06a6}{fp});
+
+        \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
+
+\}
+\end{DoxyCode}
+\hypertarget{gmatlabdatafile_8h_af53051d93a0e13032b8735451b077fb9}{\index{gmatlabdatafile.\-h@{gmatlabdatafile.\-h}!g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Open\-Write@{g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Open\-Write}}
+\index{g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Open\-Write@{g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Open\-Write}!gmatlabdatafile.h@{gmatlabdatafile.\-h}}
+\subsubsection[{g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Open\-Write}]{\setlength{\rightskip}{0pt plus 5cm}int g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Open\-Write (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-G\-M\-A\-T\-L\-A\-B\-D\-A\-T\-A\-F\-I\-L\-E\-C\-O\-N\-F\-I\-G}}]{p\-G\-Matlab\-Data\-File\-Config, }
+\item[{char $\ast$}]{filename, }
+\item[{char $\ast$}]{dirname}
+\end{DoxyParamCaption}
+)}}\label{gmatlabdatafile_8h_af53051d93a0e13032b8735451b077fb9}
+
+
+Definition at line 21 of file gmatlabdatafile.\-c.
+
+
+
+References F\-A\-L\-S\-E, G\-M\-A\-T\-L\-A\-B\-D\-A\-T\-A\-F\-I\-L\-E\-C\-O\-N\-F\-I\-G\-::\-File\-Name, G\-M\-A\-T\-L\-A\-B\-D\-A\-T\-A\-F\-I\-L\-E\-C\-O\-N\-F\-I\-G\-::\-Flag\-Still\-Not\-Saved, G\-M\-A\-T\-L\-A\-B\-D\-A\-T\-A\-F\-I\-L\-E\-C\-O\-N\-F\-I\-G\-::fp, and T\-R\-U\-E.
+
+
+
+Referenced by g\-Data\-Logger\-\_\-\-Init().
+
+
+\begin{DoxyCode}
+\{
+        pGMatlabDataFileConfig->\hyperlink{structGMATLABDATAFILECONFIG_ada4eb3a8fbcfdcb41723f31d09e0bd19}{FileName}[0] = \textcolor{charliteral}{'\(\backslash\)0'};
+        \textcolor{keywordflow}{if}(dirname!=NULL)
+                sprintf(pGMatlabDataFileConfig->\hyperlink{structGMATLABDATAFILECONFIG_ada4eb3a8fbcfdcb41723f31d09e0bd19}{FileName},\textcolor{stringliteral}{"%s"},dirname);
+        strcat(pGMatlabDataFileConfig->\hyperlink{structGMATLABDATAFILECONFIG_ada4eb3a8fbcfdcb41723f31d09e0bd19}{FileName},filename);
+        pGMatlabDataFileConfig->\hyperlink{structGMATLABDATAFILECONFIG_a58d1c2a70b22c7c08eccaaea77990db2}{FlagStillNotSaved} = \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
+
+        pGMatlabDataFileConfig->\hyperlink{structGMATLABDATAFILECONFIG_a900bde88d01e7b5380101446c89a06a6}{fp} = fopen(pGMatlabDataFileConfig->\hyperlink{structGMATLABDATAFILECONFIG_ada4eb3a8fbcfdcb41723f31d09e0bd19}{FileName}
+      , \textcolor{stringliteral}{"w"});
+        \textcolor{keywordflow}{if}(pGMatlabDataFileConfig->\hyperlink{structGMATLABDATAFILECONFIG_a900bde88d01e7b5380101446c89a06a6}{fp}==NULL)\{
+                printf(\textcolor{stringliteral}{"\(\backslash\)n pGMatlabDataFileConfig->fp==NULL: %s"},
+      pGMatlabDataFileConfig->\hyperlink{structGMATLABDATAFILECONFIG_ada4eb3a8fbcfdcb41723f31d09e0bd19}{FileName});
+                \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+        \}
+        rewind(pGMatlabDataFileConfig->\hyperlink{structGMATLABDATAFILECONFIG_a900bde88d01e7b5380101446c89a06a6}{fp});
+
+        \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
+
+\}
+\end{DoxyCode}
+\hypertarget{gmatlabdatafile_8h_a4c928bd4ef71adea00c53f157ab00bea}{\index{gmatlabdatafile.\-h@{gmatlabdatafile.\-h}!g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Save\-Matrix@{g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Save\-Matrix}}
+\index{g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Save\-Matrix@{g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Save\-Matrix}!gmatlabdatafile.h@{gmatlabdatafile.\-h}}
+\subsubsection[{g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Save\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}int g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Save\-Matrix (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-G\-M\-A\-T\-L\-A\-B\-D\-A\-T\-A\-F\-I\-L\-E\-C\-O\-N\-F\-I\-G}}]{p\-G\-Matlab\-Data\-File\-Config, }
+\item[{const char $\ast$}]{varname, }
+\item[{double $\ast$$\ast$}]{m, }
+\item[{long}]{nlin, }
+\item[{long}]{ncol}
+\end{DoxyParamCaption}
+)}}\label{gmatlabdatafile_8h_a4c928bd4ef71adea00c53f157ab00bea}
+
+
+Definition at line 92 of file gmatlabdatafile.\-c.
+
+
+
+References F\-A\-L\-S\-E, G\-M\-A\-T\-L\-A\-B\-D\-A\-T\-A\-F\-I\-L\-E\-C\-O\-N\-F\-I\-G\-::\-Flag\-Still\-Not\-Saved, G\-M\-A\-T\-L\-A\-B\-D\-A\-T\-A\-F\-I\-L\-E\-C\-O\-N\-F\-I\-G\-::fp, M\-A\-T\-L\-A\-B\-\_\-\-D\-A\-T\-A\-H\-E\-A\-D\-::imagf, M\-A\-T\-L\-A\-B\-\_\-\-D\-A\-T\-A\-H\-E\-A\-D\-::mrows, M\-A\-T\-L\-A\-B\-\_\-\-D\-A\-T\-A\-H\-E\-A\-D\-::namlen, M\-A\-T\-L\-A\-B\-\_\-\-D\-A\-T\-A\-H\-E\-A\-D\-::ncols, T\-R\-U\-E, and M\-A\-T\-L\-A\-B\-\_\-\-D\-A\-T\-A\-H\-E\-A\-D\-::type.
+
+
+\begin{DoxyCode}
+\{
+        \hyperlink{structMATLAB__DATAHEAD}{MATLAB\_DATAHEAD} DataHead;
+        \textcolor{keywordtype}{int} nl,nc;
+        \textcolor{keywordtype}{double} *vcol;
+
+        DataHead.\hyperlink{structMATLAB__DATAHEAD_ad3587e58da5ca6cbe3cd98d5e2f46202}{type}  = (long)(0);         
+        DataHead.\hyperlink{structMATLAB__DATAHEAD_abf1ef02c93522915bd7fdf9f72df44b7}{mrows} = (long)(nlin);     
+        DataHead.\hyperlink{structMATLAB__DATAHEAD_ae87d8eca5290fa03d01c79061498626f}{ncols} = (long)(ncol);
+        DataHead.\hyperlink{structMATLAB__DATAHEAD_a7831e4f01682863fce4ba98071a7db08}{imagf} = (long)(0);
+        DataHead.\hyperlink{structMATLAB__DATAHEAD_ad6e65844dcff1eb1cf7bf8752ba9a91c}{namlen} = (long)(strlen(varname)+1);
+
+        \textcolor{keywordflow}{if}(! fwrite(&DataHead, \textcolor{keyword}{sizeof}(\hyperlink{structMATLAB__DATAHEAD}{MATLAB\_DATAHEAD}), 1, 
+      pGMatlabDataFileConfig->\hyperlink{structGMATLABDATAFILECONFIG_a900bde88d01e7b5380101446c89a06a6}{fp}) )\{
+                \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+        \}
+
+        \textcolor{keywordflow}{if}(! fwrite(varname, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}), (strlen(varname)+1), 
+      pGMatlabDataFileConfig->\hyperlink{structGMATLABDATAFILECONFIG_a900bde88d01e7b5380101446c89a06a6}{fp}))\{
+                \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+        \}
+
+        vcol = (\textcolor{keywordtype}{double}*)malloc(nlin*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}));
+
+        \textcolor{keywordflow}{for}(nc=0;nc<ncol;++nc)\{
+                \textcolor{keywordflow}{for}(nl=0;nl<nlin;++nl)\{
+                        vcol[nl] = m[nl][nc];
+                \}
+                \textcolor{keywordflow}{if}(! fwrite(vcol, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}), nlin, pGMatlabDataFileConfig
+      ->\hyperlink{structGMATLABDATAFILECONFIG_a900bde88d01e7b5380101446c89a06a6}{fp}))\{
+                        free(vcol);
+                        \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+                \}
+        \}
+        free(vcol);
+
+        pGMatlabDataFileConfig->\hyperlink{structGMATLABDATAFILECONFIG_a58d1c2a70b22c7c08eccaaea77990db2}{FlagStillNotSaved} = \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE}
+      ;
+
+        \textcolor{keywordflow}{return}(\hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+
+\}
+\end{DoxyCode}
+\hypertarget{gmatlabdatafile_8h_a3ecf28836f545707551fe8b8005c8954}{\index{gmatlabdatafile.\-h@{gmatlabdatafile.\-h}!g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Save\-Vector@{g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Save\-Vector}}
+\index{g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Save\-Vector@{g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Save\-Vector}!gmatlabdatafile.h@{gmatlabdatafile.\-h}}
+\subsubsection[{g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Save\-Vector}]{\setlength{\rightskip}{0pt plus 5cm}int g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Save\-Vector (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-G\-M\-A\-T\-L\-A\-B\-D\-A\-T\-A\-F\-I\-L\-E\-C\-O\-N\-F\-I\-G}}]{p\-G\-Matlab\-Data\-File\-Config, }
+\item[{const char $\ast$}]{varname, }
+\item[{double $\ast$}]{v, }
+\item[{long}]{nlin}
+\end{DoxyParamCaption}
+)}}\label{gmatlabdatafile_8h_a3ecf28836f545707551fe8b8005c8954}
+
+
+Definition at line 64 of file gmatlabdatafile.\-c.
+
+
+
+References F\-A\-L\-S\-E, G\-M\-A\-T\-L\-A\-B\-D\-A\-T\-A\-F\-I\-L\-E\-C\-O\-N\-F\-I\-G\-::\-Flag\-Still\-Not\-Saved, G\-M\-A\-T\-L\-A\-B\-D\-A\-T\-A\-F\-I\-L\-E\-C\-O\-N\-F\-I\-G\-::fp, M\-A\-T\-L\-A\-B\-\_\-\-D\-A\-T\-A\-H\-E\-A\-D\-::imagf, M\-A\-T\-L\-A\-B\-\_\-\-D\-A\-T\-A\-H\-E\-A\-D\-::mrows, M\-A\-T\-L\-A\-B\-\_\-\-D\-A\-T\-A\-H\-E\-A\-D\-::namlen, M\-A\-T\-L\-A\-B\-\_\-\-D\-A\-T\-A\-H\-E\-A\-D\-::ncols, T\-R\-U\-E, and M\-A\-T\-L\-A\-B\-\_\-\-D\-A\-T\-A\-H\-E\-A\-D\-::type.
+
+
+
+Referenced by g\-Data\-Logger\-\_\-\-Close(), and g\-Data\-Logger\-\_\-\-Matfile\-Update().
+
+
+\begin{DoxyCode}
+\{
+        \hyperlink{structMATLAB__DATAHEAD}{MATLAB\_DATAHEAD} DataHead;
+
+        DataHead.\hyperlink{structMATLAB__DATAHEAD_ad3587e58da5ca6cbe3cd98d5e2f46202}{type}  = (long)(0);         
+        DataHead.\hyperlink{structMATLAB__DATAHEAD_abf1ef02c93522915bd7fdf9f72df44b7}{mrows} = (long)(nlin);     
+        DataHead.\hyperlink{structMATLAB__DATAHEAD_ae87d8eca5290fa03d01c79061498626f}{ncols} = (long)(1);
+        DataHead.\hyperlink{structMATLAB__DATAHEAD_a7831e4f01682863fce4ba98071a7db08}{imagf} = (long)(0);
+        DataHead.\hyperlink{structMATLAB__DATAHEAD_ad6e65844dcff1eb1cf7bf8752ba9a91c}{namlen} = (long)(strlen(varname)+1);
+
+        \textcolor{keywordflow}{if}(! fwrite(&DataHead, \textcolor{keyword}{sizeof}(\hyperlink{structMATLAB__DATAHEAD}{MATLAB\_DATAHEAD}), 1, 
+      pGMatlabDataFileConfig->\hyperlink{structGMATLABDATAFILECONFIG_a900bde88d01e7b5380101446c89a06a6}{fp}) )\{
+                \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+        \}
+
+        \textcolor{keywordflow}{if}(! fwrite(varname, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}), (strlen(varname)+1), 
+      pGMatlabDataFileConfig->\hyperlink{structGMATLABDATAFILECONFIG_a900bde88d01e7b5380101446c89a06a6}{fp}))\{
+                \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+        \}
+
+        \textcolor{keywordflow}{if}(! fwrite(v, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}), nlin, pGMatlabDataFileConfig->\hyperlink{structGMATLABDATAFILECONFIG_a900bde88d01e7b5380101446c89a06a6}{fp}))\{
+                \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+        \}
+
+        pGMatlabDataFileConfig->\hyperlink{structGMATLABDATAFILECONFIG_a58d1c2a70b22c7c08eccaaea77990db2}{FlagStillNotSaved} = \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE}
+      ;
+
+        \textcolor{keywordflow}{return}(\hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+
+\}
+\end{DoxyCode}
