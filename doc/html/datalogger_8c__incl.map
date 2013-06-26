@@ -1,0 +1,11 @@
+<map id="datalogger.c" name="datalogger.c">
+<area shape="rect" id="node11" href="$gqueue_8h.html" title="gdatalogger/gqueue.h" alt="" coords="1129,83,1276,112"/>
+<area shape="rect" id="node13" href="$gmatlabdatafile_8h.html" title="gdatalogger/gmatlabdatafile.h" alt="" coords="1300,83,1492,112"/>
+<area shape="rect" id="node15" href="$gdatalogger_8h.html" title="gdatalogger/gdatalogger.h" alt="" coords="1516,83,1687,112"/>
+<area shape="rect" id="node17" href="$communication_2communication_8h.html" title="communication/communication.h" alt="" coords="741,83,955,112"/>
+<area shape="rect" id="node64" href="$datalogger_8h.html" title="datalogger.h" alt="" coords="1711,83,1804,112"/>
+<area shape="rect" id="node19" href="$communication_2imu__functions_8h.html" title="imu_functions.h" alt="" coords="791,160,905,189"/>
+<area shape="rect" id="node40" href="$communication_2imu__regs_8h.html" title="imu_regs.h" alt="" coords="1429,237,1515,267"/>
+<area shape="rect" id="node42" href="$communication_2spi__functions_8h.html" title="spi_functions.h" alt="" coords="516,160,625,189"/>
+<area shape="rect" id="node56" href="$communication_2gpio__functions_8h.html" title="gpio_functions.h" alt="" coords="649,160,767,189"/>
+</map>

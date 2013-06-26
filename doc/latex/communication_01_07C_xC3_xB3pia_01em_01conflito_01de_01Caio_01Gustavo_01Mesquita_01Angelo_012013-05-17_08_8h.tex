@@ -5,6 +5,13 @@
 {\ttfamily \#include \char`\"{}spi\-\_\-functions.\-h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}gpio\-\_\-functions.\-h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}imu\-\_\-regs.\-h\char`\"{}}\\*
+Include dependency graph for communication (Cópia em conflito de Caio Gustavo Mesquita Angelo 2013-\/05-\/17).h\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8h__incl}
+\end{center}
+\end{figure}
 \subsection*{Data Structures}
 \begin{DoxyCompactItemize}
 \item 
@@ -204,7 +211,7 @@ Definition at line 7 of file communication (\-Cópia em conflito de Caio Gustavo
                 \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
   \}
 
-  \textcolor{keywordflow}{if}( (\hyperlink{communication_2imu__functions_8h_a014f908c9faa37c1ec75177a17012a01}{mag\_init}(imu\_param->\hyperlink{structIMU__PARAM__STRUCT_a8a870f383fc9ba0b682fdc9b8c0d2734}{i2c\_dev}, imu\_param->\hyperlink{structIMU__PARAM__STRUCT_a26b277dcaf05f3842995df888225f6f4}{mag}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__mag_a234de95423b604b05b851ef90890cea1}{rate}, 
+  \textcolor{keywordflow}{if}( (\hyperlink{group__mag_ga014f908c9faa37c1ec75177a17012a01}{mag\_init}(imu\_param->\hyperlink{structIMU__PARAM__STRUCT_a8a870f383fc9ba0b682fdc9b8c0d2734}{i2c\_dev}, imu\_param->\hyperlink{structIMU__PARAM__STRUCT_a26b277dcaf05f3842995df888225f6f4}{mag}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__mag_a234de95423b604b05b851ef90890cea1}{rate}, 
       imu\_param->\hyperlink{structIMU__PARAM__STRUCT_a26b277dcaf05f3842995df888225f6f4}{mag}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__mag_a40ad27ebdb5fde35257b1dc52e40f476}{range}, imu\_param->\hyperlink{structIMU__PARAM__STRUCT_a26b277dcaf05f3842995df888225f6f4}{mag}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__mag_a52c22cae6940eb39fb72aca66cfeba9a}{samples\_avg}, 
       imu\_param->\hyperlink{structIMU__PARAM__STRUCT_a26b277dcaf05f3842995df888225f6f4}{mag}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__mag_a1f3536709c05310005d648f339d70c54}{meas\_mode}, imu\_param->\hyperlink{structIMU__PARAM__STRUCT_a26b277dcaf05f3842995df888225f6f4}{mag}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__mag_a39b83b3e9ff5bdcafed0bdf6a2de584b}{op\_mode}))< 0)
   \{
@@ -318,7 +325,7 @@ Definition at line 68 of file communication (\-Cópia em conflito de Caio Gustav
   
   \textcolor{keywordflow}{if} ( (ioctl(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev}, I2C\_SLAVE, \hyperlink{communication_2imu__functions_8h_a383c09d3e3bbe30097f7eb8d081fb856}{ADD\_HMC5883})) < 0) 
         imu\_data->\hyperlink{structIMU__DATA__STRUCT_a99924252176326418863e511d4fa437b}{new\_data}=0;
-  \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}( (\hyperlink{communication_2imu__functions_8h_ab42ae0d0a2a6f37cf36d856c072b7f34}{mag\_read\_all\_data}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev},data))==\hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE}
+  \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}( (\hyperlink{group__mag_gab42ae0d0a2a6f37cf36d856c072b7f34}{mag\_read\_all\_data}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev},data))==\hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE}
        )
         imu\_data->\hyperlink{structIMU__DATA__STRUCT_a99924252176326418863e511d4fa437b}{new\_data}=0;
   \textcolor{keywordflow}{else}\{

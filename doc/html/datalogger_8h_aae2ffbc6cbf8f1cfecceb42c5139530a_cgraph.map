@@ -1,0 +1,4 @@
+<map id="datalogger_stop" name="datalogger_stop">
+<area shape="rect" id="node3" href="$datalogger_8c.html#a54b06d9395b2e370a5a72beb7f9524b2" title="datalogger_lock_mutex" alt="" coords="176,5,331,35"/>
+<area shape="rect" id="node5" href="$datalogger_8c.html#a85453211c0c809083c36cc56b275aeeb" title="datalogger_unlock_mutex" alt="" coords="168,59,339,88"/>
+</map>

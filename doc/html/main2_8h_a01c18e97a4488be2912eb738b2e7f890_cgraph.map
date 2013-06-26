@@ -1,0 +1,16 @@
+<map id="timer_function_task_2" name="timer_function_task_2">
+<area shape="rect" id="node3" href="$main2_8c.html#a944f7352f18ed248c1b1143f51edc391" title="periodic_task_2" alt="" coords="207,164,319,193"/>
+<area shape="rect" id="node5" href="$communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8c.html#a2d1e523ff70db11ca4096f97af5da000" title="INITIALIZATION OF SENSORS AND DEVICES." alt="" coords="368,137,459,167"/>
+<area shape="rect" id="node7" href="$ui_8c.html#a1559840369fc944a83a3666ef7959413" title="ui_update" alt="" coords="375,191,452,220"/>
+<area shape="rect" id="node9" href="$ui_8c.html#a7d5a9d9a75693709de408781d001a6a6" title="ui_imu_data" alt="" coords="523,5,613,35"/>
+<area shape="rect" id="node11" href="$ui_8c.html#af48496a4ce54378764bc4ca9eddfd498" title="ui_eff_data" alt="" coords="525,59,611,88"/>
+<area shape="rect" id="node13" href="$ui_8c.html#aefec243c5df45db0350c1abbccf20e3b" title="ui_mra_data" alt="" coords="521,112,615,141"/>
+<area shape="rect" id="node15" href="$ui_8c.html#a6577e01f0ebf9ac1677c616228a64a46" title="ui_overview_data" alt="" coords="507,216,629,245"/>
+<area shape="rect" id="node19" href="$datalogger_8c.html#a46fd1290d9ee97d5fc7171e1e0dcb0aa" title="datalogger_status" alt="" coords="677,163,803,192"/>
+<area shape="rect" id="node25" href="$main2_8c.html#a5f05ce725141ddfab683e059b1cd95ea" title="exit_program" alt="" coords="520,371,616,400"/>
+<area shape="rect" id="node28" href="$datalogger_8c.html#aae2ffbc6cbf8f1cfecceb42c5139530a" title="datalogger_stop" alt="" coords="683,269,797,299"/>
+<area shape="rect" id="node32" href="$datalogger_8c.html#a1f254ef380d595d6605c10811fd0dee6" title="datalogger_start" alt="" coords="683,323,797,352"/>
+<area shape="rect" id="node17" href="$main2_8c.html#a5b2b1fdd5e517470c10e84a2b2bcc5c8" title="get_time" alt="" coords="704,216,776,245"/>
+<area shape="rect" id="node21" href="$datalogger_8c.html#a54b06d9395b2e370a5a72beb7f9524b2" title="datalogger_lock_mutex" alt="" coords="859,243,1013,272"/>
+<area shape="rect" id="node23" href="$datalogger_8c.html#a85453211c0c809083c36cc56b275aeeb" title="datalogger_unlock_mutex" alt="" coords="851,296,1021,325"/>
+</map>

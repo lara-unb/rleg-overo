@@ -1,0 +1,8 @@
+<map id="CommunicationV0/imu_regs.h" name="CommunicationV0/imu_regs.h">
+<area shape="rect" id="node3" href="$CommunicationV0_2imu__functions_8h.html" title="CommunicationV0/imu\l_functions.h" alt="" coords="261,102,416,149"/>
+<area shape="rect" id="node7" href="$CommunicationV0_2communication_8h.html" title="CommunicationV0/communication.h" alt="" coords="5,207,237,236"/>
+<area shape="rect" id="node5" href="$CommunicationV0_2acc__functions_8c.html" title="CommunicationV0/acc\l_functions.c" alt="" coords="261,198,416,245"/>
+<area shape="rect" id="node11" href="$CommunicationV0_2gyr__functions_8c.html" title="CommunicationV0/gyr\l_functions.c" alt="" coords="440,198,589,245"/>
+<area shape="rect" id="node13" href="$CommunicationV0_2mag__functions_8c.html" title="CommunicationV0/mag\l_functions.c" alt="" coords="613,198,771,245"/>
+<area shape="rect" id="node9" href="$CommunicationV0_2communication_8c.html" title="CommunicationV0/communication.c" alt="" coords="5,293,237,323"/>
+</map>

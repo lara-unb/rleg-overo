@@ -1,0 +1,26 @@
+<map id="Q_alloc" name="Q_alloc">
+<area shape="rect" id="node3" href="$link_8c.html#a214ddb7cd91bd6b6b3a9ee37d1ec5a92" title="DualQuaternion Link Frame Transformation." alt="" coords="244,508,332,538"/>
+<area shape="rect" id="node29" href="$quaternion_8c.html#a729fe3e2a8b70d933b53990ba245ea15" title="Quaternion Addition." alt="" coords="128,356,187,386"/>
+<area shape="rect" id="node36" href="$quaternion_8c.html#a84783e9bd4743081f08605d38779a07e" title="Allocates a Quaternion and its values." alt="" coords="120,224,195,254"/>
+<area shape="rect" id="node67" href="$quaternion_8c.html#a1cb224f6a30ff843d54647642c84e737" title="Quaternion Multiplication." alt="" coords="125,278,189,307"/>
+<area shape="rect" id="node72" href="$quaternion_8c.html#aeae0ced4cf7e9771da4b3236b8e5771c" title="Quaternion Subtraction." alt="" coords="128,94,187,123"/>
+<area shape="rect" id="node5" href="$robot_8c.html#a57cc252fbb9e4c8be955b6af755b0c2c" title="Finds the DualQuaternion that represents the End Effector&#39;s pose using the Foward Kinematics DH Model..." alt="" coords="425,635,516,664"/>
+<area shape="rect" id="node13" href="$robot_8c.html#ab6dd42296709cf38d3468af7afd29563" title="Returns the (Analytical) DualQuaternion Jacobian." alt="" coords="624,482,765,511"/>
+<area shape="rect" id="node19" href="$robot_8c.html#a61464c237c56f3db3f79b0350df80ddb" title="Returns the (Geometrical) DualQuaternion Jacobian." alt="" coords="623,327,767,356"/>
+<area shape="rect" id="node7" href="$classCartesian__pose__controller.html#ab937d166862f2756eb3d08f37a0a090d" title="Cartesian_pose_controller\l::control" alt="" coords="836,464,1009,510"/>
+<area shape="rect" id="node11" href="$schunk__high_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1064,407,1115,436"/>
+<area shape="rect" id="node16" href="$robot_8c.html#ae6858f6a120e4ce01df49d39cef2c164" title="Returns the (Orientation) DualQuaternion Jacobian for the P angle." alt="" coords="829,534,1016,563"/>
+<area shape="rect" id="node9" href="$cartesian__pose__controller_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1064,472,1115,502"/>
+<area shape="rect" id="node21" href="$classCartesian__velocity__controller.html#a249bd167cd995e16906731172d1bc516" title="Cartesian_velocity\l_controller::control" alt="" coords="857,318,988,365"/>
+<area shape="rect" id="node23" href="$cartesian__velocity__controller_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1064,327,1115,356"/>
+<area shape="rect" id="node31" href="$dualquaternion_8c.html#a6618a3e5a7446724565f92271068a985" title="DualQuaternion Multiplication." alt="" coords="251,382,325,411"/>
+<area shape="rect" id="node38" href="$dualquaternion_8c.html#a8b1057516bdc2c0cb14127791cf356cf" title="Allocated and initializes a DualQuaternion." alt="" coords="245,328,331,358"/>
+<area shape="rect" id="node49" href="$quaternion_8c.html#a7220df72e5bbbdcb37aa6c10c873465b" title="Makes a copy of a Quaternion." alt="" coords="255,67,321,96"/>
+<area shape="rect" id="node56" href="$quaternion_8c.html#a2384fed3e10ec7a91e6d4e9deae3d8b9" title="Quaternion Multiplication by Double." alt="" coords="253,224,323,254"/>
+<area shape="rect" id="node64" href="$quaternion_8c.html#ac9d0d4ab98e4353ba0feca69adde42f8" title="Quaternion Conjugate." alt="" coords="247,120,329,150"/>
+<area shape="rect" id="node40" href="$classCartesian__pose__controller.html#ab55ab40074c82ba8cc010fe68fc76d5b" title="Cartesian_pose_controller\l::printPose" alt="" coords="608,206,781,253"/>
+<area shape="rect" id="node46" href="$robot_8c.html#a4b3a6e6509133ce5381e387f9e7fea99" title="Gets a usefull term in the Jacobian Calculation, called P in Bruno Adorno&#39;s work." alt="" coords="425,480,516,510"/>
+<area shape="rect" id="node51" href="$dualquaternion_8c.html#a6a31e7cb25e1ad1ea6e55ffc22cb4657" title="Allocated and initializes a DualQuaternion." alt="" coords="381,174,560,203"/>
+<area shape="rect" id="node53" href="$dualquaternion_8c.html#a35b3966af2f77ad5a8f47126948720fb" title="DualQuaternion Rotation." alt="" coords="432,67,509,96"/>
+<area shape="rect" id="node59" href="$dualquaternion_8c.html#a80e2f2aded851388d4f18d486a0b9455" title="DualQuaternion Translation considering a translation followed by a rotation." alt="" coords="433,120,508,150"/>
+</map>

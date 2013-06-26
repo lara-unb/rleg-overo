@@ -1,0 +1,6 @@
+<map id="communication/communication.h" name="communication/communication.h">
+<area shape="rect" id="node3" href="$communication_2imu__functions_8h.html" title="imu_functions.h" alt="" coords="591,83,705,112"/>
+<area shape="rect" id="node27" href="$communication_2imu__regs_8h.html" title="imu_regs.h" alt="" coords="1189,160,1275,189"/>
+<area shape="rect" id="node29" href="$communication_2spi__functions_8h.html" title="spi_functions.h" alt="" coords="817,83,927,112"/>
+<area shape="rect" id="node43" href="$communication_2gpio__functions_8h.html" title="gpio_functions.h" alt="" coords="316,83,433,112"/>
+</map>

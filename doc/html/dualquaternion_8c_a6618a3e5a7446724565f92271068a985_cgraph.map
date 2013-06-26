@@ -1,0 +1,8 @@
+<map id="DQ_mult" name="DQ_mult">
+<area shape="rect" id="node3" href="$dualquaternion_8h.html#aaa019fc9bc7de2150887a4b323cedc50" title="Allocates a Dual Quaternion." alt="" coords="129,5,204,35"/>
+<area shape="rect" id="node5" href="$dualquaternion_8h.html#a1d21b6cb665c04de4be5aca50804caf4" title="Free&#39;s an Allocated DualQuaternion." alt="" coords="132,59,201,88"/>
+<area shape="rect" id="node9" href="$quaternion_8h.html#a729fe3e2a8b70d933b53990ba245ea15" title="Quaternion Addition." alt="" coords="137,112,196,141"/>
+<area shape="rect" id="node14" href="$quaternion_8h.html#a1cb224f6a30ff843d54647642c84e737" title="Quaternion Multiplication." alt="" coords="135,165,199,195"/>
+<area shape="rect" id="node7" href="$quaternion_8h.html#a69ecc76f665022f81be1702c20865de4" title="Frees an Allocated Quaternion from memory." alt="" coords="256,112,317,141"/>
+<area shape="rect" id="node11" href="$quaternion_8h.html#a2267ada2076193cc73def7d5df3281c0" title="Quaternion Library." alt="" coords="253,165,320,195"/>
+</map>

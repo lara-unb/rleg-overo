@@ -1,0 +1,50 @@
+<map id="Cartesian_pose_controller::control" name="Cartesian_pose_controller::control">
+<area shape="rect" id="node3" href="$classCartesian__controller.html#aaf006f80e89c08cf040956afbb4cf3c0" title="Other packages." alt="" coords="289,19,436,66"/>
+<area shape="rect" id="node7" href="$classCartesian__controller.html#a8c0f0b41de9f4f8b2e3aa327e7c6b50c" title="De&#45;allocs unfreed matrices in the end of the control loop." alt="" coords="293,561,432,607"/>
+<area shape="rect" id="node9" href="$gmatrix_8h.html#a9a73b4e0a77f386c0bae1bba75298d1d" title="PGMATRIX_FREE" alt="" coords="899,352,1032,381"/>
+<area shape="rect" id="node17" href="$dualquaternion_8h.html#a1d21b6cb665c04de4be5aca50804caf4" title="Free&#39;s an Allocated DualQuaternion." alt="" coords="1165,1312,1235,1341"/>
+<area shape="rect" id="node21" href="$classCartesian__controller.html#a0d7a63bac84715f6742db738df246f91" title="Asks Schunk&#39;s its joint&#39;s positions and velocities, them it updates the internal PGMATRIXs Theta and ..." alt="" coords="249,104,476,168"/>
+<area shape="rect" id="node24" href="$gmatrix__plus_8h.html#aa1123306aa55d942955e09156db757a3" title="PGMATRIX_ADD_COPY_FREE" alt="" coords="569,288,785,317"/>
+<area shape="rect" id="node35" href="$gmatrix__plus_8h.html#a73bceba2ac1f3a5589628d0f2e4081fa" title="J = J^T(J.J^T + k^2.I)−1 Siciliano EQ." alt="" coords="227,221,499,267"/>
+<area shape="rect" id="node40" href="$gmatrix__plus_8h.html#a17b482a0aaa68d1f4c1c30a1a72dacbb" title="PGMATRIX_MULTIPLY_COPY_FREE" alt="" coords="552,496,803,525"/>
+<area shape="rect" id="node58" href="$gmatrix__plus_8h.html#a371a0bfffdb84cf1596ca60bbf7fce93" title="PGMATRIX_MULTIPLY_CONST\l_COPY_FREE" alt="" coords="568,549,787,595"/>
+<area shape="rect" id="node67" href="$dualquaternion_8h.html#a3d48348c3e25d1724058c2cf2364e42e" title="PGMATRIX_SET_COLUMN\l_BY_DQ" alt="" coords="583,722,772,769"/>
+<area shape="rect" id="node69" href="$gmatrix__plus_8h.html#a146d9062e4325cc3b97990ae51b96d95" title="PGMATRIX_SUBTRACT_COPY_FREE" alt="" coords="548,443,807,472"/>
+<area shape="rect" id="node73" href="$classCartesian__pose__controller.html#ab55ab40074c82ba8cc010fe68fc76d5b" title="Cartesian_pose_controller\l::printPose" alt="" coords="591,1151,764,1198"/>
+<area shape="rect" id="node104" href="$robot_8h.html#a57cc252fbb9e4c8be955b6af755b0c2c" title="Finds the DualQuaternion that represents the End Effector&#39;s pose using the Foward Kinematics DH Model..." alt="" coords="632,1048,723,1077"/>
+<area shape="rect" id="node120" href="$robot_8h.html#ab6dd42296709cf38d3468af7afd29563" title="Returns the (Analytical) DualQuaternion Jacobian." alt="" coords="292,867,433,896"/>
+<area shape="rect" id="node134" href="$robot_8h.html#aa1d3aca5132bd5f347f5966d38fbb966" title="Robot_updateLinksThetasBy\lMatrix" alt="" coords="268,1071,457,1118"/>
+<area shape="rect" id="node136" href="$classCartesian__controller.html#ae845f67c81c2649bfbaccf95230f2599" title="Cartesian_controller\l::sendJointPositionsToSchunk" alt="" coords="264,1141,461,1187"/>
+<area shape="rect" id="node138" href="$classCartesian__controller.html#a40d17a9794af8a9a607618bf0ee5efff" title="Updates the Schunk velocities msg to be sent to Schunk, but not before saturating it..." alt="" coords="261,1210,464,1257"/>
+<area shape="rect" id="node140" href="$classCartesian__pose__controller.html#a965f86a383eb205df10832626fac98af" title="Calls the last velocity callback and updates the PGMATRIX D_ref with the updated values." alt="" coords="276,1279,449,1326"/>
+<area shape="rect" id="node5" href="$classCartesian__controller.html#a3ba54e8b35632526c5e8eb2ab5d7de0d" title="Cartesian_controller\l::stopSchunk" alt="" coords="608,5,747,51"/>
+<area shape="rect" id="node11" href="$robot_8h.html#a31f8aee15b6c24f89ab51b1bc1341f33" title="Frees a Robot and all its Links." alt="" coords="635,669,720,699"/>
+<area shape="rect" id="node13" href="$link_8h.html#aa5732848aecbf1cb2f8605b2f43aa14e" title="Frees a Link from memory." alt="" coords="928,669,1003,699"/>
+<area shape="rect" id="node15" href="$robot_8h.html#af34bf204faed7e475a004f0c027badcc" title="Gets a Link by it&#39;s index." alt="" coords="912,756,1019,785"/>
+<area shape="rect" id="node19" href="$quaternion_8h.html#a69ecc76f665022f81be1702c20865de4" title="Frees an Allocated Quaternion from memory." alt="" coords="1332,1155,1393,1184"/>
+<area shape="rect" id="node26" href="$gmatrix_8h.html#a742534e0a7ae5f8300fd21538cd7a9d0" title="PGMATRIX_ADD_COPY" alt="" coords="879,299,1052,328"/>
+<area shape="rect" id="node28" href="$gmatrix__plus_8h.html#a6cacc3f1b48d458d5cfc9e03159e3d81" title="PGMATRIX_CREATE_ZEROES" alt="" coords="857,405,1073,435"/>
+<area shape="rect" id="node30" href="$gmatrix_8h.html#adf8dc9cfae5700de80c88604082ffa10" title="PGMATRIX_ALLOC" alt="" coords="1129,327,1271,356"/>
+<area shape="rect" id="node32" href="$gmatrix_8h.html#a9b78ef8288b8e5448313d92d7427366d" title="PGMATRIX_ZEROES" alt="" coords="1123,544,1277,573"/>
+<area shape="rect" id="node46" href="$gmatrix__plus_8h.html#a9a93e1e198422eb488592340f48d59d6" title="PGMATRIX_PSEUDOINVERSE_PLUS" alt="" coords="548,184,807,213"/>
+<area shape="rect" id="node55" href="$gmatrix_8h.html#acc0c1227b2661cf404175b537c35cd10" title="PGMATRIX_TRANSPOSE_COPY" alt="" coords="564,131,791,160"/>
+<area shape="rect" id="node44" href="$gmatrix_8h.html#ab8b0e8fdbcef816db4f0c9c235ddfbc8" title="PGMATRIX_MULTIPLY_COPY" alt="" coords="861,459,1069,488"/>
+<area shape="rect" id="node51" href="$gmatrix_8h.html#a9e709a477348c680c0a9ad5eab2725f6" title="PGMATRIX_MULTIPLY_COPY\l_EXTENDED" alt="" coords="861,178,1069,225"/>
+<area shape="rect" id="node53" href="$gmatrix__linalg_8h.html#ac549c7f4bf706e7ec89de04b2573fffa" title="PGMATRIX_SVD" alt="" coords="903,125,1028,155"/>
+<area shape="rect" id="node60" href="$gmatrix_8h.html#a44bb4db341b4b4a005d69d49eb76624b" title="PGMATRIX_COPY" alt="" coords="897,565,1033,595"/>
+<area shape="rect" id="node64" href="$gmatrix_8h.html#a1846d69369b550d1b4a9106467f5f2af" title="PGMATRIX_MULTIPLY_CONST" alt="" coords="856,512,1075,541"/>
+<area shape="rect" id="node75" href="$dualquaternion_8h.html#a8b1057516bdc2c0cb14127791cf356cf" title="Allocated and initializes a DualQuaternion." alt="" coords="923,971,1008,1000"/>
+<area shape="rect" id="node83" href="$dualquaternion_8h.html#a80e2f2aded851388d4f18d486a0b9455" title="DualQuaternion Translation considering a translation followed by a rotation." alt="" coords="928,1155,1003,1184"/>
+<area shape="rect" id="node97" href="$dualquaternion_8h.html#a35b3966af2f77ad5a8f47126948720fb" title="DualQuaternion Rotation." alt="" coords="927,1101,1004,1131"/>
+<area shape="rect" id="node77" href="$dualquaternion_8h.html#aaa019fc9bc7de2150887a4b323cedc50" title="Allocates a Dual Quaternion." alt="" coords="1163,891,1237,920"/>
+<area shape="rect" id="node79" href="$quaternion_8h.html#a84783e9bd4743081f08605d38779a07e" title="Allocates a Quaternion and its values." alt="" coords="1325,1048,1400,1077"/>
+<area shape="rect" id="node81" href="$quaternion_8h.html#a2267ada2076193cc73def7d5df3281c0" title="Quaternion Library." alt="" coords="1448,1021,1515,1051"/>
+<area shape="rect" id="node85" href="$quaternion_8h.html#ac9d0d4ab98e4353ba0feca69adde42f8" title="Quaternion Conjugate." alt="" coords="1159,1101,1241,1131"/>
+<area shape="rect" id="node89" href="$quaternion_8h.html#a1cb224f6a30ff843d54647642c84e737" title="Quaternion Multiplication." alt="" coords="1168,1208,1232,1237"/>
+<area shape="rect" id="node93" href="$quaternion_8h.html#a2384fed3e10ec7a91e6d4e9deae3d8b9" title="Quaternion Multiplication by Double." alt="" coords="1165,1155,1235,1184"/>
+<area shape="rect" id="node99" href="$quaternion_8h.html#a7220df72e5bbbdcb37aa6c10c873465b" title="Makes a copy of a Quaternion." alt="" coords="1167,1048,1233,1077"/>
+<area shape="rect" id="node107" href="$dualquaternion_8h.html#a6618a3e5a7446724565f92271068a985" title="DualQuaternion Multiplication." alt="" coords="928,1048,1003,1077"/>
+<area shape="rect" id="node116" href="$link_8h.html#a214ddb7cd91bd6b6b3a9ee37d1ec5a92" title="DualQuaternion Link Frame Transformation." alt="" coords="921,893,1009,923"/>
+<area shape="rect" id="node111" href="$quaternion_8h.html#a729fe3e2a8b70d933b53990ba245ea15" title="Quaternion Addition." alt="" coords="1171,995,1229,1024"/>
+<area shape="rect" id="node131" href="$robot_8c.html#a4b3a6e6509133ce5381e387f9e7fea99" title="Gets a usefull term in the Jacobian Calculation, called P in Bruno Adorno&#39;s work." alt="" coords="632,995,723,1024"/>
+</map>

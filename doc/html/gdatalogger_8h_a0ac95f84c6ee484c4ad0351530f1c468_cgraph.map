@@ -1,0 +1,8 @@
+<map id="gDataLogger_Close" name="gDataLogger_Close">
+<area shape="rect" id="node3" href="$gdatalogger_8c.html#a05dc8ce832b941280d7de26057992640" title="gDataLogger_MatfileUpdate" alt="" coords="192,59,376,88"/>
+<area shape="rect" id="node5" href="$gmatlabdatafile_8c.html#a3ecf28836f545707551fe8b8005c8954" title="gMATLABDataFile_SaveVector" alt="" coords="439,5,644,35"/>
+<area shape="rect" id="node13" href="$gmatlabdatafile_8c.html#ad38283a16cbd66a2834b2ca9f5c6c6e0" title="gMATLABDataFile_Close" alt="" coords="199,112,369,141"/>
+<area shape="rect" id="node7" href="$gqueue_8c.html#a7138af0e73adef329c891210ba747a2e" title="gQUEUE_GetNumberOfUnreadData" alt="" coords="424,59,659,88"/>
+<area shape="rect" id="node9" href="$gqueue_8c.html#ab5ba087de92285fb4f9ed8c46440ac6f" title="gQUEUE_RequestReadIndex" alt="" coords="444,112,639,141"/>
+<area shape="rect" id="node11" href="$gqueue_8c.html#abab4c6aeb3d57e43aa16285fe4f59f66" title="gQUEUE_UnwrapReadIndex" alt="" coords="707,112,899,141"/>
+</map>

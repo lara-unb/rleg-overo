@@ -1,0 +1,10 @@
+<map id="ui.c" name="ui.c">
+<area shape="rect" id="node9" href="$communication_2communication_8h.html" title="communication/communication.h" alt="" coords="243,83,456,112"/>
+<area shape="rect" id="node58" href="$datalogger_8h.html" title="datalogger.h" alt="" coords="480,83,573,112"/>
+<area shape="rect" id="node60" href="$main2_8h.html" title="main2.h" alt="" coords="597,83,664,112"/>
+<area shape="rect" id="node62" href="$ui_8h.html" title="ui.h" alt="" coords="688,83,731,112"/>
+<area shape="rect" id="node11" href="$communication_2imu__functions_8h.html" title="imu_functions.h" alt="" coords="469,160,584,189"/>
+<area shape="rect" id="node34" href="$communication_2imu__regs_8h.html" title="imu_regs.h" alt="" coords="97,237,183,267"/>
+<area shape="rect" id="node36" href="$communication_2spi__functions_8h.html" title="spi_functions.h" alt="" coords="931,160,1040,189"/>
+<area shape="rect" id="node50" href="$communication_2gpio__functions_8h.html" title="gpio_functions.h" alt="" coords="293,160,411,189"/>
+</map>

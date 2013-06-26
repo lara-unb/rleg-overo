@@ -1,0 +1,7 @@
+<map id="PGMATRIX_MULTIPLY_COPY_FREE" name="PGMATRIX_MULTIPLY_COPY_FREE">
+<area shape="rect" id="node3" href="$gmatrix__plus_8h.html#a6cacc3f1b48d458d5cfc9e03159e3d81" title="PGMATRIX_CREATE_ZEROES" alt="" coords="307,32,523,61"/>
+<area shape="rect" id="node9" href="$gmatrix_8h.html#a9a73b4e0a77f386c0bae1bba75298d1d" title="PGMATRIX_FREE" alt="" coords="348,85,481,115"/>
+<area shape="rect" id="node11" href="$gmatrix_8h.html#ab8b0e8fdbcef816db4f0c9c235ddfbc8" title="PGMATRIX_MULTIPLY_COPY" alt="" coords="311,139,519,168"/>
+<area shape="rect" id="node5" href="$gmatrix_8h.html#adf8dc9cfae5700de80c88604082ffa10" title="PGMATRIX_ALLOC" alt="" coords="577,5,719,35"/>
+<area shape="rect" id="node7" href="$gmatrix_8h.html#a9b78ef8288b8e5448313d92d7427366d" title="PGMATRIX_ZEROES" alt="" coords="571,59,725,88"/>
+</map>

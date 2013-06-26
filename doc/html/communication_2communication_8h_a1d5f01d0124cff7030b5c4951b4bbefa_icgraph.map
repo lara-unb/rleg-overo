@@ -1,0 +1,13 @@
+<map id="actuate" name="actuate">
+<area shape="rect" id="node3" href="$communication_2communication_8h.html#a2d1e523ff70db11ca4096f97af5da000" title="INITIALIZATION OF SENSORS AND DEVICES." alt="" coords="132,59,223,88"/>
+<area shape="rect" id="node17" href="$main2_8h.html#a26855b7739897854265d51aa61329390" title="periodic_task_1" alt="" coords="121,112,233,141"/>
+<area shape="rect" id="node5" href="$main2_8h.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="315,5,365,35"/>
+<area shape="rect" id="node7" href="$main2_8h.html#a944f7352f18ed248c1b1143f51edc391" title="periodic_task_2" alt="" coords="284,59,396,88"/>
+<area shape="rect" id="node9" href="$main2_8h.html#a01c18e97a4488be2912eb738b2e7f890" title="timer_function_task_2" alt="" coords="447,59,596,88"/>
+<area shape="rect" id="node11" href="$main2_8c.html#a735ebf3d0d37c7d8187199e6565bcb5c" title="f_timer_task_2" alt="" coords="647,59,753,88"/>
+<area shape="rect" id="node13" href="$main2_8h.html#ae59c93969d017f18e3e38b2f9f7888ca" title="timer_start_task_2" alt="" coords="803,59,933,88"/>
+<area shape="rect" id="node15" href="$main2_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="981,85,1032,115"/>
+<area shape="rect" id="node19" href="$main2_8h.html#a90885bae1b9535b16e014fb928e98e37" title="timer_function_task_1" alt="" coords="447,112,596,141"/>
+<area shape="rect" id="node21" href="$main2_8c.html#a5ce2b6a7dd4d00c90fe18098091044aa" title="f_timer_task_1" alt="" coords="647,112,753,141"/>
+<area shape="rect" id="node23" href="$main2_8h.html#a0e411070b7f487a8ab6a60b180f50e12" title="timer_start_task_1" alt="" coords="803,112,933,141"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="Cartesian_velocity_controller" name="Cartesian_velocity_controller">
+<area shape="rect" id="node2" href="$classCartesian__controller.html" title="Cartesian_controller" alt="" coords="33,371,172,400"/>
+<area shape="rect" id="node4" href="$structRobot.html" title="The Structure holding the relevant info of a Robot." alt="" coords="5,101,61,131"/>
+<area shape="rect" id="node6" href="$structLink.html" title="Link" alt="" coords="11,5,56,35"/>
+<area shape="rect" id="node9" href="$structGMATRIX.html" title="GMATRIX" alt="" coords="85,101,168,131"/>
+</map>

@@ -17,5 +17,6 @@ var searchData=
   ['flagstillnotwritten',['FlagStillNotWritten',['../structGQUEUECONTROL.html#a4d58bdb6b0dc93bb6034c4209b6e7915',1,'GQUEUECONTROL']]],
   ['fp',['fp',['../structGMATLABDATAFILECONFIG.html#a900bde88d01e7b5380101446c89a06a6',1,'GMATLABDATAFILECONFIG']]],
   ['full_5fres',['full_res',['../structIMU__PARAM__STRUCT_1_1param__acc.html#af57da5d956ffa7e49a184326b6b9c738',1,'IMU_PARAM_STRUCT::param_acc']]],
-  ['functions_20for_20gyrometer_20itg3200',['Functions for Gyrometer ITG3200',['../group__gyr.html',1,'']]]
+  ['functions_20for_20gyrometer_20itg3200',['Functions for Gyrometer ITG3200',['../group__gyr.html',1,'']]],
+  ['functions_20for_20magnetometer_20hmc5883',['Functions for Magnetometer HMC5883',['../group__mag.html',1,'']]]
 ];

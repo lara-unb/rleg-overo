@@ -1,0 +1,9 @@
+<map id="DQ_createFromQuaternion" name="DQ_createFromQuaternion">
+<area shape="rect" id="node3" href="$dualquaternion_8h.html#aaa019fc9bc7de2150887a4b323cedc50" title="Allocates a Dual Quaternion." alt="" coords="233,5,308,35"/>
+<area shape="rect" id="node5" href="$quaternion_8h.html#a7220df72e5bbbdcb37aa6c10c873465b" title="Makes a copy of a Quaternion." alt="" coords="237,59,304,88"/>
+<area shape="rect" id="node11" href="$quaternion_8h.html#a1cb224f6a30ff843d54647642c84e737" title="Quaternion Multiplication." alt="" coords="239,165,303,195"/>
+<area shape="rect" id="node16" href="$quaternion_8h.html#a2384fed3e10ec7a91e6d4e9deae3d8b9" title="Quaternion Multiplication by Double." alt="" coords="236,112,305,141"/>
+<area shape="rect" id="node7" href="$quaternion_8h.html#a84783e9bd4743081f08605d38779a07e" title="Allocates a Quaternion and its values." alt="" coords="357,60,432,89"/>
+<area shape="rect" id="node9" href="$quaternion_8h.html#a2267ada2076193cc73def7d5df3281c0" title="Quaternion Library." alt="" coords="480,113,547,143"/>
+<area shape="rect" id="node14" href="$quaternion_8h.html#a69ecc76f665022f81be1702c20865de4" title="Frees an Allocated Quaternion from memory." alt="" coords="364,113,425,143"/>
+</map>

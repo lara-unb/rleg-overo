@@ -1,0 +1,12 @@
+<map id="pabort" name="pabort">
+<area shape="rect" id="node3" href="$CommunicationV0_2spi__functions_8h.html#a405e3e13b63a628c1be12ccba7e2ebbf" title="adc_read" alt="" coords="115,5,189,35"/>
+<area shape="rect" id="node5" href="$CommunicationV0_2spi__functions_8c.html#a9fe5e6b0c564de89398a80e1689b717f" title="dac_write" alt="" coords="113,59,191,88"/>
+<area shape="rect" id="node7" href="$CommunicationV0_2spi__functions_8h.html#a70764aca888e93b0329e7a62c9312704" title="spi_init" alt="" coords="121,112,183,141"/>
+<area shape="rect" id="node9" href="$communication_2communication_8h.html#a2d1e523ff70db11ca4096f97af5da000" title="INITIALIZATION OF SENSORS AND DEVICES." alt="" coords="240,112,331,141"/>
+<area shape="rect" id="node11" href="$main2_8h.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="411,85,461,115"/>
+<area shape="rect" id="node13" href="$main2_8h.html#a944f7352f18ed248c1b1143f51edc391" title="periodic_task_2" alt="" coords="380,139,492,168"/>
+<area shape="rect" id="node15" href="$main2_8h.html#a01c18e97a4488be2912eb738b2e7f890" title="timer_function_task_2" alt="" coords="543,139,692,168"/>
+<area shape="rect" id="node17" href="$main2_8c.html#a735ebf3d0d37c7d8187199e6565bcb5c" title="f_timer_task_2" alt="" coords="743,139,849,168"/>
+<area shape="rect" id="node19" href="$main2_8h.html#ae59c93969d017f18e3e38b2f9f7888ca" title="timer_start_task_2" alt="" coords="899,139,1029,168"/>
+<area shape="rect" id="node21" href="$main2_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="1077,139,1128,168"/>
+</map>

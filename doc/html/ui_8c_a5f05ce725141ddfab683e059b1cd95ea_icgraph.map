@@ -1,0 +1,13 @@
+<map id="exit_program" name="exit_program">
+<area shape="rect" id="node3" href="$ui_8h.html#a1559840369fc944a83a3666ef7959413" title="ui_update" alt="" coords="153,36,231,65"/>
+<area shape="rect" id="node5" href="$main2_8h.html#a944f7352f18ed248c1b1143f51edc391" title="periodic_task_2" alt="" coords="300,5,412,35"/>
+<area shape="rect" id="node15" href="$threads__linux_8c.html#ad535241b6b29d076beb2cd75a880aaea" title="threads_linux_periodic\l_task_2" alt="" coords="281,58,431,105"/>
+<area shape="rect" id="node7" href="$main2_8h.html#a01c18e97a4488be2912eb738b2e7f890" title="timer_function_task_2" alt="" coords="481,5,631,35"/>
+<area shape="rect" id="node9" href="$main2_8c.html#a735ebf3d0d37c7d8187199e6565bcb5c" title="f_timer_task_2" alt="" coords="695,5,801,35"/>
+<area shape="rect" id="node11" href="$main2_8h.html#ae59c93969d017f18e3e38b2f9f7888ca" title="timer_start_task_2" alt="" coords="867,5,997,35"/>
+<area shape="rect" id="node13" href="$main2_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="1084,5,1135,35"/>
+<area shape="rect" id="node17" href="$threads__linux_8c.html#aa65173deca09202aea0f4a81a166545b" title="threads_linux_timer\l_function_task_2" alt="" coords="489,58,623,105"/>
+<area shape="rect" id="node19" href="$threads__linux_8c.html#aaff43cd760c084d80d045228b46fe784" title="threads_linux_timer\l_task_2" alt="" coords="681,58,815,105"/>
+<area shape="rect" id="node21" href="$threads__linux_8c.html#a59d6f60b682f360c3759cefad7ad2a4e" title="threads_linux_timer\l_start_task_2" alt="" coords="865,58,999,105"/>
+<area shape="rect" id="node23" href="$threads__linux_8c.html#aff9795d781d7b334d45539707a641c23" title="threads_linux_init" alt="" coords="1048,67,1171,96"/>
+</map>

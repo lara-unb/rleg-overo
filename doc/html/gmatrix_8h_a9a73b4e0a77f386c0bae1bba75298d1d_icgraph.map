@@ -1,0 +1,18 @@
+<map id="PGMATRIX_FREE" name="PGMATRIX_FREE">
+<area shape="rect" id="node3" href="$classCartesian__pose__controller.html#ab937d166862f2756eb3d08f37a0a090d" title="Cartesian_pose_controller\l::control" alt="" coords="863,133,1036,179"/>
+<area shape="rect" id="node7" href="$classCartesian__velocity__controller.html#a249bd167cd995e16906731172d1bc516" title="Cartesian_velocity\l_controller::control" alt="" coords="884,393,1015,439"/>
+<area shape="rect" id="node11" href="$classCartesian__controller.html#a8c0f0b41de9f4f8b2e3aa327e7c6b50c" title="De&#45;allocs unfreed matrices in the end of the control loop." alt="" coords="563,73,701,119"/>
+<area shape="rect" id="node15" href="$schunk__high_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="924,536,975,565"/>
+<area shape="rect" id="node17" href="$gmatrix__plus_8c.html#aa1123306aa55d942955e09156db757a3" title="PGMATRIX_ADD_COPY_FREE" alt="" coords="211,276,427,305"/>
+<area shape="rect" id="node21" href="$gmatrix__plus_8c.html#a73bceba2ac1f3a5589628d0f2e4081fa" title="J = J^T(J.J^T + k^2.I)−1 Siciliano EQ." alt="" coords="496,363,768,410"/>
+<area shape="rect" id="node28" href="$gmatrix__plus_8c.html#a371a0bfffdb84cf1596ca60bbf7fce93" title="PGMATRIX_MULTIPLY_CONST\l_COPY_FREE" alt="" coords="523,193,741,239"/>
+<area shape="rect" id="node33" href="$gmatrix__plus_8c.html#a17b482a0aaa68d1f4c1c30a1a72dacbb" title="PGMATRIX_MULTIPLY_COPY_FREE" alt="" coords="193,536,444,565"/>
+<area shape="rect" id="node38" href="$gmatrix__plus_8c.html#a4785be0fc969b516ff9c22b6736738ab" title="J^cross = J^T(J*J^T)^&#45;1 Siciliano EQ." alt="" coords="500,844,764,873"/>
+<area shape="rect" id="node44" href="$gmatrix__plus_8c.html#a9a93e1e198422eb488592340f48d59d6" title="PGMATRIX_PSEUDOINVERSE_PLUS" alt="" coords="189,380,448,409"/>
+<area shape="rect" id="node48" href="$gmatrix__plus_8c.html#a146d9062e4325cc3b97990ae51b96d95" title="PGMATRIX_SUBTRACT_COPY_FREE" alt="" coords="503,639,761,668"/>
+<area shape="rect" id="node54" href="$robot_8c.html#a61464c237c56f3db3f79b0350df80ddb" title="Returns the (Geometrical) DualQuaternion Jacobian." alt="" coords="560,484,704,513"/>
+<area shape="rect" id="node58" href="$robot_8c.html#ae6858f6a120e4ce01df49d39cef2c164" title="Returns the (Orientation) DualQuaternion Jacobian for the P angle." alt="" coords="225,767,412,796"/>
+<area shape="rect" id="node5" href="$cartesian__pose__controller_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1131,141,1181,171"/>
+<area shape="rect" id="node9" href="$cartesian__velocity__controller_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1131,401,1181,431"/>
+<area shape="rect" id="node40" href="$gmatrix__plus_8c.html#a7211c5dcc80f641d83bf771de5b226fa" title="(In &#45; J^cross*J) Siciliano EQ." alt="" coords="817,733,1081,779"/>
+</map>

@@ -1,0 +1,18 @@
+<map id="timer_start_task_2" name="timer_start_task_2">
+<area shape="rect" id="node3" href="$main2_8c.html#a735ebf3d0d37c7d8187199e6565bcb5c" title="f_timer_task_2" alt="" coords="185,164,292,193"/>
+<area shape="rect" id="node5" href="$main2_8c.html#a01c18e97a4488be2912eb738b2e7f890" title="timer_function_task_2" alt="" coords="343,164,492,193"/>
+<area shape="rect" id="node7" href="$main2_8c.html#a944f7352f18ed248c1b1143f51edc391" title="periodic_task_2" alt="" coords="543,164,655,193"/>
+<area shape="rect" id="node9" href="$communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8c.html#a2d1e523ff70db11ca4096f97af5da000" title="INITIALIZATION OF SENSORS AND DEVICES." alt="" coords="704,137,795,167"/>
+<area shape="rect" id="node11" href="$ui_8c.html#a1559840369fc944a83a3666ef7959413" title="ui_update" alt="" coords="711,191,788,220"/>
+<area shape="rect" id="node13" href="$ui_8c.html#a7d5a9d9a75693709de408781d001a6a6" title="ui_imu_data" alt="" coords="859,5,949,35"/>
+<area shape="rect" id="node15" href="$ui_8c.html#af48496a4ce54378764bc4ca9eddfd498" title="ui_eff_data" alt="" coords="861,59,947,88"/>
+<area shape="rect" id="node17" href="$ui_8c.html#aefec243c5df45db0350c1abbccf20e3b" title="ui_mra_data" alt="" coords="857,112,951,141"/>
+<area shape="rect" id="node19" href="$ui_8c.html#a6577e01f0ebf9ac1677c616228a64a46" title="ui_overview_data" alt="" coords="843,216,965,245"/>
+<area shape="rect" id="node23" href="$datalogger_8c.html#a46fd1290d9ee97d5fc7171e1e0dcb0aa" title="datalogger_status" alt="" coords="1013,163,1139,192"/>
+<area shape="rect" id="node29" href="$main2_8c.html#a5f05ce725141ddfab683e059b1cd95ea" title="exit_program" alt="" coords="856,371,952,400"/>
+<area shape="rect" id="node32" href="$datalogger_8c.html#aae2ffbc6cbf8f1cfecceb42c5139530a" title="datalogger_stop" alt="" coords="1019,269,1133,299"/>
+<area shape="rect" id="node36" href="$datalogger_8c.html#a1f254ef380d595d6605c10811fd0dee6" title="datalogger_start" alt="" coords="1019,323,1133,352"/>
+<area shape="rect" id="node21" href="$main2_8c.html#a5b2b1fdd5e517470c10e84a2b2bcc5c8" title="get_time" alt="" coords="1040,216,1112,245"/>
+<area shape="rect" id="node25" href="$datalogger_8c.html#a54b06d9395b2e370a5a72beb7f9524b2" title="datalogger_lock_mutex" alt="" coords="1195,243,1349,272"/>
+<area shape="rect" id="node27" href="$datalogger_8c.html#a85453211c0c809083c36cc56b275aeeb" title="datalogger_unlock_mutex" alt="" coords="1187,296,1357,325"/>
+</map>

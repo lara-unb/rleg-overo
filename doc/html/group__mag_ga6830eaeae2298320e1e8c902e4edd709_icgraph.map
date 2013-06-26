@@ -1,0 +1,4 @@
+<map id="mag_read_reg" name="mag_read_reg">
+<area shape="rect" id="node3" href="$group__mag.html#gab42ae0d0a2a6f37cf36d856c072b7f34" title="READ ALL DATA AT ONCE (X, Y and Z)" alt="" coords="157,5,288,35"/>
+<area shape="rect" id="node5" href="$group__mag.html#ga542a31ccd07cd2c3e8e2b68cdb6d219e" title="READ DATA (X, Y or Z)" alt="" coords="168,59,277,88"/>
+</map>

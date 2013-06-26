@@ -1,0 +1,6 @@
+<map id="Robot_getP" name="Robot_getP">
+<area shape="rect" id="node3" href="$dualquaternion_8h.html#a8b1057516bdc2c0cb14127791cf356cf" title="Allocated and initializes a DualQuaternion." alt="" coords="144,32,229,61"/>
+<area shape="rect" id="node5" href="$dualquaternion_8h.html#aaa019fc9bc7de2150887a4b323cedc50" title="Allocates a Dual Quaternion." alt="" coords="279,5,353,35"/>
+<area shape="rect" id="node7" href="$quaternion_8h.html#a84783e9bd4743081f08605d38779a07e" title="Allocates a Quaternion and its values." alt="" coords="279,59,353,88"/>
+<area shape="rect" id="node9" href="$quaternion_8h.html#a2267ada2076193cc73def7d5df3281c0" title="Quaternion Library." alt="" coords="403,59,469,88"/>
+</map>

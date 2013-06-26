@@ -144,7 +144,12 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">lpf_bw</td><td>(low pass filter bandwidth in Hz) = 256, 188, 98, 42, 20, 10 or 5 </td></tr>
     <tr><td class="paramname">rate</td><td>(output data rate in Hz) &lt;= 1000 (Fint), if lpf_bw is not 256 &lt;= 8000 (Fint), if lpf_bw is 256 Real rate will be the closest superior rate possible, respcting the formula Rate = Fint/n, 1&lt;=n&lt;=255 </td></tr>
-    <tr><td class="paramname">clk_source</td><td>= 'I' Internal oscillator 'X' PLL with X Gyro reference 'Y' PLL with Y Gyro reference 'Z' Pll with Z Gyro reference Obs: It is highly recommended that the device is configured to use one of the gyros as the clock reference, due to the improved stability </td></tr>
+    <tr><td class="paramname">clk_source</td><td>=<br/>
+ 'I' Internal oscillator<br/>
+ 'X' PLL with X Gyro reference<br/>
+ 'Y' PLL with Y Gyro reference<br/>
+ 'Z' Pll with Z Gyro reference<br/>
+ Obs: It is highly recommended that the device is configured to use one of the gyros as the clock reference, due to the improved stability </td></tr>
     <tr><td class="paramname">act</td><td>(activated gyro data) = "XYZ" All axes are activated "YZ" Only Y and Z axes are activated "XZ" Only X and Z axes are activated "XY" Only X and Y axes are activated "X" Only X axis is activated "Y" Only Y axis is activated "Z" Only Z axis is activated "" Device in very low power sleep mode </td></tr>
   </table>
   </dd>
@@ -512,7 +517,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 18 2013 12:01:09 for Rleg by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jun 20 2013 13:56:53 for Rleg by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

@@ -1,0 +1,14 @@
+<map id="Cartesian_pose_controller::printPose" name="Cartesian_pose_controller::printPose">
+<area shape="rect" id="node3" href="$dualquaternion_8h.html#a8b1057516bdc2c0cb14127791cf356cf" title="Allocated and initializes a DualQuaternion." alt="" coords="227,111,312,140"/>
+<area shape="rect" id="node11" href="$dualquaternion_8h.html#a1d21b6cb665c04de4be5aca50804caf4" title="Free&#39;s an Allocated DualQuaternion." alt="" coords="235,373,304,403"/>
+<area shape="rect" id="node13" href="$quaternion_8h.html#a69ecc76f665022f81be1702c20865de4" title="Frees an Allocated Quaternion from memory." alt="" coords="500,217,561,247"/>
+<area shape="rect" id="node15" href="$dualquaternion_8h.html#a35b3966af2f77ad5a8f47126948720fb" title="DualQuaternion Rotation." alt="" coords="231,32,308,61"/>
+<area shape="rect" id="node20" href="$dualquaternion_8h.html#a80e2f2aded851388d4f18d486a0b9455" title="DualQuaternion Translation considering a translation followed by a rotation." alt="" coords="232,216,307,245"/>
+<area shape="rect" id="node5" href="$dualquaternion_8h.html#aaa019fc9bc7de2150887a4b323cedc50" title="Allocates a Dual Quaternion." alt="" coords="365,59,440,88"/>
+<area shape="rect" id="node7" href="$quaternion_8h.html#a84783e9bd4743081f08605d38779a07e" title="Allocates a Quaternion and its values." alt="" coords="493,163,568,192"/>
+<area shape="rect" id="node9" href="$quaternion_8h.html#a2267ada2076193cc73def7d5df3281c0" title="Quaternion Library." alt="" coords="616,216,683,245"/>
+<area shape="rect" id="node17" href="$quaternion_8h.html#a7220df72e5bbbdcb37aa6c10c873465b" title="Makes a copy of a Quaternion." alt="" coords="369,5,436,35"/>
+<area shape="rect" id="node22" href="$quaternion_8h.html#ac9d0d4ab98e4353ba0feca69adde42f8" title="Quaternion Conjugate." alt="" coords="361,163,444,192"/>
+<area shape="rect" id="node26" href="$quaternion_8h.html#a1cb224f6a30ff843d54647642c84e737" title="Quaternion Multiplication." alt="" coords="371,269,435,299"/>
+<area shape="rect" id="node30" href="$quaternion_8h.html#a2384fed3e10ec7a91e6d4e9deae3d8b9" title="Quaternion Multiplication by Double." alt="" coords="368,216,437,245"/>
+</map>

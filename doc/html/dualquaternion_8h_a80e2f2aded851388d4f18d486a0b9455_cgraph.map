@@ -1,0 +1,8 @@
+<map id="DQ_getT" name="DQ_getT">
+<area shape="rect" id="node3" href="$quaternion_8h.html#ac9d0d4ab98e4353ba0feca69adde42f8" title="Quaternion Conjugate." alt="" coords="129,112,212,141"/>
+<area shape="rect" id="node11" href="$quaternion_8h.html#a1cb224f6a30ff843d54647642c84e737" title="Quaternion Multiplication." alt="" coords="139,5,203,35"/>
+<area shape="rect" id="node15" href="$quaternion_8h.html#a2384fed3e10ec7a91e6d4e9deae3d8b9" title="Quaternion Multiplication by Double." alt="" coords="136,59,205,88"/>
+<area shape="rect" id="node5" href="$quaternion_8h.html#a84783e9bd4743081f08605d38779a07e" title="Allocates a Quaternion and its values." alt="" coords="261,112,336,141"/>
+<area shape="rect" id="node9" href="$quaternion_8h.html#a69ecc76f665022f81be1702c20865de4" title="Frees an Allocated Quaternion from memory." alt="" coords="268,59,329,88"/>
+<area shape="rect" id="node7" href="$quaternion_8h.html#a2267ada2076193cc73def7d5df3281c0" title="Quaternion Library." alt="" coords="384,60,451,89"/>
+</map>

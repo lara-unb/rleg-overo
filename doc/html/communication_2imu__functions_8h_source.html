@@ -152,48 +152,48 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="comment">//      MAGNETOMETER    //</span></div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="comment">//      HMC5883         //</span></div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="keywordtype">int</span> <a class="code" href="communication_2imu__functions_8h.html#ab5d0ae421cd4bb10b1b7a1eda167416b" title="WRITE TO REGISTER.">mag_write_reg</a>(<span class="keywordtype">int</span> <a class="code" href="CommunicationV0_2communication_8c.html#a7751bd45ac1064efb35adf1f19c25db8">i2c_dev</a>, uint8_t reg, uint8_t data);</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;uint8_t* <a class="code" href="communication_2imu__functions_8h.html#a6830eaeae2298320e1e8c902e4edd709" title="READ COUNT 8-BIT REGISTER IN SEQUENCE.">mag_read_reg</a>(<span class="keywordtype">int</span> <a class="code" href="CommunicationV0_2communication_8c.html#a7751bd45ac1064efb35adf1f19c25db8">i2c_dev</a>, uint8_t reg, uint8_t count);</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;<span class="keywordtype">int</span> <a class="code" href="communication_2imu__functions_8h.html#a014f908c9faa37c1ec75177a17012a01" title="INITIALIZE MAGNETOMETER.">mag_init</a>(<span class="keywordtype">int</span> <a class="code" href="CommunicationV0_2communication_8c.html#a7751bd45ac1064efb35adf1f19c25db8">i2c_dev</a>, uint8_t rate, uint8_t range, uint8_t samples_avg, uint8_t meas_mode, uint8_t op_mode);</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;<span class="comment">/* Parameters</span></div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="comment">- rate (data output rate in Hz) = 3, 15, 30, 75</span></div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<span class="comment">0:      0.75Hz</span></div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<span class="comment">1:      1.5Hz</span></div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<span class="comment">7:      7.5Hz</span></div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;<span class="comment">- samples_avg (number of sampled averaged per measurement output) = 1, 2, 4, 8</span></div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;<span class="comment">- meas_mode (measurement mode):</span></div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;<span class="comment">0:      Normal measurement configuration. The device follows normal measurement flow.</span></div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<span class="comment">        The positive and negative pins of the resistive load are left floating and high impedance</span></div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="comment">1:      Positive bias configuration for X, Y, and Z axes. In this configuration, a positive current</span></div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;<span class="comment">        is forced across the resistive load for all three axes</span></div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;<span class="comment">2:      Negative bias configuration for X, Y, and Z axes. In this configuration, a negative current</span></div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="comment">        is forced across the resistive load for all three axes</span></div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<span class="comment">- range:</span></div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="comment">        Range (Ga)      Resolution (mG/LSb)</span></div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;<span class="comment">0:      +- 0.88         0.73</span></div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;<span class="comment">1:      +- 1.3          0.92</span></div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;<span class="comment">2:      +- 1.9          1.22</span></div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;<span class="comment">3:      +- 2.5          1.52</span></div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;<span class="comment">4:      +- 4.0          2.27</span></div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;<span class="comment">5:      +- 4.7          2.56</span></div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;<span class="comment">6:      +- 5.6          3.03</span></div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;<span class="comment">7:      +- 8.1          4.35</span></div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;<span class="keywordtype">int</span> <a class="code" href="communication_2imu__functions_8h.html#ab42ae0d0a2a6f37cf36d856c072b7f34" title="READ ALL DATA AT ONCE (X, Y and Z)">mag_read_all_data</a>(<span class="keywordtype">int</span> <a class="code" href="CommunicationV0_2communication_8c.html#a7751bd45ac1064efb35adf1f19c25db8">i2c_dev</a>, <span class="keywordtype">short</span> <span class="keywordtype">int</span> *data);</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;<span class="keywordtype">short</span> <span class="keywordtype">int</span> <a class="code" href="communication_2imu__functions_8h.html#a542a31ccd07cd2c3e8e2b68cdb6d219e" title="READ DATA (X, Y or Z)">mag_read_data</a>(<span class="keywordtype">int</span> <a class="code" href="CommunicationV0_2communication_8c.html#a7751bd45ac1064efb35adf1f19c25db8">i2c_dev</a>, <span class="keywordtype">int</span> axis);</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;<span class="comment">/* </span></div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;<span class="comment">axis: &#39;X&#39; or &#39;Y&#39; or &#39;Z&#39;</span></div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__mag.html#gab5d0ae421cd4bb10b1b7a1eda167416b" title="WRITE TO REGISTER.">mag_write_reg</a>(<span class="keywordtype">int</span> <a class="code" href="CommunicationV0_2communication_8c.html#a7751bd45ac1064efb35adf1f19c25db8">i2c_dev</a>, uint8_t reg, uint8_t data);</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;uint8_t* <a class="code" href="group__mag.html#ga6830eaeae2298320e1e8c902e4edd709" title="READ COUNT 8-BIT REGISTER IN SEQUENCE.">mag_read_reg</a>(<span class="keywordtype">int</span> <a class="code" href="CommunicationV0_2communication_8c.html#a7751bd45ac1064efb35adf1f19c25db8">i2c_dev</a>, uint8_t reg, uint8_t count);</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__mag.html#ga014f908c9faa37c1ec75177a17012a01" title="INITIALIZE MAGNETOMETER.">mag_init</a>(<span class="keywordtype">int</span> <a class="code" href="CommunicationV0_2communication_8c.html#a7751bd45ac1064efb35adf1f19c25db8">i2c_dev</a>, uint8_t rate, uint8_t range, uint8_t samples_avg, uint8_t meas_mode, uint8_t op_mode);</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="comment">/* Parameters</span></div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<span class="comment">- rate (data output rate in Hz) = 3, 15, 30, 75</span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="comment">0:      0.75Hz</span></div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;<span class="comment">1:      1.5Hz</span></div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;<span class="comment">7:      7.5Hz</span></div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;<span class="comment">- samples_avg (number of sampled averaged per measurement output) = 1, 2, 4, 8</span></div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;<span class="comment">- meas_mode (measurement mode):</span></div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;<span class="comment">0:      Normal measurement configuration. The device follows normal measurement flow.</span></div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;<span class="comment">        The positive and negative pins of the resistive load are left floating and high impedance</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;<span class="comment">1:      Positive bias configuration for X, Y, and Z axes. In this configuration, a positive current</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;<span class="comment">        is forced across the resistive load for all three axes</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;<span class="comment">2:      Negative bias configuration for X, Y, and Z axes. In this configuration, a negative current</span></div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;<span class="comment">        is forced across the resistive load for all three axes</span></div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="comment">- range:</span></div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;<span class="comment">        Range (Ga)      Resolution (mG/LSb)</span></div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;<span class="comment">0:      +- 0.88         0.73</span></div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;<span class="comment">1:      +- 1.3          0.92</span></div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;<span class="comment">2:      +- 1.9          1.22</span></div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;<span class="comment">3:      +- 2.5          1.52</span></div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;<span class="comment">4:      +- 4.0          2.27</span></div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;<span class="comment">5:      +- 4.7          2.56</span></div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;<span class="comment">6:      +- 5.6          3.03</span></div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;<span class="comment">7:      +- 8.1          4.35</span></div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__mag.html#gab42ae0d0a2a6f37cf36d856c072b7f34" title="READ ALL DATA AT ONCE (X, Y and Z)">mag_read_all_data</a>(<span class="keywordtype">int</span> <a class="code" href="CommunicationV0_2communication_8c.html#a7751bd45ac1064efb35adf1f19c25db8">i2c_dev</a>, <span class="keywordtype">short</span> <span class="keywordtype">int</span> *data);</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;<span class="keywordtype">short</span> <span class="keywordtype">int</span> <a class="code" href="group__mag.html#ga542a31ccd07cd2c3e8e2b68cdb6d219e" title="READ DATA (X, Y or Z)">mag_read_data</a>(<span class="keywordtype">int</span> <a class="code" href="CommunicationV0_2communication_8c.html#a7751bd45ac1064efb35adf1f19c25db8">i2c_dev</a>, <span class="keywordtype">int</span> axis);</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;<span class="comment">/* </span></div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;<span class="comment">axis: &#39;X&#39; or &#39;Y&#39; or &#39;Z&#39;</span></div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 18 2013 12:01:09 for Rleg by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jun 20 2013 13:56:52 for Rleg by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

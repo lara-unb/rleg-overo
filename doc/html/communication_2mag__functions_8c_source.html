@@ -92,7 +92,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="communication_2mag__functions_8c.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include&quot;<a class="code" href="communication_2imu__functions_8h.html">imu_functions.h</a>&quot;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="code" href="CommunicationV0_2imu__functions_8h.html#ab5d0ae421cd4bb10b1b7a1eda167416b">   10</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="communication_2imu__functions_8h.html#ab5d0ae421cd4bb10b1b7a1eda167416b" title="WRITE TO REGISTER.">mag_write_reg</a>(<span class="keywordtype">int</span> <a class="code" href="CommunicationV0_2communication_8c.html#a7751bd45ac1064efb35adf1f19c25db8">i2c_dev</a>, uint8_t reg, uint8_t data)</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="code" href="group__mag.html#gab5d0ae421cd4bb10b1b7a1eda167416b">   10</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__mag.html#gab5d0ae421cd4bb10b1b7a1eda167416b" title="WRITE TO REGISTER.">mag_write_reg</a>(<span class="keywordtype">int</span> <a class="code" href="CommunicationV0_2communication_8c.html#a7751bd45ac1064efb35adf1f19c25db8">i2c_dev</a>, uint8_t reg, uint8_t data)</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  uint8_t reg_data[2];</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
@@ -113,7 +113,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keywordflow">return</span> 1;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="code" href="CommunicationV0_2imu__functions_8h.html#a6830eaeae2298320e1e8c902e4edd709">   31</a></span>&#160;uint8_t* <a class="code" href="communication_2imu__functions_8h.html#a6830eaeae2298320e1e8c902e4edd709" title="READ COUNT 8-BIT REGISTER IN SEQUENCE.">mag_read_reg</a>(<span class="keywordtype">int</span> <a class="code" href="CommunicationV0_2communication_8c.html#a7751bd45ac1064efb35adf1f19c25db8">i2c_dev</a>, uint8_t reg, uint8_t count)</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="code" href="group__mag.html#ga6830eaeae2298320e1e8c902e4edd709">   31</a></span>&#160;uint8_t* <a class="code" href="group__mag.html#ga6830eaeae2298320e1e8c902e4edd709" title="READ COUNT 8-BIT REGISTER IN SEQUENCE.">mag_read_reg</a>(<span class="keywordtype">int</span> <a class="code" href="CommunicationV0_2communication_8c.html#a7751bd45ac1064efb35adf1f19c25db8">i2c_dev</a>, uint8_t reg, uint8_t count)</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  uint8_t data[13];</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keywordtype">int</span> i;</div>
@@ -135,7 +135,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keywordflow">return</span> data;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno"><a class="code" href="CommunicationV0_2imu__functions_8h.html#a014f908c9faa37c1ec75177a17012a01">   53</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="communication_2imu__functions_8h.html#a014f908c9faa37c1ec75177a17012a01" title="INITIALIZE MAGNETOMETER.">mag_init</a>(<span class="keywordtype">int</span> <a class="code" href="CommunicationV0_2communication_8c.html#a7751bd45ac1064efb35adf1f19c25db8">i2c_dev</a>, uint8_t rate, uint8_t range, uint8_t samples_avg, uint8_t meas_mode, uint8_t op_mode)</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="code" href="group__mag.html#ga014f908c9faa37c1ec75177a17012a01">   53</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__mag.html#ga014f908c9faa37c1ec75177a17012a01" title="INITIALIZE MAGNETOMETER.">mag_init</a>(<span class="keywordtype">int</span> <a class="code" href="CommunicationV0_2communication_8c.html#a7751bd45ac1064efb35adf1f19c25db8">i2c_dev</a>, uint8_t rate, uint8_t range, uint8_t samples_avg, uint8_t meas_mode, uint8_t op_mode)</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{ </div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  uint8_t data=0;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
@@ -185,17 +185,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  </div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  data+=meas_mode;</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  </div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="communication_2imu__functions_8h.html#ab5d0ae421cd4bb10b1b7a1eda167416b" title="WRITE TO REGISTER.">mag_write_reg</a>(i2c_dev, <a class="code" href="communication_2imu__regs_8h.html#a4c80cd6ce866f16a3d999ee2c5635ec9">MAG_CONFIG_A</a>, data)&lt;0){</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="group__mag.html#gab5d0ae421cd4bb10b1b7a1eda167416b" title="WRITE TO REGISTER.">mag_write_reg</a>(i2c_dev, <a class="code" href="communication_2imu__regs_8h.html#a4c80cd6ce866f16a3d999ee2c5635ec9">MAG_CONFIG_A</a>, data)&lt;0){</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    perror(<span class="stringliteral">&quot;Write in Configuration register A unsuccesful&quot;</span>);</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">return</span> -1;</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  }</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  </div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="communication_2imu__functions_8h.html#ab5d0ae421cd4bb10b1b7a1eda167416b" title="WRITE TO REGISTER.">mag_write_reg</a>(i2c_dev, <a class="code" href="communication_2imu__regs_8h.html#a094173f77219df894d97eed44405d942">MAG_CONFIG_B</a>, range&lt;&lt;5)&lt;0){</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="group__mag.html#gab5d0ae421cd4bb10b1b7a1eda167416b" title="WRITE TO REGISTER.">mag_write_reg</a>(i2c_dev, <a class="code" href="communication_2imu__regs_8h.html#a094173f77219df894d97eed44405d942">MAG_CONFIG_B</a>, range&lt;&lt;5)&lt;0){</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    perror(<span class="stringliteral">&quot;Write in configuration register B unsuccesful&quot;</span>);</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordflow">return</span> -1;</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  }</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  </div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="communication_2imu__functions_8h.html#ab5d0ae421cd4bb10b1b7a1eda167416b" title="WRITE TO REGISTER.">mag_write_reg</a>(i2c_dev, <a class="code" href="communication_2imu__regs_8h.html#a0173afba6efc0e164495bf506a9758d2">MAG_MODE</a>, op_mode)&lt;0){</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="group__mag.html#gab5d0ae421cd4bb10b1b7a1eda167416b" title="WRITE TO REGISTER.">mag_write_reg</a>(i2c_dev, <a class="code" href="communication_2imu__regs_8h.html#a0173afba6efc0e164495bf506a9758d2">MAG_MODE</a>, op_mode)&lt;0){</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    perror(<span class="stringliteral">&quot;Write in mode register unsuccesful&quot;</span>);</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordflow">return</span> -1;</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  }</div>
@@ -203,7 +203,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="keywordflow">return</span> 1;</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;}</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
-<div class="line"><a name="l00121"></a><span class="lineno"><a class="code" href="CommunicationV0_2imu__functions_8h.html#a8f2fd896caf1216ba82e535e6251692f">  121</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="communication_2imu__functions_8h.html#ab42ae0d0a2a6f37cf36d856c072b7f34" title="READ ALL DATA AT ONCE (X, Y and Z)">mag_read_all_data</a>(<span class="keywordtype">int</span> <a class="code" href="CommunicationV0_2communication_8c.html#a7751bd45ac1064efb35adf1f19c25db8">i2c_dev</a>, <span class="keywordtype">short</span> <span class="keywordtype">int</span> *data)</div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="code" href="group__mag.html#gab42ae0d0a2a6f37cf36d856c072b7f34">  121</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__mag.html#gab42ae0d0a2a6f37cf36d856c072b7f34" title="READ ALL DATA AT ONCE (X, Y and Z)">mag_read_all_data</a>(<span class="keywordtype">int</span> <a class="code" href="CommunicationV0_2communication_8c.html#a7751bd45ac1064efb35adf1f19c25db8">i2c_dev</a>, <span class="keywordtype">short</span> <span class="keywordtype">int</span> *data)</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;{</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  uint8_t i, j;</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  uint8_t *data8;</div>
@@ -213,7 +213,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordtype">short</span> <span class="keywordtype">int</span> sgnd[3];</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  } result;</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  <span class="comment">//result=(union result*)malloc(3*sizeof(union result));</span></div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  <span class="keywordflow">if</span>( (data8=<a class="code" href="communication_2imu__functions_8h.html#a6830eaeae2298320e1e8c902e4edd709" title="READ COUNT 8-BIT REGISTER IN SEQUENCE.">mag_read_reg</a>(i2c_dev,<a class="code" href="communication_2imu__regs_8h.html#a4f883328e7ae117996e334145ddd0032">MAG_DATAX1</a>,6))==NULL)</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  <span class="keywordflow">if</span>( (data8=<a class="code" href="group__mag.html#ga6830eaeae2298320e1e8c902e4edd709" title="READ COUNT 8-BIT REGISTER IN SEQUENCE.">mag_read_reg</a>(i2c_dev,<a class="code" href="communication_2imu__regs_8h.html#a4f883328e7ae117996e334145ddd0032">MAG_DATAX1</a>,6))==NULL)</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  {</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="comment">//perror(&quot;Read accelerometer register failed&quot;);</span></div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="calibration_2calibration_8h.html#a6d58f9ac447476b4e084d7ca383f5183">FAILURE</a>;</div>
@@ -230,7 +230,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="calibration_2calibration_8h.html#aa90cac659d18e8ef6294c7ae337f6b58">SUCCESS</a>;  </div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;}</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
-<div class="line"><a name="l00148"></a><span class="lineno"><a class="code" href="CommunicationV0_2imu__functions_8h.html#a542a31ccd07cd2c3e8e2b68cdb6d219e">  148</a></span>&#160;<span class="keywordtype">short</span> <span class="keywordtype">int</span> <a class="code" href="communication_2imu__functions_8h.html#a542a31ccd07cd2c3e8e2b68cdb6d219e" title="READ DATA (X, Y or Z)">mag_read_data</a>(<span class="keywordtype">int</span> <a class="code" href="CommunicationV0_2communication_8c.html#a7751bd45ac1064efb35adf1f19c25db8">i2c_dev</a>, <span class="keywordtype">int</span> axis)</div>
+<div class="line"><a name="l00148"></a><span class="lineno"><a class="code" href="group__mag.html#ga542a31ccd07cd2c3e8e2b68cdb6d219e">  148</a></span>&#160;<span class="keywordtype">short</span> <span class="keywordtype">int</span> <a class="code" href="group__mag.html#ga542a31ccd07cd2c3e8e2b68cdb6d219e" title="READ DATA (X, Y or Z)">mag_read_data</a>(<span class="keywordtype">int</span> <a class="code" href="CommunicationV0_2communication_8c.html#a7751bd45ac1064efb35adf1f19c25db8">i2c_dev</a>, <span class="keywordtype">int</span> axis)</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;{</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;  uint8_t *data;</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  <span class="keyword">union </span>result</div>
@@ -241,13 +241,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  <span class="keywordflow">switch</span>(axis){</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordflow">case</span> <span class="charliteral">&#39;X&#39;</span>:</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;      data=<a class="code" href="communication_2imu__functions_8h.html#a6830eaeae2298320e1e8c902e4edd709" title="READ COUNT 8-BIT REGISTER IN SEQUENCE.">mag_read_reg</a>(i2c_dev,<a class="code" href="communication_2imu__regs_8h.html#a4f883328e7ae117996e334145ddd0032">MAG_DATAX1</a>,2);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;      data=<a class="code" href="group__mag.html#ga6830eaeae2298320e1e8c902e4edd709" title="READ COUNT 8-BIT REGISTER IN SEQUENCE.">mag_read_reg</a>(i2c_dev,<a class="code" href="communication_2imu__regs_8h.html#a4f883328e7ae117996e334145ddd0032">MAG_DATAX1</a>,2);</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;      <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordflow">case</span> <span class="charliteral">&#39;Y&#39;</span>:</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;      data=<a class="code" href="communication_2imu__functions_8h.html#a6830eaeae2298320e1e8c902e4edd709" title="READ COUNT 8-BIT REGISTER IN SEQUENCE.">mag_read_reg</a>(i2c_dev,<a class="code" href="communication_2imu__regs_8h.html#ae218906702b1e40c2b6970f97dd0cfe4">MAG_DATAY1</a>,2);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;      data=<a class="code" href="group__mag.html#ga6830eaeae2298320e1e8c902e4edd709" title="READ COUNT 8-BIT REGISTER IN SEQUENCE.">mag_read_reg</a>(i2c_dev,<a class="code" href="communication_2imu__regs_8h.html#ae218906702b1e40c2b6970f97dd0cfe4">MAG_DATAY1</a>,2);</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;      <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keywordflow">case</span> <span class="charliteral">&#39;Z&#39;</span>:</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;      data=<a class="code" href="communication_2imu__functions_8h.html#a6830eaeae2298320e1e8c902e4edd709" title="READ COUNT 8-BIT REGISTER IN SEQUENCE.">mag_read_reg</a>(i2c_dev,<a class="code" href="communication_2imu__regs_8h.html#a81d7d9236ec69a1a229e4fa7c6299fde">MAG_DATAZ1</a>,2);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;      data=<a class="code" href="group__mag.html#ga6830eaeae2298320e1e8c902e4edd709" title="READ COUNT 8-BIT REGISTER IN SEQUENCE.">mag_read_reg</a>(i2c_dev,<a class="code" href="communication_2imu__regs_8h.html#a81d7d9236ec69a1a229e4fa7c6299fde">MAG_DATAZ1</a>,2);</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;      <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordflow">default</span>:</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;      <span class="comment">//perror(&quot;Wrong argument for axis in mag_read_data&quot;);</span></div>
@@ -260,7 +260,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 18 2013 12:01:09 for Rleg by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jun 20 2013 13:56:52 for Rleg by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

@@ -1,0 +1,9 @@
+<map id="adc_read" name="adc_read">
+<area shape="rect" id="node3" href="$communication_2communication_8h.html#a5f0316a5f70c7e369541e996802603b4" title="READ ALL DATA FROM SENSORS AND ADC." alt="" coords="128,32,227,61"/>
+<area shape="rect" id="node5" href="$main2_8h.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="307,5,357,35"/>
+<area shape="rect" id="node7" href="$main2_8h.html#a26855b7739897854265d51aa61329390" title="periodic_task_1" alt="" coords="276,59,388,88"/>
+<area shape="rect" id="node9" href="$main2_8h.html#a90885bae1b9535b16e014fb928e98e37" title="timer_function_task_1" alt="" coords="439,59,588,88"/>
+<area shape="rect" id="node11" href="$main2_8c.html#a5ce2b6a7dd4d00c90fe18098091044aa" title="f_timer_task_1" alt="" coords="639,59,745,88"/>
+<area shape="rect" id="node13" href="$main2_8h.html#a0e411070b7f487a8ab6a60b180f50e12" title="timer_start_task_1" alt="" coords="795,59,925,88"/>
+<area shape="rect" id="node15" href="$main2_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="973,59,1024,88"/>
+</map>

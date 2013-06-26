@@ -1,0 +1,22 @@
+<map id="PGMATRIX_ALLOC" name="PGMATRIX_ALLOC">
+<area shape="rect" id="node3" href="$schunk__high_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1196,348,1247,378"/>
+<area shape="rect" id="node5" href="$gmatrix__plus_8c.html#a22f3571af4a9f493e44fcd3184a2f3f0" title="PGMATRIX_CREATE_DIAG\l_FROM_ARRAY" alt="" coords="208,386,403,433"/>
+<area shape="rect" id="node10" href="$gmatrix__plus_8c.html#aa5949db3f7d590bbe912a05b5a9055ed" title="PGMATRIX_CREATE_FROM\l_ARRAY" alt="" coords="205,197,405,244"/>
+<area shape="rect" id="node13" href="$gmatrix__plus_8c.html#a6cacc3f1b48d458d5cfc9e03159e3d81" title="PGMATRIX_CREATE_ZEROES" alt="" coords="197,547,413,576"/>
+<area shape="rect" id="node26" href="$gmatrix__plus_8c.html#a7211c5dcc80f641d83bf771de5b226fa" title="(In &#45; J^cross*J) Siciliano EQ." alt="" coords="1089,966,1353,1013"/>
+<area shape="rect" id="node33" href="$gmatrix__plus_8c.html#a73bceba2ac1f3a5589628d0f2e4081fa" title="J = J^T(J.J^T + k^2.I)−1 Siciliano EQ." alt="" coords="768,725,1040,772"/>
+<area shape="rect" id="node44" href="$gmatrix__plus_8c.html#a4785be0fc969b516ff9c22b6736738ab" title="J^cross = J^T(J*J^T)^&#45;1 Siciliano EQ." alt="" coords="772,1000,1036,1030"/>
+<area shape="rect" id="node54" href="$gmatrix__plus_8c.html#a9a93e1e198422eb488592340f48d59d6" title="PGMATRIX_PSEUDOINVERSE_PLUS" alt="" coords="461,626,720,655"/>
+<area shape="rect" id="node62" href="$robot_8c.html#ab6dd42296709cf38d3468af7afd29563" title="Returns the (Analytical) DualQuaternion Jacobian." alt="" coords="235,267,376,296"/>
+<area shape="rect" id="node65" href="$robot_8c.html#ae6858f6a120e4ce01df49d39cef2c164" title="Returns the (Orientation) DualQuaternion Jacobian for the P angle." alt="" coords="497,146,684,175"/>
+<area shape="rect" id="node68" href="$robot_8c.html#a61464c237c56f3db3f79b0350df80ddb" title="Returns the (Geometrical) DualQuaternion Jacobian." alt="" coords="832,400,976,430"/>
+<area shape="rect" id="node7" href="$classCartesian__controller.html#a71055bb1cbf01ced9e64bb1d184b68fe" title="Cartesian_controller\l::Cartesian_controller" alt="" coords="517,401,664,448"/>
+<area shape="rect" id="node16" href="$gmatrix__plus_8c.html#a146d9062e4325cc3b97990ae51b96d95" title="PGMATRIX_SUBTRACT_COPY_FREE" alt="" coords="775,795,1033,824"/>
+<area shape="rect" id="node29" href="$gmatrix__plus_8c.html#aa1123306aa55d942955e09156db757a3" title="PGMATRIX_ADD_COPY_FREE" alt="" coords="483,572,699,602"/>
+<area shape="rect" id="node39" href="$gmatrix__plus_8c.html#a17b482a0aaa68d1f4c1c30a1a72dacbb" title="PGMATRIX_MULTIPLY_COPY_FREE" alt="" coords="465,847,716,876"/>
+<area shape="rect" id="node49" href="$gmatrix__plus_8c.html#a371a0bfffdb84cf1596ca60bbf7fce93" title="PGMATRIX_MULTIPLY_CONST\l_COPY_FREE" alt="" coords="795,504,1013,550"/>
+<area shape="rect" id="node18" href="$classCartesian__pose__controller.html#ab937d166862f2756eb3d08f37a0a090d" title="Cartesian_pose_controller\l::control" alt="" coords="1135,702,1308,749"/>
+<area shape="rect" id="node22" href="$classCartesian__velocity__controller.html#a249bd167cd995e16906731172d1bc516" title="Cartesian_velocity\l_controller::control" alt="" coords="1156,588,1287,634"/>
+<area shape="rect" id="node20" href="$cartesian__pose__controller_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1403,711,1453,740"/>
+<area shape="rect" id="node24" href="$cartesian__velocity__controller_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1403,596,1453,626"/>
+</map>

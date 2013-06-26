@@ -1,0 +1,11 @@
+<map id="main2.c" name="main2.c">
+<area shape="rect" id="node23" href="$communication_2communication_8h.html" title="communication/communication.h" alt="" coords="632,160,845,189"/>
+<area shape="rect" id="node69" href="$datalogger_8h.html" title="datalogger.h" alt="" coords="1163,83,1256,112"/>
+<area shape="rect" id="node71" href="$ui_8h.html" title="ui.h" alt="" coords="1280,83,1323,112"/>
+<area shape="rect" id="node73" href="$main2_8h.html" title="main2.h" alt="" coords="1347,83,1413,112"/>
+<area shape="rect" id="node75" href="$calibration_2calibration_8h.html" title="calibration/calibration.h" alt="" coords="459,83,613,112"/>
+<area shape="rect" id="node25" href="$communication_2imu__functions_8h.html" title="imu_functions.h" alt="" coords="567,237,681,267"/>
+<area shape="rect" id="node45" href="$communication_2imu__regs_8h.html" title="imu_regs.h" alt="" coords="979,315,1064,344"/>
+<area shape="rect" id="node47" href="$communication_2spi__functions_8h.html" title="spi_functions.h" alt="" coords="800,237,909,267"/>
+<area shape="rect" id="node61" href="$communication_2gpio__functions_8h.html" title="gpio_functions.h" alt="" coords="176,237,293,267"/>
+</map>

@@ -1,0 +1,20 @@
+<map id="f_timer_task_1" name="f_timer_task_1">
+<area shape="rect" id="node3" href="$main2_8c.html#a90885bae1b9535b16e014fb928e98e37" title="timer_function_task_1" alt="" coords="164,139,313,168"/>
+<area shape="rect" id="node5" href="$main2_8c.html#a26855b7739897854265d51aa61329390" title="periodic_task_1" alt="" coords="364,139,476,168"/>
+<area shape="rect" id="node7" href="$communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8c.html#a5f0316a5f70c7e369541e996802603b4" title="READ ALL DATA FROM SENSORS AND ADC." alt="" coords="541,5,640,35"/>
+<area shape="rect" id="node9" href="$communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8c.html#a1d5f01d0124cff7030b5c4951b4bbefa" title="Applies the control signal to the actuator." alt="" coords="559,59,623,88"/>
+<area shape="rect" id="node11" href="$datalogger_8c.html#a46fd1290d9ee97d5fc7171e1e0dcb0aa" title="datalogger_status" alt="" coords="528,112,653,141"/>
+<area shape="rect" id="node17" href="$datalogger_8c.html#afb69d166f8d53042825174cee225ea49" title="datalogger_set_Ts" alt="" coords="527,165,655,195"/>
+<area shape="rect" id="node37" href="$main2_8c.html#a97a188c3a74115770124cf0bf0c1e407" title="reset_timer" alt="" coords="548,272,633,301"/>
+<area shape="rect" id="node39" href="$datalogger_8c.html#ad89a56e2f057ace8c28d78eb67703e7d" title="datalogger_update" alt="" coords="527,219,655,248"/>
+<area shape="rect" id="node13" href="$datalogger_8c.html#a54b06d9395b2e370a5a72beb7f9524b2" title="datalogger_lock_mutex" alt="" coords="719,165,873,195"/>
+<area shape="rect" id="node15" href="$datalogger_8c.html#a85453211c0c809083c36cc56b275aeeb" title="datalogger_unlock_mutex" alt="" coords="711,112,881,141"/>
+<area shape="rect" id="node21" href="$gdatalogger_8c.html#a32674e7c2afa8b78e99a0070cf4bcaf9" title="gDataLogger_InsertVariable" alt="" coords="705,219,887,248"/>
+<area shape="rect" id="node23" href="$gdatalogger_8c.html#a05dc8ce832b941280d7de26057992640" title="gDataLogger_MatfileUpdate" alt="" coords="943,185,1127,215"/>
+<area shape="rect" id="node33" href="$gqueue_8c.html#a7324fa957e7713c05cab4eb7993dc2ee" title="gQUEUE_RequestWriteIndex" alt="" coords="937,252,1132,281"/>
+<area shape="rect" id="node25" href="$gmatlabdatafile_8c.html#a3ecf28836f545707551fe8b8005c8954" title="gMATLABDataFile_SaveVector" alt="" coords="1196,119,1401,148"/>
+<area shape="rect" id="node27" href="$gqueue_8c.html#a7138af0e73adef329c891210ba747a2e" title="gQUEUE_GetNumberOfUnreadData" alt="" coords="1181,172,1416,201"/>
+<area shape="rect" id="node29" href="$gqueue_8c.html#ab5ba087de92285fb4f9ed8c46440ac6f" title="gQUEUE_RequestReadIndex" alt="" coords="1201,225,1396,255"/>
+<area shape="rect" id="node31" href="$gqueue_8c.html#abab4c6aeb3d57e43aa16285fe4f59f66" title="gQUEUE_UnwrapReadIndex" alt="" coords="1464,225,1656,255"/>
+<area shape="rect" id="node35" href="$gqueue_8c.html#a070de567ba00fb02d6c480840c15d31d" title="gQUEUE_UnwrapWriteIndex" alt="" coords="1203,279,1395,308"/>
+</map>

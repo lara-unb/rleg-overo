@@ -1,0 +1,16 @@
+<map id="communication/imu_regs.h" name="communication/imu_regs.h">
+<area shape="rect" id="node3" href="$communication_2imu__functions_8h.html" title="communication/imu_functions.h" alt="" coords="463,83,668,112"/>
+<area shape="rect" id="node7" href="$communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8h.html" title="communication/communication\l (Cópia em conflito de\l Caio Gustavo Mesquita Angelo\l 2013&#45;05&#45;17).h" alt="" coords="5,161,211,242"/>
+<area shape="rect" id="node9" href="$communication_2communication_8h.html" title="communication/communication.h" alt="" coords="925,187,1139,216"/>
+<area shape="rect" id="node5" href="$communication_2acc__functions_8c.html" title="communication/acc_functions.c" alt="" coords="235,187,440,216"/>
+<area shape="rect" id="node28" href="$communication_2gyr__functions_8c.html" title="communication/gyr_functions.c" alt="" coords="464,187,667,216"/>
+<area shape="rect" id="node30" href="$communication_2mag__functions_8c.html" title="communication/mag_functions.c" alt="" coords="691,187,901,216"/>
+<area shape="rect" id="node11" href="$calibration_2calibration_8h.html" title="calibration/calibration.h" alt="" coords="585,317,740,347"/>
+<area shape="rect" id="node15" href="$main2_8c.html" title="main2.c" alt="" coords="744,421,811,451"/>
+<area shape="rect" id="node17" href="$calibration_8c.html" title="calibration.c" alt="" coords="815,317,905,347"/>
+<area shape="rect" id="node19" href="$communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8c.html" title="communication/communication\l (Cópia em conflito de\l Caio Gustavo Mesquita Angelo\l 2013&#45;05&#45;17).c" alt="" coords="929,291,1135,373"/>
+<area shape="rect" id="node21" href="$communication_2communication_8c.html" title="communication/communication.c" alt="" coords="1159,317,1372,347"/>
+<area shape="rect" id="node23" href="$datalogger_8c.html" title="datalogger.c" alt="" coords="1396,317,1489,347"/>
+<area shape="rect" id="node26" href="$ui_8c.html" title="ui.c" alt="" coords="1513,317,1556,347"/>
+<area shape="rect" id="node13" href="$calibration_2calibration_8c.html" title="calibration/calibration.c" alt="" coords="565,421,720,451"/>
+</map>

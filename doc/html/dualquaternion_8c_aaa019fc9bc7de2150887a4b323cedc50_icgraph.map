@@ -1,0 +1,17 @@
+<map id="DQ_alloc" name="DQ_alloc">
+<area shape="rect" id="node3" href="$dualquaternion_8c.html#a8b1057516bdc2c0cb14127791cf356cf" title="Allocated and initializes a DualQuaternion." alt="" coords="177,69,263,99"/>
+<area shape="rect" id="node35" href="$dualquaternion_8c.html#a6a31e7cb25e1ad1ea6e55ffc22cb4657" title="Allocated and initializes a DualQuaternion." alt="" coords="131,123,309,152"/>
+<area shape="rect" id="node37" href="$dualquaternion_8c.html#a6618a3e5a7446724565f92271068a985" title="DualQuaternion Multiplication." alt="" coords="183,176,257,205"/>
+<area shape="rect" id="node42" href="$link_8c.html#a214ddb7cd91bd6b6b3a9ee37d1ec5a92" title="DualQuaternion Link Frame Transformation." alt="" coords="176,229,264,259"/>
+<area shape="rect" id="node5" href="$classCartesian__pose__controller.html#ab55ab40074c82ba8cc010fe68fc76d5b" title="Cartesian_pose_controller\l::printPose" alt="" coords="499,5,672,51"/>
+<area shape="rect" id="node11" href="$robot_8c.html#a57cc252fbb9e4c8be955b6af755b0c2c" title="Finds the DualQuaternion that represents the End Effector&#39;s pose using the Foward Kinematics DH Model..." alt="" coords="359,224,449,253"/>
+<area shape="rect" id="node16" href="$robot_8c.html#ab6dd42296709cf38d3468af7afd29563" title="Returns the (Analytical) DualQuaternion Jacobian." alt="" coords="515,121,656,151"/>
+<area shape="rect" id="node22" href="$robot_8c.html#a61464c237c56f3db3f79b0350df80ddb" title="Returns the (Geometrical) DualQuaternion Jacobian." alt="" coords="513,327,657,356"/>
+<area shape="rect" id="node30" href="$robot_8c.html#a4b3a6e6509133ce5381e387f9e7fea99" title="Gets a usefull term in the Jacobian Calculation, called P in Bruno Adorno&#39;s work." alt="" coords="359,69,449,99"/>
+<area shape="rect" id="node7" href="$classCartesian__pose__controller.html#ab937d166862f2756eb3d08f37a0a090d" title="Cartesian_pose_controller\l::control" alt="" coords="727,113,900,159"/>
+<area shape="rect" id="node9" href="$cartesian__pose__controller_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="955,121,1005,151"/>
+<area shape="rect" id="node14" href="$schunk__high_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="955,275,1005,304"/>
+<area shape="rect" id="node19" href="$robot_8c.html#ae6858f6a120e4ce01df49d39cef2c164" title="Returns the (Orientation) DualQuaternion Jacobian for the P angle." alt="" coords="720,223,907,252"/>
+<area shape="rect" id="node24" href="$classCartesian__velocity__controller.html#a249bd167cd995e16906731172d1bc516" title="Cartesian_velocity\l_controller::control" alt="" coords="748,377,879,423"/>
+<area shape="rect" id="node26" href="$cartesian__velocity__controller_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="955,385,1005,415"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="gDataLogger_IPCUpdate" name="gDataLogger_IPCUpdate">
+<area shape="rect" id="node3" href="$gqueue_8c.html#a7138af0e73adef329c891210ba747a2e" title="gQUEUE_GetNumberOfUnreadData" alt="" coords="221,5,456,35"/>
+<area shape="rect" id="node5" href="$gqueue_8c.html#ab5ba087de92285fb4f9ed8c46440ac6f" title="gQUEUE_RequestReadIndex" alt="" coords="241,59,436,88"/>
+<area shape="rect" id="node7" href="$gqueue_8c.html#abab4c6aeb3d57e43aa16285fe4f59f66" title="gQUEUE_UnwrapReadIndex" alt="" coords="504,59,696,88"/>
+</map>

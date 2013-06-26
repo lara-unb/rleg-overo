@@ -1,0 +1,7 @@
+<map id="devices_init" name="devices_init">
+<area shape="rect" id="node3" href="$group__acc.html#gae8f9cc6e0d15e61039d846305f86f073" title="Rev 0 &#45; 11/11/2012 RLEG project &#45; 2012." alt="" coords="147,5,213,35"/>
+<area shape="rect" id="node5" href="$communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8c.html#a1d5f01d0124cff7030b5c4951b4bbefa" title="Applies the control signal to the actuator." alt="" coords="148,59,212,88"/>
+<area shape="rect" id="node7" href="$group__gyr.html#ga6d02be352b4491a236c9695a6a24d174" title="INITIALIZE GYROMETER." alt="" coords="148,112,212,141"/>
+<area shape="rect" id="node9" href="$group__mag.html#ga014f908c9faa37c1ec75177a17012a01" title="INITIALIZE MAGNETOMETER." alt="" coords="145,165,215,195"/>
+<area shape="rect" id="node11" href="$communication_2spi__functions_8c.html#a70764aca888e93b0329e7a62c9312704" title="spi_init" alt="" coords="149,219,211,248"/>
+</map>

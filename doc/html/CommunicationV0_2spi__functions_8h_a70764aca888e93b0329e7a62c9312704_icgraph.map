@@ -1,0 +1,9 @@
+<map id="spi_init" name="spi_init">
+<area shape="rect" id="node3" href="$communication_2communication_8h.html#a2d1e523ff70db11ca4096f97af5da000" title="INITIALIZATION OF SENSORS AND DEVICES." alt="" coords="117,32,208,61"/>
+<area shape="rect" id="node5" href="$main2_8h.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="288,5,339,35"/>
+<area shape="rect" id="node7" href="$main2_8h.html#a944f7352f18ed248c1b1143f51edc391" title="periodic_task_2" alt="" coords="257,59,369,88"/>
+<area shape="rect" id="node9" href="$main2_8h.html#a01c18e97a4488be2912eb738b2e7f890" title="timer_function_task_2" alt="" coords="420,59,569,88"/>
+<area shape="rect" id="node11" href="$main2_8c.html#a735ebf3d0d37c7d8187199e6565bcb5c" title="f_timer_task_2" alt="" coords="620,59,727,88"/>
+<area shape="rect" id="node13" href="$main2_8h.html#ae59c93969d017f18e3e38b2f9f7888ca" title="timer_start_task_2" alt="" coords="776,59,907,88"/>
+<area shape="rect" id="node15" href="$main2_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="955,59,1005,88"/>
+</map>
