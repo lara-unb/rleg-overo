@@ -61,7 +61,7 @@ typedef struct imu_param{
  */
 typedef struct spi_param{
     uint8_t mode;
-    uint32_t speed;
+    uint32_t speed; 
     uint8_t cs;
     int spi_dev;
 }SPI_PARAM_STRUCT;

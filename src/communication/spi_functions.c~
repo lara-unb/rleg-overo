@@ -174,7 +174,7 @@ int adc_read(int spi_dev, uint8_t ch, uint8_t sgl, short int *data)
 	  int8_t rxs[ARRAY_SIZE(tx)];
 	  uint8_t rx[ARRAY_SIZE(tx)];
 	}rxunion;
-	rxunion.rx={0, };
+	//rxunion.rx={0, };
 	struct spi_ioc_transfer tr = {
 		.tx_buf = (unsigned long)tx,
 		.rx_buf = (unsigned long)rxunion.rx,

@@ -1,6 +1,7 @@
-/* Modified from SPI testing utility (using spidev driver)
+/**
+ * Modified from SPI testing utility (using spidev driver)
  * Linux/Documentation/spi/spidev_test.c
-*/
+ */
 
 #include "spi_functions.h"
 
@@ -103,6 +104,9 @@ int spi_init(uint8_t mode, uint32_t speed, uint8_t cs/*int argc, char *argv[]*/)
 	char *device;
 
 	//parse_opts(argc, argv);
+	/*
+	 * chose chipselect:
+	 */
 	switch(cs){
 	  case 0:
 	    device = "/dev/spidev1.0";
@@ -220,9 +224,3 @@ int dac_write(int spi_dev, uint8_t ch, uint8_t _shdn, unsigned short int data)
 //printf("\nValor retornado pelo conversor AD: %d\n\n",rx[2]+((rx[1]&0x0F)<<8));
 	return 1;
 }
-
-
-
-
-
-
