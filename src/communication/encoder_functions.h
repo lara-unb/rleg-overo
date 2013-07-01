@@ -36,11 +36,13 @@
 /* Responses */
 #define ENCODER_WAIT_RESP     0xA5
 
+#define INT_MAX 5
+
 /**
  * @groupdef enc Function of Encoder AMT203
  */
 
-/**
+/*
  * @brief INITIALIZE ENCODER
  * @ingroup enc
  * @param spi Communication Port
@@ -50,20 +52,17 @@
  * @return flag with SUCCESS or FAILURE
  */
 
-int encoder_init(int spi,);
+//int encoder_init(int spi,);
 
 
 /**
  * @brief READ POSITION
  * @ingroup enc
- * @param spi Communication Port
- * @param[in] status Register
- * @param[in] data Data to write
- 
+ * @param spi_dev Communication Port
+ * @param[in] *data Data to read
  * @return flag with SUCCESS or FAILURE
  */
-
-int encoder_read_pos();
+int enc_read_pos(int spi_dev,unsigned short int *data);
 
 
 /**
@@ -75,10 +74,10 @@ int encoder_read_pos();
  * @return flag with SUCCESS or FAILURE
  */
 
-  int enc_set_zero(int spi_dev,unsigned short int *data);
+int enc_set_zero(int spi_dev,unsigned short int *data);
 
 
-/**
+/*
  * @brief SEND BYTE TO THE ENCODER
  * @ingroup enc
  * @param spi_dev Communication Dev
@@ -88,31 +87,18 @@ int encoder_read_pos();
  * @return flag with SUCCESS or FAILURE
  */
 
-  int send_cmd(int spi_dev,unsigned short int *data);
-
+//  int send_cmd(int spi_dev,unsigned short int *data);
   
+ 
 /**
- * @brief GET DATA FROM THE ENCODER
+ * @brief send command and delay between reads
  * @ingroup enc
  * @param spi_dev Communication Dev
  * @param[in] data Data to write
  * @return flag with SUCCESS or FAILURE
  */
-  int enc_read(int spi_dev,unsigned short int *data);
+int enc_wait_for_ack(int spi_dev, uint8_t cmd, int max_errors)
   
  
-/**
- * @brief delay between reads
- * @ingroup enc
- * @param spi_dev Communication Dev
- * @param[in] data Data to write
- * @return flag with SUCCESS or FAILURE
- */
-
-  int enc_wait_for_ack(int spi_dev, uint8_t cmd, int max_errors);
-  
- 
-
-
-#endif /* AMT203_FUNCTIONS_H */
+#endif
 

@@ -28,7 +28,22 @@
 
 #define ARRAY_SIZE(a) (sizeof(a) / sizeof((a)[0]))
 
-/* INITIALIZE SPI DEVICE */
+/* Commands */
+#define ENCODER_NO_OP         0x00
+#define ENCODER_RD_POS        0x10
+#define ENCODER_SET_ZERO_PT   0x70
+#define ENCODER_EEPROM_WR     0x80
+#define ENCODER_EEPROM_RD     0x90
+
+/**
+ * @groupdef spi Functions to deal communication by SPI protocol
+ */
+
+
+/**
+ * INITIALIZE SPI DEVICE
+ * @ingroup spi
+ */
 int spi_init(uint8_t mode, uint32_t speed, uint8_t cs);
 /* Parameters
 - mode:		0 .. 3
@@ -37,7 +52,10 @@ int spi_init(uint8_t mode, uint32_t speed, uint8_t cs);
 returns spi_dev
 */
 
-/* TERMINATES SPI DEVICE */
+/**
+ * TERMINATES SPI DEVICE
+ * @ingroup spi
+ */
 void spi_end(int spi_dev);
 
 /* READ DATA FROM A/D CONVERTER MCP3208 */
@@ -58,5 +76,11 @@ int dac_write(int spi_dev, uint8_t ch, uint8_t _shdn, unsigned short int data);
 1	Output Power Down Control bit
 - data:		0 .. 4095
 */
+
+/**
+ * TRANSFER N BYTES
+ * @ingroup spi
+ */
+int spi_trans_bytes(int spi_dev,uint8_t *send, uint8_t *receive,int n);
 
 #endif

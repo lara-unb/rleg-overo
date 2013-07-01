@@ -224,3 +224,32 @@ int dac_write(int spi_dev, uint8_t ch, uint8_t _shdn, unsigned short int data)
 //printf("\nValor retornado pelo conversor AD: %d\n\n",rx[2]+((rx[1]&0x0F)<<8));
 	return 1;
 }
+
+int spi_trans_bytes(int spi_dev,uint8_t *send, uint8_t *receive,int n){
+	int ret;
+
+	 //< define send data 
+	uint8_t tx[];
+	tx=send;
+	uint8_t rx[n] = {0,}; 
+
+	/*
+	* Transmitting data (full duplex):
+	*/
+	struct spi_ioc_transfer tr = {
+		.tx_buf = (unsigned long)tx,
+		.rx_buf = (unsigned long)rx,
+		.len = n,
+		.delay_usecs = delay,
+		.speed_hz = 0,
+		.bits_per_word = 0,
+	};
+	ret = ioctl(spi_dev, SPI_IOC_MESSAGE(1), &tr);
+
+	//Check transmittion:
+	if(ret == 1) return FAILURE;//pabort("can't send spi message");
+
+	*receive = rx[0];//get the received data
+
+	return 1;
+}
