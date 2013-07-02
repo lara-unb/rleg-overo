@@ -302,13 +302,13 @@ int periodic_task_1(void)
         datalogger_update(t_task_1_global, T_task_1_exec_global, T_task_2_exec_global, t0, &imu_data, &eff_data, &mra_data /*&imu_measure, &magnetometer_measure, &estimation_data, &control_data*/);
   //printf("\n    %d\t|",i);
  /* printw("%d\t|",eff_data.F.x);
-printw("\t%d\t%d\t%d\t|",imu_data.acc.x,imu_data.acc.y,imu_data.acc.z);
-printw("\t%d\t%d\t%d\t|",imu_data.mag.x,imu_data.mag.y,imu_data.mag.z);
-printw("\t%d\t%d\t%d\t%d",imu_data.gyr.x,imu_data.gyr.y,imu_data.gyr.z, imu_data.temp);
-printw("\t%d\t%d",eff_data.new_data,imu_data.new_data);
-printw("\t%d\t%d",mra_data.Out_0, mra_data.Read_0);
-printw("\n");
-refresh();*/
+    printw("\t%d\t%d\t%d\t|",imu_data.acc.x,imu_data.acc.y,imu_data.acc.z);
+    printw("\t%d\t%d\t%d\t|",imu_data.mag.x,imu_data.mag.y,imu_data.mag.z);
+    printw("\t%d\t%d\t%d\t%d",imu_data.gyr.x,imu_data.gyr.y,imu_data.gyr.z, imu_data.temp);
+    printw("\t%d\t%d",eff_data.new_data,imu_data.new_data);
+    printw("\t%d\t%d",mra_data.Out_0, mra_data.Read_0);
+    printw("\n");
+    refresh();*/
     }
     previous_datalogger_status = current_datalogger_status;
 

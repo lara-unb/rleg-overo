@@ -74,20 +74,8 @@ int ui_update(IMU_DATA_STRUCT *pimu_data, EFF_DATA_STRUCT *peff_data, MRA_DATA_S
 		case UI_MRA:
 			if(ui_mra_data(pmra_data) != SUCCESS) return FAILURE;
 			break;
-	/*	case UI_BATTERY:
-			if(ui_battery_data(pbattery_data) != SUCCESS) return FAILURE;
-			break;
-		case UI_LOCAL_DATA:
-			if(ui_local_data(plocal_coordinate_system_data, plocal_fields_data, paltimeter_data) != SUCCESS) return FAILURE;
-			break;
-        case UI_ESTIMATION:
-            if(ui_estimation(pestimation_data) != SUCCESS) return FAILURE;
-            break;
-        case UI_CONTROL:
-            if(ui_control(pcontrol_data) != SUCCESS) return FAILURE;
-            break;*/
 		case UI_OVERVIEW:
-        default:
+	        default:
 			if(ui_overview_data(total, failure, pimu_data, peff_data, pmra_data) != SUCCESS) return FAILURE;
 			break;
 	}
@@ -109,13 +97,13 @@ int ui_update(IMU_DATA_STRUCT *pimu_data, EFF_DATA_STRUCT *peff_data, MRA_DATA_S
 		case 'o': //Overview
 			ui_state = UI_OVERVIEW;
 			break;
-		case 'm': //Battery
+		case 'm': //MRA
 			ui_state = UI_MRA;
 			break;
 		//case 'e': // State estimator
 		//    ui_state = UI_ESTIMATION;
 		//    break;
-        case 'd': //Datalogger start/stop
+         case 'd': //Datalogger start/stop
             if(datalogger_status() == DATALOGGER_RUNNING)
             {
                 datalogger_stop();
@@ -125,57 +113,9 @@ int ui_update(IMU_DATA_STRUCT *pimu_data, EFF_DATA_STRUCT *peff_data, MRA_DATA_S
                 datalogger_start();
             }
             break;
-	    /*
-        case 's': // Start Altimeter/IMU calibration
-            if(calibration_get_status() == CALIBRATION_RUNNING)
-            {
-//                 calibration_stop_calibration();
-            }
-            else
-            {
-                calibration_start_calibration();
-            }
-            break;
-		case 'f': //Init local fields
-			calibration_init_local_coordinate_system(pgps_data, plocal_coordinate_system_data);
-			calibration_init_local_fields(plocal_fields_data, pgps_data);
-			break;
-		case 't': // Start estimators
-			estimation_initial_state_estimate(pestimation_data, pgps_measure, pimu_measure, pmagnetometer_measure, plocal_fields_data);
-			break;
-		case 'c':
-		    ui_state = UI_CONTROL;
-		    break;
-		case '1':
-		    pcontrol_data->roll_proportional_gain += 1.0;
-		    break;
-		case '2':
-            pcontrol_data->roll_proportional_gain -= 1.0;
-		    break;
-		case '3':
-            pcontrol_data->pitch_proportional_gain += 1.0;
-            break;
-		case '4':
-            pcontrol_data->pitch_proportional_gain -= 1.0;
-            break;
-		case '5':
-            pcontrol_data->yaw_proportional_gain += 1.0;
-            break;
-		case '6':
-            pcontrol_data->yaw_proportional_gain -= 1.0;
-            break;
-		case 'm':
-		    telemetry_mode = UI_MAVLINK_MODE;
-		    ui_close();
-		    break;
-		    */
-		default:
-			break;
+	 default:
+	      break;
 	}
-
-	// HaCK! Remove warning
-	//double tmp = 0;
-	//tmp = pgps_measure->FlagValidPositionMeasure;
 
 	return SUCCESS;
 }
@@ -312,86 +252,6 @@ int ui_overview_data(int total, int failures, IMU_DATA_STRUCT *pimu_data, EFF_DA
     //mvprintw(29, 40, "T: Start estimators");
 
 	return SUCCESS;
-}
-/*
-int ui_local_data(CALIBRATION_LOCAL_COORDINATE_SYSTEM_STRUCT *plocal_coordinate_system_data, CALIBRATION_LOCAL_FIELDS_STRUCT *plocal_fields_data, CALIBRATION_ALTIMETER_STRUCT *paltimeter_data)
-{
-	if(plocal_coordinate_system_data->system_initialized == CALIBRATION_LOCAL_COORDINATE_SYSTEM_INITIALIZED)
-	{
-		mvprintw(2, 0, "Local coordinate system origin info:");
-		mvprintw(3, 0, "Latitude (deg):  %lf", plocal_coordinate_system_data->latitude_radians*180.0/M_PI);
-		mvprintw(4, 0, "Longitude (deg): %lf", plocal_coordinate_system_data->longitude_radians*180.0/M_PI);
-		mvprintw(5, 0, "Altitude (m):    %lf", plocal_coordinate_system_data->altitude_meters);
-		mvprintw(3, 40,"X0 (m):  %lf", plocal_coordinate_system_data->x0);
-		mvprintw(4, 40,"Y0 (m):  %lf", plocal_coordinate_system_data->y0);
-		mvprintw(5, 40,"Z0 (m):  %lf", plocal_coordinate_system_data->z0);
-	}
-	else
-	{
-		mvprintw(2, 0, "Local coordinate system not initialized.");
-	}
-
-	if(plocal_fields_data->system_initialized == CALIBRATION_LOCAL_FIELDS_INITIALIZED)
-	{
-		mvprintw(7,  0, "Local Gravity (NED)");
-		mvprintw(8,  0, "X (m/s2):  %lf", PGMATRIX_DATA(plocal_fields_data->local_gravity, 1, 1));
-		mvprintw(9,  0, "Y (m/s2):  %lf", PGMATRIX_DATA(plocal_fields_data->local_gravity, 2, 1));
-		mvprintw(10, 0, "Z (m/s2):  %lf", PGMATRIX_DATA(plocal_fields_data->local_gravity, 3, 1));
-		mvprintw(11, 0, "Magnitude: %lf", plocal_fields_data->gravity_magnitude);
-		mvprintw(7, 40, "Local Magnetic (NED)");
-		mvprintw(8, 40, "X (uT):    %lf", PGMATRIX_DATA(plocal_fields_data->local_magnetic, 1, 1));
-		mvprintw(9, 40, "Y (uT):    %lf", PGMATRIX_DATA(plocal_fields_data->local_magnetic, 2, 1));
-		mvprintw(10,40, "Z (uT):    %lf", PGMATRIX_DATA(plocal_fields_data->local_magnetic, 3, 1));
-		mvprintw(11,40, "Magnitude: %lf", plocal_fields_data->magnetic_magnitude);
-	}
-	else
-	{
-		mvprintw(7, 0, "Local fields not initialized.");
-	}
-
-	if(paltimeter_data->system_initialized == CALIBRATION_ALTIMETER_INITIALIZED)
-	{
-		mvprintw(13, 0, "Altimeter data:");
-		mvprintw(14, 0, "Ground pressure (Pa): %lf", paltimeter_data->p0);
-	}
-	else
-	{
-		mvprintw(13, 0, "Altimeter not initialized.");
-	}
-
-	return UI_SUCCESS;
-}
-
-int ui_estimation(ESTIMATION_DATA_STRUCT *pestimator_data)
-{
-    mvprintw(2, 0, "Roll:   %3.2lf", pestimator_data->roll_angle_radians*180.0/M_PI);
-    mvprintw(3, 0, "Pitch:  %3.2lf", pestimator_data->pitch_angle_radians*180.0/M_PI);
-    mvprintw(4, 0, "Yaw:    %3.2lf", pestimator_data->yaw_angle_radians*180.0/M_PI);
-
-    mvprintw(6, 0, "X:   %4.1lf", pestimator_data->x_position_meters);
-    mvprintw(7, 0, "Y:   %4.1lf", pestimator_data->y_position_meters);
-    mvprintw(8, 0, "Z:   %4.1lf", pestimator_data->z_position_meters);
-
-    mvprintw(10, 0, "VX:   %2.2lf", pestimator_data->x_velocity_meters_second);
-    mvprintw(11, 0, "VY:   %2.2lf", pestimator_data->y_velocity_meters_second);
-    mvprintw(12, 0, "VZ:   %2.2lf", pestimator_data->z_velocity_meters_second);
-
-    mvprintw(14, 0, "Q0:   %1.5lf", pestimator_data->q0);
-    mvprintw(15, 0, "Q1:   %1.5lf", pestimator_data->q1);
-    mvprintw(16, 0, "Q2:   %1.5lf", pestimator_data->q2);
-    mvprintw(17, 0, "Q3:   %1.5lf", pestimator_data->q3);
-
-//    mvprintw(2, 0, "Gyro integration");
-//    mvprintw(3, 0, "Roll:   %3.2lf", pestimator_data->roll_angle_radians);
-//    mvprintw(4, 0, "Pitch:  %3.2lf", pestimator_data->pitch_angle_radians);
-//    mvprintw(5, 0, "Yaw:    %3.2lf", pestimator_data->yaw_angle_radians);
-//
-//    mvprintw(7, 0, "TRIAD");
-//    mvprintw(8, 0, "Roll:   %3.2lf", pestimator_data->x_position_meters);
-//    mvprintw(9, 0, "Pitch:  %3.2lf", pestimator_data->y_position_meters);
-//    mvprintw(10, 0, "Yaw:    %3.2lf", pestimator_data->z_position_meters);
-
-    return UI_SUCCESS;
 }
 
 int ui_control(CONTROL_DATA_STRUCT *pcontrol_data)

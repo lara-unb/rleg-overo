@@ -198,13 +198,23 @@ short int gyr_read_data(int i2c_dev, int type);
 //////////////////////////
 
 /**
+ * @groupdef mag Functions to Magnetometer HMC5883
+ */
+
+/**
  * WRITE TO REGISTER
+ * @ingroup mag
+ * @param i2c_dev
+ * @param reg
+ * @param [in]data
  */
 int mag_write_reg(int i2c_dev, uint8_t reg, uint8_t data);
 
 /**
  * READ  COUNT 8-BIT REGISTER IN SEQUENCE
- *
+ * @ingroup mag
+ * @param i2c_dev
+ * @param reg
  * @param count number of registers in sequence (1-13)
  */
 uint8_t* mag_read_reg(int i2c_dev, uint8_t reg, uint8_t count);
@@ -240,15 +250,18 @@ int mag_init(int i2c_dev, uint8_t rate, uint8_t range, uint8_t samples_avg, uint
 
 /**
  * READ ALL DATA AT ONCE (X, Y and Z)
+ * @ingroup mag
+ * @param i2c_dev
+ * @param[out] *data
  */
 int mag_read_all_data(int i2c_dev, short int *data);
 
 /**
  * READ DATA (X, Y or Z)
+ * @ingroup mag
+ * @param i2c_dev
+ * @param axis  set the axis ('X' or 'Y' or 'Z')
  */
 short int mag_read_data(int i2c_dev, int axis);
-/* 
-axis: 'X' or 'Y' or 'Z'
-*/
 
 #endif

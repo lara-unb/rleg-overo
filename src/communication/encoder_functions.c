@@ -22,7 +22,7 @@ int enc_zero_set(int spi_dev){
     uint8_t receive = 0;
     
     /* Send command */
-    spi_trans_bytes(spi_dev,send,receive,1);
+    spi_trans_bytes(spi_dev,&send,&receive,1);
     if (enc_wait_for_ack(spi_dev, ENCODER_EEPROM_WR, INT_MAX) != SUCCESS){ 
         return FAILURE;
     }
@@ -68,7 +68,7 @@ int enc_wait_for_ack(int spi_dev, uint8_t ack, int max_errors)
 	//spi_trans_bytes(spi_dev,send,receive,1);
     while (receive != ack) {
         spi_trans_bytes(spi_dev,&send,&receive,1);
-        if (res != ENCODER_WAIT_RESP) {
+        if (receive != ENCODER_WAIT_RESP) {
             errors++;
             if (errors > max_errors) { return FAILURE; }
         }
@@ -76,7 +76,3 @@ int enc_wait_for_ack(int spi_dev, uint8_t ack, int max_errors)
 
     return SUCCESS;
 }
-
-
-
-

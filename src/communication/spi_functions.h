@@ -39,7 +39,6 @@
  * @groupdef spi Functions to deal communication by SPI protocol
  */
 
-
 /**
  * INITIALIZE SPI DEVICE
  * @ingroup spi
@@ -58,16 +57,18 @@ returns spi_dev
  */
 void spi_end(int spi_dev);
 
-/* READ DATA FROM A/D CONVERTER MCP3208 */
+/**
+ * READ DATA FROM A/D CONVERTER MCP3208
+ * @ingroup spi
+ * @param ch Set Channel (0 .. 7)
+ * @param sgl (0: to single or 1: to pseudo-differencial)
+ */
 int adc_read(int spi_dev, uint8_t ch, uint8_t sgl, short int *data);
-/* Parameters
-- ch (channel):	0 .. 7
-- sgl:	
-0	single
-1	pseudo-differential
-*/
 
-/* WRITE DATA TO D/A CONVERTER MCP3922 */
+/**
+ * WRITE DATA TO D/A CONVERTER MCP3922
+ * @ingroup spi
+ */
 int dac_write(int spi_dev, uint8_t ch, uint8_t _shdn, unsigned short int data);
 /* Parameters
 - ch (channel):	0 or 1

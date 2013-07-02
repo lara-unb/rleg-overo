@@ -73,23 +73,9 @@ int enc_read_pos(int spi_dev,unsigned short int *data);
  
  * @return flag with SUCCESS or FAILURE
  */
-
-int enc_set_zero(int spi_dev,unsigned short int *data);
-
-
-/*
- * @brief SEND BYTE TO THE ENCODER
- * @ingroup enc
- * @param spi_dev Communication Dev
- * @param[in] status Register
- * @param[in] data Data to write
+int enc_zero_set(int spi_dev);
  
- * @return flag with SUCCESS or FAILURE
- */
 
-//  int send_cmd(int spi_dev,unsigned short int *data);
-  
- 
 /**
  * @brief send command and delay between reads
  * @ingroup enc
@@ -97,7 +83,7 @@ int enc_set_zero(int spi_dev,unsigned short int *data);
  * @param[in] data Data to write
  * @return flag with SUCCESS or FAILURE
  */
-int enc_wait_for_ack(int spi_dev, uint8_t cmd, int max_errors)
+int enc_wait_for_ack(int spi_dev, uint8_t ack, int max_errors);
   
  
 #endif

@@ -226,12 +226,12 @@ int dac_write(int spi_dev, uint8_t ch, uint8_t _shdn, unsigned short int data)
 }
 
 int spi_trans_bytes(int spi_dev,uint8_t *send, uint8_t *receive,int n){
-	int ret;
 
 	 //< define send data 
-	uint8_t tx[];
-	tx=send;
-	uint8_t rx[n] = {0,}; 
+	uint8_t *tx;
+	tx = send;
+	uint8_t rx[n]; 
+	rx[0] = 0;
 
 	/*
 	* Transmitting data (full duplex):
@@ -244,7 +244,7 @@ int spi_trans_bytes(int spi_dev,uint8_t *send, uint8_t *receive,int n){
 		.speed_hz = 0,
 		.bits_per_word = 0,
 	};
-	ret = ioctl(spi_dev, SPI_IOC_MESSAGE(1), &tr);
+	int ret = ioctl(spi_dev, SPI_IOC_MESSAGE(1), &tr);
 
 	//Check transmittion:
 	if(ret == 1) return FAILURE;//pabort("can't send spi message");

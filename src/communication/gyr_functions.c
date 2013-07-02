@@ -25,7 +25,7 @@ int gyr_write_reg(int i2c_dev, uint8_t reg, uint8_t data)
 	  return FAILURE;
   }
 
-  return SUCESS;
+  return SUCCESS;
 }
 
 uint8_t* gyr_read_reg(int i2c_dev, uint8_t reg, uint8_t count)
