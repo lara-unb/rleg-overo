@@ -1,0 +1,6 @@
+<map id="amt203_wait_for_ack" name="amt203_wait_for_ack">
+<area shape="rect" id="node3" href="$AMT203__model_8h.html#a79aab08c8244993463d302465ade2acc" title="amt203_eeprom_read" alt="" coords="203,5,349,35"/>
+<area shape="rect" id="node5" href="$AMT203__model_8h.html#a42f2cc241b91cc7ec9587ba3234accbf" title="amt203_eeprom_write" alt="" coords="201,59,351,88"/>
+<area shape="rect" id="node7" href="$AMT203__model_8h.html#a7de9976acfdbd89389441f16a80d2c88" title="amt203_position_read" alt="" coords="201,112,351,141"/>
+<area shape="rect" id="node9" href="$AMT203__model_8h.html#aa5f42cd9b4a737500fcc269e638e5a45" title="amt203_zero_set" alt="" coords="215,165,337,195"/>
+</map>

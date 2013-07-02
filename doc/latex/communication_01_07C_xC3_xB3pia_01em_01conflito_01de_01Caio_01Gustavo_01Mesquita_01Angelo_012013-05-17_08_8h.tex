@@ -173,7 +173,7 @@ Definition at line 135 of file communication (\-Cópia em conflito de Caio Gusta
       (\hyperlink{communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8h_a7672ba13ff6f297c347790586c9a02e0}{GPIO\_CS\_S1},1)==\hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE}) || (\hyperlink{communication_2gpio__functions_8c_a9672ca43e65fa527cd6bf43db9aea594}{gpio\_write}(\hyperlink{communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8h_a48ea000c2b251ce26ea35d300f319651}{GPIO\_CS\_S0}
       ,0)==\hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE}) )
         mra\_data->\hyperlink{structMRA__DATA__STRUCT_a5b1af89ee717f5b14c18e8ac12e93e75}{new\_ctl}=\hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
-  \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}( (\hyperlink{communication_2spi__functions_8c_a5c52e64c336d59215ce0a4b6f340dc9f}{dac\_write}(\hyperlink{CommunicationV0_2communication_8c_a4788f0a5355494bc6c13690e28f43783}{spi\_dev},0,1,mra\_data->\hyperlink{structMRA__DATA__STRUCT_a64b4e6bb604e58de593a60c87942b966}{v\_ctl}))==
+  \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}( (\hyperlink{group__spi_ga5c52e64c336d59215ce0a4b6f340dc9f}{dac\_write}(\hyperlink{CommunicationV0_2communication_8c_a4788f0a5355494bc6c13690e28f43783}{spi\_dev},0,1,mra\_data->\hyperlink{structMRA__DATA__STRUCT_a64b4e6bb604e58de593a60c87942b966}{v\_ctl}))==
       \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE} )
         mra\_data->\hyperlink{structMRA__DATA__STRUCT_a5b1af89ee717f5b14c18e8ac12e93e75}{new\_ctl}=\hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
 \textcolor{comment}{//  else if( (dac\_write(spi\_dev,1,1,mra\_data->???))==FAILURE )}
@@ -211,7 +211,7 @@ Definition at line 7 of file communication (\-Cópia em conflito de Caio Gustavo
                 \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
   \}
 
-  \textcolor{keywordflow}{if}( (\hyperlink{group__mag_ga014f908c9faa37c1ec75177a17012a01}{mag\_init}(imu\_param->\hyperlink{structIMU__PARAM__STRUCT_a8a870f383fc9ba0b682fdc9b8c0d2734}{i2c\_dev}, imu\_param->\hyperlink{structIMU__PARAM__STRUCT_a26b277dcaf05f3842995df888225f6f4}{mag}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__mag_a234de95423b604b05b851ef90890cea1}{rate}, 
+  \textcolor{keywordflow}{if}( (\hyperlink{communication_2imu__functions_8h_a014f908c9faa37c1ec75177a17012a01}{mag\_init}(imu\_param->\hyperlink{structIMU__PARAM__STRUCT_a8a870f383fc9ba0b682fdc9b8c0d2734}{i2c\_dev}, imu\_param->\hyperlink{structIMU__PARAM__STRUCT_a26b277dcaf05f3842995df888225f6f4}{mag}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__mag_a234de95423b604b05b851ef90890cea1}{rate}, 
       imu\_param->\hyperlink{structIMU__PARAM__STRUCT_a26b277dcaf05f3842995df888225f6f4}{mag}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__mag_a40ad27ebdb5fde35257b1dc52e40f476}{range}, imu\_param->\hyperlink{structIMU__PARAM__STRUCT_a26b277dcaf05f3842995df888225f6f4}{mag}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__mag_a52c22cae6940eb39fb72aca66cfeba9a}{samples\_avg}, 
       imu\_param->\hyperlink{structIMU__PARAM__STRUCT_a26b277dcaf05f3842995df888225f6f4}{mag}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__mag_a1f3536709c05310005d648f339d70c54}{meas\_mode}, imu\_param->\hyperlink{structIMU__PARAM__STRUCT_a26b277dcaf05f3842995df888225f6f4}{mag}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__mag_a39b83b3e9ff5bdcafed0bdf6a2de584b}{op\_mode}))< 0)
   \{
@@ -246,7 +246,7 @@ Definition at line 7 of file communication (\-Cópia em conflito de Caio Gustavo
         \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
   \}
 
-  \textcolor{keywordflow}{if} ((spi\_param->\hyperlink{structSPI__PARAM__STRUCT_abe385c44333d268d17cf648c8e371cad}{spi\_dev}=\hyperlink{communication_2spi__functions_8c_a70764aca888e93b0329e7a62c9312704}{spi\_init}(spi\_param->\hyperlink{structSPI__PARAM__STRUCT_a82c546c99f6c3daed73c1e23426be847}{mode},spi\_param
+  \textcolor{keywordflow}{if} ((spi\_param->\hyperlink{structSPI__PARAM__STRUCT_abe385c44333d268d17cf648c8e371cad}{spi\_dev}=\hyperlink{group__spi_ga70764aca888e93b0329e7a62c9312704}{spi\_init}(spi\_param->\hyperlink{structSPI__PARAM__STRUCT_a82c546c99f6c3daed73c1e23426be847}{mode},spi\_param
       ->\hyperlink{structSPI__PARAM__STRUCT_a53a8d386594a81eb9bc6f971bfe36c54}{speed},spi\_param->\hyperlink{structSPI__PARAM__STRUCT_ae0d62e0a5554783d710b677a017e246f}{cs}))<0) 
   \{
     perror(\textcolor{stringliteral}{"Error in SPI device initialization"});
@@ -343,11 +343,11 @@ Definition at line 68 of file communication (\-Cópia em conflito de Caio Gustav
       ,0)==\hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE}))
         eff\_data->\hyperlink{structEFF__DATA__STRUCT_aa42ebc512dd79fa6ebf998162a149446}{new\_data}=\hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
   \textcolor{keywordflow}{else}\{ 
-    \textcolor{keywordflow}{if}( (\hyperlink{communication_2spi__functions_8c_ae385345c227d9f67ab490b94ed628988}{adc\_read}(\hyperlink{CommunicationV0_2communication_8c_a4788f0a5355494bc6c13690e28f43783}{spi\_dev},0,1,data))==\hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE} )
+    \textcolor{keywordflow}{if}( (\hyperlink{group__spi_gae385345c227d9f67ab490b94ed628988}{adc\_read}(\hyperlink{CommunicationV0_2communication_8c_a4788f0a5355494bc6c13690e28f43783}{spi\_dev},0,1,data))==\hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE} )
         eff\_data->\hyperlink{structEFF__DATA__STRUCT_aa42ebc512dd79fa6ebf998162a149446}{new\_data}=\hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
     \textcolor{keywordflow}{else} eff\_data->\hyperlink{structEFF__DATA__STRUCT_abe8952947b54bf9c247f3429ee3aeb44}{F}.\hyperlink{structDATA__XYZ_a54c1596e9f9969fd9c21e8458024ecfb}{x}=data[0];
   \textcolor{comment}{//Read MR actuator voltage control}
-    \textcolor{keywordflow}{if}( (\hyperlink{communication_2spi__functions_8c_ae385345c227d9f67ab490b94ed628988}{adc\_read}(\hyperlink{CommunicationV0_2communication_8c_a4788f0a5355494bc6c13690e28f43783}{spi\_dev},7,1,data))==\hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS} )
+    \textcolor{keywordflow}{if}( (\hyperlink{group__spi_gae385345c227d9f67ab490b94ed628988}{adc\_read}(\hyperlink{CommunicationV0_2communication_8c_a4788f0a5355494bc6c13690e28f43783}{spi\_dev},7,1,data))==\hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS} )
     \{
         mra\_data->\hyperlink{structMRA__DATA__STRUCT_a3a31d57268c33b21ac915fdc27dfe474}{v\_ctl\_read}=data[0];
         mra\_data->\hyperlink{structMRA__DATA__STRUCT_afca6e851d302f3a786885a4e1eec79d7}{new\_data}=\hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};

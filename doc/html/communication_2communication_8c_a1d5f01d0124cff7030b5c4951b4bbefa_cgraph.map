@@ -1,4 +1,4 @@
 <map id="actuate" name="actuate">
-<area shape="rect" id="node3" href="$communication_2spi__functions_8c.html#a5c52e64c336d59215ce0a4b6f340dc9f" title="dac_write" alt="" coords="123,5,200,35"/>
+<area shape="rect" id="node3" href="$group__spi.html#ga5c52e64c336d59215ce0a4b6f340dc9f" title="WRITE DATA TO D/A CONVERTER MCP3922." alt="" coords="123,5,200,35"/>
 <area shape="rect" id="node5" href="$communication_2gpio__functions_8c.html#a9672ca43e65fa527cd6bf43db9aea594" title="gpio_write" alt="" coords="121,59,201,88"/>
 </map>

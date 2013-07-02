@@ -18,7 +18,7 @@
 <area shape="rect" id="node26" href="$threads__linux_8c.html#ae03c8e3e8ea1514e4e7ca2005777e6f3" title="threads_linux_timer\l_function_task_1" alt="" coords="603,375,736,422"/>
 <area shape="rect" id="node28" href="$threads__linux_8c.html#a86f471cf8f5e7b5242fa6b68589335a9" title="threads_linux_timer\l_task_1" alt="" coords="1007,386,1140,433"/>
 <area shape="rect" id="node30" href="$threads__linux_8c.html#a923a30158ef342937317b179dcb6d0fb" title="threads_linux_timer\l_start_task_1" alt="" coords="1199,454,1332,501"/>
-<area shape="rect" id="node35" href="$ui_8h.html#a1559840369fc944a83a3666ef7959413" title="ui_update" alt="" coords="631,211,708,240"/>
+<area shape="rect" id="node35" href="$group__ui.html#ga1559840369fc944a83a3666ef7959413" title="Update Screen with new data of sensors." alt="" coords="631,211,708,240"/>
 <area shape="rect" id="node37" href="$main2_8h.html#a944f7352f18ed248c1b1143f51edc391" title="periodic_task_2" alt="" coords="817,159,929,188"/>
 <area shape="rect" id="node46" href="$threads__linux_8c.html#ad535241b6b29d076beb2cd75a880aaea" title="threads_linux_periodic\l_task_2" alt="" coords="799,211,948,258"/>
 <area shape="rect" id="node39" href="$main2_8h.html#a01c18e97a4488be2912eb738b2e7f890" title="timer_function_task_2" alt="" coords="999,108,1148,137"/>
@@ -27,5 +27,5 @@
 <area shape="rect" id="node48" href="$threads__linux_8c.html#aa65173deca09202aea0f4a81a166545b" title="threads_linux_timer\l_function_task_2" alt="" coords="1007,211,1140,258"/>
 <area shape="rect" id="node50" href="$threads__linux_8c.html#aaff43cd760c084d80d045228b46fe784" title="threads_linux_timer\l_task_2" alt="" coords="1199,265,1332,311"/>
 <area shape="rect" id="node52" href="$threads__linux_8c.html#a59d6f60b682f360c3759cefad7ad2a4e" title="threads_linux_timer\l_start_task_2" alt="" coords="1385,265,1519,311"/>
-<area shape="rect" id="node62" href="$ui_8h.html#a6577e01f0ebf9ac1677c616228a64a46" title="ui_overview_data" alt="" coords="404,211,527,240"/>
+<area shape="rect" id="node62" href="$ui_8h.html#a6577e01f0ebf9ac1677c616228a64a46" title="Print ALL sensors data." alt="" coords="404,211,527,240"/>
 </map>

@@ -11,8 +11,8 @@
 <area shape="rect" id="node89" href="$main2_8c.html#ae59c93969d017f18e3e38b2f9f7888ca" title="timer_start_task_2" alt="" coords="104,477,235,507"/>
 <area shape="rect" id="node119" href="$main2_8c.html#a54bb5066619e443a28ae5601b5ea3642" title="timer_stop_task_1" alt="" coords="105,685,233,715"/>
 <area shape="rect" id="node121" href="$main2_8c.html#a0c69dbcb7b2885a2de116b9d690280de" title="timer_stop_task_2" alt="" coords="105,739,233,768"/>
-<area shape="rect" id="node123" href="$ui_8c.html#a65d8b92b634da17c344458cd57e61f3e" title="ui_close" alt="" coords="135,792,204,821"/>
-<area shape="rect" id="node125" href="$ui_8c.html#ab7bfb453918dcc296ff0cea3c79453d0" title="ui_init" alt="" coords="141,845,197,875"/>
+<area shape="rect" id="node123" href="$group__ui.html#ga65d8b92b634da17c344458cd57e61f3e" title="Close UI." alt="" coords="135,792,204,821"/>
+<area shape="rect" id="node125" href="$group__ui.html#gab7bfb453918dcc296ff0cea3c79453d0" title="Initialize UI." alt="" coords="141,845,197,875"/>
 <area shape="rect" id="node5" href="$datalogger_8c.html#a54b06d9395b2e370a5a72beb7f9524b2" title="datalogger_lock_mutex" alt="" coords="1404,431,1559,460"/>
 <area shape="rect" id="node7" href="$datalogger_8c.html#a85453211c0c809083c36cc56b275aeeb" title="datalogger_unlock_mutex" alt="" coords="1396,376,1567,405"/>
 <area shape="rect" id="node9" href="$gdatalogger_8c.html#a0ac95f84c6ee484c4ad0351530f1c468" title="gDataLogger_Close" alt="" coords="1413,165,1549,195"/>
@@ -40,11 +40,11 @@
 <area shape="rect" id="node91" href="$main2_8c.html#a735ebf3d0d37c7d8187199e6565bcb5c" title="f_timer_task_2" alt="" coords="295,477,401,507"/>
 <area shape="rect" id="node93" href="$main2_8c.html#a01c18e97a4488be2912eb738b2e7f890" title="timer_function_task_2" alt="" coords="463,477,612,507"/>
 <area shape="rect" id="node95" href="$main2_8c.html#a944f7352f18ed248c1b1143f51edc391" title="periodic_task_2" alt="" coords="663,477,775,507"/>
-<area shape="rect" id="node98" href="$ui_8c.html#a1559840369fc944a83a3666ef7959413" title="ui_update" alt="" coords="861,477,939,507"/>
-<area shape="rect" id="node100" href="$ui_8c.html#a7d5a9d9a75693709de408781d001a6a6" title="ui_imu_data" alt="" coords="1040,531,1131,560"/>
+<area shape="rect" id="node98" href="$group__ui.html#ga1559840369fc944a83a3666ef7959413" title="Update Screen with new data of sensors." alt="" coords="861,477,939,507"/>
+<area shape="rect" id="node100" href="$group__ui.html#ga7d5a9d9a75693709de408781d001a6a6" title="Print IMU data." alt="" coords="1040,531,1131,560"/>
 <area shape="rect" id="node102" href="$ui_8c.html#af48496a4ce54378764bc4ca9eddfd498" title="ui_eff_data" alt="" coords="1043,584,1128,613"/>
-<area shape="rect" id="node104" href="$ui_8c.html#aefec243c5df45db0350c1abbccf20e3b" title="ui_mra_data" alt="" coords="1039,637,1132,667"/>
-<area shape="rect" id="node106" href="$ui_8c.html#a6577e01f0ebf9ac1677c616228a64a46" title="ui_overview_data" alt="" coords="1024,691,1147,720"/>
+<area shape="rect" id="node104" href="$group__ui.html#gaefec243c5df45db0350c1abbccf20e3b" title="Print MRA data." alt="" coords="1039,637,1132,667"/>
+<area shape="rect" id="node106" href="$ui_8c.html#a6577e01f0ebf9ac1677c616228a64a46" title="Print ALL sensors data." alt="" coords="1024,691,1147,720"/>
 <area shape="rect" id="node111" href="$main2_8c.html#a5f05ce725141ddfab683e059b1cd95ea" title="exit_program" alt="" coords="1037,477,1133,507"/>
 <area shape="rect" id="node115" href="$datalogger_8c.html#a1f254ef380d595d6605c10811fd0dee6" title="datalogger_start" alt="" coords="1208,651,1323,680"/>
 <area shape="rect" id="node108" href="$main2_8c.html#a5b2b1fdd5e517470c10e84a2b2bcc5c8" title="get_time" alt="" coords="1229,597,1301,627"/>

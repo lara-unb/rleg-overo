@@ -3,8 +3,8 @@
 <area shape="rect" id="node5" href="$main2_8h.html#a26855b7739897854265d51aa61329390" title="periodic_task_1" alt="" coords="199,57,311,86"/>
 <area shape="rect" id="node14" href="$threads__linux_8c.html#aff9795d781d7b334d45539707a641c23" title="threads_linux_init" alt="" coords="1347,230,1469,259"/>
 <area shape="rect" id="node16" href="$threads__linux_8c.html#a2e381152046e690e7264c1a479071048" title="threads_linux_periodic\l_task_1" alt="" coords="180,217,329,264"/>
-<area shape="rect" id="node25" href="$ui_8h.html#a6577e01f0ebf9ac1677c616228a64a46" title="ui_overview_data" alt="" coords="193,111,316,141"/>
-<area shape="rect" id="node27" href="$ui_8h.html#a1559840369fc944a83a3666ef7959413" title="ui_update" alt="" coords="416,137,493,166"/>
+<area shape="rect" id="node25" href="$ui_8h.html#a6577e01f0ebf9ac1677c616228a64a46" title="Print ALL sensors data." alt="" coords="193,111,316,141"/>
+<area shape="rect" id="node27" href="$group__ui.html#ga1559840369fc944a83a3666ef7959413" title="Update Screen with new data of sensors." alt="" coords="416,137,493,166"/>
 <area shape="rect" id="node7" href="$main2_8h.html#a90885bae1b9535b16e014fb928e98e37" title="timer_function_task_1" alt="" coords="380,47,529,77"/>
 <area shape="rect" id="node9" href="$main2_8c.html#a5ce2b6a7dd4d00c90fe18098091044aa" title="f_timer_task_1" alt="" coords="801,46,908,75"/>
 <area shape="rect" id="node11" href="$main2_8h.html#a0e411070b7f487a8ab6a60b180f50e12" title="timer_start_task_1" alt="" coords="981,46,1112,75"/>

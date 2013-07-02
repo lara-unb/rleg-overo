@@ -1,7 +1,8 @@
 <map id="communication/spi_functions.h" name="communication/spi_functions.h">
 <area shape="rect" id="node3" href="$communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8h.html" title="communication/communication\l (Cópia em conflito de\l Caio Gustavo Mesquita Angelo\l 2013&#45;05&#45;17).h" alt="" coords="136,83,341,165"/>
 <area shape="rect" id="node5" href="$communication_2communication_8h.html" title="communication/communication.h" alt="" coords="365,109,579,139"/>
-<area shape="rect" id="node24" href="$communication_2spi__functions_8c.html" title="communication/spi_functions.c" alt="" coords="603,109,805,139"/>
+<area shape="rect" id="node24" href="$encoder__functions_8c.html" title="Rev 0 &#45; 19/06/2013 RLEG project &#45; 2013." alt="" coords="603,101,763,147"/>
+<area shape="rect" id="node26" href="$communication_2spi__functions_8c.html" title="communication/spi_functions.c" alt="" coords="787,109,989,139"/>
 <area shape="rect" id="node7" href="$calibration_2calibration_8h.html" title="calibration/calibration.h" alt="" coords="25,240,180,269"/>
 <area shape="rect" id="node11" href="$main2_8c.html" title="main2.c" alt="" coords="184,344,251,373"/>
 <area shape="rect" id="node13" href="$calibration_8c.html" title="calibration.c" alt="" coords="255,240,345,269"/>

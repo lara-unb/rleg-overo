@@ -1,0 +1,428 @@
+\hypertarget{AMT203__model_8c}{\section{communication/\-A\-M\-T203\-\_\-model.c File Reference}
+\label{AMT203__model_8c}\index{communication/\-A\-M\-T203\-\_\-model.\-c@{communication/\-A\-M\-T203\-\_\-model.\-c}}
+}
+{\ttfamily \#include $<$assert.\-h$>$}\\*
+{\ttfamily \#include $<$limits.\-h$>$}\\*
+{\ttfamily \#include $<$stdint.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include $<$util/delay.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}spi.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}amt203.\-h\char`\"{}}\\*
+Include dependency graph for A\-M\-T203\-\_\-model.\-c\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{AMT203__model_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{AMT203__model_8c_a25012053a8f351c9c388e8d2d1c298f9}{amt203\-\_\-delay} ()
+\item 
+static void \hyperlink{AMT203__model_8c_aded9dccef363584017a0740784dd544d}{amt203\-\_\-xfer\-\_\-byte} (\hyperlink{structamt203__t}{amt203\-\_\-t} $\ast$amt203, uint8\-\_\-t sbyte, uint8\-\_\-t $\ast$rbyte)
+\item 
+static int \hyperlink{AMT203__model_8c_aa1d351a2063f5d1bee269462d4256075}{amt203\-\_\-wait\-\_\-for\-\_\-ack} (\hyperlink{structamt203__t}{amt203\-\_\-t} $\ast$amt203, uint8\-\_\-t cmd, int max\-\_\-errors)
+\item 
+int \hyperlink{AMT203__model_8c_a2c183ebc92d35b7d09e9aaef549d4564}{amt203\-\_\-init} (\hyperlink{structamt203__t}{amt203\-\_\-t} $\ast$amt203, spi\-\_\-t $\ast$spi, void($\ast$chip\-\_\-select)(int on))
+\item 
+int \hyperlink{AMT203__model_8c_a7de9976acfdbd89389441f16a80d2c88}{amt203\-\_\-position\-\_\-read} (\hyperlink{structamt203__t}{amt203\-\_\-t} $\ast$amt203, uint16\-\_\-t $\ast$position)
+\item 
+int \hyperlink{AMT203__model_8c_aa5f42cd9b4a737500fcc269e638e5a45}{amt203\-\_\-zero\-\_\-set} (\hyperlink{structamt203__t}{amt203\-\_\-t} $\ast$amt203)
+\item 
+int \hyperlink{AMT203__model_8c_a42f2cc241b91cc7ec9587ba3234accbf}{amt203\-\_\-eeprom\-\_\-write} (\hyperlink{structamt203__t}{amt203\-\_\-t} $\ast$amt203, uint8\-\_\-t addr, uint8\-\_\-t data)
+\item 
+int \hyperlink{AMT203__model_8c_a79aab08c8244993463d302465ade2acc}{amt203\-\_\-eeprom\-\_\-read} (\hyperlink{structamt203__t}{amt203\-\_\-t} $\ast$amt203, uint8\-\_\-t addr, uint8\-\_\-t $\ast$data)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{AMT203__model_8c_a25012053a8f351c9c388e8d2d1c298f9}{\index{A\-M\-T203\-\_\-model.\-c@{A\-M\-T203\-\_\-model.\-c}!amt203\-\_\-delay@{amt203\-\_\-delay}}
+\index{amt203\-\_\-delay@{amt203\-\_\-delay}!AMT203_model.c@{A\-M\-T203\-\_\-model.\-c}}
+\subsubsection[{amt203\-\_\-delay}]{\setlength{\rightskip}{0pt plus 5cm}static void amt203\-\_\-delay (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{AMT203__model_8c_a25012053a8f351c9c388e8d2d1c298f9}
+
+
+Definition at line 32 of file A\-M\-T203\-\_\-model.\-c.
+
+
+
+Referenced by amt203\-\_\-xfer\-\_\-byte().
+
+
+\begin{DoxyCode}
+\{
+    \textcolor{comment}{/* AMT203 requires minimum 5us delay in between consecutive transfers */}
+    \_delay\_us(20);
+\}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{AMT203__model_8c_a25012053a8f351c9c388e8d2d1c298f9_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{AMT203__model_8c_a79aab08c8244993463d302465ade2acc}{\index{A\-M\-T203\-\_\-model.\-c@{A\-M\-T203\-\_\-model.\-c}!amt203\-\_\-eeprom\-\_\-read@{amt203\-\_\-eeprom\-\_\-read}}
+\index{amt203\-\_\-eeprom\-\_\-read@{amt203\-\_\-eeprom\-\_\-read}!AMT203_model.c@{A\-M\-T203\-\_\-model.\-c}}
+\subsubsection[{amt203\-\_\-eeprom\-\_\-read}]{\setlength{\rightskip}{0pt plus 5cm}int amt203\-\_\-eeprom\-\_\-read (
+\begin{DoxyParamCaption}
+\item[{{\bf amt203\-\_\-t} $\ast$}]{amt203, }
+\item[{uint8\-\_\-t}]{addr, }
+\item[{uint8\-\_\-t $\ast$}]{data}
+\end{DoxyParamCaption}
+)}}\label{AMT203__model_8c_a79aab08c8244993463d302465ade2acc}
+
+
+Definition at line 136 of file A\-M\-T203\-\_\-model.\-c.
+
+
+
+References A\-M\-T203\-\_\-\-C\-M\-D\-\_\-\-E\-E\-P\-R\-O\-M\-\_\-\-R\-D, A\-M\-T203\-\_\-\-C\-M\-D\-\_\-\-N\-O\-P, amt203\-\_\-wait\-\_\-for\-\_\-ack(), and amt203\-\_\-xfer\-\_\-byte().
+
+
+\begin{DoxyCode}
+\{
+    uint8\_t cmd = \hyperlink{AMT203__model_8h_adbe2a1b57b353f000c9298b48f553ef0}{AMT203\_CMD\_EEPROM\_RD};
+    uint8\_t res = 0;
+    assert(amt203 != NULL);
+    
+    \textcolor{comment}{/* Send command */}
+    \hyperlink{AMT203__model_8c_aded9dccef363584017a0740784dd544d}{amt203\_xfer\_byte}(amt203, cmd, &res);
+    \hyperlink{AMT203__model_8c_aded9dccef363584017a0740784dd544d}{amt203\_xfer\_byte}(amt203, addr, &res);
+    \hyperlink{AMT203__model_8c_aded9dccef363584017a0740784dd544d}{amt203\_xfer\_byte}(amt203, 0x01, &res);
+    \textcolor{keywordflow}{if} (\hyperlink{AMT203__model_8c_aa1d351a2063f5d1bee269462d4256075}{amt203\_wait\_for\_ack}(amt203, cmd, 5) != 0) \{ \textcolor{keywordflow}{return} -
+      1; \}
+    
+    \textcolor{comment}{/* Get data */}
+    \hyperlink{AMT203__model_8c_aded9dccef363584017a0740784dd544d}{amt203\_xfer\_byte}(amt203, \hyperlink{AMT203__model_8h_a82ae6af18c17884ed3d756eccd06fcea}{AMT203\_CMD\_NOP}, &res
+      );
+    *data = res;
+    
+    \textcolor{keywordflow}{return} 0;
+\}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{AMT203__model_8c_a79aab08c8244993463d302465ade2acc_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{AMT203__model_8c_a42f2cc241b91cc7ec9587ba3234accbf}{\index{A\-M\-T203\-\_\-model.\-c@{A\-M\-T203\-\_\-model.\-c}!amt203\-\_\-eeprom\-\_\-write@{amt203\-\_\-eeprom\-\_\-write}}
+\index{amt203\-\_\-eeprom\-\_\-write@{amt203\-\_\-eeprom\-\_\-write}!AMT203_model.c@{A\-M\-T203\-\_\-model.\-c}}
+\subsubsection[{amt203\-\_\-eeprom\-\_\-write}]{\setlength{\rightskip}{0pt plus 5cm}int amt203\-\_\-eeprom\-\_\-write (
+\begin{DoxyParamCaption}
+\item[{{\bf amt203\-\_\-t} $\ast$}]{amt203, }
+\item[{uint8\-\_\-t}]{addr, }
+\item[{uint8\-\_\-t}]{data}
+\end{DoxyParamCaption}
+)}}\label{AMT203__model_8c_a42f2cc241b91cc7ec9587ba3234accbf}
+
+
+Definition at line 121 of file A\-M\-T203\-\_\-model.\-c.
+
+
+
+References A\-M\-T203\-\_\-\-C\-M\-D\-\_\-\-E\-E\-P\-R\-O\-M\-\_\-\-W\-R, amt203\-\_\-wait\-\_\-for\-\_\-ack(), and amt203\-\_\-xfer\-\_\-byte().
+
+
+\begin{DoxyCode}
+\{
+    uint8\_t cmd = \hyperlink{AMT203__model_8h_a736111e0245a8d453884778167a7ff0b}{AMT203\_CMD\_EEPROM\_WR};
+    uint8\_t res = 0;
+    assert(amt203 != NULL);
+    
+    \textcolor{comment}{/* Send command */}
+    \hyperlink{AMT203__model_8c_aded9dccef363584017a0740784dd544d}{amt203\_xfer\_byte}(amt203, cmd, &res);
+    \hyperlink{AMT203__model_8c_aded9dccef363584017a0740784dd544d}{amt203\_xfer\_byte}(amt203, addr, &res);
+    \hyperlink{AMT203__model_8c_aded9dccef363584017a0740784dd544d}{amt203\_xfer\_byte}(amt203, data, &res);
+    \textcolor{keywordflow}{if} (\hyperlink{AMT203__model_8c_aa1d351a2063f5d1bee269462d4256075}{amt203\_wait\_for\_ack}(amt203, cmd, 5) != 0) \{ \textcolor{keywordflow}{return} -
+      1; \}
+    
+    \textcolor{keywordflow}{return} 0;
+\}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{AMT203__model_8c_a42f2cc241b91cc7ec9587ba3234accbf_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{AMT203__model_8c_a2c183ebc92d35b7d09e9aaef549d4564}{\index{A\-M\-T203\-\_\-model.\-c@{A\-M\-T203\-\_\-model.\-c}!amt203\-\_\-init@{amt203\-\_\-init}}
+\index{amt203\-\_\-init@{amt203\-\_\-init}!AMT203_model.c@{A\-M\-T203\-\_\-model.\-c}}
+\subsubsection[{amt203\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}int amt203\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{{\bf amt203\-\_\-t} $\ast$}]{amt203, }
+\item[{spi\-\_\-t $\ast$}]{spi, }
+\item[{void($\ast$)(int on)}]{chip\-\_\-select}
+\end{DoxyParamCaption}
+)}}\label{AMT203__model_8c_a2c183ebc92d35b7d09e9aaef549d4564}
+
+
+Definition at line 65 of file A\-M\-T203\-\_\-model.\-c.
+
+
+
+References A\-M\-T203\-\_\-\-C\-M\-D\-\_\-\-N\-O\-P, amt203\-\_\-xfer\-\_\-byte(), amt203\-\_\-t\-::chip\-\_\-select, and amt203\-\_\-t\-::spi.
+
+
+\begin{DoxyCode}
+\{
+    uint8\_t res = 0;
+    \textcolor{keywordtype}{int} i=0;
+    assert(amt203 != NULL);
+    assert(spi != NULL);
+    assert(chip\_select != NULL);
+
+    memset(amt203, 0, \textcolor{keyword}{sizeof}(\hyperlink{structamt203__t}{amt203\_t}));
+    amt203->\hyperlink{structamt203__t_a60f1c7606de69fef34add270769be028}{spi} = spi;
+    amt203->\hyperlink{structamt203__t_a6cfcff7f607042fe15407cdda67db194}{chip\_select} = chip\_select;
+    
+    \textcolor{keywordflow}{for} (i=0; i<5; i++) \{ \hyperlink{AMT203__model_8c_aded9dccef363584017a0740784dd544d}{amt203\_xfer\_byte}(amt203, 
+      \hyperlink{AMT203__model_8h_a82ae6af18c17884ed3d756eccd06fcea}{AMT203\_CMD\_NOP}, &res); \}    
+    \textcolor{keywordflow}{return} 0;
+\}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{AMT203__model_8c_a2c183ebc92d35b7d09e9aaef549d4564_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{AMT203__model_8c_a7de9976acfdbd89389441f16a80d2c88}{\index{A\-M\-T203\-\_\-model.\-c@{A\-M\-T203\-\_\-model.\-c}!amt203\-\_\-position\-\_\-read@{amt203\-\_\-position\-\_\-read}}
+\index{amt203\-\_\-position\-\_\-read@{amt203\-\_\-position\-\_\-read}!AMT203_model.c@{A\-M\-T203\-\_\-model.\-c}}
+\subsubsection[{amt203\-\_\-position\-\_\-read}]{\setlength{\rightskip}{0pt plus 5cm}int amt203\-\_\-position\-\_\-read (
+\begin{DoxyParamCaption}
+\item[{{\bf amt203\-\_\-t} $\ast$}]{amt203, }
+\item[{uint16\-\_\-t $\ast$}]{position}
+\end{DoxyParamCaption}
+)}}\label{AMT203__model_8c_a7de9976acfdbd89389441f16a80d2c88}
+
+
+Definition at line 81 of file A\-M\-T203\-\_\-model.\-c.
+
+
+
+References A\-M\-T203\-\_\-\-C\-M\-D\-\_\-\-N\-O\-P, A\-M\-T203\-\_\-\-C\-M\-D\-\_\-\-R\-D\-\_\-\-P\-O\-S, amt203\-\_\-wait\-\_\-for\-\_\-ack(), and amt203\-\_\-xfer\-\_\-byte().
+
+
+\begin{DoxyCode}
+\{
+    uint8\_t cmd = \hyperlink{AMT203__model_8h_a870453446c985b3c51dc3196effad806}{AMT203\_CMD\_RD\_POS};
+    uint8\_t res = 0;
+    assert(amt203 != NULL);
+
+    \textcolor{comment}{/* Send command */}
+    \hyperlink{AMT203__model_8c_aded9dccef363584017a0740784dd544d}{amt203\_xfer\_byte}(amt203, cmd, &res);
+    \textcolor{keywordflow}{if} (\hyperlink{AMT203__model_8c_aa1d351a2063f5d1bee269462d4256075}{amt203\_wait\_for\_ack}(amt203, cmd, 5) != 0) \{ \textcolor{keywordflow}{return} -
+      1; \}
+    
+    \textcolor{comment}{/* Get high byte */}
+    \hyperlink{AMT203__model_8c_aded9dccef363584017a0740784dd544d}{amt203\_xfer\_byte}(amt203, \hyperlink{AMT203__model_8h_a82ae6af18c17884ed3d756eccd06fcea}{AMT203\_CMD\_NOP}, &res
+      );
+    *position |= ((uint16\_t)res << 8);
+    
+    \textcolor{comment}{/* Get low byte */}
+    \hyperlink{AMT203__model_8c_aded9dccef363584017a0740784dd544d}{amt203\_xfer\_byte}(amt203, \hyperlink{AMT203__model_8h_a82ae6af18c17884ed3d756eccd06fcea}{AMT203\_CMD\_NOP}, &res
+      );
+    *position |= (uint16\_t)res;
+       
+    \textcolor{keywordflow}{return} (*position > 0x0fff);
+\}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{AMT203__model_8c_a7de9976acfdbd89389441f16a80d2c88_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{AMT203__model_8c_aa1d351a2063f5d1bee269462d4256075}{\index{A\-M\-T203\-\_\-model.\-c@{A\-M\-T203\-\_\-model.\-c}!amt203\-\_\-wait\-\_\-for\-\_\-ack@{amt203\-\_\-wait\-\_\-for\-\_\-ack}}
+\index{amt203\-\_\-wait\-\_\-for\-\_\-ack@{amt203\-\_\-wait\-\_\-for\-\_\-ack}!AMT203_model.c@{A\-M\-T203\-\_\-model.\-c}}
+\subsubsection[{amt203\-\_\-wait\-\_\-for\-\_\-ack}]{\setlength{\rightskip}{0pt plus 5cm}static int amt203\-\_\-wait\-\_\-for\-\_\-ack (
+\begin{DoxyParamCaption}
+\item[{{\bf amt203\-\_\-t} $\ast$}]{amt203, }
+\item[{uint8\-\_\-t}]{cmd, }
+\item[{int}]{max\-\_\-errors}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{AMT203__model_8c_aa1d351a2063f5d1bee269462d4256075}
+
+
+Definition at line 51 of file A\-M\-T203\-\_\-model.\-c.
+
+
+
+References A\-M\-T203\-\_\-\-R\-E\-S\-\_\-\-W\-A\-I\-T, and amt203\-\_\-xfer\-\_\-byte().
+
+
+
+Referenced by amt203\-\_\-eeprom\-\_\-read(), amt203\-\_\-eeprom\-\_\-write(), amt203\-\_\-position\-\_\-read(), and amt203\-\_\-zero\-\_\-set().
+
+
+\begin{DoxyCode}
+\{
+    \textcolor{keywordtype}{int} errors = 0;
+    uint8\_t res = 0;
+    \textcolor{keywordflow}{while} (res != cmd) \{
+        \hyperlink{AMT203__model_8c_aded9dccef363584017a0740784dd544d}{amt203\_xfer\_byte}(amt203, cmd, &res);
+        \textcolor{keywordflow}{if} (res != \hyperlink{AMT203__model_8h_ab0ab21f9e87ccda7eb1de831da971131}{AMT203\_RES\_WAIT}) \{
+            errors++;
+            \textcolor{keywordflow}{if} (errors > max\_errors) \{ \textcolor{keywordflow}{return} -1; \}
+        \}
+    \}
+    \textcolor{keywordflow}{return} 0;
+\}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{AMT203__model_8c_aa1d351a2063f5d1bee269462d4256075_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{AMT203__model_8c_aa1d351a2063f5d1bee269462d4256075_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{AMT203__model_8c_aded9dccef363584017a0740784dd544d}{\index{A\-M\-T203\-\_\-model.\-c@{A\-M\-T203\-\_\-model.\-c}!amt203\-\_\-xfer\-\_\-byte@{amt203\-\_\-xfer\-\_\-byte}}
+\index{amt203\-\_\-xfer\-\_\-byte@{amt203\-\_\-xfer\-\_\-byte}!AMT203_model.c@{A\-M\-T203\-\_\-model.\-c}}
+\subsubsection[{amt203\-\_\-xfer\-\_\-byte}]{\setlength{\rightskip}{0pt plus 5cm}static void amt203\-\_\-xfer\-\_\-byte (
+\begin{DoxyParamCaption}
+\item[{{\bf amt203\-\_\-t} $\ast$}]{amt203, }
+\item[{uint8\-\_\-t}]{sbyte, }
+\item[{uint8\-\_\-t $\ast$}]{rbyte}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{AMT203__model_8c_aded9dccef363584017a0740784dd544d}
+
+
+Definition at line 38 of file A\-M\-T203\-\_\-model.\-c.
+
+
+
+References amt203\-\_\-delay(), amt203\-\_\-t\-::chip\-\_\-select, and amt203\-\_\-t\-::spi.
+
+
+
+Referenced by amt203\-\_\-eeprom\-\_\-read(), amt203\-\_\-eeprom\-\_\-write(), amt203\-\_\-init(), amt203\-\_\-position\-\_\-read(), amt203\-\_\-wait\-\_\-for\-\_\-ack(), and amt203\-\_\-zero\-\_\-set().
+
+
+\begin{DoxyCode}
+\{
+    spi\_t * spi = amt203->\hyperlink{structamt203__t_a60f1c7606de69fef34add270769be028}{spi};
+    
+    \textcolor{comment}{/* Every transfer must be gated by the chip select signal. */}
+    amt203->\hyperlink{structamt203__t_a6cfcff7f607042fe15407cdda67db194}{chip\_select}(1);
+    spi\_xfer(spi, sbyte, rbyte);
+    amt203->\hyperlink{structamt203__t_a6cfcff7f607042fe15407cdda67db194}{chip\_select}(0);
+
+    \textcolor{comment}{/* Be safe */}
+    \hyperlink{AMT203__model_8c_a25012053a8f351c9c388e8d2d1c298f9}{amt203\_delay}();
+\}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{AMT203__model_8c_aded9dccef363584017a0740784dd544d_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{AMT203__model_8c_aded9dccef363584017a0740784dd544d_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{AMT203__model_8c_aa5f42cd9b4a737500fcc269e638e5a45}{\index{A\-M\-T203\-\_\-model.\-c@{A\-M\-T203\-\_\-model.\-c}!amt203\-\_\-zero\-\_\-set@{amt203\-\_\-zero\-\_\-set}}
+\index{amt203\-\_\-zero\-\_\-set@{amt203\-\_\-zero\-\_\-set}!AMT203_model.c@{A\-M\-T203\-\_\-model.\-c}}
+\subsubsection[{amt203\-\_\-zero\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}int amt203\-\_\-zero\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{{\bf amt203\-\_\-t} $\ast$}]{amt203}
+\end{DoxyParamCaption}
+)}}\label{AMT203__model_8c_aa5f42cd9b4a737500fcc269e638e5a45}
+
+
+Definition at line 102 of file A\-M\-T203\-\_\-model.\-c.
+
+
+
+References A\-M\-T203\-\_\-\-C\-M\-D\-\_\-\-E\-E\-P\-R\-O\-M\-\_\-\-W\-R, A\-M\-T203\-\_\-\-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-Z\-E\-R\-O, amt203\-\_\-wait\-\_\-for\-\_\-ack(), amt203\-\_\-xfer\-\_\-byte(), and I\-N\-T\-\_\-\-M\-A\-X.
+
+
+\begin{DoxyCode}
+\{
+    uint8\_t cmd = \hyperlink{AMT203__model_8h_a2196c95935dc3c60edbd0279fb1fa461}{AMT203\_CMD\_SET\_ZERO};
+    uint8\_t res = 0;
+    assert(amt203 != NULL);
+    
+    \textcolor{comment}{/* Send command */}
+    \hyperlink{AMT203__model_8c_aded9dccef363584017a0740784dd544d}{amt203\_xfer\_byte}(amt203, cmd, &res);
+    \textcolor{keywordflow}{if} (\hyperlink{AMT203__model_8c_aa1d351a2063f5d1bee269462d4256075}{amt203\_wait\_for\_ack}(amt203, \hyperlink{AMT203__model_8h_a736111e0245a8d453884778167a7ff0b}{AMT203\_CMD\_EEPROM\_WR}
+      , \hyperlink{encoder__functions_8h_a9ec306f36d50c7375e74f0d1c55a3a67}{INT\_MAX}) != 0) \{ 
+        \textcolor{keywordflow}{return} -1; 
+    \}
+
+    \textcolor{comment}{/* Note: }
+\textcolor{comment}{     *   From datasheet, the encoder must be power-cycled after this command}
+\textcolor{comment}{     *   for the new zero position to be used in the position calculation. */}
+
+    \textcolor{keywordflow}{return} 0;
+\}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{AMT203__model_8c_aa5f42cd9b4a737500fcc269e638e5a45_cgraph}
+\end{center}
+\end{figure}
+
+

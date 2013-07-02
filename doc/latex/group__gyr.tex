@@ -41,12 +41,7 @@ I\-N\-I\-T\-I\-A\-L\-I\-Z\-E G\-Y\-R\-O\-M\-E\-T\-E\-R.
 \hline
 {\em rate} & (output data rate in Hz) $<$= 1000 (Fint), if lpf\-\_\-bw is not 256 $<$= 8000 (Fint), if lpf\-\_\-bw is 256 Real rate will be the closest superior rate possible, respcting the formula Rate = Fint/n, 1$<$=n$<$=255 \\
 \hline
-{\em clk\-\_\-source} & =\par
- 'I' Internal oscillator\par
- 'X' P\-L\-L with X Gyro reference\par
- 'Y' P\-L\-L with Y Gyro reference\par
- 'Z' Pll with Z Gyro reference\par
- Obs\-: It is highly recommended that the device is configured to use one of the gyros as the clock reference, due to the improved stability \\
+{\em clk\-\_\-source} & = 'I' Internal oscillator 'X' P\-L\-L with X Gyro reference 'Y' P\-L\-L with Y Gyro reference 'Z' Pll with Z Gyro reference Obs\-: It is highly recommended that the device is configured to use one of the gyros as the clock reference, due to the improved stability \\
 \hline
 {\em act} & (activated gyro data) = \char`\"{}\-X\-Y\-Z\char`\"{} All axes are activated \char`\"{}\-Y\-Z\char`\"{} Only Y and Z axes are activated \char`\"{}\-X\-Z\char`\"{} Only X and Z axes are activated \char`\"{}\-X\-Y\char`\"{} Only X and Y axes are activated \char`\"{}\-X\char`\"{} Only X axis is activated \char`\"{}\-Y\char`\"{} Only Y axis is activated \char`\"{}\-Z\char`\"{} Only Z axis is activated \char`\"{}\char`\"{} Device in very low power sleep mode \\
 \hline
@@ -379,6 +374,6 @@ Definition at line 10 of file gyr\-\_\-functions.\-c.
           \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
   \}
 
-  \textcolor{keywordflow}{return} SUCESS;
+  \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};
 \}
 \end{DoxyCode}

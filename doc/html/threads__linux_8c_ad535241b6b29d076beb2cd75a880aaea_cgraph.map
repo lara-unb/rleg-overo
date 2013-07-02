@@ -1,9 +1,9 @@
 <map id="threads_linux_periodic_task_2" name="threads_linux_periodic_task_2">
-<area shape="rect" id="node3" href="$ui_8c.html#a1559840369fc944a83a3666ef7959413" title="ui_update" alt="" coords="207,191,284,220"/>
-<area shape="rect" id="node5" href="$ui_8c.html#a7d5a9d9a75693709de408781d001a6a6" title="ui_imu_data" alt="" coords="349,5,440,35"/>
+<area shape="rect" id="node3" href="$group__ui.html#ga1559840369fc944a83a3666ef7959413" title="Update Screen with new data of sensors." alt="" coords="207,191,284,220"/>
+<area shape="rect" id="node5" href="$group__ui.html#ga7d5a9d9a75693709de408781d001a6a6" title="Print IMU data." alt="" coords="349,5,440,35"/>
 <area shape="rect" id="node7" href="$ui_8c.html#af48496a4ce54378764bc4ca9eddfd498" title="ui_eff_data" alt="" coords="352,59,437,88"/>
-<area shape="rect" id="node9" href="$ui_8c.html#aefec243c5df45db0350c1abbccf20e3b" title="ui_mra_data" alt="" coords="348,112,441,141"/>
-<area shape="rect" id="node11" href="$ui_8c.html#a6577e01f0ebf9ac1677c616228a64a46" title="ui_overview_data" alt="" coords="333,216,456,245"/>
+<area shape="rect" id="node9" href="$group__ui.html#gaefec243c5df45db0350c1abbccf20e3b" title="Print MRA data." alt="" coords="348,112,441,141"/>
+<area shape="rect" id="node11" href="$ui_8c.html#a6577e01f0ebf9ac1677c616228a64a46" title="Print ALL sensors data." alt="" coords="333,216,456,245"/>
 <area shape="rect" id="node15" href="$datalogger_8c.html#a46fd1290d9ee97d5fc7171e1e0dcb0aa" title="datalogger_status" alt="" coords="504,163,629,192"/>
 <area shape="rect" id="node21" href="$main2_8c.html#a5f05ce725141ddfab683e059b1cd95ea" title="exit_program" alt="" coords="347,371,443,400"/>
 <area shape="rect" id="node24" href="$datalogger_8c.html#aae2ffbc6cbf8f1cfecceb42c5139530a" title="datalogger_stop" alt="" coords="509,269,624,299"/>

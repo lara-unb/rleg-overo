@@ -120,7 +120,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00029"></a><span class="lineno"><a class="code" href="CommunicationV0_2spi__functions_8h.html#a25f003de16c08a4888b69f619d70f427">   29</a></span>&#160;<span class="preprocessor">#define ARRAY_SIZE(a) (sizeof(a) / sizeof((a)[0]))</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">/* INITIALIZE SPI DEVICE */</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keywordtype">int</span> <a class="code" href="communication_2spi__functions_8c.html#a70764aca888e93b0329e7a62c9312704">spi_init</a>(uint8_t mode, uint32_t speed, uint8_t cs);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__spi.html#ga70764aca888e93b0329e7a62c9312704" title="INITIALIZE SPI DEVICE.">spi_init</a>(uint8_t mode, uint32_t speed, uint8_t cs);</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">/* Parameters</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">- mode:         0 .. 3</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">- speed (Hz):   48000000, 24000000, 12000000, 6000000, 3000000, 1500000, 750000, 375000, 187000,, 93700, 46800, 23400, 11700, 5800, 2900, 1500000</span></div>
@@ -129,10 +129,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">*/</span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">/* TERMINATES SPI DEVICE */</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keywordtype">void</span> <a class="code" href="communication_2spi__functions_8c.html#a3fb02c6fc5990df81645306a81291624">spi_end</a>(<span class="keywordtype">int</span> <a class="code" href="CommunicationV0_2communication_8c.html#a4788f0a5355494bc6c13690e28f43783">spi_dev</a>);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__spi.html#ga3fb02c6fc5990df81645306a81291624" title="TERMINATES SPI DEVICE.">spi_end</a>(<span class="keywordtype">int</span> <a class="code" href="CommunicationV0_2communication_8c.html#a4788f0a5355494bc6c13690e28f43783">spi_dev</a>);</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">/* READ DATA FROM A/D CONVERTER MCP3208 */</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keywordtype">short</span> <span class="keywordtype">int</span> <a class="code" href="communication_2spi__functions_8c.html#ae385345c227d9f67ab490b94ed628988">adc_read</a>(<span class="keywordtype">int</span> <a class="code" href="CommunicationV0_2communication_8c.html#a4788f0a5355494bc6c13690e28f43783">spi_dev</a>, uint8_t ch, uint8_t sgl);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keywordtype">short</span> <span class="keywordtype">int</span> <a class="code" href="group__spi.html#gae385345c227d9f67ab490b94ed628988" title="READ DATA FROM A/D CONVERTER MCP3208.">adc_read</a>(<span class="keywordtype">int</span> <a class="code" href="CommunicationV0_2communication_8c.html#a4788f0a5355494bc6c13690e28f43783">spi_dev</a>, uint8_t ch, uint8_t sgl);</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">/* Parameters</span></div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">- ch (channel): 0 .. 7</span></div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">- sgl:  </span></div>
@@ -141,7 +141,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">*/</span></div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">/* WRITE DATA TO D/A CONVERTER MCP3922 */</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;uint8_t <a class="code" href="communication_2spi__functions_8c.html#a5c52e64c336d59215ce0a4b6f340dc9f">dac_write</a>(<span class="keywordtype">int</span> <a class="code" href="CommunicationV0_2communication_8c.html#a4788f0a5355494bc6c13690e28f43783">spi_dev</a>, uint8_t ch, uint8_t _shdn, <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <span class="keywordtype">int</span> data);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;uint8_t <a class="code" href="group__spi.html#ga5c52e64c336d59215ce0a4b6f340dc9f" title="WRITE DATA TO D/A CONVERTER MCP3922.">dac_write</a>(<span class="keywordtype">int</span> <a class="code" href="CommunicationV0_2communication_8c.html#a4788f0a5355494bc6c13690e28f43783">spi_dev</a>, uint8_t ch, uint8_t _shdn, <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <span class="keywordtype">int</span> data);</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">/* Parameters</span></div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">- ch (channel): 0 or 1</span></div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">- _shdn (shutdown):</span></div>
@@ -154,7 +154,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 20 2013 13:56:52 for Rleg by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jul 2 2013 14:59:53 for Rleg by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

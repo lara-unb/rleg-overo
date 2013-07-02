@@ -12,5 +12,6 @@ var searchData=
   ['imu_5fregs_2eh',['imu_regs.h',['../communication_2imu__regs_8h.html',1,'']]],
   ['imu_5fregs_2eh',['imu_regs.h',['../CommunicationV0_2imu__regs_8h.html',1,'']]],
   ['init_5fdata',['init_data',['../CommunicationV0_2communication_8c.html#a3b42d3bd68c5200393c1f0809ed1facf',1,'communication.c']]],
-  ['initialpositions',['initialPositions',['../classCartesian__pose__controller.html#a42433d7f2e4e03ccaac56e1f9a7a5027',1,'Cartesian_pose_controller']]]
+  ['initialpositions',['initialPositions',['../classCartesian__pose__controller.html#a42433d7f2e4e03ccaac56e1f9a7a5027',1,'Cartesian_pose_controller']]],
+  ['int_5fmax',['INT_MAX',['../encoder__functions_8h.html#a9ec306f36d50c7375e74f0d1c55a3a67',1,'encoder_functions.h']]]
 ];

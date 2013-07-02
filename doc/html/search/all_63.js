@@ -22,6 +22,7 @@ var searchData=
   ['cartesian_5fvelocity_5fcontroller_2ecpp',['cartesian_velocity_controller.cpp',['../cartesian__velocity__controller_8cpp.html',1,'']]],
   ['cartesian_5fvelocity_5fcontroller_2eh',['cartesian_velocity_controller.h',['../cartesian__velocity__controller_8h.html',1,'']]],
   ['changeschunkmode',['changeSchunkMode',['../classCartesian__controller.html#aaf006f80e89c08cf040956afbb4cf3c0',1,'Cartesian_controller']]],
+  ['chip_5fselect',['chip_select',['../structamt203__t.html#a6cfcff7f607042fe15407cdda67db194',1,'amt203_t']]],
   ['circularqueue',['CircularQueue',['../structGDATALOGGERVARIABLE.html#ae17ad02442f31da9518c99ce13607c8b',1,'GDATALOGGERVARIABLE']]],
   ['circularqueuecontrol',['CircularQueueControl',['../structGDATALOGGERVARIABLE.html#a1a50747d2223f228288b4656470d9bbc',1,'GDATALOGGERVARIABLE']]],
   ['clk_5fsource',['clk_source',['../structIMU__PARAM__STRUCT_1_1param__gyr.html#aca3b791cb480f2da4703d4c256a7de48',1,'IMU_PARAM_STRUCT::param_gyr']]],

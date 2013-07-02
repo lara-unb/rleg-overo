@@ -1,0 +1,4 @@
+<map id="mag_read_reg" name="mag_read_reg">
+<area shape="rect" id="node3" href="$CommunicationV0_2imu__functions_8h.html#a8f2fd896caf1216ba82e535e6251692f" title="READ ALL DATA AT ONCE (X, Y and Z)" alt="" coords="157,5,288,35"/>
+<area shape="rect" id="node5" href="$CommunicationV0_2imu__functions_8h.html#a542a31ccd07cd2c3e8e2b68cdb6d219e" title="READ DATA (X, Y or Z)" alt="" coords="168,59,277,88"/>
+</map>

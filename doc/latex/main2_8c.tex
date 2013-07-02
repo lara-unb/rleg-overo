@@ -182,7 +182,8 @@ Referenced by ui\-\_\-update().
 \end{DoxyCode}
 
 
-Here is the caller graph for this function\-:\nopagebreak
+Here is the caller graph for this function\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -315,7 +316,8 @@ Referenced by timer\-\_\-start\-\_\-task\-\_\-2().
 \end{DoxyCode}
 
 
-Here is the call graph for this function\-:\nopagebreak
+Here is the call graph for this function\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -417,7 +419,8 @@ Referenced by ui\-\_\-overview\-\_\-data().
 \end{DoxyCode}
 
 
-Here is the caller graph for this function\-:\nopagebreak
+Here is the caller graph for this function\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -485,7 +488,7 @@ References I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::acc, I\-M\-U\
     perror(\textcolor{stringliteral}{"Unsuccesful datalogger initialization"});
     \textcolor{keywordflow}{return} -1;
   \}
-  \textcolor{keywordflow}{if}( \hyperlink{ui_8c_ab7bfb453918dcc296ff0cea3c79453d0}{ui\_init}() != \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS})
+  \textcolor{keywordflow}{if}( \hyperlink{group__ui_gab7bfb453918dcc296ff0cea3c79453d0}{ui\_init}() != \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS})
   \{
     perror(\textcolor{stringliteral}{"Unsuccesful user interface initialization"});
     \textcolor{keywordflow}{return} -1;
@@ -537,7 +540,7 @@ References I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::acc, I\-M\-U\
         return\_value = \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
     \}
 
-    status = \hyperlink{ui_8c_a65d8b92b634da17c344458cd57e61f3e}{ui\_close}();
+    status = \hyperlink{group__ui_ga65d8b92b634da17c344458cd57e61f3e}{ui\_close}();
     \textcolor{keywordflow}{if}(status != \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS})
     \{
         return\_value = \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
@@ -571,7 +574,8 @@ References I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::acc, I\-M\-U\
 \end{DoxyCode}
 
 
-Here is the call graph for this function\-:\nopagebreak
+Here is the call graph for this function\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -710,14 +714,14 @@ Referenced by timer\-\_\-function\-\_\-task\-\_\-1().
        &magnetometer\_measure, &estimation\_data, &control\_data*/});
   \textcolor{comment}{//printf("\(\backslash\)n    %d\(\backslash\)t|",i);}
  \textcolor{comment}{/* printw("%d\(\backslash\)t|",eff\_data.F.x);}
-\textcolor{comment}{printw("\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t|",imu\_data.acc.x,imu\_data.acc.y,imu\_data.acc.z);}
-\textcolor{comment}{printw("\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t|",imu\_data.mag.x,imu\_data.mag.y,imu\_data.mag.z);}
-\textcolor{comment}{printw("\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t%d",imu\_data.gyr.x,imu\_data.gyr.y,imu\_data.gyr.z,
+\textcolor{comment}{    printw("\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t|",imu\_data.acc.x,imu\_data.acc.y,imu\_data.acc.z);}
+\textcolor{comment}{    printw("\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t|",imu\_data.mag.x,imu\_data.mag.y,imu\_data.mag.z);}
+\textcolor{comment}{    printw("\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t%d",imu\_data.gyr.x,imu\_data.gyr.y,imu\_data.gyr.z,
        imu\_data.temp);}
-\textcolor{comment}{printw("\(\backslash\)t%d\(\backslash\)t%d",eff\_data.new\_data,imu\_data.new\_data);}
-\textcolor{comment}{printw("\(\backslash\)t%d\(\backslash\)t%d",mra\_data.Out\_0, mra\_data.Read\_0);}
-\textcolor{comment}{printw("\(\backslash\)n");}
-\textcolor{comment}{refresh();*/}
+\textcolor{comment}{    printw("\(\backslash\)t%d\(\backslash\)t%d",eff\_data.new\_data,imu\_data.new\_data);}
+\textcolor{comment}{    printw("\(\backslash\)t%d\(\backslash\)t%d",mra\_data.Out\_0, mra\_data.Read\_0);}
+\textcolor{comment}{    printw("\(\backslash\)n");}
+\textcolor{comment}{    refresh();*/}
     \}
     previous\_datalogger\_status = current\_datalogger\_status;
 
@@ -792,7 +796,7 @@ Referenced by timer\-\_\-function\-\_\-task\-\_\-2().
     \textcolor{comment}{// UI thread}
     \textcolor{keywordflow}{if}(\hyperlink{main2_8c_a5045187bb0afe92c41ce73bc602fd3ca}{telemetry\_mode} == \hyperlink{ui_8h_a5f863c47136ccbe4db74101b9a3e83ca}{UI\_NCURSES\_MODE})
     \{
-        \hyperlink{ui_8c_a1559840369fc944a83a3666ef7959413}{ui\_update}(&\hyperlink{main2_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\_data}, &\hyperlink{main2_8c_a5650ece8c3a277c7f158d75ae65265fa}{eff\_data}, &\hyperlink{main2_8c_abc42e18d2909e9bc119316283f4ed9db}{mra\_data}
+        \hyperlink{group__ui_ga1559840369fc944a83a3666ef7959413}{ui\_update}(&\hyperlink{main2_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\_data}, &\hyperlink{main2_8c_a5650ece8c3a277c7f158d75ae65265fa}{eff\_data}, &\hyperlink{main2_8c_abc42e18d2909e9bc119316283f4ed9db}{mra\_data}
       , \hyperlink{main2_8c_ac7af894858cf396a219d632f40afdc8d}{total}, \hyperlink{main2_8c_a4f35e5ea2395561d0bd3b2f45612dc2c}{failure});
     \}
                 
@@ -844,7 +848,8 @@ Referenced by timer\-\_\-function\-\_\-task\-\_\-2().
 \end{DoxyCode}
 
 
-Here is the call graph for this function\-:\nopagebreak
+Here is the call graph for this function\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1082,7 +1087,8 @@ Referenced by f\-\_\-timer\-\_\-task\-\_\-2().
 \end{DoxyCode}
 
 
-Here is the call graph for this function\-:\nopagebreak
+Here is the call graph for this function\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1230,7 +1236,8 @@ Referenced by main().
 \end{DoxyCode}
 
 
-Here is the call graph for this function\-:\nopagebreak
+Here is the call graph for this function\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
