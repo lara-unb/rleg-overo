@@ -44,7 +44,7 @@
 
 typedef struct enconder_data{
   int spi_dev;
-  void *angle;
+  int angle;
 }ENC_DATA_STRUCT;
 
 /*

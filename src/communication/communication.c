@@ -4,7 +4,7 @@
  * @headerfile communication.h ""
  */
 
-#include<stdio.h>
+#include <stdio.h>
 #include "communication.h"
 
 
@@ -77,7 +77,7 @@ int devices_init(IMU_PARAM_STRUCT *imu_param, SPI_PARAM_STRUCT *spi_param, MRA_D
   return SUCCESS;
 }
 
-int read_all_data(int i2c_dev, int spi_dev, IMU_DATA_STRUCT *imu_data,EFF_DATA_STRUCT *eff_data, MRA_DATA_STRUCT *mra_data /*, ANG_DATA_STRUCT &ang_data*/)
+int read_all_data(int i2c_dev, int spi_dev, IMU_DATA_STRUCT *imu_data,EFF_DATA_STRUCT *eff_data, MRA_DATA_STRUCT *mra_data , ENC_DATA_STRUCT *enc_data)
 {
   short int data[4];
   int f=0;
@@ -137,6 +137,9 @@ int read_all_data(int i2c_dev, int spi_dev, IMU_DATA_STRUCT *imu_data,EFF_DATA_S
   }
   //if( f==1 )
     //printf("imu_data->new_data antes do return= %d\n",imu_data->new_data);
+
+  //Read Encoder data
+  enc_read_pos(enc_data->spi_dev,&(enc_data->angle));
 
   if( imu_data->new_data==FAILURE || eff_data->new_data==FAILURE || mra_data->new_data==FAILURE )
     return FAILURE;

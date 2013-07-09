@@ -21,11 +21,14 @@ mag_functions.o: mag_functions.c imu_functions.h imu_regs.h
 gyr_functions.o: gyr_functions.c imu_functions.h imu_regs.h
 	$(CC) -c gyr_functions.c
 
-spi_functions.o:	spi_functions.c spi_functions.h
+spi_functions.o: spi_functions.c spi_functions.h
 	$(CC) -c spi_functions.c
 
 gpio_functions.o:	gpio_functions.c gpio_functions.h
 	$(CC) -c gpio_functions.c
+
+encoder_functions.o: encoder_functions.c encoder_functions.h
+	$(CC) -c encoder_functions.c
 
 communication.o:	communication.c communication.h imu_functions.h imu_regs.h
 	$(CC) -c communication.c
@@ -40,3 +43,4 @@ print:
 .PHONY: clean
 clean:
 	-rm -f $(EXECUTABLE) *.o
+

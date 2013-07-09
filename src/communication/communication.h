@@ -4,7 +4,6 @@
  * @date 2012-2013
  */
 
-
 #ifndef COMMUNICATION_H
 #define COMMUNICATION_H
 
@@ -149,7 +148,7 @@ typedef struct mra_data{
    * @param *mra_data
    * @return flag with SUCCESS or FAILURE
    */
-  int read_all_data(int i2c_dev, int spi_dev, IMU_DATA_STRUCT *imu_data,EFF_DATA_STRUCT *eff_data, MRA_DATA_STRUCT *mra_data /*, ANG_DATA_STRUCT &ang_data*/);
+  int read_all_data(int i2c_dev, int spi_dev, IMU_DATA_STRUCT *imu_data,EFF_DATA_STRUCT *eff_data, MRA_DATA_STRUCT *mra_data , ENC_DATA_STRUCT *enc_data);
   
  /**
   * @brief Applies the control signal to the actuator
