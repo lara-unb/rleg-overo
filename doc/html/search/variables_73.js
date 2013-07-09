@@ -27,9 +27,8 @@ var searchData=
   ['sonar_5fdata',['sonar_data',['../threads__linux_8c.html#aafb5fffcd42c3ad4ad9768df45a1a0b5',1,'threads_linux.c']]],
   ['sonar_5fmeasure',['sonar_measure',['../threads__linux_8c.html#a5fe7e1a4ef5e77fabd20272e2f5e5381',1,'threads_linux.c']]],
   ['speed',['speed',['../structSPI__PARAM__STRUCT.html#a53a8d386594a81eb9bc6f971bfe36c54',1,'SPI_PARAM_STRUCT']]],
-  ['spi',['spi',['../structamt203__t.html#a60f1c7606de69fef34add270769be028',1,'amt203_t']]],
-  ['spi_5fdev',['spi_dev',['../structSPI__PARAM__STRUCT.html#abe385c44333d268d17cf648c8e371cad',1,'SPI_PARAM_STRUCT::spi_dev()'],['../CommunicationV0_2communication_8c.html#a4788f0a5355494bc6c13690e28f43783',1,'spi_dev():&#160;communication.c']]],
+  ['spi_5fdev',['spi_dev',['../structSPI__PARAM__STRUCT.html#abe385c44333d268d17cf648c8e371cad',1,'SPI_PARAM_STRUCT::spi_dev()'],['../structENC__DATA__STRUCT.html#a93b8e925392a12a8874bf59f2a1cd76a',1,'ENC_DATA_STRUCT::spi_dev()'],['../CommunicationV0_2communication_8c.html#a4788f0a5355494bc6c13690e28f43783',1,'spi_dev():&#160;communication.c']]],
   ['spi_5fparam',['spi_param',['../main2_8c.html#adec2468b88cf50b20e5cf399a3b7e994',1,'main2.c']]],
-  ['status',['status',['../communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8c.html#a6e27f49150e9a14580fb313cc2777e00',1,'status():&#160;communication (Cópia em conflito de Caio Gustavo Mesquita Angelo 2013-05-17).c'],['../communication_2communication_8c.html#a6e27f49150e9a14580fb313cc2777e00',1,'status():&#160;communication.c']]],
+  ['status',['status',['../communication_2communication_8c.html#a6e27f49150e9a14580fb313cc2777e00',1,'communication.c']]],
   ['stopper_5fqueue',['stopper_queue',['../classCartesian__controller.html#a52eb090400d8dafaa22aecb037788a66',1,'Cartesian_controller']]]
 ];

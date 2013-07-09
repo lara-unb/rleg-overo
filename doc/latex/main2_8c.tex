@@ -125,6 +125,8 @@ short int \hyperlink{main2_8c_aaa9d39905d1be632c8232f11155291d0}{buff} \mbox{[}3
 \hyperlink{structEFF__DATA__STRUCT}{E\-F\-F\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} \hyperlink{main2_8c_a5650ece8c3a277c7f158d75ae65265fa}{eff\-\_\-data}
 \item 
 \hyperlink{structMRA__DATA__STRUCT}{M\-R\-A\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} \hyperlink{main2_8c_abc42e18d2909e9bc119316283f4ed9db}{mra\-\_\-data}
+\item 
+\hyperlink{structENC__DATA__STRUCT}{E\-N\-C\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} \hyperlink{main2_8c_aaa441e18ae805c4f3efb0b5231d1cfe7}{enc\-\_\-data}
 \end{DoxyCompactItemize}
 
 
@@ -209,7 +211,7 @@ References timer\-\_\-function\-\_\-task\-\_\-1().
 
 
 
-Referenced by timer\-\_\-start\-\_\-task\-\_\-1().
+Referenced by timer\-\_\-start\-\_\-task(), and timer\-\_\-start\-\_\-task\-\_\-1().
 
 
 \begin{DoxyCode}
@@ -220,7 +222,8 @@ Referenced by timer\-\_\-start\-\_\-task\-\_\-1().
 \end{DoxyCode}
 
 
-Here is the call graph for this function\-:\nopagebreak
+Here is the call graph for this function\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -257,7 +260,7 @@ References timer\-\_\-function\-\_\-task\-\_\-1().
 
 
 
-Referenced by timer\-\_\-start\-\_\-task\-\_\-1().
+Referenced by timer\-\_\-start\-\_\-task(), and timer\-\_\-start\-\_\-task\-\_\-1().
 
 
 \begin{DoxyCode}
@@ -438,7 +441,7 @@ Here is the caller graph for this function\-:
 )}}\label{main2_8c_a840291bc02cba5474a4cb46a9b9566fe}
 
 
-Definition at line 87 of file main2.\-c.
+Definition at line 88 of file main2.\-c.
 
 
 
@@ -447,7 +450,7 @@ References I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::acc, I\-M\-U\
 
 \begin{DoxyCode}
 \{
-    \textcolor{keywordtype}{int} \hyperlink{communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8c_a6e27f49150e9a14580fb313cc2777e00}{status} = 0;
+    \textcolor{keywordtype}{int} \hyperlink{communication_2communication_8c_a6e27f49150e9a14580fb313cc2777e00}{status} = 0;
     \textcolor{keywordtype}{int} n = 0;
     \textcolor{keywordtype}{int} return\_value = \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};
  
@@ -459,7 +462,7 @@ References I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::acc, I\-M\-U\
   \hyperlink{main2_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a5a4557868f1af679a1098808397b02ec}{gyr}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__gyr_a5aa70e1e9634411c89aacfbc570cc91c}{rate}=100;
   \hyperlink{main2_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a5a4557868f1af679a1098808397b02ec}{gyr}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__gyr_aa612f7299b43a1bf1fc597688c2fa02d}{lpf\_bw}=188;
   \hyperlink{main2_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a5a4557868f1af679a1098808397b02ec}{gyr}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__gyr_aca3b791cb480f2da4703d4c256a7de48}{clk\_source}=\textcolor{charliteral}{'Z'};
-  \hyperlink{main2_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a5a4557868f1af679a1098808397b02ec}{gyr}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__gyr_a8b583edb905ed922572e46453e7d4adf}{act}=\textcolor{stringliteral}{"XYZ"};
+  \hyperlink{main2_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a5a4557868f1af679a1098808397b02ec}{gyr}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__gyr_a909d153e794ec443be04625ce00e4178}{act}=\textcolor{stringliteral}{"XYZ"};
   \hyperlink{main2_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a26b277dcaf05f3842995df888225f6f4}{mag}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__mag_a234de95423b604b05b851ef90890cea1}{rate}=75;
   \hyperlink{main2_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a26b277dcaf05f3842995df888225f6f4}{mag}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__mag_a40ad27ebdb5fde35257b1dc52e40f476}{range}=0;
   \hyperlink{main2_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a26b277dcaf05f3842995df888225f6f4}{mag}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__mag_a52c22cae6940eb39fb72aca66cfeba9a}{samples\_avg}=8;
@@ -470,14 +473,12 @@ References I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::acc, I\-M\-U\
   \hyperlink{main2_8c_adec2468b88cf50b20e5cf399a3b7e994}{spi\_param}.\hyperlink{structSPI__PARAM__STRUCT_a53a8d386594a81eb9bc6f971bfe36c54}{speed}=375000;
   \hyperlink{main2_8c_adec2468b88cf50b20e5cf399a3b7e994}{spi\_param}.\hyperlink{structSPI__PARAM__STRUCT_ae0d62e0a5554783d710b677a017e246f}{cs}=0;
   
-
-  
    \textcolor{comment}{// printf("\(\backslash\)ngpio186 inicialmente = %d\(\backslash\)n",gpio\_read(GPIO\_S0));}
   \textcolor{comment}{//printf("gpio10 inicialmente = %d\(\backslash\)n",gpio\_read(GPIO\_SHDN));}
   
 \textcolor{comment}{// Initialization}
 
-  \textcolor{keywordflow}{if}( \hyperlink{communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8c_a2d1e523ff70db11ca4096f97af5da000}{devices\_init}(&\hyperlink{main2_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}, &\hyperlink{main2_8c_adec2468b88cf50b20e5cf399a3b7e994}{spi\_param}, &
+  \textcolor{keywordflow}{if}( \hyperlink{communication_2communication_8c_a2d1e523ff70db11ca4096f97af5da000}{devices\_init}(&\hyperlink{main2_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}, &\hyperlink{main2_8c_adec2468b88cf50b20e5cf399a3b7e994}{spi\_param}, &
       \hyperlink{main2_8c_abc42e18d2909e9bc119316283f4ed9db}{mra\_data})==\hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE} )
   \{
     perror(\textcolor{stringliteral}{"Unsuccesful devices initialization"});
@@ -493,6 +494,8 @@ References I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::acc, I\-M\-U\
     perror(\textcolor{stringliteral}{"Unsuccesful user interface initialization"});
     \textcolor{keywordflow}{return} -1;
   \}
+  \textcolor{comment}{// enc\_zero\_set(enc\_data)!=SUCCESS ? perror("Unsuccesfull encoder set zero ")
+       : return -1;}
 
   \textcolor{comment}{//gpio\_write(GPIO\_S0,1);}
   \textcolor{comment}{//mra\_data.Out\_0=2275;}
@@ -621,9 +624,9 @@ Referenced by timer\-\_\-function\-\_\-task\-\_\-1().
 
     \textcolor{comment}{//Acquire}
     \hyperlink{main2_8c_ac7af894858cf396a219d632f40afdc8d}{total}++;
-    \textcolor{keywordflow}{if}( \hyperlink{communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8c_a5f0316a5f70c7e369541e996802603b4}{read\_all\_data}(\hyperlink{main2_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a8a870f383fc9ba0b682fdc9b8c0d2734}{i2c\_dev}, \hyperlink{main2_8c_adec2468b88cf50b20e5cf399a3b7e994}{spi\_param}
-      .\hyperlink{structSPI__PARAM__STRUCT_abe385c44333d268d17cf648c8e371cad}{spi\_dev}, &\hyperlink{main2_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\_data}, &\hyperlink{main2_8c_a5650ece8c3a277c7f158d75ae65265fa}{eff\_data}, &\hyperlink{main2_8c_abc42e18d2909e9bc119316283f4ed9db}{mra\_data}) != 
-      \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS})
+    \textcolor{keywordflow}{if}( \hyperlink{communication_2communication_8c_a26f82e8af3b5ce23d5cd3a41db6e0b68}{read\_all\_data}(\hyperlink{main2_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a8a870f383fc9ba0b682fdc9b8c0d2734}{i2c\_dev}, \hyperlink{main2_8c_adec2468b88cf50b20e5cf399a3b7e994}{spi\_param}
+      .\hyperlink{structSPI__PARAM__STRUCT_abe385c44333d268d17cf648c8e371cad}{spi\_dev}, &\hyperlink{main2_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\_data}, &\hyperlink{main2_8c_a5650ece8c3a277c7f158d75ae65265fa}{eff\_data}, &\hyperlink{main2_8c_abc42e18d2909e9bc119316283f4ed9db}{mra\_data}, &
+      \hyperlink{main2_8c_aaa441e18ae805c4f3efb0b5231d1cfe7}{enc\_data}) != \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS})
       \hyperlink{main2_8c_a4f35e5ea2395561d0bd3b2f45612dc2c}{failure}++;
         \textcolor{comment}{/*buff\_i=buff\_i%5;}
 \textcolor{comment}{        buff[0][0][buff\_i]=imu\_data.acc.x;}
@@ -680,7 +683,7 @@ Referenced by timer\-\_\-function\-\_\-task\-\_\-1().
        &control\_data, &estimation\_data);}
 
     \textcolor{comment}{// Actuate}
-    \hyperlink{communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8c_a1d5f01d0124cff7030b5c4951b4bbefa}{actuate}(\hyperlink{main2_8c_adec2468b88cf50b20e5cf399a3b7e994}{spi\_param}.\hyperlink{structSPI__PARAM__STRUCT_abe385c44333d268d17cf648c8e371cad}{spi\_dev}, &\hyperlink{main2_8c_abc42e18d2909e9bc119316283f4ed9db}{mra\_data});
+    \hyperlink{communication_2communication_8c_a1d5f01d0124cff7030b5c4951b4bbefa}{actuate}(\hyperlink{main2_8c_adec2468b88cf50b20e5cf399a3b7e994}{spi\_param}.\hyperlink{structSPI__PARAM__STRUCT_abe385c44333d268d17cf648c8e371cad}{spi\_dev}, &\hyperlink{main2_8c_abc42e18d2909e9bc119316283f4ed9db}{mra\_data});
     \textcolor{comment}{//protocol\_send\_actuation\_data(&pwm\_write\_data);}
 
     \textcolor{comment}{// Log}
@@ -748,7 +751,8 @@ Referenced by timer\-\_\-function\-\_\-task\-\_\-1().
 \end{DoxyCode}
 
 
-Here is the call graph for this function\-:\nopagebreak
+Here is the call graph for this function\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -796,8 +800,8 @@ Referenced by timer\-\_\-function\-\_\-task\-\_\-2().
     \textcolor{comment}{// UI thread}
     \textcolor{keywordflow}{if}(\hyperlink{main2_8c_a5045187bb0afe92c41ce73bc602fd3ca}{telemetry\_mode} == \hyperlink{ui_8h_a5f863c47136ccbe4db74101b9a3e83ca}{UI\_NCURSES\_MODE})
     \{
-        \hyperlink{group__ui_ga1559840369fc944a83a3666ef7959413}{ui\_update}(&\hyperlink{main2_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\_data}, &\hyperlink{main2_8c_a5650ece8c3a277c7f158d75ae65265fa}{eff\_data}, &\hyperlink{main2_8c_abc42e18d2909e9bc119316283f4ed9db}{mra\_data}
-      , \hyperlink{main2_8c_ac7af894858cf396a219d632f40afdc8d}{total}, \hyperlink{main2_8c_a4f35e5ea2395561d0bd3b2f45612dc2c}{failure});
+        \hyperlink{group__ui_ga42e4dac2d138061a74c572358c8ebf49}{ui\_update}(&\hyperlink{main2_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\_data}, &\hyperlink{main2_8c_a5650ece8c3a277c7f158d75ae65265fa}{eff\_data}, &\hyperlink{main2_8c_abc42e18d2909e9bc119316283f4ed9db}{mra\_data}
+      ,&\hyperlink{main2_8c_aaa441e18ae805c4f3efb0b5231d1cfe7}{enc\_data}, \hyperlink{main2_8c_ac7af894858cf396a219d632f40afdc8d}{total}, \hyperlink{main2_8c_a4f35e5ea2395561d0bd3b2f45612dc2c}{failure});
     \}
                 
             \hyperlink{main2_8c_ac0f4eb3a1def152855159c698feaf977}{buff\_i}=\hyperlink{main2_8c_ac0f4eb3a1def152855159c698feaf977}{buff\_i}%5;
@@ -831,7 +835,7 @@ Referenced by timer\-\_\-function\-\_\-task\-\_\-2().
         \{
           close(\hyperlink{main2_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a8a870f383fc9ba0b682fdc9b8c0d2734}{i2c\_dev});
           close(\hyperlink{main2_8c_adec2468b88cf50b20e5cf399a3b7e994}{spi\_param}.\hyperlink{structSPI__PARAM__STRUCT_abe385c44333d268d17cf648c8e371cad}{spi\_dev});
-          \hyperlink{communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8c_a2d1e523ff70db11ca4096f97af5da000}{devices\_init}(&\hyperlink{main2_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}, &\hyperlink{main2_8c_adec2468b88cf50b20e5cf399a3b7e994}{spi\_param}, &
+          \hyperlink{communication_2communication_8c_a2d1e523ff70db11ca4096f97af5da000}{devices\_init}(&\hyperlink{main2_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}, &\hyperlink{main2_8c_adec2468b88cf50b20e5cf399a3b7e994}{spi\_param}, &
       \hyperlink{main2_8c_abc42e18d2909e9bc119316283f4ed9db}{mra\_data});
           equal=0;
         \}
@@ -928,7 +932,7 @@ Referenced by f\-\_\-timer\-\_\-task\-\_\-1().
 
 \begin{DoxyCode}
 \{
-    \textcolor{keywordtype}{int} \hyperlink{communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8c_a6e27f49150e9a14580fb313cc2777e00}{status} = 0;
+    \textcolor{keywordtype}{int} \hyperlink{communication_2communication_8c_a6e27f49150e9a14580fb313cc2777e00}{status} = 0;
     \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval timereset;
     \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval time;
     \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval time\_exec\_start;
@@ -987,7 +991,8 @@ Referenced by f\-\_\-timer\-\_\-task\-\_\-1().
 \end{DoxyCode}
 
 
-Here is the call graph for this function\-:\nopagebreak
+Here is the call graph for this function\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1029,7 +1034,7 @@ Referenced by f\-\_\-timer\-\_\-task\-\_\-2().
 
 \begin{DoxyCode}
 \{
-    \textcolor{keywordtype}{int} \hyperlink{communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8c_a6e27f49150e9a14580fb313cc2777e00}{status} = 0;
+    \textcolor{keywordtype}{int} \hyperlink{communication_2communication_8c_a6e27f49150e9a14580fb313cc2777e00}{status} = 0;
     \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval timereset;
     \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval time;
     \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval time\_exec\_start;
@@ -1163,7 +1168,8 @@ Referenced by main().
 \end{DoxyCode}
 
 
-Here is the call graph for this function\-:\nopagebreak
+Here is the call graph for this function\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1382,6 +1388,13 @@ Definition at line 75 of file main2.\-c.
 
 Referenced by main().
 
+\hypertarget{main2_8c_aaa441e18ae805c4f3efb0b5231d1cfe7}{\index{main2.\-c@{main2.\-c}!enc\-\_\-data@{enc\-\_\-data}}
+\index{enc\-\_\-data@{enc\-\_\-data}!main2.c@{main2.\-c}}
+\subsubsection[{enc\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\-N\-C\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} enc\-\_\-data}}\label{main2_8c_aaa441e18ae805c4f3efb0b5231d1cfe7}
+
+
+Definition at line 77 of file main2.\-c.
+
 \hypertarget{main2_8c_a4f35e5ea2395561d0bd3b2f45612dc2c}{\index{main2.\-c@{main2.\-c}!failure@{failure}}
 \index{failure@{failure}!main2.c@{main2.\-c}}
 \subsubsection[{failure}]{\setlength{\rightskip}{0pt plus 5cm}int failure = 0}}\label{main2_8c_a4f35e5ea2395561d0bd3b2f45612dc2c}
@@ -1479,7 +1492,7 @@ Definition at line 53 of file main2.\-c.
 
 
 
-Referenced by get\-\_\-time(), periodic\-\_\-task\-\_\-1(), reset\-\_\-timer(), threads\-\_\-get\-\_\-time(), threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-1(), threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-2(), threads\-\_\-linux\-\_\-timer\-\_\-function\-\_\-task\-\_\-1(), threads\-\_\-reset\-\_\-timer(), timer\-\_\-function\-\_\-task\-\_\-1(), and ui\-\_\-overview\-\_\-data().
+Referenced by get\-\_\-time(), periodic\-\_\-task\-\_\-1(), reset\-\_\-timer(), threads\-\_\-get\-\_\-time(), threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-1(), threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-2(), threads\-\_\-linux\-\_\-timer\-\_\-function\-\_\-task\-\_\-1(), threads\-\_\-reset\-\_\-timer(), timer\-\_\-function\-\_\-task(), timer\-\_\-function\-\_\-task\-\_\-1(), and ui\-\_\-overview\-\_\-data().
 
 \hypertarget{main2_8c_acdaa4a9b0e1be3dfa53b52df6410ad3b}{\index{main2.\-c@{main2.\-c}!T\-\_\-task\-\_\-1\-\_\-exec\-\_\-global@{T\-\_\-task\-\_\-1\-\_\-exec\-\_\-global}}
 \index{T\-\_\-task\-\_\-1\-\_\-exec\-\_\-global@{T\-\_\-task\-\_\-1\-\_\-exec\-\_\-global}!main2.c@{main2.\-c}}

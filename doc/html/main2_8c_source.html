@@ -161,63 +161,63 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00074"></a><span class="lineno"><a class="code" href="main2_8c.html#a3cfea12cbe9ca7f1681c950e4cd68606">   74</a></span>&#160;  <a class="code" href="structIMU__DATA__STRUCT.html" title="Data of IMU structure.">IMU_DATA_STRUCT</a> <a class="code" href="main2_8c.html#a3cfea12cbe9ca7f1681c950e4cd68606">imu_data</a>;</div>
 <div class="line"><a name="l00075"></a><span class="lineno"><a class="code" href="main2_8c.html#a5650ece8c3a277c7f158d75ae65265fa">   75</a></span>&#160;  <a class="code" href="structEFF__DATA__STRUCT.html">EFF_DATA_STRUCT</a> <a class="code" href="main2_8c.html#a5650ece8c3a277c7f158d75ae65265fa">eff_data</a>;</div>
 <div class="line"><a name="l00076"></a><span class="lineno"><a class="code" href="main2_8c.html#abc42e18d2909e9bc119316283f4ed9db">   76</a></span>&#160;  <a class="code" href="structMRA__DATA__STRUCT.html" title="Struct to control MRA.">MRA_DATA_STRUCT</a> <a class="code" href="main2_8c.html#abc42e18d2909e9bc119316283f4ed9db">mra_data</a>;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">// Calibrated data</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">//IMUMEASURE imu_measure;</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">//MAGNETOMETERMEASURE magnetometer_measure;</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">// State estimate</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">//ESTIMATION_DATA_STRUCT estimation_data;</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">// Controllers</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment">//CONTROL_DATA_STRUCT control_data;</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno"><a class="code" href="main2_8c.html#a840291bc02cba5474a4cb46a9b9566fe">   87</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe">main</a>(<span class="keywordtype">void</span>)</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;{</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8c.html#a6e27f49150e9a14580fb313cc2777e00">status</a> = 0;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordtype">int</span> n = 0;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">int</span> return_value = <a class="code" href="calibration_2calibration_8h.html#aa90cac659d18e8ef6294c7ae337f6b58">SUCCESS</a>;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">// Parameters for IMU and SPI</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  imu_param.<a class="code" href="structIMU__PARAM__STRUCT.html#a92172e4757d0f8f9135a659e406c12e5">acc</a>.<a class="code" href="structIMU__PARAM__STRUCT_1_1param__acc.html#af57da5d956ffa7e49a184326b6b9c738">full_res</a>=1;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  imu_param.<a class="code" href="structIMU__PARAM__STRUCT.html#a92172e4757d0f8f9135a659e406c12e5">acc</a>.<a class="code" href="structIMU__PARAM__STRUCT_1_1param__acc.html#a30e6a318cad098cd8379416705820f95">rate</a>=100;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  imu_param.<a class="code" href="structIMU__PARAM__STRUCT.html#a92172e4757d0f8f9135a659e406c12e5">acc</a>.<a class="code" href="structIMU__PARAM__STRUCT_1_1param__acc.html#a26199b298ef2d353192dfbc706bce8cf">range</a>=16;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  imu_param.<a class="code" href="structIMU__PARAM__STRUCT.html#a5a4557868f1af679a1098808397b02ec">gyr</a>.<a class="code" href="structIMU__PARAM__STRUCT_1_1param__gyr.html#a5aa70e1e9634411c89aacfbc570cc91c">rate</a>=100;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  imu_param.<a class="code" href="structIMU__PARAM__STRUCT.html#a5a4557868f1af679a1098808397b02ec">gyr</a>.<a class="code" href="structIMU__PARAM__STRUCT_1_1param__gyr.html#aa612f7299b43a1bf1fc597688c2fa02d">lpf_bw</a>=188;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  imu_param.<a class="code" href="structIMU__PARAM__STRUCT.html#a5a4557868f1af679a1098808397b02ec">gyr</a>.<a class="code" href="structIMU__PARAM__STRUCT_1_1param__gyr.html#aca3b791cb480f2da4703d4c256a7de48">clk_source</a>=<span class="charliteral">&#39;Z&#39;</span>;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  imu_param.<a class="code" href="structIMU__PARAM__STRUCT.html#a5a4557868f1af679a1098808397b02ec">gyr</a>.<a class="code" href="structIMU__PARAM__STRUCT_1_1param__gyr.html#a8b583edb905ed922572e46453e7d4adf">act</a>=<span class="stringliteral">&quot;XYZ&quot;</span>;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  imu_param.<a class="code" href="structIMU__PARAM__STRUCT.html#a26b277dcaf05f3842995df888225f6f4">mag</a>.<a class="code" href="structIMU__PARAM__STRUCT_1_1param__mag.html#a234de95423b604b05b851ef90890cea1">rate</a>=75;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  imu_param.<a class="code" href="structIMU__PARAM__STRUCT.html#a26b277dcaf05f3842995df888225f6f4">mag</a>.<a class="code" href="structIMU__PARAM__STRUCT_1_1param__mag.html#a40ad27ebdb5fde35257b1dc52e40f476">range</a>=0;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  imu_param.<a class="code" href="structIMU__PARAM__STRUCT.html#a26b277dcaf05f3842995df888225f6f4">mag</a>.<a class="code" href="structIMU__PARAM__STRUCT_1_1param__mag.html#a52c22cae6940eb39fb72aca66cfeba9a">samples_avg</a>=8;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  imu_param.<a class="code" href="structIMU__PARAM__STRUCT.html#a26b277dcaf05f3842995df888225f6f4">mag</a>.<a class="code" href="structIMU__PARAM__STRUCT_1_1param__mag.html#a1f3536709c05310005d648f339d70c54">meas_mode</a>=0;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  imu_param.<a class="code" href="structIMU__PARAM__STRUCT.html#a26b277dcaf05f3842995df888225f6f4">mag</a>.<a class="code" href="structIMU__PARAM__STRUCT_1_1param__mag.html#a39b83b3e9ff5bdcafed0bdf6a2de584b">op_mode</a>=0;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  </div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  spi_param.<a class="code" href="structSPI__PARAM__STRUCT.html#a82c546c99f6c3daed73c1e23426be847">mode</a>=0;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  spi_param.<a class="code" href="structSPI__PARAM__STRUCT.html#a53a8d386594a81eb9bc6f971bfe36c54">speed</a>=375000;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  spi_param.<a class="code" href="structSPI__PARAM__STRUCT.html#ae0d62e0a5554783d710b677a017e246f">cs</a>=0;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  </div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  </div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;   <span class="comment">// printf(&quot;\ngpio186 inicialmente = %d\n&quot;,gpio_read(GPIO_S0));</span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <span class="comment">//printf(&quot;gpio10 inicialmente = %d\n&quot;,gpio_read(GPIO_SHDN));</span></div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  </div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="comment">// Initialization</span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <span class="keywordflow">if</span>( <a class="code" href="communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8c.html#a2d1e523ff70db11ca4096f97af5da000" title="INITIALIZATION OF SENSORS AND DEVICES.">devices_init</a>(&amp;imu_param, &amp;spi_param, &amp;mra_data)==<a class="code" href="calibration_2calibration_8h.html#a6d58f9ac447476b4e084d7ca383f5183">FAILURE</a> )</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  {</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    perror(<span class="stringliteral">&quot;Unsuccesful devices initialization&quot;</span>);</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  }</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  <span class="keywordflow">if</span>( <a class="code" href="datalogger_8c.html#a1977ef253746fd8c008a3641d9822551">datalogger_init</a>()!=<a class="code" href="calibration_2calibration_8h.html#aa90cac659d18e8ef6294c7ae337f6b58">SUCCESS</a> )</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  {</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    perror(<span class="stringliteral">&quot;Unsuccesful datalogger initialization&quot;</span>);</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  }</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <span class="keywordflow">if</span>( <a class="code" href="group__ui.html#gab7bfb453918dcc296ff0cea3c79453d0" title="Initialize UI.">ui_init</a>() != <a class="code" href="calibration_2calibration_8h.html#aa90cac659d18e8ef6294c7ae337f6b58">SUCCESS</a>)</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  {</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    perror(<span class="stringliteral">&quot;Unsuccesful user interface initialization&quot;</span>);</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  }</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="code" href="main2_8c.html#aaa441e18ae805c4f3efb0b5231d1cfe7">   77</a></span>&#160;  <a class="code" href="structENC__DATA__STRUCT.html">ENC_DATA_STRUCT</a> <a class="code" href="main2_8c.html#aaa441e18ae805c4f3efb0b5231d1cfe7">enc_data</a>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">// Calibrated data</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">//IMUMEASURE imu_measure;</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">//MAGNETOMETERMEASURE magnetometer_measure;</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">// State estimate</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">//ESTIMATION_DATA_STRUCT estimation_data;</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment">// Controllers</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment">//CONTROL_DATA_STRUCT control_data;</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="code" href="main2_8c.html#a840291bc02cba5474a4cb46a9b9566fe">   88</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe">main</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;{</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="communication_2communication_8c.html#a6e27f49150e9a14580fb313cc2777e00">status</a> = 0;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">int</span> n = 0;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">int</span> return_value = <a class="code" href="calibration_2calibration_8h.html#aa90cac659d18e8ef6294c7ae337f6b58">SUCCESS</a>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment">// Parameters for IMU and SPI</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  imu_param.<a class="code" href="structIMU__PARAM__STRUCT.html#a92172e4757d0f8f9135a659e406c12e5">acc</a>.<a class="code" href="structIMU__PARAM__STRUCT_1_1param__acc.html#af57da5d956ffa7e49a184326b6b9c738">full_res</a>=1;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  imu_param.<a class="code" href="structIMU__PARAM__STRUCT.html#a92172e4757d0f8f9135a659e406c12e5">acc</a>.<a class="code" href="structIMU__PARAM__STRUCT_1_1param__acc.html#a30e6a318cad098cd8379416705820f95">rate</a>=100;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  imu_param.<a class="code" href="structIMU__PARAM__STRUCT.html#a92172e4757d0f8f9135a659e406c12e5">acc</a>.<a class="code" href="structIMU__PARAM__STRUCT_1_1param__acc.html#a26199b298ef2d353192dfbc706bce8cf">range</a>=16;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  imu_param.<a class="code" href="structIMU__PARAM__STRUCT.html#a5a4557868f1af679a1098808397b02ec">gyr</a>.<a class="code" href="structIMU__PARAM__STRUCT_1_1param__gyr.html#a5aa70e1e9634411c89aacfbc570cc91c">rate</a>=100;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  imu_param.<a class="code" href="structIMU__PARAM__STRUCT.html#a5a4557868f1af679a1098808397b02ec">gyr</a>.<a class="code" href="structIMU__PARAM__STRUCT_1_1param__gyr.html#aa612f7299b43a1bf1fc597688c2fa02d">lpf_bw</a>=188;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  imu_param.<a class="code" href="structIMU__PARAM__STRUCT.html#a5a4557868f1af679a1098808397b02ec">gyr</a>.<a class="code" href="structIMU__PARAM__STRUCT_1_1param__gyr.html#aca3b791cb480f2da4703d4c256a7de48">clk_source</a>=<span class="charliteral">&#39;Z&#39;</span>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  imu_param.<a class="code" href="structIMU__PARAM__STRUCT.html#a5a4557868f1af679a1098808397b02ec">gyr</a>.<a class="code" href="structIMU__PARAM__STRUCT_1_1param__gyr.html#a909d153e794ec443be04625ce00e4178">act</a>=<span class="stringliteral">&quot;XYZ&quot;</span>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  imu_param.<a class="code" href="structIMU__PARAM__STRUCT.html#a26b277dcaf05f3842995df888225f6f4">mag</a>.<a class="code" href="structIMU__PARAM__STRUCT_1_1param__mag.html#a234de95423b604b05b851ef90890cea1">rate</a>=75;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  imu_param.<a class="code" href="structIMU__PARAM__STRUCT.html#a26b277dcaf05f3842995df888225f6f4">mag</a>.<a class="code" href="structIMU__PARAM__STRUCT_1_1param__mag.html#a40ad27ebdb5fde35257b1dc52e40f476">range</a>=0;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  imu_param.<a class="code" href="structIMU__PARAM__STRUCT.html#a26b277dcaf05f3842995df888225f6f4">mag</a>.<a class="code" href="structIMU__PARAM__STRUCT_1_1param__mag.html#a52c22cae6940eb39fb72aca66cfeba9a">samples_avg</a>=8;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  imu_param.<a class="code" href="structIMU__PARAM__STRUCT.html#a26b277dcaf05f3842995df888225f6f4">mag</a>.<a class="code" href="structIMU__PARAM__STRUCT_1_1param__mag.html#a1f3536709c05310005d648f339d70c54">meas_mode</a>=0;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  imu_param.<a class="code" href="structIMU__PARAM__STRUCT.html#a26b277dcaf05f3842995df888225f6f4">mag</a>.<a class="code" href="structIMU__PARAM__STRUCT_1_1param__mag.html#a39b83b3e9ff5bdcafed0bdf6a2de584b">op_mode</a>=0;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  spi_param.<a class="code" href="structSPI__PARAM__STRUCT.html#a82c546c99f6c3daed73c1e23426be847">mode</a>=0;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  spi_param.<a class="code" href="structSPI__PARAM__STRUCT.html#a53a8d386594a81eb9bc6f971bfe36c54">speed</a>=375000;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  spi_param.<a class="code" href="structSPI__PARAM__STRUCT.html#ae0d62e0a5554783d710b677a017e246f">cs</a>=0;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;   <span class="comment">// printf(&quot;\ngpio186 inicialmente = %d\n&quot;,gpio_read(GPIO_S0));</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <span class="comment">//printf(&quot;gpio10 inicialmente = %d\n&quot;,gpio_read(GPIO_SHDN));</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="comment">// Initialization</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="keywordflow">if</span>( <a class="code" href="communication_2communication_8c.html#a2d1e523ff70db11ca4096f97af5da000" title="INITIALIZATION OF SENSORS AND DEVICES.">devices_init</a>(&amp;imu_param, &amp;spi_param, &amp;mra_data)==<a class="code" href="calibration_2calibration_8h.html#a6d58f9ac447476b4e084d7ca383f5183">FAILURE</a> )</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  {</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    perror(<span class="stringliteral">&quot;Unsuccesful devices initialization&quot;</span>);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  }</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <span class="keywordflow">if</span>( <a class="code" href="datalogger_8c.html#a1977ef253746fd8c008a3641d9822551">datalogger_init</a>()!=<a class="code" href="calibration_2calibration_8h.html#aa90cac659d18e8ef6294c7ae337f6b58">SUCCESS</a> )</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  {</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    perror(<span class="stringliteral">&quot;Unsuccesful datalogger initialization&quot;</span>);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  }</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  <span class="keywordflow">if</span>( <a class="code" href="group__ui.html#gab7bfb453918dcc296ff0cea3c79453d0" title="Initialize UI.">ui_init</a>() != <a class="code" href="calibration_2calibration_8h.html#aa90cac659d18e8ef6294c7ae337f6b58">SUCCESS</a>)</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  {</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    perror(<span class="stringliteral">&quot;Unsuccesful user interface initialization&quot;</span>);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  }</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  <span class="comment">// enc_zero_set(enc_data)!=SUCCESS ? perror(&quot;Unsuccesfull encoder set zero &quot;) : return -1;</span></div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  <span class="comment">//gpio_write(GPIO_S0,1);</span></div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  <span class="comment">//mra_data.Out_0=2275;</span></div>
@@ -311,7 +311,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="comment">//Acquire</span></div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <a class="code" href="main2_8c.html#ac7af894858cf396a219d632f40afdc8d">total</a>++;</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="keywordflow">if</span>( <a class="code" href="communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8c.html#a5f0316a5f70c7e369541e996802603b4" title="READ ALL DATA FROM SENSORS AND ADC.">read_all_data</a>(imu_param.<a class="code" href="structIMU__PARAM__STRUCT.html#a8a870f383fc9ba0b682fdc9b8c0d2734">i2c_dev</a>, spi_param.<a class="code" href="structSPI__PARAM__STRUCT.html#abe385c44333d268d17cf648c8e371cad">spi_dev</a>, &amp;imu_data, &amp;eff_data, &amp;mra_data) != <a class="code" href="calibration_2calibration_8h.html#aa90cac659d18e8ef6294c7ae337f6b58">SUCCESS</a>)</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="keywordflow">if</span>( <a class="code" href="communication_2communication_8c.html#a26f82e8af3b5ce23d5cd3a41db6e0b68" title="READ ALL DATA FROM SENSORS AND ADC.">read_all_data</a>(imu_param.<a class="code" href="structIMU__PARAM__STRUCT.html#a8a870f383fc9ba0b682fdc9b8c0d2734">i2c_dev</a>, spi_param.<a class="code" href="structSPI__PARAM__STRUCT.html#abe385c44333d268d17cf648c8e371cad">spi_dev</a>, &amp;imu_data, &amp;eff_data, &amp;mra_data, &amp;enc_data) != <a class="code" href="calibration_2calibration_8h.html#aa90cac659d18e8ef6294c7ae337f6b58">SUCCESS</a>)</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;      <a class="code" href="main2_8c.html#a4f35e5ea2395561d0bd3b2f45612dc2c">failure</a>++;</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        <span class="comment">/*buff_i=buff_i%5;</span></div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="comment">        buff[0][0][buff_i]=imu_data.acc.x;</span></div>
@@ -360,7 +360,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="comment">//control_main_task(t_task_1_global, &amp;pwm_write_data, &amp;pwm_read_data, &amp;control_data, &amp;estimation_data);</span></div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;</div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="comment">// Actuate</span></div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <a class="code" href="communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8c.html#a1d5f01d0124cff7030b5c4951b4bbefa" title="Applies the control signal to the actuator.">actuate</a>(spi_param.<a class="code" href="structSPI__PARAM__STRUCT.html#abe385c44333d268d17cf648c8e371cad">spi_dev</a>, &amp;mra_data);</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <a class="code" href="communication_2communication_8c.html#a1d5f01d0124cff7030b5c4951b4bbefa" title="Applies the control signal to the actuator.">actuate</a>(spi_param.<a class="code" href="structSPI__PARAM__STRUCT.html#abe385c44333d268d17cf648c8e371cad">spi_dev</a>, &amp;mra_data);</div>
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="comment">//protocol_send_actuation_data(&amp;pwm_write_data);</span></div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;</div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <span class="comment">// Log</span></div>
@@ -426,7 +426,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    <span class="comment">// UI thread</span></div>
 <div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="main2_8c.html#a5045187bb0afe92c41ce73bc602fd3ca">telemetry_mode</a> == <a class="code" href="ui_8h.html#a5f863c47136ccbe4db74101b9a3e83ca">UI_NCURSES_MODE</a>)</div>
 <div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    {</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        <a class="code" href="group__ui.html#ga1559840369fc944a83a3666ef7959413" title="Update Screen with new data of sensors.">ui_update</a>(&amp;imu_data, &amp;eff_data, &amp;mra_data, <a class="code" href="main2_8c.html#ac7af894858cf396a219d632f40afdc8d">total</a>, <a class="code" href="main2_8c.html#a4f35e5ea2395561d0bd3b2f45612dc2c">failure</a>);</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        <a class="code" href="group__ui.html#ga42e4dac2d138061a74c572358c8ebf49" title="Update Screen with new data of sensors.">ui_update</a>(&amp;imu_data, &amp;eff_data, &amp;mra_data,&amp;enc_data, <a class="code" href="main2_8c.html#ac7af894858cf396a219d632f40afdc8d">total</a>, <a class="code" href="main2_8c.html#a4f35e5ea2395561d0bd3b2f45612dc2c">failure</a>);</div>
 <div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    }</div>
 <div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;                </div>
 <div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;            <a class="code" href="main2_8c.html#ac0f4eb3a1def152855159c698feaf977">buff_i</a>=<a class="code" href="main2_8c.html#ac0f4eb3a1def152855159c698feaf977">buff_i</a>%5;</div>
@@ -460,7 +460,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;        {</div>
 <div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;          close(imu_param.<a class="code" href="structIMU__PARAM__STRUCT.html#a8a870f383fc9ba0b682fdc9b8c0d2734">i2c_dev</a>);</div>
 <div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;          close(spi_param.<a class="code" href="structSPI__PARAM__STRUCT.html#abe385c44333d268d17cf648c8e371cad">spi_dev</a>);</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;          <a class="code" href="communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8c.html#a2d1e523ff70db11ca4096f97af5da000" title="INITIALIZATION OF SENSORS AND DEVICES.">devices_init</a>(&amp;imu_param, &amp;spi_param, &amp;mra_data);</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;          <a class="code" href="communication_2communication_8c.html#a2d1e523ff70db11ca4096f97af5da000" title="INITIALIZATION OF SENSORS AND DEVICES.">devices_init</a>(&amp;imu_param, &amp;spi_param, &amp;mra_data);</div>
 <div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;          equal=0;</div>
 <div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;        }</div>
 <div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    <span class="comment">/*if(telemetry_mode == UI_MAVLINK_MODE)</span></div>
@@ -569,7 +569,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;</div>
 <div class="line"><a name="l00483"></a><span class="lineno"><a class="code" href="main2_8h.html#a90885bae1b9535b16e014fb928e98e37">  483</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="main2_8c.html#a90885bae1b9535b16e014fb928e98e37">timer_function_task_1</a>(<span class="keywordtype">void</span>)</div>
 <div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;{</div>
-<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8c.html#a6e27f49150e9a14580fb313cc2777e00">status</a> = 0;</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="communication_2communication_8c.html#a6e27f49150e9a14580fb313cc2777e00">status</a> = 0;</div>
 <div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;    <span class="keyword">static</span> <span class="keyword">struct </span>timeval timereset;</div>
 <div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;    <span class="keyword">static</span> <span class="keyword">struct </span>timeval time;</div>
 <div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;    <span class="keyword">static</span> <span class="keyword">struct </span>timeval time_exec_start;</div>
@@ -626,7 +626,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;</div>
 <div class="line"><a name="l00540"></a><span class="lineno"><a class="code" href="main2_8h.html#a01c18e97a4488be2912eb738b2e7f890">  540</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="main2_8c.html#a01c18e97a4488be2912eb738b2e7f890">timer_function_task_2</a>(<span class="keywordtype">void</span>)</div>
 <div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;{</div>
-<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8c.html#a6e27f49150e9a14580fb313cc2777e00">status</a> = 0;</div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="communication_2communication_8c.html#a6e27f49150e9a14580fb313cc2777e00">status</a> = 0;</div>
 <div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;    <span class="keyword">static</span> <span class="keyword">struct </span>timeval timereset;</div>
 <div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;    <span class="keyword">static</span> <span class="keyword">struct </span>timeval time;</div>
 <div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;    <span class="keyword">static</span> <span class="keyword">struct </span>timeval time_exec_start;</div>
@@ -703,7 +703,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 2 2013 14:59:53 for Rleg by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jul 9 2013 12:59:20 for Rleg by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

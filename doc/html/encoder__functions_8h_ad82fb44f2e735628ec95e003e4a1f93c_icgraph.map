@@ -1,4 +1,12 @@
 <map id="enc_wait_for_ack" name="enc_wait_for_ack">
-<area shape="rect" id="node3" href="$encoder__functions_8h.html#a813c09cc4d9af8b357fe440a9438e685" title="enc Function of Encoder AMT203" alt="" coords="180,5,281,35"/>
-<area shape="rect" id="node5" href="$encoder__functions_8h.html#aebbe7b9d3c2571f7481cefacbe36c498" title="SET ZERO POINT." alt="" coords="181,59,280,88"/>
+<area shape="rect" id="node3" href="$encoder__functions_8h.html#a813c09cc4d9af8b357fe440a9438e685" title="READ POSITION." alt="" coords="180,32,281,61"/>
+<area shape="rect" id="node21" href="$encoder__functions_8h.html#aebbe7b9d3c2571f7481cefacbe36c498" title="SET ZERO POINT." alt="" coords="181,85,280,115"/>
+<area shape="rect" id="node5" href="$communication_2communication_8h.html#a26f82e8af3b5ce23d5cd3a41db6e0b68" title="READ ALL DATA FROM SENSORS AND ADC." alt="" coords="331,32,429,61"/>
+<area shape="rect" id="node7" href="$main2_8h.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="509,5,560,35"/>
+<area shape="rect" id="node9" href="$main2_8h.html#a26855b7739897854265d51aa61329390" title="periodic_task_1" alt="" coords="479,59,591,88"/>
+<area shape="rect" id="node11" href="$main2_8h.html#a90885bae1b9535b16e014fb928e98e37" title="timer_function_task_1" alt="" coords="641,59,791,88"/>
+<area shape="rect" id="node13" href="$main2_8c.html#a5ce2b6a7dd4d00c90fe18098091044aa" title="f_timer_task_1" alt="" coords="841,59,948,88"/>
+<area shape="rect" id="node15" href="$main2_8h.html#a0e411070b7f487a8ab6a60b180f50e12" title="timer_start_task_1" alt="" coords="997,32,1128,61"/>
+<area shape="rect" id="node19" href="$taskScheduler_8h.html#ac088a054258396a6e2dba77908f22b42" title="Start some task." alt="" coords="1005,85,1120,115"/>
+<area shape="rect" id="node17" href="$main2_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="1176,32,1227,61"/>
 </map>

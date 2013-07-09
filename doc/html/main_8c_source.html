@@ -121,7 +121,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  imu_param.<a class="code" href="structIMU__PARAM__STRUCT.html#a5a4557868f1af679a1098808397b02ec">gyr</a>.<a class="code" href="structIMU__PARAM__STRUCT_1_1param__gyr.html#a5aa70e1e9634411c89aacfbc570cc91c">rate</a>=100;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  imu_param.<a class="code" href="structIMU__PARAM__STRUCT.html#a5a4557868f1af679a1098808397b02ec">gyr</a>.<a class="code" href="structIMU__PARAM__STRUCT_1_1param__gyr.html#aa612f7299b43a1bf1fc597688c2fa02d">lpf_bw</a>=188;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  imu_param.<a class="code" href="structIMU__PARAM__STRUCT.html#a5a4557868f1af679a1098808397b02ec">gyr</a>.<a class="code" href="structIMU__PARAM__STRUCT_1_1param__gyr.html#aca3b791cb480f2da4703d4c256a7de48">clk_source</a>=<span class="charliteral">&#39;Z&#39;</span>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  imu_param.<a class="code" href="structIMU__PARAM__STRUCT.html#a5a4557868f1af679a1098808397b02ec">gyr</a>.<a class="code" href="structIMU__PARAM__STRUCT_1_1param__gyr.html#a8b583edb905ed922572e46453e7d4adf">act</a>=<span class="stringliteral">&quot;XYZ&quot;</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  imu_param.<a class="code" href="structIMU__PARAM__STRUCT.html#a5a4557868f1af679a1098808397b02ec">gyr</a>.<a class="code" href="structIMU__PARAM__STRUCT_1_1param__gyr.html#a909d153e794ec443be04625ce00e4178">act</a>=<span class="stringliteral">&quot;XYZ&quot;</span>;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  imu_param.<a class="code" href="structIMU__PARAM__STRUCT.html#a26b277dcaf05f3842995df888225f6f4">mag</a>.<a class="code" href="structIMU__PARAM__STRUCT_1_1param__mag.html#a234de95423b604b05b851ef90890cea1">rate</a>=75;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  imu_param.<a class="code" href="structIMU__PARAM__STRUCT.html#a26b277dcaf05f3842995df888225f6f4">mag</a>.<a class="code" href="structIMU__PARAM__STRUCT_1_1param__mag.html#a40ad27ebdb5fde35257b1dc52e40f476">range</a>=0;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  imu_param.<a class="code" href="structIMU__PARAM__STRUCT.html#a26b277dcaf05f3842995df888225f6f4">mag</a>.<a class="code" href="structIMU__PARAM__STRUCT_1_1param__mag.html#a52c22cae6940eb39fb72aca66cfeba9a">samples_avg</a>=8;</div>
@@ -133,7 +133,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  spi_param.<a class="code" href="structSPI__PARAM__STRUCT.html#ae0d62e0a5554783d710b677a017e246f">cs</a>=0;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  </div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">// Initialization</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keywordflow">if</span>( <a class="code" href="communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8c.html#a2d1e523ff70db11ca4096f97af5da000" title="INITIALIZATION OF SENSORS AND DEVICES.">devices_init</a>(&amp;imu_param, &amp;spi_param)==<a class="code" href="calibration_2calibration_8h.html#a6d58f9ac447476b4e084d7ca383f5183">FAILURE</a> )</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keywordflow">if</span>( <a class="code" href="communication_2communication_8c.html#a2d1e523ff70db11ca4096f97af5da000" title="INITIALIZATION OF SENSORS AND DEVICES.">devices_init</a>(&amp;imu_param, &amp;spi_param)==<a class="code" href="calibration_2calibration_8h.html#a6d58f9ac447476b4e084d7ca383f5183">FAILURE</a> )</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  {</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    perror(<span class="stringliteral">&quot;Unsuccesful devices initialization&quot;</span>);</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">return</span> -1;</div>
@@ -168,7 +168,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keywordflow">for</span>( i=1; i&lt;=20000; i++)</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  {  </div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      <span class="comment">//fprintf(log,&quot;    %d\t|&quot;,i); </span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;      <a class="code" href="communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8c.html#a5f0316a5f70c7e369541e996802603b4" title="READ ALL DATA FROM SENSORS AND ADC.">read_all_data</a>(imu_param.<a class="code" href="structIMU__PARAM__STRUCT.html#a8a870f383fc9ba0b682fdc9b8c0d2734">i2c_dev</a>, spi_param.<a class="code" href="structSPI__PARAM__STRUCT.html#abe385c44333d268d17cf648c8e371cad">spi_dev</a>, &amp;imu_data, &amp;eff_data);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;      <a class="code" href="communication_2communication_8c.html#a26f82e8af3b5ce23d5cd3a41db6e0b68" title="READ ALL DATA FROM SENSORS AND ADC.">read_all_data</a>(imu_param.<a class="code" href="structIMU__PARAM__STRUCT.html#a8a870f383fc9ba0b682fdc9b8c0d2734">i2c_dev</a>, spi_param.<a class="code" href="structSPI__PARAM__STRUCT.html#abe385c44333d268d17cf648c8e371cad">spi_dev</a>, &amp;imu_data, &amp;eff_data);</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="comment">// ADC</span></div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment">/*FALTA IMPLEMENTAR AS ESCRITAS NOS GPIOS RESPONSÁVEIS PELA SELEÇÃO DO CHIP SELECT QUANDO REALMENTE FOR USAR A PLACA*/</span></div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment">/*      //spi_dev=spi_init(0,46875,0);</span></div>
@@ -251,7 +251,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 2 2013 14:59:53 for Rleg by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jul 9 2013 12:59:20 for Rleg by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

@@ -96,7 +96,7 @@ Definition at line 15 of file main.\-c.
   imu\_param.\hyperlink{structIMU__PARAM__STRUCT_a5a4557868f1af679a1098808397b02ec}{gyr}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__gyr_a5aa70e1e9634411c89aacfbc570cc91c}{rate}=100;
   imu\_param.\hyperlink{structIMU__PARAM__STRUCT_a5a4557868f1af679a1098808397b02ec}{gyr}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__gyr_aa612f7299b43a1bf1fc597688c2fa02d}{lpf\_bw}=188;
   imu\_param.\hyperlink{structIMU__PARAM__STRUCT_a5a4557868f1af679a1098808397b02ec}{gyr}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__gyr_aca3b791cb480f2da4703d4c256a7de48}{clk\_source}=\textcolor{charliteral}{'Z'};
-  imu\_param.\hyperlink{structIMU__PARAM__STRUCT_a5a4557868f1af679a1098808397b02ec}{gyr}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__gyr_a8b583edb905ed922572e46453e7d4adf}{act}=\textcolor{stringliteral}{"XYZ"};
+  imu\_param.\hyperlink{structIMU__PARAM__STRUCT_a5a4557868f1af679a1098808397b02ec}{gyr}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__gyr_a909d153e794ec443be04625ce00e4178}{act}=\textcolor{stringliteral}{"XYZ"};
   imu\_param.\hyperlink{structIMU__PARAM__STRUCT_a26b277dcaf05f3842995df888225f6f4}{mag}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__mag_a234de95423b604b05b851ef90890cea1}{rate}=75;
   imu\_param.\hyperlink{structIMU__PARAM__STRUCT_a26b277dcaf05f3842995df888225f6f4}{mag}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__mag_a40ad27ebdb5fde35257b1dc52e40f476}{range}=0;
   imu\_param.\hyperlink{structIMU__PARAM__STRUCT_a26b277dcaf05f3842995df888225f6f4}{mag}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__mag_a52c22cae6940eb39fb72aca66cfeba9a}{samples\_avg}=8;
@@ -108,7 +108,7 @@ Definition at line 15 of file main.\-c.
   spi\_param.\hyperlink{structSPI__PARAM__STRUCT_ae0d62e0a5554783d710b677a017e246f}{cs}=0;
   
 \textcolor{comment}{// Initialization}
-  \textcolor{keywordflow}{if}( \hyperlink{communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8c_a2d1e523ff70db11ca4096f97af5da000}{devices\_init}(&imu\_param, &spi\_param)==\hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE} )
+  \textcolor{keywordflow}{if}( \hyperlink{communication_2communication_8c_a2d1e523ff70db11ca4096f97af5da000}{devices\_init}(&imu\_param, &spi\_param)==\hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE} )
   \{
     perror(\textcolor{stringliteral}{"Unsuccesful devices initialization"});
     \textcolor{keywordflow}{return} -1;
@@ -145,7 +145,7 @@ Definition at line 15 of file main.\-c.
   \textcolor{keywordflow}{for}( i=1; i<=20000; i++)
   \{  
       \textcolor{comment}{//fprintf(log,"    %d\(\backslash\)t|",i); }
-      \hyperlink{communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8c_a5f0316a5f70c7e369541e996802603b4}{read\_all\_data}(imu\_param.\hyperlink{structIMU__PARAM__STRUCT_a8a870f383fc9ba0b682fdc9b8c0d2734}{i2c\_dev}, spi\_param.\hyperlink{structSPI__PARAM__STRUCT_abe385c44333d268d17cf648c8e371cad}{spi\_dev}
+      \hyperlink{communication_2communication_8c_a26f82e8af3b5ce23d5cd3a41db6e0b68}{read\_all\_data}(imu\_param.\hyperlink{structIMU__PARAM__STRUCT_a8a870f383fc9ba0b682fdc9b8c0d2734}{i2c\_dev}, spi\_param.\hyperlink{structSPI__PARAM__STRUCT_abe385c44333d268d17cf648c8e371cad}{spi\_dev}
       , &imu\_data, &eff\_data);
   \textcolor{comment}{// ADC}
 \textcolor{comment}{/*FALTA IMPLEMENTAR AS ESCRITAS NOS GPIOS RESPONSÁVEIS PELA SELEÇÃO DO CHIP
