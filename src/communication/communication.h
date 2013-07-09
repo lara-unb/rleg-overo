@@ -11,6 +11,7 @@
 #include "imu_functions.h"
 #include "spi_functions.h"
 #include "gpio_functions.h"
+#include "encoder_functions.h"
 #include "imu_regs.h"
 
 #define GPIO_CS_S0		168	// GPIOs that select CS in Demux

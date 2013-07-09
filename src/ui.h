@@ -30,7 +30,7 @@ int ui_close(void);
  * Update Screen with new data of sensors
  *@ingroup ui
  */
-int ui_update(IMU_DATA_STRUCT *pimu_data, EFF_DATA_STRUCT *peff_data, MRA_DATA_STRUCT *pmra_data, int total, int failure);
+int ui_update(IMU_DATA_STRUCT *pimu_data, EFF_DATA_STRUCT *peff_data, MRA_DATA_STRUCT *pmra_data, ENC_DATA_STRUCT *enc_data, int total, int failure);
 
 /**
  * Print IMU data
@@ -41,6 +41,11 @@ int ui_imu_data(IMU_DATA_STRUCT *pimu_data);
 int ui_eff_data(EFF_DATA_STRUCT *peff_data);
 
 /**
+ * Print ENCODER data
+ */
+int ui_enc_data(ENC_DATA_STRUCT *enc_data);
+
+/**
  * Print MRA data
  * @ingroup ui
  */
@@ -49,7 +54,7 @@ int ui_mra_data(MRA_DATA_STRUCT *pmra_data);
 /**
  * Print ALL sensors data
  */
-int ui_overview_data(int total, int failures, IMU_DATA_STRUCT *pimu_data, EFF_DATA_STRUCT *peff_data, MRA_DATA_STRUCT *pmra_data);
+int ui_overview_data(int total, int failures, IMU_DATA_STRUCT *pimu_data, EFF_DATA_STRUCT *peff_data, MRA_DATA_STRUCT *pmra_data, ENC_DATA_STRUCT *enc_data);
 
 
 //int ui_local_data(CALIBRATION_LOCAL_COORDINATE_SYSTEM_STRUCT *plocal_coordinate_system_data, CALIBRATION_LOCAL_FIELDS_STRUCT *plocal_fields_data, CALIBRATION_ALTIMETER_STRUCT *paltimeter_data);

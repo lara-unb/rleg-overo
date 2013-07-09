@@ -42,6 +42,11 @@
  * @groupdef enc Function of Encoder AMT203
  */
 
+typedef struct enconder_data{
+  int spi_dev;
+  void *angle;
+}ENC_DATA_STRUCT;
+
 /*
  * @brief INITIALIZE ENCODER
  * @ingroup enc

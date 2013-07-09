@@ -50,11 +50,11 @@ int ui_close(void)
 	  return SUCCESS;
 }
 
-int ui_update(IMU_DATA_STRUCT *pimu_data, EFF_DATA_STRUCT *peff_data, MRA_DATA_STRUCT *pmra_data, int total, int failure)
+int ui_update(IMU_DATA_STRUCT *pimu_data, EFF_DATA_STRUCT *peff_data, MRA_DATA_STRUCT *pmra_data,ENC_DATA_STRUCT *enc_data, int total, int failure)
 {
 	unsigned char user_char = 0;
 
-	static enum {UI_OVERVIEW = 0, UI_IMU, UI_EFF, UI_MRA} ui_state;
+	static enum {UI_OVERVIEW = 0, UI_IMU, UI_EFF, UI_MRA , UI_ENC} ui_state;
 
 	erase();
 	//wresize(scr,32,100);
@@ -74,6 +74,10 @@ int ui_update(IMU_DATA_STRUCT *pimu_data, EFF_DATA_STRUCT *peff_data, MRA_DATA_S
 		case UI_MRA:
 			if(ui_mra_data(pmra_data) != SUCCESS) return FAILURE;
 			break;
+
+        	case UI_ENC:
+          		if(ui_enc_data(enc_data) != SUCCESS) return FAILURE;
+			break;
 		case UI_OVERVIEW:
 	        default:
 			if(ui_overview_data(total, failure, pimu_data, peff_data, pmra_data) != SUCCESS) return FAILURE;
@@ -91,30 +95,29 @@ int ui_update(IMU_DATA_STRUCT *pimu_data, EFF_DATA_STRUCT *peff_data, MRA_DATA_S
 		case 'i': //IMU view
 			ui_state = UI_IMU;
 			break;
-		case 'f': //PWM view
+		case 'f': //EFF view
 			ui_state = UI_EFF;
 			break;
+ 	        case 'e': // ENCODER view
+		        ui_state = UI_ENC;
 		case 'o': //Overview
 			ui_state = UI_OVERVIEW;
 			break;
 		case 'm': //MRA
 			ui_state = UI_MRA;
 			break;
-		//case 'e': // State estimator
-		//    ui_state = UI_ESTIMATION;
-		//    break;
-         case 'd': //Datalogger start/stop
-            if(datalogger_status() == DATALOGGER_RUNNING)
-            {
-                datalogger_stop();
-            }
-            else
-            {
-                datalogger_start();
-            }
-            break;
-	 default:
-	      break;
+	        case 'd': //Datalogger start/stop
+                  if(datalogger_status() == DATALOGGER_RUNNING)
+                  {
+                    datalogger_stop();
+                  }
+                  else
+                  {
+                    datalogger_start();
+                  }
+                  break;
+               default:
+	         break;
 	}
 
 	return SUCCESS;
@@ -143,8 +146,7 @@ int ui_imu_data(IMU_DATA_STRUCT *pimu_data)
 	mvprintw(12,0,"Total Acceleromter: %lf",sqrt(pimu_data->calib.acc.x*pimu_data->calib.acc.x+pimu_data->calib.acc.y*pimu_data->calib.acc.y+pimu_data->calib.acc.z*pimu_data->calib.acc.z));
 	mvprintw(13,0,"Total Gyrometer: %lf",sqrt(pimu_data->calib.gyr.x*pimu_data->calib.gyr.x+pimu_data->calib.gyr.y*pimu_data->calib.gyr.y+pimu_data->calib.gyr.z*pimu_data->calib.gyr.z));
 	mvprintw(14,0,"Total Magnetometer: %lf",sqrt(pimu_data->calib.mag.x*pimu_data->calib.mag.x+pimu_data->calib.mag.y*pimu_data->calib.mag.y+pimu_data->calib.mag.z*pimu_data->calib.mag.z));
-	//mvprintw(12, 0, "Accelerometer Magnitude (m/s^2): %lf", pimu_data->accelerometer_magnitude_ms2);
-	//mvprintw(13, 0, "Magnetometer Magnitude (uT):     %lf", pimu_data->magnetometer_magnitude_uT);
+	//mvprintw(15, 0, "Encoder (raw): %lf", enc.data);
 
 	return SUCCESS;
 }
@@ -167,6 +169,12 @@ int ui_eff_data(EFF_DATA_STRUCT *peff_data)
 	return SUCCESS;
 }
 
+int ui_enc_data(ENC_DATA_STRUCT *enc_data)
+{
+   mvprintw(2,0,"Position (raw): %lf",enc_data->angle);
+   return SUCCESS;
+}
+
 int ui_mra_data(MRA_DATA_STRUCT *pmra_data)
 {
 	mvprintw(2,0,"V_ctl (bits): %d",pmra_data->v_ctl);
@@ -176,7 +184,7 @@ int ui_mra_data(MRA_DATA_STRUCT *pmra_data)
 	return SUCCESS;
 }
 
-int ui_overview_data(int total, int failures, IMU_DATA_STRUCT *pimu_data, EFF_DATA_STRUCT *peff_data, MRA_DATA_STRUCT *pmra_data)
+int ui_overview_data(int total, int failures, IMU_DATA_STRUCT *pimu_data, EFF_DATA_STRUCT *peff_data, MRA_DATA_STRUCT *pmra_data, ENC_DATA_STRUCT *enc_data)
 {
 	float error_rate = 0.0;
 	double t = 0.0;
@@ -196,11 +204,12 @@ int ui_overview_data(int total, int failures, IMU_DATA_STRUCT *pimu_data, EFF_DA
 	mvprintw(8, 0,  "IMU Accelerometer (g):\t\tX:%8.5lf\tY:%8.5lf\tZ:%8.5lf", pimu_data->calib.acc.x, pimu_data->calib.acc.y, pimu_data->calib.acc.z);
 	mvprintw(9, 0, "IMU Gyrometer (rad/s):\t\tX:%8.5lf\tY:%8.5lf\tZ:%8.5lf", pimu_data->calib.gyr.x, pimu_data->calib.gyr.y, pimu_data->calib.gyr.z);
 	mvprintw(10, 0, "IMU Magnetometer (B):\t\tX:%8.5lf\tY:%8.5lf\tZ:%8.5lf", pimu_data->calib.mag.x, pimu_data->calib.mag.y, pimu_data->calib.mag.z);
-	
-	mvprintw(12, 0, "Temp (bits):\t%d", pimu_data->temp);
-	mvprintw(12,40, "Temp (ºC):\t%lf", pimu_data->calib_temp);
+	mvprintw(11, 0, "Encoder (rad):\t%d", enc_data->angle);
 
-	mvprintw(14,0,"Fx (bits): %d",peff_data->F.x);
+	mvprintw(13, 0, "Temp (bits):\t%d", pimu_data->temp);
+	mvprintw(13,40, "Temp (ºC):\t%lf", pimu_data->calib_temp);
+
+	mvprintw(15,0,"Fx (bits): %d",peff_data->F.x);
 	//mvprintw(2,40,"Fx (N): %lf",peff_data->??);
 	//mvprintw(15,0,"Fy (bits): %d",peff_data->F.y);
 	//mvprintw(3,40,"Fx (N): %lf",peff_data->??);
@@ -213,17 +222,17 @@ int ui_overview_data(int total, int failures, IMU_DATA_STRUCT *pimu_data, EFF_DA
 	//mvprintw(19,0,"Mz (bits): %d",peff_data->M.z);
 	//mvprintw(7,40,"Mz (Nm): %lf",peff_data->??);
 	
-	mvprintw(16, 0, "Voltage Control Written (bits):\t%4d", pmra_data->v_ctl);
-	mvprintw(17, 0, "Voltage Control Read (bits):\t%4d", pmra_data->v_ctl_read);
+	mvprintw(17, 0, "Voltage Control Written (bits):\t%4d", pmra_data->v_ctl);
+	mvprintw(18, 0, "Voltage Control Read (bits):\t%4d", pmra_data->v_ctl_read);
 
-    mvprintw(19, 0, "Runtime: %4.2lf", t);
+    mvprintw(20, 0, "Runtime: %4.2lf", t);
     if(datalogger_status() == DATALOGGER_NOT_RUNNING)
     {
-        mvprintw(19, 40, "Datalogger stopped");
+        mvprintw(20, 40, "Datalogger stopped");
     }
     else
     {
-        mvprintw(19, 40, "Datalogger runtime: %4.2lf", (t-t0));
+        mvprintw(20, 40, "Datalogger runtime: %4.2lf", (t-t0));
     }
 /*
     if(calibration_get_status() == CALIBRATION_NOT_RUNNING)
@@ -235,13 +244,13 @@ int ui_overview_data(int total, int failures, IMU_DATA_STRUCT *pimu_data, EFF_DA
         mvprintw(15, 0, "Calibration running");
     }
 */
-	mvprintw(21, 0, "I: IMU");
-	mvprintw(21, 20, "F: Efforts");
-	mvprintw(21, 40, "M: Magneto-rheological Actuator");
-	mvprintw(22, 0, "O: Overview");
-	mvprintw(22, 20, "D: Datalogger Start/Stop");
-	mvprintw(23, 0, "Q: Quit");
-    //mvprintw(33, 0, "E: State Estimator");
+	mvprintw(22, 0, "I: IMU");
+	mvprintw(22, 20, "F: Efforts");
+	mvprintw(22, 40, "M: Magneto-rheological Actuator");
+	mvprintw(23, 0, "E: Encoder");
+	mvprintw(23, 20, "O: Overview");
+	mvprintw(23, 40, "D: Datalogger Start/Stop");
+	mvprintw(24, 0, "Q: Quit");
     //mvprintw(34, 0, "C: Control");
 
 

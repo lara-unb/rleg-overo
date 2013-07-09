@@ -74,6 +74,7 @@ short int buff[3][3][3]; //{acc,gyr,mag}{x,y,z}{i=1,2,3}
   IMU_DATA_STRUCT imu_data;
   EFF_DATA_STRUCT eff_data;
   MRA_DATA_STRUCT mra_data;
+  ENC_DATA_STRUCT enc_data;
 // Calibrated data
 //IMUMEASURE imu_measure;
 //MAGNETOMETERMEASURE magnetometer_measure;
@@ -109,8 +110,6 @@ int main(void)
   spi_param.speed=375000;
   spi_param.cs=0;
   
-
-  
    // printf("\ngpio186 inicialmente = %d\n",gpio_read(GPIO_S0));
   //printf("gpio10 inicialmente = %d\n",gpio_read(GPIO_SHDN));
   
@@ -131,6 +130,7 @@ int main(void)
     perror("Unsuccesful user interface initialization");
     return -1;
   }
+  // enc_zero_set(enc_data)!=SUCCESS ? perror("Unsuccesfull encoder set zero ") : return -1;
 
   //gpio_write(GPIO_S0,1);
   //mra_data.Out_0=2275;
@@ -224,7 +224,7 @@ int periodic_task_1(void)
 
     //Acquire
     total++;
-    if( read_all_data(imu_param.i2c_dev, spi_param.spi_dev, &imu_data, &eff_data, &mra_data) != SUCCESS)
+    if( read_all_data(imu_param.i2c_dev, spi_param.spi_dev, &imu_data, &eff_data, &mra_data, &enc_data) != SUCCESS)
       failure++;
         /*buff_i=buff_i%5;
         buff[0][0][buff_i]=imu_data.acc.x;
@@ -339,7 +339,7 @@ int periodic_task_2(void)
     // UI thread
     if(telemetry_mode == UI_NCURSES_MODE)
     {
-        ui_update(&imu_data, &eff_data, &mra_data, total, failure);
+        ui_update(&imu_data, &eff_data, &mra_data,&enc_data, total, failure);
     }
                 
             buff_i=buff_i%5;
