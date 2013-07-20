@@ -1,4 +1,4 @@
 <map id="enc_zero_set" name="enc_zero_set">
 <area shape="rect" id="node3" href="$group__enc.html#gad82fb44f2e735628ec95e003e4a1f93c" title="send command and delay between reads" alt="" coords="156,5,279,35"/>
-<area shape="rect" id="node5" href="$group__spi.html#ga3ae450d2b3ece27bb6036f811a7625a9" title="TRANSFER N BYTES." alt="" coords="328,32,443,61"/>
+<area shape="rect" id="node5" href="$communication_2spi__functions_8c.html#a3ae450d2b3ece27bb6036f811a7625a9" title="TRANSFER N BYTES." alt="" coords="328,32,443,61"/>
 </map>

@@ -47,6 +47,10 @@ Definition at line 37 of file encoder\-\_\-functions.\-c.
 References enc\-\_\-wait\-\_\-for\-\_\-ack(), E\-N\-C\-O\-D\-E\-R\-\_\-\-N\-O\-\_\-\-O\-P, E\-N\-C\-O\-D\-E\-R\-\_\-\-R\-D\-\_\-\-P\-O\-S, F\-A\-I\-L\-U\-R\-E, I\-N\-T\-\_\-\-M\-A\-X, spi\-\_\-trans\-\_\-bytes(), and S\-U\-C\-C\-E\-S\-S.
 
 
+
+Referenced by read\-\_\-all\-\_\-data().
+
+
 \begin{DoxyCode}
                                                       \{
 
@@ -54,13 +58,13 @@ References enc\-\_\-wait\-\_\-for\-\_\-ack(), E\-N\-C\-O\-D\-E\-R\-\_\-\-N\-O\-\
     uint8\_t receive[2] = \{0,\};
     
     \textcolor{comment}{/* Send command */}
-    \hyperlink{group__spi_ga3ae450d2b3ece27bb6036f811a7625a9}{spi\_trans\_bytes}(\hyperlink{CommunicationV0_2communication_8c_a4788f0a5355494bc6c13690e28f43783}{spi\_dev},send,receive,1);
+    \hyperlink{communication_2spi__functions_8c_a3ae450d2b3ece27bb6036f811a7625a9}{spi\_trans\_bytes}(\hyperlink{CommunicationV0_2communication_8c_a4788f0a5355494bc6c13690e28f43783}{spi\_dev},send,receive,1);
     \textcolor{keywordflow}{if} (\hyperlink{group__enc_gad82fb44f2e735628ec95e003e4a1f93c}{enc\_wait\_for\_ack}(\hyperlink{CommunicationV0_2communication_8c_a4788f0a5355494bc6c13690e28f43783}{spi\_dev}, \hyperlink{encoder__functions_8h_a24e6c0e05e904b10f56ae184da9e2aca}{ENCODER\_RD\_POS}
       , \hyperlink{encoder__functions_8h_a9ec306f36d50c7375e74f0d1c55a3a67}{INT\_MAX}) != \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS}) \{ 
         \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE}; 
     \}
 
-    \textcolor{keywordflow}{if}(\hyperlink{group__spi_ga3ae450d2b3ece27bb6036f811a7625a9}{spi\_trans\_bytes}(\hyperlink{CommunicationV0_2communication_8c_a4788f0a5355494bc6c13690e28f43783}{spi\_dev},send,receive,2) != \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS}
+    \textcolor{keywordflow}{if}(\hyperlink{communication_2spi__functions_8c_a3ae450d2b3ece27bb6036f811a7625a9}{spi\_trans\_bytes}(\hyperlink{CommunicationV0_2communication_8c_a4788f0a5355494bc6c13690e28f43783}{spi\_dev},send,receive,2) != \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS}
       ) \{ 
         \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE}; 
     \}
@@ -79,6 +83,18 @@ Here is the call graph for this function\-:
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{group__enc_ga813c09cc4d9af8b357fe440a9438e685_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__enc_ga813c09cc4d9af8b357fe440a9438e685_icgraph}
 \end{center}
 \end{figure}
 
@@ -128,7 +144,7 @@ Referenced by enc\-\_\-read\-\_\-pos(), and enc\-\_\-zero\-\_\-set().
   \textcolor{comment}{//nanosleep(10);}
         \textcolor{comment}{//spi\_trans\_bytes(spi\_dev,send,receive,1);}
     \textcolor{keywordflow}{while} (receive != ack) \{
-        \hyperlink{group__spi_ga3ae450d2b3ece27bb6036f811a7625a9}{spi\_trans\_bytes}(\hyperlink{CommunicationV0_2communication_8c_a4788f0a5355494bc6c13690e28f43783}{spi\_dev},&send,&receive,1);
+        \hyperlink{communication_2spi__functions_8c_a3ae450d2b3ece27bb6036f811a7625a9}{spi\_trans\_bytes}(\hyperlink{CommunicationV0_2communication_8c_a4788f0a5355494bc6c13690e28f43783}{spi\_dev},&send,&receive,1);
         \textcolor{keywordflow}{if} (receive != \hyperlink{encoder__functions_8h_a77c3a97f7312d858d04ec3b4e1fb2176}{ENCODER\_WAIT\_RESP}) \{
             errors++;
             \textcolor{keywordflow}{if} (errors > max\_errors) \{ \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE}; \}
@@ -157,7 +173,7 @@ Here is the caller graph for this function\-:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=288pt]{group__enc_gad82fb44f2e735628ec95e003e4a1f93c_icgraph}
+\includegraphics[width=350pt]{group__enc_gad82fb44f2e735628ec95e003e4a1f93c_icgraph}
 \end{center}
 \end{figure}
 
@@ -199,7 +215,7 @@ References enc\-\_\-wait\-\_\-for\-\_\-ack(), E\-N\-C\-O\-D\-E\-R\-\_\-\-E\-E\-P
     uint8\_t receive = 0;
     
     \textcolor{comment}{/* Send command */}
-    \hyperlink{group__spi_ga3ae450d2b3ece27bb6036f811a7625a9}{spi\_trans\_bytes}(\hyperlink{CommunicationV0_2communication_8c_a4788f0a5355494bc6c13690e28f43783}{spi\_dev},&send,&receive,1);
+    \hyperlink{communication_2spi__functions_8c_a3ae450d2b3ece27bb6036f811a7625a9}{spi\_trans\_bytes}(\hyperlink{CommunicationV0_2communication_8c_a4788f0a5355494bc6c13690e28f43783}{spi\_dev},&send,&receive,1);
     \textcolor{keywordflow}{if} (\hyperlink{group__enc_gad82fb44f2e735628ec95e003e4a1f93c}{enc\_wait\_for\_ack}(\hyperlink{CommunicationV0_2communication_8c_a4788f0a5355494bc6c13690e28f43783}{spi\_dev}, \hyperlink{encoder__functions_8h_ab815abd4b9b825c60dbb04aad0d0e846}{ENCODER\_EEPROM\_WR}
       , \hyperlink{encoder__functions_8h_a9ec306f36d50c7375e74f0d1c55a3a67}{INT\_MAX}) != \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS})\{ 
         \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};

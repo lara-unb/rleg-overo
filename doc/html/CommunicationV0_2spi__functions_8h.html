@@ -122,13 +122,13 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga70764aca888e93b0329e7a62c9312704"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__spi.html#ga70764aca888e93b0329e7a62c9312704">spi_init</a> (uint8_t mode, uint32_t speed, uint8_t cs)</td></tr>
-<tr class="memdesc:ga70764aca888e93b0329e7a62c9312704"><td class="mdescLeft">&#160;</td><td class="mdescRight">INITIALIZE SPI DEVICE.  <a href="group__spi.html#ga70764aca888e93b0329e7a62c9312704"></a><br/></td></tr>
-<tr class="memitem:ga3fb02c6fc5990df81645306a81291624"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__spi.html#ga3fb02c6fc5990df81645306a81291624">spi_end</a> (int <a class="el" href="CommunicationV0_2communication_8c.html#a4788f0a5355494bc6c13690e28f43783">spi_dev</a>)</td></tr>
-<tr class="memdesc:ga3fb02c6fc5990df81645306a81291624"><td class="mdescLeft">&#160;</td><td class="mdescRight">TERMINATES SPI DEVICE.  <a href="group__spi.html#ga3fb02c6fc5990df81645306a81291624"></a><br/></td></tr>
+<tr class="memitem:a70764aca888e93b0329e7a62c9312704"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CommunicationV0_2spi__functions_8h.html#a70764aca888e93b0329e7a62c9312704">spi_init</a> (uint8_t mode, uint32_t speed, uint8_t cs)</td></tr>
+<tr class="memdesc:a70764aca888e93b0329e7a62c9312704"><td class="mdescLeft">&#160;</td><td class="mdescRight">spi Functions to deal communication by SPI protocol  <a href="#a70764aca888e93b0329e7a62c9312704"></a><br/></td></tr>
+<tr class="memitem:a3fb02c6fc5990df81645306a81291624"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CommunicationV0_2spi__functions_8h.html#a3fb02c6fc5990df81645306a81291624">spi_end</a> (int <a class="el" href="CommunicationV0_2communication_8c.html#a4788f0a5355494bc6c13690e28f43783">spi_dev</a>)</td></tr>
+<tr class="memdesc:a3fb02c6fc5990df81645306a81291624"><td class="mdescLeft">&#160;</td><td class="mdescRight">TERMINATES SPI DEVICE.  <a href="#a3fb02c6fc5990df81645306a81291624"></a><br/></td></tr>
 <tr class="memitem:a405e3e13b63a628c1be12ccba7e2ebbf"><td class="memItemLeft" align="right" valign="top">short int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CommunicationV0_2spi__functions_8h.html#a405e3e13b63a628c1be12ccba7e2ebbf">adc_read</a> (int <a class="el" href="CommunicationV0_2communication_8c.html#a4788f0a5355494bc6c13690e28f43783">spi_dev</a>, uint8_t ch, uint8_t sgl)</td></tr>
-<tr class="memitem:ga5c52e64c336d59215ce0a4b6f340dc9f"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__spi.html#ga5c52e64c336d59215ce0a4b6f340dc9f">dac_write</a> (int <a class="el" href="CommunicationV0_2communication_8c.html#a4788f0a5355494bc6c13690e28f43783">spi_dev</a>, uint8_t ch, uint8_t _shdn, unsigned short int data)</td></tr>
-<tr class="memdesc:ga5c52e64c336d59215ce0a4b6f340dc9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">WRITE DATA TO D/A CONVERTER MCP3922.  <a href="group__spi.html#ga5c52e64c336d59215ce0a4b6f340dc9f"></a><br/></td></tr>
+<tr class="memitem:a9fe5e6b0c564de89398a80e1689b717f"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CommunicationV0_2spi__functions_8h.html#a9fe5e6b0c564de89398a80e1689b717f">dac_write</a> (int <a class="el" href="CommunicationV0_2communication_8c.html#a4788f0a5355494bc6c13690e28f43783">spi_dev</a>, uint8_t ch, uint8_t _shdn, unsigned short int data)</td></tr>
+<tr class="memdesc:a9fe5e6b0c564de89398a80e1689b717f"><td class="mdescLeft">&#160;</td><td class="mdescRight">WRITE DATA TO D/A CONVERTER MCP3922.  <a href="#a9fe5e6b0c564de89398a80e1689b717f"></a><br/></td></tr>
 </table>
 <h2>Macro Definition Documentation</h2>
 <a class="anchor" id="a25f003de16c08a4888b69f619d70f427"></a>
@@ -215,10 +215,247 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a class="anchor" id="a9fe5e6b0c564de89398a80e1689b717f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t dac_write </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>spi_dev</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>ch</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>_shdn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned short int&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>WRITE DATA TO D/A CONVERTER MCP3922. </p>
+
+<p>Definition at line <a class="el" href="communication_2spi__functions_8c_source.html#l00200">200</a> of file <a class="el" href="communication_2spi__functions_8c_source.html">spi_functions.c</a>.</p>
+
+<p>References <a class="el" href="communication_2spi__functions_8h_source.html#l00029">ARRAY_SIZE</a>, <a class="el" href="communication_2spi__functions_8c_source.html#l00020">delay</a>, <a class="el" href="communication_2spi__functions_8c_source.html#l00009">FAILURE</a>, and <a class="el" href="communication_2spi__functions_8c_source.html#l00011">pabort()</a>.</p>
+
+<p>Referenced by <a class="el" href="communication_2communication_8c_source.html#l00156">actuate()</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">        <span class="keywordtype">int</span> ret;</div>
+<div class="line">        <span class="keyword">union </span>txunion{</div>
+<div class="line">        <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <span class="keywordtype">int</span> data16;</div>
+<div class="line">        uint8_t data8[2];</div>
+<div class="line">        }txunion;</div>
+<div class="line">        <span class="keywordflow">if</span>( ch&lt;0 || ch&gt;1 ) <span class="keywordflow">return</span> <a class="code" href="communication_2spi__functions_8c.html#a6d58f9ac447476b4e084d7ca383f5183">FAILURE</a>;<span class="comment">//pabort(&quot;Wrong channel value for DAC&quot;);</span></div>
+<div class="line">        <span class="keywordflow">if</span>( data&gt;4095 ) <span class="keywordflow">return</span> <a class="code" href="communication_2spi__functions_8c.html#a6d58f9ac447476b4e084d7ca383f5183">FAILURE</a>;<span class="comment">//pabort(&quot;Value exceeded for DAC&quot;); </span></div>
+<div class="line">        txunion.data16 = 0x6000|(ch&lt;&lt;15)|(_shdn&lt;&lt;12)|(data&amp;0x0FFF);</div>
+<div class="line">        uint8_t tx[] = {txunion.data8[1], txunion.data8[0]};</div>
+<div class="line">        uint8_t rx[<a class="code" href="communication_2spi__functions_8h.html#a25f003de16c08a4888b69f619d70f427">ARRAY_SIZE</a>(tx)] = {0, };</div>
+<div class="line">        <span class="keyword">struct </span>spi_ioc_transfer tr = {</div>
+<div class="line">                .tx_buf = (<span class="keywordtype">unsigned</span> long)tx,</div>
+<div class="line">                .rx_buf = (<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>)rx,</div>
+<div class="line">                .len = <a class="code" href="communication_2spi__functions_8h.html#a25f003de16c08a4888b69f619d70f427">ARRAY_SIZE</a>(tx),</div>
+<div class="line">                .delay_usecs = <a class="code" href="communication_2spi__functions_8c.html#adc4674f6ea53803d98fa2ec36759e77d">delay</a>,</div>
+<div class="line">                .speed_hz = 0,</div>
+<div class="line">                .bits_per_word = 0,</div>
+<div class="line">        };</div>
+<div class="line"></div>
+<div class="line">        ret = ioctl(<a class="code" href="CommunicationV0_2communication_8c.html#a4788f0a5355494bc6c13690e28f43783">spi_dev</a>, SPI_IOC_MESSAGE(1), &amp;tr);</div>
+<div class="line">        <span class="keywordflow">if</span> (ret == 1) <span class="keywordflow">return</span> <a class="code" href="communication_2spi__functions_8c.html#a6d58f9ac447476b4e084d7ca383f5183">FAILURE</a>;<span class="comment">//pabort(&quot;can&#39;t send spi message&quot;);</span></div>
+<div class="line"><span class="comment">//printf(&quot;\nRx = 0x%X 0x%X 0x%X\n&quot;,rx[0],rx[1],rx[2]);</span></div>
+<div class="line"><span class="comment">//printf(&quot;\nValor retornado pelo conversor AD: %d\n\n&quot;,rx[2]+((rx[1]&amp;0x0F)&lt;&lt;8));</span></div>
+<div class="line">        <span class="keywordflow">return</span> 1;</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="CommunicationV0_2spi__functions_8h_a9fe5e6b0c564de89398a80e1689b717f_cgraph.png" border="0" usemap="#CommunicationV0_2spi__functions_8h_a9fe5e6b0c564de89398a80e1689b717f_cgraph" alt=""/></div>
+<map name="CommunicationV0_2spi__functions_8h_a9fe5e6b0c564de89398a80e1689b717f_cgraph" id="CommunicationV0_2spi__functions_8h_a9fe5e6b0c564de89398a80e1689b717f_cgraph">
+<area shape="rect" id="node3" href="communication_2spi__functions_8c.html#aabfca8320b0c76774f01467703e17302" title="pabort" alt="" coords="133,5,192,35"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="CommunicationV0_2spi__functions_8h_a9fe5e6b0c564de89398a80e1689b717f_icgraph.png" border="0" usemap="#CommunicationV0_2spi__functions_8h_a9fe5e6b0c564de89398a80e1689b717f_icgraph" alt=""/></div>
+<map name="CommunicationV0_2spi__functions_8h_a9fe5e6b0c564de89398a80e1689b717f_icgraph" id="CommunicationV0_2spi__functions_8h_a9fe5e6b0c564de89398a80e1689b717f_icgraph">
+<area shape="rect" id="node3" href="communication_2communication_8h.html#a1d5f01d0124cff7030b5c4951b4bbefa" title="Applies the control signal to the actuator." alt="" coords="135,85,199,115"/><area shape="rect" id="node5" href="communication_2communication_8h.html#a2d1e523ff70db11ca4096f97af5da000" title="INITIALIZATION OF SENSORS AND DEVICES." alt="" coords="260,59,351,88"/><area shape="rect" id="node19" href="main2_8h.html#a26855b7739897854265d51aa61329390" title="periodic_task_1" alt="" coords="249,112,361,141"/><area shape="rect" id="node7" href="main2_8h.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="461,5,512,35"/><area shape="rect" id="node9" href="main2_8h.html#a944f7352f18ed248c1b1143f51edc391" title="periodic_task_2" alt="" coords="431,59,543,88"/><area shape="rect" id="node11" href="main2_8h.html#a01c18e97a4488be2912eb738b2e7f890" title="timer_function_task_2" alt="" coords="612,59,761,88"/><area shape="rect" id="node13" href="main2_8c.html#a735ebf3d0d37c7d8187199e6565bcb5c" title="f_timer_task_2" alt="" coords="816,59,923,88"/><area shape="rect" id="node15" href="main2_8h.html#ae59c93969d017f18e3e38b2f9f7888ca" title="timer_start_task_2" alt="" coords="976,59,1107,88"/><area shape="rect" id="node17" href="main2_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="1155,85,1205,115"/><area shape="rect" id="node21" href="main2_8h.html#a90885bae1b9535b16e014fb928e98e37" title="timer_function_task_1" alt="" coords="412,112,561,141"/><area shape="rect" id="node23" href="main2_8c.html#a5ce2b6a7dd4d00c90fe18098091044aa" title="f_timer_task_1" alt="" coords="633,112,740,141"/><area shape="rect" id="node25" href="main2_8h.html#a0e411070b7f487a8ab6a60b180f50e12" title="timer_start_task_1" alt="" coords="976,112,1107,141"/><area shape="rect" id="node28" href="taskScheduler_8h.html#ac088a054258396a6e2dba77908f22b42" title="Start some task." alt="" coords="812,164,927,193"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a3fb02c6fc5990df81645306a81291624"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void spi_end </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>spi_dev</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>TERMINATES SPI DEVICE. </p>
+
+<p>Definition at line <a class="el" href="communication_2spi__functions_8c_source.html#l00166">166</a> of file <a class="el" href="communication_2spi__functions_8c_source.html">spi_functions.c</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">  close(<a class="code" href="CommunicationV0_2communication_8c.html#a4788f0a5355494bc6c13690e28f43783">spi_dev</a>);</div>
+<div class="line">  <span class="keywordflow">return</span>;</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a70764aca888e93b0329e7a62c9312704"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int spi_init </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>mode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>speed</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>cs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>spi Functions to deal communication by SPI protocol </p>
+<p>INITIALIZE SPI DEVICE </p>
+
+<p>Definition at line <a class="el" href="communication_2spi__functions_8c_source.html#l00100">100</a> of file <a class="el" href="communication_2spi__functions_8c_source.html">spi_functions.c</a>.</p>
+
+<p>References <a class="el" href="communication_2spi__functions_8c_source.html#l00018">bits</a>, <a class="el" href="communication_2spi__functions_8c_source.html#l00011">pabort()</a>, and <a class="el" href="CommunicationV0_2communication_8c_source.html#l00007">spi_dev</a>.</p>
+
+<p>Referenced by <a class="el" href="communication_2communication_8c_source.html#l00013">devices_init()</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">        <span class="keywordtype">int</span> ret = 0;</div>
+<div class="line">        <span class="keywordtype">int</span> <a class="code" href="CommunicationV0_2communication_8c.html#a4788f0a5355494bc6c13690e28f43783">spi_dev</a>;</div>
+<div class="line">        <span class="keywordtype">char</span> *device;</div>
+<div class="line"></div>
+<div class="line">        <span class="comment">//parse_opts(argc, argv);</span></div>
+<div class="line">        <span class="comment">/*</span></div>
+<div class="line"><span class="comment">         * chose chipselect:</span></div>
+<div class="line"><span class="comment">         */</span></div>
+<div class="line">        <span class="keywordflow">switch</span>(cs){</div>
+<div class="line">          <span class="keywordflow">case</span> 0:</div>
+<div class="line">            device = <span class="stringliteral">&quot;/dev/spidev1.0&quot;</span>;</div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">          <span class="keywordflow">case</span> 1:</div>
+<div class="line">            device = <span class="stringliteral">&quot;/dev/spidev1.1&quot;</span>;</div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">          <span class="keywordflow">default</span>:</div>
+<div class="line">            <span class="keywordflow">return</span> <a class="code" href="communication_2spi__functions_8c.html#aabfca8320b0c76774f01467703e17302">pabort</a>(<span class="stringliteral">&quot;invalid chip select value&quot;</span>);</div>
+<div class="line">        }</div>
+<div class="line">            </div>
+<div class="line">        </div>
+<div class="line">        spi_dev = open(device, O_RDWR);</div>
+<div class="line">        <span class="keywordflow">if</span> (spi_dev &lt; 0)</div>
+<div class="line">                <span class="keywordflow">return</span> <a class="code" href="communication_2spi__functions_8c.html#aabfca8320b0c76774f01467703e17302">pabort</a>(<span class="stringliteral">&quot;can&#39;t open device&quot;</span>);</div>
+<div class="line"><span class="comment">//printf(&quot;\nspi_dev = %d\n&quot;,spi_dev);</span></div>
+<div class="line">        <span class="comment">/*</span></div>
+<div class="line"><span class="comment">         * spi mode</span></div>
+<div class="line"><span class="comment">         */</span></div>
+<div class="line">        ret = ioctl(spi_dev, SPI_IOC_WR_MODE, &amp;mode);</div>
+<div class="line">        <span class="keywordflow">if</span> (ret == -1)</div>
+<div class="line">                <span class="keywordflow">return</span> <a class="code" href="communication_2spi__functions_8c.html#aabfca8320b0c76774f01467703e17302">pabort</a>(<span class="stringliteral">&quot;can&#39;t set spi mode&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">        ret = ioctl(spi_dev, SPI_IOC_RD_MODE, &amp;mode);</div>
+<div class="line">        <span class="keywordflow">if</span> (ret == -1)</div>
+<div class="line">                <span class="keywordflow">return</span> <a class="code" href="communication_2spi__functions_8c.html#aabfca8320b0c76774f01467703e17302">pabort</a>(<span class="stringliteral">&quot;can&#39;t get spi mode&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">        <span class="comment">/*</span></div>
+<div class="line"><span class="comment">         * bits per word</span></div>
+<div class="line"><span class="comment">         */</span></div>
+<div class="line">        ret = ioctl(spi_dev, SPI_IOC_WR_BITS_PER_WORD, &amp;<a class="code" href="communication_2spi__functions_8c.html#a46a6da6b1936191571fd30b2a749f38c">bits</a>);</div>
+<div class="line">        <span class="keywordflow">if</span> (ret == -1)</div>
+<div class="line">                <span class="keywordflow">return</span> <a class="code" href="communication_2spi__functions_8c.html#aabfca8320b0c76774f01467703e17302">pabort</a>(<span class="stringliteral">&quot;can&#39;t set bits per word&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">        ret = ioctl(spi_dev, SPI_IOC_RD_BITS_PER_WORD, &amp;<a class="code" href="communication_2spi__functions_8c.html#a46a6da6b1936191571fd30b2a749f38c">bits</a>);</div>
+<div class="line">        <span class="keywordflow">if</span> (ret == -1)</div>
+<div class="line">                <span class="keywordflow">return</span> <a class="code" href="communication_2spi__functions_8c.html#aabfca8320b0c76774f01467703e17302">pabort</a>(<span class="stringliteral">&quot;can&#39;t get bits per word&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">        <span class="comment">/*</span></div>
+<div class="line"><span class="comment">         * max speed hz</span></div>
+<div class="line"><span class="comment">         */</span></div>
+<div class="line">        ret = ioctl(spi_dev, SPI_IOC_WR_MAX_SPEED_HZ, &amp;speed);</div>
+<div class="line">        <span class="keywordflow">if</span> (ret == -1)</div>
+<div class="line">                <span class="keywordflow">return</span> <a class="code" href="communication_2spi__functions_8c.html#aabfca8320b0c76774f01467703e17302">pabort</a>(<span class="stringliteral">&quot;can&#39;t set max speed hz&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">        ret = ioctl(spi_dev, SPI_IOC_RD_MAX_SPEED_HZ, &amp;speed);</div>
+<div class="line">        <span class="keywordflow">if</span> (ret == -1)</div>
+<div class="line">                <span class="keywordflow">return</span> <a class="code" href="communication_2spi__functions_8c.html#aabfca8320b0c76774f01467703e17302">pabort</a>(<span class="stringliteral">&quot;can&#39;t get max speed hz&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">        <span class="comment">//printf(&quot;spi mode: %d\n&quot;, mode);</span></div>
+<div class="line">        <span class="comment">//printf(&quot;bits per word: %d\n&quot;, bits);</span></div>
+<div class="line">        <span class="comment">//printf(&quot;max speed: %d Hz (%d KHz)\n&quot;, speed, speed/1000);</span></div>
+<div class="line"></div>
+<div class="line">        <span class="keywordflow">return</span> <a class="code" href="CommunicationV0_2communication_8c.html#a4788f0a5355494bc6c13690e28f43783">spi_dev</a>;</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="CommunicationV0_2spi__functions_8h_a70764aca888e93b0329e7a62c9312704_cgraph.png" border="0" usemap="#CommunicationV0_2spi__functions_8h_a70764aca888e93b0329e7a62c9312704_cgraph" alt=""/></div>
+<map name="CommunicationV0_2spi__functions_8h_a70764aca888e93b0329e7a62c9312704_cgraph" id="CommunicationV0_2spi__functions_8h_a70764aca888e93b0329e7a62c9312704_cgraph">
+<area shape="rect" id="node3" href="communication_2spi__functions_8c.html#aabfca8320b0c76774f01467703e17302" title="pabort" alt="" coords="117,5,176,35"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="CommunicationV0_2spi__functions_8h_a70764aca888e93b0329e7a62c9312704_icgraph.png" border="0" usemap="#CommunicationV0_2spi__functions_8h_a70764aca888e93b0329e7a62c9312704_icgraph" alt=""/></div>
+<map name="CommunicationV0_2spi__functions_8h_a70764aca888e93b0329e7a62c9312704_icgraph" id="CommunicationV0_2spi__functions_8h_a70764aca888e93b0329e7a62c9312704_icgraph">
+<area shape="rect" id="node3" href="communication_2communication_8h.html#a2d1e523ff70db11ca4096f97af5da000" title="INITIALIZATION OF SENSORS AND DEVICES." alt="" coords="117,32,208,61"/><area shape="rect" id="node5" href="main2_8h.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="288,5,339,35"/><area shape="rect" id="node7" href="main2_8h.html#a944f7352f18ed248c1b1143f51edc391" title="periodic_task_2" alt="" coords="257,59,369,88"/><area shape="rect" id="node9" href="main2_8h.html#a01c18e97a4488be2912eb738b2e7f890" title="timer_function_task_2" alt="" coords="420,59,569,88"/><area shape="rect" id="node11" href="main2_8c.html#a735ebf3d0d37c7d8187199e6565bcb5c" title="f_timer_task_2" alt="" coords="620,59,727,88"/><area shape="rect" id="node13" href="main2_8h.html#ae59c93969d017f18e3e38b2f9f7888ca" title="timer_start_task_2" alt="" coords="776,59,907,88"/><area shape="rect" id="node15" href="main2_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="955,59,1005,88"/></map>
+</div>
+</p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 2 2013 14:59:53 for Rleg by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jul 9 2013 12:59:20 for Rleg by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

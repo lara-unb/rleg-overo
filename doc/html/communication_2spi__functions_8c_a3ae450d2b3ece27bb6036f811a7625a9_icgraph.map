@@ -1,5 +1,13 @@
 <map id="spi_trans_bytes" name="spi_trans_bytes">
-<area shape="rect" id="node3" href="$encoder__functions_8h.html#a813c09cc4d9af8b357fe440a9438e685" title="enc Function of Encoder AMT203" alt="" coords="343,5,444,35"/>
-<area shape="rect" id="node5" href="$encoder__functions_8h.html#ad82fb44f2e735628ec95e003e4a1f93c" title="send command and delay between reads" alt="" coords="169,44,292,73"/>
-<area shape="rect" id="node8" href="$encoder__functions_8h.html#aebbe7b9d3c2571f7481cefacbe36c498" title="SET ZERO POINT." alt="" coords="344,71,443,100"/>
+<area shape="rect" id="node3" href="$group__enc.html#ga813c09cc4d9af8b357fe440a9438e685" title="READ POSITION." alt="" coords="343,32,444,61"/>
+<area shape="rect" id="node21" href="$group__enc.html#gad82fb44f2e735628ec95e003e4a1f93c" title="send command and delay between reads" alt="" coords="169,71,292,100"/>
+<area shape="rect" id="node23" href="$group__enc.html#gaebbe7b9d3c2571f7481cefacbe36c498" title="SET ZERO POINT." alt="" coords="344,97,443,127"/>
+<area shape="rect" id="node5" href="$communication_2communication_8h.html#a26f82e8af3b5ce23d5cd3a41db6e0b68" title="READ ALL DATA FROM SENSORS AND ADC." alt="" coords="493,32,592,61"/>
+<area shape="rect" id="node7" href="$main2_8h.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="672,5,723,35"/>
+<area shape="rect" id="node9" href="$main2_8h.html#a26855b7739897854265d51aa61329390" title="periodic_task_1" alt="" coords="641,59,753,88"/>
+<area shape="rect" id="node11" href="$main2_8h.html#a90885bae1b9535b16e014fb928e98e37" title="timer_function_task_1" alt="" coords="804,59,953,88"/>
+<area shape="rect" id="node13" href="$main2_8c.html#a5ce2b6a7dd4d00c90fe18098091044aa" title="f_timer_task_1" alt="" coords="1004,59,1111,88"/>
+<area shape="rect" id="node15" href="$main2_8h.html#a0e411070b7f487a8ab6a60b180f50e12" title="timer_start_task_1" alt="" coords="1160,32,1291,61"/>
+<area shape="rect" id="node19" href="$taskScheduler_8h.html#ac088a054258396a6e2dba77908f22b42" title="Start some task." alt="" coords="1168,85,1283,115"/>
+<area shape="rect" id="node17" href="$main2_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="1339,32,1389,61"/>
 </map>

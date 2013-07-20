@@ -1,18 +1,26 @@
 <map id="timer_start_task_2" name="timer_start_task_2">
-<area shape="rect" id="node3" href="$main2_8c.html#a735ebf3d0d37c7d8187199e6565bcb5c" title="f_timer_task_2" alt="" coords="185,164,292,193"/>
-<area shape="rect" id="node5" href="$main2_8c.html#a01c18e97a4488be2912eb738b2e7f890" title="timer_function_task_2" alt="" coords="343,164,492,193"/>
-<area shape="rect" id="node7" href="$main2_8c.html#a944f7352f18ed248c1b1143f51edc391" title="periodic_task_2" alt="" coords="543,164,655,193"/>
-<area shape="rect" id="node9" href="$communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8c.html#a2d1e523ff70db11ca4096f97af5da000" title="INITIALIZATION OF SENSORS AND DEVICES." alt="" coords="704,137,795,167"/>
-<area shape="rect" id="node11" href="$group__ui.html#ga1559840369fc944a83a3666ef7959413" title="Update Screen with new data of sensors." alt="" coords="711,191,788,220"/>
-<area shape="rect" id="node13" href="$group__ui.html#ga7d5a9d9a75693709de408781d001a6a6" title="Print IMU data." alt="" coords="859,5,949,35"/>
-<area shape="rect" id="node15" href="$ui_8c.html#af48496a4ce54378764bc4ca9eddfd498" title="ui_eff_data" alt="" coords="861,59,947,88"/>
-<area shape="rect" id="node17" href="$group__ui.html#gaefec243c5df45db0350c1abbccf20e3b" title="Print MRA data." alt="" coords="857,112,951,141"/>
-<area shape="rect" id="node19" href="$ui_8c.html#a6577e01f0ebf9ac1677c616228a64a46" title="Print ALL sensors data." alt="" coords="843,216,965,245"/>
-<area shape="rect" id="node23" href="$datalogger_8c.html#a46fd1290d9ee97d5fc7171e1e0dcb0aa" title="datalogger_status" alt="" coords="1013,163,1139,192"/>
-<area shape="rect" id="node29" href="$main2_8c.html#a5f05ce725141ddfab683e059b1cd95ea" title="exit_program" alt="" coords="856,371,952,400"/>
-<area shape="rect" id="node32" href="$datalogger_8c.html#aae2ffbc6cbf8f1cfecceb42c5139530a" title="datalogger_stop" alt="" coords="1019,269,1133,299"/>
-<area shape="rect" id="node36" href="$datalogger_8c.html#a1f254ef380d595d6605c10811fd0dee6" title="datalogger_start" alt="" coords="1019,323,1133,352"/>
-<area shape="rect" id="node21" href="$main2_8c.html#a5b2b1fdd5e517470c10e84a2b2bcc5c8" title="get_time" alt="" coords="1040,216,1112,245"/>
-<area shape="rect" id="node25" href="$datalogger_8c.html#a54b06d9395b2e370a5a72beb7f9524b2" title="datalogger_lock_mutex" alt="" coords="1195,243,1349,272"/>
-<area shape="rect" id="node27" href="$datalogger_8c.html#a85453211c0c809083c36cc56b275aeeb" title="datalogger_unlock_mutex" alt="" coords="1187,296,1357,325"/>
+<area shape="rect" id="node3" href="$main2_8c.html#a735ebf3d0d37c7d8187199e6565bcb5c" title="f_timer_task_2" alt="" coords="185,284,292,313"/>
+<area shape="rect" id="node5" href="$main2_8c.html#a01c18e97a4488be2912eb738b2e7f890" title="timer_function_task_2" alt="" coords="343,284,492,313"/>
+<area shape="rect" id="node7" href="$main2_8c.html#a944f7352f18ed248c1b1143f51edc391" title="periodic_task_2" alt="" coords="543,284,655,313"/>
+<area shape="rect" id="node9" href="$communication_2communication_8c.html#a2d1e523ff70db11ca4096f97af5da000" title="INITIALIZATION OF SENSORS AND DEVICES." alt="" coords="704,139,795,168"/>
+<area shape="rect" id="node25" href="$group__ui.html#ga42e4dac2d138061a74c572358c8ebf49" title="Update Screen with new data of sensors." alt="" coords="711,453,788,483"/>
+<area shape="rect" id="node11" href="$group__acc.html#gae8f9cc6e0d15e61039d846305f86f073" title="Rev 0 &#45; 11/11/2012 RLEG project &#45; 2012." alt="" coords="871,112,937,141"/>
+<area shape="rect" id="node13" href="$communication_2communication_8c.html#a1d5f01d0124cff7030b5c4951b4bbefa" title="Applies the control signal to the actuator." alt="" coords="872,165,936,195"/>
+<area shape="rect" id="node19" href="$group__gyr.html#ga6d02be352b4491a236c9695a6a24d174" title="INITIALIZE GYROMETER." alt="" coords="872,219,936,248"/>
+<area shape="rect" id="node21" href="$communication_2imu__functions_8h.html#a014f908c9faa37c1ec75177a17012a01" title="INITIALIZE MAGNETOMETER." alt="" coords="869,5,939,35"/>
+<area shape="rect" id="node23" href="$communication_2spi__functions_8c.html#a70764aca888e93b0329e7a62c9312704" title="spi Functions to deal communication by SPI protocol" alt="" coords="873,59,935,88"/>
+<area shape="rect" id="node15" href="$communication_2spi__functions_8c.html#a5c52e64c336d59215ce0a4b6f340dc9f" title="WRITE DATA TO D/A CONVERTER MCP3922." alt="" coords="1037,139,1115,168"/>
+<area shape="rect" id="node17" href="$communication_2gpio__functions_8c.html#a9672ca43e65fa527cd6bf43db9aea594" title="gpio_write" alt="" coords="1036,192,1116,221"/>
+<area shape="rect" id="node27" href="$group__ui.html#ga7d5a9d9a75693709de408781d001a6a6" title="Print IMU data." alt="" coords="859,584,949,613"/>
+<area shape="rect" id="node29" href="$ui_8c.html#af48496a4ce54378764bc4ca9eddfd498" title="ui_eff_data" alt="" coords="861,637,947,667"/>
+<area shape="rect" id="node31" href="$group__ui.html#gaefec243c5df45db0350c1abbccf20e3b" title="Print MRA data." alt="" coords="857,691,951,720"/>
+<area shape="rect" id="node33" href="$ui_8c.html#a3821f6ba38465f8d170f7b947869e7d9" title="Print ENCODER data." alt="" coords="859,272,949,301"/>
+<area shape="rect" id="node35" href="$ui_8c.html#a8d5e19833fec51919aad6e78bb74619a" title="Print ALL sensors data." alt="" coords="843,325,965,355"/>
+<area shape="rect" id="node39" href="$datalogger_8c.html#a46fd1290d9ee97d5fc7171e1e0dcb0aa" title="datalogger_status" alt="" coords="1013,375,1139,404"/>
+<area shape="rect" id="node45" href="$main2_8c.html#a5f05ce725141ddfab683e059b1cd95ea" title="exit_program" alt="" coords="856,531,952,560"/>
+<area shape="rect" id="node48" href="$datalogger_8c.html#aae2ffbc6cbf8f1cfecceb42c5139530a" title="datalogger_stop" alt="" coords="1019,428,1133,457"/>
+<area shape="rect" id="node52" href="$datalogger_8c.html#a1f254ef380d595d6605c10811fd0dee6" title="datalogger_start" alt="" coords="1019,481,1133,511"/>
+<area shape="rect" id="node37" href="$main2_8c.html#a5b2b1fdd5e517470c10e84a2b2bcc5c8" title="get_time" alt="" coords="1040,321,1112,351"/>
+<area shape="rect" id="node41" href="$datalogger_8c.html#a54b06d9395b2e370a5a72beb7f9524b2" title="datalogger_lock_mutex" alt="" coords="1195,401,1349,431"/>
+<area shape="rect" id="node43" href="$datalogger_8c.html#a85453211c0c809083c36cc56b275aeeb" title="datalogger_unlock_mutex" alt="" coords="1187,455,1357,484"/>
 </map>

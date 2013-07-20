@@ -104,7 +104,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    uint8_t receive = 0;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    </div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="comment">/* Send command */</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="group__spi.html#ga3ae450d2b3ece27bb6036f811a7625a9" title="TRANSFER N BYTES.">spi_trans_bytes</a>(spi_dev,&amp;send,&amp;receive,1);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="communication_2spi__functions_8c.html#a3ae450d2b3ece27bb6036f811a7625a9" title="TRANSFER N BYTES.">spi_trans_bytes</a>(spi_dev,&amp;send,&amp;receive,1);</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="group__enc.html#gad82fb44f2e735628ec95e003e4a1f93c" title="send command and delay between reads">enc_wait_for_ack</a>(spi_dev, <a class="code" href="encoder__functions_8h.html#ab815abd4b9b825c60dbb04aad0d0e846">ENCODER_EEPROM_WR</a>, <a class="code" href="encoder__functions_8h.html#a9ec306f36d50c7375e74f0d1c55a3a67">INT_MAX</a>) != <a class="code" href="calibration_2calibration_8h.html#aa90cac659d18e8ef6294c7ae337f6b58">SUCCESS</a>){ </div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="calibration_2calibration_8h.html#a6d58f9ac447476b4e084d7ca383f5183">FAILURE</a>;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    }</div>
@@ -122,12 +122,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    uint8_t receive[2] = {0,};</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    </div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="comment">/* Send command */</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="group__spi.html#ga3ae450d2b3ece27bb6036f811a7625a9" title="TRANSFER N BYTES.">spi_trans_bytes</a>(spi_dev,send,receive,1);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="communication_2spi__functions_8c.html#a3ae450d2b3ece27bb6036f811a7625a9" title="TRANSFER N BYTES.">spi_trans_bytes</a>(spi_dev,send,receive,1);</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="group__enc.html#gad82fb44f2e735628ec95e003e4a1f93c" title="send command and delay between reads">enc_wait_for_ack</a>(spi_dev, <a class="code" href="encoder__functions_8h.html#a24e6c0e05e904b10f56ae184da9e2aca">ENCODER_RD_POS</a>, <a class="code" href="encoder__functions_8h.html#a9ec306f36d50c7375e74f0d1c55a3a67">INT_MAX</a>) != <a class="code" href="calibration_2calibration_8h.html#aa90cac659d18e8ef6294c7ae337f6b58">SUCCESS</a>) { </div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="calibration_2calibration_8h.html#a6d58f9ac447476b4e084d7ca383f5183">FAILURE</a>; </div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="group__spi.html#ga3ae450d2b3ece27bb6036f811a7625a9" title="TRANSFER N BYTES.">spi_trans_bytes</a>(spi_dev,send,receive,2) != <a class="code" href="calibration_2calibration_8h.html#aa90cac659d18e8ef6294c7ae337f6b58">SUCCESS</a>) { </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="communication_2spi__functions_8c.html#a3ae450d2b3ece27bb6036f811a7625a9" title="TRANSFER N BYTES.">spi_trans_bytes</a>(spi_dev,send,receive,2) != <a class="code" href="calibration_2calibration_8h.html#aa90cac659d18e8ef6294c7ae337f6b58">SUCCESS</a>) { </div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="calibration_2calibration_8h.html#a6d58f9ac447476b4e084d7ca383f5183">FAILURE</a>; </div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
@@ -146,7 +146,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="comment">//nanosleep(10);</span></div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="comment">//spi_trans_bytes(spi_dev,send,receive,1);</span></div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">while</span> (receive != ack) {</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <a class="code" href="group__spi.html#ga3ae450d2b3ece27bb6036f811a7625a9" title="TRANSFER N BYTES.">spi_trans_bytes</a>(spi_dev,&amp;send,&amp;receive,1);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <a class="code" href="communication_2spi__functions_8c.html#a3ae450d2b3ece27bb6036f811a7625a9" title="TRANSFER N BYTES.">spi_trans_bytes</a>(spi_dev,&amp;send,&amp;receive,1);</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">if</span> (receive != <a class="code" href="encoder__functions_8h.html#a77c3a97f7312d858d04ec3b4e1fb2176">ENCODER_WAIT_RESP</a>) {</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            errors++;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="keywordflow">if</span> (errors &gt; max_errors) { <span class="keywordflow">return</span> <a class="code" href="calibration_2calibration_8h.html#a6d58f9ac447476b4e084d7ca383f5183">FAILURE</a>; }</div>
@@ -158,7 +158,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 2 2013 14:59:53 for Rleg by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jul 9 2013 12:59:20 for Rleg by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

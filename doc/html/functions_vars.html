@@ -130,10 +130,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="structIMU__DATA__STRUCT.html#a448f284bf44eb503affda586ad5fa9d2">IMU_DATA_STRUCT</a>
 </li>
 <li>act
-: <a class="el" href="structIMU__PARAM__STRUCT_1_1param__gyr.html#a8b583edb905ed922572e46453e7d4adf">IMU_PARAM_STRUCT::param_gyr</a>
+: <a class="el" href="structIMU__PARAM__STRUCT_1_1param__gyr.html#a909d153e794ec443be04625ce00e4178">IMU_PARAM_STRUCT::param_gyr</a>
 </li>
 <li>alpha
 : <a class="el" href="structLink.html#ab838e5bc121c212cb1a81fdf78de8757">Link</a>
+</li>
+<li>angle
+: <a class="el" href="structENC__DATA__STRUCT.html#ad25beb30fd5b975292f87db02ec9930a">ENC_DATA_STRUCT</a>
 </li>
 <li>aux1
 : <a class="el" href="classCartesian__controller.html#a37edb9c6e2a5066f74941e3659f68cbc">Cartesian_controller</a>
@@ -153,9 +156,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>calib_temp
 : <a class="el" href="structIMU__DATA__STRUCT.html#a3553fcee6beba17fe0c7711ac0483875">IMU_DATA_STRUCT</a>
-</li>
-<li>chip_select
-: <a class="el" href="structamt203__t.html#a6cfcff7f607042fe15407cdda67db194">amt203_t</a>
 </li>
 <li>CircularQueue
 : <a class="el" href="structGDATALOGGERVARIABLE.html#ae17ad02442f31da9518c99ce13607c8b">GDATALOGGERVARIABLE</a>
@@ -290,6 +290,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>initialPositions
 : <a class="el" href="classCartesian__pose__controller.html#a42433d7f2e4e03ccaac56e1f9a7a5027">Cartesian_pose_controller</a>
 </li>
+<li>isFirstExecution
+: <a class="el" href="structTASK__S.html#a4b50404ee955691f1c62845cdc9de676">TASK_S</a>
+</li>
 </ul>
 
 
@@ -396,6 +399,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>p
 : <a class="el" href="structDQ.html#a878210bff170f4392d6cbe2d4704ffdc">DQ</a>
 </li>
+<li>period_us
+: <a class="el" href="structTASK__S.html#aabd8f80831e6cfd8e51bbd371eed907b">TASK_S</a>
+</li>
 <li>pMat1
 : <a class="el" href="structDUMMY__MATRICES.html#a83b2fec22eaa2674a6360711702d28ac">DUMMY_MATRICES</a>
 </li>
@@ -463,6 +469,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>ros_pub_buffer
 : <a class="el" href="classCartesian__controller.html#ab9ed5a808da204dbc612d313dc7332f4">Cartesian_controller</a>
+</li>
+<li>runFunction
+: <a class="el" href="structTASK__S.html#a241d427891bed303812b78bd9f9ad86f">TASK_S</a>
 </li>
 </ul>
 
@@ -540,11 +549,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>speed
 : <a class="el" href="structSPI__PARAM__STRUCT.html#a53a8d386594a81eb9bc6f971bfe36c54">SPI_PARAM_STRUCT</a>
 </li>
-<li>spi
-: <a class="el" href="structamt203__t.html#a60f1c7606de69fef34add270769be028">amt203_t</a>
-</li>
 <li>spi_dev
-: <a class="el" href="structSPI__PARAM__STRUCT.html#abe385c44333d268d17cf648c8e371cad">SPI_PARAM_STRUCT</a>
+: <a class="el" href="structENC__DATA__STRUCT.html#a93b8e925392a12a8874bf59f2a1cd76a">ENC_DATA_STRUCT</a>
+, <a class="el" href="structSPI__PARAM__STRUCT.html#abe385c44333d268d17cf648c8e371cad">SPI_PARAM_STRUCT</a>
 </li>
 <li>stopper_queue
 : <a class="el" href="classCartesian__controller.html#a52eb090400d8dafaa22aecb037788a66">Cartesian_controller</a>
@@ -556,6 +563,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>T
 : <a class="el" href="classCartesian__controller.html#a35c6ddbb9624878f2807ff644a33e832">Cartesian_controller</a>
 </li>
+<li>T_exec_global
+: <a class="el" href="structTASK__S.html#ae06b712fd9963cff8192e9ef3140bc6d">TASK_S</a>
+</li>
+<li>t_global
+: <a class="el" href="structTASK__S.html#a29a175bdd4b9f880a2b69bb5186e3c7e">TASK_S</a>
+</li>
+<li>T_max_global
+: <a class="el" href="structTASK__S.html#a430c874cbf361b6dbc75ad1540880948">TASK_S</a>
+</li>
+<li>T_mean_global
+: <a class="el" href="structTASK__S.html#a9ebae87e1b64869f328a47473f2ea7d7">TASK_S</a>
+</li>
+<li>T_min_global
+: <a class="el" href="structTASK__S.html#a07174e333a0013f4d51b30509b388f58">TASK_S</a>
+</li>
 <li>temp
 : <a class="el" href="structIMU__DATA__STRUCT.html#a81e1dbf765c1d947ca6076aa1bbc73e7">IMU_DATA_STRUCT</a>
 </li>
@@ -565,9 +587,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>Thetas
 : <a class="el" href="classCartesian__controller.html#a0a0f818dad601cd9e3e26cb6959b8eb6">Cartesian_controller</a>
 </li>
+<li>timer
+: <a class="el" href="structTASK__S.html#a17834f3d4f84241ccb4191f3cf7d7af3">TASK_S</a>
+</li>
 <li>type
-: <a class="el" href="structMATLAB__DATAHEAD.html#ad3587e58da5ca6cbe3cd98d5e2f46202">MATLAB_DATAHEAD</a>
-, <a class="el" href="structGMATRIX__MATLAB__DATAHEAD.html#a20df828adf57355259f96b10f8f7a1ab">GMATRIX_MATLAB_DATAHEAD</a>
+: <a class="el" href="structGMATRIX__MATLAB__DATAHEAD.html#a20df828adf57355259f96b10f8f7a1ab">GMATRIX_MATLAB_DATAHEAD</a>
+, <a class="el" href="structMATLAB__DATAHEAD.html#ad3587e58da5ca6cbe3cd98d5e2f46202">MATLAB_DATAHEAD</a>
 </li>
 </ul>
 
@@ -628,7 +653,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 2 2013 14:59:54 for Rleg by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jul 9 2013 12:59:21 for Rleg by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

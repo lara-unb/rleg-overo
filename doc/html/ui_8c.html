@@ -100,7 +100,7 @@ Include dependency graph for ui.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="ui_8c__incl.png" border="0" usemap="#ui_8c" alt=""/></div>
 <map name="ui_8c" id="ui_8c">
-<area shape="rect" id="node9" href="communication_2communication_8h.html" title="communication/communication.h" alt="" coords="243,83,456,112"/><area shape="rect" id="node58" href="datalogger_8h.html" title="datalogger.h" alt="" coords="480,83,573,112"/><area shape="rect" id="node60" href="main2_8h.html" title="main2.h" alt="" coords="597,83,664,112"/><area shape="rect" id="node62" href="ui_8h.html" title="ui.h" alt="" coords="688,83,731,112"/><area shape="rect" id="node11" href="communication_2imu__functions_8h.html" title="imu_functions.h" alt="" coords="469,160,584,189"/><area shape="rect" id="node34" href="communication_2imu__regs_8h.html" title="imu_regs.h" alt="" coords="97,237,183,267"/><area shape="rect" id="node36" href="communication_2spi__functions_8h.html" title="spi_functions.h" alt="" coords="931,160,1040,189"/><area shape="rect" id="node50" href="communication_2gpio__functions_8h.html" title="gpio_functions.h" alt="" coords="293,160,411,189"/></map>
+<area shape="rect" id="node9" href="communication_2communication_8h.html" title="communication/communication.h" alt="" coords="343,83,556,112"/><area shape="rect" id="node70" href="datalogger_8h.html" title="datalogger.h" alt="" coords="580,83,673,112"/><area shape="rect" id="node72" href="main2_8h.html" title="main2.h" alt="" coords="697,83,764,112"/><area shape="rect" id="node74" href="ui_8h.html" title="ui.h" alt="" coords="788,83,831,112"/><area shape="rect" id="node11" href="communication_2imu__functions_8h.html" title="imu_functions.h" alt="" coords="533,160,648,189"/><area shape="rect" id="node34" href="communication_2imu__regs_8h.html" title="imu_regs.h" alt="" coords="5,237,91,267"/><area shape="rect" id="node36" href="communication_2spi__functions_8h.html" title="spi_functions.h" alt="" coords="927,160,1036,189"/><area shape="rect" id="node50" href="communication_2gpio__functions_8h.html" title="gpio_functions.h" alt="" coords="392,160,509,189"/><area shape="rect" id="node57" href="encoder__functions_8h.html" title="Rev 0 &#45; 18/06/2013 RLEG project &#45; 2013." alt="" coords="672,160,811,189"/></map>
 </div>
 </div>
 <p><a href="ui_8c_source.html">Go to the source code of this file.</a></p>
@@ -112,15 +112,17 @@ Functions</h2></td></tr>
 <tr class="memdesc:gab7bfb453918dcc296ff0cea3c79453d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize UI.  <a href="group__ui.html#gab7bfb453918dcc296ff0cea3c79453d0"></a><br/></td></tr>
 <tr class="memitem:ga65d8b92b634da17c344458cd57e61f3e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ui.html#ga65d8b92b634da17c344458cd57e61f3e">ui_close</a> (void)</td></tr>
 <tr class="memdesc:ga65d8b92b634da17c344458cd57e61f3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close UI.  <a href="group__ui.html#ga65d8b92b634da17c344458cd57e61f3e"></a><br/></td></tr>
-<tr class="memitem:ga1559840369fc944a83a3666ef7959413"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ui.html#ga1559840369fc944a83a3666ef7959413">ui_update</a> (<a class="el" href="structIMU__DATA__STRUCT.html">IMU_DATA_STRUCT</a> *pimu_data, <a class="el" href="structEFF__DATA__STRUCT.html">EFF_DATA_STRUCT</a> *peff_data, <a class="el" href="structMRA__DATA__STRUCT.html">MRA_DATA_STRUCT</a> *pmra_data, int <a class="el" href="threads__linux_8c.html#ac7af894858cf396a219d632f40afdc8d">total</a>, int <a class="el" href="threads__linux_8c.html#a4f35e5ea2395561d0bd3b2f45612dc2c">failure</a>)</td></tr>
-<tr class="memdesc:ga1559840369fc944a83a3666ef7959413"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update Screen with new data of sensors.  <a href="group__ui.html#ga1559840369fc944a83a3666ef7959413"></a><br/></td></tr>
+<tr class="memitem:ga42e4dac2d138061a74c572358c8ebf49"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ui.html#ga42e4dac2d138061a74c572358c8ebf49">ui_update</a> (<a class="el" href="structIMU__DATA__STRUCT.html">IMU_DATA_STRUCT</a> *pimu_data, <a class="el" href="structEFF__DATA__STRUCT.html">EFF_DATA_STRUCT</a> *peff_data, <a class="el" href="structMRA__DATA__STRUCT.html">MRA_DATA_STRUCT</a> *pmra_data, <a class="el" href="structENC__DATA__STRUCT.html">ENC_DATA_STRUCT</a> *<a class="el" href="main2_8c.html#aaa441e18ae805c4f3efb0b5231d1cfe7">enc_data</a>, int <a class="el" href="threads__linux_8c.html#ac7af894858cf396a219d632f40afdc8d">total</a>, int <a class="el" href="threads__linux_8c.html#a4f35e5ea2395561d0bd3b2f45612dc2c">failure</a>)</td></tr>
+<tr class="memdesc:ga42e4dac2d138061a74c572358c8ebf49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update Screen with new data of sensors.  <a href="group__ui.html#ga42e4dac2d138061a74c572358c8ebf49"></a><br/></td></tr>
 <tr class="memitem:ga7d5a9d9a75693709de408781d001a6a6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ui.html#ga7d5a9d9a75693709de408781d001a6a6">ui_imu_data</a> (<a class="el" href="structIMU__DATA__STRUCT.html">IMU_DATA_STRUCT</a> *pimu_data)</td></tr>
 <tr class="memdesc:ga7d5a9d9a75693709de408781d001a6a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print IMU data.  <a href="group__ui.html#ga7d5a9d9a75693709de408781d001a6a6"></a><br/></td></tr>
 <tr class="memitem:af48496a4ce54378764bc4ca9eddfd498"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ui_8c.html#af48496a4ce54378764bc4ca9eddfd498">ui_eff_data</a> (<a class="el" href="structEFF__DATA__STRUCT.html">EFF_DATA_STRUCT</a> *peff_data)</td></tr>
+<tr class="memitem:a3821f6ba38465f8d170f7b947869e7d9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ui_8c.html#a3821f6ba38465f8d170f7b947869e7d9">ui_enc_data</a> (<a class="el" href="structENC__DATA__STRUCT.html">ENC_DATA_STRUCT</a> *<a class="el" href="main2_8c.html#aaa441e18ae805c4f3efb0b5231d1cfe7">enc_data</a>)</td></tr>
+<tr class="memdesc:a3821f6ba38465f8d170f7b947869e7d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print ENCODER data.  <a href="#a3821f6ba38465f8d170f7b947869e7d9"></a><br/></td></tr>
 <tr class="memitem:gaefec243c5df45db0350c1abbccf20e3b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ui.html#gaefec243c5df45db0350c1abbccf20e3b">ui_mra_data</a> (<a class="el" href="structMRA__DATA__STRUCT.html">MRA_DATA_STRUCT</a> *pmra_data)</td></tr>
 <tr class="memdesc:gaefec243c5df45db0350c1abbccf20e3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print MRA data.  <a href="group__ui.html#gaefec243c5df45db0350c1abbccf20e3b"></a><br/></td></tr>
-<tr class="memitem:a6577e01f0ebf9ac1677c616228a64a46"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ui_8c.html#a6577e01f0ebf9ac1677c616228a64a46">ui_overview_data</a> (int <a class="el" href="threads__linux_8c.html#ac7af894858cf396a219d632f40afdc8d">total</a>, int failures, <a class="el" href="structIMU__DATA__STRUCT.html">IMU_DATA_STRUCT</a> *pimu_data, <a class="el" href="structEFF__DATA__STRUCT.html">EFF_DATA_STRUCT</a> *peff_data, <a class="el" href="structMRA__DATA__STRUCT.html">MRA_DATA_STRUCT</a> *pmra_data)</td></tr>
-<tr class="memdesc:a6577e01f0ebf9ac1677c616228a64a46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print ALL sensors data.  <a href="#a6577e01f0ebf9ac1677c616228a64a46"></a><br/></td></tr>
+<tr class="memitem:a8d5e19833fec51919aad6e78bb74619a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ui_8c.html#a8d5e19833fec51919aad6e78bb74619a">ui_overview_data</a> (int <a class="el" href="threads__linux_8c.html#ac7af894858cf396a219d632f40afdc8d">total</a>, int failures, <a class="el" href="structIMU__DATA__STRUCT.html">IMU_DATA_STRUCT</a> *pimu_data, <a class="el" href="structEFF__DATA__STRUCT.html">EFF_DATA_STRUCT</a> *peff_data, <a class="el" href="structMRA__DATA__STRUCT.html">MRA_DATA_STRUCT</a> *pmra_data, <a class="el" href="structENC__DATA__STRUCT.html">ENC_DATA_STRUCT</a> *<a class="el" href="main2_8c.html#aaa441e18ae805c4f3efb0b5231d1cfe7">enc_data</a>)</td></tr>
+<tr class="memdesc:a8d5e19833fec51919aad6e78bb74619a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print ALL sensors data.  <a href="#a8d5e19833fec51919aad6e78bb74619a"></a><br/></td></tr>
 <tr class="memitem:a9f6b336147c82460bbe9e5e324cd4936"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ui_8c.html#a9f6b336147c82460bbe9e5e324cd4936">ui_control</a> (CONTROL_DATA_STRUCT *pcontrol_data)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="var-members"></a>
@@ -157,7 +159,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="ui_8c_a5f05ce725141ddfab683e059b1cd95ea_icgraph.png" border="0" usemap="#ui_8c_a5f05ce725141ddfab683e059b1cd95ea_icgraph" alt=""/></div>
 <map name="ui_8c_a5f05ce725141ddfab683e059b1cd95ea_icgraph" id="ui_8c_a5f05ce725141ddfab683e059b1cd95ea_icgraph">
-<area shape="rect" id="node3" href="group__ui.html#ga1559840369fc944a83a3666ef7959413" title="Update Screen with new data of sensors." alt="" coords="153,36,231,65"/><area shape="rect" id="node5" href="main2_8h.html#a944f7352f18ed248c1b1143f51edc391" title="periodic_task_2" alt="" coords="300,5,412,35"/><area shape="rect" id="node15" href="threads__linux_8c.html#ad535241b6b29d076beb2cd75a880aaea" title="threads_linux_periodic\l_task_2" alt="" coords="281,58,431,105"/><area shape="rect" id="node7" href="main2_8h.html#a01c18e97a4488be2912eb738b2e7f890" title="timer_function_task_2" alt="" coords="481,5,631,35"/><area shape="rect" id="node9" href="main2_8c.html#a735ebf3d0d37c7d8187199e6565bcb5c" title="f_timer_task_2" alt="" coords="695,5,801,35"/><area shape="rect" id="node11" href="main2_8h.html#ae59c93969d017f18e3e38b2f9f7888ca" title="timer_start_task_2" alt="" coords="867,5,997,35"/><area shape="rect" id="node13" href="main2_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="1084,5,1135,35"/><area shape="rect" id="node17" href="threads__linux_8c.html#aa65173deca09202aea0f4a81a166545b" title="threads_linux_timer\l_function_task_2" alt="" coords="489,58,623,105"/><area shape="rect" id="node19" href="threads__linux_8c.html#aaff43cd760c084d80d045228b46fe784" title="threads_linux_timer\l_task_2" alt="" coords="681,58,815,105"/><area shape="rect" id="node21" href="threads__linux_8c.html#a59d6f60b682f360c3759cefad7ad2a4e" title="threads_linux_timer\l_start_task_2" alt="" coords="865,58,999,105"/><area shape="rect" id="node23" href="threads__linux_8c.html#aff9795d781d7b334d45539707a641c23" title="threads_linux_init" alt="" coords="1048,67,1171,96"/></map>
+<area shape="rect" id="node3" href="group__ui.html#ga42e4dac2d138061a74c572358c8ebf49" title="Update Screen with new data of sensors." alt="" coords="153,36,231,65"/><area shape="rect" id="node5" href="main2_8h.html#a944f7352f18ed248c1b1143f51edc391" title="periodic_task_2" alt="" coords="300,5,412,35"/><area shape="rect" id="node15" href="threads__linux_8c.html#ad535241b6b29d076beb2cd75a880aaea" title="threads_linux_periodic\l_task_2" alt="" coords="281,58,431,105"/><area shape="rect" id="node7" href="main2_8h.html#a01c18e97a4488be2912eb738b2e7f890" title="timer_function_task_2" alt="" coords="481,5,631,35"/><area shape="rect" id="node9" href="main2_8c.html#a735ebf3d0d37c7d8187199e6565bcb5c" title="f_timer_task_2" alt="" coords="695,5,801,35"/><area shape="rect" id="node11" href="main2_8h.html#ae59c93969d017f18e3e38b2f9f7888ca" title="timer_start_task_2" alt="" coords="867,5,997,35"/><area shape="rect" id="node13" href="main2_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="1084,5,1135,35"/><area shape="rect" id="node17" href="threads__linux_8c.html#aa65173deca09202aea0f4a81a166545b" title="threads_linux_timer\l_function_task_2" alt="" coords="489,58,623,105"/><area shape="rect" id="node19" href="threads__linux_8c.html#aaff43cd760c084d80d045228b46fe784" title="threads_linux_timer\l_task_2" alt="" coords="681,58,815,105"/><area shape="rect" id="node21" href="threads__linux_8c.html#a59d6f60b682f360c3759cefad7ad2a4e" title="threads_linux_timer\l_start_task_2" alt="" coords="865,58,999,105"/><area shape="rect" id="node23" href="threads__linux_8c.html#aff9795d781d7b334d45539707a641c23" title="threads_linux_init" alt="" coords="1048,67,1171,96"/></map>
 </div>
 </p>
 
@@ -177,7 +179,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ui_8c_source.html#l00257">257</a> of file <a class="el" href="ui_8c_source.html">ui.c</a>.</p>
+<p>Definition at line <a class="el" href="ui_8c_source.html#l00266">266</a> of file <a class="el" href="ui_8c_source.html">ui.c</a>.</p>
 <div class="fragment"><div class="line">{</div>
 <div class="line">    mvprintw(2, 0, <span class="stringliteral">&quot;Roll Gain:   %3.2lf&quot;</span>, pcontrol_data-&gt;roll_proportional_gain);</div>
 <div class="line">    mvprintw(3, 0, <span class="stringliteral">&quot;Pitch Gain:  %3.2lf&quot;</span>, pcontrol_data-&gt;pitch_proportional_gain);</div>
@@ -210,9 +212,9 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ui_8c_source.html#l00152">152</a> of file <a class="el" href="ui_8c_source.html">ui.c</a>.</p>
+<p>Definition at line <a class="el" href="ui_8c_source.html#l00154">154</a> of file <a class="el" href="ui_8c_source.html">ui.c</a>.</p>
 
-<p>References <a class="el" href="communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8h_source.html#l00081">EFF_DATA_STRUCT::F</a>, <a class="el" href="communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8h_source.html#l00082">EFF_DATA_STRUCT::M</a>, <a class="el" href="calibration_2calibration_8h_source.html#l00006">SUCCESS</a>, <a class="el" href="communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8h_source.html#l00050">DATA_XYZ::x</a>, <a class="el" href="communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8h_source.html#l00051">DATA_XYZ::y</a>, and <a class="el" href="communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8h_source.html#l00052">DATA_XYZ::z</a>.</p>
+<p>References <a class="el" href="communication_2communication_8h_source.html#l00110">EFF_DATA_STRUCT::F</a>, <a class="el" href="communication_2communication_8h_source.html#l00111">EFF_DATA_STRUCT::M</a>, <a class="el" href="calibration_2calibration_8h_source.html#l00006">SUCCESS</a>, <a class="el" href="communication_2communication_8h_source.html#l00073">DATA_XYZ::x</a>, <a class="el" href="communication_2communication_8h_source.html#l00074">DATA_XYZ::y</a>, and <a class="el" href="communication_2communication_8h_source.html#l00075">DATA_XYZ::z</a>.</p>
 
 <p>Referenced by <a class="el" href="ui_8c_source.html#l00053">ui_update()</a>.</p>
 <div class="fragment"><div class="line">{</div>
@@ -237,13 +239,50 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="ui_8c_af48496a4ce54378764bc4ca9eddfd498_icgraph.png" border="0" usemap="#ui_8c_af48496a4ce54378764bc4ca9eddfd498_icgraph" alt=""/></div>
 <map name="ui_8c_af48496a4ce54378764bc4ca9eddfd498_icgraph" id="ui_8c_af48496a4ce54378764bc4ca9eddfd498_icgraph">
-<area shape="rect" id="node3" href="group__ui.html#ga1559840369fc944a83a3666ef7959413" title="Update Screen with new data of sensors." alt="" coords="143,36,220,65"/><area shape="rect" id="node5" href="main2_8h.html#a944f7352f18ed248c1b1143f51edc391" title="periodic_task_2" alt="" coords="289,5,401,35"/><area shape="rect" id="node15" href="threads__linux_8c.html#ad535241b6b29d076beb2cd75a880aaea" title="threads_linux_periodic\l_task_2" alt="" coords="271,58,420,105"/><area shape="rect" id="node7" href="main2_8h.html#a01c18e97a4488be2912eb738b2e7f890" title="timer_function_task_2" alt="" coords="471,5,620,35"/><area shape="rect" id="node9" href="main2_8c.html#a735ebf3d0d37c7d8187199e6565bcb5c" title="f_timer_task_2" alt="" coords="684,5,791,35"/><area shape="rect" id="node11" href="main2_8h.html#ae59c93969d017f18e3e38b2f9f7888ca" title="timer_start_task_2" alt="" coords="856,5,987,35"/><area shape="rect" id="node13" href="main2_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="1073,5,1124,35"/><area shape="rect" id="node17" href="threads__linux_8c.html#aa65173deca09202aea0f4a81a166545b" title="threads_linux_timer\l_function_task_2" alt="" coords="479,58,612,105"/><area shape="rect" id="node19" href="threads__linux_8c.html#aaff43cd760c084d80d045228b46fe784" title="threads_linux_timer\l_task_2" alt="" coords="671,58,804,105"/><area shape="rect" id="node21" href="threads__linux_8c.html#a59d6f60b682f360c3759cefad7ad2a4e" title="threads_linux_timer\l_start_task_2" alt="" coords="855,58,988,105"/><area shape="rect" id="node23" href="threads__linux_8c.html#aff9795d781d7b334d45539707a641c23" title="threads_linux_init" alt="" coords="1037,67,1160,96"/></map>
+<area shape="rect" id="node3" href="group__ui.html#ga42e4dac2d138061a74c572358c8ebf49" title="Update Screen with new data of sensors." alt="" coords="143,36,220,65"/><area shape="rect" id="node5" href="main2_8h.html#a944f7352f18ed248c1b1143f51edc391" title="periodic_task_2" alt="" coords="289,5,401,35"/><area shape="rect" id="node15" href="threads__linux_8c.html#ad535241b6b29d076beb2cd75a880aaea" title="threads_linux_periodic\l_task_2" alt="" coords="271,58,420,105"/><area shape="rect" id="node7" href="main2_8h.html#a01c18e97a4488be2912eb738b2e7f890" title="timer_function_task_2" alt="" coords="471,5,620,35"/><area shape="rect" id="node9" href="main2_8c.html#a735ebf3d0d37c7d8187199e6565bcb5c" title="f_timer_task_2" alt="" coords="684,5,791,35"/><area shape="rect" id="node11" href="main2_8h.html#ae59c93969d017f18e3e38b2f9f7888ca" title="timer_start_task_2" alt="" coords="856,5,987,35"/><area shape="rect" id="node13" href="main2_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="1073,5,1124,35"/><area shape="rect" id="node17" href="threads__linux_8c.html#aa65173deca09202aea0f4a81a166545b" title="threads_linux_timer\l_function_task_2" alt="" coords="479,58,612,105"/><area shape="rect" id="node19" href="threads__linux_8c.html#aaff43cd760c084d80d045228b46fe784" title="threads_linux_timer\l_task_2" alt="" coords="671,58,804,105"/><area shape="rect" id="node21" href="threads__linux_8c.html#a59d6f60b682f360c3759cefad7ad2a4e" title="threads_linux_timer\l_start_task_2" alt="" coords="855,58,988,105"/><area shape="rect" id="node23" href="threads__linux_8c.html#aff9795d781d7b334d45539707a641c23" title="threads_linux_init" alt="" coords="1037,67,1160,96"/></map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="a6577e01f0ebf9ac1677c616228a64a46"></a>
+<a class="anchor" id="a3821f6ba38465f8d170f7b947869e7d9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ui_enc_data </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structENC__DATA__STRUCT.html">ENC_DATA_STRUCT</a> *&#160;</td>
+          <td class="paramname"><em>enc_data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Print ENCODER data. </p>
+
+<p>Definition at line <a class="el" href="ui_8c_source.html#l00172">172</a> of file <a class="el" href="ui_8c_source.html">ui.c</a>.</p>
+
+<p>References <a class="el" href="encoder__functions_8h_source.html#l00047">ENC_DATA_STRUCT::angle</a>, and <a class="el" href="calibration_2calibration_8h_source.html#l00006">SUCCESS</a>.</p>
+
+<p>Referenced by <a class="el" href="ui_8c_source.html#l00053">ui_update()</a>.</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">   mvprintw(2,0,<span class="stringliteral">&quot;Position (raw): %lf&quot;</span>,enc_data-&gt;<a class="code" href="structENC__DATA__STRUCT.html#ad25beb30fd5b975292f87db02ec9930a">angle</a>);</div>
+<div class="line">   <span class="keywordflow">return</span> <a class="code" href="calibration_2calibration_8h.html#aa90cac659d18e8ef6294c7ae337f6b58">SUCCESS</a>;</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="ui_8c_a3821f6ba38465f8d170f7b947869e7d9_icgraph.png" border="0" usemap="#ui_8c_a3821f6ba38465f8d170f7b947869e7d9_icgraph" alt=""/></div>
+<map name="ui_8c_a3821f6ba38465f8d170f7b947869e7d9_icgraph" id="ui_8c_a3821f6ba38465f8d170f7b947869e7d9_icgraph">
+<area shape="rect" id="node3" href="group__ui.html#ga42e4dac2d138061a74c572358c8ebf49" title="Update Screen with new data of sensors." alt="" coords="148,36,225,65"/><area shape="rect" id="node5" href="main2_8h.html#a944f7352f18ed248c1b1143f51edc391" title="periodic_task_2" alt="" coords="295,5,407,35"/><area shape="rect" id="node15" href="threads__linux_8c.html#ad535241b6b29d076beb2cd75a880aaea" title="threads_linux_periodic\l_task_2" alt="" coords="276,58,425,105"/><area shape="rect" id="node7" href="main2_8h.html#a01c18e97a4488be2912eb738b2e7f890" title="timer_function_task_2" alt="" coords="476,5,625,35"/><area shape="rect" id="node9" href="main2_8c.html#a735ebf3d0d37c7d8187199e6565bcb5c" title="f_timer_task_2" alt="" coords="689,5,796,35"/><area shape="rect" id="node11" href="main2_8h.html#ae59c93969d017f18e3e38b2f9f7888ca" title="timer_start_task_2" alt="" coords="861,5,992,35"/><area shape="rect" id="node13" href="main2_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="1079,5,1129,35"/><area shape="rect" id="node17" href="threads__linux_8c.html#aa65173deca09202aea0f4a81a166545b" title="threads_linux_timer\l_function_task_2" alt="" coords="484,58,617,105"/><area shape="rect" id="node19" href="threads__linux_8c.html#aaff43cd760c084d80d045228b46fe784" title="threads_linux_timer\l_task_2" alt="" coords="676,58,809,105"/><area shape="rect" id="node21" href="threads__linux_8c.html#a59d6f60b682f360c3759cefad7ad2a4e" title="threads_linux_timer\l_start_task_2" alt="" coords="860,58,993,105"/><area shape="rect" id="node23" href="threads__linux_8c.html#aff9795d781d7b334d45539707a641c23" title="threads_linux_init" alt="" coords="1043,67,1165,96"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a8d5e19833fec51919aad6e78bb74619a"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -275,7 +314,13 @@ Here is the caller graph for this function:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="structMRA__DATA__STRUCT.html">MRA_DATA_STRUCT</a> *&#160;</td>
-          <td class="paramname"><em>pmra_data</em>&#160;</td>
+          <td class="paramname"><em>pmra_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structENC__DATA__STRUCT.html">ENC_DATA_STRUCT</a> *&#160;</td>
+          <td class="paramname"><em>enc_data</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -287,9 +332,9 @@ Here is the caller graph for this function:</div>
 
 <p>Print ALL sensors data. </p>
 
-<p>Definition at line <a class="el" href="ui_8c_source.html#l00179">179</a> of file <a class="el" href="ui_8c_source.html">ui.c</a>.</p>
+<p>Definition at line <a class="el" href="ui_8c_source.html#l00187">187</a> of file <a class="el" href="ui_8c_source.html">ui.c</a>.</p>
 
-<p>References <a class="el" href="communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8h_source.html#l00062">IMU_DATA_STRUCT::acc</a>, <a class="el" href="communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8h_source.html#l00066">IMU_DATA_STRUCT::calibrated::acc</a>, <a class="el" href="structIMU__DATA__STRUCT.html#aeffe3c3c5a7191a5cef16e7aab6c3795">IMU_DATA_STRUCT::calib</a>, <a class="el" href="communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8h_source.html#l00071">IMU_DATA_STRUCT::calib_temp</a>, <a class="el" href="datalogger_8h_source.html#l00029">DATALOGGER_NOT_RUNNING</a>, <a class="el" href="datalogger_8c_source.html#l00571">datalogger_status()</a>, <a class="el" href="communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8h_source.html#l00081">EFF_DATA_STRUCT::F</a>, <a class="el" href="main2_8c_source.html#l00602">get_time()</a>, <a class="el" href="communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8h_source.html#l00063">IMU_DATA_STRUCT::gyr</a>, <a class="el" href="communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8h_source.html#l00067">IMU_DATA_STRUCT::calibrated::gyr</a>, <a class="el" href="communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8h_source.html#l00064">IMU_DATA_STRUCT::mag</a>, <a class="el" href="communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8h_source.html#l00068">IMU_DATA_STRUCT::calibrated::mag</a>, <a class="el" href="calibration_2calibration_8h_source.html#l00006">SUCCESS</a>, <a class="el" href="main2_8c_source.html#l00053">t0</a>, <a class="el" href="communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8h_source.html#l00070">IMU_DATA_STRUCT::temp</a>, <a class="el" href="communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8h_source.html#l00095">MRA_DATA_STRUCT::v_ctl</a>, <a class="el" href="communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8h_source.html#l00096">MRA_DATA_STRUCT::v_ctl_read</a>, <a class="el" href="communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8h_source.html#l00050">DATA_XYZ::x</a>, <a class="el" href="communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8h_source.html#l00056">DATA_XYZ_DOUBLE::x</a>, <a class="el" href="communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8h_source.html#l00051">DATA_XYZ::y</a>, <a class="el" href="communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8h_source.html#l00057">DATA_XYZ_DOUBLE::y</a>, <a class="el" href="communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8h_source.html#l00052">DATA_XYZ::z</a>, and <a class="el" href="communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8h_source.html#l00058">DATA_XYZ_DOUBLE::z</a>.</p>
+<p>References <a class="el" href="communication_2communication_8h_source.html#l00091">IMU_DATA_STRUCT::acc</a>, <a class="el" href="communication_2communication_8h_source.html#l00095">IMU_DATA_STRUCT::calibrated::acc</a>, <a class="el" href="encoder__functions_8h_source.html#l00047">ENC_DATA_STRUCT::angle</a>, <a class="el" href="structIMU__DATA__STRUCT.html#aeffe3c3c5a7191a5cef16e7aab6c3795">IMU_DATA_STRUCT::calib</a>, <a class="el" href="communication_2communication_8h_source.html#l00100">IMU_DATA_STRUCT::calib_temp</a>, <a class="el" href="datalogger_8h_source.html#l00029">DATALOGGER_NOT_RUNNING</a>, <a class="el" href="datalogger_8c_source.html#l00571">datalogger_status()</a>, <a class="el" href="communication_2communication_8h_source.html#l00110">EFF_DATA_STRUCT::F</a>, <a class="el" href="main2_8c_source.html#l00602">get_time()</a>, <a class="el" href="communication_2communication_8h_source.html#l00092">IMU_DATA_STRUCT::gyr</a>, <a class="el" href="communication_2communication_8h_source.html#l00096">IMU_DATA_STRUCT::calibrated::gyr</a>, <a class="el" href="communication_2communication_8h_source.html#l00093">IMU_DATA_STRUCT::mag</a>, <a class="el" href="communication_2communication_8h_source.html#l00097">IMU_DATA_STRUCT::calibrated::mag</a>, <a class="el" href="calibration_2calibration_8h_source.html#l00006">SUCCESS</a>, <a class="el" href="main2_8c_source.html#l00053">t0</a>, <a class="el" href="communication_2communication_8h_source.html#l00099">IMU_DATA_STRUCT::temp</a>, <a class="el" href="communication_2communication_8h_source.html#l00127">MRA_DATA_STRUCT::v_ctl</a>, <a class="el" href="communication_2communication_8h_source.html#l00128">MRA_DATA_STRUCT::v_ctl_read</a>, <a class="el" href="communication_2communication_8h_source.html#l00073">DATA_XYZ::x</a>, <a class="el" href="communication_2communication_8h_source.html#l00082">DATA_XYZ_DOUBLE::x</a>, <a class="el" href="communication_2communication_8h_source.html#l00074">DATA_XYZ::y</a>, <a class="el" href="communication_2communication_8h_source.html#l00083">DATA_XYZ_DOUBLE::y</a>, <a class="el" href="communication_2communication_8h_source.html#l00075">DATA_XYZ::z</a>, and <a class="el" href="communication_2communication_8h_source.html#l00084">DATA_XYZ_DOUBLE::z</a>.</p>
 
 <p>Referenced by <a class="el" href="ui_8c_source.html#l00053">ui_update()</a>.</p>
 <div class="fragment"><div class="line">{</div>
@@ -311,11 +356,12 @@ Here is the caller graph for this function:</div>
 <div class="line">        mvprintw(8, 0,  <span class="stringliteral">&quot;IMU Accelerometer (g):\t\tX:%8.5lf\tY:%8.5lf\tZ:%8.5lf&quot;</span>, pimu_data-&gt;<a class="code" href="structIMU__DATA__STRUCT.html#aeffe3c3c5a7191a5cef16e7aab6c3795">calib</a>.<a class="code" href="structIMU__DATA__STRUCT_1_1calibrated.html#a281a7fdb40a05ed97388f18b9bb90c81">acc</a>.<a class="code" href="structDATA__XYZ__DOUBLE.html#a22868cc99a423900e7b82d015a5eb91f">x</a>, pimu_data-&gt;<a class="code" href="structIMU__DATA__STRUCT.html#aeffe3c3c5a7191a5cef16e7aab6c3795">calib</a>.<a class="code" href="structIMU__DATA__STRUCT_1_1calibrated.html#a281a7fdb40a05ed97388f18b9bb90c81">acc</a>.<a class="code" href="structDATA__XYZ__DOUBLE.html#a198a27b5df3b5b0bf461b0e481e22a82">y</a>, pimu_data-&gt;<a class="code" href="structIMU__DATA__STRUCT.html#aeffe3c3c5a7191a5cef16e7aab6c3795">calib</a>.<a class="code" href="structIMU__DATA__STRUCT_1_1calibrated.html#a281a7fdb40a05ed97388f18b9bb90c81">acc</a>.<a class="code" href="structDATA__XYZ__DOUBLE.html#a9556e8868c223ff3e28756ea18a284c0">z</a>);</div>
 <div class="line">        mvprintw(9, 0, <span class="stringliteral">&quot;IMU Gyrometer (rad/s):\t\tX:%8.5lf\tY:%8.5lf\tZ:%8.5lf&quot;</span>, pimu_data-&gt;<a class="code" href="structIMU__DATA__STRUCT.html#aeffe3c3c5a7191a5cef16e7aab6c3795">calib</a>.<a class="code" href="structIMU__DATA__STRUCT_1_1calibrated.html#a8a54aded6ce608f1b7d2b4a0c52c248b">gyr</a>.<a class="code" href="structDATA__XYZ__DOUBLE.html#a22868cc99a423900e7b82d015a5eb91f">x</a>, pimu_data-&gt;<a class="code" href="structIMU__DATA__STRUCT.html#aeffe3c3c5a7191a5cef16e7aab6c3795">calib</a>.<a class="code" href="structIMU__DATA__STRUCT_1_1calibrated.html#a8a54aded6ce608f1b7d2b4a0c52c248b">gyr</a>.<a class="code" href="structDATA__XYZ__DOUBLE.html#a198a27b5df3b5b0bf461b0e481e22a82">y</a>, pimu_data-&gt;<a class="code" href="structIMU__DATA__STRUCT.html#aeffe3c3c5a7191a5cef16e7aab6c3795">calib</a>.<a class="code" href="structIMU__DATA__STRUCT_1_1calibrated.html#a8a54aded6ce608f1b7d2b4a0c52c248b">gyr</a>.<a class="code" href="structDATA__XYZ__DOUBLE.html#a9556e8868c223ff3e28756ea18a284c0">z</a>);</div>
 <div class="line">        mvprintw(10, 0, <span class="stringliteral">&quot;IMU Magnetometer (B):\t\tX:%8.5lf\tY:%8.5lf\tZ:%8.5lf&quot;</span>, pimu_data-&gt;<a class="code" href="structIMU__DATA__STRUCT.html#aeffe3c3c5a7191a5cef16e7aab6c3795">calib</a>.<a class="code" href="structIMU__DATA__STRUCT_1_1calibrated.html#a2fde6c6759e0fda17e272c32096cb9ec">mag</a>.<a class="code" href="structDATA__XYZ__DOUBLE.html#a22868cc99a423900e7b82d015a5eb91f">x</a>, pimu_data-&gt;<a class="code" href="structIMU__DATA__STRUCT.html#aeffe3c3c5a7191a5cef16e7aab6c3795">calib</a>.<a class="code" href="structIMU__DATA__STRUCT_1_1calibrated.html#a2fde6c6759e0fda17e272c32096cb9ec">mag</a>.<a class="code" href="structDATA__XYZ__DOUBLE.html#a198a27b5df3b5b0bf461b0e481e22a82">y</a>, pimu_data-&gt;<a class="code" href="structIMU__DATA__STRUCT.html#aeffe3c3c5a7191a5cef16e7aab6c3795">calib</a>.<a class="code" href="structIMU__DATA__STRUCT_1_1calibrated.html#a2fde6c6759e0fda17e272c32096cb9ec">mag</a>.<a class="code" href="structDATA__XYZ__DOUBLE.html#a9556e8868c223ff3e28756ea18a284c0">z</a>);</div>
-<div class="line">        </div>
-<div class="line">        mvprintw(12, 0, <span class="stringliteral">&quot;Temp (bits):\t%d&quot;</span>, pimu_data-&gt;<a class="code" href="structIMU__DATA__STRUCT.html#a81e1dbf765c1d947ca6076aa1bbc73e7">temp</a>);</div>
-<div class="line">        mvprintw(12,40, <span class="stringliteral">&quot;Temp (ºC):\t%lf&quot;</span>, pimu_data-&gt;<a class="code" href="structIMU__DATA__STRUCT.html#a3553fcee6beba17fe0c7711ac0483875">calib_temp</a>);</div>
+<div class="line">        mvprintw(11, 0, <span class="stringliteral">&quot;Encoder (rad):\t%d&quot;</span>, enc_data-&gt;<a class="code" href="structENC__DATA__STRUCT.html#ad25beb30fd5b975292f87db02ec9930a">angle</a>);</div>
 <div class="line"></div>
-<div class="line">        mvprintw(14,0,<span class="stringliteral">&quot;Fx (bits): %d&quot;</span>,peff_data-&gt;<a class="code" href="structEFF__DATA__STRUCT.html#abe8952947b54bf9c247f3429ee3aeb44">F</a>.<a class="code" href="structDATA__XYZ.html#a54c1596e9f9969fd9c21e8458024ecfb">x</a>);</div>
+<div class="line">        mvprintw(13, 0, <span class="stringliteral">&quot;Temp (bits):\t%d&quot;</span>, pimu_data-&gt;<a class="code" href="structIMU__DATA__STRUCT.html#a81e1dbf765c1d947ca6076aa1bbc73e7">temp</a>);</div>
+<div class="line">        mvprintw(13,40, <span class="stringliteral">&quot;Temp (ºC):\t%lf&quot;</span>, pimu_data-&gt;<a class="code" href="structIMU__DATA__STRUCT.html#a3553fcee6beba17fe0c7711ac0483875">calib_temp</a>);</div>
+<div class="line"></div>
+<div class="line">        mvprintw(15,0,<span class="stringliteral">&quot;Fx (bits): %d&quot;</span>,peff_data-&gt;<a class="code" href="structEFF__DATA__STRUCT.html#abe8952947b54bf9c247f3429ee3aeb44">F</a>.<a class="code" href="structDATA__XYZ.html#a54c1596e9f9969fd9c21e8458024ecfb">x</a>);</div>
 <div class="line">        <span class="comment">//mvprintw(2,40,&quot;Fx (N): %lf&quot;,peff_data-&gt;??);</span></div>
 <div class="line">        <span class="comment">//mvprintw(15,0,&quot;Fy (bits): %d&quot;,peff_data-&gt;F.y);</span></div>
 <div class="line">        <span class="comment">//mvprintw(3,40,&quot;Fx (N): %lf&quot;,peff_data-&gt;??);</span></div>
@@ -328,17 +374,17 @@ Here is the caller graph for this function:</div>
 <div class="line">        <span class="comment">//mvprintw(19,0,&quot;Mz (bits): %d&quot;,peff_data-&gt;M.z);</span></div>
 <div class="line">        <span class="comment">//mvprintw(7,40,&quot;Mz (Nm): %lf&quot;,peff_data-&gt;??);</span></div>
 <div class="line">        </div>
-<div class="line">        mvprintw(16, 0, <span class="stringliteral">&quot;Voltage Control Written (bits):\t%4d&quot;</span>, pmra_data-&gt;<a class="code" href="structMRA__DATA__STRUCT.html#a64b4e6bb604e58de593a60c87942b966" title="Voltage level for control output.">v_ctl</a>);</div>
-<div class="line">        mvprintw(17, 0, <span class="stringliteral">&quot;Voltage Control Read (bits):\t%4d&quot;</span>, pmra_data-&gt;<a class="code" href="structMRA__DATA__STRUCT.html#a3a31d57268c33b21ac915fdc27dfe474" title="Voltage level read from the actuator.">v_ctl_read</a>);</div>
+<div class="line">        mvprintw(17, 0, <span class="stringliteral">&quot;Voltage Control Written (bits):\t%4d&quot;</span>, pmra_data-&gt;<a class="code" href="structMRA__DATA__STRUCT.html#a64b4e6bb604e58de593a60c87942b966" title="Voltage level for control output.">v_ctl</a>);</div>
+<div class="line">        mvprintw(18, 0, <span class="stringliteral">&quot;Voltage Control Read (bits):\t%4d&quot;</span>, pmra_data-&gt;<a class="code" href="structMRA__DATA__STRUCT.html#a3a31d57268c33b21ac915fdc27dfe474" title="Voltage level read from the actuator.">v_ctl_read</a>);</div>
 <div class="line"></div>
-<div class="line">    mvprintw(19, 0, <span class="stringliteral">&quot;Runtime: %4.2lf&quot;</span>, t);</div>
+<div class="line">    mvprintw(20, 0, <span class="stringliteral">&quot;Runtime: %4.2lf&quot;</span>, t);</div>
 <div class="line">    <span class="keywordflow">if</span>(<a class="code" href="datalogger_8c.html#a46fd1290d9ee97d5fc7171e1e0dcb0aa">datalogger_status</a>() == <a class="code" href="datalogger_8h.html#a1a224da36800f52f56f30619849f7f5d">DATALOGGER_NOT_RUNNING</a>)</div>
 <div class="line">    {</div>
-<div class="line">        mvprintw(19, 40, <span class="stringliteral">&quot;Datalogger stopped&quot;</span>);</div>
+<div class="line">        mvprintw(20, 40, <span class="stringliteral">&quot;Datalogger stopped&quot;</span>);</div>
 <div class="line">    }</div>
 <div class="line">    <span class="keywordflow">else</span></div>
 <div class="line">    {</div>
-<div class="line">        mvprintw(19, 40, <span class="stringliteral">&quot;Datalogger runtime: %4.2lf&quot;</span>, (t-t0));</div>
+<div class="line">        mvprintw(20, 40, <span class="stringliteral">&quot;Datalogger runtime: %4.2lf&quot;</span>, (t-t0));</div>
 <div class="line">    }</div>
 <div class="line"><span class="comment">/*</span></div>
 <div class="line"><span class="comment">    if(calibration_get_status() == CALIBRATION_NOT_RUNNING)</span></div>
@@ -350,13 +396,13 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="comment">        mvprintw(15, 0, &quot;Calibration running&quot;);</span></div>
 <div class="line"><span class="comment">    }</span></div>
 <div class="line"><span class="comment">*/</span></div>
-<div class="line">        mvprintw(21, 0, <span class="stringliteral">&quot;I: IMU&quot;</span>);</div>
-<div class="line">        mvprintw(21, 20, <span class="stringliteral">&quot;F: Efforts&quot;</span>);</div>
-<div class="line">        mvprintw(21, 40, <span class="stringliteral">&quot;M: Magneto-rheological Actuator&quot;</span>);</div>
-<div class="line">        mvprintw(22, 0, <span class="stringliteral">&quot;O: Overview&quot;</span>);</div>
-<div class="line">        mvprintw(22, 20, <span class="stringliteral">&quot;D: Datalogger Start/Stop&quot;</span>);</div>
-<div class="line">        mvprintw(23, 0, <span class="stringliteral">&quot;Q: Quit&quot;</span>);</div>
-<div class="line">    <span class="comment">//mvprintw(33, 0, &quot;E: State Estimator&quot;);</span></div>
+<div class="line">        mvprintw(22, 0, <span class="stringliteral">&quot;I: IMU&quot;</span>);</div>
+<div class="line">        mvprintw(22, 20, <span class="stringliteral">&quot;F: Efforts&quot;</span>);</div>
+<div class="line">        mvprintw(22, 40, <span class="stringliteral">&quot;M: Magneto-rheological Actuator&quot;</span>);</div>
+<div class="line">        mvprintw(23, 0, <span class="stringliteral">&quot;E: Encoder&quot;</span>);</div>
+<div class="line">        mvprintw(23, 20, <span class="stringliteral">&quot;O: Overview&quot;</span>);</div>
+<div class="line">        mvprintw(23, 40, <span class="stringliteral">&quot;D: Datalogger Start/Stop&quot;</span>);</div>
+<div class="line">        mvprintw(24, 0, <span class="stringliteral">&quot;Q: Quit&quot;</span>);</div>
 <div class="line">    <span class="comment">//mvprintw(34, 0, &quot;C: Control&quot;);</span></div>
 <div class="line"></div>
 <div class="line"></div>
@@ -372,8 +418,8 @@ Here is the caller graph for this function:</div>
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="ui_8c_a6577e01f0ebf9ac1677c616228a64a46_cgraph.png" border="0" usemap="#ui_8c_a6577e01f0ebf9ac1677c616228a64a46_cgraph" alt=""/></div>
-<map name="ui_8c_a6577e01f0ebf9ac1677c616228a64a46_cgraph" id="ui_8c_a6577e01f0ebf9ac1677c616228a64a46_cgraph">
+<div class="center"><img src="ui_8c_a8d5e19833fec51919aad6e78bb74619a_cgraph.png" border="0" usemap="#ui_8c_a8d5e19833fec51919aad6e78bb74619a_cgraph" alt=""/></div>
+<map name="ui_8c_a8d5e19833fec51919aad6e78bb74619a_cgraph" id="ui_8c_a8d5e19833fec51919aad6e78bb74619a_cgraph">
 <area shape="rect" id="node3" href="datalogger_8c.html#a46fd1290d9ee97d5fc7171e1e0dcb0aa" title="datalogger_status" alt="" coords="176,32,301,61"/><area shape="rect" id="node9" href="main2_8c.html#a5b2b1fdd5e517470c10e84a2b2bcc5c8" title="get_time" alt="" coords="203,85,275,115"/><area shape="rect" id="node5" href="datalogger_8c.html#a54b06d9395b2e370a5a72beb7f9524b2" title="datalogger_lock_mutex" alt="" coords="357,5,512,35"/><area shape="rect" id="node7" href="datalogger_8c.html#a85453211c0c809083c36cc56b275aeeb" title="datalogger_unlock_mutex" alt="" coords="349,59,520,88"/></map>
 </div>
 </p>
@@ -381,9 +427,9 @@ Here is the call graph for this function:</div>
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="ui_8c_a6577e01f0ebf9ac1677c616228a64a46_icgraph.png" border="0" usemap="#ui_8c_a6577e01f0ebf9ac1677c616228a64a46_icgraph" alt=""/></div>
-<map name="ui_8c_a6577e01f0ebf9ac1677c616228a64a46_icgraph" id="ui_8c_a6577e01f0ebf9ac1677c616228a64a46_icgraph">
-<area shape="rect" id="node3" href="group__ui.html#ga1559840369fc944a83a3666ef7959413" title="Update Screen with new data of sensors." alt="" coords="177,36,255,65"/><area shape="rect" id="node5" href="main2_8h.html#a944f7352f18ed248c1b1143f51edc391" title="periodic_task_2" alt="" coords="324,5,436,35"/><area shape="rect" id="node15" href="threads__linux_8c.html#ad535241b6b29d076beb2cd75a880aaea" title="threads_linux_periodic\l_task_2" alt="" coords="305,58,455,105"/><area shape="rect" id="node7" href="main2_8h.html#a01c18e97a4488be2912eb738b2e7f890" title="timer_function_task_2" alt="" coords="505,5,655,35"/><area shape="rect" id="node9" href="main2_8c.html#a735ebf3d0d37c7d8187199e6565bcb5c" title="f_timer_task_2" alt="" coords="719,5,825,35"/><area shape="rect" id="node11" href="main2_8h.html#ae59c93969d017f18e3e38b2f9f7888ca" title="timer_start_task_2" alt="" coords="891,5,1021,35"/><area shape="rect" id="node13" href="main2_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="1108,5,1159,35"/><area shape="rect" id="node17" href="threads__linux_8c.html#aa65173deca09202aea0f4a81a166545b" title="threads_linux_timer\l_function_task_2" alt="" coords="513,58,647,105"/><area shape="rect" id="node19" href="threads__linux_8c.html#aaff43cd760c084d80d045228b46fe784" title="threads_linux_timer\l_task_2" alt="" coords="705,58,839,105"/><area shape="rect" id="node21" href="threads__linux_8c.html#a59d6f60b682f360c3759cefad7ad2a4e" title="threads_linux_timer\l_start_task_2" alt="" coords="889,58,1023,105"/><area shape="rect" id="node23" href="threads__linux_8c.html#aff9795d781d7b334d45539707a641c23" title="threads_linux_init" alt="" coords="1072,67,1195,96"/></map>
+<div class="center"><img src="ui_8c_a8d5e19833fec51919aad6e78bb74619a_icgraph.png" border="0" usemap="#ui_8c_a8d5e19833fec51919aad6e78bb74619a_icgraph" alt=""/></div>
+<map name="ui_8c_a8d5e19833fec51919aad6e78bb74619a_icgraph" id="ui_8c_a8d5e19833fec51919aad6e78bb74619a_icgraph">
+<area shape="rect" id="node3" href="group__ui.html#ga42e4dac2d138061a74c572358c8ebf49" title="Update Screen with new data of sensors." alt="" coords="177,36,255,65"/><area shape="rect" id="node5" href="main2_8h.html#a944f7352f18ed248c1b1143f51edc391" title="periodic_task_2" alt="" coords="324,5,436,35"/><area shape="rect" id="node15" href="threads__linux_8c.html#ad535241b6b29d076beb2cd75a880aaea" title="threads_linux_periodic\l_task_2" alt="" coords="305,58,455,105"/><area shape="rect" id="node7" href="main2_8h.html#a01c18e97a4488be2912eb738b2e7f890" title="timer_function_task_2" alt="" coords="505,5,655,35"/><area shape="rect" id="node9" href="main2_8c.html#a735ebf3d0d37c7d8187199e6565bcb5c" title="f_timer_task_2" alt="" coords="719,5,825,35"/><area shape="rect" id="node11" href="main2_8h.html#ae59c93969d017f18e3e38b2f9f7888ca" title="timer_start_task_2" alt="" coords="891,5,1021,35"/><area shape="rect" id="node13" href="main2_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="1108,5,1159,35"/><area shape="rect" id="node17" href="threads__linux_8c.html#aa65173deca09202aea0f4a81a166545b" title="threads_linux_timer\l_function_task_2" alt="" coords="513,58,647,105"/><area shape="rect" id="node19" href="threads__linux_8c.html#aaff43cd760c084d80d045228b46fe784" title="threads_linux_timer\l_task_2" alt="" coords="705,58,839,105"/><area shape="rect" id="node21" href="threads__linux_8c.html#a59d6f60b682f360c3759cefad7ad2a4e" title="threads_linux_timer\l_start_task_2" alt="" coords="889,58,1023,105"/><area shape="rect" id="node23" href="threads__linux_8c.html#aff9795d781d7b334d45539707a641c23" title="threads_linux_init" alt="" coords="1072,67,1195,96"/></map>
 </div>
 </p>
 
@@ -409,7 +455,7 @@ Here is the caller graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 2 2013 14:59:54 for Rleg by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jul 9 2013 12:59:21 for Rleg by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

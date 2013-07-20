@@ -1,6 +1,6 @@
 <map id="datalogger_stop" name="datalogger_stop">
 <area shape="rect" id="node3" href="$main2_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="1100,17,1151,47"/>
-<area shape="rect" id="node5" href="$group__ui.html#ga1559840369fc944a83a3666ef7959413" title="Update Screen with new data of sensors." alt="" coords="169,43,247,72"/>
+<area shape="rect" id="node5" href="$group__ui.html#ga42e4dac2d138061a74c572358c8ebf49" title="Update Screen with new data of sensors." alt="" coords="169,43,247,72"/>
 <area shape="rect" id="node7" href="$main2_8h.html#a944f7352f18ed248c1b1143f51edc391" title="periodic_task_2" alt="" coords="316,43,428,72"/>
 <area shape="rect" id="node16" href="$threads__linux_8c.html#ad535241b6b29d076beb2cd75a880aaea" title="threads_linux_periodic\l_task_2" alt="" coords="297,95,447,142"/>
 <area shape="rect" id="node9" href="$main2_8h.html#a01c18e97a4488be2912eb738b2e7f890" title="timer_function_task_2" alt="" coords="497,43,647,72"/>

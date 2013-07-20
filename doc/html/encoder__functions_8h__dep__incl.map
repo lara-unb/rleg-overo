@@ -1,3 +1,11 @@
 <map id="communication/encoder_functions.h" name="communication/encoder_functions.h">
-<area shape="rect" id="node3" href="$encoder__functions_8c.html" title="Rev 0 &#45; 19/06/2013 RLEG project &#45; 2013." alt="" coords="5,102,165,149"/>
+<area shape="rect" id="node3" href="$communication_2communication_8h.html" title="communication/communication.h" alt="" coords="281,111,495,140"/>
+<area shape="rect" id="node20" href="$encoder__functions_8c.html" title="Rev 0 &#45; 19/06/2013 RLEG project &#45; 2013." alt="" coords="519,102,679,149"/>
+<area shape="rect" id="node5" href="$calibration_2calibration_8h.html" title="calibration/calibration.h" alt="" coords="25,197,180,227"/>
+<area shape="rect" id="node9" href="$main2_8c.html" title="main2.c" alt="" coords="184,275,251,304"/>
+<area shape="rect" id="node11" href="$calibration_8c.html" title="calibration.c" alt="" coords="255,197,345,227"/>
+<area shape="rect" id="node13" href="$communication_2communication_8c.html" title="communication/communication.c" alt="" coords="369,197,583,227"/>
+<area shape="rect" id="node15" href="$datalogger_8c.html" title="datalogger.c" alt="" coords="607,197,700,227"/>
+<area shape="rect" id="node18" href="$ui_8c.html" title="ui.c" alt="" coords="724,197,767,227"/>
+<area shape="rect" id="node7" href="$calibration_2calibration_8c.html" title="calibration/calibration.c" alt="" coords="5,275,160,304"/>
 </map>

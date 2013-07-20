@@ -47,6 +47,6 @@ var searchData=
   ['modechanger_5fqueue',['modeChanger_queue',['../classCartesian__controller.html#adf47dc3a09bd9650015b25870054b60d',1,'Cartesian_controller']]],
   ['mra_5fdata',['mra_data',['../main2_8c.html#abc42e18d2909e9bc119316283f4ed9db',1,'main2.c']]],
   ['mra_5fdata_5fstruct',['MRA_DATA_STRUCT',['../structMRA__DATA__STRUCT.html',1,'']]],
-  ['mra_5fshut_5fdown',['mra_shut_down',['../communication_01_07C_xC3_xB3pia_01em_01conflito_01de_01Caio_01Gustavo_01Mesquita_01Angelo_012013-05-17_08_8h.html#a8da2a9706cfdbe1a7fae96aac9e4f516',1,'mra_shut_down(void):&#160;communication (Cópia em conflito de Caio Gustavo Mesquita Angelo 2013-05-17).h'],['../communication_2communication_8h.html#a8da2a9706cfdbe1a7fae96aac9e4f516',1,'mra_shut_down(void):&#160;communication.h']]],
+  ['mra_5fshut_5fdown',['mra_shut_down',['../communication_2communication_8h.html#a8da2a9706cfdbe1a7fae96aac9e4f516',1,'communication.h']]],
   ['mrows',['mrows',['../structMATLAB__DATAHEAD.html#abf1ef02c93522915bd7fdf9f72df44b7',1,'MATLAB_DATAHEAD::mrows()'],['../structGMATRIX__MATLAB__DATAHEAD.html#aef3b07279caf1f6f1d0142bd445fb46b',1,'GMATRIX_MATLAB_DATAHEAD::mrows()']]]
 ];

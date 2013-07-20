@@ -41,12 +41,6 @@ var searchData=
   ['add_5fadxl345',['ADD_ADXL345',['../communication_2imu__functions_8h.html#a909f4a5773e20e672cdb4088e1cfa22f',1,'ADD_ADXL345():&#160;imu_functions.h'],['../CommunicationV0_2imu__functions_8h.html#a909f4a5773e20e672cdb4088e1cfa22f',1,'ADD_ADXL345():&#160;imu_functions.h']]],
   ['add_5fhmc5883',['ADD_HMC5883',['../communication_2imu__functions_8h.html#a383c09d3e3bbe30097f7eb8d081fb856',1,'ADD_HMC5883():&#160;imu_functions.h'],['../CommunicationV0_2imu__functions_8h.html#a383c09d3e3bbe30097f7eb8d081fb856',1,'ADD_HMC5883():&#160;imu_functions.h']]],
   ['add_5fitg3200',['ADD_ITG3200',['../communication_2imu__functions_8h.html#ab9fd1068a3f5fcba24d92918aaf0dcb5',1,'ADD_ITG3200():&#160;imu_functions.h'],['../CommunicationV0_2imu__functions_8h.html#ab9fd1068a3f5fcba24d92918aaf0dcb5',1,'ADD_ITG3200():&#160;imu_functions.h']]],
-  ['amt203_5fcmd_5feeprom_5frd',['AMT203_CMD_EEPROM_RD',['../AMT203__model_8h.html#adbe2a1b57b353f000c9298b48f553ef0',1,'AMT203_model.h']]],
-  ['amt203_5fcmd_5feeprom_5fwr',['AMT203_CMD_EEPROM_WR',['../AMT203__model_8h.html#a736111e0245a8d453884778167a7ff0b',1,'AMT203_model.h']]],
-  ['amt203_5fcmd_5fnop',['AMT203_CMD_NOP',['../AMT203__model_8h.html#a82ae6af18c17884ed3d756eccd06fcea',1,'AMT203_model.h']]],
-  ['amt203_5fcmd_5frd_5fpos',['AMT203_CMD_RD_POS',['../AMT203__model_8h.html#a870453446c985b3c51dc3196effad806',1,'AMT203_model.h']]],
-  ['amt203_5fcmd_5fset_5fzero',['AMT203_CMD_SET_ZERO',['../AMT203__model_8h.html#a2196c95935dc3c60edbd0279fb1fa461',1,'AMT203_model.h']]],
-  ['amt203_5fres_5fwait',['AMT203_RES_WAIT',['../AMT203__model_8h.html#ab0ab21f9e87ccda7eb1de831da971131',1,'AMT203_model.h']]],
   ['array_5fsize',['ARRAY_SIZE',['../communication_2spi__functions_8h.html#a25f003de16c08a4888b69f619d70f427',1,'ARRAY_SIZE():&#160;spi_functions.h'],['../CommunicationV0_2spi__functions_8h.html#a25f003de16c08a4888b69f619d70f427',1,'ARRAY_SIZE():&#160;spi_functions.h']]],
   ['ascii_5f0',['ASCII_0',['../communication_2imu__functions_8h.html#aa3f75ad2972ec8996ce5206feac0e52c',1,'ASCII_0():&#160;imu_functions.h'],['../CommunicationV0_2imu__functions_8h.html#aa3f75ad2972ec8996ce5206feac0e52c',1,'ASCII_0():&#160;imu_functions.h']]]
 ];
