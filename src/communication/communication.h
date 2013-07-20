@@ -21,6 +21,9 @@
 #define GPIO_DAC_SHDN		66	// GPIO that deals with DAC power
 #define GPIO_DAC_LDAC		67
 
+#define USE_ENCODER
+#define USE_IMU
+#define USE_SPI
 
 /**
  * Configs of IMU

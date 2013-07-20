@@ -12,7 +12,7 @@ int status;
 
 int devices_init(IMU_PARAM_STRUCT *imu_param, SPI_PARAM_STRUCT *spi_param, MRA_DATA_STRUCT *mra_data)
 {
-
+#ifdef USE_IMU
   if( (imu_param->i2c_dev = open("/dev/i2c-3", O_RDWR))<0 )
   {
     perror("Failed to open i2c_dev");
@@ -35,7 +35,7 @@ int devices_init(IMU_PARAM_STRUCT *imu_param, SPI_PARAM_STRUCT *spi_param, MRA_D
 		return FAILURE;
   } 
 
-  if( gyr_init(imu_param->i2c_dev, imu_param->gyr.rate, imu_param->gyr.lpf_bw, imu_param->gyr.clk_source, imu_param->gyr.act)<0 )
+  if( gyr_init(imu_paramhome directory->i2c_dev, imu_param->gyr.rate, imu_param->gyr.lpf_bw, imu_param->gyr.clk_source, imu_param->gyr.act)<0 )
   {
       perror("Error in gyrometer initialization");
       //return FAILURE;
@@ -51,7 +51,9 @@ int devices_init(IMU_PARAM_STRUCT *imu_param, SPI_PARAM_STRUCT *spi_param, MRA_D
 	perror("Error in accelerometer initialization");
 	return FAILURE;
   }
+#endif
 
+#ifdef USE_SPI
   if ((spi_param->spi_dev=spi_init(spi_param->mode,spi_param->speed,spi_param->cs))<0) 
   {
     perror("Error in SPI device initialization");
@@ -65,7 +67,7 @@ int devices_init(IMU_PARAM_STRUCT *imu_param, SPI_PARAM_STRUCT *spi_param, MRA_D
   actuate(spi_param->spi_dev, mra_data);
   if( mra_data->new_ctl == FAILURE )
   {
-	perror("Error in MRA initialization");
+	perror("Error inhome directory MRA initialization");
 	return FAILURE;
   }
  // if( gpio_write(GPIO_DAC_SHDN,1)==FAILURE )
@@ -74,6 +76,8 @@ int devices_init(IMU_PARAM_STRUCT *imu_param, SPI_PARAM_STRUCT *spi_param, MRA_D
 //	return FAILURE;
 //  }
   
+#endif
+
   return SUCCESS;
 }
 
@@ -83,7 +87,7 @@ int read_all_data(int i2c_dev, int spi_dev, IMU_DATA_STRUCT *imu_data,EFF_DATA_S
   int f=0;
   // Read IMU data
   imu_data->new_data=SUCCESS;
-  
+#ifdef USE_IMU
   if ( (ioctl(i2c_dev, I2C_SLAVE, ADD_ADXL345))<0) 
 	imu_data->new_data=0;
   else if( (acc_read_all_data(i2c_dev,data))==FAILURE )
@@ -118,7 +122,7 @@ int read_all_data(int i2c_dev, int spi_dev, IMU_DATA_STRUCT *imu_data,EFF_DATA_S
     imu_data->mag.y=data[1];
     imu_data->mag.z=data[2];
   }
-
+#endif
   //Read Efforts data
   eff_data->new_data=SUCCESS;
   
@@ -139,9 +143,15 @@ int read_all_data(int i2c_dev, int spi_dev, IMU_DATA_STRUCT *imu_data,EFF_DATA_S
     //printf("imu_data->new_data antes do return= %d\n",imu_data->new_data);
 
   //Read Encoder data
-  enc_read_pos(enc_data->spi_dev,&(enc_data->angle));
+  enc_data->new_data = SUCCESS;
+#ifdef USE_ENCODER
+  if( (gpio_write(GPIO_CS_S3,1)==FAILURE) || (gpio_write(GPIO_CS_S2,1)==FAILURE) || (gpio_write(GPIO_CS_S1,1)==FAILURE) || (gpio_write(GPIO_CS_S0,1)==FAILURE))
+	enc_data->new_data=FAILURE;
+  if(enc_read_pos(enc_data->spi_dev,&(enc_data->angle))==FAILURE)
+    enc_data->new_data = FAILURE;
+#endif
 
-  if( imu_data->new_data==FAILURE || eff_data->new_data==FAILURE || mra_data->new_data==FAILURE )
+  if( imu_data->new_data==FAILURE || eff_data->new_data==FAILURE || mra_data->new_data==FAILURE || enc_data->new_data == FAILURE)
     return FAILURE;
     
   return SUCCESS;
