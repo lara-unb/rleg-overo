@@ -13,11 +13,12 @@
 //#include "protocol.h"
 //#include "estimation.h"
 //#include "control.h"
-#include"communication/communication.h"
+#include "communication/communication.h"
 #include "datalogger.h"
 #include "ui.h"
 #include "main2.h"
 #include "calibration/calibration.h"
+#include "taskScheduler.h"
 
 /* This runs tasks in three points:
  * 1) In the while(quittask == 0) loop: background (semi-periodic, usleep governed) tasks (datalogger update)
@@ -89,7 +90,7 @@ int main(void)
 {
     int status = 0;
     int n = 0;
-    int return_value = SUCCESS;
+    int return_value = SUCCESS;    
  
 // Parameters for IMU and SPI
 
@@ -130,7 +131,7 @@ int main(void)
     perror("Unsuccesful user interface initialization");
     return -1;
   }
-  // enc_zero_set(enc_data)!=SUCCESS ? perror("Unsuccesfull encoder set zero ") : return -1;
+  // enc_zero_set(enc_data)!=SUCCESS ? perror("Unsuccesfull encoder set zero "); return -1;
 
   //gpio_write(GPIO_S0,1);
   //mra_data.Out_0=2275;

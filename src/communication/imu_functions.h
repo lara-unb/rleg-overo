@@ -75,7 +75,7 @@ uint8_t* acc_read_reg(int i2c_dev, uint8_t reg, uint8_t count);
  *         12: 12.5Hz,
  *         6: 6.25Hz)
  * @param range Set range of read, possible values:
- *        (2: +- 2g
+ *        (2: +- 2g 
  *        4: +- 4g
  *        8: +- 8g
  *        anyother: 16g)

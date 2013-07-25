@@ -12,7 +12,7 @@ int status;
 
 int devices_init(IMU_PARAM_STRUCT *imu_param, SPI_PARAM_STRUCT *spi_param, MRA_DATA_STRUCT *mra_data)
 {
-#ifdef USE_IMU
+#if USE_IMU
   if( (imu_param->i2c_dev = open("/dev/i2c-3", O_RDWR))<0 )
   {
     perror("Failed to open i2c_dev");
@@ -24,18 +24,19 @@ int devices_init(IMU_PARAM_STRUCT *imu_param, SPI_PARAM_STRUCT *spi_param, MRA_D
 		return FAILURE;
   }
 
-  if( (mag_init(imu_param->i2c_dev, imu_param->mag.rate, imu_param->mag.range, imu_param->mag.samples_avg, imu_param->mag.meas_mode, imu_param->mag.op_mode))< 0)
+  /*if( (mag_init(imu_param->i2c_dev, imu_param->mag.rate, imu_param->mag.range, imu_param->mag.samples_avg, imu_param->mag.meas_mode, imu_param->mag.op_mode))< 0)
   {
       perror("Error in magnetometer initialization");
       return FAILURE;
-  }  
+  }
+*/  
 
   if( ioctl(imu_param->i2c_dev, I2C_SLAVE, ADD_ITG3200) < 0) {
 		perror("ioctl(I2C_SLAVE) gyr");
 		return FAILURE;
   } 
 
-  if( gyr_init(imu_paramhome directory->i2c_dev, imu_param->gyr.rate, imu_param->gyr.lpf_bw, imu_param->gyr.clk_source, imu_param->gyr.act)<0 )
+  if( gyr_init(imu_param->i2c_dev, imu_param->gyr.rate, imu_param->gyr.lpf_bw, imu_param->gyr.clk_source, imu_param->gyr.act)<0 )
   {
       perror("Error in gyrometer initialization");
       //return FAILURE;
@@ -53,7 +54,7 @@ int devices_init(IMU_PARAM_STRUCT *imu_param, SPI_PARAM_STRUCT *spi_param, MRA_D
   }
 #endif
 
-#ifdef USE_SPI
+  //#ifdef USE_SPI
   if ((spi_param->spi_dev=spi_init(spi_param->mode,spi_param->speed,spi_param->cs))<0) 
   {
     perror("Error in SPI device initialization");
@@ -76,7 +77,7 @@ int devices_init(IMU_PARAM_STRUCT *imu_param, SPI_PARAM_STRUCT *spi_param, MRA_D
 //	return FAILURE;
 //  }
   
-#endif
+//#endif
 
   return SUCCESS;
 }
@@ -87,7 +88,7 @@ int read_all_data(int i2c_dev, int spi_dev, IMU_DATA_STRUCT *imu_data,EFF_DATA_S
   int f=0;
   // Read IMU data
   imu_data->new_data=SUCCESS;
-#ifdef USE_IMU
+#if USE_IMU
   if ( (ioctl(i2c_dev, I2C_SLAVE, ADD_ADXL345))<0) 
 	imu_data->new_data=0;
   else if( (acc_read_all_data(i2c_dev,data))==FAILURE )
@@ -144,7 +145,7 @@ int read_all_data(int i2c_dev, int spi_dev, IMU_DATA_STRUCT *imu_data,EFF_DATA_S
 
   //Read Encoder data
   enc_data->new_data = SUCCESS;
-#ifdef USE_ENCODER
+#if USE_ENCODER
   if( (gpio_write(GPIO_CS_S3,1)==FAILURE) || (gpio_write(GPIO_CS_S2,1)==FAILURE) || (gpio_write(GPIO_CS_S1,1)==FAILURE) || (gpio_write(GPIO_CS_S0,1)==FAILURE))
 	enc_data->new_data=FAILURE;
   if(enc_read_pos(enc_data->spi_dev,&(enc_data->angle))==FAILURE)

@@ -6,11 +6,12 @@
 
 #include <unistd.h>
 #include <signal.h>
-#include <ptread.h>
+#include <pthread.h>
 #include <sys/time.h>
 #include <time.h>
 
-
+#ifndef TASK_SCHEDULER_H_INCLUDED
+#define TASK_SCHEDULER_H_INCLUDED
 /**
  * Task to schedule definition
  */
@@ -41,3 +42,4 @@ void timer_start_task(TASK_S *task);
  * Stop some task
  */
 void timer_stop_task(TASK_S *task);
+#endif

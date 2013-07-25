@@ -42,8 +42,6 @@ int datalogger_close(void);
 int datalogger_write_file(void);
 int datalogger_update_IPC(void);
 int datalogger_update(double t_s, double t_control_exec_s, double t_ui_exec_s, double t0_s, IMU_DATA_STRUCT *pimu_data, EFF_DATA_STRUCT *peff_data, MRA_DATA_STRUCT *pmra_data /*,IMUMEASURE *pimu_measure, MAGNETOMETERMEASURE *pmagnetometer_measure, ESTIMATION_DATA_STRUCT *pestimation_data, CONTROL_DATA_STRUCT *pcontrol_data*/);
-//int datalogger_set_local_fields(CALIBRATION_LOCAL_FIELDS_STRUCT *plocal_fields_data);
-//int datalogger_set_local_coordinate_system(CALIBRATION_LOCAL_COORDINATE_SYSTEM_STRUCT *plocal_coordinate_system_data);
 int datalogger_set_Ts(double Ts);
 int datalogger_status(void);
 int datalogger_start(void);
