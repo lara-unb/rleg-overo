@@ -62,7 +62,7 @@ int main(void){
   }
 
   while(return_value == SUCCESS){
-    task1->runFunction();
+    task1.run();
   }
 
   return return_value;

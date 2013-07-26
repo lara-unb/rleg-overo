@@ -1,6 +1,6 @@
 /**
  * Implentation of Scheduler for tasks:
- * @autor Rafael
+ * @author Rafael
  * @todo test it
  */
 
@@ -31,14 +31,16 @@ typedef struct taskS{
   volatile int period_us;
   volatile int isFirstExecution; ///< Flag to sign first Exec
   
-  void (*runFunction)(void); ///< hook to the action
+  void *run; ///< hook to the action 
 } TASK_S;
 
 /**
  * Create a task
  * @ingroup taskS
+ * @param *task
+ * @param *voidFunction Pointer to the function called to execute
  */
-void timer_new_task(TASK_S *task,timer_t timer ,void (*runFuntion)(void));
+void timer_new_task(TASK_S *task,timer_t timer ,void *runFuntion);
 
 /**
  * Start some task

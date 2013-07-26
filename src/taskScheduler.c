@@ -2,7 +2,7 @@
  *
  */
 
-void timer_new_task(TASK_S *task,void (*runFuntion)(void)){
+void timer_new_task(TASK_S *task,void *runFuntion){
   (*task).t_global = 0.0;
   (*task).T_exec_global = 0.0;
   (*task).T_mean_global = 0.0;
@@ -10,7 +10,7 @@ void timer_new_task(TASK_S *task,void (*runFuntion)(void)){
   (*task).period_us = 0.0;
   (*task).isFirstExecution = 1;
 
-  task->runFunction = runFunction;
+  task->run = runFunction;
 }
 
 void timer_start_task(TASK_S *task){

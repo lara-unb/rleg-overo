@@ -29,6 +29,10 @@
 #define SUCCESS 1
 #define FAILURE	-1
 
+/**
+ * @defgroup imu IMU sensors
+ */
+
 #define ADD_ADXL345 0x53
 #define ADD_ITG3200 0x68
 #define ADD_HMC5883 0x1E
@@ -41,6 +45,7 @@
 
 /**
  * @defgroup acc Functions for accelerometer ADXL345
+ * @ingroup imu
  */
 
 
@@ -120,6 +125,7 @@ int acc_read_all_reg(int i2c_dev);
 
 /**
  * @defgroup gyr Functions for Gyrometer ITG3200
+ * @ingroup imu
  */
 
 /**
@@ -199,11 +205,12 @@ short int gyr_read_data(int i2c_dev, int type);
 
 /**
  * @defgroup mag Functions to Magnetometer HMC5883
+ * @ingroup imu
  */
 
 /**
  * WRITE TO REGISTER
- * @ingroup mag
+ * @ingroup mag imu
  * @param i2c_dev
  * @param reg
  * @param [in]data

@@ -2,7 +2,7 @@
 #define DATALOGGER_H
 
 // Module configuration
-#define DATALOGGER_MODULE_ENABLED      1
+#define DATALOGGER_MODULE_ENABLED      0
 #define DATALOGGER_DEBUG_MODE          0
 
 // Sets if you want to overwrite (0) or to append _1, _2, etc. to each new datalogger file
