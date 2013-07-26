@@ -29,3 +29,7 @@ void calibrate_imu(IMU_DATA_STRUCT *imu_data)
   
   return;
 }
+
+void calibrate_enc(ENC_DATA_STRUCT *enc_data){
+  enc_data->calib.angle = enc_data->angle/ENC_FS;
+}

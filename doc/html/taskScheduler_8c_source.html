@@ -86,7 +86,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <a href="taskScheduler_8c.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
-<div class="line"><a name="l00005"></a><span class="lineno"><a class="code" href="taskScheduler_8c.html#a2656ac374f671881cf9ae0ff4dc229ba">    5</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="taskScheduler_8c.html#a2656ac374f671881cf9ae0ff4dc229ba">timer_new_task</a>(<a class="code" href="structTASK__S.html" title="Implentation of Scheduler for tasks:  Rafael.">TASK_S</a> *task,<span class="keywordtype">void</span> (*runFuntion)(<span class="keywordtype">void</span>)){</div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="code" href="taskScheduler_8c.html#a2656ac374f671881cf9ae0ff4dc229ba">    5</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="taskScheduler_8c.html#a2656ac374f671881cf9ae0ff4dc229ba">timer_new_task</a>(<a class="code" href="structTASK__S.html" title="Task to schedule definition.">TASK_S</a> *task,<span class="keywordtype">void</span> (*runFuntion)(<span class="keywordtype">void</span>)){</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;  (*task).t_global = 0.0;</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  (*task).T_exec_global = 0.0;</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  (*task).T_mean_global = 0.0;</div>
@@ -97,7 +97,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  task-&gt;<a class="code" href="structTASK__S.html#a241d427891bed303812b78bd9f9ad86f" title="hook to the action">runFunction</a> = runFunction;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="code" href="taskScheduler_8h.html#ac088a054258396a6e2dba77908f22b42">   16</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="taskScheduler_8c.html#ac088a054258396a6e2dba77908f22b42" title="Start some task.">timer_start_task</a>(<a class="code" href="structTASK__S.html" title="Implentation of Scheduler for tasks:  Rafael.">TASK_S</a> *task){</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="code" href="group__taskS.html#gac088a054258396a6e2dba77908f22b42">   16</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__taskS.html#gac088a054258396a6e2dba77908f22b42" title="Start some task.">timer_start_task</a>(<a class="code" href="structTASK__S.html" title="Task to schedule definition.">TASK_S</a> *task){</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <span class="keyword">struct </span>itimerspec itimer;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="keyword">struct </span>sigevent sigev;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="keywordtype">int</span> erno = 0;</div>
@@ -128,7 +128,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  }</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="code" href="taskScheduler_8c.html#a39e4b92cd20da5838951ab5b0ad19fbb">   47</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="taskScheduler_8c.html#a39e4b92cd20da5838951ab5b0ad19fbb">timer_function_task</a>(<a class="code" href="structTASK__S.html" title="Implentation of Scheduler for tasks:  Rafael.">TASK_S</a> *task)</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="code" href="taskScheduler_8c.html#a39e4b92cd20da5838951ab5b0ad19fbb">   47</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="taskScheduler_8c.html#a39e4b92cd20da5838951ab5b0ad19fbb">timer_function_task</a>(<a class="code" href="structTASK__S.html" title="Task to schedule definition.">TASK_S</a> *task)</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="communication_2communication_8c.html#a6e27f49150e9a14580fb313cc2777e00">status</a> = 0;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keyword">static</span> <span class="keyword">struct </span>timeval timereset;</div>
@@ -182,7 +182,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 9 2013 12:59:20 for Rleg by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jul 26 2013 09:55:02 for Rleg by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

@@ -1,12 +1,13 @@
 <map id="main2.c" name="main2.c">
-<area shape="rect" id="node23" href="$communication_2communication_8h.html" title="communication/communication.h" alt="" coords="524,160,737,189"/>
-<area shape="rect" id="node81" href="$datalogger_8h.html" title="datalogger.h" alt="" coords="1319,83,1412,112"/>
-<area shape="rect" id="node83" href="$ui_8h.html" title="ui.h" alt="" coords="1436,83,1479,112"/>
-<area shape="rect" id="node85" href="$main2_8h.html" title="main2.h" alt="" coords="1503,83,1569,112"/>
-<area shape="rect" id="node87" href="$calibration_2calibration_8h.html" title="calibration/calibration.h" alt="" coords="1140,83,1295,112"/>
-<area shape="rect" id="node25" href="$communication_2imu__functions_8h.html" title="imu_functions.h" alt="" coords="549,237,664,267"/>
+<area shape="rect" id="node23" href="$communication_2communication_8h.html" title="communication/communication.h" alt="" coords="565,160,779,189"/>
+<area shape="rect" id="node81" href="$datalogger_8h.html" title="datalogger.h" alt="" coords="1272,83,1365,112"/>
+<area shape="rect" id="node83" href="$ui_8h.html" title="ui.h" alt="" coords="1389,83,1432,112"/>
+<area shape="rect" id="node85" href="$main2_8h.html" title="main2.h" alt="" coords="1456,83,1523,112"/>
+<area shape="rect" id="node87" href="$calibration_2calibration_8h.html" title="calibration/calibration.h" alt="" coords="616,83,771,112"/>
+<area shape="rect" id="node90" href="$taskScheduler_8h.html" title="taskScheduler.h" alt="" coords="1133,83,1248,112"/>
+<area shape="rect" id="node25" href="$communication_2imu__functions_8h.html" title="imu_functions.h" alt="" coords="565,237,680,267"/>
 <area shape="rect" id="node45" href="$communication_2imu__regs_8h.html" title="imu_regs.h" alt="" coords="5,315,91,344"/>
 <area shape="rect" id="node47" href="$communication_2spi__functions_8h.html" title="spi_functions.h" alt="" coords="932,237,1041,267"/>
-<area shape="rect" id="node61" href="$communication_2gpio__functions_8h.html" title="gpio_functions.h" alt="" coords="357,237,475,267"/>
-<area shape="rect" id="node68" href="$encoder__functions_8h.html" title="Rev 0 &#45; 18/06/2013 RLEG project &#45; 2013." alt="" coords="688,237,827,267"/>
+<area shape="rect" id="node61" href="$communication_2gpio__functions_8h.html" title="gpio_functions.h" alt="" coords="373,237,491,267"/>
+<area shape="rect" id="node68" href="$encoder__functions_8h.html" title="Rev 0 &#45; 18/06/2013 RLEG project &#45; 2013." alt="" coords="704,237,843,267"/>
 </map>

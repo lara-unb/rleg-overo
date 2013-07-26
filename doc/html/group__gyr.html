@@ -76,12 +76,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div class="header">
   <div class="summary">
+<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Functions for Gyrometer ITG3200</div>  </div>
-</div><!--header-->
+<div class="ingroups"><a class="el" href="group__calibrate.html">Routines to calibrate sensors</a></div></div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Collaboration diagram for Functions for Gyrometer ITG3200:</div>
+<div class="dyncontent">
+<center><table><tr><td><img src="group__gyr.png" border="0" alt="" usemap="#group____gyr"/>
+<map name="group____gyr" id="group____gyr">
+<area shape="rect" id="node2" href="group__calibrate.html" title="Routines to calibrate\l sensors" alt="" coords="7,5,148,51"/></map>
+</td></tr></table></center>
+</div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ga69780ffe3a15aad4121fed56d5e47377"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gyr.html#ga69780ffe3a15aad4121fed56d5e47377">GYR_BIAS_X</a>&#160;&#160;&#160;-60.9046</td></tr>
+<tr class="memitem:gaf3264a08be995ea97ae8581128873877"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gyr.html#gaf3264a08be995ea97ae8581128873877">GYR_BIAS_Y</a>&#160;&#160;&#160;40.9062</td></tr>
+<tr class="memitem:gaa10980bbf5b1dd91704d4dab98fcf991"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gyr.html#gaa10980bbf5b1dd91704d4dab98fcf991">GYR_BIAS_Z</a>&#160;&#160;&#160;0.8769</td></tr>
+<tr class="memitem:ga8fe84f8c6d39f41d8622fd0cbce3a522"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gyr.html#ga8fe84f8c6d39f41d8622fd0cbce3a522">GYR_FS_X</a>&#160;&#160;&#160;0.001214142</td></tr>
+<tr class="memitem:ga4be2e0fa7596546bb4699862d0fe4183"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gyr.html#ga4be2e0fa7596546bb4699862d0fe4183">GYR_FS_Y</a>&#160;&#160;&#160;0.001214142</td></tr>
+<tr class="memitem:gaaee2ece0c43cc20d7c531ab79dcd06c8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gyr.html#gaaee2ece0c43cc20d7c531ab79dcd06c8">GYR_FS_Z</a>&#160;&#160;&#160;0.001214142</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ga3eba167b8ab0614bfe7bafeae8b5570d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__gyr.html#ga3eba167b8ab0614bfe7bafeae8b5570d">gyr_write_reg</a> (int <a class="el" href="CommunicationV0_2communication_8c.html#a7751bd45ac1064efb35adf1f19c25db8">i2c_dev</a>, uint8_t reg, uint8_t data)</td></tr>
@@ -96,6 +114,103 @@ Functions</h2></td></tr>
 <tr class="memdesc:ga271b37e9ace81b18bb2f83787247d262"><td class="mdescLeft">&#160;</td><td class="mdescRight">READ DATA (X, Y, Z or T)  <a href="#ga271b37e9ace81b18bb2f83787247d262"></a><br/></td></tr>
 </table>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
+<h2>Macro Definition Documentation</h2>
+<a class="anchor" id="ga69780ffe3a15aad4121fed56d5e47377"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GYR_BIAS_X&#160;&#160;&#160;-60.9046</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="calibration_2calibration_8h_source.html#l00044">44</a> of file <a class="el" href="calibration_2calibration_8h_source.html">calibration.h</a>.</p>
+
+<p>Referenced by <a class="el" href="calibration_2calibration_8c_source.html#l00014">calibrate_imu()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="gaf3264a08be995ea97ae8581128873877"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GYR_BIAS_Y&#160;&#160;&#160;40.9062</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="calibration_2calibration_8h_source.html#l00045">45</a> of file <a class="el" href="calibration_2calibration_8h_source.html">calibration.h</a>.</p>
+
+<p>Referenced by <a class="el" href="calibration_8c_source.html#l00014">calibrate_imu()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="gaa10980bbf5b1dd91704d4dab98fcf991"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GYR_BIAS_Z&#160;&#160;&#160;0.8769</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="calibration_2calibration_8h_source.html#l00046">46</a> of file <a class="el" href="calibration_2calibration_8h_source.html">calibration.h</a>.</p>
+
+<p>Referenced by <a class="el" href="calibration_8c_source.html#l00014">calibrate_imu()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga8fe84f8c6d39f41d8622fd0cbce3a522"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GYR_FS_X&#160;&#160;&#160;0.001214142</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="calibration_2calibration_8h_source.html#l00047">47</a> of file <a class="el" href="calibration_2calibration_8h_source.html">calibration.h</a>.</p>
+
+<p>Referenced by <a class="el" href="calibration_2calibration_8c_source.html#l00014">calibrate_imu()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ga4be2e0fa7596546bb4699862d0fe4183"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GYR_FS_Y&#160;&#160;&#160;0.001214142</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="calibration_2calibration_8h_source.html#l00048">48</a> of file <a class="el" href="calibration_2calibration_8h_source.html">calibration.h</a>.</p>
+
+<p>Referenced by <a class="el" href="calibration_2calibration_8c_source.html#l00014">calibrate_imu()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="gaaee2ece0c43cc20d7c531ab79dcd06c8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GYR_FS_Z&#160;&#160;&#160;0.001214142</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="calibration_2calibration_8h_source.html#l00049">49</a> of file <a class="el" href="calibration_2calibration_8h_source.html">calibration.h</a>.</p>
+
+<p>Referenced by <a class="el" href="calibration_2calibration_8c_source.html#l00014">calibrate_imu()</a>.</p>
+
+</div>
+</div>
 <h2>Function Documentation</h2>
 <a class="anchor" id="ga6d02be352b4491a236c9695a6a24d174"></a>
 <div class="memitem">
@@ -512,7 +627,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 9 2013 12:59:21 for Rleg by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jul 26 2013 09:55:04 for Rleg by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

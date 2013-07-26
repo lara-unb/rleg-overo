@@ -16,6 +16,7 @@
 {\ttfamily \#include \char`\"{}ui.\-h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}main2.\-h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}calibration/calibration.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}task\-Scheduler.\-h\char`\"{}}\\*
 Include dependency graph for main2.\-c\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -136,7 +137,7 @@ short int \hyperlink{main2_8c_aaa9d39905d1be632c8232f11155291d0}{buff} \mbox{[}3
 \subsubsection[{T\-A\-S\-K1\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-U\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-A\-S\-K1\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-U\-S~20000}}\label{main2_8c_a95fe7f7d25a81aabd1194bac017074d8}
 
 
-Definition at line 31 of file main2.\-c.
+Definition at line 32 of file main2.\-c.
 
 
 
@@ -147,7 +148,7 @@ Referenced by main().
 \subsubsection[{T\-A\-S\-K2\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-U\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-A\-S\-K2\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-U\-S~100000}}\label{main2_8c_adfe9b03db41d576a3beb124ec44a54d8}
 
 
-Definition at line 32 of file main2.\-c.
+Definition at line 33 of file main2.\-c.
 
 
 
@@ -165,7 +166,7 @@ Referenced by main().
 )}}\label{main2_8c_a5f05ce725141ddfab683e059b1cd95ea}
 
 
-Definition at line 611 of file main2.\-c.
+Definition at line 612 of file main2.\-c.
 
 
 
@@ -203,7 +204,7 @@ Here is the caller graph for this function\-:
 )}}\label{main2_8c_a5ce2b6a7dd4d00c90fe18098091044aa}
 
 
-Definition at line 387 of file main2.\-c.
+Definition at line 388 of file main2.\-c.
 
 
 
@@ -234,7 +235,8 @@ Here is the call graph for this function\-:
 
 
 
-Here is the caller graph for this function\-:\nopagebreak
+Here is the caller graph for this function\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -252,7 +254,7 @@ Here is the caller graph for this function\-:\nopagebreak
 )}}\label{main2_8c_a5ce2b6a7dd4d00c90fe18098091044aa}
 
 
-Definition at line 387 of file main2.\-c.
+Definition at line 388 of file main2.\-c.
 
 
 
@@ -300,7 +302,7 @@ Here is the caller graph for this function\-:\nopagebreak
 )}}\label{main2_8c_a735ebf3d0d37c7d8187199e6565bcb5c}
 
 
-Definition at line 393 of file main2.\-c.
+Definition at line 394 of file main2.\-c.
 
 
 
@@ -349,7 +351,7 @@ Here is the caller graph for this function\-:\nopagebreak
 )}}\label{main2_8c_a735ebf3d0d37c7d8187199e6565bcb5c}
 
 
-Definition at line 393 of file main2.\-c.
+Definition at line 394 of file main2.\-c.
 
 
 
@@ -400,7 +402,7 @@ Here is the caller graph for this function\-:\nopagebreak
 )}}\label{main2_8c_a5b2b1fdd5e517470c10e84a2b2bcc5c8}
 
 
-Definition at line 602 of file main2.\-c.
+Definition at line 603 of file main2.\-c.
 
 
 
@@ -441,7 +443,7 @@ Here is the caller graph for this function\-:
 )}}\label{main2_8c_a840291bc02cba5474a4cb46a9b9566fe}
 
 
-Definition at line 88 of file main2.\-c.
+Definition at line 89 of file main2.\-c.
 
 
 
@@ -452,7 +454,7 @@ References I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::acc, I\-M\-U\
 \{
     \textcolor{keywordtype}{int} \hyperlink{communication_2communication_8c_a6e27f49150e9a14580fb313cc2777e00}{status} = 0;
     \textcolor{keywordtype}{int} n = 0;
-    \textcolor{keywordtype}{int} return\_value = \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};
+    \textcolor{keywordtype}{int} return\_value = \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};    
  
 \textcolor{comment}{// Parameters for IMU and SPI}
 
@@ -494,8 +496,8 @@ References I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::acc, I\-M\-U\
     perror(\textcolor{stringliteral}{"Unsuccesful user interface initialization"});
     \textcolor{keywordflow}{return} -1;
   \}
-  \textcolor{comment}{// enc\_zero\_set(enc\_data)!=SUCCESS ? perror("Unsuccesfull encoder set zero ")
-       : return -1;}
+  \textcolor{comment}{// enc\_zero\_set(enc\_data)!=SUCCESS ? perror("Unsuccesfull encoder set zero
+       "); return -1;}
 
   \textcolor{comment}{//gpio\_write(GPIO\_S0,1);}
   \textcolor{comment}{//mra\_data.Out\_0=2275;}
@@ -596,7 +598,7 @@ Here is the call graph for this function\-:
 )}}\label{main2_8c_a26855b7739897854265d51aa61329390}
 
 
-Definition at line 211 of file main2.\-c.
+Definition at line 212 of file main2.\-c.
 
 
 
@@ -763,7 +765,8 @@ Here is the call graph for this function\-:
 
 
 
-Here is the caller graph for this function\-:\nopagebreak
+Here is the caller graph for this function\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -781,7 +784,7 @@ Here is the caller graph for this function\-:\nopagebreak
 )}}\label{main2_8c_a944f7352f18ed248c1b1143f51edc391}
 
 
-Definition at line 334 of file main2.\-c.
+Definition at line 335 of file main2.\-c.
 
 
 
@@ -882,7 +885,7 @@ Here is the caller graph for this function\-:\nopagebreak
 )}}\label{main2_8c_a97a188c3a74115770124cf0bf0c1e407}
 
 
-Definition at line 596 of file main2.\-c.
+Definition at line 597 of file main2.\-c.
 
 
 
@@ -901,7 +904,8 @@ Referenced by periodic\-\_\-task\-\_\-1().
 \end{DoxyCode}
 
 
-Here is the caller graph for this function\-:\nopagebreak
+Here is the caller graph for this function\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -919,7 +923,7 @@ Here is the caller graph for this function\-:\nopagebreak
 )}}\label{main2_8c_a90885bae1b9535b16e014fb928e98e37}
 
 
-Definition at line 483 of file main2.\-c.
+Definition at line 484 of file main2.\-c.
 
 
 
@@ -1003,7 +1007,8 @@ Here is the call graph for this function\-:
 
 
 
-Here is the caller graph for this function\-:\nopagebreak
+Here is the caller graph for this function\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1021,7 +1026,7 @@ Here is the caller graph for this function\-:\nopagebreak
 )}}\label{main2_8c_a01c18e97a4488be2912eb738b2e7f890}
 
 
-Definition at line 540 of file main2.\-c.
+Definition at line 541 of file main2.\-c.
 
 
 
@@ -1122,7 +1127,7 @@ Here is the caller graph for this function\-:\nopagebreak
 )}}\label{main2_8c_a0e411070b7f487a8ab6a60b180f50e12}
 
 
-Definition at line 399 of file main2.\-c.
+Definition at line 400 of file main2.\-c.
 
 
 
@@ -1198,7 +1203,7 @@ Here is the caller graph for this function\-:\nopagebreak
 )}}\label{main2_8c_ae59c93969d017f18e3e38b2f9f7888ca}
 
 
-Definition at line 432 of file main2.\-c.
+Definition at line 433 of file main2.\-c.
 
 
 
@@ -1272,7 +1277,7 @@ Here is the caller graph for this function\-:\nopagebreak
 )}}\label{main2_8c_a54bb5066619e443a28ae5601b5ea3642}
 
 
-Definition at line 463 of file main2.\-c.
+Definition at line 464 of file main2.\-c.
 
 
 
@@ -1313,7 +1318,7 @@ Here is the caller graph for this function\-:\nopagebreak
 )}}\label{main2_8c_a0c69dbcb7b2885a2de116b9d690280de}
 
 
-Definition at line 473 of file main2.\-c.
+Definition at line 474 of file main2.\-c.
 
 
 
@@ -1353,14 +1358,14 @@ Here is the caller graph for this function\-:\nopagebreak
 \subsubsection[{acquire}]{\setlength{\rightskip}{0pt plus 5cm}int acquire = 0}}\label{main2_8c_a95a859aa805a58cd4c59e172d250de4a}
 
 
-Definition at line 40 of file main2.\-c.
+Definition at line 41 of file main2.\-c.
 
 \hypertarget{main2_8c_aaa9d39905d1be632c8232f11155291d0}{\index{main2.\-c@{main2.\-c}!buff@{buff}}
 \index{buff@{buff}!main2.c@{main2.\-c}}
 \subsubsection[{buff}]{\setlength{\rightskip}{0pt plus 5cm}short int buff\mbox{[}3\mbox{]}\mbox{[}3\mbox{]}\mbox{[}3\mbox{]}}}\label{main2_8c_aaa9d39905d1be632c8232f11155291d0}
 
 
-Definition at line 68 of file main2.\-c.
+Definition at line 69 of file main2.\-c.
 
 
 
@@ -1371,7 +1376,7 @@ Referenced by periodic\-\_\-task\-\_\-2().
 \subsubsection[{buff\-\_\-i}]{\setlength{\rightskip}{0pt plus 5cm}int buff\-\_\-i = 0}}\label{main2_8c_ac0f4eb3a1def152855159c698feaf977}
 
 
-Definition at line 67 of file main2.\-c.
+Definition at line 68 of file main2.\-c.
 
 
 
@@ -1382,7 +1387,7 @@ Referenced by periodic\-\_\-task\-\_\-2().
 \subsubsection[{eff\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\-F\-F\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} eff\-\_\-data}}\label{main2_8c_a5650ece8c3a277c7f158d75ae65265fa}
 
 
-Definition at line 75 of file main2.\-c.
+Definition at line 76 of file main2.\-c.
 
 
 
@@ -1393,14 +1398,14 @@ Referenced by main().
 \subsubsection[{enc\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\-N\-C\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} enc\-\_\-data}}\label{main2_8c_aaa441e18ae805c4f3efb0b5231d1cfe7}
 
 
-Definition at line 77 of file main2.\-c.
+Definition at line 78 of file main2.\-c.
 
 \hypertarget{main2_8c_a4f35e5ea2395561d0bd3b2f45612dc2c}{\index{main2.\-c@{main2.\-c}!failure@{failure}}
 \index{failure@{failure}!main2.c@{main2.\-c}}
 \subsubsection[{failure}]{\setlength{\rightskip}{0pt plus 5cm}int failure = 0}}\label{main2_8c_a4f35e5ea2395561d0bd3b2f45612dc2c}
 
 
-Definition at line 42 of file main2.\-c.
+Definition at line 43 of file main2.\-c.
 
 
 
@@ -1411,7 +1416,7 @@ Referenced by periodic\-\_\-task\-\_\-1(), periodic\-\_\-task\-\_\-2(), threads\
 \subsubsection[{flag\-\_\-task\-\_\-1\-\_\-firstexecution}]{\setlength{\rightskip}{0pt plus 5cm}volatile int flag\-\_\-task\-\_\-1\-\_\-firstexecution = 1}}\label{main2_8c_a764ebf75ba887a9ecf7bf8fe124960e0}
 
 
-Definition at line 52 of file main2.\-c.
+Definition at line 53 of file main2.\-c.
 
 
 
@@ -1422,7 +1427,7 @@ Referenced by threads\-\_\-linux\-\_\-timer\-\_\-function\-\_\-task\-\_\-1(), th
 \subsubsection[{flag\-\_\-task\-\_\-2\-\_\-firstexecution}]{\setlength{\rightskip}{0pt plus 5cm}volatile int flag\-\_\-task\-\_\-2\-\_\-firstexecution = 1}}\label{main2_8c_a60e039269ae4a130db1bdbc4a709c437}
 
 
-Definition at line 64 of file main2.\-c.
+Definition at line 65 of file main2.\-c.
 
 
 
@@ -1433,7 +1438,7 @@ Referenced by threads\-\_\-linux\-\_\-timer\-\_\-function\-\_\-task\-\_\-2(), th
 \subsubsection[{imu\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} imu\-\_\-data}}\label{main2_8c_a3cfea12cbe9ca7f1681c950e4cd68606}
 
 
-Definition at line 74 of file main2.\-c.
+Definition at line 75 of file main2.\-c.
 
 
 
@@ -1444,7 +1449,7 @@ Referenced by control\-\_\-main(), and main().
 \subsubsection[{imu\-\_\-param}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T} imu\-\_\-param}}\label{main2_8c_a9c6b2109fb9402446f92995db60951b5}
 
 
-Definition at line 72 of file main2.\-c.
+Definition at line 73 of file main2.\-c.
 
 
 
@@ -1455,7 +1460,7 @@ Referenced by main().
 \subsubsection[{mra\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\-R\-A\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} mra\-\_\-data}}\label{main2_8c_abc42e18d2909e9bc119316283f4ed9db}
 
 
-Definition at line 76 of file main2.\-c.
+Definition at line 77 of file main2.\-c.
 
 
 
@@ -1466,7 +1471,7 @@ Referenced by control\-\_\-main().
 \subsubsection[{quittask}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char quittask = 0}}\label{main2_8c_a525dcecf4685bea1fbf92651ac0401fe}
 
 
-Definition at line 39 of file main2.\-c.
+Definition at line 40 of file main2.\-c.
 
 
 
@@ -1477,7 +1482,7 @@ Referenced by exit\-\_\-program(), main(), and threads\-\_\-linux\-\_\-init().
 \subsubsection[{spi\-\_\-param}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-P\-I\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T} spi\-\_\-param}}\label{main2_8c_adec2468b88cf50b20e5cf399a3b7e994}
 
 
-Definition at line 73 of file main2.\-c.
+Definition at line 74 of file main2.\-c.
 
 
 
@@ -1488,7 +1493,7 @@ Referenced by main().
 \subsubsection[{t0}]{\setlength{\rightskip}{0pt plus 5cm}volatile double t0 = 0.\-0}}\label{main2_8c_a86c2efd6da48b362806cdbb5b1e711d8}
 
 
-Definition at line 53 of file main2.\-c.
+Definition at line 54 of file main2.\-c.
 
 
 
@@ -1499,7 +1504,7 @@ Referenced by get\-\_\-time(), periodic\-\_\-task\-\_\-1(), reset\-\_\-timer(), 
 \subsubsection[{T\-\_\-task\-\_\-1\-\_\-exec\-\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double T\-\_\-task\-\_\-1\-\_\-exec\-\_\-global = 0.\-0}}\label{main2_8c_acdaa4a9b0e1be3dfa53b52df6410ad3b}
 
 
-Definition at line 47 of file main2.\-c.
+Definition at line 48 of file main2.\-c.
 
 
 
@@ -1510,7 +1515,7 @@ Referenced by periodic\-\_\-task\-\_\-1(), threads\-\_\-linux\-\_\-periodic\-\_\
 \subsubsection[{t\-\_\-task\-\_\-1\-\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double t\-\_\-task\-\_\-1\-\_\-global = 0.\-0}}\label{main2_8c_a2a2a647912528f7aa86812528dbfe02f}
 
 
-Definition at line 46 of file main2.\-c.
+Definition at line 47 of file main2.\-c.
 
 
 
@@ -1521,7 +1526,7 @@ Referenced by get\-\_\-time(), periodic\-\_\-task\-\_\-1(), reset\-\_\-timer(), 
 \subsubsection[{T\-\_\-task\-\_\-1\-\_\-max\-\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double T\-\_\-task\-\_\-1\-\_\-max\-\_\-global = 0.\-0}}\label{main2_8c_aa714e30d738039b5bf665742beb31739}
 
 
-Definition at line 50 of file main2.\-c.
+Definition at line 51 of file main2.\-c.
 
 
 
@@ -1532,7 +1537,7 @@ Referenced by threads\-\_\-linux\-\_\-timer\-\_\-function\-\_\-task\-\_\-1(), an
 \subsubsection[{T\-\_\-task\-\_\-1\-\_\-mean\-\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double T\-\_\-task\-\_\-1\-\_\-mean\-\_\-global = 0.\-0}}\label{main2_8c_a738c330c86a365e72ce29ebca3f1e572}
 
 
-Definition at line 48 of file main2.\-c.
+Definition at line 49 of file main2.\-c.
 
 
 
@@ -1543,7 +1548,7 @@ Referenced by get\-\_\-time(), threads\-\_\-get\-\_\-time(), threads\-\_\-linux\
 \subsubsection[{T\-\_\-task\-\_\-1\-\_\-min\-\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double T\-\_\-task\-\_\-1\-\_\-min\-\_\-global = 0.\-0}}\label{main2_8c_a86222e255aeeb47598a4fc91ab6c2b1a}
 
 
-Definition at line 49 of file main2.\-c.
+Definition at line 50 of file main2.\-c.
 
 
 
@@ -1554,7 +1559,7 @@ Referenced by threads\-\_\-linux\-\_\-timer\-\_\-function\-\_\-task\-\_\-1(), an
 \subsubsection[{T\-\_\-task\-\_\-2\-\_\-exec\-\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double T\-\_\-task\-\_\-2\-\_\-exec\-\_\-global = 0.\-0}}\label{main2_8c_a9629c77cd3dba9d47d15c2e51bdde09d}
 
 
-Definition at line 59 of file main2.\-c.
+Definition at line 60 of file main2.\-c.
 
 
 
@@ -1565,7 +1570,7 @@ Referenced by periodic\-\_\-task\-\_\-1(), threads\-\_\-linux\-\_\-periodic\-\_\
 \subsubsection[{t\-\_\-task\-\_\-2\-\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double t\-\_\-task\-\_\-2\-\_\-global = 0.\-0}}\label{main2_8c_a08f794ff34d918d3d34d771e11e4aba3}
 
 
-Definition at line 58 of file main2.\-c.
+Definition at line 59 of file main2.\-c.
 
 
 
@@ -1576,7 +1581,7 @@ Referenced by threads\-\_\-linux\-\_\-timer\-\_\-function\-\_\-task\-\_\-2(), an
 \subsubsection[{T\-\_\-task\-\_\-2\-\_\-max\-\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double T\-\_\-task\-\_\-2\-\_\-max\-\_\-global = 0.\-0}}\label{main2_8c_a1cd82006c46f46176730e876d272cc14}
 
 
-Definition at line 62 of file main2.\-c.
+Definition at line 63 of file main2.\-c.
 
 
 
@@ -1587,7 +1592,7 @@ Referenced by threads\-\_\-linux\-\_\-timer\-\_\-function\-\_\-task\-\_\-2(), an
 \subsubsection[{T\-\_\-task\-\_\-2\-\_\-mean\-\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double T\-\_\-task\-\_\-2\-\_\-mean\-\_\-global = 0.\-0}}\label{main2_8c_af4e19d5a9b24aa56c8ebff6ad1aa2b95}
 
 
-Definition at line 60 of file main2.\-c.
+Definition at line 61 of file main2.\-c.
 
 
 
@@ -1598,7 +1603,7 @@ Referenced by threads\-\_\-linux\-\_\-timer\-\_\-function\-\_\-task\-\_\-2(), an
 \subsubsection[{T\-\_\-task\-\_\-2\-\_\-min\-\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double T\-\_\-task\-\_\-2\-\_\-min\-\_\-global = 0.\-0}}\label{main2_8c_ab7712cb13ce6206dd138a51e2053e36c}
 
 
-Definition at line 61 of file main2.\-c.
+Definition at line 62 of file main2.\-c.
 
 
 
@@ -1609,7 +1614,7 @@ Referenced by threads\-\_\-linux\-\_\-timer\-\_\-function\-\_\-task\-\_\-2(), an
 \subsubsection[{task\-\_\-1\-\_\-period\-\_\-us}]{\setlength{\rightskip}{0pt plus 5cm}volatile int task\-\_\-1\-\_\-period\-\_\-us = {\bf T\-A\-S\-K1\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-U\-S}}}\label{main2_8c_afffc21b0b726e6f4a572d0eefd3b5d69}
 
 
-Definition at line 51 of file main2.\-c.
+Definition at line 52 of file main2.\-c.
 
 
 
@@ -1620,7 +1625,7 @@ Referenced by get\-\_\-time(), main(), periodic\-\_\-task\-\_\-1(), threads\-\_\
 \subsubsection[{task\-\_\-2\-\_\-period\-\_\-us}]{\setlength{\rightskip}{0pt plus 5cm}volatile int task\-\_\-2\-\_\-period\-\_\-us = {\bf T\-A\-S\-K2\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-U\-S}}}\label{main2_8c_a5166d431d5448a1538e75f5469c19c7b}
 
 
-Definition at line 63 of file main2.\-c.
+Definition at line 64 of file main2.\-c.
 
 
 
@@ -1631,7 +1636,7 @@ Referenced by threads\-\_\-linux\-\_\-timer\-\_\-start\-\_\-task\-\_\-2(), and t
 \subsubsection[{telemetry\-\_\-mode}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int telemetry\-\_\-mode = {\bf U\-I\-\_\-\-N\-C\-U\-R\-S\-E\-S\-\_\-\-M\-O\-D\-E}}}\label{main2_8c_a5045187bb0afe92c41ce73bc602fd3ca}
 
 
-Definition at line 65 of file main2.\-c.
+Definition at line 66 of file main2.\-c.
 
 
 
@@ -1642,7 +1647,7 @@ Referenced by periodic\-\_\-task\-\_\-2(), and threads\-\_\-linux\-\_\-periodic\
 \subsubsection[{timer\-\_\-task\-\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}timer\-\_\-t timer\-\_\-task\-\_\-1}}\label{main2_8c_a904a157c5d5f94416cd450f511635af1}
 
 
-Definition at line 45 of file main2.\-c.
+Definition at line 46 of file main2.\-c.
 
 
 
@@ -1653,7 +1658,7 @@ Referenced by threads\-\_\-linux\-\_\-timer\-\_\-start\-\_\-task\-\_\-1(), threa
 \subsubsection[{timer\-\_\-task\-\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}timer\-\_\-t timer\-\_\-task\-\_\-2}}\label{main2_8c_adf6e8e22925f399f086dea8671f39c08}
 
 
-Definition at line 57 of file main2.\-c.
+Definition at line 58 of file main2.\-c.
 
 
 
@@ -1664,7 +1669,7 @@ Referenced by threads\-\_\-linux\-\_\-timer\-\_\-start\-\_\-task\-\_\-2(), threa
 \subsubsection[{total}]{\setlength{\rightskip}{0pt plus 5cm}int total = 0}}\label{main2_8c_ac7af894858cf396a219d632f40afdc8d}
 
 
-Definition at line 41 of file main2.\-c.
+Definition at line 42 of file main2.\-c.
 
 
 

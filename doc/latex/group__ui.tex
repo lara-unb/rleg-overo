@@ -139,8 +139,7 @@ Referenced by ui\-\_\-update().
 \end{DoxyCode}
 
 
-Here is the caller graph for this function\-:
-\nopagebreak
+Here is the caller graph for this function\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -234,8 +233,7 @@ Referenced by ui\-\_\-update().
 \end{DoxyCode}
 
 
-Here is the caller graph for this function\-:
-\nopagebreak
+Here is the caller graph for this function\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -301,7 +299,6 @@ Referenced by periodic\-\_\-task\-\_\-2(), and threads\-\_\-linux\-\_\-periodic\
                         \textcolor{keywordflow}{if}(\hyperlink{group__ui_gaefec243c5df45db0350c1abbccf20e3b}{ui\_mra\_data}(pmra\_data) != \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS})
        \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
                         \textcolor{keywordflow}{break};
-
                 \textcolor{keywordflow}{case} UI\_ENC:
                         \textcolor{keywordflow}{if}(\hyperlink{ui_8c_a3821f6ba38465f8d170f7b947869e7d9}{ui\_enc\_data}(enc\_data) != \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS}) \textcolor{keywordflow}{
       return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
@@ -309,7 +306,8 @@ Referenced by periodic\-\_\-task\-\_\-2(), and threads\-\_\-linux\-\_\-periodic\
                 \textcolor{keywordflow}{case} UI\_OVERVIEW:
                 \textcolor{keywordflow}{default}:
                         \textcolor{keywordflow}{if}(\hyperlink{ui_8c_a8d5e19833fec51919aad6e78bb74619a}{ui\_overview\_data}(\hyperlink{main2_8c_ac7af894858cf396a219d632f40afdc8d}{total}, \hyperlink{main2_8c_a4f35e5ea2395561d0bd3b2f45612dc2c}{failure}
-      , pimu\_data, peff\_data, pmra\_data) != \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS}) \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
+      , pimu\_data, peff\_data, pmra\_data, enc\_data) != \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS}) \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE}
+      ;
                         \textcolor{keywordflow}{break};
         \}
 
@@ -318,6 +316,7 @@ Referenced by periodic\-\_\-task\-\_\-2(), and threads\-\_\-linux\-\_\-periodic\
         user\_char = getch(); \textcolor{comment}{//Getting a char typed by the user}
         \textcolor{keywordflow}{switch}(user\_char)
         \{
+                \textcolor{keywordflow}{case} \textcolor{charliteral}{'Q'}:
                 \textcolor{keywordflow}{case} \textcolor{charliteral}{'q'}: \textcolor{comment}{//Quit}
                         \hyperlink{main2_8c_a5f05ce725141ddfab683e059b1cd95ea}{exit\_program}();
                         \textcolor{keywordflow}{break};
@@ -355,8 +354,7 @@ Referenced by periodic\-\_\-task\-\_\-2(), and threads\-\_\-linux\-\_\-periodic\
 \end{DoxyCode}
 
 
-Here is the call graph for this function\-:
-\nopagebreak
+Here is the call graph for this function\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -367,8 +365,7 @@ Here is the call graph for this function\-:
 
 
 
-Here is the caller graph for this function\-:
-\nopagebreak
+Here is the caller graph for this function\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

@@ -1,0 +1,6 @@
+<map id="Routines to calibrate sensors" name="Routines to calibrate sensors">
+<area shape="rect" id="node1" href="$group__gyr.html" title="Functions for Gyrometer\l ITG3200" alt="" coords="208,5,371,51"/>
+<area shape="rect" id="node3" href="$group__acc.html" title="Functions for accelerometer\l ADXL345" alt="" coords="197,74,381,121"/>
+<area shape="rect" id="node4" href="$group__mag.html" title="Functions to Magnetometer\l HMC5883" alt="" coords="199,143,380,190"/>
+<area shape="rect" id="node5" href="$group__enc.html" title="Function of Encoder\l AMT203" alt="" coords="220,213,359,259"/>
+</map>

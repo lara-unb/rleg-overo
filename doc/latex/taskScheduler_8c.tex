@@ -6,7 +6,7 @@
 \item 
 void \hyperlink{taskScheduler_8c_a2656ac374f671881cf9ae0ff4dc229ba}{timer\-\_\-new\-\_\-task} (\hyperlink{structTASK__S}{T\-A\-S\-K\-\_\-\-S} $\ast$task, void($\ast$run\-Funtion)(void))
 \item 
-void \hyperlink{taskScheduler_8c_ac088a054258396a6e2dba77908f22b42}{timer\-\_\-start\-\_\-task} (\hyperlink{structTASK__S}{T\-A\-S\-K\-\_\-\-S} $\ast$task)
+void \hyperlink{group__taskS_gac088a054258396a6e2dba77908f22b42}{timer\-\_\-start\-\_\-task} (\hyperlink{structTASK__S}{T\-A\-S\-K\-\_\-\-S} $\ast$task)
 \begin{DoxyCompactList}\small\item\em Start some task. \end{DoxyCompactList}\item 
 void \hyperlink{taskScheduler_8c_a39e4b92cd20da5838951ab5b0ad19fbb}{timer\-\_\-function\-\_\-task} (\hyperlink{structTASK__S}{T\-A\-S\-K\-\_\-\-S} $\ast$task)
 \end{DoxyCompactItemize}
@@ -114,67 +114,3 @@ References T\-A\-S\-K\-\_\-\-S\-::run\-Function.
   task->\hyperlink{structTASK__S_a241d427891bed303812b78bd9f9ad86f}{runFunction} = runFunction;
 \}
 \end{DoxyCode}
-\hypertarget{taskScheduler_8c_ac088a054258396a6e2dba77908f22b42}{\index{task\-Scheduler.\-c@{task\-Scheduler.\-c}!timer\-\_\-start\-\_\-task@{timer\-\_\-start\-\_\-task}}
-\index{timer\-\_\-start\-\_\-task@{timer\-\_\-start\-\_\-task}!taskScheduler.c@{task\-Scheduler.\-c}}
-\subsubsection[{timer\-\_\-start\-\_\-task}]{\setlength{\rightskip}{0pt plus 5cm}void timer\-\_\-start\-\_\-task (
-\begin{DoxyParamCaption}
-\item[{{\bf T\-A\-S\-K\-\_\-\-S} $\ast$}]{task}
-\end{DoxyParamCaption}
-)}}\label{taskScheduler_8c_ac088a054258396a6e2dba77908f22b42}
-
-
-Start some task. 
-
-
-
-Definition at line 16 of file task\-Scheduler.\-c.
-
-
-
-References f\-\_\-timer\-\_\-task\-\_\-1().
-
-
-\begin{DoxyCode}
-                                   \{
-  \textcolor{keyword}{struct }itimerspec itimer;
-  \textcolor{keyword}{struct }sigevent sigev;
-  \textcolor{keywordtype}{int} erno = 0;
-
-  (*task).isFirstExecution = 1;
-
-  itimer.it\_interval.tv\_sec = 0;
-  itimer.it\_interval.tv\_nsec= (*task).period\_us*1000;
-  itimer.it\_value = itimer.it\_interval;
-
-  memset(&sigev,0,\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} sigevent));
-
-  sigev.sigev\_value.sival\_int = 0;
-  sigev.sigev\_notify = SIGEV\_THREAD;
-  sigev.sigev\_notify\_attributes = NULL;
-  sigev.sigev\_notify\_function = \hyperlink{main2_8c_a5ce2b6a7dd4d00c90fe18098091044aa}{f\_timer\_task\_1};
-
-  \textcolor{keywordflow}{if} (timer\_create(CLOCK\_REALTIME, &sigev, &((*task).timer)) < 0)
-  \{
-    fprintf(stderr, \textcolor{stringliteral}{"[%d]: %s\(\backslash\)n"}, \_\_LINE\_\_, strerror(erno));
-    exit(erno);
-  \}
-
-  \textcolor{keywordflow}{if}(timer\_settime((*task).timer,0,&itimer,NULL) < 0)
-  \{
-    fprintf(stderr,\textcolor{stringliteral}{"[%d]: %s\(\backslash\)n"}, \_\_LINE\_\_, strerror(erno));
-    exit(erno);
-  \}
-\}
-\end{DoxyCode}
-
-
-Here is the call graph for this function\-:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{taskScheduler_8c_ac088a054258396a6e2dba77908f22b42_cgraph}
-\end{center}
-\end{figure}
-
-

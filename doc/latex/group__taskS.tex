@@ -1,0 +1,113 @@
+\hypertarget{group__taskS}{\section{Scheduler for tasks}
+\label{group__taskS}\index{Scheduler for tasks@{Scheduler for tasks}}
+}
+
+
+Implentation of Scheduler for tasks\-:  Rafael.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__taskS_ga7fe41c61473ba12f9b4fccebde3698fe}{timer\-\_\-new\-\_\-task} (\hyperlink{structTASK__S}{T\-A\-S\-K\-\_\-\-S} $\ast$task, timer\-\_\-t timer, void($\ast$run\-Funtion)(void))
+\begin{DoxyCompactList}\small\item\em Create a task. \end{DoxyCompactList}\item 
+void \hyperlink{group__taskS_gac088a054258396a6e2dba77908f22b42}{timer\-\_\-start\-\_\-task} (\hyperlink{structTASK__S}{T\-A\-S\-K\-\_\-\-S} $\ast$task)
+\begin{DoxyCompactList}\small\item\em Start some task. \end{DoxyCompactList}\item 
+void \hyperlink{group__taskS_ga8e48eacaac7d9cf7d82cc71cfbcd4b56}{timer\-\_\-stop\-\_\-task} (\hyperlink{structTASK__S}{T\-A\-S\-K\-\_\-\-S} $\ast$task)
+\begin{DoxyCompactList}\small\item\em Stop some task. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implentation of Scheduler for tasks\-:  Rafael. \begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000004}{Todo}]test it \end{DoxyRefDesc}
+
+
+\subsection{Function Documentation}
+\hypertarget{group__taskS_ga7fe41c61473ba12f9b4fccebde3698fe}{\index{Scheduler for tasks@{Scheduler for tasks}!timer\-\_\-new\-\_\-task@{timer\-\_\-new\-\_\-task}}
+\index{timer\-\_\-new\-\_\-task@{timer\-\_\-new\-\_\-task}!Scheduler for tasks@{Scheduler for tasks}}
+\subsubsection[{timer\-\_\-new\-\_\-task}]{\setlength{\rightskip}{0pt plus 5cm}void timer\-\_\-new\-\_\-task (
+\begin{DoxyParamCaption}
+\item[{{\bf T\-A\-S\-K\-\_\-\-S} $\ast$}]{task, }
+\item[{timer\-\_\-t}]{timer, }
+\item[{void($\ast$)(void)}]{run\-Funtion}
+\end{DoxyParamCaption}
+)}}\label{group__taskS_ga7fe41c61473ba12f9b4fccebde3698fe}
+
+
+Create a task. 
+
+\hypertarget{group__taskS_gac088a054258396a6e2dba77908f22b42}{\index{Scheduler for tasks@{Scheduler for tasks}!timer\-\_\-start\-\_\-task@{timer\-\_\-start\-\_\-task}}
+\index{timer\-\_\-start\-\_\-task@{timer\-\_\-start\-\_\-task}!Scheduler for tasks@{Scheduler for tasks}}
+\subsubsection[{timer\-\_\-start\-\_\-task}]{\setlength{\rightskip}{0pt plus 5cm}void timer\-\_\-start\-\_\-task (
+\begin{DoxyParamCaption}
+\item[{{\bf T\-A\-S\-K\-\_\-\-S} $\ast$}]{task}
+\end{DoxyParamCaption}
+)}}\label{group__taskS_gac088a054258396a6e2dba77908f22b42}
+
+
+Start some task. 
+
+
+
+Definition at line 16 of file task\-Scheduler.\-c.
+
+
+
+References f\-\_\-timer\-\_\-task\-\_\-1().
+
+
+\begin{DoxyCode}
+                                   \{
+  \textcolor{keyword}{struct }itimerspec itimer;
+  \textcolor{keyword}{struct }sigevent sigev;
+  \textcolor{keywordtype}{int} erno = 0;
+
+  (*task).isFirstExecution = 1;
+
+  itimer.it\_interval.tv\_sec = 0;
+  itimer.it\_interval.tv\_nsec= (*task).period\_us*1000;
+  itimer.it\_value = itimer.it\_interval;
+
+  memset(&sigev,0,\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} sigevent));
+
+  sigev.sigev\_value.sival\_int = 0;
+  sigev.sigev\_notify = SIGEV\_THREAD;
+  sigev.sigev\_notify\_attributes = NULL;
+  sigev.sigev\_notify\_function = \hyperlink{main2_8c_a5ce2b6a7dd4d00c90fe18098091044aa}{f\_timer\_task\_1};
+
+  \textcolor{keywordflow}{if} (timer\_create(CLOCK\_REALTIME, &sigev, &((*task).timer)) < 0)
+  \{
+    fprintf(stderr, \textcolor{stringliteral}{"[%d]: %s\(\backslash\)n"}, \_\_LINE\_\_, strerror(erno));
+    exit(erno);
+  \}
+
+  \textcolor{keywordflow}{if}(timer\_settime((*task).timer,0,&itimer,NULL) < 0)
+  \{
+    fprintf(stderr,\textcolor{stringliteral}{"[%d]: %s\(\backslash\)n"}, \_\_LINE\_\_, strerror(erno));
+    exit(erno);
+  \}
+\}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__taskS_gac088a054258396a6e2dba77908f22b42_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group__taskS_ga8e48eacaac7d9cf7d82cc71cfbcd4b56}{\index{Scheduler for tasks@{Scheduler for tasks}!timer\-\_\-stop\-\_\-task@{timer\-\_\-stop\-\_\-task}}
+\index{timer\-\_\-stop\-\_\-task@{timer\-\_\-stop\-\_\-task}!Scheduler for tasks@{Scheduler for tasks}}
+\subsubsection[{timer\-\_\-stop\-\_\-task}]{\setlength{\rightskip}{0pt plus 5cm}void timer\-\_\-stop\-\_\-task (
+\begin{DoxyParamCaption}
+\item[{{\bf T\-A\-S\-K\-\_\-\-S} $\ast$}]{task}
+\end{DoxyParamCaption}
+)}}\label{group__taskS_ga8e48eacaac7d9cf7d82cc71cfbcd4b56}
+
+
+Stop some task. 
+

@@ -5,7 +5,7 @@ var searchData=
   ['acquire',['acquire',['../main2_8c.html#a95a859aa805a58cd4c59e172d250de4a',1,'main2.c']]],
   ['act',['act',['../structIMU__PARAM__STRUCT_1_1param__gyr.html#a909d153e794ec443be04625ce00e4178',1,'IMU_PARAM_STRUCT::param_gyr']]],
   ['alpha',['alpha',['../structLink.html#ab838e5bc121c212cb1a81fdf78de8757',1,'Link']]],
-  ['angle',['angle',['../structENC__DATA__STRUCT.html#ad25beb30fd5b975292f87db02ec9930a',1,'ENC_DATA_STRUCT']]],
+  ['angle',['angle',['../structENC__DATA__STRUCT.html#ad25beb30fd5b975292f87db02ec9930a',1,'ENC_DATA_STRUCT::angle()'],['../structENC__DATA__STRUCT_1_1calibrate.html#a862c7101db8c6dbc9213857b6bc1971b',1,'ENC_DATA_STRUCT::calibrate::angle()']]],
   ['aux1',['aux1',['../classCartesian__controller.html#a37edb9c6e2a5066f74941e3659f68cbc',1,'Cartesian_controller']]],
   ['aux2',['aux2',['../classCartesian__controller.html#af73a0c910cd80ed2f84974b65beba450',1,'Cartesian_controller']]],
   ['aux3',['aux3',['../classCartesian__controller.html#aa37c15fcd53a60ecce106cd9b39d3501',1,'Cartesian_controller']]]

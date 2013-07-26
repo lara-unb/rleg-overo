@@ -11,7 +11,7 @@
 #define FAILURE	-1
 
 /**
- * @groupdef ui Functions to deal the User Inteface using ncurses
+ * @defgroup ui Functions to deal the User Inteface using ncurses
  */
 
 /**

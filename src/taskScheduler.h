@@ -12,6 +12,12 @@
 
 #ifndef TASK_SCHEDULER_H_INCLUDED
 #define TASK_SCHEDULER_H_INCLUDED
+
+/**
+ * @defgroup taskS Scheduler for tasks
+ */
+
+
 /**
  * Task to schedule definition
  */
@@ -30,16 +36,19 @@ typedef struct taskS{
 
 /**
  * Create a task
+ * @ingroup taskS
  */
 void timer_new_task(TASK_S *task,timer_t timer ,void (*runFuntion)(void));
 
 /**
  * Start some task
+ * @ingroup taskS
  */
 void timer_start_task(TASK_S *task);
 
 /**
  * Stop some task
+ * @ingroup taskS
  */
 void timer_stop_task(TASK_S *task);
 #endif

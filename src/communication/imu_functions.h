@@ -198,7 +198,7 @@ short int gyr_read_data(int i2c_dev, int type);
 //////////////////////////
 
 /**
- * @groupdef mag Functions to Magnetometer HMC5883
+ * @defgroup mag Functions to Magnetometer HMC5883
  */
 
 /**

@@ -123,36 +123,40 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00045"></a><span class="lineno"><a class="code" href="structENC__DATA__STRUCT.html">   45</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>enconder_data{</div>
 <div class="line"><a name="l00046"></a><span class="lineno"><a class="code" href="structENC__DATA__STRUCT.html#a93b8e925392a12a8874bf59f2a1cd76a">   46</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="structENC__DATA__STRUCT.html#a93b8e925392a12a8874bf59f2a1cd76a">spi_dev</a>;</div>
 <div class="line"><a name="l00047"></a><span class="lineno"><a class="code" href="structENC__DATA__STRUCT.html#ad25beb30fd5b975292f87db02ec9930a">   47</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="structENC__DATA__STRUCT.html#ad25beb30fd5b975292f87db02ec9930a">angle</a>;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}<a class="code" href="structENC__DATA__STRUCT.html">ENC_DATA_STRUCT</a>;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment"> * @brief INITIALIZE ENCODER</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment"> * @ingroup enc</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment"> * @param spi Communication Port</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment"> * @param[in] status Register</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment"> * @param[in] data Data to write</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment"> </span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment"> * @return flag with SUCCESS or FAILURE</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">//int encoder_init(int spi,);</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__enc.html#ga813c09cc4d9af8b357fe440a9438e685" title="READ POSITION.">enc_read_pos</a>(<span class="keywordtype">int</span> <a class="code" href="CommunicationV0_2communication_8c.html#a4788f0a5355494bc6c13690e28f43783">spi_dev</a>,<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <span class="keywordtype">int</span> *data);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__enc.html#gaebbe7b9d3c2571f7481cefacbe36c498" title="SET ZERO POINT.">enc_zero_set</a>(<span class="keywordtype">int</span> <a class="code" href="CommunicationV0_2communication_8c.html#a4788f0a5355494bc6c13690e28f43783">spi_dev</a>);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__enc.html#gad82fb44f2e735628ec95e003e4a1f93c" title="send command and delay between reads">enc_wait_for_ack</a>(<span class="keywordtype">int</span> <a class="code" href="CommunicationV0_2communication_8c.html#a4788f0a5355494bc6c13690e28f43783">spi_dev</a>, uint8_t ack, <span class="keywordtype">int</span> max_errors);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="code" href="structENC__DATA__STRUCT_1_1calibrate.html">   48</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="structENC__DATA__STRUCT_1_1calibrate.html">calibrate</a>{</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="code" href="structENC__DATA__STRUCT_1_1calibrate.html#a862c7101db8c6dbc9213857b6bc1971b">   49</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structENC__DATA__STRUCT_1_1calibrate.html#a862c7101db8c6dbc9213857b6bc1971b">angle</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  }calib;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="code" href="structENC__DATA__STRUCT.html#adbfb6e5764f0e3c42f4e212deb5d1f21">   51</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="structENC__DATA__STRUCT.html#adbfb6e5764f0e3c42f4e212deb5d1f21">new_data</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}<a class="code" href="structENC__DATA__STRUCT.html">ENC_DATA_STRUCT</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment"> * @brief INITIALIZE ENCODER</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment"> * @ingroup enc</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment"> * @param spi Communication Port</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment"> * @param[in] status Register</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment"> * @param[in] data Data to write</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment"> </span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment"> * @return flag with SUCCESS or FAILURE</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">//int encoder_init(int spi,);</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__enc.html#ga813c09cc4d9af8b357fe440a9438e685" title="READ POSITION.">enc_read_pos</a>(<span class="keywordtype">int</span> <a class="code" href="CommunicationV0_2communication_8c.html#a4788f0a5355494bc6c13690e28f43783">spi_dev</a>,<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <span class="keywordtype">int</span> *data);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__enc.html#gaebbe7b9d3c2571f7481cefacbe36c498" title="SET ZERO POINT.">enc_zero_set</a>(<span class="keywordtype">int</span> <a class="code" href="CommunicationV0_2communication_8c.html#a4788f0a5355494bc6c13690e28f43783">spi_dev</a>);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__enc.html#gad82fb44f2e735628ec95e003e4a1f93c" title="send command and delay between reads">enc_wait_for_ack</a>(<span class="keywordtype">int</span> <a class="code" href="CommunicationV0_2communication_8c.html#a4788f0a5355494bc6c13690e28f43783">spi_dev</a>, uint8_t ack, <span class="keywordtype">int</span> max_errors);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 9 2013 12:59:20 for Rleg by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jul 26 2013 09:55:02 for Rleg by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

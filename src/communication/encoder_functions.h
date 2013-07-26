@@ -39,12 +39,15 @@
 #define INT_MAX 5
 
 /**
- * @groupdef enc Function of Encoder AMT203
+ * @defgroup enc Function of Encoder AMT203
  */
 
 typedef struct enconder_data{
   int spi_dev;
   int angle;
+  struct calibrate{
+    int angle;
+  }calib;
   int new_data;
 }ENC_DATA_STRUCT;
 

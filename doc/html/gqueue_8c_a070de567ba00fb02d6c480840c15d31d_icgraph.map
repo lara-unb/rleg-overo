@@ -12,7 +12,7 @@
 <area shape="rect" id="node19" href="$main2_8h.html#a90885bae1b9535b16e014fb928e98e37" title="timer_function_task_1" alt="" coords="1103,155,1252,184"/>
 <area shape="rect" id="node21" href="$main2_8c.html#a5ce2b6a7dd4d00c90fe18098091044aa" title="f_timer_task_1" alt="" coords="1316,155,1423,184"/>
 <area shape="rect" id="node23" href="$main2_8h.html#a0e411070b7f487a8ab6a60b180f50e12" title="timer_start_task_1" alt="" coords="1488,181,1619,211"/>
-<area shape="rect" id="node26" href="$taskScheduler_8h.html#ac088a054258396a6e2dba77908f22b42" title="Start some task." alt="" coords="1496,128,1611,157"/>
+<area shape="rect" id="node26" href="$group__taskS.html#gac088a054258396a6e2dba77908f22b42" title="Start some task." alt="" coords="1496,128,1611,157"/>
 <area shape="rect" id="node30" href="$threads__linux_8c.html#ae03c8e3e8ea1514e4e7ca2005777e6f3" title="threads_linux_timer\l_function_task_1" alt="" coords="1111,85,1244,131"/>
 <area shape="rect" id="node32" href="$threads__linux_8c.html#a86f471cf8f5e7b5242fa6b68589335a9" title="threads_linux_timer\l_task_1" alt="" coords="1303,85,1436,131"/>
 <area shape="rect" id="node34" href="$threads__linux_8c.html#a923a30158ef342937317b179dcb6d0fb" title="threads_linux_timer\l_start_task_1" alt="" coords="1487,5,1620,51"/>

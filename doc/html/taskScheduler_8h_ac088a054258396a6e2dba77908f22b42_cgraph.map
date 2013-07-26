@@ -22,9 +22,9 @@
 <area shape="rect" id="node35" href="$gqueue_8c.html#a070de567ba00fb02d6c480840c15d31d" title="gQUEUE_UnwrapWriteIndex" alt="" coords="1368,545,1560,575"/>
 <area shape="rect" id="node48" href="$group__acc.html#ga013bb5ed8a763883fc440549d2b1a6ce" title="READ ALL DATA AT ONCE (X, Y and Z)" alt="" coords="899,112,1024,141"/>
 <area shape="rect" id="node50" href="$communication_2spi__functions_8c.html#ae385345c227d9f67ab490b94ed628988" title="READ DATA FROM A/D CONVERTER MCP3208." alt="" coords="924,165,999,195"/>
-<area shape="rect" id="node52" href="$group__enc.html#ga813c09cc4d9af8b357fe440a9438e685" title="READ POSITION." alt="" coords="911,219,1012,248"/>
+<area shape="rect" id="node52" href="$encoder__functions_8c.html#a813c09cc4d9af8b357fe440a9438e685" title="READ POSITION." alt="" coords="911,219,1012,248"/>
 <area shape="rect" id="node60" href="$group__gyr.html#ga79875465c3a29fd9ec77308c80a8bc37" title="READ ALL DATA AT ONCE (X, Y, Z and T)" alt="" coords="900,272,1023,301"/>
-<area shape="rect" id="node62" href="$group__mag.html#gab42ae0d0a2a6f37cf36d856c072b7f34" title="READ ALL DATA AT ONCE (X, Y and Z)" alt="" coords="896,325,1027,355"/>
-<area shape="rect" id="node54" href="$communication_2spi__functions_8c.html#a3ae450d2b3ece27bb6036f811a7625a9" title="TRANSFER N BYTES." alt="" coords="1407,220,1521,249"/>
-<area shape="rect" id="node56" href="$group__enc.html#gad82fb44f2e735628ec95e003e4a1f93c" title="send command and delay between reads" alt="" coords="1139,245,1261,275"/>
+<area shape="rect" id="node62" href="$communication_2imu__functions_8h.html#ab42ae0d0a2a6f37cf36d856c072b7f34" title="READ ALL DATA AT ONCE (X, Y and Z)" alt="" coords="896,325,1027,355"/>
+<area shape="rect" id="node54" href="$encoder__functions_8c.html#ad82fb44f2e735628ec95e003e4a1f93c" title="send command and delay between reads" alt="" coords="1139,245,1261,275"/>
+<area shape="rect" id="node56" href="$communication_2spi__functions_8c.html#a3ae450d2b3ece27bb6036f811a7625a9" title="TRANSFER N BYTES." alt="" coords="1407,220,1521,249"/>
 </map>

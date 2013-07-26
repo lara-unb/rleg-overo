@@ -106,82 +106,17 @@ Include dependency graph for calibration.c:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a043045246cf217758281222214c4addc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="calibration_2calibration_8c.html#a043045246cf217758281222214c4addc">calibrate_all</a> (<a class="el" href="structIMU__DATA__STRUCT.html">IMU_DATA_STRUCT</a> *<a class="el" href="threads__linux_8c.html#a3cfea12cbe9ca7f1681c950e4cd68606">imu_data</a>)</td></tr>
-<tr class="memitem:aecfc81d152db2843b5d1517729804d63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="calibration_2calibration_8c.html#aecfc81d152db2843b5d1517729804d63">calibrate_imu</a> (<a class="el" href="structIMU__DATA__STRUCT.html">IMU_DATA_STRUCT</a> *<a class="el" href="threads__linux_8c.html#a3cfea12cbe9ca7f1681c950e4cd68606">imu_data</a>)</td></tr>
+<tr class="memitem:ga043045246cf217758281222214c4addc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__calibrate.html#ga043045246cf217758281222214c4addc">calibrate_all</a> (<a class="el" href="structIMU__DATA__STRUCT.html">IMU_DATA_STRUCT</a> *<a class="el" href="threads__linux_8c.html#a3cfea12cbe9ca7f1681c950e4cd68606">imu_data</a>)</td></tr>
+<tr class="memdesc:ga043045246cf217758281222214c4addc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calibrate all sensors.  <a href="group__calibrate.html#ga043045246cf217758281222214c4addc"></a><br/></td></tr>
+<tr class="memitem:gaecfc81d152db2843b5d1517729804d63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__calibrate.html#gaecfc81d152db2843b5d1517729804d63">calibrate_imu</a> (<a class="el" href="structIMU__DATA__STRUCT.html">IMU_DATA_STRUCT</a> *<a class="el" href="threads__linux_8c.html#a3cfea12cbe9ca7f1681c950e4cd68606">imu_data</a>)</td></tr>
+<tr class="memdesc:gaecfc81d152db2843b5d1517729804d63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calibrate imu sensors.  <a href="group__calibrate.html#gaecfc81d152db2843b5d1517729804d63"></a><br/></td></tr>
+<tr class="memitem:gae8f1281c6870b23c1c158b30998f7568"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__calibrate.html#gae8f1281c6870b23c1c158b30998f7568">calibrate_enc</a> (<a class="el" href="structENC__DATA__STRUCT.html">ENC_DATA_STRUCT</a> *<a class="el" href="main2_8c.html#aaa441e18ae805c4f3efb0b5231d1cfe7">enc_data</a>)</td></tr>
+<tr class="memdesc:gae8f1281c6870b23c1c158b30998f7568"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calibrate encoder.  <a href="group__calibrate.html#gae8f1281c6870b23c1c158b30998f7568"></a><br/></td></tr>
 </table>
-<h2>Function Documentation</h2>
-<a class="anchor" id="a043045246cf217758281222214c4addc"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void calibrate_all </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structIMU__DATA__STRUCT.html">IMU_DATA_STRUCT</a> *&#160;</td>
-          <td class="paramname"><em>imu_data</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="calibration_2calibration_8c_source.html#l00008">8</a> of file <a class="el" href="calibration_2calibration_8c_source.html">calibration.c</a>.</p>
-<div class="fragment"><div class="line">{</div>
-<div class="line">  <a class="code" href="calibration_2calibration_8c.html#aecfc81d152db2843b5d1517729804d63">calibrate_imu</a>(imu_data);</div>
-<div class="line">  <span class="keywordflow">return</span>;</div>
-<div class="line">}</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a class="anchor" id="aecfc81d152db2843b5d1517729804d63"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void calibrate_imu </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structIMU__DATA__STRUCT.html">IMU_DATA_STRUCT</a> *&#160;</td>
-          <td class="paramname"><em>imu_data</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="calibration_2calibration_8c_source.html#l00014">14</a> of file <a class="el" href="calibration_2calibration_8c_source.html">calibration.c</a>.</p>
-
-<p>Referenced by <a class="el" href="calibration_2calibration_8c_source.html#l00008">calibrate_all()</a>.</p>
-<div class="fragment"><div class="line">{</div>
-<div class="line">  <span class="comment">// With this parameters, the vectors of acceleration and magnetic field will have norm = 1 theorically (i.e. in g or G)</span></div>
-<div class="line">  imu_data-&gt;<a class="code" href="structIMU__DATA__STRUCT.html#aeffe3c3c5a7191a5cef16e7aab6c3795">calib</a>.<a class="code" href="structIMU__DATA__STRUCT_1_1calibrated.html#a281a7fdb40a05ed97388f18b9bb90c81">acc</a>.<a class="code" href="structDATA__XYZ__DOUBLE.html#a22868cc99a423900e7b82d015a5eb91f">x</a> = ((double)imu_data-&gt;<a class="code" href="structIMU__DATA__STRUCT.html#a448f284bf44eb503affda586ad5fa9d2" title="Accel Vector.">acc</a>.<a class="code" href="structDATA__XYZ.html#a54c1596e9f9969fd9c21e8458024ecfb">x</a>-<a class="code" href="calibration_2calibration_8h.html#a355ea8f6ceed1e1d419a3ea2271bfca3">ACC_BIAS_X</a>)/<a class="code" href="calibration_2calibration_8h.html#a76e6967cb5a86ec34986b4583ac09831">ACC_FS_X</a>;</div>
-<div class="line">  imu_data-&gt;<a class="code" href="structIMU__DATA__STRUCT.html#aeffe3c3c5a7191a5cef16e7aab6c3795">calib</a>.<a class="code" href="structIMU__DATA__STRUCT_1_1calibrated.html#a281a7fdb40a05ed97388f18b9bb90c81">acc</a>.<a class="code" href="structDATA__XYZ__DOUBLE.html#a198a27b5df3b5b0bf461b0e481e22a82">y</a> = ((double)imu_data-&gt;<a class="code" href="structIMU__DATA__STRUCT.html#a448f284bf44eb503affda586ad5fa9d2" title="Accel Vector.">acc</a>.<a class="code" href="structDATA__XYZ.html#a94bbb1c889bf53eb6a5fffa2b39322cf">y</a>-<a class="code" href="calibration_2calibration_8h.html#a34180f1c97e84a814ef181f62bf4b68f">ACC_BIAS_Y</a>)/<a class="code" href="calibration_2calibration_8h.html#a13d3aaab3b5800b11351cbd1246c8918">ACC_FS_Y</a>;</div>
-<div class="line">  imu_data-&gt;<a class="code" href="structIMU__DATA__STRUCT.html#aeffe3c3c5a7191a5cef16e7aab6c3795">calib</a>.<a class="code" href="structIMU__DATA__STRUCT_1_1calibrated.html#a281a7fdb40a05ed97388f18b9bb90c81">acc</a>.<a class="code" href="structDATA__XYZ__DOUBLE.html#a9556e8868c223ff3e28756ea18a284c0">z</a> = ((double)imu_data-&gt;<a class="code" href="structIMU__DATA__STRUCT.html#a448f284bf44eb503affda586ad5fa9d2" title="Accel Vector.">acc</a>.<a class="code" href="structDATA__XYZ.html#a69e89ab0ec6e5d72fc5d54f62cc07fb5">z</a>-<a class="code" href="calibration_2calibration_8h.html#a794f762650b6f228ffb8d50d1323dbea">ACC_BIAS_Z</a>)/<a class="code" href="calibration_2calibration_8h.html#af1d3370cc0958289199c8c13470602d4">ACC_FS_Z</a>;</div>
-<div class="line">  </div>
-<div class="line">  imu_data-&gt;<a class="code" href="structIMU__DATA__STRUCT.html#aeffe3c3c5a7191a5cef16e7aab6c3795">calib</a>.<a class="code" href="structIMU__DATA__STRUCT_1_1calibrated.html#a2fde6c6759e0fda17e272c32096cb9ec">mag</a>.<a class="code" href="structDATA__XYZ__DOUBLE.html#a22868cc99a423900e7b82d015a5eb91f">x</a> = ((double)imu_data-&gt;<a class="code" href="structIMU__DATA__STRUCT.html#a40c7df8b6d49297aa52873cfd9b60daa" title="Magnetormeter Vector.">mag</a>.<a class="code" href="structDATA__XYZ.html#a54c1596e9f9969fd9c21e8458024ecfb">x</a>-<a class="code" href="calibration_2calibration_8h.html#a355ea8f6ceed1e1d419a3ea2271bfca3">ACC_BIAS_X</a>)/<a class="code" href="calibration_2calibration_8h.html#a76e6967cb5a86ec34986b4583ac09831">ACC_FS_X</a>;</div>
-<div class="line">  imu_data-&gt;<a class="code" href="structIMU__DATA__STRUCT.html#aeffe3c3c5a7191a5cef16e7aab6c3795">calib</a>.<a class="code" href="structIMU__DATA__STRUCT_1_1calibrated.html#a2fde6c6759e0fda17e272c32096cb9ec">mag</a>.<a class="code" href="structDATA__XYZ__DOUBLE.html#a198a27b5df3b5b0bf461b0e481e22a82">y</a> = ((double)imu_data-&gt;<a class="code" href="structIMU__DATA__STRUCT.html#a40c7df8b6d49297aa52873cfd9b60daa" title="Magnetormeter Vector.">mag</a>.<a class="code" href="structDATA__XYZ.html#a94bbb1c889bf53eb6a5fffa2b39322cf">y</a>-<a class="code" href="calibration_2calibration_8h.html#a34180f1c97e84a814ef181f62bf4b68f">ACC_BIAS_Y</a>)/<a class="code" href="calibration_2calibration_8h.html#a13d3aaab3b5800b11351cbd1246c8918">ACC_FS_Y</a>;</div>
-<div class="line">  imu_data-&gt;<a class="code" href="structIMU__DATA__STRUCT.html#aeffe3c3c5a7191a5cef16e7aab6c3795">calib</a>.<a class="code" href="structIMU__DATA__STRUCT_1_1calibrated.html#a2fde6c6759e0fda17e272c32096cb9ec">mag</a>.<a class="code" href="structDATA__XYZ__DOUBLE.html#a9556e8868c223ff3e28756ea18a284c0">z</a> = ((double)imu_data-&gt;<a class="code" href="structIMU__DATA__STRUCT.html#a40c7df8b6d49297aa52873cfd9b60daa" title="Magnetormeter Vector.">mag</a>.<a class="code" href="structDATA__XYZ.html#a69e89ab0ec6e5d72fc5d54f62cc07fb5">z</a>-<a class="code" href="calibration_2calibration_8h.html#a794f762650b6f228ffb8d50d1323dbea">ACC_BIAS_Z</a>)/<a class="code" href="calibration_2calibration_8h.html#af1d3370cc0958289199c8c13470602d4">ACC_FS_Z</a>;</div>
-<div class="line">  </div>
-<div class="line">  <span class="comment">// With this parameters, we consider right datasheet scale and we get in rad/s</span></div>
-<div class="line">  imu_data-&gt;<a class="code" href="structIMU__DATA__STRUCT.html#aeffe3c3c5a7191a5cef16e7aab6c3795">calib</a>.<a class="code" href="structIMU__DATA__STRUCT_1_1calibrated.html#a8a54aded6ce608f1b7d2b4a0c52c248b">gyr</a>.<a class="code" href="structDATA__XYZ__DOUBLE.html#a22868cc99a423900e7b82d015a5eb91f">x</a> = ((double)imu_data-&gt;<a class="code" href="structIMU__DATA__STRUCT.html#a0c1ac26626e4434a2ee124a1928a23a1" title="Gyrometer Vector.">gyr</a>.<a class="code" href="structDATA__XYZ.html#a54c1596e9f9969fd9c21e8458024ecfb">x</a>-<a class="code" href="calibration_2calibration_8h.html#a69780ffe3a15aad4121fed56d5e47377">GYR_BIAS_X</a>)/<a class="code" href="calibration_2calibration_8h.html#a8fe84f8c6d39f41d8622fd0cbce3a522">GYR_FS_X</a>;</div>
-<div class="line">  imu_data-&gt;<a class="code" href="structIMU__DATA__STRUCT.html#aeffe3c3c5a7191a5cef16e7aab6c3795">calib</a>.<a class="code" href="structIMU__DATA__STRUCT_1_1calibrated.html#a8a54aded6ce608f1b7d2b4a0c52c248b">gyr</a>.<a class="code" href="structDATA__XYZ__DOUBLE.html#a198a27b5df3b5b0bf461b0e481e22a82">y</a> = ((double)imu_data-&gt;<a class="code" href="structIMU__DATA__STRUCT.html#a0c1ac26626e4434a2ee124a1928a23a1" title="Gyrometer Vector.">gyr</a>.<a class="code" href="structDATA__XYZ.html#a94bbb1c889bf53eb6a5fffa2b39322cf">y</a>-<a class="code" href="calibration_2calibration_8h.html#a69780ffe3a15aad4121fed56d5e47377">GYR_BIAS_X</a>)/<a class="code" href="calibration_2calibration_8h.html#a4be2e0fa7596546bb4699862d0fe4183">GYR_FS_Y</a>;</div>
-<div class="line">  imu_data-&gt;<a class="code" href="structIMU__DATA__STRUCT.html#aeffe3c3c5a7191a5cef16e7aab6c3795">calib</a>.<a class="code" href="structIMU__DATA__STRUCT_1_1calibrated.html#a8a54aded6ce608f1b7d2b4a0c52c248b">gyr</a>.<a class="code" href="structDATA__XYZ__DOUBLE.html#a9556e8868c223ff3e28756ea18a284c0">z</a> = ((double)imu_data-&gt;<a class="code" href="structIMU__DATA__STRUCT.html#a0c1ac26626e4434a2ee124a1928a23a1" title="Gyrometer Vector.">gyr</a>.<a class="code" href="structDATA__XYZ.html#a69e89ab0ec6e5d72fc5d54f62cc07fb5">z</a>-<a class="code" href="calibration_2calibration_8h.html#a69780ffe3a15aad4121fed56d5e47377">GYR_BIAS_X</a>)/<a class="code" href="calibration_2calibration_8h.html#aaee2ece0c43cc20d7c531ab79dcd06c8">GYR_FS_Z</a>;</div>
-<div class="line">  </div>
-<div class="line">  <span class="keywordflow">return</span>;</div>
-<div class="line">}</div>
-</div><!-- fragment -->
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="calibration_2calibration_8c_aecfc81d152db2843b5d1517729804d63_icgraph.png" border="0" usemap="#calibration_2calibration_8c_aecfc81d152db2843b5d1517729804d63_icgraph" alt=""/></div>
-<map name="calibration_2calibration_8c_aecfc81d152db2843b5d1517729804d63_icgraph" id="calibration_2calibration_8c_aecfc81d152db2843b5d1517729804d63_icgraph">
-<area shape="rect" id="node3" href="calibration_8h.html#a043045246cf217758281222214c4addc" title="calibrate_all" alt="" coords="152,5,243,35"/></map>
-</div>
-</p>
-
-</div>
-</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 9 2013 12:59:20 for Rleg by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jul 26 2013 09:55:02 for Rleg by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

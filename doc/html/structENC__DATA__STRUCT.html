@@ -84,6 +84,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
 <a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle">
 <div class="title">ENC_DATA_STRUCT Struct Reference</div>  </div>
@@ -91,11 +92,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 
 <p><code>#include &quot;<a class="el" href="encoder__functions_8h_source.html">encoder_functions.h</a>&quot;</code></p>
+<div class="dynheader">
+Collaboration diagram for ENC_DATA_STRUCT:</div>
+<div class="dyncontent">
+<div class="center"><img src="structENC__DATA__STRUCT__coll__graph.png" border="0" usemap="#ENC__DATA__STRUCT_coll__map" alt="Collaboration graph"/></div>
+<map name="ENC__DATA__STRUCT_coll__map" id="ENC__DATA__STRUCT_coll__map">
+<area shape="rect" id="node2" href="structENC__DATA__STRUCT_1_1calibrate.html" title="ENC_DATA_STRUCT::calibrate" alt="" coords="5,5,219,35"/></map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structENC__DATA__STRUCT_1_1calibrate.html">calibrate</a></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:a93b8e925392a12a8874bf59f2a1cd76a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structENC__DATA__STRUCT.html#a93b8e925392a12a8874bf59f2a1cd76a">spi_dev</a></td></tr>
 <tr class="memitem:ad25beb30fd5b975292f87db02ec9930a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structENC__DATA__STRUCT.html#ad25beb30fd5b975292f87db02ec9930a">angle</a></td></tr>
+<tr class="memitem:af227e5bbb714b830cc570432bda0a468"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structENC__DATA__STRUCT_1_1calibrate.html">ENC_DATA_STRUCT::calibrate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structENC__DATA__STRUCT.html#af227e5bbb714b830cc570432bda0a468">calib</a></td></tr>
+<tr class="memitem:adbfb6e5764f0e3c42f4e212deb5d1f21"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structENC__DATA__STRUCT.html#adbfb6e5764f0e3c42f4e212deb5d1f21">new_data</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
@@ -113,7 +127,37 @@ Data Fields</h2></td></tr>
 
 <p>Definition at line <a class="el" href="encoder__functions_8h_source.html#l00047">47</a> of file <a class="el" href="encoder__functions_8h_source.html">encoder_functions.h</a>.</p>
 
-<p>Referenced by <a class="el" href="communication_2communication_8c_source.html#l00080">read_all_data()</a>, <a class="el" href="ui_8c_source.html#l00172">ui_enc_data()</a>, and <a class="el" href="ui_8c_source.html#l00187">ui_overview_data()</a>.</p>
+<p>Referenced by <a class="el" href="calibration_2calibration_8c_source.html#l00033">calibrate_enc()</a>, <a class="el" href="communication_2communication_8c_source.html#l00085">read_all_data()</a>, <a class="el" href="ui_8c_source.html#l00172">ui_enc_data()</a>, and <a class="el" href="ui_8c_source.html#l00187">ui_overview_data()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af227e5bbb714b830cc570432bda0a468"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structENC__DATA__STRUCT_1_1calibrate.html">ENC_DATA_STRUCT::calibrate</a> ENC_DATA_STRUCT::calib</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Referenced by <a class="el" href="calibration_2calibration_8c_source.html#l00033">calibrate_enc()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adbfb6e5764f0e3c42f4e212deb5d1f21"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ENC_DATA_STRUCT::new_data</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="encoder__functions_8h_source.html#l00051">51</a> of file <a class="el" href="encoder__functions_8h_source.html">encoder_functions.h</a>.</p>
+
+<p>Referenced by <a class="el" href="communication_2communication_8c_source.html#l00085">read_all_data()</a>.</p>
 
 </div>
 </div>
@@ -129,7 +173,7 @@ Data Fields</h2></td></tr>
 
 <p>Definition at line <a class="el" href="encoder__functions_8h_source.html#l00046">46</a> of file <a class="el" href="encoder__functions_8h_source.html">encoder_functions.h</a>.</p>
 
-<p>Referenced by <a class="el" href="communication_2communication_8c_source.html#l00080">read_all_data()</a>.</p>
+<p>Referenced by <a class="el" href="communication_2communication_8c_source.html#l00085">read_all_data()</a>.</p>
 
 </div>
 </div>
@@ -139,7 +183,7 @@ Data Fields</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 9 2013 12:59:21 for Rleg by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jul 26 2013 09:55:04 for Rleg by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>
