@@ -1,14 +1,16 @@
 <map id="get_time" name="get_time">
-<area shape="rect" id="node3" href="$ui_8h.html#a8d5e19833fec51919aad6e78bb74619a" title="Print ALL sensors data." alt="" coords="125,36,248,65"/>
-<area shape="rect" id="node5" href="$group__ui.html#ga42e4dac2d138061a74c572358c8ebf49" title="Update Screen with new data of sensors." alt="" coords="297,36,375,65"/>
-<area shape="rect" id="node7" href="$main2_8h.html#a944f7352f18ed248c1b1143f51edc391" title="periodic_task_2" alt="" coords="444,5,556,35"/>
-<area shape="rect" id="node17" href="$threads__linux_8c.html#ad535241b6b29d076beb2cd75a880aaea" title="threads_linux_periodic\l_task_2" alt="" coords="425,58,575,105"/>
-<area shape="rect" id="node9" href="$main2_8h.html#a01c18e97a4488be2912eb738b2e7f890" title="timer_function_task_2" alt="" coords="625,5,775,35"/>
-<area shape="rect" id="node11" href="$main2_8c.html#a735ebf3d0d37c7d8187199e6565bcb5c" title="f_timer_task_2" alt="" coords="839,5,945,35"/>
-<area shape="rect" id="node13" href="$main2_8h.html#ae59c93969d017f18e3e38b2f9f7888ca" title="timer_start_task_2" alt="" coords="1011,5,1141,35"/>
-<area shape="rect" id="node15" href="$main2_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="1228,5,1279,35"/>
-<area shape="rect" id="node19" href="$threads__linux_8c.html#aa65173deca09202aea0f4a81a166545b" title="threads_linux_timer\l_function_task_2" alt="" coords="633,58,767,105"/>
-<area shape="rect" id="node21" href="$threads__linux_8c.html#aaff43cd760c084d80d045228b46fe784" title="threads_linux_timer\l_task_2" alt="" coords="825,58,959,105"/>
-<area shape="rect" id="node23" href="$threads__linux_8c.html#a59d6f60b682f360c3759cefad7ad2a4e" title="threads_linux_timer\l_start_task_2" alt="" coords="1009,58,1143,105"/>
-<area shape="rect" id="node25" href="$threads__linux_8c.html#aff9795d781d7b334d45539707a641c23" title="threads_linux_init" alt="" coords="1192,67,1315,96"/>
+<area shape="rect" id="node3" href="$ui_8h.html#a8d5e19833fec51919aad6e78bb74619a" title="Print ALL sensors data." alt="" coords="125,59,248,88"/>
+<area shape="rect" id="node5" href="$group__ui.html#ga42e4dac2d138061a74c572358c8ebf49" title="Update Screen with new data of sensors." alt="" coords="297,59,375,88"/>
+<area shape="rect" id="node7" href="$main_8c.html#a8007959bfd1230feb2298965e39f2a70" title="ui_task" alt="" coords="468,5,532,35"/>
+<area shape="rect" id="node11" href="$main2_8h.html#a944f7352f18ed248c1b1143f51edc391" title="periodic_task_2" alt="" coords="444,59,556,88"/>
+<area shape="rect" id="node21" href="$threads__linux_8c.html#ad535241b6b29d076beb2cd75a880aaea" title="threads_linux_periodic\l_task_2" alt="" coords="425,111,575,158"/>
+<area shape="rect" id="node9" href="$main2_8h.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="675,5,725,35"/>
+<area shape="rect" id="node13" href="$main2_8h.html#a01c18e97a4488be2912eb738b2e7f890" title="timer_function_task_2" alt="" coords="625,59,775,88"/>
+<area shape="rect" id="node15" href="$main2_8c.html#a735ebf3d0d37c7d8187199e6565bcb5c" title="f_timer_task_2" alt="" coords="839,59,945,88"/>
+<area shape="rect" id="node17" href="$main2_8h.html#ae59c93969d017f18e3e38b2f9f7888ca" title="timer_start_task_2" alt="" coords="1011,59,1141,88"/>
+<area shape="rect" id="node19" href="$main2_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="1228,59,1279,88"/>
+<area shape="rect" id="node23" href="$threads__linux_8c.html#aa65173deca09202aea0f4a81a166545b" title="threads_linux_timer\l_function_task_2" alt="" coords="633,111,767,158"/>
+<area shape="rect" id="node25" href="$threads__linux_8c.html#aaff43cd760c084d80d045228b46fe784" title="threads_linux_timer\l_task_2" alt="" coords="825,111,959,158"/>
+<area shape="rect" id="node27" href="$threads__linux_8c.html#a59d6f60b682f360c3759cefad7ad2a4e" title="threads_linux_timer\l_start_task_2" alt="" coords="1009,111,1143,158"/>
+<area shape="rect" id="node29" href="$threads__linux_8c.html#aff9795d781d7b334d45539707a641c23" title="threads_linux_init" alt="" coords="1192,120,1315,149"/>
 </map>

@@ -27,5 +27,5 @@ var searchData=
   ['robot_5fupdatelinksthetasbyarray',['Robot_updateLinksThetasByArray',['../robot_8c.html#a3220b8985de7c093221d7db4427dd62c',1,'robot.c']]],
   ['robot_5fupdatelinksthetasbymatrix',['Robot_updateLinksThetasByMatrix',['../robot_8h.html#aa1d3aca5132bd5f347f5966d38fbb966',1,'Robot_updateLinksThetasByMatrix(Robot *r, PGMATRIX thetas):&#160;robot.c'],['../robot_8c.html#aa1d3aca5132bd5f347f5966d38fbb966',1,'Robot_updateLinksThetasByMatrix(Robot *r, PGMATRIX thetas):&#160;robot.c']]],
   ['ros_5fpub_5fbuffer',['ros_pub_buffer',['../classCartesian__controller.html#ab9ed5a808da204dbc612d313dc7332f4',1,'Cartesian_controller']]],
-  ['runfunction',['runFunction',['../structTASK__S.html#a241d427891bed303812b78bd9f9ad86f',1,'TASK_S']]]
+  ['run',['run',['../structTASK__S.html#abe9c219d2f60c43991788786735599f2',1,'TASK_S']]]
 ];

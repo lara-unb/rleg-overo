@@ -46,14 +46,14 @@ References A\-S\-C\-I\-I\-\_\-0, and bits.
 
 
 \begin{DoxyCode}
-\{
-  \textcolor{keywordtype}{char} \hyperlink{communication_2spi__functions_8c_a46a6da6b1936191571fd30b2a749f38c}{bits}[9];
-  \textcolor{keywordtype}{int} i;
-  \textcolor{keywordflow}{for}( i=0; i<8; i++)
-  \{
-    bits[i]=((*hvalue)<<i)>>7+\hyperlink{communication_2imu__functions_8h_aa3f75ad2972ec8996ce5206feac0e52c}{ASCII\_0};
-  \}
-  bits[8]=\textcolor{charliteral}{'\(\backslash\)0'};
-  \textcolor{keywordflow}{return} \hyperlink{communication_2spi__functions_8c_a46a6da6b1936191571fd30b2a749f38c}{bits};
-\}
+184 \{
+185   \textcolor{keywordtype}{char} \hyperlink{communication_2spi__functions_8c_a46a6da6b1936191571fd30b2a749f38c}{bits}[9];
+186   \textcolor{keywordtype}{int} i;
+187   \textcolor{keywordflow}{for}( i=0; i<8; i++)
+188   \{
+189     bits[i]=((*hvalue)<<i)>>7+\hyperlink{communication_2imu__functions_8h_aa3f75ad2972ec8996ce5206feac0e52c}{ASCII\_0};
+190   \}
+191   bits[8]=\textcolor{charliteral}{'\(\backslash\)0'};
+192   \textcolor{keywordflow}{return} \hyperlink{communication_2spi__functions_8c_a46a6da6b1936191571fd30b2a749f38c}{bits};
+193 \}
 \end{DoxyCode}

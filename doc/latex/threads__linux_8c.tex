@@ -196,13 +196,13 @@ References t0, t\-\_\-task\-\_\-1\-\_\-global, T\-\_\-task\-\_\-1\-\_\-mean\-\_\
 
 
 \begin{DoxyCode}
-\{
-    *time\_control\_task\_s = \hyperlink{main2_8c_a2a2a647912528f7aa86812528dbfe02f}{t\_task\_1\_global};
-    *Ts\_control\_task\_s = \hyperlink{main2_8c_afffc21b0b726e6f4a572d0eefd3b5d69}{task\_1\_period\_us}/1e6;
-    *mean\_time\_control\_task\_s = \hyperlink{main2_8c_a738c330c86a365e72ce29ebca3f1e572}{T\_task\_1\_mean\_global};
-    *t0\_control\_task\_s = \hyperlink{main2_8c_a86c2efd6da48b362806cdbb5b1e711d8}{t0};
-    \textcolor{keywordflow}{return} THREADS\_LINUX\_SUCCESS;
-\}
+577 \{
+578     *time\_control\_task\_s = \hyperlink{main2_8c_a2a2a647912528f7aa86812528dbfe02f}{t\_task\_1\_global};
+579     *Ts\_control\_task\_s = \hyperlink{main2_8c_afffc21b0b726e6f4a572d0eefd3b5d69}{task\_1\_period\_us}/1e6;
+580     *mean\_time\_control\_task\_s = \hyperlink{main2_8c_a738c330c86a365e72ce29ebca3f1e572}{T\_task\_1\_mean\_global};
+581     *t0\_control\_task\_s = \hyperlink{main2_8c_a86c2efd6da48b362806cdbb5b1e711d8}{t0};
+582     \textcolor{keywordflow}{return} THREADS\_LINUX\_SUCCESS;
+583 \}
 \end{DoxyCode}
 \hypertarget{threads__linux_8c_aff9795d781d7b334d45539707a641c23}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!threads\-\_\-linux\-\_\-init@{threads\-\_\-linux\-\_\-init}}
 \index{threads\-\_\-linux\-\_\-init@{threads\-\_\-linux\-\_\-init}!threads_linux.c@{threads\-\_\-linux.\-c}}
@@ -221,207 +221,206 @@ References battery\-\_\-data, calibration\-\_\-altimeter\-\_\-data, calibration\
 
 
 \begin{DoxyCode}
-\{
-    \textcolor{keywordtype}{int} \hyperlink{communication_2communication_8c_a6e27f49150e9a14580fb313cc2777e00}{status} = 0;
-    \textcolor{keywordtype}{int} n = 0;
-    \textcolor{keywordtype}{int} return\_value = THREADS\_LINUX\_SUCCESS;
-
-    \textcolor{comment}{// Init data}
-    status = sensors\_init(&\hyperlink{threads__linux_8c_a6e03a1c8574304386184af6cad0187a3}{battery\_data}, &\hyperlink{threads__linux_8c_a59e6bf03b78dd52adc07051320f6b954}{gps\_data}, &
-      \hyperlink{main2_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\_data}, &\hyperlink{threads__linux_8c_a85a1e7d1f5cb0855de5c10c7da917e99}{pitot\_data}, &\hyperlink{threads__linux_8c_a47c600b0bafcb86f18d675174d1ff92b}{pwm\_read\_data}, &
-      \hyperlink{threads__linux_8c_ad8b6331e520d1bd524e2dc9053510fc2}{pwm\_write\_data}, &\hyperlink{threads__linux_8c_a014e3c8e54ea93cd94fd3fef569125f8}{scp1000\_data}, &\hyperlink{threads__linux_8c_aafb5fffcd42c3ad4ad9768df45a1a0b5}{sonar\_data})
-      ;
-    \textcolor{keywordflow}{if}(status != SENSORS\_SUCCESS)
-    \{
-        return\_value = THREADS\_LINUX\_FAILURE;
-    \}
-
-    \textcolor{keywordflow}{if}(return\_value != THREADS\_LINUX\_FAILURE)
-    \{
-        status = calibration\_init(&\hyperlink{threads__linux_8c_a6409aa72713a8e9cbecf43c9e6b4ef5f}{calibration\_local\_coordinate\_system\_data}
+95 \{
+96     \textcolor{keywordtype}{int} \hyperlink{communication_2communication_8c_a6e27f49150e9a14580fb313cc2777e00}{status} = 0;
+97     \textcolor{keywordtype}{int} n = 0;
+98     \textcolor{keywordtype}{int} return\_value = THREADS\_LINUX\_SUCCESS;
+99 
+100     \textcolor{comment}{// Init data}
+101     status = sensors\_init(&\hyperlink{threads__linux_8c_a6e03a1c8574304386184af6cad0187a3}{battery\_data}, &\hyperlink{threads__linux_8c_a59e6bf03b78dd52adc07051320f6b954}{gps\_data}, &
+      \hyperlink{main_8c_a0f81e5b5621e6e2b2467daa7d12268c4}{imu\_data}, &\hyperlink{threads__linux_8c_a85a1e7d1f5cb0855de5c10c7da917e99}{pitot\_data}, &\hyperlink{threads__linux_8c_a47c600b0bafcb86f18d675174d1ff92b}{pwm\_read\_data}, &
+      \hyperlink{threads__linux_8c_ad8b6331e520d1bd524e2dc9053510fc2}{pwm\_write\_data}, &\hyperlink{threads__linux_8c_a014e3c8e54ea93cd94fd3fef569125f8}{scp1000\_data}, &\hyperlink{threads__linux_8c_aafb5fffcd42c3ad4ad9768df45a1a0b5}{sonar\_data});
+102     \textcolor{keywordflow}{if}(status != SENSORS\_SUCCESS)
+103     \{
+104         return\_value = THREADS\_LINUX\_FAILURE;
+105     \}
+106 
+107     \textcolor{keywordflow}{if}(return\_value != THREADS\_LINUX\_FAILURE)
+108     \{
+109         status = calibration\_init(&\hyperlink{threads__linux_8c_a6409aa72713a8e9cbecf43c9e6b4ef5f}{calibration\_local\_coordinate\_system\_data}
       , &\hyperlink{threads__linux_8c_a520f88fc1d70b3ce27e0f9a3d9c6c2df}{calibration\_local\_fields\_data}, &
       \hyperlink{threads__linux_8c_a54474abecc241cd0ed5dd0a3b7f42a72}{calibration\_altimeter\_data});
-        \textcolor{keywordflow}{if}(status != CALIBRATION\_SUCCESS)
-        \{
-            return\_value = THREADS\_LINUX\_FAILURE;
-        \}
-    \}
-
-    \textcolor{keywordflow}{if}(return\_value != THREADS\_LINUX\_FAILURE)
-    \{
-        status = gps\_init(&\hyperlink{threads__linux_8c_a5daa6ca8c168d5e8e73b14d96d6e148d}{gps\_measure});
-        \textcolor{keywordflow}{if}(status != 1)
-        \{
-            return\_value = THREADS\_LINUX\_FAILURE;
-        \}
-    \}
-
-    \textcolor{keywordflow}{if}(return\_value != THREADS\_LINUX\_FAILURE)
-    \{
-        status = imu\_init(&\hyperlink{threads__linux_8c_aa5c997a268f9020148799d654d48dc14}{imu\_measure});
-        \textcolor{keywordflow}{if}(status != 1)
-        \{
-            return\_value = THREADS\_LINUX\_FAILURE;
-        \}
-    \}
-
-    \textcolor{keywordflow}{if}(return\_value != THREADS\_LINUX\_FAILURE)
-    \{
-        status = magnetometer\_init(&\hyperlink{threads__linux_8c_a495506ba39b5cc85a3d4eee9b441fea4}{magnetometer\_measure});
-        \textcolor{keywordflow}{if}(status != 1)
-        \{
-            return\_value = THREADS\_LINUX\_FAILURE;
-        \}
-    \}
-
-    \textcolor{keywordflow}{if}(return\_value != THREADS\_LINUX\_FAILURE)
-    \{
-        status = sonar\_init(&\hyperlink{threads__linux_8c_a5fe7e1a4ef5e77fabd20272e2f5e5381}{sonar\_measure});
-        \textcolor{keywordflow}{if}(status != 1)
-        \{
-                return\_value = THREADS\_LINUX\_FAILURE;
-        \}
-    \}
-
-    \textcolor{keywordflow}{if}(return\_value != THREADS\_LINUX\_FAILURE)
-    \{
-        status = estimation\_init(ESTIMATION\_DO\_NOT\_ESTIMATE\_ACCEL\_BIAS, &
+110         \textcolor{keywordflow}{if}(status != CALIBRATION\_SUCCESS)
+111         \{
+112             return\_value = THREADS\_LINUX\_FAILURE;
+113         \}
+114     \}
+115 
+116     \textcolor{keywordflow}{if}(return\_value != THREADS\_LINUX\_FAILURE)
+117     \{
+118         status = gps\_init(&\hyperlink{threads__linux_8c_a5daa6ca8c168d5e8e73b14d96d6e148d}{gps\_measure});
+119         \textcolor{keywordflow}{if}(status != 1)
+120         \{
+121             return\_value = THREADS\_LINUX\_FAILURE;
+122         \}
+123     \}
+124 
+125     \textcolor{keywordflow}{if}(return\_value != THREADS\_LINUX\_FAILURE)
+126     \{
+127         status = imu\_init(&\hyperlink{threads__linux_8c_aa5c997a268f9020148799d654d48dc14}{imu\_measure});
+128         \textcolor{keywordflow}{if}(status != 1)
+129         \{
+130             return\_value = THREADS\_LINUX\_FAILURE;
+131         \}
+132     \}
+133 
+134     \textcolor{keywordflow}{if}(return\_value != THREADS\_LINUX\_FAILURE)
+135     \{
+136         status = magnetometer\_init(&\hyperlink{threads__linux_8c_a495506ba39b5cc85a3d4eee9b441fea4}{magnetometer\_measure});
+137         \textcolor{keywordflow}{if}(status != 1)
+138         \{
+139             return\_value = THREADS\_LINUX\_FAILURE;
+140         \}
+141     \}
+142 
+143     \textcolor{keywordflow}{if}(return\_value != THREADS\_LINUX\_FAILURE)
+144     \{
+145         status = sonar\_init(&\hyperlink{threads__linux_8c_a5fe7e1a4ef5e77fabd20272e2f5e5381}{sonar\_measure});
+146         \textcolor{keywordflow}{if}(status != 1)
+147         \{
+148                 return\_value = THREADS\_LINUX\_FAILURE;
+149         \}
+150     \}
+151 
+152     \textcolor{keywordflow}{if}(return\_value != THREADS\_LINUX\_FAILURE)
+153     \{
+154         status = estimation\_init(ESTIMATION\_DO\_NOT\_ESTIMATE\_ACCEL\_BIAS, &
       \hyperlink{threads__linux_8c_a65f14449a63da2de58fd36ac32df7f96}{estimation\_data});
-        \textcolor{keywordflow}{if}(status != ESTIMATION\_SUCCESS)
-        \{
-            return\_value = THREADS\_LINUX\_FAILURE;
-        \}
-    \}
-
-    \textcolor{keywordflow}{if}(return\_value != THREADS\_LINUX\_FAILURE)
-    \{
-        status = control\_init(&\hyperlink{threads__linux_8c_aff494a26c79d58504615f0502cfa8f31}{control\_data});
-        \textcolor{keywordflow}{if}(status != CONTROL\_SUCCESS)
-        \{
-            return\_value = THREADS\_LINUX\_FAILURE;
-        \}
-    \}
-
-    \textcolor{keywordflow}{if}(return\_value != THREADS\_LINUX\_FAILURE)
-    \{
-        status = protocol\_init();
-        \textcolor{keywordflow}{if}(status != PROTOCOL\_SUCCESS)
-        \{
-            return\_value = THREADS\_LINUX\_FAILURE;
-        \}
-    \}
-
-    \textcolor{keywordflow}{if}(return\_value != THREADS\_LINUX\_FAILURE)
-    \{
-        status = \hyperlink{group__ui_gab7bfb453918dcc296ff0cea3c79453d0}{ui\_init}();
-        \textcolor{keywordflow}{if}(status != UI\_SUCCESS)
-        \{
-            return\_value = THREADS\_LINUX\_FAILURE;
-        \}
-    \}
-
-    \textcolor{keywordflow}{if}(return\_value != THREADS\_LINUX\_FAILURE)
-    \{
-        status = \hyperlink{datalogger_8c_a1977ef253746fd8c008a3641d9822551}{datalogger\_init}();
-        \textcolor{keywordflow}{if}(status != \hyperlink{datalogger_8h_abddebaf71d26d40183fccbb1a766b983}{DATALOGGER\_SUCCESS})
-        \{
-            return\_value = THREADS\_LINUX\_FAILURE;
-        \}
-    \}
-
-    \textcolor{comment}{// Main Loop}
-    \textcolor{keywordflow}{if}(return\_value != THREADS\_LINUX\_FAILURE)
-    \{
-        \hyperlink{threads__linux_8c_a923a30158ef342937317b179dcb6d0fb}{threads\_linux\_timer\_start\_task\_1}();
-        usleep(0.5*\hyperlink{main2_8c_afffc21b0b726e6f4a572d0eefd3b5d69}{task\_1\_period\_us});
-        \hyperlink{threads__linux_8c_a59d6f60b682f360c3759cefad7ad2a4e}{threads\_linux\_timer\_start\_task\_2}();
-        usleep(5*\hyperlink{main2_8c_afffc21b0b726e6f4a572d0eefd3b5d69}{task\_1\_period\_us});
-
-        \textcolor{keywordflow}{while}(\hyperlink{main2_8c_a525dcecf4685bea1fbf92651ac0401fe}{quittask} == 0)
-        \{
-\textcolor{preprocessor}{            #if ANU\_COMPILE\_FOR\_OVERO}
-\textcolor{preprocessor}{}\textcolor{preprocessor}{            #else}
-\textcolor{preprocessor}{}            \textcolor{keywordflow}{if}(\hyperlink{datalogger_8c_a46fd1290d9ee97d5fc7171e1e0dcb0aa}{datalogger\_status}() == \hyperlink{datalogger_8h_a2cf92051a019c8ec1b5c4f5380758f62}{DATALOGGER\_RUNNING}
-      ) \hyperlink{datalogger_8c_a25bb814a0877f419ae09b08cd7e91ee9}{datalogger\_update\_IPC}();
-\textcolor{preprocessor}{            #endif}
-\textcolor{preprocessor}{}            \textcolor{keywordflow}{if}(++n>100)
-            \{
-                \textcolor{keywordflow}{if}(\hyperlink{datalogger_8c_a46fd1290d9ee97d5fc7171e1e0dcb0aa}{datalogger\_status}() == \hyperlink{datalogger_8h_a2cf92051a019c8ec1b5c4f5380758f62}{DATALOGGER\_RUNNING}
-      ) \hyperlink{datalogger_8c_a2aedecfce53e1935a41615ceaf378013}{datalogger\_write\_file}();
-                n = 0;
-            \}
-            usleep(5*\hyperlink{main2_8c_afffc21b0b726e6f4a572d0eefd3b5d69}{task\_1\_period\_us});
-        \}
-
-        \hyperlink{threads__linux_8c_a928ae9705d888293ed43a8109789716a}{threads\_linux\_timer\_stop\_task\_1}();
-        usleep(\hyperlink{threads__linux_8c_a95fe7f7d25a81aabd1194bac017074d8}{TASK1\_PERIOD\_US});
-        \hyperlink{threads__linux_8c_a78eb56e9ece1f0050dda425824fb6a71}{threads\_linux\_timer\_stop\_task\_2}();
-        usleep(\hyperlink{threads__linux_8c_adfe9b03db41d576a3beb124ec44a54d8}{TASK2\_PERIOD\_US});
-    \}
-
-    status = \hyperlink{datalogger_8c_ad22dbe9e235e7ae5737a23796d13ffbd}{datalogger\_close}();
-    \textcolor{keywordflow}{if}(status != \hyperlink{datalogger_8h_abddebaf71d26d40183fccbb1a766b983}{DATALOGGER\_SUCCESS})
-    \{
-        return\_value = THREADS\_LINUX\_FAILURE;
-    \}
-
-    status = \hyperlink{group__ui_ga65d8b92b634da17c344458cd57e61f3e}{ui\_close}();
-    \textcolor{keywordflow}{if}(status != UI\_SUCCESS)
-    \{
-        return\_value = THREADS\_LINUX\_FAILURE;
-    \}
-
-    status = protocol\_close();
-    \textcolor{keywordflow}{if}(status != PROTOCOL\_SUCCESS)
-    \{
-        return\_value = THREADS\_LINUX\_FAILURE;
-    \}
-
-    status = control\_close();
-    \textcolor{keywordflow}{if}(status != CONTROL\_SUCCESS)
-    \{
-        return\_value = THREADS\_LINUX\_FAILURE;
-    \}
-
-    status = estimation\_close(&\hyperlink{threads__linux_8c_a65f14449a63da2de58fd36ac32df7f96}{estimation\_data});
-    \textcolor{keywordflow}{if}(status != ESTIMATION\_SUCCESS)
-    \{
-        return\_value = THREADS\_LINUX\_FAILURE;
-    \}
-
-    status = magnetometer\_close(&\hyperlink{threads__linux_8c_a495506ba39b5cc85a3d4eee9b441fea4}{magnetometer\_measure});
-    \textcolor{keywordflow}{if}(status != 1)
-    \{
-        return\_value = THREADS\_LINUX\_FAILURE;
-    \}
-
-    status = imu\_close(&\hyperlink{threads__linux_8c_aa5c997a268f9020148799d654d48dc14}{imu\_measure});
-    \textcolor{keywordflow}{if}(status != 1)
-    \{
-        return\_value = THREADS\_LINUX\_FAILURE;
-    \}
-    status = gps\_close(&\hyperlink{threads__linux_8c_a5daa6ca8c168d5e8e73b14d96d6e148d}{gps\_measure});
-    \textcolor{keywordflow}{if}(status != 1)
-    \{
-        return\_value = THREADS\_LINUX\_FAILURE;
-    \}
-
-    status = calibration\_close(&\hyperlink{threads__linux_8c_a6409aa72713a8e9cbecf43c9e6b4ef5f}{calibration\_local\_coordinate\_system\_data}
+155         \textcolor{keywordflow}{if}(status != ESTIMATION\_SUCCESS)
+156         \{
+157             return\_value = THREADS\_LINUX\_FAILURE;
+158         \}
+159     \}
+160 
+161     \textcolor{keywordflow}{if}(return\_value != THREADS\_LINUX\_FAILURE)
+162     \{
+163         status = control\_init(&\hyperlink{threads__linux_8c_aff494a26c79d58504615f0502cfa8f31}{control\_data});
+164         \textcolor{keywordflow}{if}(status != CONTROL\_SUCCESS)
+165         \{
+166             return\_value = THREADS\_LINUX\_FAILURE;
+167         \}
+168     \}
+169 
+170     \textcolor{keywordflow}{if}(return\_value != THREADS\_LINUX\_FAILURE)
+171     \{
+172         status = protocol\_init();
+173         \textcolor{keywordflow}{if}(status != PROTOCOL\_SUCCESS)
+174         \{
+175             return\_value = THREADS\_LINUX\_FAILURE;
+176         \}
+177     \}
+178 
+179     \textcolor{keywordflow}{if}(return\_value != THREADS\_LINUX\_FAILURE)
+180     \{
+181         status = \hyperlink{group__ui_gab7bfb453918dcc296ff0cea3c79453d0}{ui\_init}();
+182         \textcolor{keywordflow}{if}(status != UI\_SUCCESS)
+183         \{
+184             return\_value = THREADS\_LINUX\_FAILURE;
+185         \}
+186     \}
+187 
+188     \textcolor{keywordflow}{if}(return\_value != THREADS\_LINUX\_FAILURE)
+189     \{
+190         status = \hyperlink{datalogger_8c_a1977ef253746fd8c008a3641d9822551}{datalogger\_init}();
+191         \textcolor{keywordflow}{if}(status != \hyperlink{datalogger_8h_abddebaf71d26d40183fccbb1a766b983}{DATALOGGER\_SUCCESS})
+192         \{
+193             return\_value = THREADS\_LINUX\_FAILURE;
+194         \}
+195     \}
+196 
+197     \textcolor{comment}{// Main Loop}
+198     \textcolor{keywordflow}{if}(return\_value != THREADS\_LINUX\_FAILURE)
+199     \{
+200         \hyperlink{threads__linux_8c_a923a30158ef342937317b179dcb6d0fb}{threads\_linux\_timer\_start\_task\_1}();
+201         usleep(0.5*\hyperlink{main2_8c_afffc21b0b726e6f4a572d0eefd3b5d69}{task\_1\_period\_us});
+202         \hyperlink{threads__linux_8c_a59d6f60b682f360c3759cefad7ad2a4e}{threads\_linux\_timer\_start\_task\_2}();
+203         usleep(5*\hyperlink{main2_8c_afffc21b0b726e6f4a572d0eefd3b5d69}{task\_1\_period\_us});
+204 
+205         \textcolor{keywordflow}{while}(\hyperlink{main2_8c_a525dcecf4685bea1fbf92651ac0401fe}{quittask} == 0)
+206         \{
+207 \textcolor{preprocessor}{            #if ANU\_COMPILE\_FOR\_OVERO}
+208 \textcolor{preprocessor}{}\textcolor{preprocessor}{            #else}
+209 \textcolor{preprocessor}{}            \textcolor{keywordflow}{if}(\hyperlink{datalogger_8c_a46fd1290d9ee97d5fc7171e1e0dcb0aa}{datalogger\_status}() == \hyperlink{datalogger_8h_a2cf92051a019c8ec1b5c4f5380758f62}{DATALOGGER\_RUNNING}) 
+      \hyperlink{datalogger_8c_a25bb814a0877f419ae09b08cd7e91ee9}{datalogger\_update\_IPC}();
+210 \textcolor{preprocessor}{            #endif}
+211 \textcolor{preprocessor}{}            \textcolor{keywordflow}{if}(++n>100)
+212             \{
+213                 \textcolor{keywordflow}{if}(\hyperlink{datalogger_8c_a46fd1290d9ee97d5fc7171e1e0dcb0aa}{datalogger\_status}() == \hyperlink{datalogger_8h_a2cf92051a019c8ec1b5c4f5380758f62}{DATALOGGER\_RUNNING}) 
+      \hyperlink{datalogger_8c_a2aedecfce53e1935a41615ceaf378013}{datalogger\_write\_file}();
+214                 n = 0;
+215             \}
+216             usleep(5*\hyperlink{main2_8c_afffc21b0b726e6f4a572d0eefd3b5d69}{task\_1\_period\_us});
+217         \}
+218 
+219         \hyperlink{threads__linux_8c_a928ae9705d888293ed43a8109789716a}{threads\_linux\_timer\_stop\_task\_1}();
+220         usleep(\hyperlink{threads__linux_8c_a95fe7f7d25a81aabd1194bac017074d8}{TASK1\_PERIOD\_US});
+221         \hyperlink{threads__linux_8c_a78eb56e9ece1f0050dda425824fb6a71}{threads\_linux\_timer\_stop\_task\_2}();
+222         usleep(\hyperlink{threads__linux_8c_adfe9b03db41d576a3beb124ec44a54d8}{TASK2\_PERIOD\_US});
+223     \}
+224 
+225     status = \hyperlink{datalogger_8c_ad22dbe9e235e7ae5737a23796d13ffbd}{datalogger\_close}();
+226     \textcolor{keywordflow}{if}(status != \hyperlink{datalogger_8h_abddebaf71d26d40183fccbb1a766b983}{DATALOGGER\_SUCCESS})
+227     \{
+228         return\_value = THREADS\_LINUX\_FAILURE;
+229     \}
+230 
+231     status = \hyperlink{group__ui_ga65d8b92b634da17c344458cd57e61f3e}{ui\_close}();
+232     \textcolor{keywordflow}{if}(status != UI\_SUCCESS)
+233     \{
+234         return\_value = THREADS\_LINUX\_FAILURE;
+235     \}
+236 
+237     status = protocol\_close();
+238     \textcolor{keywordflow}{if}(status != PROTOCOL\_SUCCESS)
+239     \{
+240         return\_value = THREADS\_LINUX\_FAILURE;
+241     \}
+242 
+243     status = control\_close();
+244     \textcolor{keywordflow}{if}(status != CONTROL\_SUCCESS)
+245     \{
+246         return\_value = THREADS\_LINUX\_FAILURE;
+247     \}
+248 
+249     status = estimation\_close(&\hyperlink{threads__linux_8c_a65f14449a63da2de58fd36ac32df7f96}{estimation\_data});
+250     \textcolor{keywordflow}{if}(status != ESTIMATION\_SUCCESS)
+251     \{
+252         return\_value = THREADS\_LINUX\_FAILURE;
+253     \}
+254 
+255     status = magnetometer\_close(&\hyperlink{threads__linux_8c_a495506ba39b5cc85a3d4eee9b441fea4}{magnetometer\_measure});
+256     \textcolor{keywordflow}{if}(status != 1)
+257     \{
+258         return\_value = THREADS\_LINUX\_FAILURE;
+259     \}
+260 
+261     status = imu\_close(&\hyperlink{threads__linux_8c_aa5c997a268f9020148799d654d48dc14}{imu\_measure});
+262     \textcolor{keywordflow}{if}(status != 1)
+263     \{
+264         return\_value = THREADS\_LINUX\_FAILURE;
+265     \}
+266     status = gps\_close(&\hyperlink{threads__linux_8c_a5daa6ca8c168d5e8e73b14d96d6e148d}{gps\_measure});
+267     \textcolor{keywordflow}{if}(status != 1)
+268     \{
+269         return\_value = THREADS\_LINUX\_FAILURE;
+270     \}
+271 
+272     status = calibration\_close(&\hyperlink{threads__linux_8c_a6409aa72713a8e9cbecf43c9e6b4ef5f}{calibration\_local\_coordinate\_system\_data}
       , &\hyperlink{threads__linux_8c_a520f88fc1d70b3ce27e0f9a3d9c6c2df}{calibration\_local\_fields\_data}, &
       \hyperlink{threads__linux_8c_a54474abecc241cd0ed5dd0a3b7f42a72}{calibration\_altimeter\_data});
-    \textcolor{keywordflow}{if}(status != CALIBRATION\_SUCCESS)
-    \{
-        return\_value = THREADS\_LINUX\_FAILURE;
-    \}
-
-    status = sensors\_close();
-    \textcolor{keywordflow}{if}(status != SENSORS\_SUCCESS)
-    \{
-        return\_value = THREADS\_LINUX\_FAILURE;
-    \}
-
-    \textcolor{keywordflow}{return} return\_value;
-\}
+273     \textcolor{keywordflow}{if}(status != CALIBRATION\_SUCCESS)
+274     \{
+275         return\_value = THREADS\_LINUX\_FAILURE;
+276     \}
+277 
+278     status = sensors\_close();
+279     \textcolor{keywordflow}{if}(status != SENSORS\_SUCCESS)
+280     \{
+281         return\_value = THREADS\_LINUX\_FAILURE;
+282     \}
+283 
+284     \textcolor{keywordflow}{return} return\_value;
+285 \}
 \end{DoxyCode}
 
 
@@ -456,93 +455,86 @@ Referenced by threads\-\_\-linux\-\_\-timer\-\_\-function\-\_\-task\-\_\-1().
 
 
 \begin{DoxyCode}
-\{
-    \textcolor{keyword}{static} \textcolor{keywordtype}{int} previous\_calibration\_status = CALIBRATION\_NOT\_RUNNING;
-    \textcolor{keywordtype}{int} current\_calibration\_status; \textcolor{comment}{// Used to detect lowering edge}
-    \textcolor{keyword}{static} \textcolor{keywordtype}{int} previous\_datalogger\_status = \hyperlink{datalogger_8h_a1a224da36800f52f56f30619849f7f5d}{DATALOGGER\_NOT\_RUNNING}
-      ;
-    \textcolor{keywordtype}{int} current\_datalogger\_status; \textcolor{comment}{// Used to detect rising edge}
-
-    \textcolor{comment}{// Main communication/control thread}
-
-    \textcolor{comment}{//Acquire}
-    \hyperlink{main2_8c_ac7af894858cf396a219d632f40afdc8d}{total}++;
-    \textcolor{keywordflow}{if}(protocol\_request\_all\_data(&\hyperlink{threads__linux_8c_a6e03a1c8574304386184af6cad0187a3}{battery\_data}, &\hyperlink{threads__linux_8c_a59e6bf03b78dd52adc07051320f6b954}{gps\_data}, 
-      &\hyperlink{main2_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\_data}, &\hyperlink{threads__linux_8c_a85a1e7d1f5cb0855de5c10c7da917e99}{pitot\_data}, &\hyperlink{threads__linux_8c_a47c600b0bafcb86f18d675174d1ff92b}{pwm\_read\_data}, &
-      \hyperlink{threads__linux_8c_ad8b6331e520d1bd524e2dc9053510fc2}{pwm\_write\_data}, &\hyperlink{threads__linux_8c_a014e3c8e54ea93cd94fd3fef569125f8}{scp1000\_data}, &\hyperlink{threads__linux_8c_aafb5fffcd42c3ad4ad9768df45a1a0b5}{sonar\_data})
-       != PROTOCOL\_SUCCESS)
-    \{
-        \hyperlink{main2_8c_a4f35e5ea2395561d0bd3b2f45612dc2c}{failure}++;
-    \}
-
-    \textcolor{comment}{// Calibrate and Estimate}
-    calibration\_calibrate\_all(&\hyperlink{threads__linux_8c_a47c600b0bafcb86f18d675174d1ff92b}{pwm\_read\_data}, &\hyperlink{threads__linux_8c_a014e3c8e54ea93cd94fd3fef569125f8}{scp1000\_data}
-      , &\hyperlink{threads__linux_8c_a6e03a1c8574304386184af6cad0187a3}{battery\_data}, &\hyperlink{threads__linux_8c_a59e6bf03b78dd52adc07051320f6b954}{gps\_data}, &\hyperlink{main2_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\_data}, &\hyperlink{threads__linux_8c_a85a1e7d1f5cb0855de5c10c7da917e99}{pitot\_data}
-      , &\hyperlink{threads__linux_8c_aafb5fffcd42c3ad4ad9768df45a1a0b5}{sonar\_data}, &\hyperlink{threads__linux_8c_a6409aa72713a8e9cbecf43c9e6b4ef5f}{calibration\_local\_coordinate\_system\_data}
-      , &\hyperlink{threads__linux_8c_a54474abecc241cd0ed5dd0a3b7f42a72}{calibration\_altimeter\_data}, &
-      \hyperlink{threads__linux_8c_a520f88fc1d70b3ce27e0f9a3d9c6c2df}{calibration\_local\_fields\_data}, &\hyperlink{threads__linux_8c_a5daa6ca8c168d5e8e73b14d96d6e148d}{gps\_measure}
-      , &\hyperlink{threads__linux_8c_aa5c997a268f9020148799d654d48dc14}{imu\_measure}, &\hyperlink{threads__linux_8c_a495506ba39b5cc85a3d4eee9b441fea4}{magnetometer\_measure});
-    estimation\_update\_state\_estimate(&\hyperlink{threads__linux_8c_a65f14449a63da2de58fd36ac32df7f96}{estimation\_data}, &
-      \hyperlink{threads__linux_8c_a5daa6ca8c168d5e8e73b14d96d6e148d}{gps\_measure}, &\hyperlink{threads__linux_8c_aa5c997a268f9020148799d654d48dc14}{imu\_measure}, &\hyperlink{threads__linux_8c_a495506ba39b5cc85a3d4eee9b441fea4}{magnetometer\_measure}
-      , &\hyperlink{threads__linux_8c_a5fe7e1a4ef5e77fabd20272e2f5e5381}{sonar\_measure}, &\hyperlink{threads__linux_8c_a520f88fc1d70b3ce27e0f9a3d9c6c2df}{calibration\_local\_fields\_data}
-      , \hyperlink{main2_8c_afffc21b0b726e6f4a572d0eefd3b5d69}{task\_1\_period\_us}/(\textcolor{keywordtype}{double})1e6);
-
-    \textcolor{comment}{// Control}
-    control\_main\_task(\hyperlink{main2_8c_a2a2a647912528f7aa86812528dbfe02f}{t\_task\_1\_global}, &\hyperlink{threads__linux_8c_ad8b6331e520d1bd524e2dc9053510fc2}{pwm\_write\_data}
-      , &\hyperlink{threads__linux_8c_a47c600b0bafcb86f18d675174d1ff92b}{pwm\_read\_data}, &\hyperlink{threads__linux_8c_aff494a26c79d58504615f0502cfa8f31}{control\_data}, &\hyperlink{threads__linux_8c_a65f14449a63da2de58fd36ac32df7f96}{estimation\_data}
-      );
-
-    \textcolor{comment}{// Actuate}
-    protocol\_send\_actuation\_data(&\hyperlink{threads__linux_8c_ad8b6331e520d1bd524e2dc9053510fc2}{pwm\_write\_data});
-
-    \textcolor{comment}{// Log}
-    current\_datalogger\_status = \hyperlink{datalogger_8c_a46fd1290d9ee97d5fc7171e1e0dcb0aa}{datalogger\_status}();
-    \textcolor{keywordflow}{if}(current\_datalogger\_status == \hyperlink{datalogger_8h_a2cf92051a019c8ec1b5c4f5380758f62}{DATALOGGER\_RUNNING})
-    \{
-        \textcolor{keywordflow}{if}(previous\_datalogger\_status == \hyperlink{datalogger_8h_a1a224da36800f52f56f30619849f7f5d}{DATALOGGER\_NOT\_RUNNING}
-      ) \textcolor{comment}{// Rising edge}
-        \{
-            \hyperlink{datalogger_8c_afb69d166f8d53042825174cee225ea49}{datalogger\_set\_Ts}(\hyperlink{main2_8c_afffc21b0b726e6f4a572d0eefd3b5d69}{task\_1\_period\_us}
-      /1e6);
-            datalogger\_set\_initial\_altimeter\_parameters(&
+288 \{
+289     \textcolor{keyword}{static} \textcolor{keywordtype}{int} previous\_calibration\_status = CALIBRATION\_NOT\_RUNNING;
+290     \textcolor{keywordtype}{int} current\_calibration\_status; \textcolor{comment}{// Used to detect lowering edge}
+291     \textcolor{keyword}{static} \textcolor{keywordtype}{int} previous\_datalogger\_status = \hyperlink{datalogger_8h_a1a224da36800f52f56f30619849f7f5d}{DATALOGGER\_NOT\_RUNNING};
+292     \textcolor{keywordtype}{int} current\_datalogger\_status; \textcolor{comment}{// Used to detect rising edge}
+293 
+294     \textcolor{comment}{// Main communication/control thread}
+295 
+296     \textcolor{comment}{//Acquire}
+297     \hyperlink{main_8c_ac7af894858cf396a219d632f40afdc8d}{total}++;
+298     \textcolor{keywordflow}{if}(protocol\_request\_all\_data(&\hyperlink{threads__linux_8c_a6e03a1c8574304386184af6cad0187a3}{battery\_data}, &\hyperlink{threads__linux_8c_a59e6bf03b78dd52adc07051320f6b954}{gps\_data}, &
+      \hyperlink{main_8c_a0f81e5b5621e6e2b2467daa7d12268c4}{imu\_data}, &\hyperlink{threads__linux_8c_a85a1e7d1f5cb0855de5c10c7da917e99}{pitot\_data}, &\hyperlink{threads__linux_8c_a47c600b0bafcb86f18d675174d1ff92b}{pwm\_read\_data}, &
+      \hyperlink{threads__linux_8c_ad8b6331e520d1bd524e2dc9053510fc2}{pwm\_write\_data}, &\hyperlink{threads__linux_8c_a014e3c8e54ea93cd94fd3fef569125f8}{scp1000\_data}, &\hyperlink{threads__linux_8c_aafb5fffcd42c3ad4ad9768df45a1a0b5}{sonar\_data}) != PROTOCOL\_SUCCESS)
+299     \{
+300         \hyperlink{main_8c_a4f35e5ea2395561d0bd3b2f45612dc2c}{failure}++;
+301     \}
+302 
+303     \textcolor{comment}{// Calibrate and Estimate}
+304     calibration\_calibrate\_all(&\hyperlink{threads__linux_8c_a47c600b0bafcb86f18d675174d1ff92b}{pwm\_read\_data}, &\hyperlink{threads__linux_8c_a014e3c8e54ea93cd94fd3fef569125f8}{scp1000\_data}, &
+      \hyperlink{threads__linux_8c_a6e03a1c8574304386184af6cad0187a3}{battery\_data}, &\hyperlink{threads__linux_8c_a59e6bf03b78dd52adc07051320f6b954}{gps\_data}, &\hyperlink{main_8c_a0f81e5b5621e6e2b2467daa7d12268c4}{imu\_data}, &\hyperlink{threads__linux_8c_a85a1e7d1f5cb0855de5c10c7da917e99}{pitot\_data}, &
+      \hyperlink{threads__linux_8c_aafb5fffcd42c3ad4ad9768df45a1a0b5}{sonar\_data}, &\hyperlink{threads__linux_8c_a6409aa72713a8e9cbecf43c9e6b4ef5f}{calibration\_local\_coordinate\_system\_data}, &
+      \hyperlink{threads__linux_8c_a54474abecc241cd0ed5dd0a3b7f42a72}{calibration\_altimeter\_data}, &
+      \hyperlink{threads__linux_8c_a520f88fc1d70b3ce27e0f9a3d9c6c2df}{calibration\_local\_fields\_data}, &\hyperlink{threads__linux_8c_a5daa6ca8c168d5e8e73b14d96d6e148d}{gps\_measure}, &
+      \hyperlink{threads__linux_8c_aa5c997a268f9020148799d654d48dc14}{imu\_measure}, &\hyperlink{threads__linux_8c_a495506ba39b5cc85a3d4eee9b441fea4}{magnetometer\_measure});
+305     estimation\_update\_state\_estimate(&\hyperlink{threads__linux_8c_a65f14449a63da2de58fd36ac32df7f96}{estimation\_data}, &
+      \hyperlink{threads__linux_8c_a5daa6ca8c168d5e8e73b14d96d6e148d}{gps\_measure}, &\hyperlink{threads__linux_8c_aa5c997a268f9020148799d654d48dc14}{imu\_measure}, &\hyperlink{threads__linux_8c_a495506ba39b5cc85a3d4eee9b441fea4}{magnetometer\_measure}, &
+      \hyperlink{threads__linux_8c_a5fe7e1a4ef5e77fabd20272e2f5e5381}{sonar\_measure}, &\hyperlink{threads__linux_8c_a520f88fc1d70b3ce27e0f9a3d9c6c2df}{calibration\_local\_fields\_data}, 
+      \hyperlink{main2_8c_afffc21b0b726e6f4a572d0eefd3b5d69}{task\_1\_period\_us}/(\textcolor{keywordtype}{double})1e6);
+306 
+307     \textcolor{comment}{// Control}
+308     control\_main\_task(\hyperlink{main2_8c_a2a2a647912528f7aa86812528dbfe02f}{t\_task\_1\_global}, &\hyperlink{threads__linux_8c_ad8b6331e520d1bd524e2dc9053510fc2}{pwm\_write\_data}, &
+      \hyperlink{threads__linux_8c_a47c600b0bafcb86f18d675174d1ff92b}{pwm\_read\_data}, &\hyperlink{threads__linux_8c_aff494a26c79d58504615f0502cfa8f31}{control\_data}, &\hyperlink{threads__linux_8c_a65f14449a63da2de58fd36ac32df7f96}{estimation\_data});
+309 
+310     \textcolor{comment}{// Actuate}
+311     protocol\_send\_actuation\_data(&\hyperlink{threads__linux_8c_ad8b6331e520d1bd524e2dc9053510fc2}{pwm\_write\_data});
+312 
+313     \textcolor{comment}{// Log}
+314     current\_datalogger\_status = \hyperlink{datalogger_8c_a46fd1290d9ee97d5fc7171e1e0dcb0aa}{datalogger\_status}();
+315     \textcolor{keywordflow}{if}(current\_datalogger\_status == \hyperlink{datalogger_8h_a2cf92051a019c8ec1b5c4f5380758f62}{DATALOGGER\_RUNNING})
+316     \{
+317         \textcolor{keywordflow}{if}(previous\_datalogger\_status == \hyperlink{datalogger_8h_a1a224da36800f52f56f30619849f7f5d}{DATALOGGER\_NOT\_RUNNING}) \textcolor{comment}{// Rising edge}
+318         \{
+319             \hyperlink{datalogger_8c_afb69d166f8d53042825174cee225ea49}{datalogger\_set\_Ts}(\hyperlink{main2_8c_afffc21b0b726e6f4a572d0eefd3b5d69}{task\_1\_period\_us}/1e6);
+320             datalogger\_set\_initial\_altimeter\_parameters(&
       \hyperlink{threads__linux_8c_a54474abecc241cd0ed5dd0a3b7f42a72}{calibration\_altimeter\_data});
-            datalogger\_set\_local\_coordinate\_system(&
-      \hyperlink{threads__linux_8c_a6409aa72713a8e9cbecf43c9e6b4ef5f}{calibration\_local\_coordinate\_system\_data}
-      );
-            datalogger\_set\_local\_fields(&\hyperlink{threads__linux_8c_a520f88fc1d70b3ce27e0f9a3d9c6c2df}{calibration\_local\_fields\_data}
-      );
-            \hyperlink{threads__linux_8c_a5ba2e82998677ad5d27022cc793583ec}{threads\_reset\_timer}();
-        \}
-        \hyperlink{datalogger_8c_ad89a56e2f057ace8c28d78eb67703e7d}{datalogger\_update}(\hyperlink{main2_8c_a2a2a647912528f7aa86812528dbfe02f}{t\_task\_1\_global}, 
-      \hyperlink{main2_8c_acdaa4a9b0e1be3dfa53b52df6410ad3b}{T\_task\_1\_exec\_global}, \hyperlink{main2_8c_a9629c77cd3dba9d47d15c2e51bdde09d}{T\_task\_2\_exec\_global}
-      , \hyperlink{main2_8c_a86c2efd6da48b362806cdbb5b1e711d8}{t0}, &\hyperlink{threads__linux_8c_a6e03a1c8574304386184af6cad0187a3}{battery\_data}, &\hyperlink{threads__linux_8c_a59e6bf03b78dd52adc07051320f6b954}{gps\_data}, &\hyperlink{main2_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\_data}, &
-      \hyperlink{threads__linux_8c_a85a1e7d1f5cb0855de5c10c7da917e99}{pitot\_data}, &\hyperlink{threads__linux_8c_a47c600b0bafcb86f18d675174d1ff92b}{pwm\_read\_data}, &\hyperlink{threads__linux_8c_ad8b6331e520d1bd524e2dc9053510fc2}{pwm\_write\_data}
-      , &\hyperlink{threads__linux_8c_a014e3c8e54ea93cd94fd3fef569125f8}{scp1000\_data}, &\hyperlink{threads__linux_8c_aafb5fffcd42c3ad4ad9768df45a1a0b5}{sonar\_data}, &\hyperlink{threads__linux_8c_a5daa6ca8c168d5e8e73b14d96d6e148d}{gps\_measure}, &
+321             datalogger\_set\_local\_coordinate\_system(&
+      \hyperlink{threads__linux_8c_a6409aa72713a8e9cbecf43c9e6b4ef5f}{calibration\_local\_coordinate\_system\_data});
+322             datalogger\_set\_local\_fields(&\hyperlink{threads__linux_8c_a520f88fc1d70b3ce27e0f9a3d9c6c2df}{calibration\_local\_fields\_data});
+323             \hyperlink{threads__linux_8c_a5ba2e82998677ad5d27022cc793583ec}{threads\_reset\_timer}();
+324         \}
+325         \hyperlink{datalogger_8c_ad89a56e2f057ace8c28d78eb67703e7d}{datalogger\_update}(\hyperlink{main2_8c_a2a2a647912528f7aa86812528dbfe02f}{t\_task\_1\_global}, 
+      \hyperlink{main2_8c_acdaa4a9b0e1be3dfa53b52df6410ad3b}{T\_task\_1\_exec\_global}, \hyperlink{main2_8c_a9629c77cd3dba9d47d15c2e51bdde09d}{T\_task\_2\_exec\_global}, 
+      \hyperlink{main2_8c_a86c2efd6da48b362806cdbb5b1e711d8}{t0}, &\hyperlink{threads__linux_8c_a6e03a1c8574304386184af6cad0187a3}{battery\_data}, &\hyperlink{threads__linux_8c_a59e6bf03b78dd52adc07051320f6b954}{gps\_data}, &\hyperlink{main_8c_a0f81e5b5621e6e2b2467daa7d12268c4}{imu\_data}, &
+      \hyperlink{threads__linux_8c_a85a1e7d1f5cb0855de5c10c7da917e99}{pitot\_data}, &\hyperlink{threads__linux_8c_a47c600b0bafcb86f18d675174d1ff92b}{pwm\_read\_data}, &\hyperlink{threads__linux_8c_ad8b6331e520d1bd524e2dc9053510fc2}{pwm\_write\_data}, &
+      \hyperlink{threads__linux_8c_a014e3c8e54ea93cd94fd3fef569125f8}{scp1000\_data}, &\hyperlink{threads__linux_8c_aafb5fffcd42c3ad4ad9768df45a1a0b5}{sonar\_data}, &\hyperlink{threads__linux_8c_a5daa6ca8c168d5e8e73b14d96d6e148d}{gps\_measure}, &
       \hyperlink{threads__linux_8c_aa5c997a268f9020148799d654d48dc14}{imu\_measure}, &\hyperlink{threads__linux_8c_a495506ba39b5cc85a3d4eee9b441fea4}{magnetometer\_measure}, &
       \hyperlink{threads__linux_8c_a65f14449a63da2de58fd36ac32df7f96}{estimation\_data}, &\hyperlink{threads__linux_8c_aff494a26c79d58504615f0502cfa8f31}{control\_data});
-    \}
-    previous\_datalogger\_status = current\_datalogger\_status;
-
-    current\_calibration\_status = calibration\_get\_status();
-    \textcolor{keywordflow}{if}(current\_calibration\_status == CALIBRATION\_RUNNING)
-    \{
-        calibration\_imu\_add\_sample\_bias\_estimate(&\hyperlink{main2_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\_data});
-        calibration\_altimeter\_add\_sample\_initial\_pressure(&\hyperlink{threads__linux_8c_a014e3c8e54ea93cd94fd3fef569125f8}{scp1000\_data}
-      , &\hyperlink{threads__linux_8c_a54474abecc241cd0ed5dd0a3b7f42a72}{calibration\_altimeter\_data});
-    \}
-    \textcolor{keywordflow}{else} \textcolor{comment}{// Calibration not running}
-    \{
-        \textcolor{keywordflow}{if}(previous\_calibration\_status == CALIBRATION\_RUNNING) \textcolor{comment}{// Lowering edge}
-        \{
-            calibration\_imu\_finish\_bias\_estimate(&\hyperlink{main2_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\_data});
-            calibration\_altimeter\_finish\_initial\_pressure\_estimate(&
+326     \}
+327     previous\_datalogger\_status = current\_datalogger\_status;
+328 
+329     current\_calibration\_status = calibration\_get\_status();
+330     \textcolor{keywordflow}{if}(current\_calibration\_status == CALIBRATION\_RUNNING)
+331     \{
+332         calibration\_imu\_add\_sample\_bias\_estimate(&\hyperlink{main_8c_a0f81e5b5621e6e2b2467daa7d12268c4}{imu\_data});
+333         calibration\_altimeter\_add\_sample\_initial\_pressure(&\hyperlink{threads__linux_8c_a014e3c8e54ea93cd94fd3fef569125f8}{scp1000\_data}, &
       \hyperlink{threads__linux_8c_a54474abecc241cd0ed5dd0a3b7f42a72}{calibration\_altimeter\_data});
-        \}
-    \}
-    previous\_calibration\_status = current\_calibration\_status;
-
-    \textcolor{keywordflow}{return} THREADS\_LINUX\_SUCCESS;
-\}
+334     \}
+335     \textcolor{keywordflow}{else} \textcolor{comment}{// Calibration not running}
+336     \{
+337         \textcolor{keywordflow}{if}(previous\_calibration\_status == CALIBRATION\_RUNNING) \textcolor{comment}{// Lowering edge}
+338         \{
+339             calibration\_imu\_finish\_bias\_estimate(&\hyperlink{main_8c_a0f81e5b5621e6e2b2467daa7d12268c4}{imu\_data});
+340             calibration\_altimeter\_finish\_initial\_pressure\_estimate(&
+      \hyperlink{threads__linux_8c_a54474abecc241cd0ed5dd0a3b7f42a72}{calibration\_altimeter\_data});
+341         \}
+342     \}
+343     previous\_calibration\_status = current\_calibration\_status;
+344 
+345     \textcolor{keywordflow}{return} THREADS\_LINUX\_SUCCESS;
+346 \}
 \end{DoxyCode}
 
 
@@ -587,31 +579,31 @@ Referenced by threads\-\_\-linux\-\_\-timer\-\_\-function\-\_\-task\-\_\-2().
 
 
 \begin{DoxyCode}
-\{
-    \textcolor{comment}{// UI thread}
-    \textcolor{keywordflow}{if}(\hyperlink{main2_8c_a5045187bb0afe92c41ce73bc602fd3ca}{telemetry\_mode} == \hyperlink{ui_8h_a5f863c47136ccbe4db74101b9a3e83ca}{UI\_NCURSES\_MODE})
-    \{
-        \hyperlink{group__ui_ga42e4dac2d138061a74c572358c8ebf49}{ui\_update}(&\hyperlink{threads__linux_8c_a6e03a1c8574304386184af6cad0187a3}{battery\_data}, &\hyperlink{threads__linux_8c_a59e6bf03b78dd52adc07051320f6b954}{gps\_data}, &
-      \hyperlink{main2_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\_data}, &\hyperlink{threads__linux_8c_a85a1e7d1f5cb0855de5c10c7da917e99}{pitot\_data}, &\hyperlink{threads__linux_8c_a47c600b0bafcb86f18d675174d1ff92b}{pwm\_read\_data}, &
-      \hyperlink{threads__linux_8c_ad8b6331e520d1bd524e2dc9053510fc2}{pwm\_write\_data}, &\hyperlink{threads__linux_8c_a014e3c8e54ea93cd94fd3fef569125f8}{scp1000\_data}, &\hyperlink{threads__linux_8c_aafb5fffcd42c3ad4ad9768df45a1a0b5}{sonar\_data},
-       &\hyperlink{threads__linux_8c_a5daa6ca8c168d5e8e73b14d96d6e148d}{gps\_measure}, &\hyperlink{threads__linux_8c_aa5c997a268f9020148799d654d48dc14}{imu\_measure}, &\hyperlink{threads__linux_8c_a495506ba39b5cc85a3d4eee9b441fea4}{magnetometer\_measure}
-      , &\hyperlink{threads__linux_8c_a6409aa72713a8e9cbecf43c9e6b4ef5f}{calibration\_local\_coordinate\_system\_data}
-      , &\hyperlink{threads__linux_8c_a520f88fc1d70b3ce27e0f9a3d9c6c2df}{calibration\_local\_fields\_data}, &
-      \hyperlink{threads__linux_8c_a54474abecc241cd0ed5dd0a3b7f42a72}{calibration\_altimeter\_data}, &\hyperlink{threads__linux_8c_a65f14449a63da2de58fd36ac32df7f96}{estimation\_data}
-      , &\hyperlink{threads__linux_8c_aff494a26c79d58504615f0502cfa8f31}{control\_data}, \hyperlink{main2_8c_ac7af894858cf396a219d632f40afdc8d}{total}, \hyperlink{main2_8c_a4f35e5ea2395561d0bd3b2f45612dc2c}{failure});
-    \}
-    \textcolor{keywordflow}{if}(\hyperlink{main2_8c_a5045187bb0afe92c41ce73bc602fd3ca}{telemetry\_mode} == UI\_MAVLINK\_MODE)
-    \{
-        mavlink\_module\_update(\hyperlink{main2_8c_a2a2a647912528f7aa86812528dbfe02f}{t\_task\_1\_global}, \hyperlink{main2_8c_a86c2efd6da48b362806cdbb5b1e711d8}{t0}, &
-      \hyperlink{threads__linux_8c_a6e03a1c8574304386184af6cad0187a3}{battery\_data}, &\hyperlink{threads__linux_8c_a59e6bf03b78dd52adc07051320f6b954}{gps\_data}, &\hyperlink{main2_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\_data}, &\hyperlink{threads__linux_8c_a85a1e7d1f5cb0855de5c10c7da917e99}{pitot\_data}
-      , &\hyperlink{threads__linux_8c_a47c600b0bafcb86f18d675174d1ff92b}{pwm\_read\_data}, &\hyperlink{threads__linux_8c_ad8b6331e520d1bd524e2dc9053510fc2}{pwm\_write\_data}, &\hyperlink{threads__linux_8c_a014e3c8e54ea93cd94fd3fef569125f8}{scp1000\_data}
-      , &\hyperlink{threads__linux_8c_aafb5fffcd42c3ad4ad9768df45a1a0b5}{sonar\_data}, &\hyperlink{threads__linux_8c_a5daa6ca8c168d5e8e73b14d96d6e148d}{gps\_measure}, &\hyperlink{threads__linux_8c_aa5c997a268f9020148799d654d48dc14}{imu\_measure}, &
+349 \{
+350     \textcolor{comment}{// UI thread}
+351     \textcolor{keywordflow}{if}(\hyperlink{main2_8c_a5045187bb0afe92c41ce73bc602fd3ca}{telemetry\_mode} == \hyperlink{ui_8h_a5f863c47136ccbe4db74101b9a3e83ca}{UI\_NCURSES\_MODE})
+352     \{
+353         \hyperlink{group__ui_ga42e4dac2d138061a74c572358c8ebf49}{ui\_update}(&\hyperlink{threads__linux_8c_a6e03a1c8574304386184af6cad0187a3}{battery\_data}, &\hyperlink{threads__linux_8c_a59e6bf03b78dd52adc07051320f6b954}{gps\_data}, &
+      \hyperlink{main_8c_a0f81e5b5621e6e2b2467daa7d12268c4}{imu\_data}, &\hyperlink{threads__linux_8c_a85a1e7d1f5cb0855de5c10c7da917e99}{pitot\_data}, &\hyperlink{threads__linux_8c_a47c600b0bafcb86f18d675174d1ff92b}{pwm\_read\_data}, &
+      \hyperlink{threads__linux_8c_ad8b6331e520d1bd524e2dc9053510fc2}{pwm\_write\_data}, &\hyperlink{threads__linux_8c_a014e3c8e54ea93cd94fd3fef569125f8}{scp1000\_data}, &\hyperlink{threads__linux_8c_aafb5fffcd42c3ad4ad9768df45a1a0b5}{sonar\_data}, &
+      \hyperlink{threads__linux_8c_a5daa6ca8c168d5e8e73b14d96d6e148d}{gps\_measure}, &\hyperlink{threads__linux_8c_aa5c997a268f9020148799d654d48dc14}{imu\_measure}, &\hyperlink{threads__linux_8c_a495506ba39b5cc85a3d4eee9b441fea4}{magnetometer\_measure}, &
+      \hyperlink{threads__linux_8c_a6409aa72713a8e9cbecf43c9e6b4ef5f}{calibration\_local\_coordinate\_system\_data}, &
+      \hyperlink{threads__linux_8c_a520f88fc1d70b3ce27e0f9a3d9c6c2df}{calibration\_local\_fields\_data}, &
+      \hyperlink{threads__linux_8c_a54474abecc241cd0ed5dd0a3b7f42a72}{calibration\_altimeter\_data}, &\hyperlink{threads__linux_8c_a65f14449a63da2de58fd36ac32df7f96}{estimation\_data}, &
+      \hyperlink{threads__linux_8c_aff494a26c79d58504615f0502cfa8f31}{control\_data}, \hyperlink{main_8c_ac7af894858cf396a219d632f40afdc8d}{total}, \hyperlink{main_8c_a4f35e5ea2395561d0bd3b2f45612dc2c}{failure});
+354     \}
+355     \textcolor{keywordflow}{if}(\hyperlink{main2_8c_a5045187bb0afe92c41ce73bc602fd3ca}{telemetry\_mode} == UI\_MAVLINK\_MODE)
+356     \{
+357         mavlink\_module\_update(\hyperlink{main2_8c_a2a2a647912528f7aa86812528dbfe02f}{t\_task\_1\_global}, \hyperlink{main2_8c_a86c2efd6da48b362806cdbb5b1e711d8}{t0}, &
+      \hyperlink{threads__linux_8c_a6e03a1c8574304386184af6cad0187a3}{battery\_data}, &\hyperlink{threads__linux_8c_a59e6bf03b78dd52adc07051320f6b954}{gps\_data}, &\hyperlink{main_8c_a0f81e5b5621e6e2b2467daa7d12268c4}{imu\_data}, &\hyperlink{threads__linux_8c_a85a1e7d1f5cb0855de5c10c7da917e99}{pitot\_data}, &
+      \hyperlink{threads__linux_8c_a47c600b0bafcb86f18d675174d1ff92b}{pwm\_read\_data}, &\hyperlink{threads__linux_8c_ad8b6331e520d1bd524e2dc9053510fc2}{pwm\_write\_data}, &\hyperlink{threads__linux_8c_a014e3c8e54ea93cd94fd3fef569125f8}{scp1000\_data}, &
+      \hyperlink{threads__linux_8c_aafb5fffcd42c3ad4ad9768df45a1a0b5}{sonar\_data}, &\hyperlink{threads__linux_8c_a5daa6ca8c168d5e8e73b14d96d6e148d}{gps\_measure}, &\hyperlink{threads__linux_8c_aa5c997a268f9020148799d654d48dc14}{imu\_measure}, &
       \hyperlink{threads__linux_8c_a495506ba39b5cc85a3d4eee9b441fea4}{magnetometer\_measure}, &\hyperlink{threads__linux_8c_a65f14449a63da2de58fd36ac32df7f96}{estimation\_data}, &
       \hyperlink{threads__linux_8c_aff494a26c79d58504615f0502cfa8f31}{control\_data});
-    \}
-
-    \textcolor{keywordflow}{return} THREADS\_LINUX\_SUCCESS;
-\}
+358     \}
+359 
+360     \textcolor{keywordflow}{return} THREADS\_LINUX\_SUCCESS;
+361 \}
 \end{DoxyCode}
 
 
@@ -657,63 +649,62 @@ Referenced by threads\-\_\-linux\-\_\-timer\-\_\-task\-\_\-1().
 
 
 \begin{DoxyCode}
-\{
-    \textcolor{keywordtype}{int} \hyperlink{communication_2communication_8c_a6e27f49150e9a14580fb313cc2777e00}{status} = 0;
-    \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval timereset;
-    \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval time;
-    \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval time\_exec\_start;
-    \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval time\_exec\_end;
-    \textcolor{keyword}{static} \textcolor{keywordtype}{double} T\_task,t\_task,t\_task\_previous;
-    \textcolor{keyword}{static} \textcolor{keywordtype}{double} T\_task\_mean,T\_task\_min,T\_task\_max,T\_task\_exec;
-
-    gettimeofday(&time\_exec\_start, NULL);
-
-    \textcolor{comment}{// Time calculation}
-    \textcolor{keywordflow}{if}(\hyperlink{main2_8c_a764ebf75ba887a9ecf7bf8fe124960e0}{flag\_task\_1\_firstexecution})
-    \{
-        gettimeofday(&timereset, NULL);
-        t\_task = 0.0;
-        T\_task\_mean = 0.0;
-        T\_task\_min = 0.0;
-        T\_task\_max = 0.0;
-        T\_task\_exec = 0.0;
-    \}
-
-    gettimeofday(&time, NULL);
-    t\_task = ((time.tv\_sec - timereset.tv\_sec) + (time.tv\_usec - timereset.
-      tv\_usec)*1e-6);
-    T\_task = t\_task - t\_task\_previous;
-    t\_task\_previous = t\_task;
-
-    \textcolor{keywordflow}{if}(\hyperlink{main2_8c_a764ebf75ba887a9ecf7bf8fe124960e0}{flag\_task\_1\_firstexecution})
-    \{
-        T\_task\_mean = T\_task;
-        T\_task\_min  = 1e200;
-        T\_task\_max  = 0.0;
-        \hyperlink{main2_8c_a86c2efd6da48b362806cdbb5b1e711d8}{t0} = t\_task;
-    \}
-    \textcolor{keywordflow}{else}
-    \{
-        T\_task\_mean = 0.05*T\_task + 0.95*T\_task\_mean;
-        \textcolor{keywordflow}{if}(T\_task < T\_task\_min) T\_task\_min  = T\_task;
-        \textcolor{keywordflow}{if}(T\_task > T\_task\_max) T\_task\_max  = T\_task;
-    \}
-
-    \textcolor{comment}{// Run the thread}
-    status = \hyperlink{threads__linux_8c_a2e381152046e690e7264c1a479071048}{threads\_linux\_periodic\_task\_1}();
-
-    gettimeofday(&time\_exec\_end, NULL);
-    T\_task\_exec = ((time\_exec\_end.tv\_sec - time\_exec\_start.tv\_sec) + (
-      time\_exec\_end.tv\_usec - time\_exec\_start.tv\_usec)*1e-6);
-
-    \hyperlink{main2_8c_a2a2a647912528f7aa86812528dbfe02f}{t\_task\_1\_global} = t\_task;
-    \hyperlink{main2_8c_a738c330c86a365e72ce29ebca3f1e572}{T\_task\_1\_mean\_global} = T\_task\_mean;
-    \hyperlink{main2_8c_a86222e255aeeb47598a4fc91ab6c2b1a}{T\_task\_1\_min\_global} = T\_task\_min;
-    \hyperlink{main2_8c_aa714e30d738039b5bf665742beb31739}{T\_task\_1\_max\_global} = T\_task\_max;
-    \hyperlink{main2_8c_acdaa4a9b0e1be3dfa53b52df6410ad3b}{T\_task\_1\_exec\_global} = T\_task\_exec;
-
-    \hyperlink{main2_8c_a764ebf75ba887a9ecf7bf8fe124960e0}{flag\_task\_1\_firstexecution} = 0;
-\}
+458 \{
+459     \textcolor{keywordtype}{int} \hyperlink{communication_2communication_8c_a6e27f49150e9a14580fb313cc2777e00}{status} = 0;
+460     \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval timereset;
+461     \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval time;
+462     \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval time\_exec\_start;
+463     \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval time\_exec\_end;
+464     \textcolor{keyword}{static} \textcolor{keywordtype}{double} T\_task,t\_task,t\_task\_previous;
+465     \textcolor{keyword}{static} \textcolor{keywordtype}{double} T\_task\_mean,T\_task\_min,T\_task\_max,T\_task\_exec;
+466 
+467     gettimeofday(&time\_exec\_start, NULL);
+468 
+469     \textcolor{comment}{// Time calculation}
+470     \textcolor{keywordflow}{if}(\hyperlink{main2_8c_a764ebf75ba887a9ecf7bf8fe124960e0}{flag\_task\_1\_firstexecution})
+471     \{
+472         gettimeofday(&timereset, NULL);
+473         t\_task = 0.0;
+474         T\_task\_mean = 0.0;
+475         T\_task\_min = 0.0;
+476         T\_task\_max = 0.0;
+477         T\_task\_exec = 0.0;
+478     \}
+479 
+480     gettimeofday(&time, NULL);
+481     t\_task = ((time.tv\_sec - timereset.tv\_sec) + (time.tv\_usec - timereset.tv\_usec)*1e-6);
+482     T\_task = t\_task - t\_task\_previous;
+483     t\_task\_previous = t\_task;
+484 
+485     \textcolor{keywordflow}{if}(\hyperlink{main2_8c_a764ebf75ba887a9ecf7bf8fe124960e0}{flag\_task\_1\_firstexecution})
+486     \{
+487         T\_task\_mean = T\_task;
+488         T\_task\_min  = 1e200;
+489         T\_task\_max  = 0.0;
+490         \hyperlink{main2_8c_a86c2efd6da48b362806cdbb5b1e711d8}{t0} = t\_task;
+491     \}
+492     \textcolor{keywordflow}{else}
+493     \{
+494         T\_task\_mean = 0.05*T\_task + 0.95*T\_task\_mean;
+495         \textcolor{keywordflow}{if}(T\_task < T\_task\_min) T\_task\_min  = T\_task;
+496         \textcolor{keywordflow}{if}(T\_task > T\_task\_max) T\_task\_max  = T\_task;
+497     \}
+498 
+499     \textcolor{comment}{// Run the thread}
+500     status = \hyperlink{threads__linux_8c_a2e381152046e690e7264c1a479071048}{threads\_linux\_periodic\_task\_1}();
+501 
+502     gettimeofday(&time\_exec\_end, NULL);
+503     T\_task\_exec = ((time\_exec\_end.tv\_sec - time\_exec\_start.tv\_sec) + (time\_exec\_end.tv\_usec - 
+      time\_exec\_start.tv\_usec)*1e-6);
+504 
+505     \hyperlink{main2_8c_a2a2a647912528f7aa86812528dbfe02f}{t\_task\_1\_global} = t\_task;
+506     \hyperlink{main2_8c_a738c330c86a365e72ce29ebca3f1e572}{T\_task\_1\_mean\_global} = T\_task\_mean;
+507     \hyperlink{main2_8c_a86222e255aeeb47598a4fc91ab6c2b1a}{T\_task\_1\_min\_global} = T\_task\_min;
+508     \hyperlink{main2_8c_aa714e30d738039b5bf665742beb31739}{T\_task\_1\_max\_global} = T\_task\_max;
+509     \hyperlink{main2_8c_acdaa4a9b0e1be3dfa53b52df6410ad3b}{T\_task\_1\_exec\_global} = T\_task\_exec;
+510 
+511     \hyperlink{main2_8c_a764ebf75ba887a9ecf7bf8fe124960e0}{flag\_task\_1\_firstexecution} = 0;
+512 \}
 \end{DoxyCode}
 
 
@@ -758,62 +749,61 @@ Referenced by threads\-\_\-linux\-\_\-timer\-\_\-task\-\_\-2().
 
 
 \begin{DoxyCode}
-\{
-    \textcolor{keywordtype}{int} \hyperlink{communication_2communication_8c_a6e27f49150e9a14580fb313cc2777e00}{status} = 0;
-    \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval timereset;
-    \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval time;
-    \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval time\_exec\_start;
-    \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval time\_exec\_end;
-    \textcolor{keyword}{static} \textcolor{keywordtype}{double} T\_task,t\_task,t\_task\_previous;
-    \textcolor{keyword}{static} \textcolor{keywordtype}{double} T\_task\_mean,T\_task\_min,T\_task\_max,T\_task\_exec;
-
-    gettimeofday(&time\_exec\_start, NULL);
-
-    \textcolor{comment}{// Time calculation}
-    \textcolor{keywordflow}{if}(\hyperlink{main2_8c_a60e039269ae4a130db1bdbc4a709c437}{flag\_task\_2\_firstexecution})
-    \{
-        gettimeofday(&timereset, NULL);
-        t\_task = 0.0;
-        T\_task\_mean = 0.0;
-        T\_task\_min = 0.0;
-        T\_task\_max = 0.0;
-        T\_task\_exec = 0.0;
-    \}
-
-    gettimeofday(&time, NULL);
-    t\_task = ((time.tv\_sec - timereset.tv\_sec) + (time.tv\_usec - timereset.
-      tv\_usec)*1e-6);
-    T\_task = t\_task - t\_task\_previous;
-    t\_task\_previous = t\_task;
-
-    \textcolor{keywordflow}{if}(\hyperlink{main2_8c_a60e039269ae4a130db1bdbc4a709c437}{flag\_task\_2\_firstexecution})
-    \{
-        T\_task\_mean = T\_task;
-        T\_task\_min  = 1e200;
-        T\_task\_max  = 0.0;
-    \}
-    \textcolor{keywordflow}{else}
-    \{
-        T\_task\_mean = 0.05*T\_task + 0.95*T\_task\_mean;
-        \textcolor{keywordflow}{if}(T\_task < T\_task\_min) T\_task\_min  = T\_task;
-        \textcolor{keywordflow}{if}(T\_task > T\_task\_max) T\_task\_max  = T\_task;
-    \}
-
-    \textcolor{comment}{// Run the thread}
-    status = \hyperlink{threads__linux_8c_ad535241b6b29d076beb2cd75a880aaea}{threads\_linux\_periodic\_task\_2}();
-
-    gettimeofday(&time\_exec\_end, NULL);
-    T\_task\_exec = ((time\_exec\_end.tv\_sec - time\_exec\_start.tv\_sec) + (
-      time\_exec\_end.tv\_usec - time\_exec\_start.tv\_usec)*1e-6);
-
-    \hyperlink{main2_8c_a08f794ff34d918d3d34d771e11e4aba3}{t\_task\_2\_global} = t\_task;
-    \hyperlink{main2_8c_af4e19d5a9b24aa56c8ebff6ad1aa2b95}{T\_task\_2\_mean\_global} = T\_task\_mean;
-    \hyperlink{main2_8c_ab7712cb13ce6206dd138a51e2053e36c}{T\_task\_2\_min\_global} = T\_task\_min;
-    \hyperlink{main2_8c_a1cd82006c46f46176730e876d272cc14}{T\_task\_2\_max\_global} = T\_task\_max;
-    \hyperlink{main2_8c_a9629c77cd3dba9d47d15c2e51bdde09d}{T\_task\_2\_exec\_global} = T\_task\_exec;
-
-    \hyperlink{main2_8c_a60e039269ae4a130db1bdbc4a709c437}{flag\_task\_2\_firstexecution} = 0;
-\}
+515 \{
+516     \textcolor{keywordtype}{int} \hyperlink{communication_2communication_8c_a6e27f49150e9a14580fb313cc2777e00}{status} = 0;
+517     \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval timereset;
+518     \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval time;
+519     \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval time\_exec\_start;
+520     \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval time\_exec\_end;
+521     \textcolor{keyword}{static} \textcolor{keywordtype}{double} T\_task,t\_task,t\_task\_previous;
+522     \textcolor{keyword}{static} \textcolor{keywordtype}{double} T\_task\_mean,T\_task\_min,T\_task\_max,T\_task\_exec;
+523 
+524     gettimeofday(&time\_exec\_start, NULL);
+525 
+526     \textcolor{comment}{// Time calculation}
+527     \textcolor{keywordflow}{if}(\hyperlink{main2_8c_a60e039269ae4a130db1bdbc4a709c437}{flag\_task\_2\_firstexecution})
+528     \{
+529         gettimeofday(&timereset, NULL);
+530         t\_task = 0.0;
+531         T\_task\_mean = 0.0;
+532         T\_task\_min = 0.0;
+533         T\_task\_max = 0.0;
+534         T\_task\_exec = 0.0;
+535     \}
+536 
+537     gettimeofday(&time, NULL);
+538     t\_task = ((time.tv\_sec - timereset.tv\_sec) + (time.tv\_usec - timereset.tv\_usec)*1e-6);
+539     T\_task = t\_task - t\_task\_previous;
+540     t\_task\_previous = t\_task;
+541 
+542     \textcolor{keywordflow}{if}(\hyperlink{main2_8c_a60e039269ae4a130db1bdbc4a709c437}{flag\_task\_2\_firstexecution})
+543     \{
+544         T\_task\_mean = T\_task;
+545         T\_task\_min  = 1e200;
+546         T\_task\_max  = 0.0;
+547     \}
+548     \textcolor{keywordflow}{else}
+549     \{
+550         T\_task\_mean = 0.05*T\_task + 0.95*T\_task\_mean;
+551         \textcolor{keywordflow}{if}(T\_task < T\_task\_min) T\_task\_min  = T\_task;
+552         \textcolor{keywordflow}{if}(T\_task > T\_task\_max) T\_task\_max  = T\_task;
+553     \}
+554 
+555     \textcolor{comment}{// Run the thread}
+556     status = \hyperlink{threads__linux_8c_ad535241b6b29d076beb2cd75a880aaea}{threads\_linux\_periodic\_task\_2}();
+557 
+558     gettimeofday(&time\_exec\_end, NULL);
+559     T\_task\_exec = ((time\_exec\_end.tv\_sec - time\_exec\_start.tv\_sec) + (time\_exec\_end.tv\_usec - 
+      time\_exec\_start.tv\_usec)*1e-6);
+560 
+561     \hyperlink{main2_8c_a08f794ff34d918d3d34d771e11e4aba3}{t\_task\_2\_global} = t\_task;
+562     \hyperlink{main2_8c_af4e19d5a9b24aa56c8ebff6ad1aa2b95}{T\_task\_2\_mean\_global} = T\_task\_mean;
+563     \hyperlink{main2_8c_ab7712cb13ce6206dd138a51e2053e36c}{T\_task\_2\_min\_global} = T\_task\_min;
+564     \hyperlink{main2_8c_a1cd82006c46f46176730e876d272cc14}{T\_task\_2\_max\_global} = T\_task\_max;
+565     \hyperlink{main2_8c_a9629c77cd3dba9d47d15c2e51bdde09d}{T\_task\_2\_exec\_global} = T\_task\_exec;
+566 
+567     \hyperlink{main2_8c_a60e039269ae4a130db1bdbc4a709c437}{flag\_task\_2\_firstexecution} = 0;
+568 \}
 \end{DoxyCode}
 
 
@@ -859,36 +849,35 @@ Referenced by threads\-\_\-linux\-\_\-init().
 
 
 \begin{DoxyCode}
-\{
-    \textcolor{keyword}{struct }itimerspec itimer;
-    \textcolor{keyword}{struct }sigevent sigev;
-    \textcolor{keywordtype}{int} errno = 0;
-
-    \hyperlink{main2_8c_a764ebf75ba887a9ecf7bf8fe124960e0}{flag\_task\_1\_firstexecution} = 1;
-
-    itimer.it\_interval.tv\_sec=0;
-    itimer.it\_interval.tv\_nsec=\hyperlink{main2_8c_afffc21b0b726e6f4a572d0eefd3b5d69}{task\_1\_period\_us} * 1000;
-    itimer.it\_value=itimer.it\_interval;
-
-    memset(&sigev, 0, \textcolor{keyword}{sizeof} (\textcolor{keyword}{struct} sigevent));
-    sigev.sigev\_value.sival\_int = 0;
-    sigev.sigev\_notify = SIGEV\_THREAD;
-    sigev.sigev\_notify\_attributes = NULL;
-    sigev.sigev\_notify\_function = \hyperlink{threads__linux_8c_a86f471cf8f5e7b5242fa6b68589335a9}{threads\_linux\_timer\_task\_1}
-      ;
-
-    \textcolor{keywordflow}{if} (timer\_create(CLOCK\_REALTIME, &sigev, &\hyperlink{main2_8c_a904a157c5d5f94416cd450f511635af1}{timer\_task\_1}) < 0)
-    \{
-        fprintf(stderr, \textcolor{stringliteral}{"[%d]: %s\(\backslash\)n"}, \_\_LINE\_\_, strerror(errno));
-        exit(errno);
-    \}
-
-    \textcolor{keywordflow}{if}(timer\_settime(\hyperlink{main2_8c_a904a157c5d5f94416cd450f511635af1}{timer\_task\_1}, 0, &itimer, NULL) < 0)
-    \{
-        fprintf(stderr, \textcolor{stringliteral}{"[%d]: %s\(\backslash\)n"}, \_\_LINE\_\_, strerror(errno));
-        exit(errno);
-    \}
-\}
+376 \{
+377     \textcolor{keyword}{struct }itimerspec itimer;
+378     \textcolor{keyword}{struct }sigevent sigev;
+379     \textcolor{keywordtype}{int} errno = 0;
+380 
+381     \hyperlink{main2_8c_a764ebf75ba887a9ecf7bf8fe124960e0}{flag\_task\_1\_firstexecution} = 1;
+382 
+383     itimer.it\_interval.tv\_sec=0;
+384     itimer.it\_interval.tv\_nsec=\hyperlink{main2_8c_afffc21b0b726e6f4a572d0eefd3b5d69}{task\_1\_period\_us} * 1000;
+385     itimer.it\_value=itimer.it\_interval;
+386 
+387     memset(&sigev, 0, \textcolor{keyword}{sizeof} (\textcolor{keyword}{struct} sigevent));
+388     sigev.sigev\_value.sival\_int = 0;
+389     sigev.sigev\_notify = SIGEV\_THREAD;
+390     sigev.sigev\_notify\_attributes = NULL;
+391     sigev.sigev\_notify\_function = \hyperlink{threads__linux_8c_a86f471cf8f5e7b5242fa6b68589335a9}{threads\_linux\_timer\_task\_1};
+392 
+393     \textcolor{keywordflow}{if} (timer\_create(CLOCK\_REALTIME, &sigev, &\hyperlink{main2_8c_a904a157c5d5f94416cd450f511635af1}{timer\_task\_1}) < 0)
+394     \{
+395         fprintf(stderr, \textcolor{stringliteral}{"[%d]: %s\(\backslash\)n"}, \_\_LINE\_\_, strerror(errno));
+396         exit(errno);
+397     \}
+398 
+399     \textcolor{keywordflow}{if}(timer\_settime(\hyperlink{main2_8c_a904a157c5d5f94416cd450f511635af1}{timer\_task\_1}, 0, &itimer, NULL) < 0)
+400     \{
+401         fprintf(stderr, \textcolor{stringliteral}{"[%d]: %s\(\backslash\)n"}, \_\_LINE\_\_, strerror(errno));
+402         exit(errno);
+403     \}
+404 \}
 \end{DoxyCode}
 
 
@@ -933,36 +922,35 @@ Referenced by threads\-\_\-linux\-\_\-init().
 
 
 \begin{DoxyCode}
-\{
-    \textcolor{keyword}{struct }itimerspec itimer;
-    \textcolor{keyword}{struct }sigevent sigev;
-    \textcolor{keywordtype}{int} errno = 0;
-
-    \hyperlink{main2_8c_a60e039269ae4a130db1bdbc4a709c437}{flag\_task\_2\_firstexecution} = 1;
-
-    itimer.it\_interval.tv\_sec=0;
-    itimer.it\_interval.tv\_nsec=\hyperlink{main2_8c_a5166d431d5448a1538e75f5469c19c7b}{task\_2\_period\_us} * 1000;
-    itimer.it\_value=itimer.it\_interval;
-
-    memset (&sigev, 0, \textcolor{keyword}{sizeof} (\textcolor{keyword}{struct} sigevent));
-    sigev.sigev\_value.sival\_int = 0;
-    sigev.sigev\_notify = SIGEV\_THREAD;
-    sigev.sigev\_notify\_attributes = NULL;
-    sigev.sigev\_notify\_function = \hyperlink{threads__linux_8c_aaff43cd760c084d80d045228b46fe784}{threads\_linux\_timer\_task\_2}
-      ;
-
-    \textcolor{keywordflow}{if}(timer\_create(CLOCK\_REALTIME, &sigev, &\hyperlink{main2_8c_adf6e8e22925f399f086dea8671f39c08}{timer\_task\_2}) < 0)
-    \{
-        fprintf(stderr, \textcolor{stringliteral}{"[%d]: %s\(\backslash\)n"}, \_\_LINE\_\_, strerror(errno));
-        exit(errno);
-    \}
-
-    \textcolor{keywordflow}{if}(timer\_settime(\hyperlink{main2_8c_adf6e8e22925f399f086dea8671f39c08}{timer\_task\_2}, 0, &itimer, NULL) < 0)
-    \{
-        fprintf(stderr, \textcolor{stringliteral}{"[%d]: %s\(\backslash\)n"}, \_\_LINE\_\_, strerror(errno));
-        exit(errno);
-    \}
-\}
+407 \{
+408     \textcolor{keyword}{struct }itimerspec itimer;
+409     \textcolor{keyword}{struct }sigevent sigev;
+410     \textcolor{keywordtype}{int} errno = 0;
+411 
+412     \hyperlink{main2_8c_a60e039269ae4a130db1bdbc4a709c437}{flag\_task\_2\_firstexecution} = 1;
+413 
+414     itimer.it\_interval.tv\_sec=0;
+415     itimer.it\_interval.tv\_nsec=\hyperlink{main2_8c_a5166d431d5448a1538e75f5469c19c7b}{task\_2\_period\_us} * 1000;
+416     itimer.it\_value=itimer.it\_interval;
+417 
+418     memset (&sigev, 0, \textcolor{keyword}{sizeof} (\textcolor{keyword}{struct} sigevent));
+419     sigev.sigev\_value.sival\_int = 0;
+420     sigev.sigev\_notify = SIGEV\_THREAD;
+421     sigev.sigev\_notify\_attributes = NULL;
+422     sigev.sigev\_notify\_function = \hyperlink{threads__linux_8c_aaff43cd760c084d80d045228b46fe784}{threads\_linux\_timer\_task\_2};
+423 
+424     \textcolor{keywordflow}{if}(timer\_create(CLOCK\_REALTIME, &sigev, &\hyperlink{main2_8c_adf6e8e22925f399f086dea8671f39c08}{timer\_task\_2}) < 0)
+425     \{
+426         fprintf(stderr, \textcolor{stringliteral}{"[%d]: %s\(\backslash\)n"}, \_\_LINE\_\_, strerror(errno));
+427         exit(errno);
+428     \}
+429 
+430     \textcolor{keywordflow}{if}(timer\_settime(\hyperlink{main2_8c_adf6e8e22925f399f086dea8671f39c08}{timer\_task\_2}, 0, &itimer, NULL) < 0)
+431     \{
+432         fprintf(stderr, \textcolor{stringliteral}{"[%d]: %s\(\backslash\)n"}, \_\_LINE\_\_, strerror(errno));
+433         exit(errno);
+434     \}
+435 \}
 \end{DoxyCode}
 
 
@@ -1008,14 +996,14 @@ Referenced by threads\-\_\-linux\-\_\-init().
 
 
 \begin{DoxyCode}
-\{
-    \textcolor{keywordtype}{int} errno = 0;
-    \textcolor{keywordflow}{if}(timer\_delete(\hyperlink{main2_8c_a904a157c5d5f94416cd450f511635af1}{timer\_task\_1}) < 0)
-    \{
-        fprintf(stderr, \textcolor{stringliteral}{"[%d]: %s\(\backslash\)n"}, \_\_LINE\_\_, strerror(errno));
-        exit(errno);
-    \}
-\}
+438 \{
+439     \textcolor{keywordtype}{int} errno = 0;
+440     \textcolor{keywordflow}{if}(timer\_delete(\hyperlink{main2_8c_a904a157c5d5f94416cd450f511635af1}{timer\_task\_1}) < 0)
+441     \{
+442         fprintf(stderr, \textcolor{stringliteral}{"[%d]: %s\(\backslash\)n"}, \_\_LINE\_\_, strerror(errno));
+443         exit(errno);
+444     \}
+445 \}
 \end{DoxyCode}
 
 
@@ -1049,14 +1037,14 @@ Referenced by threads\-\_\-linux\-\_\-init().
 
 
 \begin{DoxyCode}
-\{
-    \textcolor{keywordtype}{int} errno = 0;
-    \textcolor{keywordflow}{if}(timer\_delete(\hyperlink{main2_8c_adf6e8e22925f399f086dea8671f39c08}{timer\_task\_2}) < 0)
-    \{
-        fprintf(stderr, \textcolor{stringliteral}{"[%d]: %s\(\backslash\)n"}, \_\_LINE\_\_, strerror(errno));
-        exit(errno);
-    \}
-\}
+448 \{
+449     \textcolor{keywordtype}{int} errno = 0;
+450     \textcolor{keywordflow}{if}(timer\_delete(\hyperlink{main2_8c_adf6e8e22925f399f086dea8671f39c08}{timer\_task\_2}) < 0)
+451     \{
+452         fprintf(stderr, \textcolor{stringliteral}{"[%d]: %s\(\backslash\)n"}, \_\_LINE\_\_, strerror(errno));
+453         exit(errno);
+454     \}
+455 \}
 \end{DoxyCode}
 
 
@@ -1090,10 +1078,10 @@ Referenced by threads\-\_\-linux\-\_\-timer\-\_\-start\-\_\-task\-\_\-1().
 
 
 \begin{DoxyCode}
-\{
-    sigval.sival\_int = 0; \textcolor{comment}{// Remove warning}
-    \hyperlink{threads__linux_8c_ae03c8e3e8ea1514e4e7ca2005777e6f3}{threads\_linux\_timer\_function\_task\_1}();
-\}
+364 \{
+365     sigval.sival\_int = 0; \textcolor{comment}{// Remove warning}
+366     \hyperlink{threads__linux_8c_ae03c8e3e8ea1514e4e7ca2005777e6f3}{threads\_linux\_timer\_function\_task\_1}();
+367 \}
 \end{DoxyCode}
 
 
@@ -1138,10 +1126,10 @@ Referenced by threads\-\_\-linux\-\_\-timer\-\_\-start\-\_\-task\-\_\-1().
 
 
 \begin{DoxyCode}
-\{
-    sigval.sival\_int = 0; \textcolor{comment}{// Remove warning}
-    \hyperlink{threads__linux_8c_ae03c8e3e8ea1514e4e7ca2005777e6f3}{threads\_linux\_timer\_function\_task\_1}();
-\}
+364 \{
+365     sigval.sival\_int = 0; \textcolor{comment}{// Remove warning}
+366     \hyperlink{threads__linux_8c_ae03c8e3e8ea1514e4e7ca2005777e6f3}{threads\_linux\_timer\_function\_task\_1}();
+367 \}
 \end{DoxyCode}
 
 
@@ -1186,10 +1174,10 @@ Referenced by threads\-\_\-linux\-\_\-timer\-\_\-start\-\_\-task\-\_\-2().
 
 
 \begin{DoxyCode}
-\{
-    sigval.sival\_int = 0; \textcolor{comment}{// Remove warning}
-    \hyperlink{threads__linux_8c_aa65173deca09202aea0f4a81a166545b}{threads\_linux\_timer\_function\_task\_2}();
-\}
+370 \{
+371     sigval.sival\_int = 0; \textcolor{comment}{// Remove warning}
+372     \hyperlink{threads__linux_8c_aa65173deca09202aea0f4a81a166545b}{threads\_linux\_timer\_function\_task\_2}();
+373 \}
 \end{DoxyCode}
 
 
@@ -1235,10 +1223,10 @@ Referenced by threads\-\_\-linux\-\_\-timer\-\_\-start\-\_\-task\-\_\-2().
 
 
 \begin{DoxyCode}
-\{
-    sigval.sival\_int = 0; \textcolor{comment}{// Remove warning}
-    \hyperlink{threads__linux_8c_aa65173deca09202aea0f4a81a166545b}{threads\_linux\_timer\_function\_task\_2}();
-\}
+370 \{
+371     sigval.sival\_int = 0; \textcolor{comment}{// Remove warning}
+372     \hyperlink{threads__linux_8c_aa65173deca09202aea0f4a81a166545b}{threads\_linux\_timer\_function\_task\_2}();
+373 \}
 \end{DoxyCode}
 
 
@@ -1283,10 +1271,10 @@ Referenced by threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-1().
 
 
 \begin{DoxyCode}
-\{
-    \hyperlink{main2_8c_a86c2efd6da48b362806cdbb5b1e711d8}{t0} = \hyperlink{main2_8c_a2a2a647912528f7aa86812528dbfe02f}{t\_task\_1\_global};
-    \textcolor{keywordflow}{return} THREADS\_LINUX\_SUCCESS;
-\}
+571 \{
+572     \hyperlink{main2_8c_a86c2efd6da48b362806cdbb5b1e711d8}{t0} = \hyperlink{main2_8c_a2a2a647912528f7aa86812528dbfe02f}{t\_task\_1\_global};
+573     \textcolor{keywordflow}{return} THREADS\_LINUX\_SUCCESS;
+574 \}
 \end{DoxyCode}
 
 

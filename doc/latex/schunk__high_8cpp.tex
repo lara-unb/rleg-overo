@@ -128,461 +128,435 @@ References D\-Q\-\_\-free(), D\-Q\-\_\-get\-Pitch\-Angle(), D\-Q\-\_\-get\-T(), 
 
 
 \begin{DoxyCode}
-                                \{
-
-        std::vector<ros::Duration> diffs;
-
-        \textcolor{comment}{//ROS RELATED}
-        \textcolor{keywordtype}{int} ros\_pub\_buffer = 100;
-
-        \textcolor{comment}{//Init ROS}
-        ros::init(argc, argv, \textcolor{stringliteral}{"schunk\_high"});
-
-        \textcolor{comment}{//Return}
-        \textcolor{comment}{//ROS\_ERROR\_STREAM("SCHUNK\_HIGH IS NOT SAFELY WORKING YET"); return 0;}
-
-        ROS\_INFO\_STREAM(\textcolor{stringliteral}{"Initializing..."});
-
-        \textcolor{comment}{//Node handle}
-        ros::NodeHandle ros\_node;
-
-        \textcolor{comment}{//Publishers}
-        ros::Publisher ros\_pub = ros\_node.advertise<schunk\_msgs::PosVelAcc>(\textcolor{stringliteral}{"
-      schunk\_posvelacc\_control"}, ros\_pub\_buffer);
-        ros::Publisher ros\_velpub = ros\_node.advertise<schunk\_msgs::Velocities>
-      (\textcolor{stringliteral}{"schunk\_velocities\_control"}, ros\_pub\_buffer);
-
-        \textcolor{comment}{//Subscribers}
-        ros::ServiceClient ros\_client = ros\_node.serviceClient<
-      schunk\_low::ControlMode>(\textcolor{stringliteral}{"schunk\_set\_control\_mode"});
-        ros::ServiceClient schunk\_getPositions = ros\_node.serviceClient<
-      schunk\_low::GetPositions>(\textcolor{stringliteral}{"schunk\_get\_positions"}, \textcolor{keyword}{true});
-
-        \textcolor{comment}{//Set control mode to posVelAcc to we can place Schunk in the initial
-       position.}
-        schunk\_low::ControlMode ros\_controlMode;
-        ros\_controlMode.request.mode = 1;
-        \textcolor{keywordflow}{if} (!ros\_client.call(ros\_controlMode))
-        \{
-                ROS\_ERROR\_STREAM(\textcolor{stringliteral}{"Unable to change schunk\_low control mode."});
-                \textcolor{keywordflow}{return} 1;
-        \}
-        sleep(1);
-
-        \textcolor{comment}{//Set get positions Service Object}
-        schunk\_low::GetPositions ros\_getPositions;
-
-        \textcolor{comment}{//Set send msgs}
-        schunk\_msgs::PosVelAcc ros\_posDuration;
-        \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < 8; i++)\{
-                ros\_posDuration.positions.push\_back(0.0);
-                ros\_posDuration.velocities.push\_back(0.1);
-                ros\_posDuration.accelerations.push\_back(1.0);
-        \}
-        ros\_posDuration.velocities[0]=0.5;
-
-        ROS\_INFO\_STREAM(\textcolor{stringliteral}{"Done!"});
-        ROS\_INFO\_STREAM(\textcolor{stringliteral}{"Moving Schunk to Initial position."});
-
-        \textcolor{comment}{//Initial position for insertion}
-        \textcolor{keywordtype}{double} theta\_init[] = \{0.7,0.0,0,\hyperlink{schunk__high_8cpp_a2750dfdda752269a036f487a4a34b849}{PI2},0,\hyperlink{schunk__high_8cpp_a2750dfdda752269a036f487a4a34b849}{PI2},0\};
-
-        \textcolor{comment}{//Initialize and move schunk}
-        ros\_posDuration.positions[0]=theta\_init[0];
-        ros\_posDuration.positions[1]=theta\_init[1];
-        ros\_posDuration.positions[2]=theta\_init[2];
-        ros\_posDuration.positions[3]=theta\_init[3];
-        ros\_posDuration.positions[4]=theta\_init[4];
-        ros\_posDuration.positions[5]=theta\_init[5];
-        ros\_posDuration.positions[6]=theta\_init[6];
-        ros\_posDuration.positions[7]=0.0;
-
-        ros\_pub.publish(ros\_posDuration);
-        ros::spinOnce();
-        \textcolor{comment}{//Wait for schunk to reach its position}
-        sleep(16);\textcolor{comment}{//In seconds}
-
-        \textcolor{comment}{//Sees where schunk really is}
-        ROS\_INFO\_STREAM(\textcolor{stringliteral}{"Where is Schunk?"});
-        \textcolor{keywordflow}{if}(!schunk\_getPositions.call(ros\_getPositions))\{
-                ROS\_ERROR\_STREAM(\textcolor{stringliteral}{"Couldn't get schunk's positions, aborting"});
-                \textcolor{keywordflow}{return} 1;
-        \}
-        \textcolor{keywordflow}{else}\{
-                theta\_init[0] = ros\_getPositions.response.positions.positions[0
-      ];
-                theta\_init[1] = ros\_getPositions.response.positions.positions[1
-      ];
-                theta\_init[2] = ros\_getPositions.response.positions.positions[2
-      ];
-                theta\_init[3] = ros\_getPositions.response.positions.positions[3
-      ];
-                theta\_init[4] = ros\_getPositions.response.positions.positions[4
-      ];
-                theta\_init[5] = ros\_getPositions.response.positions.positions[5
-      ];
-                theta\_init[6] = ros\_getPositions.response.positions.positions[6
-      ];
-        \}
-
-        ROS\_INFO\_STREAM(\textcolor{stringliteral}{"Schunk found!"});
-
-        \textcolor{comment}{//Change mode to VELOCITY}
-        ROS\_INFO\_STREAM(\textcolor{stringliteral}{"Changing mode to velocity to begin control!"});
-        ros\_controlMode.request.mode = 0;
-        \textcolor{keywordflow}{if} (!ros\_client.call(ros\_controlMode))
-        \{
-                ROS\_ERROR\_STREAM(\textcolor{stringliteral}{"Unable to change schunk\_low control mode to
-       velocity."});
-                \textcolor{keywordflow}{return} 1;
-        \}
-
-        ROS\_INFO\_STREAM(\textcolor{stringliteral}{"Done!"});
-
-        \textcolor{comment}{//Set velocity msgs}
-        schunk\_msgs::Velocities ros\_velocities;
-        \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < 8; i++)\{
-                ros\_velocities.velocities.push\_back(0.0);
-        \}
-
-        \textcolor{keywordtype}{double} vz\_ref = -0.02;
-
-
-        \textcolor{keywordtype}{double} L = 0.1;
-        \textcolor{keywordtype}{double} T = 0.01;
-
-        \textcolor{keywordtype}{double} Kpv[] = \{2,2,2,0.1\};
-        \textcolor{keywordtype}{double} Kiv[] = \{2,20,20,20\};
-        \textcolor{keywordtype}{double} Kdv[] = \{0,0,0,0\};
-
-        \textcolor{comment}{//ROS RATE}
-        ros::Rate ros\_rate(1/T);
-
-        \textcolor{comment}{/******************************}
-\textcolor{comment}{        PRIVATE VARIABLE DECLARATION}
-\textcolor{comment}{        *******************************/}
-        \textcolor{keywordtype}{int} i = 0;
-        \hyperlink{structRobot}{Robot}* r = NULL;
-        \hyperlink{structGMATRIX}{PGMATRIX} GJ = NULL;     
-        \hyperlink{structGMATRIX}{PGMATRIX} OJP = NULL;    
-        \hyperlink{structGMATRIX}{PGMATRIX} SJ = NULL;     
-
-        \hyperlink{structGMATRIX}{PGMATRIX} Kp = NULL;
-        \hyperlink{structGMATRIX}{PGMATRIX} Ki = NULL;
-        \hyperlink{structGMATRIX}{PGMATRIX} Kd = NULL;
-        \hyperlink{structGMATRIX}{PGMATRIX} Thetas = NULL;
-        \hyperlink{structGMATRIX}{PGMATRIX} DThetas = NULL;
-        \hyperlink{structGMATRIX}{PGMATRIX} D\_ref = NULL;
-        \hyperlink{structGMATRIX}{PGMATRIX} Vz = NULL;
-        \textcolor{keywordtype}{double} vz = 0;
-        \textcolor{comment}{//Measured Values}
-        \hyperlink{structGMATRIX}{PGMATRIX} D = NULL;
-        \textcolor{keywordtype}{double} pitchAngle = 0; \textcolor{comment}{//Angle Pitch.}
-        \textcolor{keywordtype}{double} dist = 0;
-        \hyperlink{structDQ}{DQ}* efp = NULL;       \textcolor{comment}{//End Effector's pose.}
-        \hyperlink{structQ}{Q}* eft = NULL;      \textcolor{comment}{//End Effector's translation.}
-        \textcolor{comment}{//Insertion Lengths}
-        \textcolor{keywordtype}{double} l = 0;
-        \textcolor{comment}{//Errors}
-        \hyperlink{structGMATRIX}{PGMATRIX} Err = NULL;
-        \hyperlink{structGMATRIX}{PGMATRIX} Err\_ant = NULL;
-        \hyperlink{structGMATRIX}{PGMATRIX} Err\_int = NULL;
-        \textcolor{comment}{//Aux}
-        \hyperlink{structGMATRIX}{PGMATRIX} aux1 = NULL;
-        \hyperlink{structGMATRIX}{PGMATRIX} aux2 = NULL;
-        \hyperlink{structGMATRIX}{PGMATRIX} aux3 = NULL;
-
-        \textcolor{comment}{/******************************}
-\textcolor{comment}{        PRIVATE VARIABLE INITIALIZATION}
-\textcolor{comment}{        *******************************/}
-
-        \textcolor{comment}{//PID Errors Initialize.}
-        Kp = \hyperlink{gmatrix__plus_8h_a22f3571af4a9f493e44fcd3184a2f3f0}{PGMATRIX\_CREATE\_DIAG\_FROM\_ARRAY}(4,
-      Kpv);
-        Ki = \hyperlink{gmatrix__plus_8h_a22f3571af4a9f493e44fcd3184a2f3f0}{PGMATRIX\_CREATE\_DIAG\_FROM\_ARRAY}(4,
-      Kiv);
-        Kd = \hyperlink{gmatrix__plus_8h_a22f3571af4a9f493e44fcd3184a2f3f0}{PGMATRIX\_CREATE\_DIAG\_FROM\_ARRAY}(4,
-      Kdv);
-
-        \textcolor{comment}{//Robot initialize.}
-        r = \hyperlink{robot_8h_a5f12182c82371c83a3e31f88b61633ea}{Robot\_create}();
-        \hyperlink{schunk__high_8cpp_a7a7d0840a561060c393d377d5cb61f55}{Main\_robot\_init}(r);
-
-        \textcolor{comment}{//Thetas}
-        Thetas =  \hyperlink{gmatrix__plus_8h_aa5949db3f7d590bbe912a05b5a9055ed}{PGMATRIX\_CREATE\_FROM\_ARRAY}(7,1,
-      theta\_init);
-        DThetas = \hyperlink{gmatrix__plus_8h_a6cacc3f1b48d458d5cfc9e03159e3d81}{PGMATRIX\_CREATE\_ZEROES}(7,1);
-
-        \textcolor{comment}{//Initialize Error Matrices.}
-        Err =     \hyperlink{gmatrix__plus_8h_a6cacc3f1b48d458d5cfc9e03159e3d81}{PGMATRIX\_CREATE\_ZEROES}(4,1);
-        Err\_ant = \hyperlink{gmatrix__plus_8h_a6cacc3f1b48d458d5cfc9e03159e3d81}{PGMATRIX\_CREATE\_ZEROES}(4,1);
-        Err\_int = \hyperlink{gmatrix__plus_8h_a6cacc3f1b48d458d5cfc9e03159e3d81}{PGMATRIX\_CREATE\_ZEROES}(4,1);
-
-        \textcolor{comment}{//Update Robot}
-        \hyperlink{robot_8h_aa1d3aca5132bd5f347f5966d38fbb966}{Robot\_updateLinksThetasByMatrix}(r,Thetas
-      );
-
-        \textcolor{comment}{//Update End Effector Data}
-        efp = \hyperlink{robot_8h_a57cc252fbb9e4c8be955b6af755b0c2c}{Robot\_FKM}(r);
-        pitchAngle = \hyperlink{dualquaternion_8h_a30322537a067df9c54aa58cb37acb80e}{DQ\_getPitchAngle}(efp);
-        eft = \hyperlink{dualquaternion_8h_a80e2f2aded851388d4f18d486a0b9455}{DQ\_getT}(efp);
-
-        \textcolor{comment}{//Define reference.}
-        D\_ref = \hyperlink{gmatrix_8h_adf8dc9cfae5700de80c88604082ffa10}{PGMATRIX\_ALLOC}(4,1);
-
-                \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(D\_ref,1,1) = pitchAngle;
-                \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(D\_ref,2,1) = eft->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1];
-                    \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(D\_ref,3,1) = eft->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2];
-                        \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(D\_ref,4,1) = vz\_ref;
-
-        \textcolor{comment}{//Measured Differences initialization.}
-        D =     \hyperlink{gmatrix_8h_adf8dc9cfae5700de80c88604082ffa10}{PGMATRIX\_ALLOC}(4,1);
-
-                \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(D,1,1) = pitchAngle;
-                \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(D,2,1) = eft->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1];
-                    \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(D,3,1) = eft->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2];
-                        \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(D,4,1) = 0;
-
-        \textcolor{comment}{//Jacobians}
-        OJP = \hyperlink{robot_8h_ae6858f6a120e4ce01df49d39cef2c164}{Robot\_getOJacobianAngleP}(r);
-        GJ  = \hyperlink{robot_8h_a61464c237c56f3db3f79b0350df80ddb}{Robot\_getGJacobian}(r);
-
-        \textcolor{comment}{//Updates System Jacobian.}
-        SJ = \hyperlink{gmatrix__plus_8h_a6cacc3f1b48d458d5cfc9e03159e3d81}{PGMATRIX\_CREATE\_ZEROES}(4,7);
-        \hyperlink{gmatrix_8h_a60f822f8426a81ffd3a8e5748295f621}{PGMATRIX\_COPY\_ROW}(SJ, 1, OJP, 1);
-        \hyperlink{gmatrix_8h_a60f822f8426a81ffd3a8e5748295f621}{PGMATRIX\_COPY\_ROW}(SJ, 2, GJ,  1);
-        \hyperlink{gmatrix_8h_a60f822f8426a81ffd3a8e5748295f621}{PGMATRIX\_COPY\_ROW}(SJ, 3, GJ,  2);
-        \hyperlink{gmatrix_8h_a60f822f8426a81ffd3a8e5748295f621}{PGMATRIX\_COPY\_ROW}(SJ, 4, GJ,  3);
-
-
-        \textcolor{comment}{/******************************}
-\textcolor{comment}{                        SIMULATION LOOP}
-\textcolor{comment}{        *******************************/}
-
-        ROS\_INFO\_STREAM(\textcolor{stringliteral}{"Initial State Data:"});
-        printf(\textcolor{stringliteral}{"\(\backslash\)nReference."});
-        \hyperlink{gmatrix_8h_acd7de7b8779844d2071240783e186000}{PGMATRIX\_PRINT}(D\_ref);
-        printf(\textcolor{stringliteral}{"\(\backslash\)nInitial System Jacobian."});
-        \hyperlink{gmatrix_8h_acd7de7b8779844d2071240783e186000}{PGMATRIX\_PRINT}(SJ);
-        printf(\textcolor{stringliteral}{"\(\backslash\)nInitial System Thetas."});
-        \hyperlink{gmatrix_8h_acd7de7b8779844d2071240783e186000}{PGMATRIX\_PRINT}(Thetas);
-
-        ROS\_INFO\_STREAM(\textcolor{stringliteral}{"Simulating."});
-
-        \textcolor{keywordflow}{while}(l < L && i < 100)\{
-\textcolor{comment}{//              printf(".");}
-
-                \textcolor{comment}{//Last Error}
-                \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(Err\_ant);
-                Err\_ant = Err;
-                \textcolor{comment}{//Current Error}
-                Err =     \hyperlink{gmatrix__plus_8h_a146d9062e4325cc3b97990ae51b96d95}{PGMATRIX\_SUBTRACT\_COPY\_FREE}
-      (D\_ref,D,\hyperlink{schunk__high_8cpp_aa93f0eb578d23995850d61f7d61c55c1}{FALSE},\hyperlink{schunk__high_8cpp_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
-                \textcolor{comment}{//Error Integral}
-                aux1 =    \hyperlink{gmatrix__plus_8h_a371a0bfffdb84cf1596ca60bbf7fce93}{PGMATRIX\_MULTIPLY\_CONST\_COPY\_FREE}
-      (Err,T,\hyperlink{schunk__high_8cpp_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
-                Err\_int = \hyperlink{gmatrix__plus_8h_aa1123306aa55d942955e09156db757a3}{PGMATRIX\_ADD\_COPY\_FREE}(Err\_int,
-      aux1,\hyperlink{schunk__high_8cpp_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE},\hyperlink{schunk__high_8cpp_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
-
-                \textcolor{comment}{//Derivative    aux1 = Kd*(Err-Err\_ant)*(1/T)}
-                aux1 = \hyperlink{gmatrix__plus_8h_a146d9062e4325cc3b97990ae51b96d95}{PGMATRIX\_SUBTRACT\_COPY\_FREE}(
-      Err,Err\_ant,\hyperlink{schunk__high_8cpp_aa93f0eb578d23995850d61f7d61c55c1}{FALSE},\hyperlink{schunk__high_8cpp_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
-                aux1 = \hyperlink{gmatrix__plus_8h_a17b482a0aaa68d1f4c1c30a1a72dacbb}{PGMATRIX\_MULTIPLY\_COPY\_FREE}(
-      Kd,aux1,\hyperlink{schunk__high_8cpp_aa93f0eb578d23995850d61f7d61c55c1}{FALSE},\hyperlink{schunk__high_8cpp_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
-                aux1 = \hyperlink{gmatrix__plus_8h_a371a0bfffdb84cf1596ca60bbf7fce93}{PGMATRIX\_MULTIPLY\_CONST\_COPY\_FREE}
-      (aux1,(1/T),\hyperlink{schunk__high_8cpp_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
-                \textcolor{comment}{//Integral      aux2 = Ki*(Err\_int)}
-                aux2 = \hyperlink{gmatrix__plus_8h_a17b482a0aaa68d1f4c1c30a1a72dacbb}{PGMATRIX\_MULTIPLY\_COPY\_FREE}(
-      Ki,Err\_int,\hyperlink{schunk__high_8cpp_aa93f0eb578d23995850d61f7d61c55c1}{FALSE},\hyperlink{schunk__high_8cpp_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
-                \textcolor{comment}{//Proporcional  aux3 = Kp*(Err)}
-                aux3 = \hyperlink{gmatrix__plus_8h_a17b482a0aaa68d1f4c1c30a1a72dacbb}{PGMATRIX\_MULTIPLY\_COPY\_FREE}(
-      Kp,Err,\hyperlink{schunk__high_8cpp_aa93f0eb578d23995850d61f7d61c55c1}{FALSE},\hyperlink{schunk__high_8cpp_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
-
-                \textcolor{comment}{//Error Sum     aux1 = Kd*(Err-Err\_ant)*(1/T) + Ki*(Err\_int) +
-       Kp*(Err)}
-                aux1 = \hyperlink{gmatrix__plus_8h_aa1123306aa55d942955e09156db757a3}{PGMATRIX\_ADD\_COPY\_FREE}(aux1,aux2,
+44                                 \{
+45 
+46         std::vector<ros::Duration> diffs;
+47 
+48         \textcolor{comment}{//ROS RELATED}
+49         \textcolor{keywordtype}{int} ros\_pub\_buffer = 100;
+50 
+51         \textcolor{comment}{//Init ROS}
+52         ros::init(argc, argv, \textcolor{stringliteral}{"schunk\_high"});
+53 
+54         \textcolor{comment}{//Return}
+55         \textcolor{comment}{//ROS\_ERROR\_STREAM("SCHUNK\_HIGH IS NOT SAFELY WORKING YET"); return 0;}
+56 
+57         ROS\_INFO\_STREAM(\textcolor{stringliteral}{"Initializing..."});
+58 
+59         \textcolor{comment}{//Node handle}
+60         ros::NodeHandle ros\_node;
+61 
+62         \textcolor{comment}{//Publishers}
+63         ros::Publisher ros\_pub = ros\_node.advertise<schunk\_msgs::PosVelAcc>(\textcolor{stringliteral}{"schunk\_posvelacc\_control"}, 
+      ros\_pub\_buffer);
+64         ros::Publisher ros\_velpub = ros\_node.advertise<schunk\_msgs::Velocities>(\textcolor{stringliteral}{"schunk\_velocities\_control"}
+      , ros\_pub\_buffer);
+65 
+66         \textcolor{comment}{//Subscribers}
+67         ros::ServiceClient ros\_client = ros\_node.serviceClient<schunk\_low::ControlMode>(\textcolor{stringliteral}{"
+      schunk\_set\_control\_mode"});
+68         ros::ServiceClient schunk\_getPositions = ros\_node.serviceClient<schunk\_low::GetPositions>(\textcolor{stringliteral}{"
+      schunk\_get\_positions"}, \textcolor{keyword}{true});
+69 
+70         \textcolor{comment}{//Set control mode to posVelAcc to we can place Schunk in the initial position.}
+71         schunk\_low::ControlMode ros\_controlMode;
+72         ros\_controlMode.request.mode = 1;
+73         \textcolor{keywordflow}{if} (!ros\_client.call(ros\_controlMode))
+74         \{
+75                 ROS\_ERROR\_STREAM(\textcolor{stringliteral}{"Unable to change schunk\_low control mode."});
+76                 \textcolor{keywordflow}{return} 1;
+77         \}
+78         sleep(1);
+79 
+80         \textcolor{comment}{//Set get positions Service Object}
+81         schunk\_low::GetPositions ros\_getPositions;
+82 
+83         \textcolor{comment}{//Set send msgs}
+84         schunk\_msgs::PosVelAcc ros\_posDuration;
+85         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < 8; i++)\{
+86                 ros\_posDuration.positions.push\_back(0.0);
+87                 ros\_posDuration.velocities.push\_back(0.1);
+88                 ros\_posDuration.accelerations.push\_back(1.0);
+89         \}
+90         ros\_posDuration.velocities[0]=0.5;
+91 
+92         ROS\_INFO\_STREAM(\textcolor{stringliteral}{"Done!"});
+93         ROS\_INFO\_STREAM(\textcolor{stringliteral}{"Moving Schunk to Initial position."});
+94 
+95         \textcolor{comment}{//Initial position for insertion}
+96         \textcolor{keywordtype}{double} theta\_init[] = \{0.7,0.0,0,\hyperlink{schunk__high_8cpp_a2750dfdda752269a036f487a4a34b849}{PI2},0,\hyperlink{schunk__high_8cpp_a2750dfdda752269a036f487a4a34b849}{PI2},0\};
+97 
+98         \textcolor{comment}{//Initialize and move schunk}
+99         ros\_posDuration.positions[0]=theta\_init[0];
+100         ros\_posDuration.positions[1]=theta\_init[1];
+101         ros\_posDuration.positions[2]=theta\_init[2];
+102         ros\_posDuration.positions[3]=theta\_init[3];
+103         ros\_posDuration.positions[4]=theta\_init[4];
+104         ros\_posDuration.positions[5]=theta\_init[5];
+105         ros\_posDuration.positions[6]=theta\_init[6];
+106         ros\_posDuration.positions[7]=0.0;
+107 
+108         ros\_pub.publish(ros\_posDuration);
+109         ros::spinOnce();
+110         \textcolor{comment}{//Wait for schunk to reach its position}
+111         sleep(16);\textcolor{comment}{//In seconds}
+112 
+113         \textcolor{comment}{//Sees where schunk really is}
+114         ROS\_INFO\_STREAM(\textcolor{stringliteral}{"Where is Schunk?"});
+115         \textcolor{keywordflow}{if}(!schunk\_getPositions.call(ros\_getPositions))\{
+116                 ROS\_ERROR\_STREAM(\textcolor{stringliteral}{"Couldn't get schunk's positions, aborting"});
+117                 \textcolor{keywordflow}{return} 1;
+118         \}
+119         \textcolor{keywordflow}{else}\{
+120                 theta\_init[0] = ros\_getPositions.response.positions.positions[0];
+121                 theta\_init[1] = ros\_getPositions.response.positions.positions[1];
+122                 theta\_init[2] = ros\_getPositions.response.positions.positions[2];
+123                 theta\_init[3] = ros\_getPositions.response.positions.positions[3];
+124                 theta\_init[4] = ros\_getPositions.response.positions.positions[4];
+125                 theta\_init[5] = ros\_getPositions.response.positions.positions[5];
+126                 theta\_init[6] = ros\_getPositions.response.positions.positions[6];
+127         \}
+128 
+129         ROS\_INFO\_STREAM(\textcolor{stringliteral}{"Schunk found!"});
+130 
+131         \textcolor{comment}{//Change mode to VELOCITY}
+132         ROS\_INFO\_STREAM(\textcolor{stringliteral}{"Changing mode to velocity to begin control!"});
+133         ros\_controlMode.request.mode = 0;
+134         \textcolor{keywordflow}{if} (!ros\_client.call(ros\_controlMode))
+135         \{
+136                 ROS\_ERROR\_STREAM(\textcolor{stringliteral}{"Unable to change schunk\_low control mode to velocity."});
+137                 \textcolor{keywordflow}{return} 1;
+138         \}
+139 
+140         ROS\_INFO\_STREAM(\textcolor{stringliteral}{"Done!"});
+141 
+142         \textcolor{comment}{//Set velocity msgs}
+143         schunk\_msgs::Velocities ros\_velocities;
+144         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < 8; i++)\{
+145                 ros\_velocities.velocities.push\_back(0.0);
+146         \}
+147 
+148         \textcolor{keywordtype}{double} vz\_ref = -0.02;
+149 
+150 
+151         \textcolor{keywordtype}{double} L = 0.1;
+152         \textcolor{keywordtype}{double} T = 0.01;
+153 
+154         \textcolor{keywordtype}{double} Kpv[] = \{2,2,2,0.1\};
+155         \textcolor{keywordtype}{double} Kiv[] = \{2,20,20,20\};
+156         \textcolor{keywordtype}{double} Kdv[] = \{0,0,0,0\};
+157 
+158         \textcolor{comment}{//ROS RATE}
+159         ros::Rate ros\_rate(1/T);
+160 
+161         \textcolor{comment}{/******************************}
+162 \textcolor{comment}{        PRIVATE VARIABLE DECLARATION}
+163 \textcolor{comment}{        *******************************/}
+164         \textcolor{keywordtype}{int} i = 0;
+166         \hyperlink{structRobot}{Robot}* r = NULL;
+168         \hyperlink{structGMATRIX}{PGMATRIX} GJ = NULL;     
+169         \hyperlink{structGMATRIX}{PGMATRIX} OJP = NULL;    
+170         \hyperlink{structGMATRIX}{PGMATRIX} SJ = NULL;     
+171 
+172         \hyperlink{structGMATRIX}{PGMATRIX} Kp = NULL;
+173         \hyperlink{structGMATRIX}{PGMATRIX} Ki = NULL;
+174         \hyperlink{structGMATRIX}{PGMATRIX} Kd = NULL;
+176         \hyperlink{structGMATRIX}{PGMATRIX} Thetas = NULL;
+177         \hyperlink{structGMATRIX}{PGMATRIX} DThetas = NULL;
+179         \hyperlink{structGMATRIX}{PGMATRIX} D\_ref = NULL;
+180         \hyperlink{structGMATRIX}{PGMATRIX} Vz = NULL;
+181         \textcolor{keywordtype}{double} vz = 0;
+182         \textcolor{comment}{//Measured Values}
+183         \hyperlink{structGMATRIX}{PGMATRIX} D = NULL;
+184         \textcolor{keywordtype}{double} pitchAngle = 0; \textcolor{comment}{//Angle Pitch.}
+185         \textcolor{keywordtype}{double} dist = 0;
+187         \hyperlink{structDQ}{DQ}* efp = NULL;       \textcolor{comment}{//End Effector's pose.}
+188         \hyperlink{structQ}{Q}* eft = NULL;      \textcolor{comment}{//End Effector's translation.}
+189         \textcolor{comment}{//Insertion Lengths}
+190         \textcolor{keywordtype}{double} l = 0;
+191         \textcolor{comment}{//Errors}
+192         \hyperlink{structGMATRIX}{PGMATRIX} Err = NULL;
+193         \hyperlink{structGMATRIX}{PGMATRIX} Err\_ant = NULL;
+194         \hyperlink{structGMATRIX}{PGMATRIX} Err\_int = NULL;
+195         \textcolor{comment}{//Aux}
+196         \hyperlink{structGMATRIX}{PGMATRIX} aux1 = NULL;
+197         \hyperlink{structGMATRIX}{PGMATRIX} aux2 = NULL;
+198         \hyperlink{structGMATRIX}{PGMATRIX} aux3 = NULL;
+199 
+200         \textcolor{comment}{/******************************}
+201 \textcolor{comment}{        PRIVATE VARIABLE INITIALIZATION}
+202 \textcolor{comment}{        *******************************/}
+203 
+204         \textcolor{comment}{//PID Errors Initialize.}
+205         Kp = \hyperlink{gmatrix__plus_8h_a22f3571af4a9f493e44fcd3184a2f3f0}{PGMATRIX\_CREATE\_DIAG\_FROM\_ARRAY}(4,Kpv);
+206         Ki = \hyperlink{gmatrix__plus_8h_a22f3571af4a9f493e44fcd3184a2f3f0}{PGMATRIX\_CREATE\_DIAG\_FROM\_ARRAY}(4,Kiv);
+207         Kd = \hyperlink{gmatrix__plus_8h_a22f3571af4a9f493e44fcd3184a2f3f0}{PGMATRIX\_CREATE\_DIAG\_FROM\_ARRAY}(4,Kdv);
+208 
+209         \textcolor{comment}{//Robot initialize.}
+210         r = \hyperlink{robot_8h_a5f12182c82371c83a3e31f88b61633ea}{Robot\_create}();
+212         \hyperlink{schunk__high_8cpp_a7a7d0840a561060c393d377d5cb61f55}{Main\_robot\_init}(r);
+213 
+214         \textcolor{comment}{//Thetas}
+215         Thetas =  \hyperlink{gmatrix__plus_8h_aa5949db3f7d590bbe912a05b5a9055ed}{PGMATRIX\_CREATE\_FROM\_ARRAY}(7,1,theta\_init);
+216         DThetas = \hyperlink{gmatrix__plus_8h_a6cacc3f1b48d458d5cfc9e03159e3d81}{PGMATRIX\_CREATE\_ZEROES}(7,1);
+217 
+218         \textcolor{comment}{//Initialize Error Matrices.}
+219         Err =     \hyperlink{gmatrix__plus_8h_a6cacc3f1b48d458d5cfc9e03159e3d81}{PGMATRIX\_CREATE\_ZEROES}(4,1);
+220         Err\_ant = \hyperlink{gmatrix__plus_8h_a6cacc3f1b48d458d5cfc9e03159e3d81}{PGMATRIX\_CREATE\_ZEROES}(4,1);
+221         Err\_int = \hyperlink{gmatrix__plus_8h_a6cacc3f1b48d458d5cfc9e03159e3d81}{PGMATRIX\_CREATE\_ZEROES}(4,1);
+222 
+223         \textcolor{comment}{//Update Robot}
+224         \hyperlink{robot_8h_aa1d3aca5132bd5f347f5966d38fbb966}{Robot\_updateLinksThetasByMatrix}(r,Thetas);
+225 
+226         \textcolor{comment}{//Update End Effector Data}
+227         efp = \hyperlink{robot_8h_a57cc252fbb9e4c8be955b6af755b0c2c}{Robot\_FKM}(r);
+228         pitchAngle = \hyperlink{dualquaternion_8h_a30322537a067df9c54aa58cb37acb80e}{DQ\_getPitchAngle}(efp);
+229         eft = \hyperlink{dualquaternion_8h_a80e2f2aded851388d4f18d486a0b9455}{DQ\_getT}(efp);
+230 
+231         \textcolor{comment}{//Define reference.}
+232         D\_ref = \hyperlink{gmatrix_8h_adf8dc9cfae5700de80c88604082ffa10}{PGMATRIX\_ALLOC}(4,1);
+233 
+234                 \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(D\_ref,1,1) = pitchAngle;
+235                 \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(D\_ref,2,1) = eft->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1];
+236                     \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(D\_ref,3,1) = eft->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2];
+237                         \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(D\_ref,4,1) = vz\_ref;
+238 
+239         \textcolor{comment}{//Measured Differences initialization.}
+240         D =     \hyperlink{gmatrix_8h_adf8dc9cfae5700de80c88604082ffa10}{PGMATRIX\_ALLOC}(4,1);
+241 
+242                 \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(D,1,1) = pitchAngle;
+243                 \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(D,2,1) = eft->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1];
+244                     \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(D,3,1) = eft->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2];
+245                         \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(D,4,1) = 0;
+246 
+247         \textcolor{comment}{//Jacobians}
+248         OJP = \hyperlink{robot_8h_ae6858f6a120e4ce01df49d39cef2c164}{Robot\_getOJacobianAngleP}(r);
+249         GJ  = \hyperlink{robot_8h_a61464c237c56f3db3f79b0350df80ddb}{Robot\_getGJacobian}(r);
+250 
+251         \textcolor{comment}{//Updates System Jacobian.}
+252         SJ = \hyperlink{gmatrix__plus_8h_a6cacc3f1b48d458d5cfc9e03159e3d81}{PGMATRIX\_CREATE\_ZEROES}(4,7);
+253         \hyperlink{gmatrix_8h_a60f822f8426a81ffd3a8e5748295f621}{PGMATRIX\_COPY\_ROW}(SJ, 1, OJP, 1);
+254         \hyperlink{gmatrix_8h_a60f822f8426a81ffd3a8e5748295f621}{PGMATRIX\_COPY\_ROW}(SJ, 2, GJ,  1);
+255         \hyperlink{gmatrix_8h_a60f822f8426a81ffd3a8e5748295f621}{PGMATRIX\_COPY\_ROW}(SJ, 3, GJ,  2);
+256         \hyperlink{gmatrix_8h_a60f822f8426a81ffd3a8e5748295f621}{PGMATRIX\_COPY\_ROW}(SJ, 4, GJ,  3);
+257 
+258 
+259         \textcolor{comment}{/******************************}
+260 \textcolor{comment}{                        SIMULATION LOOP}
+261 \textcolor{comment}{        *******************************/}
+262 
+263         ROS\_INFO\_STREAM(\textcolor{stringliteral}{"Initial State Data:"});
+264         printf(\textcolor{stringliteral}{"\(\backslash\)nReference."});
+265         \hyperlink{gmatrix_8h_acd7de7b8779844d2071240783e186000}{PGMATRIX\_PRINT}(D\_ref);
+266         printf(\textcolor{stringliteral}{"\(\backslash\)nInitial System Jacobian."});
+267         \hyperlink{gmatrix_8h_acd7de7b8779844d2071240783e186000}{PGMATRIX\_PRINT}(SJ);
+268         printf(\textcolor{stringliteral}{"\(\backslash\)nInitial System Thetas."});
+269         \hyperlink{gmatrix_8h_acd7de7b8779844d2071240783e186000}{PGMATRIX\_PRINT}(Thetas);
+270 
+271         ROS\_INFO\_STREAM(\textcolor{stringliteral}{"Simulating."});
+272 
+273         \textcolor{keywordflow}{while}(l < L && i < 100)\{
+274 \textcolor{comment}{//              printf(".");}
+275 
+276                 \textcolor{comment}{//Last Error}
+277                 \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(Err\_ant);
+278                 Err\_ant = Err;
+279                 \textcolor{comment}{//Current Error}
+280                 Err =     \hyperlink{gmatrix__plus_8h_a146d9062e4325cc3b97990ae51b96d95}{PGMATRIX\_SUBTRACT\_COPY\_FREE}(D\_ref,D,
+      \hyperlink{schunk__high_8cpp_aa93f0eb578d23995850d61f7d61c55c1}{FALSE},\hyperlink{schunk__high_8cpp_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+281                 \textcolor{comment}{//Error Integral}
+282                 aux1 =    \hyperlink{gmatrix__plus_8h_a371a0bfffdb84cf1596ca60bbf7fce93}{PGMATRIX\_MULTIPLY\_CONST\_COPY\_FREE}(Err,T,
+      \hyperlink{schunk__high_8cpp_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+283                 Err\_int = \hyperlink{gmatrix__plus_8h_aa1123306aa55d942955e09156db757a3}{PGMATRIX\_ADD\_COPY\_FREE}(Err\_int,aux1,
       \hyperlink{schunk__high_8cpp_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE},\hyperlink{schunk__high_8cpp_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
-                aux1 = \hyperlink{gmatrix__plus_8h_aa1123306aa55d942955e09156db757a3}{PGMATRIX\_ADD\_COPY\_FREE}(aux1,aux3,
+284 
+285                 \textcolor{comment}{//Derivative    aux1 = Kd*(Err-Err\_ant)*(1/T)}
+286                 aux1 = \hyperlink{gmatrix__plus_8h_a146d9062e4325cc3b97990ae51b96d95}{PGMATRIX\_SUBTRACT\_COPY\_FREE}(Err,Err\_ant,
+      \hyperlink{schunk__high_8cpp_aa93f0eb578d23995850d61f7d61c55c1}{FALSE},\hyperlink{schunk__high_8cpp_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+287                 aux1 = \hyperlink{gmatrix__plus_8h_a17b482a0aaa68d1f4c1c30a1a72dacbb}{PGMATRIX\_MULTIPLY\_COPY\_FREE}(Kd,aux1,
+      \hyperlink{schunk__high_8cpp_aa93f0eb578d23995850d61f7d61c55c1}{FALSE},\hyperlink{schunk__high_8cpp_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+288                 aux1 = \hyperlink{gmatrix__plus_8h_a371a0bfffdb84cf1596ca60bbf7fce93}{PGMATRIX\_MULTIPLY\_CONST\_COPY\_FREE}(aux1,(1/T),
+      \hyperlink{schunk__high_8cpp_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+289                 \textcolor{comment}{//Integral      aux2 = Ki*(Err\_int)}
+290                 aux2 = \hyperlink{gmatrix__plus_8h_a17b482a0aaa68d1f4c1c30a1a72dacbb}{PGMATRIX\_MULTIPLY\_COPY\_FREE}(Ki,Err\_int,
+      \hyperlink{schunk__high_8cpp_aa93f0eb578d23995850d61f7d61c55c1}{FALSE},\hyperlink{schunk__high_8cpp_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+291                 \textcolor{comment}{//Proporcional  aux3 = Kp*(Err)}
+292                 aux3 = \hyperlink{gmatrix__plus_8h_a17b482a0aaa68d1f4c1c30a1a72dacbb}{PGMATRIX\_MULTIPLY\_COPY\_FREE}(Kp,Err,
+      \hyperlink{schunk__high_8cpp_aa93f0eb578d23995850d61f7d61c55c1}{FALSE},\hyperlink{schunk__high_8cpp_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+293 
+294                 \textcolor{comment}{//Error Sum     aux1 = Kd*(Err-Err\_ant)*(1/T) + Ki*(Err\_int) + Kp*(Err)}
+295                 aux1 = \hyperlink{gmatrix__plus_8h_aa1123306aa55d942955e09156db757a3}{PGMATRIX\_ADD\_COPY\_FREE}(aux1,aux2,
       \hyperlink{schunk__high_8cpp_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE},\hyperlink{schunk__high_8cpp_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
-
-                \textcolor{comment}{//Pseudo Inverse Calculation}
-                aux2 =          \hyperlink{gmatrix__plus_8h_a73bceba2ac1f3a5589628d0f2e4081fa}{PGMATRIX\_DAMPED\_LEASTSQUARES\_PSEUDOINVERSE}
+296                 aux1 = \hyperlink{gmatrix__plus_8h_aa1123306aa55d942955e09156db757a3}{PGMATRIX\_ADD\_COPY\_FREE}(aux1,aux3,
+      \hyperlink{schunk__high_8cpp_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE},\hyperlink{schunk__high_8cpp_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+297 
+298                 \textcolor{comment}{//Pseudo Inverse Calculation}
+299                 aux2 =          \hyperlink{gmatrix__plus_8h_a73bceba2ac1f3a5589628d0f2e4081fa}{PGMATRIX\_DAMPED\_LEASTSQUARES\_PSEUDOINVERSE}
       (SJ,0.01);
-                                        \textcolor{comment}{//PGMATRIX\_PSEUDOINVERSE\_PLUS(SJ);}
-                                        \textcolor{comment}{//PGMATRIX\_RIGHT\_PSEUDOINVERSE(SJ);}
-
-                \textcolor{comment}{//New DThetas = pinv(SJ)*(Error Sum)}
-                \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(DThetas);
-                DThetas = \hyperlink{gmatrix__plus_8h_a17b482a0aaa68d1f4c1c30a1a72dacbb}{PGMATRIX\_MULTIPLY\_COPY\_FREE}
-      (aux2,aux1,\hyperlink{schunk__high_8cpp_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE},\hyperlink{schunk__high_8cpp_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
-                \textcolor{comment}{//New Thetas = DThetas*T + Old Thetas}
-                aux1 = \hyperlink{gmatrix__plus_8h_a371a0bfffdb84cf1596ca60bbf7fce93}{PGMATRIX\_MULTIPLY\_CONST\_COPY\_FREE}
-      (DThetas,T,\hyperlink{schunk__high_8cpp_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
-                Thetas = \hyperlink{gmatrix__plus_8h_aa1123306aa55d942955e09156db757a3}{PGMATRIX\_ADD\_COPY\_FREE}(Thetas,
-      aux1,\hyperlink{schunk__high_8cpp_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE},\hyperlink{schunk__high_8cpp_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
-
-
-
-                \textcolor{comment}{/******************************}
-\textcolor{comment}{                                COMUNICATE WITH SCHUNK}
-\textcolor{comment}{                *******************************/}
-
-                \textcolor{comment}{//Sends information to robot to move, then wait and measure}
-                \textcolor{comment}{//Set}
-                ros\_velocities.velocities[0]=\hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(DThetas
-      ,1,1);
-                ros\_velocities.velocities[1]=\hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(DThetas
-      ,2,1);
-                ros\_velocities.velocities[2]=\hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(DThetas
-      ,3,1);
-                ros\_velocities.velocities[3]=\hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(DThetas
-      ,4,1);
-                ros\_velocities.velocities[4]=\hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(DThetas
-      ,5,1);
-                ros\_velocities.velocities[5]=\hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(DThetas
-      ,6,1);
-                ros\_velocities.velocities[6]=\hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(DThetas
-      ,7,1);
-
-                \textcolor{comment}{//Saturate velocities for safety}
-                \textcolor{keywordtype}{double} sat\_vel = 0.7;
-                \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < 7; j++)\{
-                        \textcolor{keywordflow}{if}(ros\_velocities.velocities[j] > sat\_vel)\{
-      ros\_velocities.velocities[j] = sat\_vel;\}
-                \}
-
-                \textcolor{comment}{//Send}
-                ros\_velpub.publish(ros\_velocities);
-                \textcolor{comment}{//Wait}
-                ros::spinOnce();
-                ros\_rate.sleep();
-                \textcolor{comment}{//test}
-                diffs.push\_back(ros\_rate.cycleTime());
-                \textcolor{comment}{//Measure}
-                \textcolor{keywordflow}{if}(!schunk\_getPositions.call(ros\_getPositions))\{
-                        ROS\_ERROR\_STREAM(\textcolor{stringliteral}{"Couldn't get schunk's positions,
-       aborting"});
-                        \textcolor{keywordflow}{return} 1;
-                \}
-                \textcolor{keywordflow}{else}\{
-                        \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Thetas,1,1) = 
-      ros\_getPositions.response.positions.positions[0];
-                        \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Thetas,2,1) = 
-      ros\_getPositions.response.positions.positions[1];
-                        \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Thetas,3,1) = 
-      ros\_getPositions.response.positions.positions[2];
-                        \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Thetas,4,1) = 
-      ros\_getPositions.response.positions.positions[3];
-                        \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Thetas,5,1) = 
-      ros\_getPositions.response.positions.positions[4];
-                        \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Thetas,6,1) = 
-      ros\_getPositions.response.positions.positions[5];
-                        \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Thetas,7,1) = 
-      ros\_getPositions.response.positions.positions[6];
-                \}
-
-                \textcolor{comment}{/***************************************}
-\textcolor{comment}{                        \(\backslash\)END    COMUNICATE WITH SCHUNK}
-\textcolor{comment}{                ****************************************/}
-                \textcolor{comment}{//Update}
-                \hyperlink{robot_8h_aa1d3aca5132bd5f347f5966d38fbb966}{Robot\_updateLinksThetasByMatrix}(
-      r,Thetas);
-
-                \textcolor{comment}{//End Effector's Pose.}
-                \hyperlink{dualquaternion_8h_a1d21b6cb665c04de4be5aca50804caf4}{DQ\_free}(efp);
-                efp = \hyperlink{robot_8h_a57cc252fbb9e4c8be955b6af755b0c2c}{Robot\_FKM}(r);
-                \textcolor{comment}{//End Effector's Position.}
-                \hyperlink{quaternion_8h_a69ecc76f665022f81be1702c20865de4}{Q\_free}(eft);
-                eft = \hyperlink{dualquaternion_8h_a80e2f2aded851388d4f18d486a0b9455}{DQ\_getT}(efp);
-                \textcolor{comment}{//End Effector's 'Pitch' Angle}
-                pitchAngle = \hyperlink{dualquaternion_8h_a30322537a067df9c54aa58cb37acb80e}{DQ\_getPitchAngle}(efp);
-                \textcolor{comment}{//End Effector's Z Velocity (Geometrical Jacobian 3rd Line *
-       DThetas)}
-                aux1 = \hyperlink{gmatrix__plus_8h_a6cacc3f1b48d458d5cfc9e03159e3d81}{PGMATRIX\_CREATE\_ZEROES}(1,7);
-                \hyperlink{gmatrix_8h_a60f822f8426a81ffd3a8e5748295f621}{PGMATRIX\_COPY\_ROW}(aux1,1,GJ,3);
-                Vz = \hyperlink{gmatrix__plus_8h_a17b482a0aaa68d1f4c1c30a1a72dacbb}{PGMATRIX\_MULTIPLY\_COPY\_FREE}(
-      aux1,DThetas,\hyperlink{schunk__high_8cpp_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE},\hyperlink{schunk__high_8cpp_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
-                vz = \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Vz,1,1);
-                \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(Vz);
-
-                \textcolor{comment}{//Measured Data Matrix Update}
-                \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(D,1,1) = pitchAngle;
-                \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(D,2,1) = eft->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1];
-                \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(D,3,1) = eft->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2];
-                \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(D,4,1) = vz;
-
-                \textcolor{comment}{//Orientation Jacobian Angle P}
-                \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(OJP);
-                OJP = \hyperlink{robot_8h_ae6858f6a120e4ce01df49d39cef2c164}{Robot\_getOJacobianAngleP}(r);
-                \textcolor{comment}{//Geometrical Jacobian}
-                \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(GJ);
-                GJ  = \hyperlink{robot_8h_a61464c237c56f3db3f79b0350df80ddb}{Robot\_getGJacobian}(r);
-                \textcolor{comment}{//System Jacobian.}
-                \hyperlink{gmatrix_8h_a60f822f8426a81ffd3a8e5748295f621}{PGMATRIX\_COPY\_ROW}(SJ,1,OJP,1);
-                \hyperlink{gmatrix_8h_a60f822f8426a81ffd3a8e5748295f621}{PGMATRIX\_COPY\_ROW}(SJ,2,GJ,1);
-                \hyperlink{gmatrix_8h_a60f822f8426a81ffd3a8e5748295f621}{PGMATRIX\_COPY\_ROW}(SJ,3,GJ,2);
-                \hyperlink{gmatrix_8h_a60f822f8426a81ffd3a8e5748295f621}{PGMATRIX\_COPY\_ROW}(SJ,4,GJ,3);
-
-                \textcolor{comment}{//l = l - vz*T;}
-                l = l -vz*T;
-
-                i++;
-        \}
-
-
-        \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < 7; j++)\{
-                ros\_velocities.velocities[j] = 0.0;
-        \}
-        \textcolor{comment}{//Send}
-        ros\_velpub.publish(ros\_velocities);
-        \textcolor{comment}{//Wait}
-        ros::spinOnce();
-
-
-        printf(\textcolor{stringliteral}{"\(\backslash\)a\(\backslash\)n\(\backslash\)n\(\backslash\)tEnded in %i interactions."},i);
-        printf(\textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)n\(\backslash\)n\(\backslash\)tFinal State Data:\(\backslash\)n\(\backslash\)n"});
-        printf(\textcolor{stringliteral}{"\(\backslash\)nFinal D."});
-        \hyperlink{gmatrix_8h_acd7de7b8779844d2071240783e186000}{PGMATRIX\_PRINT}(D);
-        printf(\textcolor{stringliteral}{"\(\backslash\)nFinal System Jacobian."});
-        \hyperlink{gmatrix_8h_acd7de7b8779844d2071240783e186000}{PGMATRIX\_PRINT}(SJ);
-        printf(\textcolor{stringliteral}{"\(\backslash\)nFinal System Thetas."});
-        \hyperlink{gmatrix_8h_acd7de7b8779844d2071240783e186000}{PGMATRIX\_PRINT}(Thetas);
-
-
-        \textcolor{comment}{/******************************}
-\textcolor{comment}{                        CLEAN UP}
-\textcolor{comment}{        *******************************/}
-
-        \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} k = 0; k < diffs.size(); k++)\{
-                ROS\_INFO\_STREAM(diffs[i].nsec);
-        \}
-
-        \textcolor{comment}{//Last Memory Free Procedure.}
-        \textcolor{comment}{//Jacobians}
-        \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(OJP);
-        \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(GJ);
-        \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(SJ);
-        \textcolor{comment}{//Errors}
-        \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(Err);
-        \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(Err\_ant);
-        \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(Err\_int);
-        \textcolor{comment}{//Var}
-        \hyperlink{quaternion_8h_a69ecc76f665022f81be1702c20865de4}{Q\_free}(eft);
-        \hyperlink{dualquaternion_8h_a1d21b6cb665c04de4be5aca50804caf4}{DQ\_free}(efp);
-        \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(DThetas);
-        \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(Thetas);
-        \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(D\_ref);
-        \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(D);
-        \textcolor{comment}{//PID}
-        \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(Kp);
-        \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(Ki);
-        \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(Kd);
-        \textcolor{comment}{//Robot}
-        \hyperlink{robot_8h_a31f8aee15b6c24f89ab51b1bc1341f33}{Robot\_free}(r);
-
-        \textcolor{keywordflow}{return} 0;
-
-\}
+300                                         \textcolor{comment}{//PGMATRIX\_PSEUDOINVERSE\_PLUS(SJ);}
+301                                         \textcolor{comment}{//PGMATRIX\_RIGHT\_PSEUDOINVERSE(SJ);}
+302 
+303                 \textcolor{comment}{//New DThetas = pinv(SJ)*(Error Sum)}
+304                 \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(DThetas);
+305                 DThetas = \hyperlink{gmatrix__plus_8h_a17b482a0aaa68d1f4c1c30a1a72dacbb}{PGMATRIX\_MULTIPLY\_COPY\_FREE}(aux2,aux1,
+      \hyperlink{schunk__high_8cpp_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE},\hyperlink{schunk__high_8cpp_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+306                 \textcolor{comment}{//New Thetas = DThetas*T + Old Thetas}
+307                 aux1 = \hyperlink{gmatrix__plus_8h_a371a0bfffdb84cf1596ca60bbf7fce93}{PGMATRIX\_MULTIPLY\_CONST\_COPY\_FREE}(DThetas,T,
+      \hyperlink{schunk__high_8cpp_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+308                 Thetas = \hyperlink{gmatrix__plus_8h_aa1123306aa55d942955e09156db757a3}{PGMATRIX\_ADD\_COPY\_FREE}(Thetas,aux1,
+      \hyperlink{schunk__high_8cpp_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE},\hyperlink{schunk__high_8cpp_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+309 
+310 
+311 
+312                 \textcolor{comment}{/******************************}
+313 \textcolor{comment}{                                COMUNICATE WITH SCHUNK}
+314 \textcolor{comment}{                *******************************/}
+315 
+316                 \textcolor{comment}{//Sends information to robot to move, then wait and measure}
+317                 \textcolor{comment}{//Set}
+318                 ros\_velocities.velocities[0]=\hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(DThetas,1,1);
+319                 ros\_velocities.velocities[1]=\hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(DThetas,2,1);
+320                 ros\_velocities.velocities[2]=\hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(DThetas,3,1);
+321                 ros\_velocities.velocities[3]=\hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(DThetas,4,1);
+322                 ros\_velocities.velocities[4]=\hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(DThetas,5,1);
+323                 ros\_velocities.velocities[5]=\hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(DThetas,6,1);
+324                 ros\_velocities.velocities[6]=\hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(DThetas,7,1);
+325 
+326                 \textcolor{comment}{//Saturate velocities for safety}
+327                 \textcolor{keywordtype}{double} sat\_vel = 0.7;
+328                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < 7; j++)\{
+329                         \textcolor{keywordflow}{if}(ros\_velocities.velocities[j] > sat\_vel)\{ros\_velocities.velocities[j] = sat\_vel;\}
+330                 \}
+331 
+332                 \textcolor{comment}{//Send}
+333                 ros\_velpub.publish(ros\_velocities);
+334                 \textcolor{comment}{//Wait}
+335                 ros::spinOnce();
+336                 ros\_rate.sleep();
+337                 \textcolor{comment}{//test}
+338                 diffs.push\_back(ros\_rate.cycleTime());
+339                 \textcolor{comment}{//Measure}
+340                 \textcolor{keywordflow}{if}(!schunk\_getPositions.call(ros\_getPositions))\{
+341                         ROS\_ERROR\_STREAM(\textcolor{stringliteral}{"Couldn't get schunk's positions, aborting"});
+342                         \textcolor{keywordflow}{return} 1;
+343                 \}
+344                 \textcolor{keywordflow}{else}\{
+345                         \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Thetas,1,1) = ros\_getPositions.response.positions.
+      positions[0];
+346                         \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Thetas,2,1) = ros\_getPositions.response.positions.
+      positions[1];
+347                         \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Thetas,3,1) = ros\_getPositions.response.positions.
+      positions[2];
+348                         \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Thetas,4,1) = ros\_getPositions.response.positions.
+      positions[3];
+349                         \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Thetas,5,1) = ros\_getPositions.response.positions.
+      positions[4];
+350                         \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Thetas,6,1) = ros\_getPositions.response.positions.
+      positions[5];
+351                         \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Thetas,7,1) = ros\_getPositions.response.positions.
+      positions[6];
+352                 \}
+353 
+354                 \textcolor{comment}{/***************************************}
+355 \textcolor{comment}{                        \(\backslash\)END    COMUNICATE WITH SCHUNK}
+356 \textcolor{comment}{                ****************************************/}
+357                 \textcolor{comment}{//Update}
+358                 \hyperlink{robot_8h_aa1d3aca5132bd5f347f5966d38fbb966}{Robot\_updateLinksThetasByMatrix}(r,Thetas);
+359 
+361                 \textcolor{comment}{//End Effector's Pose.}
+362                 \hyperlink{dualquaternion_8h_a1d21b6cb665c04de4be5aca50804caf4}{DQ\_free}(efp);
+363                 efp = \hyperlink{robot_8h_a57cc252fbb9e4c8be955b6af755b0c2c}{Robot\_FKM}(r);
+364                 \textcolor{comment}{//End Effector's Position.}
+365                 \hyperlink{quaternion_8h_a69ecc76f665022f81be1702c20865de4}{Q\_free}(eft);
+366                 eft = \hyperlink{dualquaternion_8h_a80e2f2aded851388d4f18d486a0b9455}{DQ\_getT}(efp);
+367                 \textcolor{comment}{//End Effector's 'Pitch' Angle}
+368                 pitchAngle = \hyperlink{dualquaternion_8h_a30322537a067df9c54aa58cb37acb80e}{DQ\_getPitchAngle}(efp);
+369                 \textcolor{comment}{//End Effector's Z Velocity (Geometrical Jacobian 3rd Line * DThetas)}
+370                 aux1 = \hyperlink{gmatrix__plus_8h_a6cacc3f1b48d458d5cfc9e03159e3d81}{PGMATRIX\_CREATE\_ZEROES}(1,7);
+371                 \hyperlink{gmatrix_8h_a60f822f8426a81ffd3a8e5748295f621}{PGMATRIX\_COPY\_ROW}(aux1,1,GJ,3);
+372                 Vz = \hyperlink{gmatrix__plus_8h_a17b482a0aaa68d1f4c1c30a1a72dacbb}{PGMATRIX\_MULTIPLY\_COPY\_FREE}(aux1,DThetas,
+      \hyperlink{schunk__high_8cpp_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE},\hyperlink{schunk__high_8cpp_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+373                 vz = \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Vz,1,1);
+374                 \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(Vz);
+375 
+376                 \textcolor{comment}{//Measured Data Matrix Update}
+377                 \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(D,1,1) = pitchAngle;
+378                 \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(D,2,1) = eft->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1];
+379                 \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(D,3,1) = eft->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2];
+380                 \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(D,4,1) = vz;
+381 
+383                 \textcolor{comment}{//Orientation Jacobian Angle P}
+384                 \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(OJP);
+385                 OJP = \hyperlink{robot_8h_ae6858f6a120e4ce01df49d39cef2c164}{Robot\_getOJacobianAngleP}(r);
+386                 \textcolor{comment}{//Geometrical Jacobian}
+387                 \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(GJ);
+388                 GJ  = \hyperlink{robot_8h_a61464c237c56f3db3f79b0350df80ddb}{Robot\_getGJacobian}(r);
+389                 \textcolor{comment}{//System Jacobian.}
+390                 \hyperlink{gmatrix_8h_a60f822f8426a81ffd3a8e5748295f621}{PGMATRIX\_COPY\_ROW}(SJ,1,OJP,1);
+391                 \hyperlink{gmatrix_8h_a60f822f8426a81ffd3a8e5748295f621}{PGMATRIX\_COPY\_ROW}(SJ,2,GJ,1);
+392                 \hyperlink{gmatrix_8h_a60f822f8426a81ffd3a8e5748295f621}{PGMATRIX\_COPY\_ROW}(SJ,3,GJ,2);
+393                 \hyperlink{gmatrix_8h_a60f822f8426a81ffd3a8e5748295f621}{PGMATRIX\_COPY\_ROW}(SJ,4,GJ,3);
+394 
+395                 \textcolor{comment}{//l = l - vz*T;}
+396                 l = l -vz*T;
+397 
+398                 i++;
+399         \}
+400 
+401 
+402         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < 7; j++)\{
+403                 ros\_velocities.velocities[j] = 0.0;
+404         \}
+405         \textcolor{comment}{//Send}
+406         ros\_velpub.publish(ros\_velocities);
+407         \textcolor{comment}{//Wait}
+408         ros::spinOnce();
+409 
+410 
+411         printf(\textcolor{stringliteral}{"\(\backslash\)a\(\backslash\)n\(\backslash\)n\(\backslash\)tEnded in %i interactions."},i);
+412         printf(\textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)n\(\backslash\)n\(\backslash\)tFinal State Data:\(\backslash\)n\(\backslash\)n"});
+413         printf(\textcolor{stringliteral}{"\(\backslash\)nFinal D."});
+414         \hyperlink{gmatrix_8h_acd7de7b8779844d2071240783e186000}{PGMATRIX\_PRINT}(D);
+415         printf(\textcolor{stringliteral}{"\(\backslash\)nFinal System Jacobian."});
+416         \hyperlink{gmatrix_8h_acd7de7b8779844d2071240783e186000}{PGMATRIX\_PRINT}(SJ);
+417         printf(\textcolor{stringliteral}{"\(\backslash\)nFinal System Thetas."});
+418         \hyperlink{gmatrix_8h_acd7de7b8779844d2071240783e186000}{PGMATRIX\_PRINT}(Thetas);
+419 
+420 
+421         \textcolor{comment}{/******************************}
+422 \textcolor{comment}{                        CLEAN UP}
+423 \textcolor{comment}{        *******************************/}
+424 
+425         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} k = 0; k < diffs.size(); k++)\{
+426                 ROS\_INFO\_STREAM(diffs[i].nsec);
+427         \}
+428 
+429         \textcolor{comment}{//Last Memory Free Procedure.}
+430         \textcolor{comment}{//Jacobians}
+431         \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(OJP);
+432         \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(GJ);
+433         \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(SJ);
+434         \textcolor{comment}{//Errors}
+435         \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(Err);
+436         \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(Err\_ant);
+437         \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(Err\_int);
+438         \textcolor{comment}{//Var}
+439         \hyperlink{quaternion_8h_a69ecc76f665022f81be1702c20865de4}{Q\_free}(eft);
+440         \hyperlink{dualquaternion_8h_a1d21b6cb665c04de4be5aca50804caf4}{DQ\_free}(efp);
+441         \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(DThetas);
+442         \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(Thetas);
+443         \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(D\_ref);
+444         \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(D);
+445         \textcolor{comment}{//PID}
+446         \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(Kp);
+447         \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(Ki);
+448         \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(Kd);
+449         \textcolor{comment}{//Robot}
+450         \hyperlink{robot_8h_a31f8aee15b6c24f89ab51b1bc1341f33}{Robot\_free}(r);
+451 
+452         \textcolor{keywordflow}{return} 0;
+453 
+454 \}
 \end{DoxyCode}
 
 
@@ -620,16 +594,16 @@ Referenced by main().
 
 
 \begin{DoxyCode}
-                              \{
-        \textcolor{comment}{//               theta d        a   alpha}
-        \hyperlink{robot_8h_a030c05a337b160cdbf4d98c458bda2ed}{Robot\_addLink}(r, 0,   0.300        ,0,  -\hyperlink{schunk__high_8cpp_a2750dfdda752269a036f487a4a34b849}{PI2});
-        \hyperlink{robot_8h_a030c05a337b160cdbf4d98c458bda2ed}{Robot\_addLink}(r, 0,   0            ,0,   \hyperlink{schunk__high_8cpp_a2750dfdda752269a036f487a4a34b849}{PI2});
-        \hyperlink{robot_8h_a030c05a337b160cdbf4d98c458bda2ed}{Robot\_addLink}(r, 0,   0.328        ,0,  -\hyperlink{schunk__high_8cpp_a2750dfdda752269a036f487a4a34b849}{PI2});
-        \hyperlink{robot_8h_a030c05a337b160cdbf4d98c458bda2ed}{Robot\_addLink}(r, 0,   0            ,0,   \hyperlink{schunk__high_8cpp_a2750dfdda752269a036f487a4a34b849}{PI2});
-        \hyperlink{robot_8h_a030c05a337b160cdbf4d98c458bda2ed}{Robot\_addLink}(r, 0,   0.2765       ,0,  -\hyperlink{schunk__high_8cpp_a2750dfdda752269a036f487a4a34b849}{PI2});
-        \hyperlink{robot_8h_a030c05a337b160cdbf4d98c458bda2ed}{Robot\_addLink}(r, 0,   0            ,0,   \hyperlink{schunk__high_8cpp_a2750dfdda752269a036f487a4a34b849}{PI2});
-        \hyperlink{robot_8h_a030c05a337b160cdbf4d98c458bda2ed}{Robot\_addLink}(r, 0,   0.40049      ,0,   0  );
-\}
+459                               \{
+460         \textcolor{comment}{//               theta d        a   alpha}
+461         \hyperlink{robot_8h_a030c05a337b160cdbf4d98c458bda2ed}{Robot\_addLink}(r, 0,   0.300        ,0,  -\hyperlink{schunk__high_8cpp_a2750dfdda752269a036f487a4a34b849}{PI2});
+462         \hyperlink{robot_8h_a030c05a337b160cdbf4d98c458bda2ed}{Robot\_addLink}(r, 0,   0            ,0,   \hyperlink{schunk__high_8cpp_a2750dfdda752269a036f487a4a34b849}{PI2});
+463         \hyperlink{robot_8h_a030c05a337b160cdbf4d98c458bda2ed}{Robot\_addLink}(r, 0,   0.328        ,0,  -\hyperlink{schunk__high_8cpp_a2750dfdda752269a036f487a4a34b849}{PI2});
+464         \hyperlink{robot_8h_a030c05a337b160cdbf4d98c458bda2ed}{Robot\_addLink}(r, 0,   0            ,0,   \hyperlink{schunk__high_8cpp_a2750dfdda752269a036f487a4a34b849}{PI2});
+465         \hyperlink{robot_8h_a030c05a337b160cdbf4d98c458bda2ed}{Robot\_addLink}(r, 0,   0.2765       ,0,  -\hyperlink{schunk__high_8cpp_a2750dfdda752269a036f487a4a34b849}{PI2});
+466         \hyperlink{robot_8h_a030c05a337b160cdbf4d98c458bda2ed}{Robot\_addLink}(r, 0,   0            ,0,   \hyperlink{schunk__high_8cpp_a2750dfdda752269a036f487a4a34b849}{PI2});
+467         \hyperlink{robot_8h_a030c05a337b160cdbf4d98c458bda2ed}{Robot\_addLink}(r, 0,   0.40049      ,0,   0  );
+468 \}
 \end{DoxyCode}
 
 

@@ -1,3 +1,5 @@
 <map id="taskScheduler.h" name="taskScheduler.h">
-<area shape="rect" id="node3" href="$main2_8c.html" title="main2.c" alt="" coords="29,83,96,112"/>
+<area shape="rect" id="node3" href="$main_8c.html" title="main.c" alt="" coords="5,83,67,112"/>
+<area shape="rect" id="node5" href="$main2_8c.html" title="main2.c" alt="" coords="91,83,157,112"/>
+<area shape="rect" id="node7" href="$taskScheduler_8c.html" title="taskScheduler.c" alt="" coords="181,83,296,112"/>
 </map>

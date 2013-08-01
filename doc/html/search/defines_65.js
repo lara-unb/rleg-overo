@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['enc_5ffs',['ENC_FS',['../calibration_2calibration_8h.html#adf9edcc7e266ed7333f7570965f5956a',1,'calibration.h']]],
   ['encoder_5feeprom_5frd',['ENCODER_EEPROM_RD',['../encoder__functions_8h.html#aa3f0b6d222591f8f7332f74106eaa0ca',1,'ENCODER_EEPROM_RD():&#160;encoder_functions.h'],['../communication_2spi__functions_8h.html#aa3f0b6d222591f8f7332f74106eaa0ca',1,'ENCODER_EEPROM_RD():&#160;spi_functions.h']]],
   ['encoder_5feeprom_5fwr',['ENCODER_EEPROM_WR',['../encoder__functions_8h.html#ab815abd4b9b825c60dbb04aad0d0e846',1,'ENCODER_EEPROM_WR():&#160;encoder_functions.h'],['../communication_2spi__functions_8h.html#ab815abd4b9b825c60dbb04aad0d0e846',1,'ENCODER_EEPROM_WR():&#160;spi_functions.h']]],
   ['encoder_5fno_5fop',['ENCODER_NO_OP',['../encoder__functions_8h.html#ac10b0f18ed2164776ad6843aa7908592',1,'ENCODER_NO_OP():&#160;encoder_functions.h'],['../communication_2spi__functions_8h.html#ac10b0f18ed2164776ad6843aa7908592',1,'ENCODER_NO_OP():&#160;spi_functions.h']]],

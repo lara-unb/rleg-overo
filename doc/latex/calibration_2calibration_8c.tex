@@ -18,5 +18,33 @@ void \hyperlink{group__calibrate_ga043045246cf217758281222214c4addc}{calibrate\-
 \begin{DoxyCompactList}\small\item\em Calibrate all sensors. \end{DoxyCompactList}\item 
 void \hyperlink{group__calibrate_gaecfc81d152db2843b5d1517729804d63}{calibrate\-\_\-imu} (\hyperlink{structIMU__DATA__STRUCT}{I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$\hyperlink{threads__linux_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\-\_\-data})
 \begin{DoxyCompactList}\small\item\em Calibrate imu sensors. \end{DoxyCompactList}\item 
-void \hyperlink{group__calibrate_gae8f1281c6870b23c1c158b30998f7568}{calibrate\-\_\-enc} (\hyperlink{structENC__DATA__STRUCT}{E\-N\-C\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$\hyperlink{main2_8c_aaa441e18ae805c4f3efb0b5231d1cfe7}{enc\-\_\-data})
+void \hyperlink{calibration_2calibration_8c_ae8f1281c6870b23c1c158b30998f7568}{calibrate\-\_\-enc} (\hyperlink{structENC__DATA__STRUCT}{E\-N\-C\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$\hyperlink{main2_8c_aaa441e18ae805c4f3efb0b5231d1cfe7}{enc\-\_\-data})
 \begin{DoxyCompactList}\small\item\em Calibrate encoder. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{calibration_2calibration_8c_ae8f1281c6870b23c1c158b30998f7568}{\index{calibration/calibration.\-c@{calibration/calibration.\-c}!calibrate\-\_\-enc@{calibrate\-\_\-enc}}
+\index{calibrate\-\_\-enc@{calibrate\-\_\-enc}!calibration/calibration.c@{calibration/calibration.\-c}}
+\subsubsection[{calibrate\-\_\-enc}]{\setlength{\rightskip}{0pt plus 5cm}void calibrate\-\_\-enc (
+\begin{DoxyParamCaption}
+\item[{{\bf E\-N\-C\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$}]{enc\-\_\-data}
+\end{DoxyParamCaption}
+)}}\label{calibration_2calibration_8c_ae8f1281c6870b23c1c158b30998f7568}
+
+
+Calibrate encoder. 
+
+
+
+Definition at line 33 of file calibration.\-c.
+
+
+
+References E\-N\-C\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::angle, E\-N\-C\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::calibrate\-::angle, E\-N\-C\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::calib, and E\-N\-C\-\_\-\-F\-S.
+
+
+\begin{DoxyCode}
+33                                              \{
+34   enc\_data->\hyperlink{structENC__DATA__STRUCT_af227e5bbb714b830cc570432bda0a468}{calib}.\hyperlink{structENC__DATA__STRUCT_1_1calibrate_a862c7101db8c6dbc9213857b6bc1971b}{angle} = enc\_data->\hyperlink{structENC__DATA__STRUCT_ad25beb30fd5b975292f87db02ec9930a}{angle}/\hyperlink{calibration_2calibration_8h_adf9edcc7e266ed7333f7570965f5956a}{ENC\_FS};
+35 \}
+\end{DoxyCode}

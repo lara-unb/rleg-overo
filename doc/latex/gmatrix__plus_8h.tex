@@ -72,19 +72,18 @@ Referenced by Cartesian\-\_\-pose\-\_\-controller\-::control(), Cartesian\-\_\-v
 
 
 \begin{DoxyCode}
-                                                                               
-            \{
-                
-        \hyperlink{structGMATRIX}{PGMATRIX} pMatRes = \hyperlink{gmatrix__plus_8h_a6cacc3f1b48d458d5cfc9e03159e3d81}{PGMATRIX\_CREATE\_ZEROES}
-      (pMatA->\hyperlink{structGMATRIX_ad0cd3f750b92dcd404d04ddc2ec5b5d6}{Nr},pMatA->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc});
-
-        \hyperlink{gmatrix_8h_a742534e0a7ae5f8300fd21538cd7a9d0}{PGMATRIX\_ADD\_COPY}(pMatRes, pMatA, pMatB);
-
-        \textcolor{keywordflow}{if}(freeA)\{\hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(pMatA);\}
-        \textcolor{keywordflow}{if}(freeB)\{\hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(pMatB);\}
-
-        \textcolor{keywordflow}{return} pMatRes;
-\}
+87                                                                                      \{
+88                 
+89         \hyperlink{structGMATRIX}{PGMATRIX} pMatRes = \hyperlink{gmatrix__plus_8h_a6cacc3f1b48d458d5cfc9e03159e3d81}{PGMATRIX\_CREATE\_ZEROES}(pMatA->
+      \hyperlink{structGMATRIX_ad0cd3f750b92dcd404d04ddc2ec5b5d6}{Nr},pMatA->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc});
+90 
+91         \hyperlink{gmatrix_8h_a742534e0a7ae5f8300fd21538cd7a9d0}{PGMATRIX\_ADD\_COPY}(pMatRes, pMatA, pMatB);
+92 
+93         \textcolor{keywordflow}{if}(freeA)\{\hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(pMatA);\}
+94         \textcolor{keywordflow}{if}(freeB)\{\hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(pMatB);\}
+95 
+96         \textcolor{keywordflow}{return} pMatRes;
+97 \}
 \end{DoxyCode}
 
 
@@ -130,26 +129,25 @@ Referenced by Cartesian\-\_\-controller\-::\-Cartesian\-\_\-controller(), and ma
 
 
 \begin{DoxyCode}
-                                                                       \{
-        
-        \textcolor{keywordtype}{int} i = 0, j = 0;
-
-        \hyperlink{structGMATRIX}{PGMATRIX} Pmat = \hyperlink{gmatrix_8h_adf8dc9cfae5700de80c88604082ffa10}{PGMATRIX\_ALLOC}(Dim,Dim);
-
-        \textcolor{keywordflow}{for}(i = 0;i<Dim;i++)\{
-                \textcolor{keywordflow}{for}(j=0;j<Dim;j++)\{
-                        \textcolor{keywordflow}{if}( i == j)\{
-                                \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Pmat,i+1,j+1) = 
-      Array[i];
-                        \}
-                        \textcolor{keywordflow}{else}\{
-                                \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Pmat,i+1,j+1) = 0;
-                        \}
-                \}
-        \}
-
-        \textcolor{keywordflow}{return} Pmat;
-\}
+32                                                                        \{
+33         
+34         \textcolor{keywordtype}{int} i = 0, j = 0;
+35 
+36         \hyperlink{structGMATRIX}{PGMATRIX} Pmat = \hyperlink{gmatrix_8h_adf8dc9cfae5700de80c88604082ffa10}{PGMATRIX\_ALLOC}(Dim,Dim);
+37 
+38         \textcolor{keywordflow}{for}(i = 0;i<Dim;i++)\{
+39                 \textcolor{keywordflow}{for}(j=0;j<Dim;j++)\{
+40                         \textcolor{keywordflow}{if}( i == j)\{
+41                                 \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Pmat,i+1,j+1) = Array[i];
+42                         \}
+43                         \textcolor{keywordflow}{else}\{
+44                                 \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Pmat,i+1,j+1) = 0;
+45                         \}
+46                 \}
+47         \}
+48 
+49         \textcolor{keywordflow}{return} Pmat;
+50 \}
 \end{DoxyCode}
 
 
@@ -196,21 +194,20 @@ Referenced by main().
 
 
 \begin{DoxyCode}
-                                                                         \{
-        
-        \textcolor{keywordtype}{int} i = 0, j = 0;
-
-        \hyperlink{structGMATRIX}{PGMATRIX} Pmat = \hyperlink{gmatrix_8h_adf8dc9cfae5700de80c88604082ffa10}{PGMATRIX\_ALLOC}(Nr,Nc);
-
-        \textcolor{keywordflow}{for}(i = 0;i<Nr;i++)\{
-                \textcolor{keywordflow}{for}(j=0;j<Nc;j++)\{
-                                \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Pmat,i+1,j+1) = 
-      Array[i+j];
-                \}
-        \}
-
-        \textcolor{keywordflow}{return} Pmat;
-\}
+52                                                                          \{
+53         
+54         \textcolor{keywordtype}{int} i = 0, j = 0;
+55 
+56         \hyperlink{structGMATRIX}{PGMATRIX} Pmat = \hyperlink{gmatrix_8h_adf8dc9cfae5700de80c88604082ffa10}{PGMATRIX\_ALLOC}(Nr,Nc);
+57 
+58         \textcolor{keywordflow}{for}(i = 0;i<Nr;i++)\{
+59                 \textcolor{keywordflow}{for}(j=0;j<Nc;j++)\{
+60                                 \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Pmat,i+1,j+1) = Array[i+j];
+61                 \}
+62         \}
+63 
+64         \textcolor{keywordflow}{return} Pmat;
+65 \}
 \end{DoxyCode}
 
 
@@ -256,13 +253,13 @@ Referenced by Cartesian\-\_\-controller\-::\-Cartesian\-\_\-controller(), main()
 
 
 \begin{DoxyCode}
-                                               \{
-
-        \hyperlink{structGMATRIX}{PGMATRIX} pMat = \hyperlink{gmatrix_8h_adf8dc9cfae5700de80c88604082ffa10}{PGMATRIX\_ALLOC}(Nr,Nc);
-        \hyperlink{gmatrix_8h_a9b78ef8288b8e5448313d92d7427366d}{PGMATRIX\_ZEROES}(pMat);
-
-        \textcolor{keywordflow}{return} pMat;
-\}
+67                                                \{
+68 
+69         \hyperlink{structGMATRIX}{PGMATRIX} pMat = \hyperlink{gmatrix_8h_adf8dc9cfae5700de80c88604082ffa10}{PGMATRIX\_ALLOC}(Nr,Nc);
+70         \hyperlink{gmatrix_8h_a9b78ef8288b8e5448313d92d7427366d}{PGMATRIX\_ZEROES}(pMat);
+71 
+72         \textcolor{keywordflow}{return} pMat;
+73 \}
 \end{DoxyCode}
 
 
@@ -312,50 +309,50 @@ Referenced by Cartesian\-\_\-pose\-\_\-controller\-::control(), Cartesian\-\_\-v
 
 
 \begin{DoxyCode}
-                                                                            \{
-
-
-        \hyperlink{structGMATRIX}{PGMATRIX} pApinv  = NULL;
-        \hyperlink{structGMATRIX}{PGMATRIX} pAux1   = NULL;
-        \hyperlink{structGMATRIX}{PGMATRIX} kI      = NULL;
-        \hyperlink{structGMATRIX}{PGMATRIX} pT      = NULL;
-        \hyperlink{structGMATRIX}{PGMATRIX} pMatRes = NULL;
-        \textcolor{keywordtype}{int} i=0,j=0;
-        \textcolor{keywordtype}{double} ksqr      = 0;
-
-        kI = \hyperlink{gmatrix_8h_adf8dc9cfae5700de80c88604082ffa10}{PGMATRIX\_ALLOC}(pMat->\hyperlink{structGMATRIX_ad0cd3f750b92dcd404d04ddc2ec5b5d6}{Nr},pMat->\hyperlink{structGMATRIX_ad0cd3f750b92dcd404d04ddc2ec5b5d6}{Nr});
-        pT = \hyperlink{gmatrix_8h_adf8dc9cfae5700de80c88604082ffa10}{PGMATRIX\_ALLOC}(pMat->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc},pMat->\hyperlink{structGMATRIX_ad0cd3f750b92dcd404d04ddc2ec5b5d6}{Nr});
-
-        ksqr = ((k)*(k));
-
-        \textcolor{keywordflow}{for}(i=0;i<pMat->\hyperlink{structGMATRIX_ad0cd3f750b92dcd404d04ddc2ec5b5d6}{Nr};i++)\{
-
-                \textcolor{keywordflow}{for}(j=0;j<pMat->\hyperlink{structGMATRIX_ad0cd3f750b92dcd404d04ddc2ec5b5d6}{Nr};j++)\{
-                        \textcolor{keywordflow}{if}(i==j)\{
-                                \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(kI,i+1,j+1) = ksqr;
-                        \}
-                        \textcolor{keywordflow}{else}\{
-                                \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(kI,i+1,j+1) = 0;
-                        \}
-                \}
-        \}
-
-        \hyperlink{gmatrix_8h_acc0c1227b2661cf404175b537c35cd10}{PGMATRIX\_TRANSPOSE\_COPY}(pT,pMat);
-
-        pAux1 = \hyperlink{gmatrix__plus_8h_a17b482a0aaa68d1f4c1c30a1a72dacbb}{PGMATRIX\_MULTIPLY\_COPY\_FREE}(pMat,pT,
+179                                                                             \{
+180 
+181 
+182         \hyperlink{structGMATRIX}{PGMATRIX} pApinv  = NULL;
+183         \hyperlink{structGMATRIX}{PGMATRIX} pAux1   = NULL;
+184         \hyperlink{structGMATRIX}{PGMATRIX} kI      = NULL;
+185         \hyperlink{structGMATRIX}{PGMATRIX} pT      = NULL;
+186         \hyperlink{structGMATRIX}{PGMATRIX} pMatRes = NULL;
+187         \textcolor{keywordtype}{int} i=0,j=0;
+188         \textcolor{keywordtype}{double} ksqr      = 0;
+189 
+190         kI = \hyperlink{gmatrix_8h_adf8dc9cfae5700de80c88604082ffa10}{PGMATRIX\_ALLOC}(pMat->\hyperlink{structGMATRIX_ad0cd3f750b92dcd404d04ddc2ec5b5d6}{Nr},pMat->\hyperlink{structGMATRIX_ad0cd3f750b92dcd404d04ddc2ec5b5d6}{Nr});
+191         pT = \hyperlink{gmatrix_8h_adf8dc9cfae5700de80c88604082ffa10}{PGMATRIX\_ALLOC}(pMat->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc},pMat->\hyperlink{structGMATRIX_ad0cd3f750b92dcd404d04ddc2ec5b5d6}{Nr});
+192 
+193         ksqr = ((k)*(k));
+194 
+195         \textcolor{keywordflow}{for}(i=0;i<pMat->\hyperlink{structGMATRIX_ad0cd3f750b92dcd404d04ddc2ec5b5d6}{Nr};i++)\{
+196 
+197                 \textcolor{keywordflow}{for}(j=0;j<pMat->\hyperlink{structGMATRIX_ad0cd3f750b92dcd404d04ddc2ec5b5d6}{Nr};j++)\{
+198                         \textcolor{keywordflow}{if}(i==j)\{
+199                                 \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(kI,i+1,j+1) = ksqr;
+200                         \}
+201                         \textcolor{keywordflow}{else}\{
+202                                 \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(kI,i+1,j+1) = 0;
+203                         \}
+204                 \}
+205         \}
+206 
+207         \hyperlink{gmatrix_8h_acc0c1227b2661cf404175b537c35cd10}{PGMATRIX\_TRANSPOSE\_COPY}(pT,pMat);
+208 
+209         pAux1 = \hyperlink{gmatrix__plus_8h_a17b482a0aaa68d1f4c1c30a1a72dacbb}{PGMATRIX\_MULTIPLY\_COPY\_FREE}(pMat,pT,
       \hyperlink{gmatrix__plus_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE},\hyperlink{gmatrix__plus_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
-        
-        pAux1 = \hyperlink{gmatrix__plus_8h_aa1123306aa55d942955e09156db757a3}{PGMATRIX\_ADD\_COPY\_FREE}(pAux1,kI,\hyperlink{gmatrix__plus_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE},
+210         
+211         pAux1 = \hyperlink{gmatrix__plus_8h_aa1123306aa55d942955e09156db757a3}{PGMATRIX\_ADD\_COPY\_FREE}(pAux1,kI,\hyperlink{gmatrix__plus_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE},
       \hyperlink{gmatrix__plus_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
-
-        pApinv = \hyperlink{gmatrix__plus_8h_a9a93e1e198422eb488592340f48d59d6}{PGMATRIX\_PSEUDOINVERSE\_PLUS}(pAux1);
-        \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(pAux1);
-
-        pMatRes = \hyperlink{gmatrix__plus_8h_a17b482a0aaa68d1f4c1c30a1a72dacbb}{PGMATRIX\_MULTIPLY\_COPY\_FREE}(pT,
-      pApinv,\hyperlink{gmatrix__plus_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE},\hyperlink{gmatrix__plus_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
-
-        \textcolor{keywordflow}{return} pMatRes;
-\}
+212 
+213         pApinv = \hyperlink{gmatrix__plus_8h_a9a93e1e198422eb488592340f48d59d6}{PGMATRIX\_PSEUDOINVERSE\_PLUS}(pAux1);
+214         \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(pAux1);
+215 
+216         pMatRes = \hyperlink{gmatrix__plus_8h_a17b482a0aaa68d1f4c1c30a1a72dacbb}{PGMATRIX\_MULTIPLY\_COPY\_FREE}(pT,pApinv,
+      \hyperlink{gmatrix__plus_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE},\hyperlink{gmatrix__plus_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+217 
+218         \textcolor{keywordflow}{return} pMatRes;
+219 \}
 \end{DoxyCode}
 
 
@@ -402,19 +399,18 @@ Referenced by Cartesian\-\_\-pose\-\_\-controller\-::control(), Cartesian\-\_\-v
 
 
 \begin{DoxyCode}
-                                                                               
-              \{
-
-        \hyperlink{structGMATRIX}{PGMATRIX} pMatRes = \hyperlink{gmatrix__plus_8h_a6cacc3f1b48d458d5cfc9e03159e3d81}{PGMATRIX\_CREATE\_ZEROES}
-      (pMat->\hyperlink{structGMATRIX_ad0cd3f750b92dcd404d04ddc2ec5b5d6}{Nr},pMat->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc});
-
-        \hyperlink{gmatrix_8h_a44bb4db341b4b4a005d69d49eb76624b}{PGMATRIX\_COPY}(pMatRes,pMat);
-        \hyperlink{gmatrix_8h_a1846d69369b550d1b4a9106467f5f2af}{PGMATRIX\_MULTIPLY\_CONST}(pMatRes, a );
-
-        \textcolor{keywordflow}{if}(freeMat)\{\hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(pMat);\}
-
-        \textcolor{keywordflow}{return} pMatRes;
-\}
+111                                                                                        \{
+112 
+113         \hyperlink{structGMATRIX}{PGMATRIX} pMatRes = \hyperlink{gmatrix__plus_8h_a6cacc3f1b48d458d5cfc9e03159e3d81}{PGMATRIX\_CREATE\_ZEROES}(pMat->
+      \hyperlink{structGMATRIX_ad0cd3f750b92dcd404d04ddc2ec5b5d6}{Nr},pMat->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc});
+114 
+115         \hyperlink{gmatrix_8h_a44bb4db341b4b4a005d69d49eb76624b}{PGMATRIX\_COPY}(pMatRes,pMat);
+116         \hyperlink{gmatrix_8h_a1846d69369b550d1b4a9106467f5f2af}{PGMATRIX\_MULTIPLY\_CONST}(pMatRes, a );
+117 
+118         \textcolor{keywordflow}{if}(freeMat)\{\hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(pMat);\}
+119 
+120         \textcolor{keywordflow}{return} pMatRes;
+121 \}
 \end{DoxyCode}
 
 
@@ -462,19 +458,18 @@ Referenced by Cartesian\-\_\-pose\-\_\-controller\-::control(), Cartesian\-\_\-v
 
 
 \begin{DoxyCode}
-                                                                               
-                 \{
-                
-        \hyperlink{structGMATRIX}{PGMATRIX} pMatRes = \hyperlink{gmatrix__plus_8h_a6cacc3f1b48d458d5cfc9e03159e3d81}{PGMATRIX\_CREATE\_ZEROES}
-      (pMatA->\hyperlink{structGMATRIX_ad0cd3f750b92dcd404d04ddc2ec5b5d6}{Nr},pMatB->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc});
-
-        \hyperlink{gmatrix_8h_ab8b0e8fdbcef816db4f0c9c235ddfbc8}{PGMATRIX\_MULTIPLY\_COPY}(pMatRes, pMatA, pMatB);
-
-        \textcolor{keywordflow}{if}(freeA)\{\hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(pMatA);\}
-        \textcolor{keywordflow}{if}(freeB)\{\hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(pMatB);\}
-
-        \textcolor{keywordflow}{return} pMatRes;
-\}
+99                                                                                           \{
+100                 
+101         \hyperlink{structGMATRIX}{PGMATRIX} pMatRes = \hyperlink{gmatrix__plus_8h_a6cacc3f1b48d458d5cfc9e03159e3d81}{PGMATRIX\_CREATE\_ZEROES}(pMatA->
+      \hyperlink{structGMATRIX_ad0cd3f750b92dcd404d04ddc2ec5b5d6}{Nr},pMatB->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc});
+102 
+103         \hyperlink{gmatrix_8h_ab8b0e8fdbcef816db4f0c9c235ddfbc8}{PGMATRIX\_MULTIPLY\_COPY}(pMatRes, pMatA, pMatB);
+104 
+105         \textcolor{keywordflow}{if}(freeA)\{\hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(pMatA);\}
+106         \textcolor{keywordflow}{if}(freeB)\{\hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(pMatB);\}
+107 
+108         \textcolor{keywordflow}{return} pMatRes;
+109 \}
 \end{DoxyCode}
 
 
@@ -519,65 +514,62 @@ Referenced by P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-D\-A\-M\-P\-E\-D\-\_\-\-L\-E\-A\-S\-
 
 
 \begin{DoxyCode}
-\{
-        \textcolor{keywordtype}{int} n;
-        \hyperlink{gmatrix_8h_a3b6eb94c53f70703edc155e174321477}{GMATRIX\_FLOAT} tol, norm;
-        \hyperlink{structGMATRIX}{PGMATRIX} pU;
-        \hyperlink{structGMATRIX}{PGMATRIX} pS;
-        \hyperlink{structGMATRIX}{PGMATRIX} pV;
-        \hyperlink{structGMATRIX}{PGMATRIX} pApinv;
-        \hyperlink{structGMATRIX}{PGMATRIX} pMatDummy;
-
-        pApinv    = \hyperlink{gmatrix__plus_8h_a6cacc3f1b48d458d5cfc9e03159e3d81}{PGMATRIX\_CREATE\_ZEROES}(pA->\hyperlink{structGMATRIX_ad0cd3f750b92dcd404d04ddc2ec5b5d6}{Nr},pA->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{
-      Nc});
-        pMatDummy = \hyperlink{gmatrix__plus_8h_a6cacc3f1b48d458d5cfc9e03159e3d81}{PGMATRIX\_CREATE\_ZEROES}(pA->\hyperlink{structGMATRIX_ad0cd3f750b92dcd404d04ddc2ec5b5d6}{Nr},pA->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{
-      Nc});
-
-        \hyperlink{gmatrix_8h_a4fda4272d6c3c60d6b28638268da17b2}{GMATRIX\_ASSERT}(\textcolor{stringliteral}{"PGMATRIX\_PSEUDOINVERSE"},pA->\hyperlink{structGMATRIX_ad0cd3f750b92dcd404d04ddc2ec5b5d6}{Nr} <= 0);
-        \hyperlink{gmatrix_8h_a4fda4272d6c3c60d6b28638268da17b2}{GMATRIX\_ASSERT}(\textcolor{stringliteral}{"PGMATRIX\_PSEUDOINVERSE"},pA->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc} <= 0);
-        \hyperlink{gmatrix_8h_a4fda4272d6c3c60d6b28638268da17b2}{GMATRIX\_ASSERT}(\textcolor{stringliteral}{"PGMATRIX\_PSEUDOINVERSE"},pMatDummy->\hyperlink{structGMATRIX_a1533cd0d810051967bf2e9e301e870b0}{
-      MaxSize} < pA->\hyperlink{structGMATRIX_ad0cd3f750b92dcd404d04ddc2ec5b5d6}{Nr}*pA->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc});
-
-        pU = \hyperlink{gmatrix_8h_adf8dc9cfae5700de80c88604082ffa10}{PGMATRIX\_ALLOC}(pA->\hyperlink{structGMATRIX_ad0cd3f750b92dcd404d04ddc2ec5b5d6}{Nr},pA->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc});
-        pS = \hyperlink{gmatrix_8h_adf8dc9cfae5700de80c88604082ffa10}{PGMATRIX\_ALLOC}(pA->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc},pA->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc});
-        pV = \hyperlink{gmatrix_8h_adf8dc9cfae5700de80c88604082ffa10}{PGMATRIX\_ALLOC}(pA->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc},pA->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc});
-
-        \textcolor{comment}{// Compute SVD:}
-        \hyperlink{gmatrix__linalg_8h_ac549c7f4bf706e7ec89de04b2573fffa}{PGMATRIX\_SVD}(pU,pS,pV,pA,\hyperlink{gmatrix__plus_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
-        \textcolor{comment}{// Compute norm:}
-        norm = (\hyperlink{gmatrix_8h_a3b6eb94c53f70703edc155e174321477}{GMATRIX\_FLOAT})(fabs(\hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(pS,
-      1,1)));
-        \textcolor{keywordflow}{for}(n=2;n<=pA->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc};++n)\{
-                norm = \hyperlink{gmatrix_8h_a0f3bfa57d69162710d0aa7002b12a589}{GMATRIXMACRO\_MAX}(norm,(\hyperlink{gmatrix_8h_a3b6eb94c53f70703edc155e174321477}{GMATRIX\_FLOAT}
-      )(fabs(\hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(pS,n,n))));
-        \}
-        \textcolor{comment}{// Compute tolerance:}
-        tol = (\hyperlink{gmatrix_8h_a0f3bfa57d69162710d0aa7002b12a589}{GMATRIXMACRO\_MAX}(pA->\hyperlink{structGMATRIX_ad0cd3f750b92dcd404d04ddc2ec5b5d6}{Nr},pA->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc})) * norm * (
+124 \{
+125         \textcolor{keywordtype}{int} n;
+126         \hyperlink{gmatrix_8h_a3b6eb94c53f70703edc155e174321477}{GMATRIX\_FLOAT} tol, norm;
+127         \hyperlink{structGMATRIX}{PGMATRIX} pU;
+128         \hyperlink{structGMATRIX}{PGMATRIX} pS;
+129         \hyperlink{structGMATRIX}{PGMATRIX} pV;
+130         \hyperlink{structGMATRIX}{PGMATRIX} pApinv;
+131         \hyperlink{structGMATRIX}{PGMATRIX} pMatDummy;
+132 
+133         pApinv    = \hyperlink{gmatrix__plus_8h_a6cacc3f1b48d458d5cfc9e03159e3d81}{PGMATRIX\_CREATE\_ZEROES}(pA->\hyperlink{structGMATRIX_ad0cd3f750b92dcd404d04ddc2ec5b5d6}{Nr},pA->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc});
+134         pMatDummy = \hyperlink{gmatrix__plus_8h_a6cacc3f1b48d458d5cfc9e03159e3d81}{PGMATRIX\_CREATE\_ZEROES}(pA->\hyperlink{structGMATRIX_ad0cd3f750b92dcd404d04ddc2ec5b5d6}{Nr},pA->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc});
+135 
+136         \hyperlink{gmatrix_8h_a4fda4272d6c3c60d6b28638268da17b2}{GMATRIX\_ASSERT}(\textcolor{stringliteral}{"PGMATRIX\_PSEUDOINVERSE"},pA->\hyperlink{structGMATRIX_ad0cd3f750b92dcd404d04ddc2ec5b5d6}{Nr} <= 0);
+137         \hyperlink{gmatrix_8h_a4fda4272d6c3c60d6b28638268da17b2}{GMATRIX\_ASSERT}(\textcolor{stringliteral}{"PGMATRIX\_PSEUDOINVERSE"},pA->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc} <= 0);
+138         \hyperlink{gmatrix_8h_a4fda4272d6c3c60d6b28638268da17b2}{GMATRIX\_ASSERT}(\textcolor{stringliteral}{"PGMATRIX\_PSEUDOINVERSE"},pMatDummy->\hyperlink{structGMATRIX_a1533cd0d810051967bf2e9e301e870b0}{MaxSize} < pA->
+      \hyperlink{structGMATRIX_ad0cd3f750b92dcd404d04ddc2ec5b5d6}{Nr}*pA->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc});
+139 
+140         pU = \hyperlink{gmatrix_8h_adf8dc9cfae5700de80c88604082ffa10}{PGMATRIX\_ALLOC}(pA->\hyperlink{structGMATRIX_ad0cd3f750b92dcd404d04ddc2ec5b5d6}{Nr},pA->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc});
+141         pS = \hyperlink{gmatrix_8h_adf8dc9cfae5700de80c88604082ffa10}{PGMATRIX\_ALLOC}(pA->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc},pA->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc});
+142         pV = \hyperlink{gmatrix_8h_adf8dc9cfae5700de80c88604082ffa10}{PGMATRIX\_ALLOC}(pA->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc},pA->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc});
+143 
+144         \textcolor{comment}{// Compute SVD:}
+145         \hyperlink{gmatrix__linalg_8h_ac549c7f4bf706e7ec89de04b2573fffa}{PGMATRIX\_SVD}(pU,pS,pV,pA,\hyperlink{gmatrix__plus_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+146         \textcolor{comment}{// Compute norm:}
+147         norm = (\hyperlink{gmatrix_8h_a3b6eb94c53f70703edc155e174321477}{GMATRIX\_FLOAT})(fabs(\hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(pS,1,1)));
+148         \textcolor{keywordflow}{for}(n=2;n<=pA->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc};++n)\{
+149                 norm = \hyperlink{gmatrix_8h_a0f3bfa57d69162710d0aa7002b12a589}{GMATRIXMACRO\_MAX}(norm,(\hyperlink{gmatrix_8h_a3b6eb94c53f70703edc155e174321477}{GMATRIX\_FLOAT})(fabs(
+      \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(pS,n,n))));
+150         \}
+151         \textcolor{comment}{// Compute tolerance:}
+152         tol = (\hyperlink{gmatrix_8h_a0f3bfa57d69162710d0aa7002b12a589}{GMATRIXMACRO\_MAX}(pA->\hyperlink{structGMATRIX_ad0cd3f750b92dcd404d04ddc2ec5b5d6}{Nr},pA->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc})) * norm * (
       \hyperlink{gmatrix_8h_a3b6eb94c53f70703edc155e174321477}{GMATRIX\_FLOAT})(1e-12);
-
-        \textcolor{comment}{// Compute inv(S):}
-        \textcolor{keywordflow}{for}(n=1;n<=pA->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc};++n)\{
-                \textcolor{keywordflow}{if} (fabs(\hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(pS,n,n))<=tol)\{
-                        \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(pS,n,n) = 0.0;
-                \}
-                \textcolor{keywordflow}{else}\{
-                        \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(pS,n,n) = (\hyperlink{gmatrix_8h_a3b6eb94c53f70703edc155e174321477}{GMATRIX\_FLOAT}
-      )(1.0) / \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(pS,n,n);
-                \}
-        \}
-        \textcolor{comment}{// Compute pinv:}
-        \hyperlink{gmatrix_8h_a9e709a477348c680c0a9ad5eab2725f6}{PGMATRIX\_MULTIPLY\_COPY\_EXTENDED}(
-      pMatDummy,pS,\hyperlink{gmatrix__plus_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE},pU,\hyperlink{gmatrix__plus_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
-        \hyperlink{gmatrix_8h_a9e709a477348c680c0a9ad5eab2725f6}{PGMATRIX\_MULTIPLY\_COPY\_EXTENDED}(pApinv,
-      pV,\hyperlink{gmatrix__plus_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE},pMatDummy,\hyperlink{gmatrix__plus_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
-
-        \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(pU);
-        \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(pS);
-        \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(pV);
-        \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(pMatDummy);
-
-        \textcolor{keywordflow}{return} pApinv;
-\}
+153 
+154         \textcolor{comment}{// Compute inv(S):}
+155         \textcolor{keywordflow}{for}(n=1;n<=pA->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc};++n)\{
+156                 \textcolor{keywordflow}{if} (fabs(\hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(pS,n,n))<=tol)\{
+157                         \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(pS,n,n) = 0.0;
+158                 \}
+159                 \textcolor{keywordflow}{else}\{
+160                         \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(pS,n,n) = (\hyperlink{gmatrix_8h_a3b6eb94c53f70703edc155e174321477}{GMATRIX\_FLOAT})(1.0) / 
+      \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(pS,n,n);
+161                 \}
+162         \}
+163         \textcolor{comment}{// Compute pinv:}
+164         \hyperlink{gmatrix_8h_a9e709a477348c680c0a9ad5eab2725f6}{PGMATRIX\_MULTIPLY\_COPY\_EXTENDED}(pMatDummy,pS,
+      \hyperlink{gmatrix__plus_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE},pU,\hyperlink{gmatrix__plus_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+165         \hyperlink{gmatrix_8h_a9e709a477348c680c0a9ad5eab2725f6}{PGMATRIX\_MULTIPLY\_COPY\_EXTENDED}(pApinv,pV,
+      \hyperlink{gmatrix__plus_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE},pMatDummy,\hyperlink{gmatrix__plus_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+166 
+167         \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(pU);
+168         \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(pS);
+169         \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(pV);
+170         \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(pMatDummy);
+171 
+172         \textcolor{keywordflow}{return} pApinv;
+173 \}
 \end{DoxyCode}
 
 
@@ -626,31 +618,31 @@ Referenced by P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-R\-I\-G\-H\-T\-\_\-\-P\-S\-E\-U\-D\-
 
 
 \begin{DoxyCode}
-                                                    \{
-
-        \hyperlink{structGMATRIX}{PGMATRIX} pApinv  = NULL;
-        \hyperlink{structGMATRIX}{PGMATRIX} pAux1   = NULL;
-        \hyperlink{structGMATRIX}{PGMATRIX} pT      = NULL;
-        \hyperlink{structGMATRIX}{PGMATRIX} pMatRes = NULL;
-
-        pT = \hyperlink{gmatrix_8h_adf8dc9cfae5700de80c88604082ffa10}{PGMATRIX\_ALLOC}(pMat->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc},pMat->\hyperlink{structGMATRIX_ad0cd3f750b92dcd404d04ddc2ec5b5d6}{Nr});
-
-        \hyperlink{gmatrix_8h_acc0c1227b2661cf404175b537c35cd10}{PGMATRIX\_TRANSPOSE\_COPY}(pT,pMat);
-
-        pAux1 = \hyperlink{gmatrix__plus_8h_a17b482a0aaa68d1f4c1c30a1a72dacbb}{PGMATRIX\_MULTIPLY\_COPY\_FREE}(pMat,pT,
+226                                                     \{
+227 
+228         \hyperlink{structGMATRIX}{PGMATRIX} pApinv  = NULL;
+229         \hyperlink{structGMATRIX}{PGMATRIX} pAux1   = NULL;
+230         \hyperlink{structGMATRIX}{PGMATRIX} pT      = NULL;
+231         \hyperlink{structGMATRIX}{PGMATRIX} pMatRes = NULL;
+232 
+233         pT = \hyperlink{gmatrix_8h_adf8dc9cfae5700de80c88604082ffa10}{PGMATRIX\_ALLOC}(pMat->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc},pMat->\hyperlink{structGMATRIX_ad0cd3f750b92dcd404d04ddc2ec5b5d6}{Nr});
+234 
+235         \hyperlink{gmatrix_8h_acc0c1227b2661cf404175b537c35cd10}{PGMATRIX\_TRANSPOSE\_COPY}(pT,pMat);
+236 
+237         pAux1 = \hyperlink{gmatrix__plus_8h_a17b482a0aaa68d1f4c1c30a1a72dacbb}{PGMATRIX\_MULTIPLY\_COPY\_FREE}(pMat,pT,
       \hyperlink{gmatrix__plus_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE},\hyperlink{gmatrix__plus_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
-        
-        pApinv = \hyperlink{gmatrix_8h_adf8dc9cfae5700de80c88604082ffa10}{PGMATRIX\_ALLOC}(pAux1->\hyperlink{structGMATRIX_ad0cd3f750b92dcd404d04ddc2ec5b5d6}{Nr},pAux1->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc});
-        \hyperlink{gmatrix__linalg_8h_a1d2946ff9ab4154e8f3c930eb559a0da}{PGMATRIX\_INVERSE\_COPY}(pApinv,pAux1);
-
-        \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(pAux1);
-
-        pMatRes = \hyperlink{gmatrix__plus_8h_a17b482a0aaa68d1f4c1c30a1a72dacbb}{PGMATRIX\_MULTIPLY\_COPY\_FREE}(pT,
-      pApinv,\hyperlink{gmatrix__plus_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE},\hyperlink{gmatrix__plus_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
-
-        \textcolor{keywordflow}{return} pMatRes;
-
-\}
+238         
+239         pApinv = \hyperlink{gmatrix_8h_adf8dc9cfae5700de80c88604082ffa10}{PGMATRIX\_ALLOC}(pAux1->\hyperlink{structGMATRIX_ad0cd3f750b92dcd404d04ddc2ec5b5d6}{Nr},pAux1->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc});
+240         \hyperlink{gmatrix__linalg_8h_a1d2946ff9ab4154e8f3c930eb559a0da}{PGMATRIX\_INVERSE\_COPY}(pApinv,pAux1);
+241 
+242         \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(pAux1);
+243 
+244         pMatRes = \hyperlink{gmatrix__plus_8h_a17b482a0aaa68d1f4c1c30a1a72dacbb}{PGMATRIX\_MULTIPLY\_COPY\_FREE}(pT,pApinv,
+      \hyperlink{gmatrix__plus_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE},\hyperlink{gmatrix__plus_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+245 
+246         \textcolor{keywordflow}{return} pMatRes;
+247 
+248 \}
 \end{DoxyCode}
 
 
@@ -695,40 +687,39 @@ References F\-A\-L\-S\-E, G\-M\-A\-T\-R\-I\-X\-::\-Nc, P\-G\-M\-A\-T\-R\-I\-X\-\
 
 
 \begin{DoxyCode}
-                                                                        \{
-
-
-        \hyperlink{structGMATRIX}{PGMATRIX} pApinv  = NULL;
-        \hyperlink{structGMATRIX}{PGMATRIX} pAux1   = NULL;
-        \hyperlink{structGMATRIX}{PGMATRIX} In      = NULL;
-        \hyperlink{structGMATRIX}{PGMATRIX} pMatRes = NULL;
-        \textcolor{keywordtype}{int} i=0,j=0;
-
-        In = \hyperlink{gmatrix_8h_adf8dc9cfae5700de80c88604082ffa10}{PGMATRIX\_ALLOC}(pMat->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc},pMat->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc});
-
-        \textcolor{keywordflow}{for}(i=0;i<pMat->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc};i++)\{
-
-                \textcolor{keywordflow}{for}(j=0;j<pMat->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc};j++)\{
-                        \textcolor{keywordflow}{if}(i==j)\{
-                                \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(In,i+1,j+1) = 1;
-                        \}
-                        \textcolor{keywordflow}{else}\{
-                                \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(In,i+1,j+1) = 0;
-                        \}
-                \}
-        \}
-
-        pApinv = \hyperlink{gmatrix__plus_8h_a4785be0fc969b516ff9c22b6736738ab}{PGMATRIX\_RIGHT\_PSEUDOINVERSE}(pMat)
-      ;
-
-        pAux1 = \hyperlink{gmatrix__plus_8h_a17b482a0aaa68d1f4c1c30a1a72dacbb}{PGMATRIX\_MULTIPLY\_COPY\_FREE}(pApinv,
-      pMat,\hyperlink{gmatrix__plus_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE},\hyperlink{gmatrix__plus_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
-        
-        pMatRes = \hyperlink{gmatrix__plus_8h_a146d9062e4325cc3b97990ae51b96d95}{PGMATRIX\_SUBTRACT\_COPY\_FREE}(In,
-      pAux1,\hyperlink{gmatrix__plus_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE},\hyperlink{gmatrix__plus_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
-
-        \textcolor{keywordflow}{return} pMatRes;
-\}
+255                                                                         \{
+256 
+257 
+258         \hyperlink{structGMATRIX}{PGMATRIX} pApinv  = NULL;
+259         \hyperlink{structGMATRIX}{PGMATRIX} pAux1   = NULL;
+260         \hyperlink{structGMATRIX}{PGMATRIX} In      = NULL;
+261         \hyperlink{structGMATRIX}{PGMATRIX} pMatRes = NULL;
+262         \textcolor{keywordtype}{int} i=0,j=0;
+263 
+264         In = \hyperlink{gmatrix_8h_adf8dc9cfae5700de80c88604082ffa10}{PGMATRIX\_ALLOC}(pMat->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc},pMat->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc});
+265 
+266         \textcolor{keywordflow}{for}(i=0;i<pMat->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc};i++)\{
+267 
+268                 \textcolor{keywordflow}{for}(j=0;j<pMat->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc};j++)\{
+269                         \textcolor{keywordflow}{if}(i==j)\{
+270                                 \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(In,i+1,j+1) = 1;
+271                         \}
+272                         \textcolor{keywordflow}{else}\{
+273                                 \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(In,i+1,j+1) = 0;
+274                         \}
+275                 \}
+276         \}
+277 
+278         pApinv = \hyperlink{gmatrix__plus_8h_a4785be0fc969b516ff9c22b6736738ab}{PGMATRIX\_RIGHT\_PSEUDOINVERSE}(pMat);
+279 
+280         pAux1 = \hyperlink{gmatrix__plus_8h_a17b482a0aaa68d1f4c1c30a1a72dacbb}{PGMATRIX\_MULTIPLY\_COPY\_FREE}(pApinv,pMat,
+      \hyperlink{gmatrix__plus_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE},\hyperlink{gmatrix__plus_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+281         
+282         pMatRes = \hyperlink{gmatrix__plus_8h_a146d9062e4325cc3b97990ae51b96d95}{PGMATRIX\_SUBTRACT\_COPY\_FREE}(In,pAux1,
+      \hyperlink{gmatrix__plus_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE},\hyperlink{gmatrix__plus_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+283 
+284         \textcolor{keywordflow}{return} pMatRes;
+285 \}
 \end{DoxyCode}
 
 
@@ -760,21 +751,21 @@ References D\-Q\-::d, G\-M\-A\-T\-R\-I\-X\-\_\-\-A\-S\-S\-E\-R\-T, G\-M\-A\-T\-R
 
 
 \begin{DoxyCode}
-                                                               \{
-
-        \hyperlink{gmatrix_8h_a4fda4272d6c3c60d6b28638268da17b2}{GMATRIX\_ASSERT}(\textcolor{stringliteral}{"PGMATRIX\_SET\_COLUMN\_BY\_DQ"},(col > Pmat->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{
-      Nc})&&(Pmat->\hyperlink{structGMATRIX_ad0cd3f750b92dcd404d04ddc2ec5b5d6}{Nr} != 8));
-
-        \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Pmat,1,col) = dq->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0];
-        \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Pmat,2,col) = dq->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1];
-        \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Pmat,3,col) = dq->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2];
-        \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Pmat,4,col) = dq->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3];
-        \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Pmat,5,col) = dq->\hyperlink{structDQ_a535cdb52876521fd6abbfcf211a7c702}{d}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0];
-        \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Pmat,6,col) = dq->\hyperlink{structDQ_a535cdb52876521fd6abbfcf211a7c702}{d}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1];
-        \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Pmat,7,col) = dq->\hyperlink{structDQ_a535cdb52876521fd6abbfcf211a7c702}{d}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2];
-        \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Pmat,8,col) = dq->\hyperlink{structDQ_a535cdb52876521fd6abbfcf211a7c702}{d}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3];
-
-\}
+17                                                                \{
+18 
+19         \hyperlink{gmatrix_8h_a4fda4272d6c3c60d6b28638268da17b2}{GMATRIX\_ASSERT}(\textcolor{stringliteral}{"PGMATRIX\_SET\_COLUMN\_BY\_DQ"},(col > Pmat->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc})&&(Pmat->
+      \hyperlink{structGMATRIX_ad0cd3f750b92dcd404d04ddc2ec5b5d6}{Nr} != 8));
+20 
+21         \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Pmat,1,col) = dq->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0];
+22         \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Pmat,2,col) = dq->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1];
+23         \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Pmat,3,col) = dq->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2];
+24         \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Pmat,4,col) = dq->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3];
+25         \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Pmat,5,col) = dq->\hyperlink{structDQ_a535cdb52876521fd6abbfcf211a7c702}{d}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0];
+26         \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Pmat,6,col) = dq->\hyperlink{structDQ_a535cdb52876521fd6abbfcf211a7c702}{d}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1];
+27         \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Pmat,7,col) = dq->\hyperlink{structDQ_a535cdb52876521fd6abbfcf211a7c702}{d}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2];
+28         \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Pmat,8,col) = dq->\hyperlink{structDQ_a535cdb52876521fd6abbfcf211a7c702}{d}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3];
+29 
+30 \}
 \end{DoxyCode}
 \hypertarget{gmatrix__plus_8h_a146d9062e4325cc3b97990ae51b96d95}{\index{gmatrix\-\_\-plus.\-h@{gmatrix\-\_\-plus.\-h}!P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-S\-U\-B\-T\-R\-A\-C\-T\-\_\-\-C\-O\-P\-Y\-\_\-\-F\-R\-E\-E@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-S\-U\-B\-T\-R\-A\-C\-T\-\_\-\-C\-O\-P\-Y\-\_\-\-F\-R\-E\-E}}
 \index{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-S\-U\-B\-T\-R\-A\-C\-T\-\_\-\-C\-O\-P\-Y\-\_\-\-F\-R\-E\-E@{P\-G\-M\-A\-T\-R\-I\-X\-\_\-\-S\-U\-B\-T\-R\-A\-C\-T\-\_\-\-C\-O\-P\-Y\-\_\-\-F\-R\-E\-E}!gmatrix_plus.h@{gmatrix\-\_\-plus.\-h}}
@@ -800,19 +791,18 @@ Referenced by Cartesian\-\_\-pose\-\_\-controller\-::control(), Cartesian\-\_\-v
 
 
 \begin{DoxyCode}
-                                                                               
-                 \{
-        
-        \hyperlink{structGMATRIX}{PGMATRIX} pMatRes = \hyperlink{gmatrix__plus_8h_a6cacc3f1b48d458d5cfc9e03159e3d81}{PGMATRIX\_CREATE\_ZEROES}
-      (pMatA->\hyperlink{structGMATRIX_ad0cd3f750b92dcd404d04ddc2ec5b5d6}{Nr},pMatA->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc});
-
-        \hyperlink{gmatrix_8h_ab834f22f7bb435b8524456cc0bb3a5cc}{PGMATRIX\_SUBTRACT\_COPY}(pMatRes, pMatA, pMatB);
-
-        \textcolor{keywordflow}{if}(freeA)\{\hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(pMatA);\}
-        \textcolor{keywordflow}{if}(freeB)\{\hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(pMatB);\}
-
-        \textcolor{keywordflow}{return} pMatRes;
-\}
+75                                                                                           \{
+76         
+77         \hyperlink{structGMATRIX}{PGMATRIX} pMatRes = \hyperlink{gmatrix__plus_8h_a6cacc3f1b48d458d5cfc9e03159e3d81}{PGMATRIX\_CREATE\_ZEROES}(pMatA->
+      \hyperlink{structGMATRIX_ad0cd3f750b92dcd404d04ddc2ec5b5d6}{Nr},pMatA->\hyperlink{structGMATRIX_ad90d07add5c0ed480c17f9d407a00f30}{Nc});
+78 
+79         \hyperlink{gmatrix_8h_ab834f22f7bb435b8524456cc0bb3a5cc}{PGMATRIX\_SUBTRACT\_COPY}(pMatRes, pMatA, pMatB);
+80 
+81         \textcolor{keywordflow}{if}(freeA)\{\hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(pMatA);\}
+82         \textcolor{keywordflow}{if}(freeB)\{\hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(pMatB);\}
+83 
+84         \textcolor{keywordflow}{return} pMatRes;
+85 \}
 \end{DoxyCode}
 
 

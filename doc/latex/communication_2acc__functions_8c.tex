@@ -46,16 +46,16 @@ Referenced by acc\-\_\-read\-\_\-all\-\_\-reg().
 
 
 \begin{DoxyCode}
-\{
-  \textcolor{keywordtype}{char} \hyperlink{communication_2spi__functions_8c_a46a6da6b1936191571fd30b2a749f38c}{bits}[9];
-  \textcolor{keywordtype}{int} i;
-  \textcolor{keywordflow}{for}( i=0; i<8; i++)
-  \{
-    bits[i]=((*hvalue)<<i)>>7+\hyperlink{communication_2imu__functions_8h_aa3f75ad2972ec8996ce5206feac0e52c}{ASCII\_0};
-  \}
-  bits[8]=\textcolor{charliteral}{'\(\backslash\)0'};
-  \textcolor{keywordflow}{return} \hyperlink{communication_2spi__functions_8c_a46a6da6b1936191571fd30b2a749f38c}{bits};
-\}
+185 \{
+186   \textcolor{keywordtype}{char} \hyperlink{communication_2spi__functions_8c_a46a6da6b1936191571fd30b2a749f38c}{bits}[9];
+187   \textcolor{keywordtype}{int} i;
+188   \textcolor{keywordflow}{for}( i=0; i<8; i++)
+189   \{
+190     bits[i]=((*hvalue)<<i)>>7+\hyperlink{communication_2imu__functions_8h_aa3f75ad2972ec8996ce5206feac0e52c}{ASCII\_0};
+191   \}
+192   bits[8]=\textcolor{charliteral}{'\(\backslash\)0'};
+193   \textcolor{keywordflow}{return} \hyperlink{communication_2spi__functions_8c_a46a6da6b1936191571fd30b2a749f38c}{bits};
+194 \}
 \end{DoxyCode}
 
 

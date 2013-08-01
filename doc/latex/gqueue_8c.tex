@@ -98,23 +98,22 @@ Referenced by g\-Data\-Logger\-\_\-\-I\-P\-C\-Update(), and g\-Data\-Logger\-\_\
 
 
 \begin{DoxyCode}
-\{
-        \textcolor{keywordflow}{if}(NReader>=pQueueControl->\hyperlink{structGQUEUECONTROL_a790618cf693d7e4249fec2f5074b40e3}{NReaders})\{
-                \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
-        \}
-
-        \textcolor{keywordflow}{if}(pQueueControl->\hyperlink{structGQUEUECONTROL_a614237a6b5ee3fca394e40a0274d5b43}{WriteIndex} >= pQueueControl->\hyperlink{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}{ReadIndex}
-      [NReader])\{
-                *Index = pQueueControl->\hyperlink{structGQUEUECONTROL_a614237a6b5ee3fca394e40a0274d5b43}{WriteIndex}-pQueueControl->
+315 \{
+316         \textcolor{keywordflow}{if}(NReader>=pQueueControl->\hyperlink{structGQUEUECONTROL_a790618cf693d7e4249fec2f5074b40e3}{NReaders})\{
+317                 \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+318         \}
+319 
+320         \textcolor{keywordflow}{if}(pQueueControl->\hyperlink{structGQUEUECONTROL_a614237a6b5ee3fca394e40a0274d5b43}{WriteIndex} >= pQueueControl->\hyperlink{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}{ReadIndex}[NReader])\{
+321                 *Index = pQueueControl->\hyperlink{structGQUEUECONTROL_a614237a6b5ee3fca394e40a0274d5b43}{WriteIndex}-pQueueControl->
       \hyperlink{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}{ReadIndex}[NReader];
-        \}
-        \textcolor{keywordflow}{else}\{
-                *Index = pQueueControl->\hyperlink{structGQUEUECONTROL_a4db75bcca77dbc6ea7d8d5c3cd3a365f}{Size}-(pQueueControl->\hyperlink{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}{ReadIndex}
-      [NReader]-pQueueControl->\hyperlink{structGQUEUECONTROL_a614237a6b5ee3fca394e40a0274d5b43}{WriteIndex});
-        \}
-        
-        \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
-\}                      
+322         \}
+323         \textcolor{keywordflow}{else}\{
+324                 *Index = pQueueControl->\hyperlink{structGQUEUECONTROL_a4db75bcca77dbc6ea7d8d5c3cd3a365f}{Size}-(pQueueControl->\hyperlink{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}{ReadIndex}[NReader]-pQueueControl
+      ->\hyperlink{structGQUEUECONTROL_a614237a6b5ee3fca394e40a0274d5b43}{WriteIndex});
+325         \}
+326         
+327         \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
+328 \}                      
 \end{DoxyCode}
 
 
@@ -148,28 +147,28 @@ References B\-E\-G\-I\-N\-\_\-\-A\-T\-O\-M\-I\-C, E\-N\-D\-\_\-\-A\-T\-O\-M\-I\-
 
 
 \begin{DoxyCode}
-\{
-        \textcolor{keywordflow}{if}(NReader>=pQueueControl->\hyperlink{structGQUEUECONTROL_a790618cf693d7e4249fec2f5074b40e3}{NReaders})\{
-                \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
-        \}
-
-        \textcolor{keywordflow}{if}(pQueueControl->\hyperlink{structGQUEUECONTROL_a4d58bdb6b0dc93bb6034c4209b6e7915}{FlagStillNotWritten} == \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE})\{
-                \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
-        \}
-    
-\hyperlink{gqueue_8c_a4dbeb573edcedfa8f803e1891730e526}{BEGIN\_ATOMIC}();
-
-        *Index = (pQueueControl->\hyperlink{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}{ReadIndex}[NReader]-IndexHorizon);
-        \textcolor{keywordflow}{if}(*Index<0)\{
-                *Index += pQueueControl->\hyperlink{structGQUEUECONTROL_a4db75bcca77dbc6ea7d8d5c3cd3a365f}{Size};
-        \}
-        \hyperlink{gqueue_8c_abab4c6aeb3d57e43aa16285fe4f59f66}{gQUEUE\_UnwrapReadIndex}(pQueueControl, NReader);
-
-\hyperlink{gqueue_8c_a8980cf83b4c1f4b1d693d1c9d2a54535}{END\_ATOMIC}();
-
-
-    \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
-\}                      
+167 \{
+168         \textcolor{keywordflow}{if}(NReader>=pQueueControl->\hyperlink{structGQUEUECONTROL_a790618cf693d7e4249fec2f5074b40e3}{NReaders})\{
+169                 \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+170         \}
+171 
+172         \textcolor{keywordflow}{if}(pQueueControl->\hyperlink{structGQUEUECONTROL_a4d58bdb6b0dc93bb6034c4209b6e7915}{FlagStillNotWritten} == \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE})\{
+173                 \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+174         \}
+175     
+176 \hyperlink{gqueue_8c_a4dbeb573edcedfa8f803e1891730e526}{BEGIN\_ATOMIC}();
+177 
+178         *Index = (pQueueControl->\hyperlink{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}{ReadIndex}[NReader]-IndexHorizon);
+179         \textcolor{keywordflow}{if}(*Index<0)\{
+180                 *Index += pQueueControl->\hyperlink{structGQUEUECONTROL_a4db75bcca77dbc6ea7d8d5c3cd3a365f}{Size};
+181         \}
+182         \hyperlink{gqueue_8c_abab4c6aeb3d57e43aa16285fe4f59f66}{gQUEUE\_UnwrapReadIndex}(pQueueControl, NReader);
+183 
+184 \hyperlink{gqueue_8c_a8980cf83b4c1f4b1d693d1c9d2a54535}{END\_ATOMIC}();
+185 
+186 
+187     \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
+188 \}                      
 \end{DoxyCode}
 
 
@@ -201,24 +200,24 @@ References B\-E\-G\-I\-N\-\_\-\-A\-T\-O\-M\-I\-C, E\-N\-D\-\_\-\-A\-T\-O\-M\-I\-
 
 
 \begin{DoxyCode}
-\{
-
-    \textcolor{keywordflow}{if}(pQueueControl->\hyperlink{structGQUEUECONTROL_a4d58bdb6b0dc93bb6034c4209b6e7915}{FlagStillNotWritten} == \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE})\{
-        \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
-    \}
-
-\hyperlink{gqueue_8c_a4dbeb573edcedfa8f803e1891730e526}{BEGIN\_ATOMIC}();
-    
-        *Index = (pQueueControl->\hyperlink{structGQUEUECONTROL_a614237a6b5ee3fca394e40a0274d5b43}{WriteIndex}-IndexHorizon);
-        \textcolor{keywordflow}{if}(*Index<0)\{
-                *Index += pQueueControl->\hyperlink{structGQUEUECONTROL_a4db75bcca77dbc6ea7d8d5c3cd3a365f}{Size};
-        \}
-        \hyperlink{gqueue_8c_a070de567ba00fb02d6c480840c15d31d}{gQUEUE\_UnwrapWriteIndex}(pQueueControl);
-
-\hyperlink{gqueue_8c_a8980cf83b4c1f4b1d693d1c9d2a54535}{END\_ATOMIC}();
-
-    \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
-\}                      
+204 \{
+205 
+206     \textcolor{keywordflow}{if}(pQueueControl->\hyperlink{structGQUEUECONTROL_a4d58bdb6b0dc93bb6034c4209b6e7915}{FlagStillNotWritten} == \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE})\{
+207         \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+208     \}
+209 
+210 \hyperlink{gqueue_8c_a4dbeb573edcedfa8f803e1891730e526}{BEGIN\_ATOMIC}();
+211     
+212         *Index = (pQueueControl->\hyperlink{structGQUEUECONTROL_a614237a6b5ee3fca394e40a0274d5b43}{WriteIndex}-IndexHorizon);
+213         \textcolor{keywordflow}{if}(*Index<0)\{
+214                 *Index += pQueueControl->\hyperlink{structGQUEUECONTROL_a4db75bcca77dbc6ea7d8d5c3cd3a365f}{Size};
+215         \}
+216         \hyperlink{gqueue_8c_a070de567ba00fb02d6c480840c15d31d}{gQUEUE\_UnwrapWriteIndex}(pQueueControl);
+217 
+218 \hyperlink{gqueue_8c_a8980cf83b4c1f4b1d693d1c9d2a54535}{END\_ATOMIC}();
+219 
+220     \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
+221 \}                      
 \end{DoxyCode}
 
 
@@ -254,28 +253,28 @@ Referenced by g\-Data\-Logger\-\_\-\-Declare\-Variable().
 
 
 \begin{DoxyCode}
-\{
-        \textcolor{keywordtype}{int} n;
-
-        \textcolor{keywordflow}{if}(NReaders > \hyperlink{gqueue_8h_ac3f84fecc52fe0f23ea7d5157cb92997}{MAXSIZE\_QUEUE\_READ\_GATES})\{
-                \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
-        \}
-
-        pQueueControl->\hyperlink{structGQUEUECONTROL_a4db75bcca77dbc6ea7d8d5c3cd3a365f}{Size} = Size,
-        pQueueControl->\hyperlink{structGQUEUECONTROL_a790618cf693d7e4249fec2f5074b40e3}{NReaders} = NReaders;
-        pQueueControl->\hyperlink{structGQUEUECONTROL_a4d58bdb6b0dc93bb6034c4209b6e7915}{FlagStillNotWritten} = \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
-        \textcolor{keywordflow}{for}(n=0;n<NReaders;++n)\{
-                pQueueControl->\hyperlink{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}{ReadIndex}[n] = 0;
-                pQueueControl->\hyperlink{structGQUEUECONTROL_a9336a08f0410235b38b78638b0e3f882}{FlagStillNotRead}[n] = \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
-                pQueueControl->\hyperlink{structGQUEUECONTROL_a5f54a26afa8554ed2f161b83aba14f5c}{FlagFull}[n] = \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
-        \}
-        pQueueControl->\hyperlink{structGQUEUECONTROL_a614237a6b5ee3fca394e40a0274d5b43}{WriteIndex} = 0;
-
-\textcolor{preprocessor}{#if GQUEUE\_RTAI\_SUPPORT}
-\textcolor{preprocessor}{}        rt\_spl\_init(&pQueueControl->SPLAtomicAccess);
-\textcolor{preprocessor}{#endif}
-\textcolor{preprocessor}{}    \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
-\}                      
+32 \{
+33         \textcolor{keywordtype}{int} n;
+34 
+35         \textcolor{keywordflow}{if}(NReaders > \hyperlink{gqueue_8h_ac3f84fecc52fe0f23ea7d5157cb92997}{MAXSIZE\_QUEUE\_READ\_GATES})\{
+36                 \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+37         \}
+38 
+39         pQueueControl->\hyperlink{structGQUEUECONTROL_a4db75bcca77dbc6ea7d8d5c3cd3a365f}{Size} = Size,
+40         pQueueControl->\hyperlink{structGQUEUECONTROL_a790618cf693d7e4249fec2f5074b40e3}{NReaders} = NReaders;
+41         pQueueControl->\hyperlink{structGQUEUECONTROL_a4d58bdb6b0dc93bb6034c4209b6e7915}{FlagStillNotWritten} = \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
+42         \textcolor{keywordflow}{for}(n=0;n<NReaders;++n)\{
+43                 pQueueControl->\hyperlink{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}{ReadIndex}[n] = 0;
+44                 pQueueControl->\hyperlink{structGQUEUECONTROL_a9336a08f0410235b38b78638b0e3f882}{FlagStillNotRead}[n] = \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
+45                 pQueueControl->\hyperlink{structGQUEUECONTROL_a5f54a26afa8554ed2f161b83aba14f5c}{FlagFull}[n] = \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+46         \}
+47         pQueueControl->\hyperlink{structGQUEUECONTROL_a614237a6b5ee3fca394e40a0274d5b43}{WriteIndex} = 0;
+48 
+49 \textcolor{preprocessor}{#if GQUEUE\_RTAI\_SUPPORT}
+50 \textcolor{preprocessor}{}        rt\_spl\_init(&pQueueControl->SPLAtomicAccess);
+51 \textcolor{preprocessor}{#endif}
+52 \textcolor{preprocessor}{}    \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
+53 \}                      
 \end{DoxyCode}
 
 
@@ -307,48 +306,45 @@ References B\-E\-G\-I\-N\-\_\-\-A\-T\-O\-M\-I\-C, E\-N\-D\-\_\-\-A\-T\-O\-M\-I\-
 
 
 \begin{DoxyCode}
-\{
-        \textcolor{keywordflow}{if}(NReader>=pQueueControl->\hyperlink{structGQUEUECONTROL_a790618cf693d7e4249fec2f5074b40e3}{NReaders})\{
-                \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
-        \}
-        
-        \textcolor{keywordflow}{if}(pQueueControl->\hyperlink{structGQUEUECONTROL_a4d58bdb6b0dc93bb6034c4209b6e7915}{FlagStillNotWritten} == \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE})\{
-                \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
-        \}
-
-\hyperlink{gqueue_8c_a4dbeb573edcedfa8f803e1891730e526}{BEGIN\_ATOMIC}();
-        
-        \textcolor{keywordflow}{if}(pQueueControl->\hyperlink{structGQUEUECONTROL_a9336a08f0410235b38b78638b0e3f882}{FlagStillNotRead}[NReader] == \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE}
-      )\{
-                pQueueControl->\hyperlink{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}{ReadIndex}[NReader] = pQueueControl->
+68 \{
+69         \textcolor{keywordflow}{if}(NReader>=pQueueControl->\hyperlink{structGQUEUECONTROL_a790618cf693d7e4249fec2f5074b40e3}{NReaders})\{
+70                 \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+71         \}
+72         
+73         \textcolor{keywordflow}{if}(pQueueControl->\hyperlink{structGQUEUECONTROL_a4d58bdb6b0dc93bb6034c4209b6e7915}{FlagStillNotWritten} == \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE})\{
+74                 \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+75         \}
+76 
+77 \hyperlink{gqueue_8c_a4dbeb573edcedfa8f803e1891730e526}{BEGIN\_ATOMIC}();
+78         
+79         \textcolor{keywordflow}{if}(pQueueControl->\hyperlink{structGQUEUECONTROL_a9336a08f0410235b38b78638b0e3f882}{FlagStillNotRead}[NReader] == \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE})\{
+80                 pQueueControl->\hyperlink{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}{ReadIndex}[NReader] = pQueueControl->
       \hyperlink{structGQUEUECONTROL_a614237a6b5ee3fca394e40a0274d5b43}{WriteIndex};
-                *Index = pQueueControl->\hyperlink{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}{ReadIndex}[NReader];
-                pQueueControl->\hyperlink{structGQUEUECONTROL_a9336a08f0410235b38b78638b0e3f882}{FlagStillNotRead}[NReader] = \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{
-      FALSE};
-        \}
-        \textcolor{keywordflow}{else}\{
-                \textcolor{keywordflow}{if}(pQueueControl->\hyperlink{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}{ReadIndex}[NReader] == pQueueControl
-      ->\hyperlink{structGQUEUECONTROL_a614237a6b5ee3fca394e40a0274d5b43}{WriteIndex})\{
-                        pQueueControl->\hyperlink{structGQUEUECONTROL_a5f54a26afa8554ed2f161b83aba14f5c}{FlagFull}[NReader] = \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};  
-                        *Index = -1;
-                \}
-                \textcolor{keywordflow}{else}\{
-                        pQueueControl->\hyperlink{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}{ReadIndex}[NReader] = 
-      pQueueControl->\hyperlink{structGQUEUECONTROL_a614237a6b5ee3fca394e40a0274d5b43}{WriteIndex};
-                        \hyperlink{gqueue_8c_abab4c6aeb3d57e43aa16285fe4f59f66}{gQUEUE\_UnwrapReadIndex}(
-      pQueueControl,NReader);
-                        *Index = pQueueControl->\hyperlink{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}{ReadIndex}[NReader];
-                \}
-        \}
-
-\hyperlink{gqueue_8c_a8980cf83b4c1f4b1d693d1c9d2a54535}{END\_ATOMIC}();
-
-        \textcolor{keywordflow}{if}(*Index==-1)\{
-                \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
-        \}  
-
-    \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
-\}                      
+81                 *Index = pQueueControl->\hyperlink{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}{ReadIndex}[NReader];
+82                 pQueueControl->\hyperlink{structGQUEUECONTROL_a9336a08f0410235b38b78638b0e3f882}{FlagStillNotRead}[NReader] = \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+83         \}
+84         \textcolor{keywordflow}{else}\{
+85                 \textcolor{keywordflow}{if}(pQueueControl->\hyperlink{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}{ReadIndex}[NReader] == pQueueControl->
+      \hyperlink{structGQUEUECONTROL_a614237a6b5ee3fca394e40a0274d5b43}{WriteIndex})\{
+86                         pQueueControl->\hyperlink{structGQUEUECONTROL_a5f54a26afa8554ed2f161b83aba14f5c}{FlagFull}[NReader] = \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};  
+87                         *Index = -1;
+88                 \}
+89                 \textcolor{keywordflow}{else}\{
+90                         pQueueControl->\hyperlink{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}{ReadIndex}[NReader] = pQueueControl->
+      \hyperlink{structGQUEUECONTROL_a614237a6b5ee3fca394e40a0274d5b43}{WriteIndex};
+91                         \hyperlink{gqueue_8c_abab4c6aeb3d57e43aa16285fe4f59f66}{gQUEUE\_UnwrapReadIndex}(pQueueControl,NReader);
+92                         *Index = pQueueControl->\hyperlink{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}{ReadIndex}[NReader];
+93                 \}
+94         \}
+95 
+96 \hyperlink{gqueue_8c_a8980cf83b4c1f4b1d693d1c9d2a54535}{END\_ATOMIC}();
+97 
+98         \textcolor{keywordflow}{if}(*Index==-1)\{
+99                 \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+100         \}  
+101 
+102     \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
+103 \}                      
 \end{DoxyCode}
 
 
@@ -384,43 +380,40 @@ Referenced by g\-Data\-Logger\-\_\-\-I\-P\-C\-Update(), and g\-Data\-Logger\-\_\
 
 
 \begin{DoxyCode}
-\{
-        \textcolor{keywordflow}{if}(NReader>=pQueueControl->\hyperlink{structGQUEUECONTROL_a790618cf693d7e4249fec2f5074b40e3}{NReaders})\{
-                \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
-        \}
-
-        \textcolor{keywordflow}{if}(pQueueControl->\hyperlink{structGQUEUECONTROL_a4d58bdb6b0dc93bb6034c4209b6e7915}{FlagStillNotWritten} == \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE})\{
-                \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
-        \}
-    
-\hyperlink{gqueue_8c_a4dbeb573edcedfa8f803e1891730e526}{BEGIN\_ATOMIC}();
-        \textcolor{keywordflow}{if}(pQueueControl->\hyperlink{structGQUEUECONTROL_a9336a08f0410235b38b78638b0e3f882}{FlagStillNotRead}[NReader] == \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE}
-      )\{
-                *Index = pQueueControl->\hyperlink{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}{ReadIndex}[NReader];
-                pQueueControl->\hyperlink{structGQUEUECONTROL_a9336a08f0410235b38b78638b0e3f882}{FlagStillNotRead}[NReader] = \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{
-      FALSE};
-        \}
-        \textcolor{keywordflow}{else}\{
-                \textcolor{keywordflow}{if}(pQueueControl->\hyperlink{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}{ReadIndex}[NReader] == pQueueControl
-      ->\hyperlink{structGQUEUECONTROL_a614237a6b5ee3fca394e40a0274d5b43}{WriteIndex})\{
-                        pQueueControl->\hyperlink{structGQUEUECONTROL_a5f54a26afa8554ed2f161b83aba14f5c}{FlagFull}[NReader] = \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};  
-                        *Index = -1;
-                \}
-                \textcolor{keywordflow}{else}\{
-                        ++pQueueControl->\hyperlink{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}{ReadIndex}[NReader];
-                        \hyperlink{gqueue_8c_abab4c6aeb3d57e43aa16285fe4f59f66}{gQUEUE\_UnwrapReadIndex}(
-      pQueueControl,NReader);
-                        *Index = pQueueControl->\hyperlink{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}{ReadIndex}[NReader];
-                \}
-        \}
-\hyperlink{gqueue_8c_a8980cf83b4c1f4b1d693d1c9d2a54535}{END\_ATOMIC}();
-
-        \textcolor{keywordflow}{if}(*Index==-1)\{
-                \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
-        \}  
-
-    \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
-\}                      
+118 \{
+119         \textcolor{keywordflow}{if}(NReader>=pQueueControl->\hyperlink{structGQUEUECONTROL_a790618cf693d7e4249fec2f5074b40e3}{NReaders})\{
+120                 \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+121         \}
+122 
+123         \textcolor{keywordflow}{if}(pQueueControl->\hyperlink{structGQUEUECONTROL_a4d58bdb6b0dc93bb6034c4209b6e7915}{FlagStillNotWritten} == \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE})\{
+124                 \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+125         \}
+126     
+127 \hyperlink{gqueue_8c_a4dbeb573edcedfa8f803e1891730e526}{BEGIN\_ATOMIC}();
+128         \textcolor{keywordflow}{if}(pQueueControl->\hyperlink{structGQUEUECONTROL_a9336a08f0410235b38b78638b0e3f882}{FlagStillNotRead}[NReader] == \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE})\{
+129                 *Index = pQueueControl->\hyperlink{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}{ReadIndex}[NReader];
+130                 pQueueControl->\hyperlink{structGQUEUECONTROL_a9336a08f0410235b38b78638b0e3f882}{FlagStillNotRead}[NReader] = \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+131         \}
+132         \textcolor{keywordflow}{else}\{
+133                 \textcolor{keywordflow}{if}(pQueueControl->\hyperlink{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}{ReadIndex}[NReader] == pQueueControl->
+      \hyperlink{structGQUEUECONTROL_a614237a6b5ee3fca394e40a0274d5b43}{WriteIndex})\{
+134                         pQueueControl->\hyperlink{structGQUEUECONTROL_a5f54a26afa8554ed2f161b83aba14f5c}{FlagFull}[NReader] = \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};  
+135                         *Index = -1;
+136                 \}
+137                 \textcolor{keywordflow}{else}\{
+138                         ++pQueueControl->\hyperlink{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}{ReadIndex}[NReader];
+139                         \hyperlink{gqueue_8c_abab4c6aeb3d57e43aa16285fe4f59f66}{gQUEUE\_UnwrapReadIndex}(pQueueControl,NReader);
+140                         *Index = pQueueControl->\hyperlink{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}{ReadIndex}[NReader];
+141                 \}
+142         \}
+143 \hyperlink{gqueue_8c_a8980cf83b4c1f4b1d693d1c9d2a54535}{END\_ATOMIC}();
+144 
+145         \textcolor{keywordflow}{if}(*Index==-1)\{
+146                 \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+147         \}  
+148 
+149     \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
+150 \}                      
 \end{DoxyCode}
 
 
@@ -467,42 +460,40 @@ Referenced by g\-Data\-Logger\-\_\-\-Insert\-Variable().
 
 
 \begin{DoxyCode}
-\{
-        \textcolor{keywordtype}{int} n;
-        \textcolor{keywordtype}{int}     FlagNotFull = \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
-
-\hyperlink{gqueue_8c_a4dbeb573edcedfa8f803e1891730e526}{BEGIN\_ATOMIC}();
-    
-    \textcolor{keywordflow}{if}(pQueueControl->\hyperlink{structGQUEUECONTROL_a4d58bdb6b0dc93bb6034c4209b6e7915}{FlagStillNotWritten} == \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE})\{
-        *Index = pQueueControl->\hyperlink{structGQUEUECONTROL_a614237a6b5ee3fca394e40a0274d5b43}{WriteIndex};
-        pQueueControl->\hyperlink{structGQUEUECONTROL_a4d58bdb6b0dc93bb6034c4209b6e7915}{FlagStillNotWritten} = \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
-        \}
-    \textcolor{keywordflow}{else}\{
-                \textcolor{comment}{/* Increment write index in two positions to test if queue is
-       full */}
-        pQueueControl->\hyperlink{structGQUEUECONTROL_a614237a6b5ee3fca394e40a0274d5b43}{WriteIndex} += 2; 
-        \hyperlink{gqueue_8c_a070de567ba00fb02d6c480840c15d31d}{gQUEUE\_UnwrapWriteIndex}(pQueueControl);
-        
-                \textcolor{keywordflow}{for}(n=0;n<pQueueControl->\hyperlink{structGQUEUECONTROL_a790618cf693d7e4249fec2f5074b40e3}{NReaders};++n)\{    
-                        \textcolor{keywordflow}{if}(pQueueControl->\hyperlink{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}{ReadIndex}[n] == 
-      pQueueControl->\hyperlink{structGQUEUECONTROL_a614237a6b5ee3fca394e40a0274d5b43}{WriteIndex})\{
-                                pQueueControl->\hyperlink{structGQUEUECONTROL_a5f54a26afa8554ed2f161b83aba14f5c}{FlagFull}[n] = \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
-                                FlagNotFull = \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
-                        \}
-                \}
-
-                \textcolor{comment}{/* Decrement write index of one position to return to the
-       correct state */}
-        pQueueControl->\hyperlink{structGQUEUECONTROL_a614237a6b5ee3fca394e40a0274d5b43}{WriteIndex} += pQueueControl->\hyperlink{structGQUEUECONTROL_a4db75bcca77dbc6ea7d8d5c3cd3a365f}{Size}-1; 
-        \hyperlink{gqueue_8c_a070de567ba00fb02d6c480840c15d31d}{gQUEUE\_UnwrapWriteIndex}(pQueueControl);
-
-                *Index = pQueueControl->\hyperlink{structGQUEUECONTROL_a614237a6b5ee3fca394e40a0274d5b43}{WriteIndex};
-    \}
-
-\hyperlink{gqueue_8c_a8980cf83b4c1f4b1d693d1c9d2a54535}{END\_ATOMIC}();
-
-    \textcolor{keywordflow}{return} FlagNotFull;
-\}                      
+234 \{
+235         \textcolor{keywordtype}{int} n;
+236         \textcolor{keywordtype}{int}     FlagNotFull = \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
+237 
+238 \hyperlink{gqueue_8c_a4dbeb573edcedfa8f803e1891730e526}{BEGIN\_ATOMIC}();
+239     
+240     \textcolor{keywordflow}{if}(pQueueControl->\hyperlink{structGQUEUECONTROL_a4d58bdb6b0dc93bb6034c4209b6e7915}{FlagStillNotWritten} == \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE})\{
+241         *Index = pQueueControl->\hyperlink{structGQUEUECONTROL_a614237a6b5ee3fca394e40a0274d5b43}{WriteIndex};
+242         pQueueControl->\hyperlink{structGQUEUECONTROL_a4d58bdb6b0dc93bb6034c4209b6e7915}{FlagStillNotWritten} = \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+243         \}
+244     \textcolor{keywordflow}{else}\{
+245                 \textcolor{comment}{/* Increment write index in two positions to test if queue is full */}
+246         pQueueControl->\hyperlink{structGQUEUECONTROL_a614237a6b5ee3fca394e40a0274d5b43}{WriteIndex} += 2; 
+247         \hyperlink{gqueue_8c_a070de567ba00fb02d6c480840c15d31d}{gQUEUE\_UnwrapWriteIndex}(pQueueControl);
+248         
+249                 \textcolor{keywordflow}{for}(n=0;n<pQueueControl->\hyperlink{structGQUEUECONTROL_a790618cf693d7e4249fec2f5074b40e3}{NReaders};++n)\{    
+250                         \textcolor{keywordflow}{if}(pQueueControl->\hyperlink{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}{ReadIndex}[n] == pQueueControl->
+      \hyperlink{structGQUEUECONTROL_a614237a6b5ee3fca394e40a0274d5b43}{WriteIndex})\{
+251                                 pQueueControl->\hyperlink{structGQUEUECONTROL_a5f54a26afa8554ed2f161b83aba14f5c}{FlagFull}[n] = \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
+252                                 FlagNotFull = \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+253                         \}
+254                 \}
+255 
+256                 \textcolor{comment}{/* Decrement write index of one position to return to the correct state */}
+257         pQueueControl->\hyperlink{structGQUEUECONTROL_a614237a6b5ee3fca394e40a0274d5b43}{WriteIndex} += pQueueControl->\hyperlink{structGQUEUECONTROL_a4db75bcca77dbc6ea7d8d5c3cd3a365f}{Size}-1; 
+258         \hyperlink{gqueue_8c_a070de567ba00fb02d6c480840c15d31d}{gQUEUE\_UnwrapWriteIndex}(pQueueControl);
+259 
+260                 *Index = pQueueControl->\hyperlink{structGQUEUECONTROL_a614237a6b5ee3fca394e40a0274d5b43}{WriteIndex};
+261     \}
+262 
+263 \hyperlink{gqueue_8c_a8980cf83b4c1f4b1d693d1c9d2a54535}{END\_ATOMIC}();
+264 
+265     \textcolor{keywordflow}{return} FlagNotFull;
+266 \}                      
 \end{DoxyCode}
 
 
@@ -549,16 +540,16 @@ Referenced by g\-Q\-U\-E\-U\-E\-\_\-\-Get\-Read\-Index(), g\-Q\-U\-E\-U\-E\-\_\-
 
 
 \begin{DoxyCode}
-\{
-        \textcolor{keywordflow}{if}(NReader>=pQueueControl->\hyperlink{structGQUEUECONTROL_a790618cf693d7e4249fec2f5074b40e3}{NReaders})\{
-                \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
-        \}
-
-        pQueueControl->\hyperlink{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}{ReadIndex}[NReader] = (pQueueControl->\hyperlink{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}{ReadIndex}
-      [NReader]) % (pQueueControl->\hyperlink{structGQUEUECONTROL_a4db75bcca77dbc6ea7d8d5c3cd3a365f}{Size}); 
-  
-        \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
-\}                      
+278 \{
+279         \textcolor{keywordflow}{if}(NReader>=pQueueControl->\hyperlink{structGQUEUECONTROL_a790618cf693d7e4249fec2f5074b40e3}{NReaders})\{
+280                 \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+281         \}
+282 
+283         pQueueControl->\hyperlink{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}{ReadIndex}[NReader] = (pQueueControl->\hyperlink{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}{ReadIndex}[NReader]) % (
+      pQueueControl->\hyperlink{structGQUEUECONTROL_a4db75bcca77dbc6ea7d8d5c3cd3a365f}{Size}); 
+284   
+285         \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
+286 \}                      
 \end{DoxyCode}
 
 
@@ -593,12 +584,12 @@ Referenced by g\-Q\-U\-E\-U\-E\-\_\-\-Get\-Write\-Index(), and g\-Q\-U\-E\-U\-E\
 
 
 \begin{DoxyCode}
-\{
-        pQueueControl->\hyperlink{structGQUEUECONTROL_a614237a6b5ee3fca394e40a0274d5b43}{WriteIndex} = (pQueueControl->\hyperlink{structGQUEUECONTROL_a614237a6b5ee3fca394e40a0274d5b43}{WriteIndex}
-      ) % (pQueueControl->\hyperlink{structGQUEUECONTROL_a4db75bcca77dbc6ea7d8d5c3cd3a365f}{Size}); 
-        
-        \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
-\}                      
+298 \{
+299         pQueueControl->\hyperlink{structGQUEUECONTROL_a614237a6b5ee3fca394e40a0274d5b43}{WriteIndex} = (pQueueControl->\hyperlink{structGQUEUECONTROL_a614237a6b5ee3fca394e40a0274d5b43}{WriteIndex}) % (pQueueControl->
+      \hyperlink{structGQUEUECONTROL_a4db75bcca77dbc6ea7d8d5c3cd3a365f}{Size}); 
+300         
+301         \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
+302 \}                      
 \end{DoxyCode}
 
 

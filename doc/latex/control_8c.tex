@@ -43,29 +43,28 @@ Definition at line 11 of file control.\-c.
 
 
 
-References I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::acc, imu\-\_\-data, mra\-\_\-data, M\-R\-A\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::v\-\_\-ctl, D\-A\-T\-A\-\_\-\-X\-Y\-Z\-::x, and D\-A\-T\-A\-\_\-\-X\-Y\-Z\-::z.
+References imu\-\_\-data, mra\-\_\-data, and M\-R\-A\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::v\-\_\-ctl.
 
 
 \begin{DoxyCode}
-                                                                    \{
-\textcolor{keywordtype}{int} t\_gait = 0;
-\textcolor{keywordtype}{int} gait\_cycle = 2000000;\textcolor{comment}{//Gait cycle takes 2 seconds}
-\textcolor{keywordtype}{int} heelstrike\_threshold = 3;
-
-        \textcolor{comment}{//In case of heel strike the gait cycle starts}
-        \textcolor{comment}{//Heel strike detection: module of acceleration vector (which has
-       components in x and z axis) higher than threshold.}
-        \textcolor{keywordflow}{if} ((((\hyperlink{main2_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\_data}->\hyperlink{structIMU__DATA__STRUCT_a448f284bf44eb503affda586ad5fa9d2}{acc}.\hyperlink{structDATA__XYZ_a54c1596e9f9969fd9c21e8458024ecfb}{x})^2 + (\hyperlink{main2_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\_data}->\hyperlink{structIMU__DATA__STRUCT_a448f284bf44eb503affda586ad5fa9d2}{acc}.\hyperlink{structDATA__XYZ_a69e89ab0ec6e5d72fc5d54f62cc07fb5}{z})^2
-      )^0.5) > heelstrike\_threshold)\{
-          t\_gait = 0;
-        \textcolor{comment}{//Between 10% and 60% of the gait cycle, actuation voltage is 0V}
-        \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (t\_gait>(0.1*gait\_cycle) && t\_gait<=(0.6*gait\_cycle))\{
-          \textcolor{comment}{//control voltage 0V}
-          \hyperlink{main2_8c_abc42e18d2909e9bc119316283f4ed9db}{mra\_data}.\hyperlink{structMRA__DATA__STRUCT_a64b4e6bb604e58de593a60c87942b966}{v\_ctl}=0;
-        \textcolor{comment}{//More than 60% of the gait cycle, set actuation voltage to 4V.}
-        \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (t\_gait>(0.6*gait\_cycle) && t\_gait<(0.8*gait\_cycle))\{
-          \hyperlink{main2_8c_abc42e18d2909e9bc119316283f4ed9db}{mra\_data}.\hyperlink{structMRA__DATA__STRUCT_a64b4e6bb604e58de593a60c87942b966}{v\_ctl}=4000;
-        \}
-
-\}
+11                                                                     \{
+12 \textcolor{keywordtype}{int} t\_gait = 0;
+13 \textcolor{keywordtype}{int} gait\_cycle = 2000000;\textcolor{comment}{//Gait cycle takes 2 seconds}
+14 \textcolor{keywordtype}{int} heelstrike\_threshold = 3;
+15 
+16         \textcolor{comment}{//In case of heel strike the gait cycle starts}
+17         \textcolor{comment}{//Heel strike detection: module of acceleration vector (which has components in x and z axis)
+       higher than threshold.}
+18         \textcolor{keywordflow}{if} ((((\hyperlink{main_8c_a0f81e5b5621e6e2b2467daa7d12268c4}{imu\_data}->acc.x)^2 + (\hyperlink{main_8c_a0f81e5b5621e6e2b2467daa7d12268c4}{imu\_data}->acc.z)^2)^0.5) > heelstrike\_threshold)\{
+19           t\_gait = 0;
+20         \textcolor{comment}{//Between 10% and 60% of the gait cycle, actuation voltage is 0V}
+21         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (t\_gait>(0.1*gait\_cycle) && t\_gait<=(0.6*gait\_cycle))\{
+22           \textcolor{comment}{//control voltage 0V}
+23           \hyperlink{main2_8c_abc42e18d2909e9bc119316283f4ed9db}{mra\_data}.\hyperlink{structMRA__DATA__STRUCT_a64b4e6bb604e58de593a60c87942b966}{v\_ctl}=0;
+24         \textcolor{comment}{//More than 60% of the gait cycle, set actuation voltage to 4V.}
+25         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (t\_gait>(0.6*gait\_cycle) && t\_gait<(0.8*gait\_cycle))\{
+26           \hyperlink{main2_8c_abc42e18d2909e9bc119316283f4ed9db}{mra\_data}.\hyperlink{structMRA__DATA__STRUCT_a64b4e6bb604e58de593a60c87942b966}{v\_ctl}=4000;
+27         \}
+28 
+29 \}
 \end{DoxyCode}

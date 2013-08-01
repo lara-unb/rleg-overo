@@ -12,8 +12,10 @@ This graph shows which files directly or indirectly include this file\-:\nopageb
 \begin{DoxyCompactItemize}
 \item 
 \#define \hyperlink{main_8h_a6d58f9ac447476b4e084d7ca383f5183}{F\-A\-I\-L\-U\-R\-E}~-\/1
-\item 
+\begin{DoxyCompactList}\small\item\em Main includes. \end{DoxyCompactList}\item 
 \#define \hyperlink{main_8h_aa90cac659d18e8ef6294c7ae337f6b58}{S\-U\-C\-C\-E\-S\-S}~1
+\item 
+\#define \hyperlink{group__mainConfig_ga745f0e5078faacf33bffbc94239f62a9}{T\-A\-S\-K1\-\_\-\-P\-E\-R\-I\-O\-D}~100
 \end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
@@ -28,14 +30,21 @@ int \hyperlink{main_8h_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
 \subsubsection[{F\-A\-I\-L\-U\-R\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-A\-I\-L\-U\-R\-E~-\/1}}\label{main_8h_a6d58f9ac447476b4e084d7ca383f5183}
 
 
-Definition at line 4 of file main.\-h.
+Main includes. 
+
+\begin{DoxyAuthor}{Author}
+Rafael Lima 
+\end{DoxyAuthor}
+
+
+Definition at line 9 of file main.\-h.
 
 \hypertarget{main_8h_aa90cac659d18e8ef6294c7ae337f6b58}{\index{main.\-h@{main.\-h}!S\-U\-C\-C\-E\-S\-S@{S\-U\-C\-C\-E\-S\-S}}
 \index{S\-U\-C\-C\-E\-S\-S@{S\-U\-C\-C\-E\-S\-S}!main.h@{main.\-h}}
 \subsubsection[{S\-U\-C\-C\-E\-S\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-U\-C\-C\-E\-S\-S~1}}\label{main_8h_aa90cac659d18e8ef6294c7ae337f6b58}
 
 
-Definition at line 5 of file main.\-h.
+Definition at line 10 of file main.\-h.
 
 
 
@@ -49,159 +58,68 @@ Definition at line 5 of file main.\-h.
 )}}\label{main_8h_a840291bc02cba5474a4cb46a9b9566fe}
 
 
-Definition at line 15 of file main.\-c.
+Definition at line 27 of file main.\-c.
 
 
 \begin{DoxyCode}
-\{
-  \textcolor{comment}{//int i2c\_dev, spi\_dev;}
-  FILE *log;
-  \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} *data;
-  \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} datap[4];
-  \textcolor{keywordtype}{int} i;
-  \textcolor{keywordtype}{double} value[3];
-  
-  \hyperlink{structIMU__PARAM__STRUCT}{IMU\_PARAM\_STRUCT} \hyperlink{main2_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param};
-  \hyperlink{structSPI__PARAM__STRUCT}{SPI\_PARAM\_STRUCT} \hyperlink{main2_8c_adec2468b88cf50b20e5cf399a3b7e994}{spi\_param};
-  \hyperlink{structIMU__DATA__STRUCT}{IMU\_DATA\_STRUCT} \hyperlink{main2_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\_data};
-  \hyperlink{structEFF__DATA__STRUCT}{EFF\_DATA\_STRUCT} \hyperlink{main2_8c_a5650ece8c3a277c7f158d75ae65265fa}{eff\_data};
-  
-\textcolor{comment}{// Parameters for IMU and SPI}
-
-  imu\_param.\hyperlink{structIMU__PARAM__STRUCT_a92172e4757d0f8f9135a659e406c12e5}{acc}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__acc_af57da5d956ffa7e49a184326b6b9c738}{full\_res}=1;
-  imu\_param.\hyperlink{structIMU__PARAM__STRUCT_a92172e4757d0f8f9135a659e406c12e5}{acc}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__acc_a30e6a318cad098cd8379416705820f95}{rate}=100;
-  imu\_param.\hyperlink{structIMU__PARAM__STRUCT_a92172e4757d0f8f9135a659e406c12e5}{acc}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__acc_a26199b298ef2d353192dfbc706bce8cf}{range}=16;
-  imu\_param.\hyperlink{structIMU__PARAM__STRUCT_a5a4557868f1af679a1098808397b02ec}{gyr}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__gyr_a5aa70e1e9634411c89aacfbc570cc91c}{rate}=100;
-  imu\_param.\hyperlink{structIMU__PARAM__STRUCT_a5a4557868f1af679a1098808397b02ec}{gyr}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__gyr_aa612f7299b43a1bf1fc597688c2fa02d}{lpf\_bw}=188;
-  imu\_param.\hyperlink{structIMU__PARAM__STRUCT_a5a4557868f1af679a1098808397b02ec}{gyr}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__gyr_aca3b791cb480f2da4703d4c256a7de48}{clk\_source}=\textcolor{charliteral}{'Z'};
-  imu\_param.\hyperlink{structIMU__PARAM__STRUCT_a5a4557868f1af679a1098808397b02ec}{gyr}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__gyr_a909d153e794ec443be04625ce00e4178}{act}=\textcolor{stringliteral}{"XYZ"};
-  imu\_param.\hyperlink{structIMU__PARAM__STRUCT_a26b277dcaf05f3842995df888225f6f4}{mag}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__mag_a234de95423b604b05b851ef90890cea1}{rate}=75;
-  imu\_param.\hyperlink{structIMU__PARAM__STRUCT_a26b277dcaf05f3842995df888225f6f4}{mag}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__mag_a40ad27ebdb5fde35257b1dc52e40f476}{range}=0;
-  imu\_param.\hyperlink{structIMU__PARAM__STRUCT_a26b277dcaf05f3842995df888225f6f4}{mag}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__mag_a52c22cae6940eb39fb72aca66cfeba9a}{samples\_avg}=8;
-  imu\_param.\hyperlink{structIMU__PARAM__STRUCT_a26b277dcaf05f3842995df888225f6f4}{mag}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__mag_a1f3536709c05310005d648f339d70c54}{meas\_mode}=0;
-  imu\_param.\hyperlink{structIMU__PARAM__STRUCT_a26b277dcaf05f3842995df888225f6f4}{mag}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__mag_a39b83b3e9ff5bdcafed0bdf6a2de584b}{op\_mode}=0;
-  
-  spi\_param.\hyperlink{structSPI__PARAM__STRUCT_a82c546c99f6c3daed73c1e23426be847}{mode}=0;
-  spi\_param.\hyperlink{structSPI__PARAM__STRUCT_a53a8d386594a81eb9bc6f971bfe36c54}{speed}=46875;
-  spi\_param.\hyperlink{structSPI__PARAM__STRUCT_ae0d62e0a5554783d710b677a017e246f}{cs}=0;
-  
-\textcolor{comment}{// Initialization}
-  \textcolor{keywordflow}{if}( \hyperlink{communication_2communication_8c_a2d1e523ff70db11ca4096f97af5da000}{devices\_init}(&imu\_param, &spi\_param)==\hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE} )
-  \{
-    perror(\textcolor{stringliteral}{"Unsuccesful devices initialization"});
-    \textcolor{keywordflow}{return} -1;
-  \}
-\textcolor{comment}{/*  if( datalogger\_init(IMU\_PARAM\_STRUCT *imu\_param, SPI\_PARAM\_STRUCT *
-      spi\_param)==FAILURE )}
-\textcolor{comment}{  \{}
-\textcolor{comment}{    perror("Unsuccesful devices initialization");}
-\textcolor{comment}{    return -1;}
-\textcolor{comment}{  \}}
-\textcolor{comment}{*/}  
-  
-  \textcolor{keywordflow}{if}( (log=fopen(\textcolor{stringliteral}{"log.txt"},\textcolor{stringliteral}{"w"}))==NULL )
-  \{
-    perror(\textcolor{stringliteral}{"Unsuccessful log file openning"});
-    \textcolor{keywordflow}{return} -1;
-  \}
-  \hyperlink{main_8c_aa570d24f638774bf52f70f1d9d9d45f8}{log\_init}(log);
-  
-\textcolor{comment}{// Initializing gdatalogger}
- \textcolor{comment}{/* if(!gDataLogger\_Init(&gDataLogger,"matlabdatafiles/
-      gmatlabdatafile.mat",NULL))\{}
-\textcolor{comment}{                printf("\(\backslash\)nErro em gDataLogger\_Init\(\backslash\)n\(\backslash\)n");}
-\textcolor{comment}{                return EXIT\_FAILURE;}
-\textcolor{comment}{        \}}
-\textcolor{comment}{}
-\textcolor{comment}{        gDataLogger\_DeclareVariable(&gDataLogger,"acc","m/s²",1,3,1000);}
-\textcolor{comment}{        gDataLogger\_DeclareVariable(&gDataLogger,"gyr","\(\backslash\)][\{º/s",1,3,1000);}
-\textcolor{comment}{        gDataLogger\_DeclareVariable(&gDataLogger,"mag","mG",1,3,1000);}
-\textcolor{comment}{        gDataLogger\_DeclareVariable(&gDataLogger,"temp","K",1,1,1000);}
-\textcolor{comment}{        gDataLogger\_DeclareVariable(&gDataLogger,"Vin","V",1,1,1000);}
-\textcolor{comment}{  */}
-\textcolor{comment}{// ROUTINE }
-  \textcolor{keywordflow}{for}( i=1; i<=20000; i++)
-  \{  
-      \textcolor{comment}{//fprintf(log,"    %d\(\backslash\)t|",i); }
-      \hyperlink{communication_2communication_8c_a26f82e8af3b5ce23d5cd3a41db6e0b68}{read\_all\_data}(imu\_param.\hyperlink{structIMU__PARAM__STRUCT_a8a870f383fc9ba0b682fdc9b8c0d2734}{i2c\_dev}, spi\_param.\hyperlink{structSPI__PARAM__STRUCT_abe385c44333d268d17cf648c8e371cad}{spi\_dev}
-      , &imu\_data, &eff\_data);
-  \textcolor{comment}{// ADC}
-\textcolor{comment}{/*FALTA IMPLEMENTAR AS ESCRITAS NOS GPIOS RESPONSÁVEIS PELA SELEÇÃO DO CHIP
-       SELECT QUANDO REALMENTE FOR USAR A PLACA*/}
-\textcolor{comment}{/*      //spi\_dev=spi\_init(0,46875,0);}
-\textcolor{comment}{      //datap[0]=adc\_read(spi\_dev,0,1);}
-\textcolor{comment}{      fprintf(log,"\(\backslash\)t%d\(\backslash\)t|",datap[0]);printf("\(\backslash\)t%d\(\backslash\)t|",datap[0]);}
-\textcolor{comment}{      value[0]=(double)datap[0]/1000;}
-\textcolor{comment}{      //gDataLogger\_InsertVariable(&gDataLogger,"Vin",&(value[0]));}
-\textcolor{comment}{  // ACCelerometer}
-\textcolor{comment}{      if ( (ioctl(i2c\_dev, I2C\_SLAVE, ADD\_ADXL345)) < 0) \{}
-\textcolor{comment}{        perror("ioctl(I2C\_SLAVE) acc");}
-\textcolor{comment}{        return -1;}
-\textcolor{comment}{      \}  SUCCESS}
-\textcolor{comment}{      if( (acc\_read\_all\_data(i2c\_dev,datap))>0 )\{}
-\textcolor{comment}{        fprintf(log,"\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t|",datap[0],datap[1],datap[2]);
-       printf("\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t|",datap[0],datap[1],datap[2]);}
-\textcolor{comment}{        }
-\textcolor{comment}{      \}}
-\textcolor{comment}{      else\{}
-\textcolor{comment}{        fprintf(log,"\(\backslash\)t?\(\backslash\)t?\(\backslash\)t?\(\backslash\)t|"); printf("\(\backslash\)t?\(\backslash\)t?\(\backslash\)t?\(\backslash\)t|");\}}
-\textcolor{comment}{      value[0]=(double)datap[0]*0.0392;}
-\textcolor{comment}{      value[1]=(double)datap[1]*0.0392;}
-\textcolor{comment}{      value[2]=(double)datap[2]*0.0392;}
-\textcolor{comment}{      //gDataLogger\_InsertVariable(&gDataLogger,"acc",value);}
-\textcolor{comment}{  // MAGometer    }
-\textcolor{comment}{      if( (ioctl(i2c\_dev, I2C\_SLAVE, ADD\_HMC5883)) < 0) \{}
-\textcolor{comment}{        perror("ioctl(I2C\_SLAVE) mag");}
-\textcolor{comment}{        return -1;}
-\textcolor{comment}{      \} }
-\textcolor{comment}{      if( (mag\_read\_all\_data(i2c\_dev,datap))>0 )\{}
-\textcolor{comment}{        fprintf(log,"\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t|",datap[0],datap[1],datap[2]);
-       printf("\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t|",datap[0],datap[1],datap[2]);\}}
-\textcolor{comment}{      else\{}
-\textcolor{comment}{        fprintf(log,"\(\backslash\)t?\(\backslash\)t?\(\backslash\)t?\(\backslash\)t|"); printf("\(\backslash\)t?\(\backslash\)t?\(\backslash\)t?\(\backslash\)t|");\}}
-\textcolor{comment}{      value[0]=(double)datap[0]*0.73;}
-\textcolor{comment}{      value[1]=(double)datap[1]*0.73;}
-\textcolor{comment}{      value[2]=(double)datap[2]*0.73;}
-\textcolor{comment}{      //gDataLogger\_InsertVariable(&gDataLogger,"mag",value);}
-\textcolor{comment}{  // GYRometer    }
-\textcolor{comment}{      if( (ioctl(i2c\_dev, I2C\_SLAVE, ADD\_ITG3200)) < 0) \{}
-\textcolor{comment}{        perror("ioctl(I2C\_SLAVE) gyr");}
-\textcolor{comment}{        return -1;}
-\textcolor{comment}{      \} }
-\textcolor{comment}{      if( (gyr\_read\_all\_data(i2c\_dev,datap))>0 )\{}
-\textcolor{comment}{        fprintf(log,"\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t%d",datap[0],datap[1],datap[2],datap[3]);
-       printf("\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t%d",datap[0],datap[1],datap[2],datap[3]);\}}
-\textcolor{comment}{      else\{}
-\textcolor{comment}{        fprintf(log,"\(\backslash\)t?\(\backslash\)t?\(\backslash\)t?\(\backslash\)t?"); printf("\(\backslash\)t?\(\backslash\)t?\(\backslash\)t?\(\backslash\)t?");\}}
-\textcolor{comment}{      value[0]=(double)datap[0]*0.0392;}
-\textcolor{comment}{      value[1]=(double)datap[1]*0.0392;}
-\textcolor{comment}{      value[2]=(double)datap[2]*0.0392;}
-\textcolor{comment}{      //gDataLogger\_InsertVariable(&gDataLogger,"acc",value);}
-\textcolor{comment}{*/}  \textcolor{comment}{//---------------------}
-
-\textcolor{keywordflow}{if}( (eff\_data.\hyperlink{structEFF__DATA__STRUCT_aa42ebc512dd79fa6ebf998162a149446}{new\_data}==0)||(imu\_data.\hyperlink{structIMU__DATA__STRUCT_a99924252176326418863e511d4fa437b}{new\_data}==0) )\{
-    printf(\textcolor{stringliteral}{"%d\(\backslash\)t"},i);
-  printf(\textcolor{stringliteral}{"\(\backslash\)n    %d\(\backslash\)t|"},i);
-  printf(\textcolor{stringliteral}{"\(\backslash\)t%d\(\backslash\)t|"},eff\_data.\hyperlink{structEFF__DATA__STRUCT_abe8952947b54bf9c247f3429ee3aeb44}{F}.\hyperlink{structDATA__XYZ_a54c1596e9f9969fd9c21e8458024ecfb}{x});
-printf(\textcolor{stringliteral}{"\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t|"},imu\_data.\hyperlink{structIMU__DATA__STRUCT_a448f284bf44eb503affda586ad5fa9d2}{acc}.\hyperlink{structDATA__XYZ_a54c1596e9f9969fd9c21e8458024ecfb}{x},imu\_data.\hyperlink{structIMU__DATA__STRUCT_a448f284bf44eb503affda586ad5fa9d2}{acc}.\hyperlink{structDATA__XYZ_a94bbb1c889bf53eb6a5fffa2b39322cf}{y},imu\_data.\hyperlink{structIMU__DATA__STRUCT_a448f284bf44eb503affda586ad5fa9d2}{acc}.\hyperlink{structDATA__XYZ_a69e89ab0ec6e5d72fc5d54f62cc07fb5}{
-      z});
-printf(\textcolor{stringliteral}{"\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t|"},imu\_data.\hyperlink{structIMU__DATA__STRUCT_a40c7df8b6d49297aa52873cfd9b60daa}{mag}.\hyperlink{structDATA__XYZ_a54c1596e9f9969fd9c21e8458024ecfb}{x},imu\_data.\hyperlink{structIMU__DATA__STRUCT_a40c7df8b6d49297aa52873cfd9b60daa}{mag}.\hyperlink{structDATA__XYZ_a94bbb1c889bf53eb6a5fffa2b39322cf}{y},imu\_data.\hyperlink{structIMU__DATA__STRUCT_a40c7df8b6d49297aa52873cfd9b60daa}{mag}.\hyperlink{structDATA__XYZ_a69e89ab0ec6e5d72fc5d54f62cc07fb5}{
-      z});
-printf(\textcolor{stringliteral}{"\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t%d"},imu\_data.\hyperlink{structIMU__DATA__STRUCT_a0c1ac26626e4434a2ee124a1928a23a1}{gyr}.\hyperlink{structDATA__XYZ_a54c1596e9f9969fd9c21e8458024ecfb}{x},imu\_data.\hyperlink{structIMU__DATA__STRUCT_a0c1ac26626e4434a2ee124a1928a23a1}{gyr}.\hyperlink{structDATA__XYZ_a94bbb1c889bf53eb6a5fffa2b39322cf}{y},imu\_data.\hyperlink{structIMU__DATA__STRUCT_a0c1ac26626e4434a2ee124a1928a23a1}{gyr}
-      .\hyperlink{structDATA__XYZ_a69e89ab0ec6e5d72fc5d54f62cc07fb5}{z}, imu\_data.\hyperlink{structIMU__DATA__STRUCT_a81e1dbf765c1d947ca6076aa1bbc73e7}{temp});
-printf(\textcolor{stringliteral}{"\(\backslash\)t%d\(\backslash\)t%d"},eff\_data.\hyperlink{structEFF__DATA__STRUCT_aa42ebc512dd79fa6ebf998162a149446}{new\_data},imu\_data.\hyperlink{structIMU__DATA__STRUCT_a99924252176326418863e511d4fa437b}{new\_data});
-printf(\textcolor{stringliteral}{"\(\backslash\)n"});
-\}
-  \textcolor{comment}{// Updating matlab file}
-  
-  \textcolor{comment}{//---------------------}
-      \textcolor{comment}{//fprintf(log,"\(\backslash\)n");printf("\(\backslash\)n");}
-  \}
-  
-\textcolor{comment}{// CLOSING FILES}
-  fclose(log);
-  close(imu\_param.\hyperlink{structIMU__PARAM__STRUCT_a8a870f383fc9ba0b682fdc9b8c0d2734}{i2c\_dev});
-  close(spi\_param.\hyperlink{structSPI__PARAM__STRUCT_abe385c44333d268d17cf648c8e371cad}{spi\_dev});
-\textcolor{keywordflow}{return} 1;
-\}
+27               \{
+28   \textcolor{keywordtype}{int} return\_value = \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};
+29 
+30 \textcolor{comment}{/*Setting config values:*/}
+31   \textcolor{comment}{// Parameters for IMU}
+32   \hyperlink{main_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a92172e4757d0f8f9135a659e406c12e5}{acc}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__acc_af57da5d956ffa7e49a184326b6b9c738}{full\_res}=1;
+33   \hyperlink{main_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a92172e4757d0f8f9135a659e406c12e5}{acc}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__acc_a30e6a318cad098cd8379416705820f95}{rate}=100;
+34   \hyperlink{main_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a92172e4757d0f8f9135a659e406c12e5}{acc}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__acc_a26199b298ef2d353192dfbc706bce8cf}{range}=16;
+35   \hyperlink{main_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a5a4557868f1af679a1098808397b02ec}{gyr}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__gyr_a5aa70e1e9634411c89aacfbc570cc91c}{rate}=100;
+36   \hyperlink{main_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a5a4557868f1af679a1098808397b02ec}{gyr}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__gyr_aa612f7299b43a1bf1fc597688c2fa02d}{lpf\_bw}=188;
+37   \hyperlink{main_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a5a4557868f1af679a1098808397b02ec}{gyr}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__gyr_aca3b791cb480f2da4703d4c256a7de48}{clk\_source}=\textcolor{charliteral}{'Z'};
+38   \hyperlink{main_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a5a4557868f1af679a1098808397b02ec}{gyr}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__gyr_a909d153e794ec443be04625ce00e4178}{act}=\textcolor{stringliteral}{"XYZ"};
+39   \hyperlink{main_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a26b277dcaf05f3842995df888225f6f4}{mag}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__mag_a234de95423b604b05b851ef90890cea1}{rate}=75;
+40   \hyperlink{main_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a26b277dcaf05f3842995df888225f6f4}{mag}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__mag_a40ad27ebdb5fde35257b1dc52e40f476}{range}=0;
+41   \hyperlink{main_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a26b277dcaf05f3842995df888225f6f4}{mag}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__mag_a52c22cae6940eb39fb72aca66cfeba9a}{samples\_avg}=8;
+42   \hyperlink{main_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a26b277dcaf05f3842995df888225f6f4}{mag}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__mag_a1f3536709c05310005d648f339d70c54}{meas\_mode}=0;
+43   \hyperlink{main_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a26b277dcaf05f3842995df888225f6f4}{mag}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__mag_a39b83b3e9ff5bdcafed0bdf6a2de584b}{op\_mode}=0;
+44 
+45   \textcolor{comment}{// Parameters for SPI}
+46   \hyperlink{main_8c_adec2468b88cf50b20e5cf399a3b7e994}{spi\_param}.\hyperlink{structSPI__PARAM__STRUCT_a82c546c99f6c3daed73c1e23426be847}{mode}=0;
+47   \hyperlink{main_8c_adec2468b88cf50b20e5cf399a3b7e994}{spi\_param}.\hyperlink{structSPI__PARAM__STRUCT_a53a8d386594a81eb9bc6f971bfe36c54}{speed}=375000;
+48   \hyperlink{main_8c_adec2468b88cf50b20e5cf399a3b7e994}{spi\_param}.\hyperlink{structSPI__PARAM__STRUCT_ae0d62e0a5554783d710b677a017e246f}{cs}=0;
+49 
+50   \textcolor{comment}{// Task for control UI:}
+51   \hyperlink{taskScheduler_8c_a2346be42760ac3f89c3e9e9414d83645}{timer\_new\_task}(&\hyperlink{main_8c_ab7d681ab68ca1c465fa993dd21ef096e}{task1},\hyperlink{main_8c_a8007959bfd1230feb2298965e39f2a70}{ui\_task});
+52   \textcolor{comment}{//timer\_new\_task(task2,ui\_task);}
+53 
+54 
+55 \textcolor{comment}{/*Initialization:*/}
+56   \textcolor{keywordflow}{if}(\hyperlink{communication_2communication_8c_a2d1e523ff70db11ca4096f97af5da000}{devices\_init}(&\hyperlink{main_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param},&\hyperlink{main_8c_adec2468b88cf50b20e5cf399a3b7e994}{spi\_param},&\hyperlink{main2_8c_abc42e18d2909e9bc119316283f4ed9db}{mra\_data})!=
+      \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS})\{
+57     perror(\textcolor{stringliteral}{"Unsuccesful devices initialization"});
+58     \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
+59   \}
+60 
+61   \textcolor{keywordflow}{if}(\hyperlink{group__ui_gab7bfb453918dcc296ff0cea3c79453d0}{ui\_init}()!=\hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS})\{
+62     perror(\textcolor{stringliteral}{"Unsuccesful user interface initialization"});
+63     \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
+64   \}
+65 
+66   \hyperlink{group__taskS_gac088a054258396a6e2dba77908f22b42}{timer\_start\_task}(&\hyperlink{main_8c_ab7d681ab68ca1c465fa993dd21ef096e}{task1});
+67   \textcolor{comment}{//timer\_start\_task(task2);}
+68 
+69   \textcolor{keywordflow}{while}(return\_value == \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS})\{
+70     \hyperlink{main_8c_ab7d681ab68ca1c465fa993dd21ef096e}{task1}->runFunction();
+71   \}
+72 
+73 \textcolor{comment}{/*Shutting Down:*/}
+74   \hyperlink{group__taskS_ga8e48eacaac7d9cf7d82cc71cfbcd4b56}{timer\_stop\_task}(&\hyperlink{main_8c_ab7d681ab68ca1c465fa993dd21ef096e}{task1});
+75   \textcolor{comment}{//usleep(2000);}
+76 
+77   \textcolor{keywordflow}{if}(\hyperlink{group__ui_ga65d8b92b634da17c344458cd57e61f3e}{ui\_close}()==\hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE})\{
+78     return\_value == \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
+79   \}
+80 
+81   close(\hyperlink{main_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a8a870f383fc9ba0b682fdc9b8c0d2734}{i2c\_dev});
+82   close(\hyperlink{main_8c_adec2468b88cf50b20e5cf399a3b7e994}{spi\_param}.\hyperlink{structSPI__PARAM__STRUCT_abe385c44333d268d17cf648c8e371cad}{spi\_dev});
+83 
+84   \textcolor{keywordflow}{return} return\_value;
+85 \}
 \end{DoxyCode}

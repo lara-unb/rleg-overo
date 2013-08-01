@@ -1,16 +1,11 @@
 <map id="threads_linux_timer_function_task_2" name="threads_linux_timer_function_task_2">
-<area shape="rect" id="node3" href="$threads__linux_8c.html#ad535241b6b29d076beb2cd75a880aaea" title="threads_linux_periodic\l_task_2" alt="" coords="191,209,340,255"/>
-<area shape="rect" id="node5" href="$group__ui.html#ga42e4dac2d138061a74c572358c8ebf49" title="Update Screen with new data of sensors." alt="" coords="391,217,468,247"/>
+<area shape="rect" id="node3" href="$threads__linux_8c.html#ad535241b6b29d076beb2cd75a880aaea" title="threads_linux_periodic\l_task_2" alt="" coords="191,130,340,177"/>
+<area shape="rect" id="node5" href="$group__ui.html#ga42e4dac2d138061a74c572358c8ebf49" title="Update Screen with new data of sensors." alt="" coords="391,139,468,168"/>
 <area shape="rect" id="node7" href="$group__ui.html#ga7d5a9d9a75693709de408781d001a6a6" title="Print IMU data." alt="" coords="533,5,624,35"/>
 <area shape="rect" id="node9" href="$ui_8c.html#af48496a4ce54378764bc4ca9eddfd498" title="ui_eff_data" alt="" coords="536,59,621,88"/>
 <area shape="rect" id="node11" href="$group__ui.html#gaefec243c5df45db0350c1abbccf20e3b" title="Print MRA data." alt="" coords="532,112,625,141"/>
 <area shape="rect" id="node13" href="$ui_8c.html#a3821f6ba38465f8d170f7b947869e7d9" title="Print ENCODER data." alt="" coords="533,165,624,195"/>
-<area shape="rect" id="node15" href="$ui_8c.html#a8d5e19833fec51919aad6e78bb74619a" title="Print ALL sensors data." alt="" coords="517,269,640,299"/>
-<area shape="rect" id="node19" href="$datalogger_8c.html#a46fd1290d9ee97d5fc7171e1e0dcb0aa" title="datalogger_status" alt="" coords="688,216,813,245"/>
-<area shape="rect" id="node25" href="$main2_8c.html#a5f05ce725141ddfab683e059b1cd95ea" title="exit_program" alt="" coords="531,424,627,453"/>
-<area shape="rect" id="node28" href="$datalogger_8c.html#aae2ffbc6cbf8f1cfecceb42c5139530a" title="datalogger_stop" alt="" coords="693,323,808,352"/>
-<area shape="rect" id="node32" href="$datalogger_8c.html#a1f254ef380d595d6605c10811fd0dee6" title="datalogger_start" alt="" coords="693,376,808,405"/>
-<area shape="rect" id="node17" href="$main2_8c.html#a5b2b1fdd5e517470c10e84a2b2bcc5c8" title="get_time" alt="" coords="715,269,787,299"/>
-<area shape="rect" id="node21" href="$datalogger_8c.html#a54b06d9395b2e370a5a72beb7f9524b2" title="datalogger_lock_mutex" alt="" coords="869,349,1024,379"/>
-<area shape="rect" id="node23" href="$datalogger_8c.html#a85453211c0c809083c36cc56b275aeeb" title="datalogger_unlock_mutex" alt="" coords="861,296,1032,325"/>
+<area shape="rect" id="node15" href="$ui_8c.html#a8d5e19833fec51919aad6e78bb74619a" title="Print ALL sensors data." alt="" coords="517,219,640,248"/>
+<area shape="rect" id="node19" href="$main_8c.html#a5f05ce725141ddfab683e059b1cd95ea" title="Internal function to end program." alt="" coords="531,272,627,301"/>
+<area shape="rect" id="node17" href="$main2_8c.html#a5b2b1fdd5e517470c10e84a2b2bcc5c8" title="get_time" alt="" coords="688,219,760,248"/>
 </map>

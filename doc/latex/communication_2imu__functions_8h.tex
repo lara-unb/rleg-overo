@@ -69,7 +69,7 @@ int \hyperlink{group__gyr_ga79875465c3a29fd9ec77308c80a8bc37}{gyr\-\_\-read\-\_\
 \begin{DoxyCompactList}\small\item\em R\-E\-A\-D A\-L\-L D\-A\-T\-A A\-T O\-N\-C\-E (X, Y, Z and T) \end{DoxyCompactList}\item 
 short int \hyperlink{group__gyr_ga271b37e9ace81b18bb2f83787247d262}{gyr\-\_\-read\-\_\-data} (int \hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\-\_\-dev}, int type)
 \begin{DoxyCompactList}\small\item\em R\-E\-A\-D D\-A\-T\-A (X, Y, Z or T) \end{DoxyCompactList}\item 
-int \hyperlink{group__mag_gab5d0ae421cd4bb10b1b7a1eda167416b}{mag\-\_\-write\-\_\-reg} (int \hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\-\_\-dev}, uint8\-\_\-t reg, uint8\-\_\-t data)
+int \hyperlink{group__imu_gab5d0ae421cd4bb10b1b7a1eda167416b}{mag\-\_\-write\-\_\-reg} (int \hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\-\_\-dev}, uint8\-\_\-t reg, uint8\-\_\-t data)
 \begin{DoxyCompactList}\small\item\em W\-R\-I\-T\-E T\-O R\-E\-G\-I\-S\-T\-E\-R. \end{DoxyCompactList}\item 
 uint8\-\_\-t $\ast$ \hyperlink{group__mag_ga6830eaeae2298320e1e8c902e4edd709}{mag\-\_\-read\-\_\-reg} (int \hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\-\_\-dev}, uint8\-\_\-t reg, uint8\-\_\-t count)
 \begin{DoxyCompactList}\small\item\em R\-E\-A\-D C\-O\-U\-N\-T 8-\/\-B\-I\-T R\-E\-G\-I\-S\-T\-E\-R I\-N S\-E\-Q\-U\-E\-N\-C\-E. \end{DoxyCompactList}\item 
@@ -87,7 +87,7 @@ short int \hyperlink{group__mag_ga542a31ccd07cd2c3e8e2b68cdb6d219e}{mag\-\_\-rea
 \subsubsection[{A\-D\-D\-\_\-\-A\-D\-X\-L345}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-D\-D\-\_\-\-A\-D\-X\-L345~0x53}}\label{communication_2imu__functions_8h_a909f4a5773e20e672cdb4088e1cfa22f}
 
 
-Definition at line 32 of file imu\-\_\-functions.\-h.
+Definition at line 36 of file imu\-\_\-functions.\-h.
 
 
 
@@ -98,7 +98,7 @@ Referenced by devices\-\_\-init(), and read\-\_\-all\-\_\-data().
 \subsubsection[{A\-D\-D\-\_\-\-H\-M\-C5883}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-D\-D\-\_\-\-H\-M\-C5883~0x1\-E}}\label{communication_2imu__functions_8h_a383c09d3e3bbe30097f7eb8d081fb856}
 
 
-Definition at line 34 of file imu\-\_\-functions.\-h.
+Definition at line 38 of file imu\-\_\-functions.\-h.
 
 
 
@@ -109,7 +109,7 @@ Referenced by devices\-\_\-init(), and read\-\_\-all\-\_\-data().
 \subsubsection[{A\-D\-D\-\_\-\-I\-T\-G3200}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-D\-D\-\_\-\-I\-T\-G3200~0x68}}\label{communication_2imu__functions_8h_ab9fd1068a3f5fcba24d92918aaf0dcb5}
 
 
-Definition at line 33 of file imu\-\_\-functions.\-h.
+Definition at line 37 of file imu\-\_\-functions.\-h.
 
 
 
@@ -156,16 +156,16 @@ Definition at line 184 of file acc\-\_\-functions.\-c.
 
 
 \begin{DoxyCode}
-\{
-  \textcolor{keywordtype}{char} \hyperlink{communication_2spi__functions_8c_a46a6da6b1936191571fd30b2a749f38c}{bits}[9];
-  \textcolor{keywordtype}{int} i;
-  \textcolor{keywordflow}{for}( i=0; i<8; i++)
-  \{
-    bits[i]=((*hvalue)<<i)>>7+\hyperlink{communication_2imu__functions_8h_aa3f75ad2972ec8996ce5206feac0e52c}{ASCII\_0};
-  \}
-  bits[8]=\textcolor{charliteral}{'\(\backslash\)0'};
-  \textcolor{keywordflow}{return} \hyperlink{communication_2spi__functions_8c_a46a6da6b1936191571fd30b2a749f38c}{bits};
-\}
+185 \{
+186   \textcolor{keywordtype}{char} \hyperlink{communication_2spi__functions_8c_a46a6da6b1936191571fd30b2a749f38c}{bits}[9];
+187   \textcolor{keywordtype}{int} i;
+188   \textcolor{keywordflow}{for}( i=0; i<8; i++)
+189   \{
+190     bits[i]=((*hvalue)<<i)>>7+\hyperlink{communication_2imu__functions_8h_aa3f75ad2972ec8996ce5206feac0e52c}{ASCII\_0};
+191   \}
+192   bits[8]=\textcolor{charliteral}{'\(\backslash\)0'};
+193   \textcolor{keywordflow}{return} \hyperlink{communication_2spi__functions_8c_a46a6da6b1936191571fd30b2a749f38c}{bits};
+194 \}
 \end{DoxyCode}
 \hypertarget{communication_2imu__functions_8h_a014f908c9faa37c1ec75177a17012a01}{\index{communication/imu\-\_\-functions.\-h@{communication/imu\-\_\-functions.\-h}!mag\-\_\-init@{mag\-\_\-init}}
 \index{mag\-\_\-init@{mag\-\_\-init}!communication/imu_functions.h@{communication/imu\-\_\-functions.\-h}}
@@ -189,72 +189,70 @@ Definition at line 53 of file mag\-\_\-functions.\-c.
 
 
 \begin{DoxyCode}
-\{ 
-  uint8\_t data=0;
-
-  \textcolor{keywordflow}{switch}(rate)\{
-    \textcolor{keywordflow}{case} 15:
-      data=0x10;
-      \textcolor{keywordflow}{break};
-    \textcolor{keywordflow}{case} 0:
-      data=0x00;
-      \textcolor{keywordflow}{break};
-    \textcolor{keywordflow}{case} 1:
-      data=0x04;
-      \textcolor{keywordflow}{break};
-    \textcolor{keywordflow}{case} 3:
-      data=0x08;
-      \textcolor{keywordflow}{break};
-    \textcolor{keywordflow}{case} 7:
-      data=0x0C;
-      \textcolor{keywordflow}{break};
-    \textcolor{keywordflow}{case} 30:
-      data=0x14;
-      \textcolor{keywordflow}{break};
-    \textcolor{keywordflow}{case} 75:
-      data=0x18;
-      \textcolor{keywordflow}{break};
-    \textcolor{keywordflow}{default}:
-      perror(\textcolor{stringliteral}{"Wrong rate value"});
-      \textcolor{keywordflow}{break};
-  \}
-  
-  \textcolor{keywordflow}{switch}(samples\_avg)\{
-    \textcolor{keywordflow}{case} 8:
-      data=data|0x60;
-      \textcolor{keywordflow}{break};
-    \textcolor{keywordflow}{case} 1:
-      \textcolor{keywordflow}{break};
-    \textcolor{keywordflow}{case} 2:
-      data=data|0x20;
-      \textcolor{keywordflow}{break};
-    \textcolor{keywordflow}{case} 4:
-      data=data|0x40;
-      \textcolor{keywordflow}{break};
-    \textcolor{keywordflow}{default}:
-      perror(\textcolor{stringliteral}{"Wrong samples\_avg value"});
-      \textcolor{keywordflow}{break};
-  \}
-  
-  data+=meas\_mode;
-  
-  \textcolor{keywordflow}{if}(\hyperlink{group__mag_gab5d0ae421cd4bb10b1b7a1eda167416b}{mag\_write\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev}, \hyperlink{communication_2imu__regs_8h_a4c80cd6ce866f16a3d999ee2c5635ec9}{MAG\_CONFIG\_A}, data)
-      <0)\{
-    perror(\textcolor{stringliteral}{"Write in Configuration register A unsuccesful"});
-    \textcolor{keywordflow}{return} -1;
-  \}
-  
-  \textcolor{keywordflow}{if}(\hyperlink{group__mag_gab5d0ae421cd4bb10b1b7a1eda167416b}{mag\_write\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev}, \hyperlink{communication_2imu__regs_8h_a094173f77219df894d97eed44405d942}{MAG\_CONFIG\_B}, range
-      <<5)<0)\{
-    perror(\textcolor{stringliteral}{"Write in configuration register B unsuccesful"});
-    \textcolor{keywordflow}{return} -1;
-  \}
-  
-  \textcolor{keywordflow}{if}(\hyperlink{group__mag_gab5d0ae421cd4bb10b1b7a1eda167416b}{mag\_write\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev}, \hyperlink{communication_2imu__regs_8h_a0173afba6efc0e164495bf506a9758d2}{MAG\_MODE}, op\_mode)<0)\{
-    perror(\textcolor{stringliteral}{"Write in mode register unsuccesful"});
-    \textcolor{keywordflow}{return} -1;
-  \}
-  
-  \textcolor{keywordflow}{return} 1;
-\}
+54 \{ 
+55   uint8\_t data=0;
+56 
+57   \textcolor{keywordflow}{switch}(rate)\{
+58     \textcolor{keywordflow}{case} 15:
+59       data=0x10;
+60       \textcolor{keywordflow}{break};
+61     \textcolor{keywordflow}{case} 0:
+62       data=0x00;
+63       \textcolor{keywordflow}{break};
+64     \textcolor{keywordflow}{case} 1:
+65       data=0x04;
+66       \textcolor{keywordflow}{break};
+67     \textcolor{keywordflow}{case} 3:
+68       data=0x08;
+69       \textcolor{keywordflow}{break};
+70     \textcolor{keywordflow}{case} 7:
+71       data=0x0C;
+72       \textcolor{keywordflow}{break};
+73     \textcolor{keywordflow}{case} 30:
+74       data=0x14;
+75       \textcolor{keywordflow}{break};
+76     \textcolor{keywordflow}{case} 75:
+77       data=0x18;
+78       \textcolor{keywordflow}{break};
+79     \textcolor{keywordflow}{default}:
+80       perror(\textcolor{stringliteral}{"Wrong rate value"});
+81       \textcolor{keywordflow}{break};
+82   \}
+83   
+84   \textcolor{keywordflow}{switch}(samples\_avg)\{
+85     \textcolor{keywordflow}{case} 8:
+86       data=data|0x60;
+87       \textcolor{keywordflow}{break};
+88     \textcolor{keywordflow}{case} 1:
+89       \textcolor{keywordflow}{break};
+90     \textcolor{keywordflow}{case} 2:
+91       data=data|0x20;
+92       \textcolor{keywordflow}{break};
+93     \textcolor{keywordflow}{case} 4:
+94       data=data|0x40;
+95       \textcolor{keywordflow}{break};
+96     \textcolor{keywordflow}{default}:
+97       perror(\textcolor{stringliteral}{"Wrong samples\_avg value"});
+98       \textcolor{keywordflow}{break};
+99   \}
+100   
+101   data+=meas\_mode;
+102   
+103   \textcolor{keywordflow}{if}(\hyperlink{group__imu_gab5d0ae421cd4bb10b1b7a1eda167416b}{mag\_write\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev}, \hyperlink{communication_2imu__regs_8h_a4c80cd6ce866f16a3d999ee2c5635ec9}{MAG\_CONFIG\_A}, data)<0)\{
+104     perror(\textcolor{stringliteral}{"Write in Configuration register A unsuccesful"});
+105     \textcolor{keywordflow}{return} -1;
+106   \}
+107   
+108   \textcolor{keywordflow}{if}(\hyperlink{group__imu_gab5d0ae421cd4bb10b1b7a1eda167416b}{mag\_write\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev}, \hyperlink{communication_2imu__regs_8h_a094173f77219df894d97eed44405d942}{MAG\_CONFIG\_B}, range<<5)<0)\{
+109     perror(\textcolor{stringliteral}{"Write in configuration register B unsuccesful"});
+110     \textcolor{keywordflow}{return} -1;
+111   \}
+112   
+113   \textcolor{keywordflow}{if}(\hyperlink{group__imu_gab5d0ae421cd4bb10b1b7a1eda167416b}{mag\_write\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev}, \hyperlink{communication_2imu__regs_8h_a0173afba6efc0e164495bf506a9758d2}{MAG\_MODE}, op\_mode)<0)\{
+114     perror(\textcolor{stringliteral}{"Write in mode register unsuccesful"});
+115     \textcolor{keywordflow}{return} -1;
+116   \}
+117   
+118   \textcolor{keywordflow}{return} 1;
+119 \}
 \end{DoxyCode}

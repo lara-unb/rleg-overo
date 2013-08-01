@@ -58,37 +58,35 @@ References Cartesian\-\_\-velocity\-\_\-controller\-::control(), pi2, Robot\-\_\
 
 
 \begin{DoxyCode}
-                               \{
-
-        ros::init(argc, argv, \textcolor{stringliteral}{"schunk\_Cartesian\_velocity\_controller"});
-
-        \textcolor{comment}{//KINEMATIC PID VALUES}
-        \textcolor{keywordtype}{double} Kpv[6] = \{0.6,0.6,0.6,0.6,0.6,0.6\};
-        \textcolor{keywordtype}{double} Kiv[6] = \{0.0,0.0,0.0,0.0,0.0,0.0\};
-        \textcolor{keywordtype}{double} Kdv[6] = \{0.0,0.0,0.0,0.0,0.0,0.0\};
-        \textcolor{comment}{//SAMPLE TIME}
-        \textcolor{keywordtype}{double} T = 0.04;
-
-        \textcolor{comment}{//Memory Alloc}
-        \hyperlink{structRobot}{Robot}* r = \hyperlink{robot_8h_a5f12182c82371c83a3e31f88b61633ea}{Robot\_create}();
-
-        \textcolor{comment}{//               theta d        a   alpha}
-        \hyperlink{robot_8h_a030c05a337b160cdbf4d98c458bda2ed}{Robot\_addLink}(r, 0,   0.300        ,0,  -\hyperlink{cartesian__pose__controller_8cpp_a2c0cc2347cdb41873a6b0dbc108b15d3}{pi2});
-        \hyperlink{robot_8h_a030c05a337b160cdbf4d98c458bda2ed}{Robot\_addLink}(r, 0,   0            ,0,   \hyperlink{cartesian__pose__controller_8cpp_a2c0cc2347cdb41873a6b0dbc108b15d3}{pi2});
-        \hyperlink{robot_8h_a030c05a337b160cdbf4d98c458bda2ed}{Robot\_addLink}(r, 0,   0.328        ,0,  -\hyperlink{cartesian__pose__controller_8cpp_a2c0cc2347cdb41873a6b0dbc108b15d3}{pi2});
-        \hyperlink{robot_8h_a030c05a337b160cdbf4d98c458bda2ed}{Robot\_addLink}(r, 0,   0            ,0,   \hyperlink{cartesian__pose__controller_8cpp_a2c0cc2347cdb41873a6b0dbc108b15d3}{pi2});
-        \hyperlink{robot_8h_a030c05a337b160cdbf4d98c458bda2ed}{Robot\_addLink}(r, 0,   0.2765       ,0,  -\hyperlink{cartesian__pose__controller_8cpp_a2c0cc2347cdb41873a6b0dbc108b15d3}{pi2});
-        \hyperlink{robot_8h_a030c05a337b160cdbf4d98c458bda2ed}{Robot\_addLink}(r, 0,   0            ,0,   \hyperlink{cartesian__pose__controller_8cpp_a2c0cc2347cdb41873a6b0dbc108b15d3}{pi2});
-        \hyperlink{robot_8h_a030c05a337b160cdbf4d98c458bda2ed}{Robot\_addLink}(r, 0,   0.40049      ,0,   0  );
-
-        \hyperlink{classCartesian__velocity__controller}{Cartesian\_velocity\_controller} 
-      \hyperlink{classCartesian__velocity__controller}{Cartesian\_velocity\_controller}(r, Kpv, Kiv, Kdv, T)
-      ;
-
-        \hyperlink{classCartesian__velocity__controller}{Cartesian\_velocity\_controller}.\hyperlink{classCartesian__velocity__controller_a249bd167cd995e16906731172d1bc516}{control}
-      ();
-
-\}
+36                                \{
+37 
+38         ros::init(argc, argv, \textcolor{stringliteral}{"schunk\_Cartesian\_velocity\_controller"});
+39 
+40         \textcolor{comment}{//KINEMATIC PID VALUES}
+41         \textcolor{keywordtype}{double} Kpv[6] = \{0.6,0.6,0.6,0.6,0.6,0.6\};
+42         \textcolor{keywordtype}{double} Kiv[6] = \{0.0,0.0,0.0,0.0,0.0,0.0\};
+43         \textcolor{keywordtype}{double} Kdv[6] = \{0.0,0.0,0.0,0.0,0.0,0.0\};
+44         \textcolor{comment}{//SAMPLE TIME}
+45         \textcolor{keywordtype}{double} T = 0.04;
+46 
+47         \textcolor{comment}{//Memory Alloc}
+48         \hyperlink{structRobot}{Robot}* r = \hyperlink{robot_8h_a5f12182c82371c83a3e31f88b61633ea}{Robot\_create}();
+49 
+51         \textcolor{comment}{//               theta d        a   alpha}
+52         \hyperlink{robot_8h_a030c05a337b160cdbf4d98c458bda2ed}{Robot\_addLink}(r, 0,   0.300        ,0,  -\hyperlink{cartesian__pose__controller_8cpp_a2c0cc2347cdb41873a6b0dbc108b15d3}{pi2});
+53         \hyperlink{robot_8h_a030c05a337b160cdbf4d98c458bda2ed}{Robot\_addLink}(r, 0,   0            ,0,   \hyperlink{cartesian__pose__controller_8cpp_a2c0cc2347cdb41873a6b0dbc108b15d3}{pi2});
+54         \hyperlink{robot_8h_a030c05a337b160cdbf4d98c458bda2ed}{Robot\_addLink}(r, 0,   0.328        ,0,  -\hyperlink{cartesian__pose__controller_8cpp_a2c0cc2347cdb41873a6b0dbc108b15d3}{pi2});
+55         \hyperlink{robot_8h_a030c05a337b160cdbf4d98c458bda2ed}{Robot\_addLink}(r, 0,   0            ,0,   \hyperlink{cartesian__pose__controller_8cpp_a2c0cc2347cdb41873a6b0dbc108b15d3}{pi2});
+56         \hyperlink{robot_8h_a030c05a337b160cdbf4d98c458bda2ed}{Robot\_addLink}(r, 0,   0.2765       ,0,  -\hyperlink{cartesian__pose__controller_8cpp_a2c0cc2347cdb41873a6b0dbc108b15d3}{pi2});
+57         \hyperlink{robot_8h_a030c05a337b160cdbf4d98c458bda2ed}{Robot\_addLink}(r, 0,   0            ,0,   \hyperlink{cartesian__pose__controller_8cpp_a2c0cc2347cdb41873a6b0dbc108b15d3}{pi2});
+58         \hyperlink{robot_8h_a030c05a337b160cdbf4d98c458bda2ed}{Robot\_addLink}(r, 0,   0.40049      ,0,   0  );
+59 
+60         \hyperlink{classCartesian__velocity__controller}{Cartesian\_velocity\_controller} 
+      \hyperlink{classCartesian__velocity__controller}{Cartesian\_velocity\_controller}(r, Kpv, Kiv, Kdv, T);
+61 
+62         \hyperlink{classCartesian__velocity__controller}{Cartesian\_velocity\_controller}.\hyperlink{classCartesian__velocity__controller_a249bd167cd995e16906731172d1bc516}{control}();
+63 
+64 \}
 \end{DoxyCode}
 
 

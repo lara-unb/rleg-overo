@@ -1,14 +1,9 @@
 <map id="ui_update" name="ui_update">
-<area shape="rect" id="node3" href="$datalogger_8c.html#a1f254ef380d595d6605c10811fd0dee6" title="datalogger_start" alt="" coords="309,5,424,35"/>
-<area shape="rect" id="node9" href="$datalogger_8c.html#a46fd1290d9ee97d5fc7171e1e0dcb0aa" title="datalogger_status" alt="" coords="304,112,429,141"/>
-<area shape="rect" id="node13" href="$datalogger_8c.html#aae2ffbc6cbf8f1cfecceb42c5139530a" title="datalogger_stop" alt="" coords="309,165,424,195"/>
-<area shape="rect" id="node17" href="$main2_8c.html#a5f05ce725141ddfab683e059b1cd95ea" title="exit_program" alt="" coords="147,215,243,244"/>
-<area shape="rect" id="node19" href="$ui_8c.html#af48496a4ce54378764bc4ca9eddfd498" title="ui_eff_data" alt="" coords="152,268,237,297"/>
-<area shape="rect" id="node21" href="$ui_8c.html#a3821f6ba38465f8d170f7b947869e7d9" title="Print ENCODER data." alt="" coords="149,321,240,351"/>
-<area shape="rect" id="node23" href="$group__ui.html#ga7d5a9d9a75693709de408781d001a6a6" title="Print IMU data." alt="" coords="149,375,240,404"/>
-<area shape="rect" id="node25" href="$group__ui.html#gaefec243c5df45db0350c1abbccf20e3b" title="Print MRA data." alt="" coords="148,428,241,457"/>
-<area shape="rect" id="node27" href="$ui_8c.html#a8d5e19833fec51919aad6e78bb74619a" title="Print ALL sensors data." alt="" coords="133,60,256,89"/>
-<area shape="rect" id="node5" href="$datalogger_8c.html#a54b06d9395b2e370a5a72beb7f9524b2" title="datalogger_lock_mutex" alt="" coords="485,139,640,168"/>
-<area shape="rect" id="node7" href="$datalogger_8c.html#a85453211c0c809083c36cc56b275aeeb" title="datalogger_unlock_mutex" alt="" coords="477,85,648,115"/>
-<area shape="rect" id="node30" href="$main2_8c.html#a5b2b1fdd5e517470c10e84a2b2bcc5c8" title="get_time" alt="" coords="331,59,403,88"/>
+<area shape="rect" id="node3" href="$main_8c.html#a5f05ce725141ddfab683e059b1cd95ea" title="Internal function to end program." alt="" coords="147,5,243,35"/>
+<area shape="rect" id="node5" href="$ui_8c.html#af48496a4ce54378764bc4ca9eddfd498" title="ui_eff_data" alt="" coords="152,59,237,88"/>
+<area shape="rect" id="node7" href="$ui_8c.html#a3821f6ba38465f8d170f7b947869e7d9" title="Print ENCODER data." alt="" coords="149,112,240,141"/>
+<area shape="rect" id="node9" href="$group__ui.html#ga7d5a9d9a75693709de408781d001a6a6" title="Print IMU data." alt="" coords="149,165,240,195"/>
+<area shape="rect" id="node11" href="$group__ui.html#gaefec243c5df45db0350c1abbccf20e3b" title="Print MRA data." alt="" coords="148,219,241,248"/>
+<area shape="rect" id="node13" href="$ui_8c.html#a8d5e19833fec51919aad6e78bb74619a" title="Print ALL sensors data." alt="" coords="133,272,256,301"/>
+<area shape="rect" id="node15" href="$main2_8c.html#a5b2b1fdd5e517470c10e84a2b2bcc5c8" title="get_time" alt="" coords="304,272,376,301"/>
 </map>

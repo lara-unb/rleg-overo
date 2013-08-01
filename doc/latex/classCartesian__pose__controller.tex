@@ -93,46 +93,44 @@ References initial\-Positions, reference\-\_\-updater\-\_\-nh, reference\-\_\-up
 
 
 \begin{DoxyCode}
-                                                                               
-                                                                        : 
-      \hyperlink{classCartesian__controller_a71055bb1cbf01ced9e64bb1d184b68fe}{Cartesian\_controller}(r,8,KP,KI,KD,\hyperlink{classCartesian__controller_a35c6ddbb9624878f2807ff644a33e832}{T})\{
-
-
-        this->\hyperlink{classCartesian__pose__controller_a42433d7f2e4e03ccaac56e1f9a7a5027}{initialPositions} = \hyperlink{classCartesian__pose__controller_a42433d7f2e4e03ccaac56e1f9a7a5027}{initialPositions}
-      ;
-
-        \textcolor{comment}{/******************************}
-\textcolor{comment}{                 PUBLIC VARIABLES}
-\textcolor{comment}{        *******************************/}
-
-        \textcolor{comment}{//Positiosn vector}
-        \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0;j<8;j++)\{
-                this->\hyperlink{classCartesian__pose__controller_a301bc44e901e4837cf036661478354c4}{schunk\_pose}.positions.push\_back(0.0);
-        \}
-
-        \textcolor{comment}{/******************************}
-\textcolor{comment}{                  ROS VARIABLES}
-\textcolor{comment}{        *******************************/}
-
-        \textcolor{comment}{//Set Queues}
-        this->\hyperlink{classCartesian__pose__controller_ab2d5fe68c8229b6c90f84ac1601eb637}{reference\_updater\_nh}.setCallbackQueue(&this->
+289                                                                                                            
+                                            : \hyperlink{classCartesian__controller_a71055bb1cbf01ced9e64bb1d184b68fe}{Cartesian\_controller}(r,8,KP,KI,KD,
+      \hyperlink{classCartesian__controller_a35c6ddbb9624878f2807ff644a33e832}{T})\{
+290 
+291 
+292         this->\hyperlink{classCartesian__pose__controller_a42433d7f2e4e03ccaac56e1f9a7a5027}{initialPositions} = \hyperlink{classCartesian__pose__controller_a42433d7f2e4e03ccaac56e1f9a7a5027}{initialPositions};
+293 
+294         \textcolor{comment}{/******************************}
+295 \textcolor{comment}{                 PUBLIC VARIABLES}
+296 \textcolor{comment}{        *******************************/}
+297 
+298         \textcolor{comment}{//Positiosn vector}
+299         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0;j<8;j++)\{
+300                 this->\hyperlink{classCartesian__pose__controller_a301bc44e901e4837cf036661478354c4}{schunk\_pose}.positions.push\_back(0.0);
+301         \}
+302 
+303         \textcolor{comment}{/******************************}
+304 \textcolor{comment}{                  ROS VARIABLES}
+305 \textcolor{comment}{        *******************************/}
+306 
+307         \textcolor{comment}{//Set Queues}
+308         this->\hyperlink{classCartesian__pose__controller_ab2d5fe68c8229b6c90f84ac1601eb637}{reference\_updater\_nh}.setCallbackQueue(&this->
       \hyperlink{classCartesian__pose__controller_a6eea82d82ccd6c925be31c18e1b4a432}{reference\_updater\_queue});
-        this->\hyperlink{classCartesian__pose__controller_a41a692189fed59ec8ec8460539f63c66}{schunk\_pose\_nh}.setCallbackQueue(&this->
+309         this->\hyperlink{classCartesian__pose__controller_a41a692189fed59ec8ec8460539f63c66}{schunk\_pose\_nh}.setCallbackQueue(&this->
       \hyperlink{classCartesian__pose__controller_a5efe52a57e5239b3fd86ff456e94691b}{schunk\_pose\_queue});
-
-        \textcolor{comment}{//Subscriber and queue init.}
-        this->\hyperlink{classCartesian__pose__controller_a9394ae99649279f815c234b1ca7801b6}{reference\_updater\_subscriber}         
-      = this->\hyperlink{classCartesian__pose__controller_ab2d5fe68c8229b6c90f84ac1601eb637}{reference\_updater\_nh}.subscribe(\textcolor{stringliteral}{"
-      schunk\_reference\_positions"}, \hyperlink{classCartesian__controller_ab9ed5a808da204dbc612d313dc7332f4}{ros\_pub\_buffer}, &
-      \hyperlink{classCartesian__pose__controller_af9c1ec1f565375f50f8a15b16464f94d}{Cartesian\_pose\_controller::updateReferencesCallback}
-      , \textcolor{keyword}{this});
-
-        \textcolor{comment}{//Publisher}
-        this->\hyperlink{classCartesian__pose__controller_a9eb38e771e5006950b9a8075a0ea7e49}{schunk\_posePublisher}   = this->\hyperlink{classCartesian__pose__controller_a41a692189fed59ec8ec8460539f63c66}{schunk\_pose\_nh}
-      .advertise<schunk\_msgs::Positions>(\textcolor{stringliteral}{"schunk\_endeffector\_pose"}, \hyperlink{classCartesian__controller_ab9ed5a808da204dbc612d313dc7332f4}{ros\_pub\_buffer}
-      );
-
-\}
+310 
+311         \textcolor{comment}{//Subscriber and queue init.}
+312         this->\hyperlink{classCartesian__pose__controller_a9394ae99649279f815c234b1ca7801b6}{reference\_updater\_subscriber}         = this->
+      \hyperlink{classCartesian__pose__controller_ab2d5fe68c8229b6c90f84ac1601eb637}{reference\_updater\_nh}.subscribe(\textcolor{stringliteral}{"schunk\_reference\_positions"}, 
+      \hyperlink{classCartesian__controller_ab9ed5a808da204dbc612d313dc7332f4}{ros\_pub\_buffer}, &
+      \hyperlink{classCartesian__pose__controller_af9c1ec1f565375f50f8a15b16464f94d}{Cartesian\_pose\_controller::updateReferencesCallback}, \textcolor{keyword}{
+      this});
+313 
+314         \textcolor{comment}{//Publisher}
+315         this->\hyperlink{classCartesian__pose__controller_a9eb38e771e5006950b9a8075a0ea7e49}{schunk\_posePublisher}   = this->\hyperlink{classCartesian__pose__controller_a41a692189fed59ec8ec8460539f63c66}{schunk\_pose\_nh}.advertise<
+      schunk\_msgs::Positions>(\textcolor{stringliteral}{"schunk\_endeffector\_pose"}, \hyperlink{classCartesian__controller_ab9ed5a808da204dbc612d313dc7332f4}{ros\_pub\_buffer});
+316 
+317 \}
 \end{DoxyCode}
 
 
@@ -158,9 +156,9 @@ Definition at line 285 of file cartesian\-\_\-pose\-\_\-controller.\-cpp.
 
 
 \begin{DoxyCode}
-                                                     \{
-
-\}
+285                                                      \{
+286 
+287 \}
 \end{DoxyCode}
 
 
@@ -192,171 +190,169 @@ Referenced by main().
 
 
 \begin{DoxyCode}
-                                       \{
-        \textcolor{comment}{/******************************}
-\textcolor{comment}{}
-\textcolor{comment}{                                ROS INIT}
-\textcolor{comment}{        *******************************/}
-
-        \textcolor{comment}{//Ros rate}
-        ros::Rate ros\_rate(1/\hyperlink{classCartesian__controller_a35c6ddbb9624878f2807ff644a33e832}{T});
-
-        \textcolor{comment}{/*****************************}
-\textcolor{comment}{           CHANGE SCHUNK MODE TO ASSURE POSITION CONTROL}
-\textcolor{comment}{         *****************************/}
-
-        ros::service::waitForService(\textcolor{stringliteral}{"schunk\_set\_control\_mode"});
-
-        ROS\_INFO\_STREAM(\textcolor{stringliteral}{"Changing Schunk's Control Mode"});
-        \textcolor{keywordflow}{if}(!\hyperlink{classCartesian__controller_aaf006f80e89c08cf040956afbb4cf3c0}{changeSchunkMode}(CONTROL\_MODE\_POSITION))\{\textcolor{keywordflow}{return};\}
-        ROS\_INFO\_STREAM(\textcolor{stringliteral}{"Mode Changed to position!"});
-        ROS\_INFO\_STREAM(\textcolor{stringliteral}{"Sending initial position."});
-        \hyperlink{classCartesian__controller_ae845f67c81c2649bfbaccf95230f2599}{sendJointPositionsToSchunk}(this->
+72                                        \{
+73         \textcolor{comment}{/******************************}
+74 \textcolor{comment}{}
+75 \textcolor{comment}{                                ROS INIT}
+76 \textcolor{comment}{        *******************************/}
+77 
+78         \textcolor{comment}{//Ros rate}
+79         ros::Rate ros\_rate(1/\hyperlink{classCartesian__controller_a35c6ddbb9624878f2807ff644a33e832}{T});
+80 
+81         \textcolor{comment}{/*****************************}
+82 \textcolor{comment}{           CHANGE SCHUNK MODE TO ASSURE POSITION CONTROL}
+83 \textcolor{comment}{         *****************************/}
+84 
+85         ros::service::waitForService(\textcolor{stringliteral}{"schunk\_set\_control\_mode"});
+86 
+87         ROS\_INFO\_STREAM(\textcolor{stringliteral}{"Changing Schunk's Control Mode"});
+88         \textcolor{keywordflow}{if}(!\hyperlink{classCartesian__controller_aaf006f80e89c08cf040956afbb4cf3c0}{changeSchunkMode}(CONTROL\_MODE\_POSITION))\{\textcolor{keywordflow}{return};\}
+89         ROS\_INFO\_STREAM(\textcolor{stringliteral}{"Mode Changed to position!"});
+90         ROS\_INFO\_STREAM(\textcolor{stringliteral}{"Sending initial position."});
+91         \hyperlink{classCartesian__controller_ae845f67c81c2649bfbaccf95230f2599}{sendJointPositionsToSchunk}(this->
       \hyperlink{classCartesian__pose__controller_a42433d7f2e4e03ccaac56e1f9a7a5027}{initialPositions});
-        ROS\_INFO\_STREAM(\textcolor{stringliteral}{"Sent! Sleeping..."});
-        sleep(20);
-
-        \textcolor{comment}{/*****************************}
-\textcolor{comment}{           CHANGE SCHUNK MODE TO ASSURE VELOCITY CONTROL}
-\textcolor{comment}{         *****************************/}
-
-        ROS\_INFO\_STREAM(\textcolor{stringliteral}{"Changing Schunk's Control Mode"});
-        \textcolor{keywordflow}{if}(!\hyperlink{classCartesian__controller_aaf006f80e89c08cf040956afbb4cf3c0}{changeSchunkMode}(CONTROL\_MODE\_VELOCITY))\{\textcolor{keywordflow}{return};\}
-        ROS\_INFO\_STREAM(\textcolor{stringliteral}{"Mode Changed to velocity!"});
-
-        \textcolor{comment}{/*****************************}
-\textcolor{comment}{           UPDATES SCHUNK'S INITIAL POSITION AND VELOCITY}
-\textcolor{comment}{         *****************************/}
-        ROS\_INFO\_STREAM(\textcolor{stringliteral}{"Where is Schunk and how fast is it?"});
-        \textcolor{keywordflow}{if}(!\hyperlink{classCartesian__controller_a0d7a63bac84715f6742db738df246f91}{getSchunkPositionsAndVelocitiesAndUpdateThetasAndDThetas}
+92         ROS\_INFO\_STREAM(\textcolor{stringliteral}{"Sent! Sleeping..."});
+93         sleep(20);
+94 
+95         \textcolor{comment}{/*****************************}
+96 \textcolor{comment}{           CHANGE SCHUNK MODE TO ASSURE VELOCITY CONTROL}
+97 \textcolor{comment}{         *****************************/}
+98 
+99         ROS\_INFO\_STREAM(\textcolor{stringliteral}{"Changing Schunk's Control Mode"});
+100         \textcolor{keywordflow}{if}(!\hyperlink{classCartesian__controller_aaf006f80e89c08cf040956afbb4cf3c0}{changeSchunkMode}(CONTROL\_MODE\_VELOCITY))\{\textcolor{keywordflow}{return};\}
+101         ROS\_INFO\_STREAM(\textcolor{stringliteral}{"Mode Changed to velocity!"});
+102 
+103         \textcolor{comment}{/*****************************}
+104 \textcolor{comment}{           UPDATES SCHUNK'S INITIAL POSITION AND VELOCITY}
+105 \textcolor{comment}{         *****************************/}
+106         ROS\_INFO\_STREAM(\textcolor{stringliteral}{"Where is Schunk and how fast is it?"});
+107         \textcolor{keywordflow}{if}(!\hyperlink{classCartesian__controller_a0d7a63bac84715f6742db738df246f91}{getSchunkPositionsAndVelocitiesAndUpdateThetasAndDThetas}
       ())\{\textcolor{keywordflow}{return};\}
-        ROS\_INFO\_STREAM(\textcolor{stringliteral}{"Schunk found!"});
-
-        \textcolor{comment}{/******************************}
-\textcolor{comment}{        PRIVATE VARIABLE INITIALIZATION}
-\textcolor{comment}{        *******************************/}
-
-        \textcolor{comment}{//Update Robot Object. Thetas were updated.}
-        \hyperlink{robot_8h_aa1d3aca5132bd5f347f5966d38fbb966}{Robot\_updateLinksThetasByMatrix}(\hyperlink{classCartesian__controller_a5562129951bd802e4ded77fc716c87a0}{r},\hyperlink{classCartesian__controller_a0a0f818dad601cd9e3e26cb6959b8eb6}{
-      Thetas});
-        \textcolor{comment}{//Update end effectors pose}
-        \hyperlink{structDQ}{DQ}* eep = \hyperlink{robot_8h_a57cc252fbb9e4c8be955b6af755b0c2c}{Robot\_FKM}(\hyperlink{classCartesian__controller_a5562129951bd802e4ded77fc716c87a0}{r});
-        \textcolor{comment}{//Current end effectors pose is now the reference pose.}
-        \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0;j<4;j++)\{
-                this->\hyperlink{classCartesian__pose__controller_a301bc44e901e4837cf036661478354c4}{schunk\_pose}.positions[j]   = eep->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[j];
-                this->\hyperlink{classCartesian__pose__controller_a301bc44e901e4837cf036661478354c4}{schunk\_pose}.positions[j+4] = eep->\hyperlink{structDQ_a535cdb52876521fd6abbfcf211a7c702}{d}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[j];
-        \}
-        \textcolor{comment}{//Update D\_ref and D}
-        \hyperlink{classCartesian__pose__controller_a965f86a383eb205df10832626fac98af}{updateReferences}(1);
-        \hyperlink{dualquaternion_8h_a3d48348c3e25d1724058c2cf2364e42e}{PGMATRIX\_SET\_COLUMN\_BY\_DQ}(\hyperlink{classCartesian__controller_a8c470b652ce436d8e48f126073fc2593}{D}, 1, eep);
-        \textcolor{comment}{//Here, both D and D\_ref should be the same}
-        \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0;j<8;j++)\{
-                ROS\_INFO\_STREAM(\textcolor{stringliteral}{"Values are : D="} << \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}
-      (\hyperlink{classCartesian__controller_a8c470b652ce436d8e48f126073fc2593}{D},j+1,1) << \textcolor{stringliteral}{" and D\_ref="} << \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(\hyperlink{classCartesian__controller_abb248cb3215a574fe8e1bb8fb0b8626d}{D\_ref},j+1,1) );
-        \}
-
-        \textcolor{comment}{//Jacobians}
-        \hyperlink{classCartesian__controller_a98fdac06d136ac3dba0102d97cd5dd36}{SJ}  = \hyperlink{robot_8h_ab6dd42296709cf38d3468af7afd29563}{Robot\_getAJacobian}(\hyperlink{classCartesian__controller_a5562129951bd802e4ded77fc716c87a0}{r});
-
-        \textcolor{comment}{/******************************}
-\textcolor{comment}{                        LOOP}
-\textcolor{comment}{        *******************************/}
-
-        ROS\_INFO\_STREAM(\textcolor{stringliteral}{"Take a deep breath and GO!"});
-        \textcolor{comment}{//Take a deep breath and GO}
-        ros\_rate.sleep();
-
-        \textcolor{keywordflow}{while}(ros::ok())\{
-                \textcolor{comment}{//Last Error}
-                \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(\hyperlink{classCartesian__controller_a6d9471a983f6cb6c642bf8dea0d540af}{Err\_ant});
-                \hyperlink{classCartesian__controller_a6d9471a983f6cb6c642bf8dea0d540af}{Err\_ant} = \hyperlink{classCartesian__controller_ab3f08ecf10cb2486e8bfc61f07e2bde6}{Err};
-                \textcolor{comment}{/******************************}
-\textcolor{comment}{                        /END GET NEW REFERENCES}
-\textcolor{comment}{                *******************************/}
-                \textcolor{comment}{//Current Error}
-                \hyperlink{classCartesian__controller_ab3f08ecf10cb2486e8bfc61f07e2bde6}{Err} =     \hyperlink{gmatrix__plus_8h_a146d9062e4325cc3b97990ae51b96d95}{PGMATRIX\_SUBTRACT\_COPY\_FREE}
-      (\hyperlink{classCartesian__controller_abb248cb3215a574fe8e1bb8fb0b8626d}{D\_ref},\hyperlink{classCartesian__controller_a8c470b652ce436d8e48f126073fc2593}{D},\hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE},\hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
-                \textcolor{comment}{//Error Integral}
-                \hyperlink{classCartesian__controller_a37edb9c6e2a5066f74941e3659f68cbc}{aux1} =        \hyperlink{gmatrix__plus_8h_a371a0bfffdb84cf1596ca60bbf7fce93}{PGMATRIX\_MULTIPLY\_CONST\_COPY\_FREE}
-      (\hyperlink{classCartesian__controller_ab3f08ecf10cb2486e8bfc61f07e2bde6}{Err},\hyperlink{classCartesian__controller_a35c6ddbb9624878f2807ff644a33e832}{T},\hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
-                \hyperlink{classCartesian__controller_a248174c6399a8933bfcc8f1b0b39af5e}{Err\_int} = \hyperlink{gmatrix__plus_8h_aa1123306aa55d942955e09156db757a3}{PGMATRIX\_ADD\_COPY\_FREE}(
+108         ROS\_INFO\_STREAM(\textcolor{stringliteral}{"Schunk found!"});
+109 
+110         \textcolor{comment}{/******************************}
+111 \textcolor{comment}{        PRIVATE VARIABLE INITIALIZATION}
+112 \textcolor{comment}{        *******************************/}
+113 
+114         \textcolor{comment}{//Update Robot Object. Thetas were updated.}
+115         \hyperlink{robot_8h_aa1d3aca5132bd5f347f5966d38fbb966}{Robot\_updateLinksThetasByMatrix}(\hyperlink{classCartesian__controller_a5562129951bd802e4ded77fc716c87a0}{r},\hyperlink{classCartesian__controller_a0a0f818dad601cd9e3e26cb6959b8eb6}{Thetas});
+116         \textcolor{comment}{//Update end effectors pose}
+117         \hyperlink{structDQ}{DQ}* eep = \hyperlink{robot_8h_a57cc252fbb9e4c8be955b6af755b0c2c}{Robot\_FKM}(\hyperlink{classCartesian__controller_a5562129951bd802e4ded77fc716c87a0}{r});
+118         \textcolor{comment}{//Current end effectors pose is now the reference pose.}
+119         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0;j<4;j++)\{
+120                 this->\hyperlink{classCartesian__pose__controller_a301bc44e901e4837cf036661478354c4}{schunk\_pose}.positions[j]   = eep->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[j];
+121                 this->\hyperlink{classCartesian__pose__controller_a301bc44e901e4837cf036661478354c4}{schunk\_pose}.positions[j+4] = eep->\hyperlink{structDQ_a535cdb52876521fd6abbfcf211a7c702}{d}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[j];
+122         \}
+123         \textcolor{comment}{//Update D\_ref and D}
+124         \hyperlink{classCartesian__pose__controller_a965f86a383eb205df10832626fac98af}{updateReferences}(1);
+125         \hyperlink{dualquaternion_8h_a3d48348c3e25d1724058c2cf2364e42e}{PGMATRIX\_SET\_COLUMN\_BY\_DQ}(\hyperlink{classCartesian__controller_a8c470b652ce436d8e48f126073fc2593}{D}, 1, eep);
+126         \textcolor{comment}{//Here, both D and D\_ref should be the same}
+127         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0;j<8;j++)\{
+128                 ROS\_INFO\_STREAM(\textcolor{stringliteral}{"Values are : D="} << \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(
+      \hyperlink{classCartesian__controller_a8c470b652ce436d8e48f126073fc2593}{D},j+1,1) << \textcolor{stringliteral}{" and D\_ref="} << \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(\hyperlink{classCartesian__controller_abb248cb3215a574fe8e1bb8fb0b8626d}{D\_ref},j+1,1) );
+129         \}
+130 
+131         \textcolor{comment}{//Jacobians}
+132         \hyperlink{classCartesian__controller_a98fdac06d136ac3dba0102d97cd5dd36}{SJ}  = \hyperlink{robot_8h_ab6dd42296709cf38d3468af7afd29563}{Robot\_getAJacobian}(\hyperlink{classCartesian__controller_a5562129951bd802e4ded77fc716c87a0}{r});
+133 
+134         \textcolor{comment}{/******************************}
+135 \textcolor{comment}{                        LOOP}
+136 \textcolor{comment}{        *******************************/}
+137 
+138         ROS\_INFO\_STREAM(\textcolor{stringliteral}{"Take a deep breath and GO!"});
+139         \textcolor{comment}{//Take a deep breath and GO}
+140         ros\_rate.sleep();
+141 
+142         \textcolor{keywordflow}{while}(ros::ok())\{
+143                 \textcolor{comment}{//Last Error}
+144                 \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(\hyperlink{classCartesian__controller_a6d9471a983f6cb6c642bf8dea0d540af}{Err\_ant});
+145                 \hyperlink{classCartesian__controller_a6d9471a983f6cb6c642bf8dea0d540af}{Err\_ant} = \hyperlink{classCartesian__controller_ab3f08ecf10cb2486e8bfc61f07e2bde6}{Err};
+146                 \textcolor{comment}{/******************************}
+147 \textcolor{comment}{                        /END GET NEW REFERENCES}
+148 \textcolor{comment}{                *******************************/}
+149                 \textcolor{comment}{//Current Error}
+150                 \hyperlink{classCartesian__controller_ab3f08ecf10cb2486e8bfc61f07e2bde6}{Err} =     \hyperlink{gmatrix__plus_8h_a146d9062e4325cc3b97990ae51b96d95}{PGMATRIX\_SUBTRACT\_COPY\_FREE}(
+      \hyperlink{classCartesian__controller_abb248cb3215a574fe8e1bb8fb0b8626d}{D\_ref},\hyperlink{classCartesian__controller_a8c470b652ce436d8e48f126073fc2593}{D},\hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE},\hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+151                 \textcolor{comment}{//Error Integral}
+152                 \hyperlink{classCartesian__controller_a37edb9c6e2a5066f74941e3659f68cbc}{aux1} =        \hyperlink{gmatrix__plus_8h_a371a0bfffdb84cf1596ca60bbf7fce93}{PGMATRIX\_MULTIPLY\_CONST\_COPY\_FREE}(
+      \hyperlink{classCartesian__controller_ab3f08ecf10cb2486e8bfc61f07e2bde6}{Err},\hyperlink{classCartesian__controller_a35c6ddbb9624878f2807ff644a33e832}{T},\hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+153                 \hyperlink{classCartesian__controller_a248174c6399a8933bfcc8f1b0b39af5e}{Err\_int} = \hyperlink{gmatrix__plus_8h_aa1123306aa55d942955e09156db757a3}{PGMATRIX\_ADD\_COPY\_FREE}(
       \hyperlink{classCartesian__controller_a248174c6399a8933bfcc8f1b0b39af5e}{Err\_int},\hyperlink{classCartesian__controller_a37edb9c6e2a5066f74941e3659f68cbc}{aux1},\hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE},\hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
-                \textcolor{comment}{//Derivative    aux1 = Kd*(Err-Err\_ant)*(1/T)}
-                \hyperlink{classCartesian__controller_a37edb9c6e2a5066f74941e3659f68cbc}{aux1} = \hyperlink{gmatrix__plus_8h_a146d9062e4325cc3b97990ae51b96d95}{PGMATRIX\_SUBTRACT\_COPY\_FREE}
-      (\hyperlink{classCartesian__controller_ab3f08ecf10cb2486e8bfc61f07e2bde6}{Err},\hyperlink{classCartesian__controller_a6d9471a983f6cb6c642bf8dea0d540af}{Err\_ant},\hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE},\hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
-                \hyperlink{classCartesian__controller_a37edb9c6e2a5066f74941e3659f68cbc}{aux1} = \hyperlink{gmatrix__plus_8h_a17b482a0aaa68d1f4c1c30a1a72dacbb}{PGMATRIX\_MULTIPLY\_COPY\_FREE}
-      (\hyperlink{classCartesian__controller_a62394cef8a9a29eac18319a4ad579c4c}{Kd},\hyperlink{classCartesian__controller_a37edb9c6e2a5066f74941e3659f68cbc}{aux1},\hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE},\hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
-                \hyperlink{classCartesian__controller_a37edb9c6e2a5066f74941e3659f68cbc}{aux1} = \hyperlink{gmatrix__plus_8h_a371a0bfffdb84cf1596ca60bbf7fce93}{PGMATRIX\_MULTIPLY\_CONST\_COPY\_FREE}
-      (\hyperlink{classCartesian__controller_a37edb9c6e2a5066f74941e3659f68cbc}{aux1},(1/\hyperlink{classCartesian__controller_a35c6ddbb9624878f2807ff644a33e832}{T}),\hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
-                \textcolor{comment}{//Integral      aux2 = Ki*(Err\_int)}
-                \hyperlink{classCartesian__controller_af73a0c910cd80ed2f84974b65beba450}{aux2} = \hyperlink{gmatrix__plus_8h_a17b482a0aaa68d1f4c1c30a1a72dacbb}{PGMATRIX\_MULTIPLY\_COPY\_FREE}
-      (\hyperlink{classCartesian__controller_a70e495f39da706f1b589684f58343b9e}{Ki},\hyperlink{classCartesian__controller_a248174c6399a8933bfcc8f1b0b39af5e}{Err\_int},\hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE},\hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
-                \textcolor{comment}{//Proportional  aux3 = Kp*(Err)}
-                \hyperlink{classCartesian__controller_aa37c15fcd53a60ecce106cd9b39d3501}{aux3} = \hyperlink{gmatrix__plus_8h_a17b482a0aaa68d1f4c1c30a1a72dacbb}{PGMATRIX\_MULTIPLY\_COPY\_FREE}
-      (\hyperlink{classCartesian__controller_a78073f51064a05d72c41723a93d9079f}{Kp},\hyperlink{classCartesian__controller_ab3f08ecf10cb2486e8bfc61f07e2bde6}{Err},\hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE},\hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
-
-                \textcolor{comment}{//Error Sum     aux1 = Kd*(Err-Err\_ant)*(1/T) + Ki*(Err\_int) +
-       Kp*(Err)}
-                \hyperlink{classCartesian__controller_a37edb9c6e2a5066f74941e3659f68cbc}{aux1} = \hyperlink{gmatrix__plus_8h_aa1123306aa55d942955e09156db757a3}{PGMATRIX\_ADD\_COPY\_FREE}(\hyperlink{classCartesian__controller_a37edb9c6e2a5066f74941e3659f68cbc}{aux1}
-      ,\hyperlink{classCartesian__controller_af73a0c910cd80ed2f84974b65beba450}{aux2},\hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE},\hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
-                \hyperlink{classCartesian__controller_a37edb9c6e2a5066f74941e3659f68cbc}{aux1} = \hyperlink{gmatrix__plus_8h_aa1123306aa55d942955e09156db757a3}{PGMATRIX\_ADD\_COPY\_FREE}(\hyperlink{classCartesian__controller_a37edb9c6e2a5066f74941e3659f68cbc}{aux1}
-      ,\hyperlink{classCartesian__controller_aa37c15fcd53a60ecce106cd9b39d3501}{aux3},\hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE},\hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
-                \textcolor{comment}{//Pseudo Inverse Calculation}
-                \hyperlink{classCartesian__controller_af73a0c910cd80ed2f84974b65beba450}{aux2} =      \hyperlink{gmatrix__plus_8h_a73bceba2ac1f3a5589628d0f2e4081fa}{PGMATRIX\_DAMPED\_LEASTSQUARES\_PSEUDOINVERSE}
+154                 \textcolor{comment}{//Derivative    aux1 = Kd*(Err-Err\_ant)*(1/T)}
+155                 \hyperlink{classCartesian__controller_a37edb9c6e2a5066f74941e3659f68cbc}{aux1} = \hyperlink{gmatrix__plus_8h_a146d9062e4325cc3b97990ae51b96d95}{PGMATRIX\_SUBTRACT\_COPY\_FREE}(
+      \hyperlink{classCartesian__controller_ab3f08ecf10cb2486e8bfc61f07e2bde6}{Err},\hyperlink{classCartesian__controller_a6d9471a983f6cb6c642bf8dea0d540af}{Err\_ant},\hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE},\hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+156                 \hyperlink{classCartesian__controller_a37edb9c6e2a5066f74941e3659f68cbc}{aux1} = \hyperlink{gmatrix__plus_8h_a17b482a0aaa68d1f4c1c30a1a72dacbb}{PGMATRIX\_MULTIPLY\_COPY\_FREE}(
+      \hyperlink{classCartesian__controller_a62394cef8a9a29eac18319a4ad579c4c}{Kd},\hyperlink{classCartesian__controller_a37edb9c6e2a5066f74941e3659f68cbc}{aux1},\hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE},\hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+157                 \hyperlink{classCartesian__controller_a37edb9c6e2a5066f74941e3659f68cbc}{aux1} = \hyperlink{gmatrix__plus_8h_a371a0bfffdb84cf1596ca60bbf7fce93}{PGMATRIX\_MULTIPLY\_CONST\_COPY\_FREE}(
+      \hyperlink{classCartesian__controller_a37edb9c6e2a5066f74941e3659f68cbc}{aux1},(1/\hyperlink{classCartesian__controller_a35c6ddbb9624878f2807ff644a33e832}{T}),\hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+158                 \textcolor{comment}{//Integral      aux2 = Ki*(Err\_int)}
+159                 \hyperlink{classCartesian__controller_af73a0c910cd80ed2f84974b65beba450}{aux2} = \hyperlink{gmatrix__plus_8h_a17b482a0aaa68d1f4c1c30a1a72dacbb}{PGMATRIX\_MULTIPLY\_COPY\_FREE}(
+      \hyperlink{classCartesian__controller_a70e495f39da706f1b589684f58343b9e}{Ki},\hyperlink{classCartesian__controller_a248174c6399a8933bfcc8f1b0b39af5e}{Err\_int},\hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE},\hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+160                 \textcolor{comment}{//Proportional  aux3 = Kp*(Err)}
+161                 \hyperlink{classCartesian__controller_aa37c15fcd53a60ecce106cd9b39d3501}{aux3} = \hyperlink{gmatrix__plus_8h_a17b482a0aaa68d1f4c1c30a1a72dacbb}{PGMATRIX\_MULTIPLY\_COPY\_FREE}(
+      \hyperlink{classCartesian__controller_a78073f51064a05d72c41723a93d9079f}{Kp},\hyperlink{classCartesian__controller_ab3f08ecf10cb2486e8bfc61f07e2bde6}{Err},\hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE},\hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+162 
+163                 \textcolor{comment}{//Error Sum     aux1 = Kd*(Err-Err\_ant)*(1/T) + Ki*(Err\_int) + Kp*(Err)}
+164                 \hyperlink{classCartesian__controller_a37edb9c6e2a5066f74941e3659f68cbc}{aux1} = \hyperlink{gmatrix__plus_8h_aa1123306aa55d942955e09156db757a3}{PGMATRIX\_ADD\_COPY\_FREE}(\hyperlink{classCartesian__controller_a37edb9c6e2a5066f74941e3659f68cbc}{aux1},
+      \hyperlink{classCartesian__controller_af73a0c910cd80ed2f84974b65beba450}{aux2},\hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE},\hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+165                 \hyperlink{classCartesian__controller_a37edb9c6e2a5066f74941e3659f68cbc}{aux1} = \hyperlink{gmatrix__plus_8h_aa1123306aa55d942955e09156db757a3}{PGMATRIX\_ADD\_COPY\_FREE}(\hyperlink{classCartesian__controller_a37edb9c6e2a5066f74941e3659f68cbc}{aux1},
+      \hyperlink{classCartesian__controller_aa37c15fcd53a60ecce106cd9b39d3501}{aux3},\hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE},\hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+166                 \textcolor{comment}{//Pseudo Inverse Calculation}
+167                 \hyperlink{classCartesian__controller_af73a0c910cd80ed2f84974b65beba450}{aux2} =      \hyperlink{gmatrix__plus_8h_a73bceba2ac1f3a5589628d0f2e4081fa}{PGMATRIX\_DAMPED\_LEASTSQUARES\_PSEUDOINVERSE}
       (\hyperlink{classCartesian__controller_a98fdac06d136ac3dba0102d97cd5dd36}{SJ},0.01);
-
-                \textcolor{comment}{//New DThetas = pinv(SJ)*(Error Sum)}
-                \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(\hyperlink{classCartesian__controller_a5d6419e62e130150edfcbd82b1dadcae}{DThetas});
-                \hyperlink{classCartesian__controller_a5d6419e62e130150edfcbd82b1dadcae}{DThetas} = \hyperlink{gmatrix__plus_8h_a17b482a0aaa68d1f4c1c30a1a72dacbb}{PGMATRIX\_MULTIPLY\_COPY\_FREE}
-      (\hyperlink{classCartesian__controller_af73a0c910cd80ed2f84974b65beba450}{aux2},\hyperlink{classCartesian__controller_a37edb9c6e2a5066f74941e3659f68cbc}{aux1},\hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE},\hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
-
-                \textcolor{comment}{/******************************}
-\textcolor{comment}{                         GET NEW REFERENCES}
-\textcolor{comment}{                *******************************/}
-                \textcolor{comment}{//Receive callback to after update references}
-                \hyperlink{classCartesian__pose__controller_a965f86a383eb205df10832626fac98af}{updateReferences}(1);
-                \textcolor{comment}{/******************************}
-\textcolor{comment}{                        COMUNICATE WITH SCHUNK}
-\textcolor{comment}{                *******************************/}
-
-                \textcolor{comment}{//Sends information to robot to move, then wait and measure}
-                \hyperlink{classCartesian__controller_a40d17a9794af8a9a607618bf0ee5efff}{setSchunkVelocitiesAndSend}(0.01);
-
-                \textcolor{comment}{//Wait}
-                ros\_rate.sleep();
-                \textcolor{comment}{//Position and Velocities, THETAS AND DTHETAS ARE UPDATED}
-                \textcolor{keywordflow}{if}(!\hyperlink{classCartesian__controller_a0d7a63bac84715f6742db738df246f91}{getSchunkPositionsAndVelocitiesAndUpdateThetasAndDThetas}
+168 
+169                 \textcolor{comment}{//New DThetas = pinv(SJ)*(Error Sum)}
+170                 \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(\hyperlink{classCartesian__controller_a5d6419e62e130150edfcbd82b1dadcae}{DThetas});
+171                 \hyperlink{classCartesian__controller_a5d6419e62e130150edfcbd82b1dadcae}{DThetas} = \hyperlink{gmatrix__plus_8h_a17b482a0aaa68d1f4c1c30a1a72dacbb}{PGMATRIX\_MULTIPLY\_COPY\_FREE}(
+      \hyperlink{classCartesian__controller_af73a0c910cd80ed2f84974b65beba450}{aux2},\hyperlink{classCartesian__controller_a37edb9c6e2a5066f74941e3659f68cbc}{aux1},\hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE},\hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+172 
+173                 \textcolor{comment}{/******************************}
+174 \textcolor{comment}{                         GET NEW REFERENCES}
+175 \textcolor{comment}{                *******************************/}
+176                 \textcolor{comment}{//Receive callback to after update references}
+177                 \hyperlink{classCartesian__pose__controller_a965f86a383eb205df10832626fac98af}{updateReferences}(1);
+178                 \textcolor{comment}{/******************************}
+179 \textcolor{comment}{                        COMUNICATE WITH SCHUNK}
+180 \textcolor{comment}{                *******************************/}
+181 
+182                 \textcolor{comment}{//Sends information to robot to move, then wait and measure}
+183                 \hyperlink{classCartesian__controller_a40d17a9794af8a9a607618bf0ee5efff}{setSchunkVelocitiesAndSend}(0.01);
+184 
+185                 \textcolor{comment}{//Wait}
+186                 ros\_rate.sleep();
+188                 \textcolor{comment}{//Position and Velocities, THETAS AND DTHETAS ARE UPDATED}
+189                 \textcolor{keywordflow}{if}(!\hyperlink{classCartesian__controller_a0d7a63bac84715f6742db738df246f91}{getSchunkPositionsAndVelocitiesAndUpdateThetasAndDThetas}
       ())\{\textcolor{keywordflow}{return};\}
-                \hyperlink{classCartesian__pose__controller_ab55ab40074c82ba8cc010fe68fc76d5b}{printPose}();
-
-                \textcolor{comment}{/******************************}
-\textcolor{comment}{                /END    COMUNICATE WITH SCHUNK}
-\textcolor{comment}{                *******************************/}
-
-                \textcolor{comment}{//Updates Robot's Link's Thetas with current position}
-                \hyperlink{robot_8h_aa1d3aca5132bd5f347f5966d38fbb966}{Robot\_updateLinksThetasByMatrix}(\hyperlink{classCartesian__controller_a5562129951bd802e4ded77fc716c87a0}{
-      r},\hyperlink{classCartesian__controller_a0a0f818dad601cd9e3e26cb6959b8eb6}{Thetas});
-
-                \textcolor{comment}{//Updates Jacobian with new position}
-                \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(\hyperlink{classCartesian__controller_a98fdac06d136ac3dba0102d97cd5dd36}{SJ});
-                \hyperlink{classCartesian__controller_a98fdac06d136ac3dba0102d97cd5dd36}{SJ}  = \hyperlink{robot_8h_ab6dd42296709cf38d3468af7afd29563}{Robot\_getAJacobian}(\hyperlink{classCartesian__controller_a5562129951bd802e4ded77fc716c87a0}{r});
-
-                \textcolor{comment}{//End effectors pose}
-                \hyperlink{dualquaternion_8h_a1d21b6cb665c04de4be5aca50804caf4}{DQ\_free}(eep);
-                eep = \hyperlink{robot_8h_a57cc252fbb9e4c8be955b6af755b0c2c}{Robot\_FKM}(\hyperlink{classCartesian__controller_a5562129951bd802e4ded77fc716c87a0}{r});
-                \hyperlink{dualquaternion_8h_a3d48348c3e25d1724058c2cf2364e42e}{PGMATRIX\_SET\_COLUMN\_BY\_DQ}(\hyperlink{classCartesian__controller_a8c470b652ce436d8e48f126073fc2593}{D}, 1, eep);
-
-        \}
-
-
-        \textcolor{comment}{/******************************}
-\textcolor{comment}{                        CLEAN UP}
-\textcolor{comment}{        *******************************/}
-        \hyperlink{classCartesian__controller_a8c0f0b41de9f4f8b2e3aa327e7c6b50c}{controlCleanUp}();
-
-        \textcolor{keywordflow}{return};
-
-\}
+190                 \hyperlink{classCartesian__pose__controller_ab55ab40074c82ba8cc010fe68fc76d5b}{printPose}();
+191 
+192                 \textcolor{comment}{/******************************}
+193 \textcolor{comment}{                /END    COMUNICATE WITH SCHUNK}
+194 \textcolor{comment}{                *******************************/}
+195 
+196                 \textcolor{comment}{//Updates Robot's Link's Thetas with current position}
+197                 \hyperlink{robot_8h_aa1d3aca5132bd5f347f5966d38fbb966}{Robot\_updateLinksThetasByMatrix}(\hyperlink{classCartesian__controller_a5562129951bd802e4ded77fc716c87a0}{r},
+      \hyperlink{classCartesian__controller_a0a0f818dad601cd9e3e26cb6959b8eb6}{Thetas});
+198 
+199                 \textcolor{comment}{//Updates Jacobian with new position}
+200                 \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(\hyperlink{classCartesian__controller_a98fdac06d136ac3dba0102d97cd5dd36}{SJ});
+201                 \hyperlink{classCartesian__controller_a98fdac06d136ac3dba0102d97cd5dd36}{SJ}  = \hyperlink{robot_8h_ab6dd42296709cf38d3468af7afd29563}{Robot\_getAJacobian}(\hyperlink{classCartesian__controller_a5562129951bd802e4ded77fc716c87a0}{r});
+202 
+204                 \textcolor{comment}{//End effectors pose}
+205                 \hyperlink{dualquaternion_8h_a1d21b6cb665c04de4be5aca50804caf4}{DQ\_free}(eep);
+206                 eep = \hyperlink{robot_8h_a57cc252fbb9e4c8be955b6af755b0c2c}{Robot\_FKM}(\hyperlink{classCartesian__controller_a5562129951bd802e4ded77fc716c87a0}{r});
+207                 \hyperlink{dualquaternion_8h_a3d48348c3e25d1724058c2cf2364e42e}{PGMATRIX\_SET\_COLUMN\_BY\_DQ}(\hyperlink{classCartesian__controller_a8c470b652ce436d8e48f126073fc2593}{D}, 1, eep);
+208 
+209         \}
+210 
+211 
+212         \textcolor{comment}{/******************************}
+213 \textcolor{comment}{                        CLEAN UP}
+214 \textcolor{comment}{        *******************************/}
+215         \hyperlink{classCartesian__controller_a8c0f0b41de9f4f8b2e3aa327e7c6b50c}{controlCleanUp}();
+216 
+217         \textcolor{keywordflow}{return};
+218 
+219 \}
 \end{DoxyCode}
 
 
@@ -401,37 +397,36 @@ Referenced by control().
 
 
 \begin{DoxyCode}
-                                         \{
-
-        \textcolor{comment}{//for(int j=0;j<8;j++)\{}
-        \textcolor{comment}{//      schunk\_pose.positions[j] = PGMATRIX\_DATA(D,j+1,1);}
-        \textcolor{comment}{//\}}
-        \textcolor{comment}{//Temp TODO: DELETE ALL THE STUFF BETWEEN ME}
-        \hyperlink{structDQ}{DQ}* dq = \hyperlink{dualquaternion_8h_a8b1057516bdc2c0cb14127791cf356cf}{DQ\_create}(\hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(\hyperlink{classCartesian__controller_a8c470b652ce436d8e48f126073fc2593}{D},1,1),
-                        \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(\hyperlink{classCartesian__controller_a8c470b652ce436d8e48f126073fc2593}{D},2,1),
-                        \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(\hyperlink{classCartesian__controller_a8c470b652ce436d8e48f126073fc2593}{D},3,1),
-                        \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(\hyperlink{classCartesian__controller_a8c470b652ce436d8e48f126073fc2593}{D},4,1),
-                        \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(\hyperlink{classCartesian__controller_a8c470b652ce436d8e48f126073fc2593}{D},5,1),
-                        \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(\hyperlink{classCartesian__controller_a8c470b652ce436d8e48f126073fc2593}{D},6,1),
-                        \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(\hyperlink{classCartesian__controller_a8c470b652ce436d8e48f126073fc2593}{D},7,1),
-                        \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(\hyperlink{classCartesian__controller_a8c470b652ce436d8e48f126073fc2593}{D},8,1));
-        \hyperlink{structQ}{Q}* trans = \hyperlink{dualquaternion_8h_a80e2f2aded851388d4f18d486a0b9455}{DQ\_getT}(dq);
-        \hyperlink{structQ}{Q}* rot = \hyperlink{dualquaternion_8h_a35b3966af2f77ad5a8f47126948720fb}{DQ\_getR}(dq);
-        \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0;j<4;j++)\{
-                \hyperlink{classCartesian__pose__controller_a301bc44e901e4837cf036661478354c4}{schunk\_pose}.positions[j]   = trans->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[j];
-                \hyperlink{classCartesian__pose__controller_a301bc44e901e4837cf036661478354c4}{schunk\_pose}.positions[j+4] = rot->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[j];
-        \}
-        \hyperlink{dualquaternion_8h_a1d21b6cb665c04de4be5aca50804caf4}{DQ\_free}(dq);
-        \hyperlink{quaternion_8h_a69ecc76f665022f81be1702c20865de4}{Q\_free}(trans);
-        \hyperlink{quaternion_8h_a69ecc76f665022f81be1702c20865de4}{Q\_free}(rot);
-        \textcolor{comment}{//TODO: AND ME}
-
-        \hyperlink{classCartesian__pose__controller_a9eb38e771e5006950b9a8075a0ea7e49}{schunk\_posePublisher}.publish(\hyperlink{classCartesian__pose__controller_a301bc44e901e4837cf036661478354c4}{schunk\_pose}
-      );
-        \hyperlink{classCartesian__pose__controller_a5efe52a57e5239b3fd86ff456e94691b}{schunk\_pose\_queue}.callAvailable(ros::WallDuration(0));
-
-        \textcolor{keywordflow}{return} \textcolor{keyword}{true};
-\}
+223                                          \{
+224 
+225         \textcolor{comment}{//for(int j=0;j<8;j++)\{}
+226         \textcolor{comment}{//      schunk\_pose.positions[j] = PGMATRIX\_DATA(D,j+1,1);}
+227         \textcolor{comment}{//\}}
+228         \textcolor{comment}{//Temp TODO: DELETE ALL THE STUFF BETWEEN ME}
+229         \hyperlink{structDQ}{DQ}* dq = \hyperlink{dualquaternion_8h_a8b1057516bdc2c0cb14127791cf356cf}{DQ\_create}(\hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(\hyperlink{classCartesian__controller_a8c470b652ce436d8e48f126073fc2593}{D},1,1),
+230                         \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(\hyperlink{classCartesian__controller_a8c470b652ce436d8e48f126073fc2593}{D},2,1),
+231                         \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(\hyperlink{classCartesian__controller_a8c470b652ce436d8e48f126073fc2593}{D},3,1),
+232                         \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(\hyperlink{classCartesian__controller_a8c470b652ce436d8e48f126073fc2593}{D},4,1),
+233                         \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(\hyperlink{classCartesian__controller_a8c470b652ce436d8e48f126073fc2593}{D},5,1),
+234                         \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(\hyperlink{classCartesian__controller_a8c470b652ce436d8e48f126073fc2593}{D},6,1),
+235                         \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(\hyperlink{classCartesian__controller_a8c470b652ce436d8e48f126073fc2593}{D},7,1),
+236                         \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(\hyperlink{classCartesian__controller_a8c470b652ce436d8e48f126073fc2593}{D},8,1));
+237         \hyperlink{structQ}{Q}* trans = \hyperlink{dualquaternion_8h_a80e2f2aded851388d4f18d486a0b9455}{DQ\_getT}(dq);
+238         \hyperlink{structQ}{Q}* rot = \hyperlink{dualquaternion_8h_a35b3966af2f77ad5a8f47126948720fb}{DQ\_getR}(dq);
+239         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0;j<4;j++)\{
+240                 \hyperlink{classCartesian__pose__controller_a301bc44e901e4837cf036661478354c4}{schunk\_pose}.positions[j]   = trans->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[j];
+241                 \hyperlink{classCartesian__pose__controller_a301bc44e901e4837cf036661478354c4}{schunk\_pose}.positions[j+4] = rot->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[j];
+242         \}
+243         \hyperlink{dualquaternion_8h_a1d21b6cb665c04de4be5aca50804caf4}{DQ\_free}(dq);
+244         \hyperlink{quaternion_8h_a69ecc76f665022f81be1702c20865de4}{Q\_free}(trans);
+245         \hyperlink{quaternion_8h_a69ecc76f665022f81be1702c20865de4}{Q\_free}(rot);
+246         \textcolor{comment}{//TODO: AND ME}
+247 
+248         \hyperlink{classCartesian__pose__controller_a9eb38e771e5006950b9a8075a0ea7e49}{schunk\_posePublisher}.publish(\hyperlink{classCartesian__pose__controller_a301bc44e901e4837cf036661478354c4}{schunk\_pose});
+249         \hyperlink{classCartesian__pose__controller_a5efe52a57e5239b3fd86ff456e94691b}{schunk\_pose\_queue}.callAvailable(ros::WallDuration(0));
+250 
+251         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+252 \}
 \end{DoxyCode}
 
 
@@ -480,19 +475,18 @@ Referenced by control().
 
 
 \begin{DoxyCode}
-                                                                      \{
-
-        \textcolor{comment}{//Calls one of the velocities callbacks in the queue.}
-        \hyperlink{classCartesian__pose__controller_a6eea82d82ccd6c925be31c18e1b4a432}{reference\_updater\_queue}.callAvailable(
-      ros::WallDuration(0));
-
-        \textcolor{comment}{//Update references matrix}
-        \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0;j<8;j++)\{
-                \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(\hyperlink{classCartesian__controller_abb248cb3215a574fe8e1bb8fb0b8626d}{D\_ref},j+1,1) = ref\_gain*this->
+257                                                                       \{
+258 
+259         \textcolor{comment}{//Calls one of the velocities callbacks in the queue.}
+260         \hyperlink{classCartesian__pose__controller_a6eea82d82ccd6c925be31c18e1b4a432}{reference\_updater\_queue}.callAvailable(ros::WallDuration(0));
+261 
+262         \textcolor{comment}{//Update references matrix}
+263         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0;j<8;j++)\{
+264                 \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(\hyperlink{classCartesian__controller_abb248cb3215a574fe8e1bb8fb0b8626d}{D\_ref},j+1,1) = ref\_gain*this->
       \hyperlink{classCartesian__pose__controller_a301bc44e901e4837cf036661478354c4}{schunk\_pose}.positions[j];
-        \}
-
-\}
+265         \}
+266 
+267 \}
 \end{DoxyCode}
 
 
@@ -530,19 +524,18 @@ Referenced by Cartesian\-\_\-pose\-\_\-controller().
 
 
 \begin{DoxyCode}
-                                                                               
-                      \{
-
-        \textcolor{keywordflow}{if}(msg->positions.size() != 8)\{
-                ROS\_ERROR\_STREAM(\textcolor{stringliteral}{"Dualquaternion being sent to
-       schunk\_reference\_positions's topic is not size 8"});
-                \textcolor{keywordflow}{return};
-        \}
-
-        \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < 8; i++)\{
-                this->\hyperlink{classCartesian__pose__controller_a301bc44e901e4837cf036661478354c4}{schunk\_pose}.positions[i] = msg->positions[i];
-        \}
-\}
+272                                                                                                \{
+273 
+274         \textcolor{keywordflow}{if}(msg->positions.size() != 8)\{
+275                 ROS\_ERROR\_STREAM(\textcolor{stringliteral}{"Dualquaternion being sent to schunk\_reference\_positions's topic is not
+       size 8"});
+276                 \textcolor{keywordflow}{return};
+277         \}
+278 
+279         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < 8; i++)\{
+280                 this->\hyperlink{classCartesian__pose__controller_a301bc44e901e4837cf036661478354c4}{schunk\_pose}.positions[i] = msg->positions[i];
+281         \}
+282 \}
 \end{DoxyCode}
 
 

@@ -88,23 +88,23 @@ Referenced by main(), and Main\-\_\-robot\-\_\-init().
 
 
 \begin{DoxyCode}
-                                                                           \{
-        \hyperlink{structLink}{Link}* i;
-        \hyperlink{structLink}{Link}* l;
-
-        r->\hyperlink{structRobot_a51d4a86ac5314a1ed8614d5664c80747}{dofs}++;
-        
-        l = \hyperlink{link_8h_ace12847e227555949ca7bad31ada29c1}{Link\_create}(theta,d,a,alpha);
-        
-        \textcolor{keywordflow}{if}(r->\hyperlink{structRobot_aa983a42f95f55c494fd4154c4d42be47}{fl} == NULL)\{
-                r->\hyperlink{structRobot_aa983a42f95f55c494fd4154c4d42be47}{fl} = l;
-        \}
-        \textcolor{keywordflow}{else}\{
-                \textcolor{keywordflow}{for}(i = r->\hyperlink{structRobot_aa983a42f95f55c494fd4154c4d42be47}{fl}; i->\hyperlink{structLink_a185503cf680f8e9395c19c0521997c5c}{n} != NULL; i = i->\hyperlink{structLink_a185503cf680f8e9395c19c0521997c5c}{n});     
-                i->\hyperlink{structLink_a185503cf680f8e9395c19c0521997c5c}{n} = l;
-        \}
-
-\}
+69                                                                            \{
+70         \hyperlink{structLink}{Link}* i;
+71         \hyperlink{structLink}{Link}* l;
+72 
+73         r->\hyperlink{structRobot_a51d4a86ac5314a1ed8614d5664c80747}{dofs}++;
+74         
+75         l = \hyperlink{link_8h_ace12847e227555949ca7bad31ada29c1}{Link\_create}(theta,d,a,alpha);
+76         
+77         \textcolor{keywordflow}{if}(r->\hyperlink{structRobot_aa983a42f95f55c494fd4154c4d42be47}{fl} == NULL)\{
+78                 r->\hyperlink{structRobot_aa983a42f95f55c494fd4154c4d42be47}{fl} = l;
+79         \}
+80         \textcolor{keywordflow}{else}\{
+81                 \textcolor{keywordflow}{for}(i = r->\hyperlink{structRobot_aa983a42f95f55c494fd4154c4d42be47}{fl}; i->\hyperlink{structLink_a185503cf680f8e9395c19c0521997c5c}{n} != NULL; i = i->\hyperlink{structLink_a185503cf680f8e9395c19c0521997c5c}{n});     
+82                 i->\hyperlink{structLink_a185503cf680f8e9395c19c0521997c5c}{n} = l;
+83         \}
+84 
+85 \}
 \end{DoxyCode}
 
 
@@ -156,15 +156,15 @@ Referenced by main().
 
 
 \begin{DoxyCode}
-                         \{
-        
-        \hyperlink{structRobot}{Robot}* r = (\hyperlink{structRobot}{Robot}*)malloc(\textcolor{keyword}{sizeof}(\hyperlink{structRobot}{Robot}));
-        
-        r->\hyperlink{structRobot_a51d4a86ac5314a1ed8614d5664c80747}{dofs} = 0;
-        r->\hyperlink{structRobot_aa983a42f95f55c494fd4154c4d42be47}{fl} = NULL; 
-        
-        \textcolor{keywordflow}{return} r;
-\}
+39                          \{
+40         
+41         \hyperlink{structRobot}{Robot}* r = (\hyperlink{structRobot}{Robot}*)malloc(\textcolor{keyword}{sizeof}(\hyperlink{structRobot}{Robot}));
+42         
+43         r->\hyperlink{structRobot_a51d4a86ac5314a1ed8614d5664c80747}{dofs} = 0;
+44         r->\hyperlink{structRobot_aa983a42f95f55c494fd4154c4d42be47}{fl} = NULL; 
+45         
+46         \textcolor{keywordflow}{return} r;
+47 \}
 \end{DoxyCode}
 
 
@@ -217,22 +217,21 @@ Referenced by Cartesian\-\_\-pose\-\_\-controller\-::control(), main(), Robot\-\
 
 
 \begin{DoxyCode}
-                      \{
-
-        \textcolor{comment}{//Iterator}
-        \hyperlink{structLink}{Link}* i = NULL;
-        
-        \textcolor{comment}{//End Effector DualQuaternion Pose}
-        \hyperlink{structDQ}{DQ}* efp = \hyperlink{dualquaternion_8h_a8b1057516bdc2c0cb14127791cf356cf}{DQ\_create}(1,0,0,0,0,0,0,0);
-
-        \textcolor{comment}{//Goes through each link frame transformation}
-        \textcolor{keywordflow}{for}(i = r->\hyperlink{structRobot_aa983a42f95f55c494fd4154c4d42be47}{fl}; i != NULL; i = i->\hyperlink{structLink_a185503cf680f8e9395c19c0521997c5c}{n})\{
-                efp = \hyperlink{dualquaternion_8h_a6618a3e5a7446724565f92271068a985}{DQ\_mult}(efp,\hyperlink{link_8h_a214ddb7cd91bd6b6b3a9ee37d1ec5a92}{Link\_DQFT}(i),\hyperlink{robot_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE},\hyperlink{robot_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE}
-      );
-        \}
-
-        \textcolor{keywordflow}{return} efp;
-\}
+97                       \{
+98 
+99         \textcolor{comment}{//Iterator}
+100         \hyperlink{structLink}{Link}* i = NULL;
+101         
+102         \textcolor{comment}{//End Effector DualQuaternion Pose}
+103         \hyperlink{structDQ}{DQ}* efp = \hyperlink{dualquaternion_8h_a8b1057516bdc2c0cb14127791cf356cf}{DQ\_create}(1,0,0,0,0,0,0,0);
+104 
+105         \textcolor{comment}{//Goes through each link frame transformation}
+106         \textcolor{keywordflow}{for}(i = r->\hyperlink{structRobot_aa983a42f95f55c494fd4154c4d42be47}{fl}; i != NULL; i = i->\hyperlink{structLink_a185503cf680f8e9395c19c0521997c5c}{n})\{
+107                 efp = \hyperlink{dualquaternion_8h_a6618a3e5a7446724565f92271068a985}{DQ\_mult}(efp,\hyperlink{link_8h_a214ddb7cd91bd6b6b3a9ee37d1ec5a92}{Link\_DQFT}(i),\hyperlink{robot_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE},\hyperlink{robot_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+108         \}
+109 
+110         \textcolor{keywordflow}{return} efp;
+111 \}
 \end{DoxyCode}
 
 
@@ -281,14 +280,14 @@ Referenced by Cartesian\-\_\-controller\-::control\-Clean\-Up(), and main().
 
 
 \begin{DoxyCode}
-                         \{
-        \textcolor{keywordtype}{int} i = 0;
-
-        \textcolor{keywordflow}{for}(i = (r->\hyperlink{structRobot_a51d4a86ac5314a1ed8614d5664c80747}{dofs} - 1);i>=0;i--)\{
-                \hyperlink{link_8h_aa5732848aecbf1cb2f8605b2f43aa14e}{Link\_free}(\hyperlink{robot_8h_af34bf204faed7e475a004f0c027badcc}{Robot\_getLink}(r,i));    
-        \}
-        free(r);
-\}
+52                          \{
+53         \textcolor{keywordtype}{int} i = 0;
+54 
+55         \textcolor{keywordflow}{for}(i = (r->\hyperlink{structRobot_a51d4a86ac5314a1ed8614d5664c80747}{dofs} - 1);i>=0;i--)\{
+56                 \hyperlink{link_8h_aa5732848aecbf1cb2f8605b2f43aa14e}{Link\_free}(\hyperlink{robot_8h_af34bf204faed7e475a004f0c027badcc}{Robot\_getLink}(r,i));    
+57         \}
+58         free(r);
+59 \}
 \end{DoxyCode}
 
 
@@ -347,41 +346,41 @@ Referenced by Cartesian\-\_\-pose\-\_\-controller\-::control(), and Robot\-\_\-g
 
 
 \begin{DoxyCode}
-                                     \{
-
-        \textcolor{keywordtype}{int} i = 0;
-        \textcolor{keywordtype}{int} dofs = r->\hyperlink{structRobot_a51d4a86ac5314a1ed8614d5664c80747}{dofs};
-        \hyperlink{structDQ}{DQ}* p;
-        \hyperlink{structDQ}{DQ}* efp = NULL;
-        \hyperlink{structDQ}{DQ}* dq = NULL;
-        \hyperlink{structGMATRIX}{PGMATRIX} AJ = NULL;
-
-        \textcolor{keywordflow}{if}(dofs < 1)\{\textcolor{keywordflow}{return} NULL;\}
-
-        \textcolor{comment}{//End Effectors Pose.}
-        efp = \hyperlink{robot_8h_a57cc252fbb9e4c8be955b6af755b0c2c}{Robot\_FKM}(r);
-        dq = \hyperlink{dualquaternion_8h_a8b1057516bdc2c0cb14127791cf356cf}{DQ\_create}(1,0,0,0,0,0,0,0);
-        \textcolor{comment}{//Initialize Analytical Jacobian}
-        AJ = \hyperlink{gmatrix_8h_adf8dc9cfae5700de80c88604082ffa10}{PGMATRIX\_ALLOC}(8,dofs);
-        \hyperlink{gmatrix_8h_a9b78ef8288b8e5448313d92d7427366d}{PGMATRIX\_ZEROES}(AJ);
-
-        \textcolor{keywordflow}{for}(i=0;i<dofs;i++)\{
-                
-                p = \hyperlink{robot_8c_a4b3a6e6509133ce5381e387f9e7fea99}{Robot\_getP}(dq);
-                dq = \hyperlink{dualquaternion_8h_a6618a3e5a7446724565f92271068a985}{DQ\_mult}(dq,\hyperlink{link_8h_a214ddb7cd91bd6b6b3a9ee37d1ec5a92}{Link\_DQFT}(\hyperlink{robot_8h_af34bf204faed7e475a004f0c027badcc}{Robot\_getLink}
-      (r,i)),\hyperlink{robot_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE},\hyperlink{robot_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
-                p =  \hyperlink{dualquaternion_8h_a6618a3e5a7446724565f92271068a985}{DQ\_mult}(p,efp,\hyperlink{robot_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE},\hyperlink{robot_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
-
-                \hyperlink{dualquaternion_8h_a3d48348c3e25d1724058c2cf2364e42e}{PGMATRIX\_SET\_COLUMN\_BY\_DQ}(AJ,i+1,p);   
-                \hyperlink{dualquaternion_8h_a1d21b6cb665c04de4be5aca50804caf4}{DQ\_free}(p);
-        \}
-
-        \textcolor{comment}{//Memory usage care}
-        \hyperlink{dualquaternion_8h_a1d21b6cb665c04de4be5aca50804caf4}{DQ\_free}(efp);
-        \hyperlink{dualquaternion_8h_a1d21b6cb665c04de4be5aca50804caf4}{DQ\_free}(dq);
-
-        \textcolor{keywordflow}{return} AJ;
-\}
+234                                      \{
+235 
+236         \textcolor{keywordtype}{int} i = 0;
+237         \textcolor{keywordtype}{int} dofs = r->\hyperlink{structRobot_a51d4a86ac5314a1ed8614d5664c80747}{dofs};
+238         \hyperlink{structDQ}{DQ}* p;
+239         \hyperlink{structDQ}{DQ}* efp = NULL;
+240         \hyperlink{structDQ}{DQ}* dq = NULL;
+241         \hyperlink{structGMATRIX}{PGMATRIX} AJ = NULL;
+242 
+243         \textcolor{keywordflow}{if}(dofs < 1)\{\textcolor{keywordflow}{return} NULL;\}
+244 
+245         \textcolor{comment}{//End Effectors Pose.}
+246         efp = \hyperlink{robot_8h_a57cc252fbb9e4c8be955b6af755b0c2c}{Robot\_FKM}(r);
+247         dq = \hyperlink{dualquaternion_8h_a8b1057516bdc2c0cb14127791cf356cf}{DQ\_create}(1,0,0,0,0,0,0,0);
+248         \textcolor{comment}{//Initialize Analytical Jacobian}
+249         AJ = \hyperlink{gmatrix_8h_adf8dc9cfae5700de80c88604082ffa10}{PGMATRIX\_ALLOC}(8,dofs);
+250         \hyperlink{gmatrix_8h_a9b78ef8288b8e5448313d92d7427366d}{PGMATRIX\_ZEROES}(AJ);
+251 
+252         \textcolor{keywordflow}{for}(i=0;i<dofs;i++)\{
+253                 
+254                 p = \hyperlink{robot_8c_a4b3a6e6509133ce5381e387f9e7fea99}{Robot\_getP}(dq);
+255                 dq = \hyperlink{dualquaternion_8h_a6618a3e5a7446724565f92271068a985}{DQ\_mult}(dq,\hyperlink{link_8h_a214ddb7cd91bd6b6b3a9ee37d1ec5a92}{Link\_DQFT}(\hyperlink{robot_8h_af34bf204faed7e475a004f0c027badcc}{Robot\_getLink}(r,i)),
+      \hyperlink{robot_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE},\hyperlink{robot_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+256                 p =  \hyperlink{dualquaternion_8h_a6618a3e5a7446724565f92271068a985}{DQ\_mult}(p,efp,\hyperlink{robot_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE},\hyperlink{robot_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+257 
+258                 \hyperlink{dualquaternion_8h_a3d48348c3e25d1724058c2cf2364e42e}{PGMATRIX\_SET\_COLUMN\_BY\_DQ}(AJ,i+1,p);   
+259                 \hyperlink{dualquaternion_8h_a1d21b6cb665c04de4be5aca50804caf4}{DQ\_free}(p);
+260         \}
+261 
+262         \textcolor{comment}{//Memory usage care}
+263         \hyperlink{dualquaternion_8h_a1d21b6cb665c04de4be5aca50804caf4}{DQ\_free}(efp);
+264         \hyperlink{dualquaternion_8h_a1d21b6cb665c04de4be5aca50804caf4}{DQ\_free}(dq);
+265 
+266         \textcolor{keywordflow}{return} AJ;
+267 \}
 \end{DoxyCode}
 
 
@@ -446,88 +445,80 @@ Referenced by Cartesian\-\_\-velocity\-\_\-controller\-::control(), and main().
 
 
 \begin{DoxyCode}
-                                     \{
-        \textcolor{keywordtype}{int} i = 0;
-        \textcolor{keywordtype}{int} dofs = r->\hyperlink{structRobot_a51d4a86ac5314a1ed8614d5664c80747}{dofs};
-        \hyperlink{structGMATRIX}{PGMATRIX} zmat;
-        \hyperlink{structGMATRIX}{PGMATRIX} pepimat;
-        \hyperlink{structGMATRIX}{PGMATRIX} zmatpepimat;
-        \textcolor{keywordtype}{double} n=0,ex=0,ey=0,ez=0;
-        \hyperlink{structQ}{Q}* qpe;        \hyperlink{structQ}{Q}* qpi; \hyperlink{structQ}{Q}* qsub;
-        \hyperlink{structDQ}{DQ}* efp = NULL;\hyperlink{structDQ}{DQ}* dq = NULL;
-        \hyperlink{structGMATRIX}{PGMATRIX} GJ = NULL;
-
-        \textcolor{keywordflow}{if}(dofs < 1)\{\textcolor{keywordflow}{return} NULL;\}
-
-        \textcolor{comment}{//End Effector's Pose.}
-        efp = \hyperlink{robot_8h_a57cc252fbb9e4c8be955b6af755b0c2c}{Robot\_FKM}(r);
-        \textcolor{comment}{//End Effector's translation.}
-        qpe = \hyperlink{dualquaternion_8h_a80e2f2aded851388d4f18d486a0b9455}{DQ\_getT}(efp);
-        
-        \textcolor{comment}{//DQ\_print(efp);}
-        dq = \hyperlink{dualquaternion_8h_a8b1057516bdc2c0cb14127791cf356cf}{DQ\_create}(1,0,0,0,0,0,0,0);
-        \textcolor{comment}{//GJ = Mat\_zeros(6,dofs);}
-        GJ   = \hyperlink{gmatrix_8h_adf8dc9cfae5700de80c88604082ffa10}{PGMATRIX\_ALLOC}(6,dofs);
-        \hyperlink{gmatrix_8h_a9b78ef8288b8e5448313d92d7427366d}{PGMATRIX\_ZEROES}(GJ);
-        \textcolor{comment}{//zmat = Mat\_createByArray(3,1,z)}
-        zmat = \hyperlink{gmatrix_8h_adf8dc9cfae5700de80c88604082ffa10}{PGMATRIX\_ALLOC}(3,1);
-        \textcolor{comment}{//pepimat = Mat\_createByArray(3,1,pepi);}
-        pepimat = \hyperlink{gmatrix_8h_adf8dc9cfae5700de80c88604082ffa10}{PGMATRIX\_ALLOC}(3,1);
-        zmatpepimat = \hyperlink{gmatrix_8h_adf8dc9cfae5700de80c88604082ffa10}{PGMATRIX\_ALLOC}(3,1);
-
-        \textcolor{comment}{//A primeira transforma��o � a do base frame. Do DualQuaternion
-       (1,0,0,0,0,0,0,0) e vai at� o link}
-        \textcolor{comment}{//anterior ao �ltimo.}
-        \textcolor{keywordflow}{for}(i=0;i<(dofs);i++)\{
-                
-                \textcolor{comment}{//Define operation}
-                n = dq->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0];
-                ex = dq->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1];
-                ey = dq->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2];
-                ez = dq->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3];
-
-                \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(zmat,1,1) = 2*(ex*ez + n*ey);
-                \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(zmat,2,1) = 2*(ey*ez - n*ex);
-                \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(zmat,3,1) = 2*(n*n + ez*ez) - 1;
-                \textcolor{comment}{//zmat = Mat\_createByArray(3,1,z);}
-\textcolor{comment}{}                qpi = \hyperlink{dualquaternion_8h_a80e2f2aded851388d4f18d486a0b9455}{DQ\_getT}(dq);
-                qsub = \hyperlink{quaternion_8h_aeae0ced4cf7e9771da4b3236b8e5771c}{Q\_sub}(qpe,qpi,\hyperlink{robot_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE},\hyperlink{robot_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
-                \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(pepimat,1,1) = qsub->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1];
-                \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(pepimat,2,1) = qsub->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2];
-                \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(pepimat,3,1) = qsub->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3];
-                \textcolor{comment}{//pepimat = Mat\_createByArray(3,1,pepi);}
-\textcolor{comment}{}                \hyperlink{gmatrix_8h_af9c2b665846636801a9b85c22526ff47}{PGMATRIX\_CROSS\_COPY}(zmatpepimat, zmat, 
-      pepimat);
-                \textcolor{comment}{//zmatpepimat = Mat\_crossMult3(zmat,pepimat,TRUE,TRUE);}
-\textcolor{comment}{}                \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(GJ,1,i+1) = \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}
-      (zmatpepimat,1,1);
-                \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(GJ,2,i+1) = \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}
-      (zmatpepimat,2,1);
-                \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(GJ,3,i+1) = \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}
-      (zmatpepimat,3,1);
-                \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(GJ,4,i+1) = \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}
-      (zmat,1,1);
-                \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(GJ,5,i+1) = \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}
-      (zmat,2,1);
-                \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(GJ,6,i+1) = \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}
-      (zmat,3,1);
-                \textcolor{comment}{//Mat\_setColumnByArray(GJ,i+1,zpepi);}
-                
-                \hyperlink{quaternion_8h_a69ecc76f665022f81be1702c20865de4}{Q\_free}(qsub);
-                dq = \hyperlink{dualquaternion_8h_a6618a3e5a7446724565f92271068a985}{DQ\_mult}(dq,\hyperlink{link_8h_a214ddb7cd91bd6b6b3a9ee37d1ec5a92}{Link\_DQFT}(\hyperlink{robot_8h_af34bf204faed7e475a004f0c027badcc}{Robot\_getLink}
-      (r,i)),\hyperlink{robot_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE},\hyperlink{robot_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
-        \}
-
-        \textcolor{comment}{//Final Mem Free}
-        \hyperlink{quaternion_8h_a69ecc76f665022f81be1702c20865de4}{Q\_free}(qpe);
-        \hyperlink{dualquaternion_8h_a1d21b6cb665c04de4be5aca50804caf4}{DQ\_free}(efp);
-        \hyperlink{dualquaternion_8h_a1d21b6cb665c04de4be5aca50804caf4}{DQ\_free}(dq);
-        \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(zmat);
-        \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(pepimat);
-        \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(zmatpepimat);
-
-\textcolor{keywordflow}{return} GJ;
-\}
+278                                      \{
+279         \textcolor{keywordtype}{int} i = 0;
+280         \textcolor{keywordtype}{int} dofs = r->\hyperlink{structRobot_a51d4a86ac5314a1ed8614d5664c80747}{dofs};
+281         \hyperlink{structGMATRIX}{PGMATRIX} zmat;
+282         \hyperlink{structGMATRIX}{PGMATRIX} pepimat;
+283         \hyperlink{structGMATRIX}{PGMATRIX} zmatpepimat;
+284         \textcolor{keywordtype}{double} n=0,ex=0,ey=0,ez=0;
+285         \hyperlink{structQ}{Q}* qpe;        \hyperlink{structQ}{Q}* qpi; \hyperlink{structQ}{Q}* qsub;
+286         \hyperlink{structDQ}{DQ}* efp = NULL;\hyperlink{structDQ}{DQ}* dq = NULL;
+287         \hyperlink{structGMATRIX}{PGMATRIX} GJ = NULL;
+288 
+289         \textcolor{keywordflow}{if}(dofs < 1)\{\textcolor{keywordflow}{return} NULL;\}
+290 
+291         \textcolor{comment}{//End Effector's Pose.}
+292         efp = \hyperlink{robot_8h_a57cc252fbb9e4c8be955b6af755b0c2c}{Robot\_FKM}(r);
+293         \textcolor{comment}{//End Effector's translation.}
+294         qpe = \hyperlink{dualquaternion_8h_a80e2f2aded851388d4f18d486a0b9455}{DQ\_getT}(efp);
+295         
+296         \textcolor{comment}{//DQ\_print(efp);}
+297         dq = \hyperlink{dualquaternion_8h_a8b1057516bdc2c0cb14127791cf356cf}{DQ\_create}(1,0,0,0,0,0,0,0);
+298         \textcolor{comment}{//GJ = Mat\_zeros(6,dofs);}
+299         GJ   = \hyperlink{gmatrix_8h_adf8dc9cfae5700de80c88604082ffa10}{PGMATRIX\_ALLOC}(6,dofs);
+300         \hyperlink{gmatrix_8h_a9b78ef8288b8e5448313d92d7427366d}{PGMATRIX\_ZEROES}(GJ);
+301         \textcolor{comment}{//zmat = Mat\_createByArray(3,1,z)}
+302         zmat = \hyperlink{gmatrix_8h_adf8dc9cfae5700de80c88604082ffa10}{PGMATRIX\_ALLOC}(3,1);
+303         \textcolor{comment}{//pepimat = Mat\_createByArray(3,1,pepi);}
+304         pepimat = \hyperlink{gmatrix_8h_adf8dc9cfae5700de80c88604082ffa10}{PGMATRIX\_ALLOC}(3,1);
+305         zmatpepimat = \hyperlink{gmatrix_8h_adf8dc9cfae5700de80c88604082ffa10}{PGMATRIX\_ALLOC}(3,1);
+306 
+307         \textcolor{comment}{//A primeira transforma��o � a do base frame. Do DualQuaternion (1,0,0,0,0,0,0,0) e vai at� o link}
+308         \textcolor{comment}{//anterior ao �ltimo.}
+309         \textcolor{keywordflow}{for}(i=0;i<(dofs);i++)\{
+310                 
+311                 \textcolor{comment}{//Define operation}
+312                 n = dq->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0];
+313                 ex = dq->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1];
+314                 ey = dq->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2];
+315                 ez = dq->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3];
+316 
+317                 \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(zmat,1,1) = 2*(ex*ez + n*ey);
+318                 \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(zmat,2,1) = 2*(ey*ez - n*ex);
+319                 \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(zmat,3,1) = 2*(n*n + ez*ez) - 1;
+320                 \textcolor{comment}{//zmat = Mat\_createByArray(3,1,z);}
+323 \textcolor{comment}{}                qpi = \hyperlink{dualquaternion_8h_a80e2f2aded851388d4f18d486a0b9455}{DQ\_getT}(dq);
+324                 qsub = \hyperlink{quaternion_8h_aeae0ced4cf7e9771da4b3236b8e5771c}{Q\_sub}(qpe,qpi,\hyperlink{robot_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE},\hyperlink{robot_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+325                 \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(pepimat,1,1) = qsub->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1];
+326                 \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(pepimat,2,1) = qsub->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2];
+327                 \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(pepimat,3,1) = qsub->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3];
+328                 \textcolor{comment}{//pepimat = Mat\_createByArray(3,1,pepi);}
+330 \textcolor{comment}{}                \hyperlink{gmatrix_8h_af9c2b665846636801a9b85c22526ff47}{PGMATRIX\_CROSS\_COPY}(zmatpepimat, zmat, pepimat);
+331                 \textcolor{comment}{//zmatpepimat = Mat\_crossMult3(zmat,pepimat,TRUE,TRUE);}
+333 \textcolor{comment}{}                \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(GJ,1,i+1) = \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(zmatpepimat,1,1);
+334                 \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(GJ,2,i+1) = \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(zmatpepimat,2,1);
+335                 \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(GJ,3,i+1) = \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(zmatpepimat,3,1);
+336                 \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(GJ,4,i+1) = \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(zmat,1,1);
+337                 \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(GJ,5,i+1) = \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(zmat,2,1);
+338                 \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(GJ,6,i+1) = \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(zmat,3,1);
+339                 \textcolor{comment}{//Mat\_setColumnByArray(GJ,i+1,zpepi);}
+340                 
+342                 \hyperlink{quaternion_8h_a69ecc76f665022f81be1702c20865de4}{Q\_free}(qsub);
+343                 dq = \hyperlink{dualquaternion_8h_a6618a3e5a7446724565f92271068a985}{DQ\_mult}(dq,\hyperlink{link_8h_a214ddb7cd91bd6b6b3a9ee37d1ec5a92}{Link\_DQFT}(\hyperlink{robot_8h_af34bf204faed7e475a004f0c027badcc}{Robot\_getLink}(r,i)),
+      \hyperlink{robot_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE},\hyperlink{robot_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+344         \}
+345 
+346         \textcolor{comment}{//Final Mem Free}
+347         \hyperlink{quaternion_8h_a69ecc76f665022f81be1702c20865de4}{Q\_free}(qpe);
+348         \hyperlink{dualquaternion_8h_a1d21b6cb665c04de4be5aca50804caf4}{DQ\_free}(efp);
+349         \hyperlink{dualquaternion_8h_a1d21b6cb665c04de4be5aca50804caf4}{DQ\_free}(dq);
+350         \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(zmat);
+351         \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(pepimat);
+352         \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(zmatpepimat);
+353 
+354 \textcolor{keywordflow}{return} GJ;
+355 \}
 \end{DoxyCode}
 
 
@@ -589,25 +580,25 @@ Referenced by Robot\-\_\-free(), Robot\-\_\-get\-A\-Jacobian(), and Robot\-\_\-g
 
 
 \begin{DoxyCode}
-                                    \{
-        \textcolor{comment}{//Decl}
-        \hyperlink{structLink}{Link}* l;
-        \textcolor{keywordtype}{int} j = 0;
-
-
-        \textcolor{keywordflow}{if}(i < 0 || i >= r->\hyperlink{structRobot_a51d4a86ac5314a1ed8614d5664c80747}{dofs})\{
-                \textcolor{keywordflow}{return} NULL;
-        \}
-        \textcolor{keywordflow}{if}(r == NULL)\{
-                \textcolor{keywordflow}{return} NULL;
-        \}
-
-        l = r->\hyperlink{structRobot_aa983a42f95f55c494fd4154c4d42be47}{fl};
-        \textcolor{keywordflow}{for}(j = 0; j != i; j++)\{
-                l = l->\hyperlink{structLink_a185503cf680f8e9395c19c0521997c5c}{n};
-        \}
-        \textcolor{keywordflow}{return} l;
-\}
+125                                     \{
+126         \textcolor{comment}{//Decl}
+127         \hyperlink{structLink}{Link}* l;
+128         \textcolor{keywordtype}{int} j = 0;
+129 
+130 
+131         \textcolor{keywordflow}{if}(i < 0 || i >= r->\hyperlink{structRobot_a51d4a86ac5314a1ed8614d5664c80747}{dofs})\{
+132                 \textcolor{keywordflow}{return} NULL;
+133         \}
+134         \textcolor{keywordflow}{if}(r == NULL)\{
+135                 \textcolor{keywordflow}{return} NULL;
+136         \}
+137 
+138         l = r->\hyperlink{structRobot_aa983a42f95f55c494fd4154c4d42be47}{fl};
+139         \textcolor{keywordflow}{for}(j = 0; j != i; j++)\{
+140                 l = l->\hyperlink{structLink_a185503cf680f8e9395c19c0521997c5c}{n};
+141         \}
+142         \textcolor{keywordflow}{return} l;
+143 \}
 \end{DoxyCode}
 
 
@@ -655,52 +646,52 @@ Referenced by main().
 
 
 \begin{DoxyCode}
-                                           \{
-
-        \hyperlink{structDQ}{DQ}* efp = NULL;
-        \hyperlink{structGMATRIX}{PGMATRIX} AJ = NULL;
-        \hyperlink{structGMATRIX}{PGMATRIX} OJP = NULL;
-        \textcolor{keywordtype}{double} doubleAux = 0;
-        \textcolor{keywordtype}{double} q1,q2,q3,q4;
-        \hyperlink{structGMATRIX}{PGMATRIX} Maux1;
-        \hyperlink{structGMATRIX}{PGMATRIX} Maux2;
-
-        AJ = \hyperlink{robot_8h_ab6dd42296709cf38d3468af7afd29563}{Robot\_getAJacobian}(r);
-        efp = \hyperlink{robot_8h_a57cc252fbb9e4c8be955b6af755b0c2c}{Robot\_FKM}(r);
-
-        q1 = efp->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0];
-        q2 = efp->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1];
-        q3 = efp->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2];
-        q4 = efp->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3];
-
-        Maux1 = \hyperlink{gmatrix_8h_adf8dc9cfae5700de80c88604082ffa10}{PGMATRIX\_ALLOC}(1,4);
-        doubleAux = 2/(sqrt(1-4*pow((q1*q3-q4*q2),2)));
-
-        \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Maux1,1,1) =  q3*doubleAux;
-        \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Maux1,1,2) = -q4*doubleAux;
-        \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Maux1,1,3) =  q1*doubleAux;
-        \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Maux1,1,4) = -q2*doubleAux;
-
-        Maux2 = \hyperlink{gmatrix_8h_adf8dc9cfae5700de80c88604082ffa10}{PGMATRIX\_ALLOC}(4,r->\hyperlink{structRobot_a51d4a86ac5314a1ed8614d5664c80747}{dofs});
-
-        \hyperlink{gmatrix_8h_a60f822f8426a81ffd3a8e5748295f621}{PGMATRIX\_COPY\_ROW}(Maux2, 1, AJ, 1);
-        \hyperlink{gmatrix_8h_a60f822f8426a81ffd3a8e5748295f621}{PGMATRIX\_COPY\_ROW}(Maux2, 2, AJ, 2);
-        \hyperlink{gmatrix_8h_a60f822f8426a81ffd3a8e5748295f621}{PGMATRIX\_COPY\_ROW}(Maux2, 3, AJ, 3);
-        \hyperlink{gmatrix_8h_a60f822f8426a81ffd3a8e5748295f621}{PGMATRIX\_COPY\_ROW}(Maux2, 4, AJ, 4);
-
-        OJP = \hyperlink{gmatrix_8h_adf8dc9cfae5700de80c88604082ffa10}{PGMATRIX\_ALLOC}(1,r->\hyperlink{structRobot_a51d4a86ac5314a1ed8614d5664c80747}{dofs});
-        \hyperlink{gmatrix_8h_ab8b0e8fdbcef816db4f0c9c235ddfbc8}{PGMATRIX\_MULTIPLY\_COPY}(OJP, Maux1, Maux2);
-
-        \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(Maux1);
-        
-        \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(Maux2);
-        
-        \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(AJ);
-        
-        \hyperlink{dualquaternion_8h_a1d21b6cb665c04de4be5aca50804caf4}{DQ\_free}(efp);
-
-        \textcolor{keywordflow}{return} OJP;
-\}
+366                                            \{
+367 
+368         \hyperlink{structDQ}{DQ}* efp = NULL;
+369         \hyperlink{structGMATRIX}{PGMATRIX} AJ = NULL;
+370         \hyperlink{structGMATRIX}{PGMATRIX} OJP = NULL;
+371         \textcolor{keywordtype}{double} doubleAux = 0;
+372         \textcolor{keywordtype}{double} q1,q2,q3,q4;
+373         \hyperlink{structGMATRIX}{PGMATRIX} Maux1;
+374         \hyperlink{structGMATRIX}{PGMATRIX} Maux2;
+375 
+376         AJ = \hyperlink{robot_8h_ab6dd42296709cf38d3468af7afd29563}{Robot\_getAJacobian}(r);
+377         efp = \hyperlink{robot_8h_a57cc252fbb9e4c8be955b6af755b0c2c}{Robot\_FKM}(r);
+378 
+379         q1 = efp->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0];
+380         q2 = efp->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1];
+381         q3 = efp->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2];
+382         q4 = efp->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3];
+383 
+384         Maux1 = \hyperlink{gmatrix_8h_adf8dc9cfae5700de80c88604082ffa10}{PGMATRIX\_ALLOC}(1,4);
+385         doubleAux = 2/(sqrt(1-4*pow((q1*q3-q4*q2),2)));
+386 
+387         \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Maux1,1,1) =  q3*doubleAux;
+388         \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Maux1,1,2) = -q4*doubleAux;
+389         \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Maux1,1,3) =  q1*doubleAux;
+390         \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(Maux1,1,4) = -q2*doubleAux;
+391 
+392         Maux2 = \hyperlink{gmatrix_8h_adf8dc9cfae5700de80c88604082ffa10}{PGMATRIX\_ALLOC}(4,r->\hyperlink{structRobot_a51d4a86ac5314a1ed8614d5664c80747}{dofs});
+393 
+394         \hyperlink{gmatrix_8h_a60f822f8426a81ffd3a8e5748295f621}{PGMATRIX\_COPY\_ROW}(Maux2, 1, AJ, 1);
+395         \hyperlink{gmatrix_8h_a60f822f8426a81ffd3a8e5748295f621}{PGMATRIX\_COPY\_ROW}(Maux2, 2, AJ, 2);
+396         \hyperlink{gmatrix_8h_a60f822f8426a81ffd3a8e5748295f621}{PGMATRIX\_COPY\_ROW}(Maux2, 3, AJ, 3);
+397         \hyperlink{gmatrix_8h_a60f822f8426a81ffd3a8e5748295f621}{PGMATRIX\_COPY\_ROW}(Maux2, 4, AJ, 4);
+398 
+399         OJP = \hyperlink{gmatrix_8h_adf8dc9cfae5700de80c88604082ffa10}{PGMATRIX\_ALLOC}(1,r->\hyperlink{structRobot_a51d4a86ac5314a1ed8614d5664c80747}{dofs});
+400         \hyperlink{gmatrix_8h_ab8b0e8fdbcef816db4f0c9c235ddfbc8}{PGMATRIX\_MULTIPLY\_COPY}(OJP, Maux1, Maux2);
+401 
+402         \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(Maux1);
+403         
+404         \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(Maux2);
+405         
+406         \hyperlink{gmatrix_8h_a9a73b4e0a77f386c0bae1bba75298d1d}{PGMATRIX\_FREE}(AJ);
+407         
+408         \hyperlink{dualquaternion_8h_a1d21b6cb665c04de4be5aca50804caf4}{DQ\_free}(efp);
+409 
+410         \textcolor{keywordflow}{return} OJP;
+411 \}
 \end{DoxyCode}
 
 
@@ -746,22 +737,22 @@ Referenced by Cartesian\-\_\-pose\-\_\-controller\-::control(), Cartesian\-\_\-v
 
 
 \begin{DoxyCode}
-                                                             \{
-
-        \textcolor{comment}{//Decl}
-        \hyperlink{structLink}{Link}* l;
-        \textcolor{keywordtype}{int} j = 0;
-
-        \textcolor{keywordflow}{if}(r == NULL)\{
-                \textcolor{keywordflow}{return} -1;
-        \}
-        
-        \textcolor{keywordflow}{for}(l = r->\hyperlink{structRobot_aa983a42f95f55c494fd4154c4d42be47}{fl},j=0; l!=NULL; l=l->\hyperlink{structLink_a185503cf680f8e9395c19c0521997c5c}{n},j++)\{
-                l->\hyperlink{structLink_a88e705bc7fb6c7c8c7fa6987b52667d6}{theta} = \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(thetas,j+1,1);
-        \}
-        \textcolor{keywordflow}{return} 0;
-
-\}
+172                                                              \{
+173 
+174         \textcolor{comment}{//Decl}
+175         \hyperlink{structLink}{Link}* l;
+176         \textcolor{keywordtype}{int} j = 0;
+177 
+178         \textcolor{keywordflow}{if}(r == NULL)\{
+179                 \textcolor{keywordflow}{return} -1;
+180         \}
+181         
+182         \textcolor{keywordflow}{for}(l = r->\hyperlink{structRobot_aa983a42f95f55c494fd4154c4d42be47}{fl},j=0; l!=NULL; l=l->\hyperlink{structLink_a185503cf680f8e9395c19c0521997c5c}{n},j++)\{
+183                 l->\hyperlink{structLink_a88e705bc7fb6c7c8c7fa6987b52667d6}{theta} = \hyperlink{gmatrix_8h_a7333180c47234295df2bd7b09ac00da8}{PGMATRIX\_DATA}(thetas,j+1,1);
+184         \}
+185         \textcolor{keywordflow}{return} 0;
+186 
+187 \}
 \end{DoxyCode}
 
 

@@ -1,6 +1,3 @@
 <map id="ui_overview_data" name="ui_overview_data">
-<area shape="rect" id="node3" href="$datalogger_8c.html#a46fd1290d9ee97d5fc7171e1e0dcb0aa" title="datalogger_status" alt="" coords="176,32,301,61"/>
-<area shape="rect" id="node9" href="$main2_8c.html#a5b2b1fdd5e517470c10e84a2b2bcc5c8" title="get_time" alt="" coords="203,85,275,115"/>
-<area shape="rect" id="node5" href="$datalogger_8c.html#a54b06d9395b2e370a5a72beb7f9524b2" title="datalogger_lock_mutex" alt="" coords="357,5,512,35"/>
-<area shape="rect" id="node7" href="$datalogger_8c.html#a85453211c0c809083c36cc56b275aeeb" title="datalogger_unlock_mutex" alt="" coords="349,59,520,88"/>
+<area shape="rect" id="node3" href="$main2_8c.html#a5b2b1fdd5e517470c10e84a2b2bcc5c8" title="get_time" alt="" coords="176,5,248,35"/>
 </map>

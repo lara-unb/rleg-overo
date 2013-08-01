@@ -1,19 +1,6 @@
 \hypertarget{group__enc}{\section{Function of Encoder A\-M\-T203}
 \label{group__enc}\index{Function of Encoder A\-M\-T203@{Function of Encoder A\-M\-T203}}
 }
-Collaboration diagram for Function of Encoder A\-M\-T203\-:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=328pt]{group__enc}
-\end{center}
-\end{figure}
-\subsection*{Macros}
-\begin{DoxyCompactItemize}
-\item 
-\#define \hyperlink{group__enc_gadf9edcc7e266ed7333f7570965f5956a}{E\-N\-C\-\_\-\-F\-S}~0.\-001
-\end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -26,20 +13,6 @@ int \hyperlink{group__enc_gad82fb44f2e735628ec95e003e4a1f93c}{enc\-\_\-wait\-\_\
 
 
 \subsection{Detailed Description}
-
-
-\subsection{Macro Definition Documentation}
-\hypertarget{group__enc_gadf9edcc7e266ed7333f7570965f5956a}{\index{Function of Encoder A\-M\-T203@{Function of Encoder A\-M\-T203}!E\-N\-C\-\_\-\-F\-S@{E\-N\-C\-\_\-\-F\-S}}
-\index{E\-N\-C\-\_\-\-F\-S@{E\-N\-C\-\_\-\-F\-S}!Function of Encoder AMT203@{Function of Encoder A\-M\-T203}}
-\subsubsection[{E\-N\-C\-\_\-\-F\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-N\-C\-\_\-\-F\-S~0.\-001}}\label{group__enc_gadf9edcc7e266ed7333f7570965f5956a}
-
-
-Definition at line 56 of file calibration.\-h.
-
-
-
-Referenced by calibrate\-\_\-enc().
-
 
 
 \subsection{Function Documentation}
@@ -79,28 +52,27 @@ Referenced by read\-\_\-all\-\_\-data().
 
 
 \begin{DoxyCode}
-                                                      \{
-
-    uint8\_t send[] = \{\hyperlink{encoder__functions_8h_a24e6c0e05e904b10f56ae184da9e2aca}{ENCODER\_RD\_POS},\hyperlink{encoder__functions_8h_ac10b0f18ed2164776ad6843aa7908592}{ENCODER\_NO\_OP}\};
-    uint8\_t receive[2] = \{0,\};
-    
-    \textcolor{comment}{/* Send command */}
-    \hyperlink{communication_2spi__functions_8c_a3ae450d2b3ece27bb6036f811a7625a9}{spi\_trans\_bytes}(\hyperlink{CommunicationV0_2communication_8c_a4788f0a5355494bc6c13690e28f43783}{spi\_dev},send,receive,1);
-    \textcolor{keywordflow}{if} (\hyperlink{group__enc_gad82fb44f2e735628ec95e003e4a1f93c}{enc\_wait\_for\_ack}(\hyperlink{CommunicationV0_2communication_8c_a4788f0a5355494bc6c13690e28f43783}{spi\_dev}, \hyperlink{encoder__functions_8h_a24e6c0e05e904b10f56ae184da9e2aca}{ENCODER\_RD\_POS}
-      , \hyperlink{encoder__functions_8h_a9ec306f36d50c7375e74f0d1c55a3a67}{INT\_MAX}) != \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS}) \{ 
-        \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE}; 
-    \}
-
-    \textcolor{keywordflow}{if}(\hyperlink{communication_2spi__functions_8c_a3ae450d2b3ece27bb6036f811a7625a9}{spi\_trans\_bytes}(\hyperlink{CommunicationV0_2communication_8c_a4788f0a5355494bc6c13690e28f43783}{spi\_dev},send,receive,2) != \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS}
-      ) \{ 
-        \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE}; 
-    \}
-
-   data[0] = receive[0];
-   data[1] = receive[1];
-
-   \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};
-\}
+37                                                       \{
+38 
+39     uint8\_t send[] = \{\hyperlink{encoder__functions_8h_a24e6c0e05e904b10f56ae184da9e2aca}{ENCODER\_RD\_POS},\hyperlink{encoder__functions_8h_ac10b0f18ed2164776ad6843aa7908592}{ENCODER\_NO\_OP}\};
+40     uint8\_t receive[2] = \{0,\};
+41     
+42     \textcolor{comment}{/* Send command */}
+43     \hyperlink{communication_2spi__functions_8c_a3ae450d2b3ece27bb6036f811a7625a9}{spi\_trans\_bytes}(\hyperlink{CommunicationV0_2communication_8c_a4788f0a5355494bc6c13690e28f43783}{spi\_dev},send,receive,1);
+44     \textcolor{keywordflow}{if} (\hyperlink{group__enc_gad82fb44f2e735628ec95e003e4a1f93c}{enc\_wait\_for\_ack}(\hyperlink{CommunicationV0_2communication_8c_a4788f0a5355494bc6c13690e28f43783}{spi\_dev}, \hyperlink{encoder__functions_8h_a24e6c0e05e904b10f56ae184da9e2aca}{ENCODER\_RD\_POS}, 
+      \hyperlink{encoder__functions_8h_a9ec306f36d50c7375e74f0d1c55a3a67}{INT\_MAX}) != \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS}) \{ 
+45         \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE}; 
+46     \}
+47 
+51     \textcolor{keywordflow}{if}(\hyperlink{communication_2spi__functions_8c_a3ae450d2b3ece27bb6036f811a7625a9}{spi\_trans\_bytes}(\hyperlink{CommunicationV0_2communication_8c_a4788f0a5355494bc6c13690e28f43783}{spi\_dev},send,receive,2) != \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS}) \{ 
+52         \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE}; 
+53     \}
+54 
+55    data[0] = receive[0];
+56    data[1] = receive[1];
+57 
+58    \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};
+59 \}
 \end{DoxyCode}
 
 
@@ -162,23 +134,23 @@ Referenced by enc\-\_\-read\-\_\-pos(), and enc\-\_\-zero\-\_\-set().
 
 
 \begin{DoxyCode}
-\{
-    \textcolor{keywordtype}{int} errors = 0;
-    uint8\_t send = \hyperlink{encoder__functions_8h_ac10b0f18ed2164776ad6843aa7908592}{ENCODER\_NO\_OP};
-    uint8\_t receive = 0;
-        
-  \textcolor{comment}{//nanosleep(10);}
-        \textcolor{comment}{//spi\_trans\_bytes(spi\_dev,send,receive,1);}
-    \textcolor{keywordflow}{while} (receive != ack) \{
-        \hyperlink{communication_2spi__functions_8c_a3ae450d2b3ece27bb6036f811a7625a9}{spi\_trans\_bytes}(\hyperlink{CommunicationV0_2communication_8c_a4788f0a5355494bc6c13690e28f43783}{spi\_dev},&send,&receive,1);
-        \textcolor{keywordflow}{if} (receive != \hyperlink{encoder__functions_8h_a77c3a97f7312d858d04ec3b4e1fb2176}{ENCODER\_WAIT\_RESP}) \{
-            errors++;
-            \textcolor{keywordflow}{if} (errors > max\_errors) \{ \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE}; \}
-        \}
-    \}
-
-    \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};
-\}
+62 \{
+63     \textcolor{keywordtype}{int} errors = 0;
+64     uint8\_t send = \hyperlink{encoder__functions_8h_ac10b0f18ed2164776ad6843aa7908592}{ENCODER\_NO\_OP};
+65     uint8\_t receive = 0;
+66         
+67   \textcolor{comment}{//nanosleep(10);}
+68         \textcolor{comment}{//spi\_trans\_bytes(spi\_dev,send,receive,1);}
+69     \textcolor{keywordflow}{while} (receive != ack) \{
+70         \hyperlink{communication_2spi__functions_8c_a3ae450d2b3ece27bb6036f811a7625a9}{spi\_trans\_bytes}(\hyperlink{CommunicationV0_2communication_8c_a4788f0a5355494bc6c13690e28f43783}{spi\_dev},&send,&receive,1);
+71         \textcolor{keywordflow}{if} (receive != \hyperlink{encoder__functions_8h_a77c3a97f7312d858d04ec3b4e1fb2176}{ENCODER\_WAIT\_RESP}) \{
+72             errors++;
+73             \textcolor{keywordflow}{if} (errors > max\_errors) \{ \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE}; \}
+74         \}
+75     \}
+76 
+77     \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};
+78 \}
 \end{DoxyCode}
 
 
@@ -234,24 +206,24 @@ References enc\-\_\-wait\-\_\-for\-\_\-ack(), E\-N\-C\-O\-D\-E\-R\-\_\-\-E\-E\-P
 
 
 \begin{DoxyCode}
-                             \{
-
-    uint8\_t send = \hyperlink{encoder__functions_8h_aa2fec4e0eb5a7b3668158a57952b9dbe}{ENCODER\_SET\_ZERO\_PT};
-    uint8\_t receive = 0;
-    
-    \textcolor{comment}{/* Send command */}
-    \hyperlink{communication_2spi__functions_8c_a3ae450d2b3ece27bb6036f811a7625a9}{spi\_trans\_bytes}(\hyperlink{CommunicationV0_2communication_8c_a4788f0a5355494bc6c13690e28f43783}{spi\_dev},&send,&receive,1);
-    \textcolor{keywordflow}{if} (\hyperlink{group__enc_gad82fb44f2e735628ec95e003e4a1f93c}{enc\_wait\_for\_ack}(\hyperlink{CommunicationV0_2communication_8c_a4788f0a5355494bc6c13690e28f43783}{spi\_dev}, \hyperlink{encoder__functions_8h_ab815abd4b9b825c60dbb04aad0d0e846}{ENCODER\_EEPROM\_WR}
-      , \hyperlink{encoder__functions_8h_a9ec306f36d50c7375e74f0d1c55a3a67}{INT\_MAX}) != \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS})\{ 
-        \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
-    \}
-
-    \textcolor{comment}{/* Note: }
-\textcolor{comment}{     *   From datasheet, the encoder must be power-cycled after this command}
-\textcolor{comment}{     *   for the new zero position to be used in the position calculation. */}
-
-    \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};
-\}
+19                              \{
+20 
+21     uint8\_t send = \hyperlink{encoder__functions_8h_aa2fec4e0eb5a7b3668158a57952b9dbe}{ENCODER\_SET\_ZERO\_PT};
+22     uint8\_t receive = 0;
+23     
+24     \textcolor{comment}{/* Send command */}
+25     \hyperlink{communication_2spi__functions_8c_a3ae450d2b3ece27bb6036f811a7625a9}{spi\_trans\_bytes}(\hyperlink{CommunicationV0_2communication_8c_a4788f0a5355494bc6c13690e28f43783}{spi\_dev},&send,&receive,1);
+26     \textcolor{keywordflow}{if} (\hyperlink{group__enc_gad82fb44f2e735628ec95e003e4a1f93c}{enc\_wait\_for\_ack}(\hyperlink{CommunicationV0_2communication_8c_a4788f0a5355494bc6c13690e28f43783}{spi\_dev}, \hyperlink{encoder__functions_8h_ab815abd4b9b825c60dbb04aad0d0e846}{ENCODER\_EEPROM\_WR}, 
+      \hyperlink{encoder__functions_8h_a9ec306f36d50c7375e74f0d1c55a3a67}{INT\_MAX}) != \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS})\{ 
+27         \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
+28     \}
+29 
+30     \textcolor{comment}{/* Note: }
+31 \textcolor{comment}{     *   From datasheet, the encoder must be power-cycled after this command}
+32 \textcolor{comment}{     *   for the new zero position to be used in the position calculation. */}
+33 
+34     \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};
+35 \}
 \end{DoxyCode}
 
 

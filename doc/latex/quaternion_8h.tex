@@ -100,20 +100,20 @@ Referenced by D\-Q\-\_\-mult().
 
 
 \begin{DoxyCode}
-                                          \{
-
-        \hyperlink{structQ}{Q}* c = \hyperlink{quaternion_8h_a2267ada2076193cc73def7d5df3281c0}{Q\_alloc}();
-        
-        c->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0] = a->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0]+b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0];
-        c->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1] = a->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1]+b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1];
-        c->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2] = a->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2]+b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2];
-        c->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3] = a->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3]+b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3];
-        
-        \textcolor{keywordflow}{if}(freeA)\{\hyperlink{quaternion_8h_a69ecc76f665022f81be1702c20865de4}{Q\_free}(a);\}
-        \textcolor{keywordflow}{if}(freeB)\{\hyperlink{quaternion_8h_a69ecc76f665022f81be1702c20865de4}{Q\_free}(b);\}
-
-        \textcolor{keywordflow}{return} c;
-\}
+96                                           \{
+97 
+98         \hyperlink{structQ}{Q}* c = \hyperlink{quaternion_8h_a2267ada2076193cc73def7d5df3281c0}{Q\_alloc}();
+99         
+100         c->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0] = a->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0]+b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0];
+101         c->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1] = a->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1]+b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1];
+102         c->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2] = a->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2]+b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2];
+103         c->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3] = a->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3]+b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3];
+104         
+105         \textcolor{keywordflow}{if}(freeA)\{\hyperlink{quaternion_8h_a69ecc76f665022f81be1702c20865de4}{Q\_free}(a);\}
+106         \textcolor{keywordflow}{if}(freeB)\{\hyperlink{quaternion_8h_a69ecc76f665022f81be1702c20865de4}{Q\_free}(b);\}
+107 
+108         \textcolor{keywordflow}{return} c;
+109 \}
 \end{DoxyCode}
 
 
@@ -164,9 +164,9 @@ Referenced by Link\-\_\-\-D\-Q\-F\-T(), Q\-\_\-add(), Q\-\_\-create(), Q\-\_\-mu
 
 
 \begin{DoxyCode}
-            \{
-        \textcolor{keywordflow}{return} (\hyperlink{structQ}{Q}*)malloc(\textcolor{keyword}{sizeof}(\hyperlink{structQ}{Q}));
-\}
+17             \{
+18         \textcolor{keywordflow}{return} (\hyperlink{structQ}{Q}*)malloc(\textcolor{keyword}{sizeof}(\hyperlink{structQ}{Q}));
+19 \}
 \end{DoxyCode}
 
 
@@ -212,10 +212,10 @@ Referenced by D\-Q\-\_\-create\-From\-Quaternion(), and D\-Q\-\_\-get\-R().
 
 
 \begin{DoxyCode}
-               \{
-        \hyperlink{structQ}{Q}* qc = \hyperlink{quaternion_8h_a84783e9bd4743081f08605d38779a07e}{Q\_create}(q->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0],q->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1],q->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2],q->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3]);
-        \textcolor{keywordflow}{return} qc;
-\}
+57                \{
+58         \hyperlink{structQ}{Q}* qc = \hyperlink{quaternion_8h_a84783e9bd4743081f08605d38779a07e}{Q\_create}(q->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0],q->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1],q->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2],q->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3]);
+59         \textcolor{keywordflow}{return} qc;
+60 \}
 \end{DoxyCode}
 
 
@@ -281,11 +281,11 @@ Referenced by D\-Q\-\_\-create(), Q\-\_\-copy(), Q\-\_\-get\-Conj(), and Q\-\_\-
 
 
 \begin{DoxyCode}
-                                                   \{
-        \hyperlink{structQ}{Q}* q = \hyperlink{quaternion_8h_a2267ada2076193cc73def7d5df3281c0}{Q\_alloc}();
-        q->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0] = a;   q->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1] = b;   q->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2] = c;   q->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3] = d;
-\textcolor{keywordflow}{return} q;
-\}
+45                                                    \{
+46         \hyperlink{structQ}{Q}* q = \hyperlink{quaternion_8h_a2267ada2076193cc73def7d5df3281c0}{Q\_alloc}();
+47         q->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0] = a;   q->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1] = b;   q->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2] = c;   q->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3] = d;
+48 \textcolor{keywordflow}{return} q;
+49 \}
 \end{DoxyCode}
 
 
@@ -335,9 +335,9 @@ Referenced by D\-Q\-\_\-free(), main(), Cartesian\-\_\-pose\-\_\-controller\-::p
 
 
 \begin{DoxyCode}
-                 \{
-        free(q);
-\}
+68                  \{
+69         free(q);
+70 \}
 \end{DoxyCode}
 
 
@@ -386,14 +386,14 @@ Referenced by D\-Q\-\_\-get\-T().
 
 
 \begin{DoxyCode}
-                             \{
-        \hyperlink{structQ}{Q}* b = \hyperlink{quaternion_8h_a84783e9bd4743081f08605d38779a07e}{Q\_create}(a->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0],-(a->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1]),-(a->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2]),-(a->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3]));
-
-
-        \textcolor{keywordflow}{if}(freeA)\{\hyperlink{quaternion_8h_a69ecc76f665022f81be1702c20865de4}{Q\_free}(a);\}
-
-        \textcolor{keywordflow}{return} b;
-\}
+197                              \{
+198         \hyperlink{structQ}{Q}* b = \hyperlink{quaternion_8h_a84783e9bd4743081f08605d38779a07e}{Q\_create}(a->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0],-(a->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1]),-(a->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2]),-(a->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3]));
+199 
+200 
+201         \textcolor{keywordflow}{if}(freeA)\{\hyperlink{quaternion_8h_a69ecc76f665022f81be1702c20865de4}{Q\_free}(a);\}
+202 
+203         \textcolor{keywordflow}{return} b;
+204 \}
 \end{DoxyCode}
 
 
@@ -450,13 +450,13 @@ Referenced by D\-Q\-\_\-get\-Pitch\-Angle().
 
 
 \begin{DoxyCode}
-                            \{
-        \textcolor{keywordtype}{double} ret;
-
-        ret = asin(2*(q->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0]*q->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2]-q->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3]*q->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1]));
-
-        \textcolor{keywordflow}{return} ret;
-\}
+27                             \{
+28         \textcolor{keywordtype}{double} ret;
+29 
+30         ret = asin(2*(q->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0]*q->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2]-q->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3]*q->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1]));
+31 
+32         \textcolor{keywordflow}{return} ret;
+33 \}
 \end{DoxyCode}
 
 
@@ -513,24 +513,24 @@ Referenced by D\-Q\-\_\-create\-From\-Quaternion(), D\-Q\-\_\-get\-T(), and D\-Q
 
 
 \begin{DoxyCode}
-                                           \{
-
-        \hyperlink{structQ}{Q}* c = \hyperlink{quaternion_8h_a2267ada2076193cc73def7d5df3281c0}{Q\_alloc}();
-        
-        c->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0] = a->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0]*b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0] - a->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1]*b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1] - a->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2]*b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2] - 
-      a->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3]*b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3];
-        c->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1] = a->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1]*b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0] + a->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0]*b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1] - a->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3]*b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2] + 
-      a->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2]*b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3];
-        c->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2] = a->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2]*b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0] + a->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3]*b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1] + a->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0]*b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2] - 
-      a->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1]*b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3];
-        c->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3] = a->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3]*b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0] - a->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2]*b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1] + a->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1]*b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2] + 
-      a->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0]*b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3];
-
-        \textcolor{keywordflow}{if}(freeA)\{\hyperlink{quaternion_8h_a69ecc76f665022f81be1702c20865de4}{Q\_free}(a);\}
-        \textcolor{keywordflow}{if}(freeB)\{\hyperlink{quaternion_8h_a69ecc76f665022f81be1702c20865de4}{Q\_free}(b);\}
-
-        \textcolor{keywordflow}{return} c;
-\}
+154                                            \{
+155 
+156         \hyperlink{structQ}{Q}* c = \hyperlink{quaternion_8h_a2267ada2076193cc73def7d5df3281c0}{Q\_alloc}();
+157         
+158         c->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0] = a->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0]*b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0] - a->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1]*b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1] - a->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2]*b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2] - a->
+      \hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3]*b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3];
+159         c->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1] = a->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1]*b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0] + a->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0]*b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1] - a->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3]*b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2] + a->
+      \hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2]*b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3];
+160         c->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2] = a->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2]*b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0] + a->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3]*b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1] + a->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0]*b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2] - a->
+      \hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1]*b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3];
+161         c->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3] = a->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3]*b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0] - a->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2]*b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1] + a->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1]*b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2] + a->
+      \hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0]*b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3];
+162 
+163         \textcolor{keywordflow}{if}(freeA)\{\hyperlink{quaternion_8h_a69ecc76f665022f81be1702c20865de4}{Q\_free}(a);\}
+164         \textcolor{keywordflow}{if}(freeB)\{\hyperlink{quaternion_8h_a69ecc76f665022f81be1702c20865de4}{Q\_free}(b);\}
+165 
+166         \textcolor{keywordflow}{return} c;
+167 \}
 \end{DoxyCode}
 
 
@@ -597,14 +597,14 @@ Referenced by D\-Q\-\_\-create\-From\-Quaternion(), and D\-Q\-\_\-get\-T().
 
 
 \begin{DoxyCode}
-                                    \{
-
-        \hyperlink{structQ}{Q}* c = \hyperlink{quaternion_8h_a84783e9bd4743081f08605d38779a07e}{Q\_create}(b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0]*a,b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1]*a,b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2]*a,b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3]*a);
-        
-        \textcolor{keywordflow}{if}(freeB)\{\hyperlink{quaternion_8h_a69ecc76f665022f81be1702c20865de4}{Q\_free}(b);\}
-
-        \textcolor{keywordflow}{return} c;
-\}
+180                                     \{
+181 
+182         \hyperlink{structQ}{Q}* c = \hyperlink{quaternion_8h_a84783e9bd4743081f08605d38779a07e}{Q\_create}(b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0]*a,b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1]*a,b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2]*a,b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3]*a);
+183         
+184         \textcolor{keywordflow}{if}(freeB)\{\hyperlink{quaternion_8h_a69ecc76f665022f81be1702c20865de4}{Q\_free}(b);\}
+185 
+186         \textcolor{keywordflow}{return} c;
+187 \}
 \end{DoxyCode}
 
 
@@ -654,9 +654,9 @@ References Q\-::v.
 
 
 \begin{DoxyCode}
-                  \{
-        printf(\textcolor{stringliteral}{"\(\backslash\)t[%f %f %f %f]\(\backslash\)n"},q->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0],q->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1],q->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2],q->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3]);
-\}
+77                   \{
+78         printf(\textcolor{stringliteral}{"\(\backslash\)t[%f %f %f %f]\(\backslash\)n"},q->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0],q->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1],q->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2],q->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3]);
+79 \}
 \end{DoxyCode}
 \hypertarget{quaternion_8h_aeae0ced4cf7e9771da4b3236b8e5771c}{\index{quaternion.\-h@{quaternion.\-h}!Q\-\_\-sub@{Q\-\_\-sub}}
 \index{Q\-\_\-sub@{Q\-\_\-sub}!quaternion.h@{quaternion.\-h}}
@@ -702,20 +702,20 @@ Referenced by Robot\-\_\-get\-G\-Jacobian().
 
 
 \begin{DoxyCode}
-                                          \{
-
-        \hyperlink{structQ}{Q}* c = \hyperlink{quaternion_8h_a2267ada2076193cc73def7d5df3281c0}{Q\_alloc}();
-        
-        c->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0] = a->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0]-b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0];
-        c->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1] = a->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1]-b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1];
-        c->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2] = a->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2]-b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2];
-        c->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3] = a->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3]-b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3];
-        
-        \textcolor{keywordflow}{if}(freeA)\{\hyperlink{quaternion_8h_a69ecc76f665022f81be1702c20865de4}{Q\_free}(a);\}
-        \textcolor{keywordflow}{if}(freeB)\{\hyperlink{quaternion_8h_a69ecc76f665022f81be1702c20865de4}{Q\_free}(b);\}
-
-        \textcolor{keywordflow}{return} c;
-\}
+124                                           \{
+125 
+126         \hyperlink{structQ}{Q}* c = \hyperlink{quaternion_8h_a2267ada2076193cc73def7d5df3281c0}{Q\_alloc}();
+127         
+128         c->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0] = a->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0]-b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0];
+129         c->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1] = a->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1]-b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1];
+130         c->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2] = a->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2]-b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2];
+131         c->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3] = a->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3]-b->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3];
+132         
+133         \textcolor{keywordflow}{if}(freeA)\{\hyperlink{quaternion_8h_a69ecc76f665022f81be1702c20865de4}{Q\_free}(a);\}
+134         \textcolor{keywordflow}{if}(freeB)\{\hyperlink{quaternion_8h_a69ecc76f665022f81be1702c20865de4}{Q\_free}(b);\}
+135 
+136         \textcolor{keywordflow}{return} c;
+137 \}
 \end{DoxyCode}
 
 

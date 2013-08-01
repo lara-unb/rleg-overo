@@ -143,34 +143,32 @@ Referenced by read\-\_\-all\-\_\-data().
 
 
 \begin{DoxyCode}
-\{
-        \textcolor{keywordtype}{int} ret;
-        \textcolor{keywordflow}{if}( ch<0 || ch>7 ) \textcolor{keywordflow}{return} \hyperlink{communication_2spi__functions_8c_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
-        uint8\_t tx[] = \{(ch>>1)|(sgl<<2)|0x08, ch<<7, 0x00,\};
-        \textcolor{keyword}{union }rxunion\{
-          int8\_t rxs[\hyperlink{communication_2spi__functions_8h_a25f003de16c08a4888b69f619d70f427}{ARRAY\_SIZE}(tx)];
-          uint8\_t rx[\hyperlink{communication_2spi__functions_8h_a25f003de16c08a4888b69f619d70f427}{ARRAY\_SIZE}(tx)];
-        \}rxunion;
-        \textcolor{comment}{//rxunion.rx=\{0, \};}
-        \textcolor{keyword}{struct }spi\_ioc\_transfer tr = \{
-                .tx\_buf = (\textcolor{keywordtype}{unsigned} long)tx,
-                .rx\_buf = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long})rxunion.rx,
-                .len = \hyperlink{communication_2spi__functions_8h_a25f003de16c08a4888b69f619d70f427}{ARRAY\_SIZE}(tx),
-                .delay\_usecs = \hyperlink{communication_2spi__functions_8c_adc4674f6ea53803d98fa2ec36759e77d}{delay},
-                .speed\_hz = 0,
-                .bits\_per\_word = 0,
-        \};
-
-        ret = ioctl(\hyperlink{CommunicationV0_2communication_8c_a4788f0a5355494bc6c13690e28f43783}{spi\_dev}, SPI\_IOC\_MESSAGE(1), &tr);
-        \textcolor{keywordflow}{if} (ret == 1) \textcolor{keywordflow}{return} \hyperlink{communication_2spi__functions_8c_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
-\textcolor{comment}{//printf("\(\backslash\)nRx = 0x%X 0x%X 0x%X\(\backslash\)n",rx[0],rx[1],rx[2]);}
-\textcolor{comment}{//printf("\(\backslash\)nValor retornado pelo conversor AD:
-       %d\(\backslash\)n\(\backslash\)n",rx[2]+((rx[1]&0x0F)<<8));}
-        \textcolor{comment}{//*data=(short int)(rx[2]+((rxs[1]&0x1F)<<8));}
-        *data=(\textcolor{keywordtype}{short} int)(rxunion.rx[2]+( (int8\_t)( ((int8\_t)(rxunion.rxs[1]&0
-      x1F)) <<3)<<5));
-        \textcolor{keywordflow}{return} \hyperlink{communication_2spi__functions_8c_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};
-\}
+173 \{
+174         \textcolor{keywordtype}{int} ret;
+175         \textcolor{keywordflow}{if}( ch<0 || ch>7 ) \textcolor{keywordflow}{return} \hyperlink{communication_2spi__functions_8c_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
+176         uint8\_t tx[] = \{(ch>>1)|(sgl<<2)|0x08, ch<<7, 0x00,\};
+177         \textcolor{keyword}{union }rxunion\{
+178           int8\_t rxs[\hyperlink{communication_2spi__functions_8h_a25f003de16c08a4888b69f619d70f427}{ARRAY\_SIZE}(tx)];
+179           uint8\_t rx[\hyperlink{communication_2spi__functions_8h_a25f003de16c08a4888b69f619d70f427}{ARRAY\_SIZE}(tx)];
+180         \}rxunion;
+181         \textcolor{comment}{//rxunion.rx=\{0, \};}
+182         \textcolor{keyword}{struct }spi\_ioc\_transfer tr = \{
+183                 .tx\_buf = (\textcolor{keywordtype}{unsigned} long)tx,
+184                 .rx\_buf = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long})rxunion.rx,
+185                 .len = \hyperlink{communication_2spi__functions_8h_a25f003de16c08a4888b69f619d70f427}{ARRAY\_SIZE}(tx),
+186                 .delay\_usecs = \hyperlink{communication_2spi__functions_8c_adc4674f6ea53803d98fa2ec36759e77d}{delay},
+187                 .speed\_hz = 0,
+188                 .bits\_per\_word = 0,
+189         \};
+190 
+191         ret = ioctl(\hyperlink{CommunicationV0_2communication_8c_a4788f0a5355494bc6c13690e28f43783}{spi\_dev}, SPI\_IOC\_MESSAGE(1), &tr);
+192         \textcolor{keywordflow}{if} (ret == 1) \textcolor{keywordflow}{return} \hyperlink{communication_2spi__functions_8c_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
+193 \textcolor{comment}{//printf("\(\backslash\)nRx = 0x%X 0x%X 0x%X\(\backslash\)n",rx[0],rx[1],rx[2]);}
+194 \textcolor{comment}{//printf("\(\backslash\)nValor retornado pelo conversor AD: %d\(\backslash\)n\(\backslash\)n",rx[2]+((rx[1]&0x0F)<<8));}
+195         \textcolor{comment}{//*data=(short int)(rx[2]+((rxs[1]&0x1F)<<8));}
+196         *data=(\textcolor{keywordtype}{short} int)(rxunion.rx[2]+( (int8\_t)( ((int8\_t)(rxunion.rxs[1]&0x1F)) <<3)<<5));
+197         \textcolor{keywordflow}{return} \hyperlink{communication_2spi__functions_8c_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};
+198 \}
 \end{DoxyCode}
 
 
@@ -204,35 +202,32 @@ Definition at line 200 of file spi\-\_\-functions.\-c.
 
 
 \begin{DoxyCode}
-\{
-        \textcolor{keywordtype}{int} ret;
-        \textcolor{keyword}{union }txunion\{
-        \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} data16;
-        uint8\_t data8[2];
-        \}txunion;
-        \textcolor{keywordflow}{if}( ch<0 || ch>1 ) \textcolor{keywordflow}{return} \hyperlink{communication_2spi__functions_8c_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};\textcolor{comment}{//pabort("Wrong channel value
-       for DAC");}
-        \textcolor{keywordflow}{if}( data>4095 ) \textcolor{keywordflow}{return} \hyperlink{communication_2spi__functions_8c_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};\textcolor{comment}{//pabort("Value exceeded for
-       DAC"); }
-        txunion.data16 = 0x6000|(ch<<15)|(\_shdn<<12)|(data&0x0FFF);
-        uint8\_t tx[] = \{txunion.data8[1], txunion.data8[0]\};
-        uint8\_t rx[\hyperlink{communication_2spi__functions_8h_a25f003de16c08a4888b69f619d70f427}{ARRAY\_SIZE}(tx)] = \{0, \};
-        \textcolor{keyword}{struct }spi\_ioc\_transfer tr = \{
-                .tx\_buf = (\textcolor{keywordtype}{unsigned} long)tx,
-                .rx\_buf = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long})rx,
-                .len = \hyperlink{communication_2spi__functions_8h_a25f003de16c08a4888b69f619d70f427}{ARRAY\_SIZE}(tx),
-                .delay\_usecs = \hyperlink{communication_2spi__functions_8c_adc4674f6ea53803d98fa2ec36759e77d}{delay},
-                .speed\_hz = 0,
-                .bits\_per\_word = 0,
-        \};
-
-        ret = ioctl(\hyperlink{CommunicationV0_2communication_8c_a4788f0a5355494bc6c13690e28f43783}{spi\_dev}, SPI\_IOC\_MESSAGE(1), &tr);
-        \textcolor{keywordflow}{if} (ret == 1) \textcolor{keywordflow}{return} \hyperlink{communication_2spi__functions_8c_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};\textcolor{comment}{//pabort("can't send spi message");}
-\textcolor{comment}{//printf("\(\backslash\)nRx = 0x%X 0x%X 0x%X\(\backslash\)n",rx[0],rx[1],rx[2]);}
-\textcolor{comment}{//printf("\(\backslash\)nValor retornado pelo conversor AD:
-       %d\(\backslash\)n\(\backslash\)n",rx[2]+((rx[1]&0x0F)<<8));}
-        \textcolor{keywordflow}{return} 1;
-\}
+201 \{
+202         \textcolor{keywordtype}{int} ret;
+203         \textcolor{keyword}{union }txunion\{
+204         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} data16;
+205         uint8\_t data8[2];
+206         \}txunion;
+207         \textcolor{keywordflow}{if}( ch<0 || ch>1 ) \textcolor{keywordflow}{return} \hyperlink{communication_2spi__functions_8c_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};\textcolor{comment}{//pabort("Wrong channel value for DAC");}
+208         \textcolor{keywordflow}{if}( data>4095 ) \textcolor{keywordflow}{return} \hyperlink{communication_2spi__functions_8c_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};\textcolor{comment}{//pabort("Value exceeded for DAC"); }
+209         txunion.data16 = 0x6000|(ch<<15)|(\_shdn<<12)|(data&0x0FFF);
+210         uint8\_t tx[] = \{txunion.data8[1], txunion.data8[0]\};
+211         uint8\_t rx[\hyperlink{communication_2spi__functions_8h_a25f003de16c08a4888b69f619d70f427}{ARRAY\_SIZE}(tx)] = \{0, \};
+212         \textcolor{keyword}{struct }spi\_ioc\_transfer tr = \{
+213                 .tx\_buf = (\textcolor{keywordtype}{unsigned} long)tx,
+214                 .rx\_buf = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long})rx,
+215                 .len = \hyperlink{communication_2spi__functions_8h_a25f003de16c08a4888b69f619d70f427}{ARRAY\_SIZE}(tx),
+216                 .delay\_usecs = \hyperlink{communication_2spi__functions_8c_adc4674f6ea53803d98fa2ec36759e77d}{delay},
+217                 .speed\_hz = 0,
+218                 .bits\_per\_word = 0,
+219         \};
+220 
+221         ret = ioctl(\hyperlink{CommunicationV0_2communication_8c_a4788f0a5355494bc6c13690e28f43783}{spi\_dev}, SPI\_IOC\_MESSAGE(1), &tr);
+222         \textcolor{keywordflow}{if} (ret == 1) \textcolor{keywordflow}{return} \hyperlink{communication_2spi__functions_8c_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};\textcolor{comment}{//pabort("can't send spi message");}
+223 \textcolor{comment}{//printf("\(\backslash\)nRx = 0x%X 0x%X 0x%X\(\backslash\)n",rx[0],rx[1],rx[2]);}
+224 \textcolor{comment}{//printf("\(\backslash\)nValor retornado pelo conversor AD: %d\(\backslash\)n\(\backslash\)n",rx[2]+((rx[1]&0x0F)<<8));}
+225         \textcolor{keywordflow}{return} 1;
+226 \}
 \end{DoxyCode}
 \hypertarget{communication_2spi__functions_8h_a3fb02c6fc5990df81645306a81291624}{\index{communication/spi\-\_\-functions.\-h@{communication/spi\-\_\-functions.\-h}!spi\-\_\-end@{spi\-\_\-end}}
 \index{spi\-\_\-end@{spi\-\_\-end}!communication/spi_functions.h@{communication/spi\-\_\-functions.\-h}}
@@ -251,10 +246,10 @@ Definition at line 166 of file spi\-\_\-functions.\-c.
 
 
 \begin{DoxyCode}
-\{
-  close(\hyperlink{CommunicationV0_2communication_8c_a4788f0a5355494bc6c13690e28f43783}{spi\_dev});
-  \textcolor{keywordflow}{return};
-\}
+167 \{
+168   close(\hyperlink{CommunicationV0_2communication_8c_a4788f0a5355494bc6c13690e28f43783}{spi\_dev});
+169   \textcolor{keywordflow}{return};
+170 \}
 \end{DoxyCode}
 \hypertarget{communication_2spi__functions_8h_a70764aca888e93b0329e7a62c9312704}{\index{communication/spi\-\_\-functions.\-h@{communication/spi\-\_\-functions.\-h}!spi\-\_\-init@{spi\-\_\-init}}
 \index{spi\-\_\-init@{spi\-\_\-init}!communication/spi_functions.h@{communication/spi\-\_\-functions.\-h}}
@@ -275,70 +270,70 @@ Definition at line 100 of file spi\-\_\-functions.\-c.
 
 
 \begin{DoxyCode}
-\{
-        \textcolor{keywordtype}{int} ret = 0;
-        \textcolor{keywordtype}{int} \hyperlink{CommunicationV0_2communication_8c_a4788f0a5355494bc6c13690e28f43783}{spi\_dev};
-        \textcolor{keywordtype}{char} *device;
-
-        \textcolor{comment}{//parse\_opts(argc, argv);}
-        \textcolor{comment}{/*}
-\textcolor{comment}{         * chose chipselect:}
-\textcolor{comment}{         */}
-        \textcolor{keywordflow}{switch}(cs)\{
-          \textcolor{keywordflow}{case} 0:
-            device = \textcolor{stringliteral}{"/dev/spidev1.0"};
-            \textcolor{keywordflow}{break};
-          \textcolor{keywordflow}{case} 1:
-            device = \textcolor{stringliteral}{"/dev/spidev1.1"};
-            \textcolor{keywordflow}{break};
-          \textcolor{keywordflow}{default}:
-            \textcolor{keywordflow}{return} \hyperlink{communication_2spi__functions_8c_aabfca8320b0c76774f01467703e17302}{pabort}(\textcolor{stringliteral}{"invalid chip select value"});
-        \}
-            
-        
-        spi\_dev = open(device, O\_RDWR);
-        \textcolor{keywordflow}{if} (spi\_dev < 0)
-                \textcolor{keywordflow}{return} \hyperlink{communication_2spi__functions_8c_aabfca8320b0c76774f01467703e17302}{pabort}(\textcolor{stringliteral}{"can't open device"});
-\textcolor{comment}{//printf("\(\backslash\)nspi\_dev = %d\(\backslash\)n",spi\_dev);}
-        \textcolor{comment}{/*}
-\textcolor{comment}{         * spi mode}
-\textcolor{comment}{         */}
-        ret = ioctl(spi\_dev, SPI\_IOC\_WR\_MODE, &mode);
-        \textcolor{keywordflow}{if} (ret == -1)
-                \textcolor{keywordflow}{return} \hyperlink{communication_2spi__functions_8c_aabfca8320b0c76774f01467703e17302}{pabort}(\textcolor{stringliteral}{"can't set spi mode"});
-
-        ret = ioctl(spi\_dev, SPI\_IOC\_RD\_MODE, &mode);
-        \textcolor{keywordflow}{if} (ret == -1)
-                \textcolor{keywordflow}{return} \hyperlink{communication_2spi__functions_8c_aabfca8320b0c76774f01467703e17302}{pabort}(\textcolor{stringliteral}{"can't get spi mode"});
-
-        \textcolor{comment}{/*}
-\textcolor{comment}{         * bits per word}
-\textcolor{comment}{         */}
-        ret = ioctl(spi\_dev, SPI\_IOC\_WR\_BITS\_PER\_WORD, &\hyperlink{communication_2spi__functions_8c_a46a6da6b1936191571fd30b2a749f38c}{bits});
-        \textcolor{keywordflow}{if} (ret == -1)
-                \textcolor{keywordflow}{return} \hyperlink{communication_2spi__functions_8c_aabfca8320b0c76774f01467703e17302}{pabort}(\textcolor{stringliteral}{"can't set bits per word"});
-
-        ret = ioctl(spi\_dev, SPI\_IOC\_RD\_BITS\_PER\_WORD, &\hyperlink{communication_2spi__functions_8c_a46a6da6b1936191571fd30b2a749f38c}{bits});
-        \textcolor{keywordflow}{if} (ret == -1)
-                \textcolor{keywordflow}{return} \hyperlink{communication_2spi__functions_8c_aabfca8320b0c76774f01467703e17302}{pabort}(\textcolor{stringliteral}{"can't get bits per word"});
-
-        \textcolor{comment}{/*}
-\textcolor{comment}{         * max speed hz}
-\textcolor{comment}{         */}
-        ret = ioctl(spi\_dev, SPI\_IOC\_WR\_MAX\_SPEED\_HZ, &speed);
-        \textcolor{keywordflow}{if} (ret == -1)
-                \textcolor{keywordflow}{return} \hyperlink{communication_2spi__functions_8c_aabfca8320b0c76774f01467703e17302}{pabort}(\textcolor{stringliteral}{"can't set max speed hz"});
-
-        ret = ioctl(spi\_dev, SPI\_IOC\_RD\_MAX\_SPEED\_HZ, &speed);
-        \textcolor{keywordflow}{if} (ret == -1)
-                \textcolor{keywordflow}{return} \hyperlink{communication_2spi__functions_8c_aabfca8320b0c76774f01467703e17302}{pabort}(\textcolor{stringliteral}{"can't get max speed hz"});
-
-        \textcolor{comment}{//printf("spi mode: %d\(\backslash\)n", mode);}
-        \textcolor{comment}{//printf("bits per word: %d\(\backslash\)n", bits);}
-        \textcolor{comment}{//printf("max speed: %d Hz (%d KHz)\(\backslash\)n", speed, speed/1000);}
-
-        \textcolor{keywordflow}{return} \hyperlink{CommunicationV0_2communication_8c_a4788f0a5355494bc6c13690e28f43783}{spi\_dev};
-\}
+101 \{
+102         \textcolor{keywordtype}{int} ret = 0;
+103         \textcolor{keywordtype}{int} \hyperlink{CommunicationV0_2communication_8c_a4788f0a5355494bc6c13690e28f43783}{spi\_dev};
+104         \textcolor{keywordtype}{char} *device;
+105 
+106         \textcolor{comment}{//parse\_opts(argc, argv);}
+107         \textcolor{comment}{/*}
+108 \textcolor{comment}{         * chose chipselect:}
+109 \textcolor{comment}{         */}
+110         \textcolor{keywordflow}{switch}(cs)\{
+111           \textcolor{keywordflow}{case} 0:
+112             device = \textcolor{stringliteral}{"/dev/spidev1.0"};
+113             \textcolor{keywordflow}{break};
+114           \textcolor{keywordflow}{case} 1:
+115             device = \textcolor{stringliteral}{"/dev/spidev1.1"};
+116             \textcolor{keywordflow}{break};
+117           \textcolor{keywordflow}{default}:
+118             \textcolor{keywordflow}{return} \hyperlink{communication_2spi__functions_8c_aabfca8320b0c76774f01467703e17302}{pabort}(\textcolor{stringliteral}{"invalid chip select value"});
+119         \}
+120             
+121         
+122         spi\_dev = open(device, O\_RDWR);
+123         \textcolor{keywordflow}{if} (spi\_dev < 0)
+124                 \textcolor{keywordflow}{return} \hyperlink{communication_2spi__functions_8c_aabfca8320b0c76774f01467703e17302}{pabort}(\textcolor{stringliteral}{"can't open device"});
+125 \textcolor{comment}{//printf("\(\backslash\)nspi\_dev = %d\(\backslash\)n",spi\_dev);}
+126         \textcolor{comment}{/*}
+127 \textcolor{comment}{         * spi mode}
+128 \textcolor{comment}{         */}
+129         ret = ioctl(spi\_dev, SPI\_IOC\_WR\_MODE, &mode);
+130         \textcolor{keywordflow}{if} (ret == -1)
+131                 \textcolor{keywordflow}{return} \hyperlink{communication_2spi__functions_8c_aabfca8320b0c76774f01467703e17302}{pabort}(\textcolor{stringliteral}{"can't set spi mode"});
+132 
+133         ret = ioctl(spi\_dev, SPI\_IOC\_RD\_MODE, &mode);
+134         \textcolor{keywordflow}{if} (ret == -1)
+135                 \textcolor{keywordflow}{return} \hyperlink{communication_2spi__functions_8c_aabfca8320b0c76774f01467703e17302}{pabort}(\textcolor{stringliteral}{"can't get spi mode"});
+136 
+137         \textcolor{comment}{/*}
+138 \textcolor{comment}{         * bits per word}
+139 \textcolor{comment}{         */}
+140         ret = ioctl(spi\_dev, SPI\_IOC\_WR\_BITS\_PER\_WORD, &\hyperlink{communication_2spi__functions_8c_a46a6da6b1936191571fd30b2a749f38c}{bits});
+141         \textcolor{keywordflow}{if} (ret == -1)
+142                 \textcolor{keywordflow}{return} \hyperlink{communication_2spi__functions_8c_aabfca8320b0c76774f01467703e17302}{pabort}(\textcolor{stringliteral}{"can't set bits per word"});
+143 
+144         ret = ioctl(spi\_dev, SPI\_IOC\_RD\_BITS\_PER\_WORD, &\hyperlink{communication_2spi__functions_8c_a46a6da6b1936191571fd30b2a749f38c}{bits});
+145         \textcolor{keywordflow}{if} (ret == -1)
+146                 \textcolor{keywordflow}{return} \hyperlink{communication_2spi__functions_8c_aabfca8320b0c76774f01467703e17302}{pabort}(\textcolor{stringliteral}{"can't get bits per word"});
+147 
+148         \textcolor{comment}{/*}
+149 \textcolor{comment}{         * max speed hz}
+150 \textcolor{comment}{         */}
+151         ret = ioctl(spi\_dev, SPI\_IOC\_WR\_MAX\_SPEED\_HZ, &speed);
+152         \textcolor{keywordflow}{if} (ret == -1)
+153                 \textcolor{keywordflow}{return} \hyperlink{communication_2spi__functions_8c_aabfca8320b0c76774f01467703e17302}{pabort}(\textcolor{stringliteral}{"can't set max speed hz"});
+154 
+155         ret = ioctl(spi\_dev, SPI\_IOC\_RD\_MAX\_SPEED\_HZ, &speed);
+156         \textcolor{keywordflow}{if} (ret == -1)
+157                 \textcolor{keywordflow}{return} \hyperlink{communication_2spi__functions_8c_aabfca8320b0c76774f01467703e17302}{pabort}(\textcolor{stringliteral}{"can't get max speed hz"});
+158 
+159         \textcolor{comment}{//printf("spi mode: %d\(\backslash\)n", mode);}
+160         \textcolor{comment}{//printf("bits per word: %d\(\backslash\)n", bits);}
+161         \textcolor{comment}{//printf("max speed: %d Hz (%d KHz)\(\backslash\)n", speed, speed/1000);}
+162 
+163         \textcolor{keywordflow}{return} \hyperlink{CommunicationV0_2communication_8c_a4788f0a5355494bc6c13690e28f43783}{spi\_dev};
+164 \}
 \end{DoxyCode}
 \hypertarget{communication_2spi__functions_8h_a3ae450d2b3ece27bb6036f811a7625a9}{\index{communication/spi\-\_\-functions.\-h@{communication/spi\-\_\-functions.\-h}!spi\-\_\-trans\-\_\-bytes@{spi\-\_\-trans\-\_\-bytes}}
 \index{spi\-\_\-trans\-\_\-bytes@{spi\-\_\-trans\-\_\-bytes}!communication/spi_functions.h@{communication/spi\-\_\-functions.\-h}}
@@ -368,34 +363,34 @@ Referenced by enc\-\_\-read\-\_\-pos(), enc\-\_\-wait\-\_\-for\-\_\-ack(), and e
 
 
 \begin{DoxyCode}
-                                                                      \{
-
-         \textcolor{comment}{//< define send data }
-        uint8\_t *tx;
-        tx = send;
-        uint8\_t rx[n]; 
-        rx[0] = 0;
-
-        \textcolor{comment}{/*}
-\textcolor{comment}{        * Transmitting data (full duplex):}
-\textcolor{comment}{        */}
-        \textcolor{keyword}{struct }spi\_ioc\_transfer tr = \{
-                .tx\_buf = (\textcolor{keywordtype}{unsigned} long)tx,
-                .rx\_buf = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long})rx,
-                .len = n,
-                .delay\_usecs = \hyperlink{communication_2spi__functions_8c_adc4674f6ea53803d98fa2ec36759e77d}{delay},
-                .speed\_hz = 0,
-                .bits\_per\_word = 0,
-        \};
-        \textcolor{keywordtype}{int} ret = ioctl(\hyperlink{CommunicationV0_2communication_8c_a4788f0a5355494bc6c13690e28f43783}{spi\_dev}, SPI\_IOC\_MESSAGE(1), &tr);
-
-        \textcolor{comment}{//Check transmittion:}
-        \textcolor{keywordflow}{if}(ret == 1) \textcolor{keywordflow}{return} \hyperlink{communication_2spi__functions_8c_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};\textcolor{comment}{//pabort("can't send spi message");}
-
-        *receive = rx[0];\textcolor{comment}{//get the received data}
-
-        \textcolor{keywordflow}{return} 1;
-\}
+228                                                                       \{
+229 
+230          \textcolor{comment}{//< define send data }
+231         uint8\_t *tx;
+232         tx = send;
+233         uint8\_t rx[n]; 
+234         rx[0] = 0;
+235 
+236         \textcolor{comment}{/*}
+237 \textcolor{comment}{        * Transmitting data (full duplex):}
+238 \textcolor{comment}{        */}
+239         \textcolor{keyword}{struct }spi\_ioc\_transfer tr = \{
+240                 .tx\_buf = (\textcolor{keywordtype}{unsigned} long)tx,
+241                 .rx\_buf = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long})rx,
+242                 .len = n,
+243                 .delay\_usecs = \hyperlink{communication_2spi__functions_8c_adc4674f6ea53803d98fa2ec36759e77d}{delay},
+244                 .speed\_hz = 0,
+245                 .bits\_per\_word = 0,
+246         \};
+247         \textcolor{keywordtype}{int} ret = ioctl(\hyperlink{CommunicationV0_2communication_8c_a4788f0a5355494bc6c13690e28f43783}{spi\_dev}, SPI\_IOC\_MESSAGE(1), &tr);
+248 
+249         \textcolor{comment}{//Check transmittion:}
+250         \textcolor{keywordflow}{if}(ret == 1) \textcolor{keywordflow}{return} \hyperlink{communication_2spi__functions_8c_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};\textcolor{comment}{//pabort("can't send spi message");}
+251 
+252         *receive = rx[0];\textcolor{comment}{//get the received data}
+253 
+254         \textcolor{keywordflow}{return} 1;
+255 \}
 \end{DoxyCode}
 
 

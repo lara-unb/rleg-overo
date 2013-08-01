@@ -1,9 +1,10 @@
 <map id="read_all_data" name="read_all_data">
-<area shape="rect" id="node3" href="$main2_8h.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="184,5,235,35"/>
-<area shape="rect" id="node5" href="$main2_8h.html#a26855b7739897854265d51aa61329390" title="periodic_task_1" alt="" coords="153,59,265,88"/>
-<area shape="rect" id="node7" href="$main2_8h.html#a90885bae1b9535b16e014fb928e98e37" title="timer_function_task_1" alt="" coords="316,59,465,88"/>
-<area shape="rect" id="node9" href="$main2_8c.html#a5ce2b6a7dd4d00c90fe18098091044aa" title="f_timer_task_1" alt="" coords="516,59,623,88"/>
-<area shape="rect" id="node11" href="$main2_8h.html#a0e411070b7f487a8ab6a60b180f50e12" title="timer_start_task_1" alt="" coords="672,32,803,61"/>
-<area shape="rect" id="node15" href="$group__taskS.html#gac088a054258396a6e2dba77908f22b42" title="Start some task." alt="" coords="680,85,795,115"/>
-<area shape="rect" id="node13" href="$main2_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="851,32,901,61"/>
+<area shape="rect" id="node3" href="$main2_8h.html#a26855b7739897854265d51aa61329390" title="periodic_task_1" alt="" coords="153,59,265,88"/>
+<area shape="rect" id="node17" href="$main_8c.html#a8007959bfd1230feb2298965e39f2a70" title="ui_task" alt="" coords="359,111,423,140"/>
+<area shape="rect" id="node5" href="$main2_8h.html#a90885bae1b9535b16e014fb928e98e37" title="timer_function_task_1" alt="" coords="316,57,465,87"/>
+<area shape="rect" id="node7" href="$main2_8c.html#a5ce2b6a7dd4d00c90fe18098091044aa" title="f_timer_task_1" alt="" coords="516,57,623,87"/>
+<area shape="rect" id="node9" href="$main2_8h.html#a0e411070b7f487a8ab6a60b180f50e12" title="timer_start_task_1" alt="" coords="672,5,803,35"/>
+<area shape="rect" id="node13" href="$group__taskS.html#gac088a054258396a6e2dba77908f22b42" title="Start some task." alt="" coords="680,59,795,88"/>
+<area shape="rect" id="node11" href="$main2_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="851,5,901,35"/>
+<area shape="rect" id="node15" href="$main2_8h.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="851,84,901,113"/>
 </map>

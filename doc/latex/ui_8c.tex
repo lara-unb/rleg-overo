@@ -19,7 +19,7 @@ Include dependency graph for ui.\-c\-:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 void \hyperlink{ui_8c_a5f05ce725141ddfab683e059b1cd95ea}{exit\-\_\-program} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em Internal function to end program. \end{DoxyCompactList}\item 
 int \hyperlink{group__ui_gab7bfb453918dcc296ff0cea3c79453d0}{ui\-\_\-init} (void)
 \begin{DoxyCompactList}\small\item\em Initialize U\-I. \end{DoxyCompactList}\item 
 int \hyperlink{group__ui_ga65d8b92b634da17c344458cd57e61f3e}{ui\-\_\-close} (void)
@@ -53,7 +53,11 @@ unsigned int \hyperlink{ui_8c_a5045187bb0afe92c41ce73bc602fd3ca}{telemetry\-\_\-
 )}}\label{ui_8c_a5f05ce725141ddfab683e059b1cd95ea}
 
 
-Definition at line 612 of file main2.\-c.
+Internal function to end program. 
+
+
+
+Definition at line 99 of file main.\-c.
 
 
 
@@ -65,10 +69,10 @@ Referenced by ui\-\_\-update().
 
 
 \begin{DoxyCode}
-\{
-        \hyperlink{main2_8c_a525dcecf4685bea1fbf92651ac0401fe}{quittask} = 1;
-        \textcolor{keywordflow}{return};
-\}
+99                        \{
+100   \hyperlink{main2_8c_a525dcecf4685bea1fbf92651ac0401fe}{quittask} = 1;
+101   \textcolor{keywordflow}{return};
+102 \}
 \end{DoxyCode}
 
 
@@ -91,7 +95,7 @@ Here is the caller graph for this function\-:
 )}}\label{ui_8c_af48496a4ce54378764bc4ca9eddfd498}
 
 
-Definition at line 154 of file ui.\-c.
+Definition at line 157 of file ui.\-c.
 
 
 
@@ -103,22 +107,22 @@ Referenced by ui\-\_\-update().
 
 
 \begin{DoxyCode}
-\{
-        mvprintw(2,0,\textcolor{stringliteral}{"Fx (bits): %d"},peff\_data->\hyperlink{structEFF__DATA__STRUCT_abe8952947b54bf9c247f3429ee3aeb44}{F}.\hyperlink{structDATA__XYZ_a54c1596e9f9969fd9c21e8458024ecfb}{x});
-        \textcolor{comment}{//mvprintw(2,40,"Fx (N): %lf",peff\_data->??);}
-        mvprintw(3,0,\textcolor{stringliteral}{"Fy (bits): %d"},peff\_data->\hyperlink{structEFF__DATA__STRUCT_abe8952947b54bf9c247f3429ee3aeb44}{F}.\hyperlink{structDATA__XYZ_a94bbb1c889bf53eb6a5fffa2b39322cf}{y});
-        \textcolor{comment}{//mvprintw(3,40,"Fx (N): %lf",peff\_data->??);}
-        mvprintw(4,0,\textcolor{stringliteral}{"Fz (bits): %d"},peff\_data->\hyperlink{structEFF__DATA__STRUCT_abe8952947b54bf9c247f3429ee3aeb44}{F}.\hyperlink{structDATA__XYZ_a69e89ab0ec6e5d72fc5d54f62cc07fb5}{z});
-        \textcolor{comment}{//mvprintw(4,40,"Fx (N): %lf",peff\_data->??);}
-        mvprintw(5,0,\textcolor{stringliteral}{"Mx (bits): %d"},peff\_data->\hyperlink{structEFF__DATA__STRUCT_aaf6e03b6e600295e0f5c706fc869e9d1}{M}.\hyperlink{structDATA__XYZ_a54c1596e9f9969fd9c21e8458024ecfb}{x});
-        \textcolor{comment}{//mvprintw(5,40,"Mx (Nm): %lf",peff\_data->??);}
-        mvprintw(6,0,\textcolor{stringliteral}{"My (bits): %d"},peff\_data->\hyperlink{structEFF__DATA__STRUCT_aaf6e03b6e600295e0f5c706fc869e9d1}{M}.\hyperlink{structDATA__XYZ_a94bbb1c889bf53eb6a5fffa2b39322cf}{y});
-        \textcolor{comment}{//mvprintw(6,40,"My (Nm): %lf",peff\_data->??);}
-        mvprintw(7,0,\textcolor{stringliteral}{"Mz (bits): %d"},peff\_data->\hyperlink{structEFF__DATA__STRUCT_aaf6e03b6e600295e0f5c706fc869e9d1}{M}.\hyperlink{structDATA__XYZ_a69e89ab0ec6e5d72fc5d54f62cc07fb5}{z});
-        \textcolor{comment}{//mvprintw(7,40,"Mz (Nm): %lf",peff\_data->??);}
-
-        \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};
-\}
+158 \{
+159         mvprintw(2,0,\textcolor{stringliteral}{"Fx (bits): %d"},peff\_data->\hyperlink{structEFF__DATA__STRUCT_abe8952947b54bf9c247f3429ee3aeb44}{F}.\hyperlink{structDATA__XYZ_a54c1596e9f9969fd9c21e8458024ecfb}{x});
+160         \textcolor{comment}{//mvprintw(2,40,"Fx (N): %lf",peff\_data->??);}
+161         mvprintw(3,0,\textcolor{stringliteral}{"Fy (bits): %d"},peff\_data->\hyperlink{structEFF__DATA__STRUCT_abe8952947b54bf9c247f3429ee3aeb44}{F}.\hyperlink{structDATA__XYZ_a94bbb1c889bf53eb6a5fffa2b39322cf}{y});
+162         \textcolor{comment}{//mvprintw(3,40,"Fx (N): %lf",peff\_data->??);}
+163         mvprintw(4,0,\textcolor{stringliteral}{"Fz (bits): %d"},peff\_data->\hyperlink{structEFF__DATA__STRUCT_abe8952947b54bf9c247f3429ee3aeb44}{F}.\hyperlink{structDATA__XYZ_a69e89ab0ec6e5d72fc5d54f62cc07fb5}{z});
+164         \textcolor{comment}{//mvprintw(4,40,"Fx (N): %lf",peff\_data->??);}
+165         mvprintw(5,0,\textcolor{stringliteral}{"Mx (bits): %d"},peff\_data->\hyperlink{structEFF__DATA__STRUCT_aaf6e03b6e600295e0f5c706fc869e9d1}{M}.\hyperlink{structDATA__XYZ_a54c1596e9f9969fd9c21e8458024ecfb}{x});
+166         \textcolor{comment}{//mvprintw(5,40,"Mx (Nm): %lf",peff\_data->??);}
+167         mvprintw(6,0,\textcolor{stringliteral}{"My (bits): %d"},peff\_data->\hyperlink{structEFF__DATA__STRUCT_aaf6e03b6e600295e0f5c706fc869e9d1}{M}.\hyperlink{structDATA__XYZ_a94bbb1c889bf53eb6a5fffa2b39322cf}{y});
+168         \textcolor{comment}{//mvprintw(6,40,"My (Nm): %lf",peff\_data->??);}
+169         mvprintw(7,0,\textcolor{stringliteral}{"Mz (bits): %d"},peff\_data->\hyperlink{structEFF__DATA__STRUCT_aaf6e03b6e600295e0f5c706fc869e9d1}{M}.\hyperlink{structDATA__XYZ_a69e89ab0ec6e5d72fc5d54f62cc07fb5}{z});
+170         \textcolor{comment}{//mvprintw(7,40,"Mz (Nm): %lf",peff\_data->??);}
+171 
+172         \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};
+173 \}
 \end{DoxyCode}
 
 
@@ -145,7 +149,7 @@ Print E\-N\-C\-O\-D\-E\-R data.
 
 
 
-Definition at line 172 of file ui.\-c.
+Definition at line 175 of file ui.\-c.
 
 
 
@@ -157,10 +161,10 @@ Referenced by ui\-\_\-update().
 
 
 \begin{DoxyCode}
-\{
-   mvprintw(2,0,\textcolor{stringliteral}{"Position (raw): %lf"},enc\_data->\hyperlink{structENC__DATA__STRUCT_ad25beb30fd5b975292f87db02ec9930a}{angle});
-   \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};
-\}
+176 \{
+177    mvprintw(2,0,\textcolor{stringliteral}{"Position (raw): %lf"},enc\_data->\hyperlink{structENC__DATA__STRUCT_ad25beb30fd5b975292f87db02ec9930a}{angle});
+178    \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};
+179 \}
 \end{DoxyCode}
 
 
@@ -192,11 +196,11 @@ Print A\-L\-L sensors data.
 
 
 
-Definition at line 187 of file ui.\-c.
+Definition at line 190 of file ui.\-c.
 
 
 
-References I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::acc, I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::calibrated\-::acc, E\-N\-C\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::angle, I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::calib, I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::calib\-\_\-temp, D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-N\-O\-T\-\_\-\-R\-U\-N\-N\-I\-N\-G, datalogger\-\_\-status(), get\-\_\-time(), I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::gyr, I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::calibrated\-::gyr, I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::mag, I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::calibrated\-::mag, S\-U\-C\-C\-E\-S\-S, t0, I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::temp, M\-R\-A\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::v\-\_\-ctl, M\-R\-A\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::v\-\_\-ctl\-\_\-read, D\-A\-T\-A\-\_\-\-X\-Y\-Z\-::x, D\-A\-T\-A\-\_\-\-X\-Y\-Z\-\_\-\-D\-O\-U\-B\-L\-E\-::x, D\-A\-T\-A\-\_\-\-X\-Y\-Z\-::y, D\-A\-T\-A\-\_\-\-X\-Y\-Z\-\_\-\-D\-O\-U\-B\-L\-E\-::y, D\-A\-T\-A\-\_\-\-X\-Y\-Z\-::z, and D\-A\-T\-A\-\_\-\-X\-Y\-Z\-\_\-\-D\-O\-U\-B\-L\-E\-::z.
+References I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::acc, I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::calibrated\-::acc, E\-N\-C\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::angle, I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::calib, I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::calib\-\_\-temp, get\-\_\-time(), I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::gyr, I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::calibrated\-::gyr, I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::mag, I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::calibrated\-::mag, S\-U\-C\-C\-E\-S\-S, t0, I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::temp, M\-R\-A\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::v\-\_\-ctl, M\-R\-A\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::v\-\_\-ctl\-\_\-read, D\-A\-T\-A\-\_\-\-X\-Y\-Z\-::x, D\-A\-T\-A\-\_\-\-X\-Y\-Z\-\_\-\-D\-O\-U\-B\-L\-E\-::x, D\-A\-T\-A\-\_\-\-X\-Y\-Z\-::y, D\-A\-T\-A\-\_\-\-X\-Y\-Z\-\_\-\-D\-O\-U\-B\-L\-E\-::y, D\-A\-T\-A\-\_\-\-X\-Y\-Z\-::z, and D\-A\-T\-A\-\_\-\-X\-Y\-Z\-\_\-\-D\-O\-U\-B\-L\-E\-::z.
 
 
 
@@ -204,106 +208,98 @@ Referenced by ui\-\_\-update().
 
 
 \begin{DoxyCode}
-\{
-        \textcolor{keywordtype}{float} error\_rate = 0.0;
-        \textcolor{keywordtype}{double} t = 0.0;
-        \textcolor{keywordtype}{double} Ts = 0.0;
-        \textcolor{keywordtype}{double} mean\_exec\_time = 0.0;
-        \textcolor{keywordtype}{double} \hyperlink{main2_8c_a86c2efd6da48b362806cdbb5b1e711d8}{t0} = 0.0;
-
-        \hyperlink{main2_8c_a5b2b1fdd5e517470c10e84a2b2bcc5c8}{get\_time}(&t, &Ts, &mean\_exec\_time, &t0);
-
-        error\_rate = (float)(((\textcolor{keywordtype}{float})failures/(\textcolor{keywordtype}{float})\hyperlink{main2_8c_ac7af894858cf396a219d632f40afdc8d}{total})*100.0);
-        mvprintw(2, 0, \textcolor{stringliteral}{"Communication Statistics: Total = %d Failures = %d
-       Error Rate = %3.3f"},total, failures, error\_rate);
-
-        mvprintw(4, 0,  \textcolor{stringliteral}{"IMU Accelerometer (bits):\(\backslash\)tX:%4d\(\backslash\)tY:%4d\(\backslash\)tZ:%4d"}, 
-      pimu\_data->\hyperlink{structIMU__DATA__STRUCT_a448f284bf44eb503affda586ad5fa9d2}{acc}.\hyperlink{structDATA__XYZ_a54c1596e9f9969fd9c21e8458024ecfb}{x}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_a448f284bf44eb503affda586ad5fa9d2}{acc}.\hyperlink{structDATA__XYZ_a94bbb1c889bf53eb6a5fffa2b39322cf}{y}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_a448f284bf44eb503affda586ad5fa9d2}{acc}.\hyperlink{structDATA__XYZ_a69e89ab0ec6e5d72fc5d54f62cc07fb5}{z});
-        mvprintw(5, 0, \textcolor{stringliteral}{"IMU Gyrometer (bits):\(\backslash\)t\(\backslash\)tX:%4d\(\backslash\)tY:%4d\(\backslash\)tZ:%4d"}, 
-      pimu\_data->\hyperlink{structIMU__DATA__STRUCT_a0c1ac26626e4434a2ee124a1928a23a1}{gyr}.\hyperlink{structDATA__XYZ_a54c1596e9f9969fd9c21e8458024ecfb}{x}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_a0c1ac26626e4434a2ee124a1928a23a1}{gyr}.\hyperlink{structDATA__XYZ_a94bbb1c889bf53eb6a5fffa2b39322cf}{y}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_a0c1ac26626e4434a2ee124a1928a23a1}{gyr}.\hyperlink{structDATA__XYZ_a69e89ab0ec6e5d72fc5d54f62cc07fb5}{z});
-        mvprintw(6, 0, \textcolor{stringliteral}{"IMU Magnetometer (bits):\(\backslash\)tX:%4d\(\backslash\)tY:%4d\(\backslash\)tZ:%4d"}, 
-      pimu\_data->\hyperlink{structIMU__DATA__STRUCT_a40c7df8b6d49297aa52873cfd9b60daa}{mag}.\hyperlink{structDATA__XYZ_a54c1596e9f9969fd9c21e8458024ecfb}{x}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_a40c7df8b6d49297aa52873cfd9b60daa}{mag}.\hyperlink{structDATA__XYZ_a94bbb1c889bf53eb6a5fffa2b39322cf}{y}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_a40c7df8b6d49297aa52873cfd9b60daa}{mag}.\hyperlink{structDATA__XYZ_a69e89ab0ec6e5d72fc5d54f62cc07fb5}{z});
-        
-        mvprintw(8, 0,  \textcolor{stringliteral}{"IMU Accelerometer (g):\(\backslash\)t\(\backslash\)tX:%8.5lf\(\backslash\)tY:%8.5lf\(\backslash\)tZ:%8.5lf
-      "}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a281a7fdb40a05ed97388f18b9bb90c81}{acc}.\hyperlink{structDATA__XYZ__DOUBLE_a22868cc99a423900e7b82d015a5eb91f}{x}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a281a7fdb40a05ed97388f18b9bb90c81}{acc}.\hyperlink{structDATA__XYZ__DOUBLE_a198a27b5df3b5b0bf461b0e481e22a82}{y}, pimu\_data->
-      \hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a281a7fdb40a05ed97388f18b9bb90c81}{acc}.\hyperlink{structDATA__XYZ__DOUBLE_a9556e8868c223ff3e28756ea18a284c0}{z});
-        mvprintw(9, 0, \textcolor{stringliteral}{"IMU Gyrometer (rad/s):\(\backslash\)t\(\backslash\)tX:%8.5lf\(\backslash\)tY:%8.5lf\(\backslash\)tZ:%8.5lf"}
-      , pimu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a8a54aded6ce608f1b7d2b4a0c52c248b}{gyr}.\hyperlink{structDATA__XYZ__DOUBLE_a22868cc99a423900e7b82d015a5eb91f}{x}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a8a54aded6ce608f1b7d2b4a0c52c248b}{gyr}.\hyperlink{structDATA__XYZ__DOUBLE_a198a27b5df3b5b0bf461b0e481e22a82}{y}, pimu\_data->
-      \hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a8a54aded6ce608f1b7d2b4a0c52c248b}{gyr}.\hyperlink{structDATA__XYZ__DOUBLE_a9556e8868c223ff3e28756ea18a284c0}{z});
-        mvprintw(10, 0, \textcolor{stringliteral}{"IMU Magnetometer (B):\(\backslash\)t\(\backslash\)tX:%8.5lf\(\backslash\)tY:%8.5lf\(\backslash\)tZ:%8.5lf"}
-      , pimu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a2fde6c6759e0fda17e272c32096cb9ec}{mag}.\hyperlink{structDATA__XYZ__DOUBLE_a22868cc99a423900e7b82d015a5eb91f}{x}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a2fde6c6759e0fda17e272c32096cb9ec}{mag}.\hyperlink{structDATA__XYZ__DOUBLE_a198a27b5df3b5b0bf461b0e481e22a82}{y}, pimu\_data->
-      \hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a2fde6c6759e0fda17e272c32096cb9ec}{mag}.\hyperlink{structDATA__XYZ__DOUBLE_a9556e8868c223ff3e28756ea18a284c0}{z});
-
-        mvprintw(12, 0, \textcolor{stringliteral}{"Temp (bits):\(\backslash\)t%d"}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_a81e1dbf765c1d947ca6076aa1bbc73e7}{temp});
-        mvprintw(12,40, \textcolor{stringliteral}{"Temp (ºC):\(\backslash\)t%lf"}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_a3553fcee6beba17fe0c7711ac0483875}{calib\_temp});
-
-        mvprintw(13,0, \textcolor{stringliteral}{"Encoder (bits):\(\backslash\)t%d"},enc\_data->\hyperlink{structENC__DATA__STRUCT_ad25beb30fd5b975292f87db02ec9930a}{angle});
-        mvprintw(13,40, \textcolor{stringliteral}{"Encoder (degree):\(\backslash\)t%d"},enc\_data->\hyperlink{structENC__DATA__STRUCT_ad25beb30fd5b975292f87db02ec9930a}{angle});
-        \textcolor{comment}{//mvprintw(15,0,"Fx (bits): %d",peff\_data->F.x);}
-
-        \textcolor{comment}{//mvprintw(2,40,"Fx (N): %lf",peff\_data->??);}
-        \textcolor{comment}{//mvprintw(15,0,"Fy (bits): %d",peff\_data->F.y);}
-        \textcolor{comment}{//mvprintw(3,40,"Fx (N): %lf",peff\_data->??);}
-        \textcolor{comment}{//mvprintw(16,0,"Fz (bits): %d",peff\_data->F.z);}
-        \textcolor{comment}{//mvprintw(4,40,"Fx (N): %lf",peff\_data->??);}
-        \textcolor{comment}{//mvprintw(17,0,"Mx (bits): %d",peff\_data->M.x);}
-        \textcolor{comment}{//mvprintw(5,40,"Mx (Nm): %lf",peff\_data->??);}
-        \textcolor{comment}{//mvprintw(18,0,"My (bits): %d",peff\_data->M.y);}
-        \textcolor{comment}{//mvprintw(6,40,"My (Nm): %lf",peff\_data->??);}
-        \textcolor{comment}{//mvprintw(19,0,"Mz (bits): %d",peff\_data->M.z);}
-        \textcolor{comment}{//mvprintw(7,40,"Mz (Nm): %lf",peff\_data->??);}
-        
-        mvprintw(15, 0, \textcolor{stringliteral}{"Voltage Control Written (bits):\(\backslash\)t%4d"}, pmra\_data->\hyperlink{structMRA__DATA__STRUCT_a64b4e6bb604e58de593a60c87942b966}{
-      v\_ctl});
-        mvprintw(16, 0, \textcolor{stringliteral}{"Voltage Control Read (bits):\(\backslash\)t%4d"}, pmra\_data->
+191 \{
+192         \textcolor{keywordtype}{float} error\_rate = 0.0;
+193         \textcolor{keywordtype}{double} t = 0.0;
+194         \textcolor{keywordtype}{double} Ts = 0.0;
+195         \textcolor{keywordtype}{double} mean\_exec\_time = 0.0;
+196         \textcolor{keywordtype}{double} \hyperlink{main2_8c_a86c2efd6da48b362806cdbb5b1e711d8}{t0} = 0.0;
+197 
+198         \hyperlink{main2_8c_a5b2b1fdd5e517470c10e84a2b2bcc5c8}{get\_time}(&t, &Ts, &mean\_exec\_time, &t0);
+199 
+200         error\_rate = (float)(((\textcolor{keywordtype}{float})failures/(\textcolor{keywordtype}{float})\hyperlink{main_8c_ac7af894858cf396a219d632f40afdc8d}{total})*100.0);
+201         mvprintw(2, 0, \textcolor{stringliteral}{"Communication Statistics: Total = %d Failures = %d Error Rate = %3.3f"},total, 
+      failures, error\_rate);
+202 
+203         mvprintw(4, 0,  \textcolor{stringliteral}{"IMU Accelerometer (bits):\(\backslash\)tX:%4d\(\backslash\)tY:%4d\(\backslash\)tZ:%4d"}, pimu\_data->
+      \hyperlink{structIMU__DATA__STRUCT_a448f284bf44eb503affda586ad5fa9d2}{acc}.\hyperlink{structDATA__XYZ_a54c1596e9f9969fd9c21e8458024ecfb}{x}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_a448f284bf44eb503affda586ad5fa9d2}{acc}.\hyperlink{structDATA__XYZ_a94bbb1c889bf53eb6a5fffa2b39322cf}{y}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_a448f284bf44eb503affda586ad5fa9d2}{acc}.\hyperlink{structDATA__XYZ_a69e89ab0ec6e5d72fc5d54f62cc07fb5}{z});
+204         mvprintw(5, 0, \textcolor{stringliteral}{"IMU Gyrometer (bits):\(\backslash\)t\(\backslash\)tX:%4d\(\backslash\)tY:%4d\(\backslash\)tZ:%4d"}, pimu\_data->
+      \hyperlink{structIMU__DATA__STRUCT_a0c1ac26626e4434a2ee124a1928a23a1}{gyr}.\hyperlink{structDATA__XYZ_a54c1596e9f9969fd9c21e8458024ecfb}{x}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_a0c1ac26626e4434a2ee124a1928a23a1}{gyr}.\hyperlink{structDATA__XYZ_a94bbb1c889bf53eb6a5fffa2b39322cf}{y}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_a0c1ac26626e4434a2ee124a1928a23a1}{gyr}.\hyperlink{structDATA__XYZ_a69e89ab0ec6e5d72fc5d54f62cc07fb5}{z});
+205         mvprintw(6, 0, \textcolor{stringliteral}{"IMU Magnetometer (bits):\(\backslash\)tX:%4d\(\backslash\)tY:%4d\(\backslash\)tZ:%4d"}, pimu\_data->
+      \hyperlink{structIMU__DATA__STRUCT_a40c7df8b6d49297aa52873cfd9b60daa}{mag}.\hyperlink{structDATA__XYZ_a54c1596e9f9969fd9c21e8458024ecfb}{x}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_a40c7df8b6d49297aa52873cfd9b60daa}{mag}.\hyperlink{structDATA__XYZ_a94bbb1c889bf53eb6a5fffa2b39322cf}{y}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_a40c7df8b6d49297aa52873cfd9b60daa}{mag}.\hyperlink{structDATA__XYZ_a69e89ab0ec6e5d72fc5d54f62cc07fb5}{z});
+206         
+207         mvprintw(8, 0,  \textcolor{stringliteral}{"IMU Accelerometer (g):\(\backslash\)t\(\backslash\)tX:%8.5lf\(\backslash\)tY:%8.5lf\(\backslash\)tZ:%8.5lf"}, pimu\_data->
+      \hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a281a7fdb40a05ed97388f18b9bb90c81}{acc}.\hyperlink{structDATA__XYZ__DOUBLE_a22868cc99a423900e7b82d015a5eb91f}{x}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a281a7fdb40a05ed97388f18b9bb90c81}{acc}.\hyperlink{structDATA__XYZ__DOUBLE_a198a27b5df3b5b0bf461b0e481e22a82}{y}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a281a7fdb40a05ed97388f18b9bb90c81}{acc}.
+      \hyperlink{structDATA__XYZ__DOUBLE_a9556e8868c223ff3e28756ea18a284c0}{z});
+208         mvprintw(9, 0, \textcolor{stringliteral}{"IMU Gyrometer (rad/s):\(\backslash\)t\(\backslash\)tX:%8.5lf\(\backslash\)tY:%8.5lf\(\backslash\)tZ:%8.5lf"}, pimu\_data->
+      \hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a8a54aded6ce608f1b7d2b4a0c52c248b}{gyr}.\hyperlink{structDATA__XYZ__DOUBLE_a22868cc99a423900e7b82d015a5eb91f}{x}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a8a54aded6ce608f1b7d2b4a0c52c248b}{gyr}.\hyperlink{structDATA__XYZ__DOUBLE_a198a27b5df3b5b0bf461b0e481e22a82}{y}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a8a54aded6ce608f1b7d2b4a0c52c248b}{gyr}.
+      \hyperlink{structDATA__XYZ__DOUBLE_a9556e8868c223ff3e28756ea18a284c0}{z});
+209         mvprintw(10, 0, \textcolor{stringliteral}{"IMU Magnetometer (B):\(\backslash\)t\(\backslash\)tX:%8.5lf\(\backslash\)tY:%8.5lf\(\backslash\)tZ:%8.5lf"}, pimu\_data->
+      \hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a2fde6c6759e0fda17e272c32096cb9ec}{mag}.\hyperlink{structDATA__XYZ__DOUBLE_a22868cc99a423900e7b82d015a5eb91f}{x}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a2fde6c6759e0fda17e272c32096cb9ec}{mag}.\hyperlink{structDATA__XYZ__DOUBLE_a198a27b5df3b5b0bf461b0e481e22a82}{y}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a2fde6c6759e0fda17e272c32096cb9ec}{mag}.
+      \hyperlink{structDATA__XYZ__DOUBLE_a9556e8868c223ff3e28756ea18a284c0}{z});
+210 
+211         mvprintw(12, 0, \textcolor{stringliteral}{"Temp (bits):\(\backslash\)t%d"}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_a81e1dbf765c1d947ca6076aa1bbc73e7}{temp});
+212         mvprintw(12,40, \textcolor{stringliteral}{"Temp (ºC):\(\backslash\)t%lf"}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_a3553fcee6beba17fe0c7711ac0483875}{calib\_temp});
+213 
+214         mvprintw(13,0, \textcolor{stringliteral}{"Encoder (bits):\(\backslash\)t%d"},enc\_data->\hyperlink{structENC__DATA__STRUCT_ad25beb30fd5b975292f87db02ec9930a}{angle});
+215         mvprintw(13,40, \textcolor{stringliteral}{"Encoder (degree):\(\backslash\)t%d"},enc\_data->\hyperlink{structENC__DATA__STRUCT_ad25beb30fd5b975292f87db02ec9930a}{angle});
+216         \textcolor{comment}{//mvprintw(15,0,"Fx (bits): %d",peff\_data->F.x);}
+217 
+218         \textcolor{comment}{//mvprintw(2,40,"Fx (N): %lf",peff\_data->??);}
+219         \textcolor{comment}{//mvprintw(15,0,"Fy (bits): %d",peff\_data->F.y);}
+220         \textcolor{comment}{//mvprintw(3,40,"Fx (N): %lf",peff\_data->??);}
+221         \textcolor{comment}{//mvprintw(16,0,"Fz (bits): %d",peff\_data->F.z);}
+222         \textcolor{comment}{//mvprintw(4,40,"Fx (N): %lf",peff\_data->??);}
+223         \textcolor{comment}{//mvprintw(17,0,"Mx (bits): %d",peff\_data->M.x);}
+224         \textcolor{comment}{//mvprintw(5,40,"Mx (Nm): %lf",peff\_data->??);}
+225         \textcolor{comment}{//mvprintw(18,0,"My (bits): %d",peff\_data->M.y);}
+226         \textcolor{comment}{//mvprintw(6,40,"My (Nm): %lf",peff\_data->??);}
+227         \textcolor{comment}{//mvprintw(19,0,"Mz (bits): %d",peff\_data->M.z);}
+228         \textcolor{comment}{//mvprintw(7,40,"Mz (Nm): %lf",peff\_data->??);}
+229         
+230         mvprintw(15, 0, \textcolor{stringliteral}{"Voltage Control Written (bits):\(\backslash\)t%4d"}, pmra\_data->\hyperlink{structMRA__DATA__STRUCT_a64b4e6bb604e58de593a60c87942b966}{v\_ctl});
+231         mvprintw(16, 0, \textcolor{stringliteral}{"Voltage Control Read (bits):\(\backslash\)t%4d"}, pmra\_data->
       \hyperlink{structMRA__DATA__STRUCT_a3a31d57268c33b21ac915fdc27dfe474}{v\_ctl\_read});
-
-    mvprintw(18, 0, \textcolor{stringliteral}{"Runtime: %4.2lf"}, t);
-    \textcolor{keywordflow}{if}(\hyperlink{datalogger_8c_a46fd1290d9ee97d5fc7171e1e0dcb0aa}{datalogger\_status}() == \hyperlink{datalogger_8h_a1a224da36800f52f56f30619849f7f5d}{DATALOGGER\_NOT\_RUNNING}
-      )
-    \{
-        mvprintw(18, 40, \textcolor{stringliteral}{"Datalogger stopped"});
-    \}
-    \textcolor{keywordflow}{else}
-    \{
-        mvprintw(18, 40, \textcolor{stringliteral}{"Datalogger runtime: %4.2lf"}, (t-t0));
-    \}
-\textcolor{comment}{/*}
-\textcolor{comment}{    if(calibration\_get\_status() == CALIBRATION\_NOT\_RUNNING)}
-\textcolor{comment}{    \{}
-\textcolor{comment}{        mvprintw(15, 0, "Calibration stopped");}
-\textcolor{comment}{    \}}
-\textcolor{comment}{    else}
-\textcolor{comment}{    \{}
-\textcolor{comment}{        mvprintw(15, 0, "Calibration running");}
-\textcolor{comment}{    \}}
-\textcolor{comment}{*/}
-        mvprintw(20, 0, \textcolor{stringliteral}{"I: IMU"});
-        mvprintw(20, 20, \textcolor{stringliteral}{"F: Efforts"});
-        mvprintw(20, 40, \textcolor{stringliteral}{"M: Magneto-rheological Actuator"});
-        mvprintw(21, 0, \textcolor{stringliteral}{"E: Encoder"});
-        mvprintw(21, 20, \textcolor{stringliteral}{"O: Overview"});
-        mvprintw(21, 40, \textcolor{stringliteral}{"D: Datalogger Start/Stop"});
-        mvprintw(22, 0, \textcolor{stringliteral}{"Q: Quit\(\backslash\)n"});
-    \textcolor{comment}{//mvprintw(34, 0, "C: Control");}
-
-
-        \textcolor{comment}{//mvprintw(24, 40, "B: Battery");}
-        \textcolor{comment}{//mvprintw(25, 40, "L: Local fields/Local gravity");}
-        \textcolor{comment}{//mvprintw(27, 40, "F: Init local fields");}
-    \textcolor{comment}{//mvprintw(28, 40, "S: Calibration Start/Stop");}
-    \textcolor{comment}{//mvprintw(29, 40, "T: Start estimators");}
-
-        \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};
-\}
+232 
+233     mvprintw(18, 0, \textcolor{stringliteral}{"Runtime: %4.2lf"}, t);
+234     \textcolor{comment}{//removed datalogger:}
+235     \textcolor{keywordflow}{if}(1)\textcolor{comment}{//if(datalogger\_status() == DATALOGGER\_NOT\_RUNNING)}
+236     \{
+237         mvprintw(18, 40, \textcolor{stringliteral}{"Datalogger stopped"});
+238     \}
+239     \textcolor{keywordflow}{else}
+240     \{
+241         mvprintw(18, 40, \textcolor{stringliteral}{"Datalogger runtime: %4.2lf"}, (t-t0));
+242     \}
+243 \textcolor{comment}{/*}
+244 \textcolor{comment}{    if(calibration\_get\_status() == CALIBRATION\_NOT\_RUNNING)}
+245 \textcolor{comment}{    \{}
+246 \textcolor{comment}{        mvprintw(15, 0, "Calibration stopped");}
+247 \textcolor{comment}{    \}}
+248 \textcolor{comment}{    else}
+249 \textcolor{comment}{    \{}
+250 \textcolor{comment}{        mvprintw(15, 0, "Calibration running");}
+251 \textcolor{comment}{    \}}
+252 \textcolor{comment}{*/}
+253         mvprintw(20, 0, \textcolor{stringliteral}{"I: IMU"});
+254         mvprintw(20, 20, \textcolor{stringliteral}{"F: Efforts"});
+255         mvprintw(20, 40, \textcolor{stringliteral}{"M: Magneto-rheological Actuator"});
+256         mvprintw(21, 0, \textcolor{stringliteral}{"E: Encoder"});
+257         mvprintw(21, 20, \textcolor{stringliteral}{"O: Overview"});
+258         \textcolor{comment}{//mvprintw(21, 40, "D: Datalogger Start/Stop");}
+259         mvprintw(22, 0, \textcolor{stringliteral}{"Q: Quit\(\backslash\)n"});
+260 
+261         \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};
+262 \}
 \end{DoxyCode}
 
 
-Here is the call graph for this function\-:\nopagebreak
+Here is the call graph for this function\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{ui_8c_a8d5e19833fec51919aad6e78bb74619a_cgraph}
+\includegraphics[width=262pt]{ui_8c_a8d5e19833fec51919aad6e78bb74619a_cgraph}
 \end{center}
 \end{figure}
 

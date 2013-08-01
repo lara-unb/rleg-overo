@@ -1,4 +1,4 @@
-<map id="schunk_high/src/kinematics/" name="schunk_high/src/kinematics/">
+<map id="schunk_high/src/kinematics" name="schunk_high/src/kinematics">
 <area shape="rect" id="node2" href="dir_30c72702808baf25d94b557ec9ae2b7c.html" title="kinematics" alt="" coords="27,55,112,103"/>
 <area shape="rect" id="node3" href="dir_2099c35471cd7d5cf6f77d21b3b845d3.html" title="include" alt="" coords="33,151,105,199"/>
 <area shape="rect" id="edge3" href="dir_000009_000006.html" title="6" alt="" coords="74,123,82,141"/>

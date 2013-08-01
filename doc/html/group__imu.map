@@ -1,0 +1,6 @@
+<map id="IMU sensors" name="IMU sensors">
+<area shape="rect" id="node1" href="$group__gyr.html" title="Functions for Gyrometer\l ITG3200" alt="" coords="163,5,325,51"/>
+<area shape="rect" id="node2" href="$group__calibrate.html" title="Routines to calibrate\l sensors" alt="" coords="173,74,315,121"/>
+<area shape="rect" id="node3" href="$group__acc.html" title="Functions for accelerometer\l ADXL345" alt="" coords="152,143,336,190"/>
+<area shape="rect" id="node4" href="$group__mag.html" title="Functions to Magnetometer\l HMC5883" alt="" coords="153,213,335,259"/>
+</map>

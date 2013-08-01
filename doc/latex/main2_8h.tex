@@ -41,7 +41,7 @@ int \hyperlink{main2_8h_a97a188c3a74115770124cf0bf0c1e407}{reset\-\_\-timer} (vo
 int \hyperlink{main2_8h_a5b2b1fdd5e517470c10e84a2b2bcc5c8}{get\-\_\-time} (double $\ast$time\-\_\-control\-\_\-task\-\_\-s, double $\ast$Ts\-\_\-control\-\_\-task\-\_\-s, double $\ast$mean\-\_\-time\-\_\-control\-\_\-task\-\_\-s, double $\ast$t0\-\_\-control\-\_\-task\-\_\-s)
 \item 
 void \hyperlink{main2_8h_a5f05ce725141ddfab683e059b1cd95ea}{exit\-\_\-program} (void)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Internal function to end program. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Macro Definition Documentation}
@@ -71,14 +71,18 @@ Definition at line 5 of file main2.\-h.
 )}}\label{main2_8h_a5f05ce725141ddfab683e059b1cd95ea}
 
 
-Definition at line 612 of file main2.\-c.
+Internal function to end program. 
+
+
+
+Definition at line 99 of file main.\-c.
 
 
 \begin{DoxyCode}
-\{
-        \hyperlink{main2_8c_a525dcecf4685bea1fbf92651ac0401fe}{quittask} = 1;
-        \textcolor{keywordflow}{return};
-\}
+99                        \{
+100   \hyperlink{main2_8c_a525dcecf4685bea1fbf92651ac0401fe}{quittask} = 1;
+101   \textcolor{keywordflow}{return};
+102 \}
 \end{DoxyCode}
 \hypertarget{main2_8h_a5b2b1fdd5e517470c10e84a2b2bcc5c8}{\index{main2.\-h@{main2.\-h}!get\-\_\-time@{get\-\_\-time}}
 \index{get\-\_\-time@{get\-\_\-time}!main2.h@{main2.\-h}}
@@ -104,13 +108,13 @@ Referenced by ui\-\_\-overview\-\_\-data().
 
 
 \begin{DoxyCode}
-\{
-    *time\_control\_task\_s = \hyperlink{main2_8c_a2a2a647912528f7aa86812528dbfe02f}{t\_task\_1\_global};
-    *Ts\_control\_task\_s = \hyperlink{main2_8c_afffc21b0b726e6f4a572d0eefd3b5d69}{task\_1\_period\_us}/1e6;
-    *mean\_time\_control\_task\_s = \hyperlink{main2_8c_a738c330c86a365e72ce29ebca3f1e572}{T\_task\_1\_mean\_global};
-    *t0\_control\_task\_s = \hyperlink{main2_8c_a86c2efd6da48b362806cdbb5b1e711d8}{t0};
-    \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};
-\}
+604 \{
+605     *time\_control\_task\_s = \hyperlink{main2_8c_a2a2a647912528f7aa86812528dbfe02f}{t\_task\_1\_global};
+606     *Ts\_control\_task\_s = \hyperlink{main2_8c_afffc21b0b726e6f4a572d0eefd3b5d69}{task\_1\_period\_us}/1e6;
+607     *mean\_time\_control\_task\_s = \hyperlink{main2_8c_a738c330c86a365e72ce29ebca3f1e572}{T\_task\_1\_mean\_global};
+608     *t0\_control\_task\_s = \hyperlink{main2_8c_a86c2efd6da48b362806cdbb5b1e711d8}{t0};
+609     \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};
+610 \}
 \end{DoxyCode}
 
 
@@ -133,165 +137,74 @@ Here is the caller graph for this function\-:
 )}}\label{main2_8h_a840291bc02cba5474a4cb46a9b9566fe}
 
 
-Definition at line 15 of file main.\-c.
+Definition at line 27 of file main.\-c.
 
 
 
-References I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::acc, I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::acc, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::param\-\_\-gyr\-::act, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::param\-\_\-gyr\-::clk\-\_\-source, S\-P\-I\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::cs, datalogger\-\_\-close(), datalogger\-\_\-init(), D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-R\-U\-N\-N\-I\-N\-G, datalogger\-\_\-status(), datalogger\-\_\-stop(), D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S, datalogger\-\_\-write\-\_\-file(), devices\-\_\-init(), eff\-\_\-data, E\-F\-F\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::\-F, F\-A\-I\-L\-U\-R\-E, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::param\-\_\-acc\-::full\-\_\-res, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::gyr, I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::gyr, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::i2c\-\_\-dev, imu\-\_\-data, imu\-\_\-param, log\-\_\-init(), I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::param\-\_\-gyr\-::lpf\-\_\-bw, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::mag, I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::mag, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::param\-\_\-mag\-::meas\-\_\-mode, S\-P\-I\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::mode, I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::new\-\_\-data, E\-F\-F\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::new\-\_\-data, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::param\-\_\-mag\-::op\-\_\-mode, quittask, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::param\-\_\-acc\-::range, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::param\-\_\-mag\-::range, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::param\-\_\-acc\-::rate, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::param\-\_\-gyr\-::rate, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::param\-\_\-mag\-::rate, read\-\_\-all\-\_\-data(), I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::param\-\_\-mag\-::samples\-\_\-avg, S\-P\-I\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::speed, S\-P\-I\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::spi\-\_\-dev, spi\-\_\-param, status, S\-U\-C\-C\-E\-S\-S, T\-A\-S\-K1\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-U\-S, T\-A\-S\-K2\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-U\-S, task\-\_\-1\-\_\-period\-\_\-us, I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::temp, timer\-\_\-start\-\_\-task\-\_\-1(), timer\-\_\-start\-\_\-task\-\_\-2(), timer\-\_\-stop\-\_\-task\-\_\-1(), timer\-\_\-stop\-\_\-task\-\_\-2(), ui\-\_\-close(), ui\-\_\-init(), D\-A\-T\-A\-\_\-\-X\-Y\-Z\-::x, D\-A\-T\-A\-\_\-\-X\-Y\-Z\-::y, and D\-A\-T\-A\-\_\-\-X\-Y\-Z\-::z.
+References I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::acc, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::param\-\_\-gyr\-::act, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::param\-\_\-gyr\-::clk\-\_\-source, S\-P\-I\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::cs, datalogger\-\_\-close(), datalogger\-\_\-init(), D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-R\-U\-N\-N\-I\-N\-G, datalogger\-\_\-status(), datalogger\-\_\-stop(), D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S, datalogger\-\_\-write\-\_\-file(), devices\-\_\-init(), F\-A\-I\-L\-U\-R\-E, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::param\-\_\-acc\-::full\-\_\-res, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::gyr, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::i2c\-\_\-dev, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::param\-\_\-gyr\-::lpf\-\_\-bw, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::mag, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::param\-\_\-mag\-::meas\-\_\-mode, S\-P\-I\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::mode, mra\-\_\-data, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::param\-\_\-mag\-::op\-\_\-mode, quittask, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::param\-\_\-acc\-::range, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::param\-\_\-mag\-::range, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::param\-\_\-acc\-::rate, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::param\-\_\-gyr\-::rate, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::param\-\_\-mag\-::rate, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::param\-\_\-mag\-::samples\-\_\-avg, S\-P\-I\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::speed, S\-P\-I\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::spi\-\_\-dev, status, S\-U\-C\-C\-E\-S\-S, T\-A\-S\-K1\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-U\-S, T\-A\-S\-K2\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-U\-S, task\-\_\-1\-\_\-period\-\_\-us, timer\-\_\-new\-\_\-task(), timer\-\_\-start\-\_\-task(), timer\-\_\-start\-\_\-task\-\_\-1(), timer\-\_\-start\-\_\-task\-\_\-2(), timer\-\_\-stop\-\_\-task(), timer\-\_\-stop\-\_\-task\-\_\-1(), timer\-\_\-stop\-\_\-task\-\_\-2(), ui\-\_\-close(), ui\-\_\-init(), and ui\-\_\-task().
 
 
 \begin{DoxyCode}
-\{
-  \textcolor{comment}{//int i2c\_dev, spi\_dev;}
-  FILE *log;
-  \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} *data;
-  \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} datap[4];
-  \textcolor{keywordtype}{int} i;
-  \textcolor{keywordtype}{double} value[3];
-  
-  \hyperlink{structIMU__PARAM__STRUCT}{IMU\_PARAM\_STRUCT} \hyperlink{main2_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param};
-  \hyperlink{structSPI__PARAM__STRUCT}{SPI\_PARAM\_STRUCT} \hyperlink{main2_8c_adec2468b88cf50b20e5cf399a3b7e994}{spi\_param};
-  \hyperlink{structIMU__DATA__STRUCT}{IMU\_DATA\_STRUCT} \hyperlink{main2_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\_data};
-  \hyperlink{structEFF__DATA__STRUCT}{EFF\_DATA\_STRUCT} \hyperlink{main2_8c_a5650ece8c3a277c7f158d75ae65265fa}{eff\_data};
-  
-\textcolor{comment}{// Parameters for IMU and SPI}
-
-  imu\_param.\hyperlink{structIMU__PARAM__STRUCT_a92172e4757d0f8f9135a659e406c12e5}{acc}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__acc_af57da5d956ffa7e49a184326b6b9c738}{full\_res}=1;
-  imu\_param.\hyperlink{structIMU__PARAM__STRUCT_a92172e4757d0f8f9135a659e406c12e5}{acc}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__acc_a30e6a318cad098cd8379416705820f95}{rate}=100;
-  imu\_param.\hyperlink{structIMU__PARAM__STRUCT_a92172e4757d0f8f9135a659e406c12e5}{acc}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__acc_a26199b298ef2d353192dfbc706bce8cf}{range}=16;
-  imu\_param.\hyperlink{structIMU__PARAM__STRUCT_a5a4557868f1af679a1098808397b02ec}{gyr}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__gyr_a5aa70e1e9634411c89aacfbc570cc91c}{rate}=100;
-  imu\_param.\hyperlink{structIMU__PARAM__STRUCT_a5a4557868f1af679a1098808397b02ec}{gyr}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__gyr_aa612f7299b43a1bf1fc597688c2fa02d}{lpf\_bw}=188;
-  imu\_param.\hyperlink{structIMU__PARAM__STRUCT_a5a4557868f1af679a1098808397b02ec}{gyr}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__gyr_aca3b791cb480f2da4703d4c256a7de48}{clk\_source}=\textcolor{charliteral}{'Z'};
-  imu\_param.\hyperlink{structIMU__PARAM__STRUCT_a5a4557868f1af679a1098808397b02ec}{gyr}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__gyr_a909d153e794ec443be04625ce00e4178}{act}=\textcolor{stringliteral}{"XYZ"};
-  imu\_param.\hyperlink{structIMU__PARAM__STRUCT_a26b277dcaf05f3842995df888225f6f4}{mag}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__mag_a234de95423b604b05b851ef90890cea1}{rate}=75;
-  imu\_param.\hyperlink{structIMU__PARAM__STRUCT_a26b277dcaf05f3842995df888225f6f4}{mag}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__mag_a40ad27ebdb5fde35257b1dc52e40f476}{range}=0;
-  imu\_param.\hyperlink{structIMU__PARAM__STRUCT_a26b277dcaf05f3842995df888225f6f4}{mag}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__mag_a52c22cae6940eb39fb72aca66cfeba9a}{samples\_avg}=8;
-  imu\_param.\hyperlink{structIMU__PARAM__STRUCT_a26b277dcaf05f3842995df888225f6f4}{mag}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__mag_a1f3536709c05310005d648f339d70c54}{meas\_mode}=0;
-  imu\_param.\hyperlink{structIMU__PARAM__STRUCT_a26b277dcaf05f3842995df888225f6f4}{mag}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__mag_a39b83b3e9ff5bdcafed0bdf6a2de584b}{op\_mode}=0;
-  
-  spi\_param.\hyperlink{structSPI__PARAM__STRUCT_a82c546c99f6c3daed73c1e23426be847}{mode}=0;
-  spi\_param.\hyperlink{structSPI__PARAM__STRUCT_a53a8d386594a81eb9bc6f971bfe36c54}{speed}=46875;
-  spi\_param.\hyperlink{structSPI__PARAM__STRUCT_ae0d62e0a5554783d710b677a017e246f}{cs}=0;
-  
-\textcolor{comment}{// Initialization}
-  \textcolor{keywordflow}{if}( \hyperlink{communication_2communication_8c_a2d1e523ff70db11ca4096f97af5da000}{devices\_init}(&imu\_param, &spi\_param)==\hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE} )
-  \{
-    perror(\textcolor{stringliteral}{"Unsuccesful devices initialization"});
-    \textcolor{keywordflow}{return} -1;
-  \}
-\textcolor{comment}{/*  if( datalogger\_init(IMU\_PARAM\_STRUCT *imu\_param, SPI\_PARAM\_STRUCT *
-      spi\_param)==FAILURE )}
-\textcolor{comment}{  \{}
-\textcolor{comment}{    perror("Unsuccesful devices initialization");}
-\textcolor{comment}{    return -1;}
-\textcolor{comment}{  \}}
-\textcolor{comment}{*/}  
-  
-  \textcolor{keywordflow}{if}( (log=fopen(\textcolor{stringliteral}{"log.txt"},\textcolor{stringliteral}{"w"}))==NULL )
-  \{
-    perror(\textcolor{stringliteral}{"Unsuccessful log file openning"});
-    \textcolor{keywordflow}{return} -1;
-  \}
-  \hyperlink{main_8c_aa570d24f638774bf52f70f1d9d9d45f8}{log\_init}(log);
-  
-\textcolor{comment}{// Initializing gdatalogger}
- \textcolor{comment}{/* if(!gDataLogger\_Init(&gDataLogger,"matlabdatafiles/
-      gmatlabdatafile.mat",NULL))\{}
-\textcolor{comment}{                printf("\(\backslash\)nErro em gDataLogger\_Init\(\backslash\)n\(\backslash\)n");}
-\textcolor{comment}{                return EXIT\_FAILURE;}
-\textcolor{comment}{        \}}
-\textcolor{comment}{}
-\textcolor{comment}{        gDataLogger\_DeclareVariable(&gDataLogger,"acc","m/s²",1,3,1000);}
-\textcolor{comment}{        gDataLogger\_DeclareVariable(&gDataLogger,"gyr","\(\backslash\)][\{º/s",1,3,1000);}
-\textcolor{comment}{        gDataLogger\_DeclareVariable(&gDataLogger,"mag","mG",1,3,1000);}
-\textcolor{comment}{        gDataLogger\_DeclareVariable(&gDataLogger,"temp","K",1,1,1000);}
-\textcolor{comment}{        gDataLogger\_DeclareVariable(&gDataLogger,"Vin","V",1,1,1000);}
-\textcolor{comment}{  */}
-\textcolor{comment}{// ROUTINE }
-  \textcolor{keywordflow}{for}( i=1; i<=20000; i++)
-  \{  
-      \textcolor{comment}{//fprintf(log,"    %d\(\backslash\)t|",i); }
-      \hyperlink{communication_2communication_8c_a26f82e8af3b5ce23d5cd3a41db6e0b68}{read\_all\_data}(imu\_param.\hyperlink{structIMU__PARAM__STRUCT_a8a870f383fc9ba0b682fdc9b8c0d2734}{i2c\_dev}, spi\_param.\hyperlink{structSPI__PARAM__STRUCT_abe385c44333d268d17cf648c8e371cad}{spi\_dev}
-      , &imu\_data, &eff\_data);
-  \textcolor{comment}{// ADC}
-\textcolor{comment}{/*FALTA IMPLEMENTAR AS ESCRITAS NOS GPIOS RESPONSÁVEIS PELA SELEÇÃO DO CHIP
-       SELECT QUANDO REALMENTE FOR USAR A PLACA*/}
-\textcolor{comment}{/*      //spi\_dev=spi\_init(0,46875,0);}
-\textcolor{comment}{      //datap[0]=adc\_read(spi\_dev,0,1);}
-\textcolor{comment}{      fprintf(log,"\(\backslash\)t%d\(\backslash\)t|",datap[0]);printf("\(\backslash\)t%d\(\backslash\)t|",datap[0]);}
-\textcolor{comment}{      value[0]=(double)datap[0]/1000;}
-\textcolor{comment}{      //gDataLogger\_InsertVariable(&gDataLogger,"Vin",&(value[0]));}
-\textcolor{comment}{  // ACCelerometer}
-\textcolor{comment}{      if ( (ioctl(i2c\_dev, I2C\_SLAVE, ADD\_ADXL345)) < 0) \{}
-\textcolor{comment}{        perror("ioctl(I2C\_SLAVE) acc");}
-\textcolor{comment}{        return -1;}
-\textcolor{comment}{      \}  SUCCESS}
-\textcolor{comment}{      if( (acc\_read\_all\_data(i2c\_dev,datap))>0 )\{}
-\textcolor{comment}{        fprintf(log,"\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t|",datap[0],datap[1],datap[2]);
-       printf("\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t|",datap[0],datap[1],datap[2]);}
-\textcolor{comment}{        }
-\textcolor{comment}{      \}}
-\textcolor{comment}{      else\{}
-\textcolor{comment}{        fprintf(log,"\(\backslash\)t?\(\backslash\)t?\(\backslash\)t?\(\backslash\)t|"); printf("\(\backslash\)t?\(\backslash\)t?\(\backslash\)t?\(\backslash\)t|");\}}
-\textcolor{comment}{      value[0]=(double)datap[0]*0.0392;}
-\textcolor{comment}{      value[1]=(double)datap[1]*0.0392;}
-\textcolor{comment}{      value[2]=(double)datap[2]*0.0392;}
-\textcolor{comment}{      //gDataLogger\_InsertVariable(&gDataLogger,"acc",value);}
-\textcolor{comment}{  // MAGometer    }
-\textcolor{comment}{      if( (ioctl(i2c\_dev, I2C\_SLAVE, ADD\_HMC5883)) < 0) \{}
-\textcolor{comment}{        perror("ioctl(I2C\_SLAVE) mag");}
-\textcolor{comment}{        return -1;}
-\textcolor{comment}{      \} }
-\textcolor{comment}{      if( (mag\_read\_all\_data(i2c\_dev,datap))>0 )\{}
-\textcolor{comment}{        fprintf(log,"\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t|",datap[0],datap[1],datap[2]);
-       printf("\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t|",datap[0],datap[1],datap[2]);\}}
-\textcolor{comment}{      else\{}
-\textcolor{comment}{        fprintf(log,"\(\backslash\)t?\(\backslash\)t?\(\backslash\)t?\(\backslash\)t|"); printf("\(\backslash\)t?\(\backslash\)t?\(\backslash\)t?\(\backslash\)t|");\}}
-\textcolor{comment}{      value[0]=(double)datap[0]*0.73;}
-\textcolor{comment}{      value[1]=(double)datap[1]*0.73;}
-\textcolor{comment}{      value[2]=(double)datap[2]*0.73;}
-\textcolor{comment}{      //gDataLogger\_InsertVariable(&gDataLogger,"mag",value);}
-\textcolor{comment}{  // GYRometer    }
-\textcolor{comment}{      if( (ioctl(i2c\_dev, I2C\_SLAVE, ADD\_ITG3200)) < 0) \{}
-\textcolor{comment}{        perror("ioctl(I2C\_SLAVE) gyr");}
-\textcolor{comment}{        return -1;}
-\textcolor{comment}{      \} }
-\textcolor{comment}{      if( (gyr\_read\_all\_data(i2c\_dev,datap))>0 )\{}
-\textcolor{comment}{        fprintf(log,"\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t%d",datap[0],datap[1],datap[2],datap[3]);
-       printf("\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t%d",datap[0],datap[1],datap[2],datap[3]);\}}
-\textcolor{comment}{      else\{}
-\textcolor{comment}{        fprintf(log,"\(\backslash\)t?\(\backslash\)t?\(\backslash\)t?\(\backslash\)t?"); printf("\(\backslash\)t?\(\backslash\)t?\(\backslash\)t?\(\backslash\)t?");\}}
-\textcolor{comment}{      value[0]=(double)datap[0]*0.0392;}
-\textcolor{comment}{      value[1]=(double)datap[1]*0.0392;}
-\textcolor{comment}{      value[2]=(double)datap[2]*0.0392;}
-\textcolor{comment}{      //gDataLogger\_InsertVariable(&gDataLogger,"acc",value);}
-\textcolor{comment}{*/}  \textcolor{comment}{//---------------------}
-
-\textcolor{keywordflow}{if}( (eff\_data.\hyperlink{structEFF__DATA__STRUCT_aa42ebc512dd79fa6ebf998162a149446}{new\_data}==0)||(imu\_data.\hyperlink{structIMU__DATA__STRUCT_a99924252176326418863e511d4fa437b}{new\_data}==0) )\{
-    printf(\textcolor{stringliteral}{"%d\(\backslash\)t"},i);
-  printf(\textcolor{stringliteral}{"\(\backslash\)n    %d\(\backslash\)t|"},i);
-  printf(\textcolor{stringliteral}{"\(\backslash\)t%d\(\backslash\)t|"},eff\_data.\hyperlink{structEFF__DATA__STRUCT_abe8952947b54bf9c247f3429ee3aeb44}{F}.\hyperlink{structDATA__XYZ_a54c1596e9f9969fd9c21e8458024ecfb}{x});
-printf(\textcolor{stringliteral}{"\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t|"},imu\_data.\hyperlink{structIMU__DATA__STRUCT_a448f284bf44eb503affda586ad5fa9d2}{acc}.\hyperlink{structDATA__XYZ_a54c1596e9f9969fd9c21e8458024ecfb}{x},imu\_data.\hyperlink{structIMU__DATA__STRUCT_a448f284bf44eb503affda586ad5fa9d2}{acc}.\hyperlink{structDATA__XYZ_a94bbb1c889bf53eb6a5fffa2b39322cf}{y},imu\_data.\hyperlink{structIMU__DATA__STRUCT_a448f284bf44eb503affda586ad5fa9d2}{acc}.\hyperlink{structDATA__XYZ_a69e89ab0ec6e5d72fc5d54f62cc07fb5}{
-      z});
-printf(\textcolor{stringliteral}{"\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t|"},imu\_data.\hyperlink{structIMU__DATA__STRUCT_a40c7df8b6d49297aa52873cfd9b60daa}{mag}.\hyperlink{structDATA__XYZ_a54c1596e9f9969fd9c21e8458024ecfb}{x},imu\_data.\hyperlink{structIMU__DATA__STRUCT_a40c7df8b6d49297aa52873cfd9b60daa}{mag}.\hyperlink{structDATA__XYZ_a94bbb1c889bf53eb6a5fffa2b39322cf}{y},imu\_data.\hyperlink{structIMU__DATA__STRUCT_a40c7df8b6d49297aa52873cfd9b60daa}{mag}.\hyperlink{structDATA__XYZ_a69e89ab0ec6e5d72fc5d54f62cc07fb5}{
-      z});
-printf(\textcolor{stringliteral}{"\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t%d"},imu\_data.\hyperlink{structIMU__DATA__STRUCT_a0c1ac26626e4434a2ee124a1928a23a1}{gyr}.\hyperlink{structDATA__XYZ_a54c1596e9f9969fd9c21e8458024ecfb}{x},imu\_data.\hyperlink{structIMU__DATA__STRUCT_a0c1ac26626e4434a2ee124a1928a23a1}{gyr}.\hyperlink{structDATA__XYZ_a94bbb1c889bf53eb6a5fffa2b39322cf}{y},imu\_data.\hyperlink{structIMU__DATA__STRUCT_a0c1ac26626e4434a2ee124a1928a23a1}{gyr}
-      .\hyperlink{structDATA__XYZ_a69e89ab0ec6e5d72fc5d54f62cc07fb5}{z}, imu\_data.\hyperlink{structIMU__DATA__STRUCT_a81e1dbf765c1d947ca6076aa1bbc73e7}{temp});
-printf(\textcolor{stringliteral}{"\(\backslash\)t%d\(\backslash\)t%d"},eff\_data.\hyperlink{structEFF__DATA__STRUCT_aa42ebc512dd79fa6ebf998162a149446}{new\_data},imu\_data.\hyperlink{structIMU__DATA__STRUCT_a99924252176326418863e511d4fa437b}{new\_data});
-printf(\textcolor{stringliteral}{"\(\backslash\)n"});
-\}
-  \textcolor{comment}{// Updating matlab file}
-  
-  \textcolor{comment}{//---------------------}
-      \textcolor{comment}{//fprintf(log,"\(\backslash\)n");printf("\(\backslash\)n");}
-  \}
-  
-\textcolor{comment}{// CLOSING FILES}
-  fclose(log);
-  close(imu\_param.\hyperlink{structIMU__PARAM__STRUCT_a8a870f383fc9ba0b682fdc9b8c0d2734}{i2c\_dev});
-  close(spi\_param.\hyperlink{structSPI__PARAM__STRUCT_abe385c44333d268d17cf648c8e371cad}{spi\_dev});
-\textcolor{keywordflow}{return} 1;
-\}
+27               \{
+28   \textcolor{keywordtype}{int} return\_value = \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};
+29 
+30 \textcolor{comment}{/*Setting config values:*/}
+31   \textcolor{comment}{// Parameters for IMU}
+32   \hyperlink{main_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a92172e4757d0f8f9135a659e406c12e5}{acc}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__acc_af57da5d956ffa7e49a184326b6b9c738}{full\_res}=1;
+33   \hyperlink{main_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a92172e4757d0f8f9135a659e406c12e5}{acc}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__acc_a30e6a318cad098cd8379416705820f95}{rate}=100;
+34   \hyperlink{main_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a92172e4757d0f8f9135a659e406c12e5}{acc}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__acc_a26199b298ef2d353192dfbc706bce8cf}{range}=16;
+35   \hyperlink{main_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a5a4557868f1af679a1098808397b02ec}{gyr}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__gyr_a5aa70e1e9634411c89aacfbc570cc91c}{rate}=100;
+36   \hyperlink{main_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a5a4557868f1af679a1098808397b02ec}{gyr}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__gyr_aa612f7299b43a1bf1fc597688c2fa02d}{lpf\_bw}=188;
+37   \hyperlink{main_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a5a4557868f1af679a1098808397b02ec}{gyr}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__gyr_aca3b791cb480f2da4703d4c256a7de48}{clk\_source}=\textcolor{charliteral}{'Z'};
+38   \hyperlink{main_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a5a4557868f1af679a1098808397b02ec}{gyr}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__gyr_a909d153e794ec443be04625ce00e4178}{act}=\textcolor{stringliteral}{"XYZ"};
+39   \hyperlink{main_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a26b277dcaf05f3842995df888225f6f4}{mag}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__mag_a234de95423b604b05b851ef90890cea1}{rate}=75;
+40   \hyperlink{main_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a26b277dcaf05f3842995df888225f6f4}{mag}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__mag_a40ad27ebdb5fde35257b1dc52e40f476}{range}=0;
+41   \hyperlink{main_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a26b277dcaf05f3842995df888225f6f4}{mag}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__mag_a52c22cae6940eb39fb72aca66cfeba9a}{samples\_avg}=8;
+42   \hyperlink{main_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a26b277dcaf05f3842995df888225f6f4}{mag}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__mag_a1f3536709c05310005d648f339d70c54}{meas\_mode}=0;
+43   \hyperlink{main_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a26b277dcaf05f3842995df888225f6f4}{mag}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__mag_a39b83b3e9ff5bdcafed0bdf6a2de584b}{op\_mode}=0;
+44 
+45   \textcolor{comment}{// Parameters for SPI}
+46   \hyperlink{main_8c_adec2468b88cf50b20e5cf399a3b7e994}{spi\_param}.\hyperlink{structSPI__PARAM__STRUCT_a82c546c99f6c3daed73c1e23426be847}{mode}=0;
+47   \hyperlink{main_8c_adec2468b88cf50b20e5cf399a3b7e994}{spi\_param}.\hyperlink{structSPI__PARAM__STRUCT_a53a8d386594a81eb9bc6f971bfe36c54}{speed}=375000;
+48   \hyperlink{main_8c_adec2468b88cf50b20e5cf399a3b7e994}{spi\_param}.\hyperlink{structSPI__PARAM__STRUCT_ae0d62e0a5554783d710b677a017e246f}{cs}=0;
+49 
+50   \textcolor{comment}{// Task for control UI:}
+51   \hyperlink{taskScheduler_8c_a2346be42760ac3f89c3e9e9414d83645}{timer\_new\_task}(&\hyperlink{main_8c_ab7d681ab68ca1c465fa993dd21ef096e}{task1},\hyperlink{main_8c_a8007959bfd1230feb2298965e39f2a70}{ui\_task});
+52   \textcolor{comment}{//timer\_new\_task(task2,ui\_task);}
+53 
+54 
+55 \textcolor{comment}{/*Initialization:*/}
+56   \textcolor{keywordflow}{if}(\hyperlink{communication_2communication_8c_a2d1e523ff70db11ca4096f97af5da000}{devices\_init}(&\hyperlink{main_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param},&\hyperlink{main_8c_adec2468b88cf50b20e5cf399a3b7e994}{spi\_param},&\hyperlink{main2_8c_abc42e18d2909e9bc119316283f4ed9db}{mra\_data})!=
+      \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS})\{
+57     perror(\textcolor{stringliteral}{"Unsuccesful devices initialization"});
+58     \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
+59   \}
+60 
+61   \textcolor{keywordflow}{if}(\hyperlink{group__ui_gab7bfb453918dcc296ff0cea3c79453d0}{ui\_init}()!=\hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS})\{
+62     perror(\textcolor{stringliteral}{"Unsuccesful user interface initialization"});
+63     \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
+64   \}
+65 
+66   \hyperlink{group__taskS_gac088a054258396a6e2dba77908f22b42}{timer\_start\_task}(&\hyperlink{main_8c_ab7d681ab68ca1c465fa993dd21ef096e}{task1});
+67   \textcolor{comment}{//timer\_start\_task(task2);}
+68 
+69   \textcolor{keywordflow}{while}(return\_value == \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS})\{
+70     \hyperlink{main_8c_ab7d681ab68ca1c465fa993dd21ef096e}{task1}->runFunction();
+71   \}
+72 
+73 \textcolor{comment}{/*Shutting Down:*/}
+74   \hyperlink{group__taskS_ga8e48eacaac7d9cf7d82cc71cfbcd4b56}{timer\_stop\_task}(&\hyperlink{main_8c_ab7d681ab68ca1c465fa993dd21ef096e}{task1});
+75   \textcolor{comment}{//usleep(2000);}
+76 
+77   \textcolor{keywordflow}{if}(\hyperlink{group__ui_ga65d8b92b634da17c344458cd57e61f3e}{ui\_close}()==\hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE})\{
+78     return\_value == \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
+79   \}
+80 
+81   close(\hyperlink{main_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a8a870f383fc9ba0b682fdc9b8c0d2734}{i2c\_dev});
+82   close(\hyperlink{main_8c_adec2468b88cf50b20e5cf399a3b7e994}{spi\_param}.\hyperlink{structSPI__PARAM__STRUCT_abe385c44333d268d17cf648c8e371cad}{spi\_dev});
+83 
+84   \textcolor{keywordflow}{return} return\_value;
+85 \}
 \end{DoxyCode}
 
 
@@ -326,151 +239,139 @@ Referenced by timer\-\_\-function\-\_\-task\-\_\-1().
 
 
 \begin{DoxyCode}
-\{
-    \textcolor{comment}{//static int previous\_calibration\_status = CALIBRATION\_NOT\_RUNNING;}
-    \textcolor{comment}{//int current\_calibration\_status; // Used to detect lowering edge}
-    \textcolor{keyword}{static} \textcolor{keywordtype}{int} previous\_datalogger\_status = \hyperlink{datalogger_8h_a1a224da36800f52f56f30619849f7f5d}{DATALOGGER\_NOT\_RUNNING}
-      ;
-    \textcolor{keywordtype}{int} current\_datalogger\_status; \textcolor{comment}{// Used to detect rising edge}
-    \textcolor{keywordtype}{char} user =0;
-   \textcolor{comment}{/* int buff\_i=0; //i of buffer}
-\textcolor{comment}{    int i, j, k, equal=0;}
-\textcolor{comment}{    short int buff[3][3][3]; //\{acc,gyr,mag\}\{x,y,z\}\{i=1,2,3\}}
-\textcolor{comment}{*/}
-
-    \textcolor{comment}{// Main communication/control thread}
-
-    \textcolor{comment}{//Acquire}
-    \hyperlink{main2_8c_ac7af894858cf396a219d632f40afdc8d}{total}++;
-    \textcolor{keywordflow}{if}( \hyperlink{communication_2communication_8c_a26f82e8af3b5ce23d5cd3a41db6e0b68}{read\_all\_data}(\hyperlink{main2_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a8a870f383fc9ba0b682fdc9b8c0d2734}{i2c\_dev}, \hyperlink{main2_8c_adec2468b88cf50b20e5cf399a3b7e994}{spi\_param}
-      .\hyperlink{structSPI__PARAM__STRUCT_abe385c44333d268d17cf648c8e371cad}{spi\_dev}, &\hyperlink{main2_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\_data}, &\hyperlink{main2_8c_a5650ece8c3a277c7f158d75ae65265fa}{eff\_data}, &\hyperlink{main2_8c_abc42e18d2909e9bc119316283f4ed9db}{mra\_data}, &
-      \hyperlink{main2_8c_aaa441e18ae805c4f3efb0b5231d1cfe7}{enc\_data}) != \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS})
-      \hyperlink{main2_8c_a4f35e5ea2395561d0bd3b2f45612dc2c}{failure}++;
-        \textcolor{comment}{/*buff\_i=buff\_i%5;}
-\textcolor{comment}{        buff[0][0][buff\_i]=imu\_data.acc.x;}
-\textcolor{comment}{        buff[0][1][buff\_i]=imu\_data.acc.y;}
-\textcolor{comment}{        buff[0][2][buff\_i]=imu\_data.acc.z;}
-\textcolor{comment}{        buff[1][0][buff\_i]=imu\_data.gyr.x;}
-\textcolor{comment}{        buff[1][0][buff\_i]=imu\_data.gyr.x;}
-\textcolor{comment}{        buff[1][1][buff\_i]=imu\_data.gyr.y;}
-\textcolor{comment}{        buff[1][2][buff\_i]=imu\_data.gyr.z;}
-\textcolor{comment}{        buff[2][0][buff\_i]=imu\_data.mag.x;}
-\textcolor{comment}{        buff[2][1][buff\_i]=imu\_data.mag.y;}
-\textcolor{comment}{        buff[2][2][buff\_i]=imu\_data.mag.z;}
-\textcolor{comment}{        buff\_i++;}
-\textcolor{comment}{        }
-\textcolor{comment}{        for( i=0; i<3; i++)}
-\textcolor{comment}{        \{}
-\textcolor{comment}{          }
-\textcolor{comment}{          for( j=0; j<3; j++)}
-\textcolor{comment}{            for( k=1; k<3; k++)}
-\textcolor{comment}{            \{}
-\textcolor{comment}{              if( buff[i][j][k]==buff[i][j][0] )}
-\textcolor{comment}{                equal=1;}
-\textcolor{comment}{              else}
-\textcolor{comment}{                equal=0;}
-\textcolor{comment}{            \}}
-\textcolor{comment}{          if( equal==1)}
-\textcolor{comment}{            i=3;}
-\textcolor{comment}{        \}}
-\textcolor{comment}{        if( equal==1 )}
-\textcolor{comment}{        \{}
-\textcolor{comment}{          devices\_init(&imu\_param, &spi\_param, &mra\_data);}
-\textcolor{comment}{          equal=0;}
-\textcolor{comment}{        \}*/}
-\textcolor{comment}{/*    if(read\_all\_data(imu\_param.i2c\_dev, spi\_param.spi\_dev, &imu\_data,
-       &eff\_data) != SUCCESS)}
-\textcolor{comment}{    \{}
-\textcolor{comment}{        failure++;}
-\textcolor{comment}{    \}}
-\textcolor{comment}{*/}
-    \textcolor{comment}{// Calibrate and Estimate}
-    \textcolor{comment}{//calibrate\_all(&imu\_data);}
-    \textcolor{comment}{//calibration\_calibrate\_all(&pwm\_read\_data, &scp1000\_data, &battery\_data,
-       &gps\_data, &imu\_data, &pitot\_data, &sonar\_data,
-       &calibration\_local\_coordinate\_system\_data, &calibration\_altimeter\_data, &calibration\_local\_fields\_data,
-       &gps\_measure, &imu\_measure, &magnetometer\_measure);}
-    \textcolor{comment}{//estimation\_update\_state\_estimate(&estimation\_data, &gps\_measure,
-       &imu\_measure, &magnetometer\_measure, &sonar\_measure, &calibration\_local\_fields\_data,
-       task\_1\_period\_us/(double)1e6);}
-
-    \textcolor{comment}{// Control}
-    \hyperlink{main2_8c_abc42e18d2909e9bc119316283f4ed9db}{mra\_data}.\hyperlink{structMRA__DATA__STRUCT_a64b4e6bb604e58de593a60c87942b966}{v\_ctl}=1275+(uint8\_t)(800*cosf(\hyperlink{main2_8c_a2a2a647912528f7aa86812528dbfe02f}{t\_task\_1\_global}
-      *1000));
-    \textcolor{comment}{//control\_main\_task(t\_task\_1\_global, &pwm\_write\_data, &pwm\_read\_data,
-       &control\_data, &estimation\_data);}
-
-    \textcolor{comment}{// Actuate}
-    \hyperlink{communication_2communication_8c_a1d5f01d0124cff7030b5c4951b4bbefa}{actuate}(\hyperlink{main2_8c_adec2468b88cf50b20e5cf399a3b7e994}{spi\_param}.\hyperlink{structSPI__PARAM__STRUCT_abe385c44333d268d17cf648c8e371cad}{spi\_dev}, &\hyperlink{main2_8c_abc42e18d2909e9bc119316283f4ed9db}{mra\_data});
-    \textcolor{comment}{//protocol\_send\_actuation\_data(&pwm\_write\_data);}
-
-    \textcolor{comment}{// Log}
-    \textcolor{comment}{/*user=getch();}
-\textcolor{comment}{    switch(user)\{}
-\textcolor{comment}{      case 'e': }
-\textcolor{comment}{        exit\_program();}
-\textcolor{comment}{        break;}
-\textcolor{comment}{      case 'a':}
-\textcolor{comment}{        acquire=1;}
-\textcolor{comment}{        break;}
-\textcolor{comment}{      case 's':}
-\textcolor{comment}{        acquire=0;}
-\textcolor{comment}{        break;}
-\textcolor{comment}{      default:}
-\textcolor{comment}{        break;}
-\textcolor{comment}{    \}*/}
-    current\_datalogger\_status = \hyperlink{datalogger_8c_a46fd1290d9ee97d5fc7171e1e0dcb0aa}{datalogger\_status}();
-    \textcolor{keywordflow}{if}( (current\_datalogger\_status == \hyperlink{datalogger_8h_a2cf92051a019c8ec1b5c4f5380758f62}{DATALOGGER\_RUNNING}))
-    \{
-        \textcolor{keywordflow}{if}(previous\_datalogger\_status == \hyperlink{datalogger_8h_a1a224da36800f52f56f30619849f7f5d}{DATALOGGER\_NOT\_RUNNING}
-      ) \textcolor{comment}{// Rising edge}
-        \{
-            \hyperlink{datalogger_8c_afb69d166f8d53042825174cee225ea49}{datalogger\_set\_Ts}(\hyperlink{main2_8c_afffc21b0b726e6f4a572d0eefd3b5d69}{task\_1\_period\_us}
-      /1e6);
-            \hyperlink{main2_8c_a97a188c3a74115770124cf0bf0c1e407}{reset\_timer}();
-        \}
-        \hyperlink{datalogger_8c_ad89a56e2f057ace8c28d78eb67703e7d}{datalogger\_update}(\hyperlink{main2_8c_a2a2a647912528f7aa86812528dbfe02f}{t\_task\_1\_global}, 
-      \hyperlink{main2_8c_acdaa4a9b0e1be3dfa53b52df6410ad3b}{T\_task\_1\_exec\_global}, \hyperlink{main2_8c_a9629c77cd3dba9d47d15c2e51bdde09d}{T\_task\_2\_exec\_global}
-      , \hyperlink{main2_8c_a86c2efd6da48b362806cdbb5b1e711d8}{t0}, &\hyperlink{main2_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\_data}, &\hyperlink{main2_8c_a5650ece8c3a277c7f158d75ae65265fa}{eff\_data}, &\hyperlink{main2_8c_abc42e18d2909e9bc119316283f4ed9db}{mra\_data} \textcolor{comment}{/*&imu\_measure,
-       &magnetometer\_measure, &estimation\_data, &control\_data*/});
-  \textcolor{comment}{//printf("\(\backslash\)n    %d\(\backslash\)t|",i);}
- \textcolor{comment}{/* printw("%d\(\backslash\)t|",eff\_data.F.x);}
-\textcolor{comment}{    printw("\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t|",imu\_data.acc.x,imu\_data.acc.y,imu\_data.acc.z);}
-\textcolor{comment}{    printw("\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t|",imu\_data.mag.x,imu\_data.mag.y,imu\_data.mag.z);}
-\textcolor{comment}{    printw("\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t%d",imu\_data.gyr.x,imu\_data.gyr.y,imu\_data.gyr.z,
-       imu\_data.temp);}
-\textcolor{comment}{    printw("\(\backslash\)t%d\(\backslash\)t%d",eff\_data.new\_data,imu\_data.new\_data);}
-\textcolor{comment}{    printw("\(\backslash\)t%d\(\backslash\)t%d",mra\_data.Out\_0, mra\_data.Read\_0);}
-\textcolor{comment}{    printw("\(\backslash\)n");}
-\textcolor{comment}{    refresh();*/}
-    \}
-    previous\_datalogger\_status = current\_datalogger\_status;
-
-\textcolor{comment}{/*    current\_calibration\_status = calibration\_get\_status();}
-\textcolor{comment}{    if(current\_calibration\_status == CALIBRATION\_RUNNING)}
-\textcolor{comment}{    \{}
-\textcolor{comment}{        calibration\_imu\_add\_sample\_bias\_estimate(&imu\_data);}
-\textcolor{comment}{        calibration\_altimeter\_add\_sample\_initial\_pressure(&scp1000\_data,
-       &calibration\_altimeter\_data);}
-\textcolor{comment}{    \}}
-\textcolor{comment}{    else // Calibration not running}
-\textcolor{comment}{    \{}
-\textcolor{comment}{        if(previous\_calibration\_status == CALIBRATION\_RUNNING) // Lowering edge}
-\textcolor{comment}{        \{}
-\textcolor{comment}{            calibration\_imu\_finish\_bias\_estimate(&imu\_data);}
-\textcolor{comment}{           
-       calibration\_altimeter\_finish\_initial\_pressure\_estimate(&calibration\_altimeter\_data);}
-\textcolor{comment}{        \}}
-\textcolor{comment}{    \}}
-\textcolor{comment}{    previous\_calibration\_status = current\_calibration\_status;}
-\textcolor{comment}{*/}
-    \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};
-\}
+213 \{
+214     \textcolor{comment}{//static int previous\_calibration\_status = CALIBRATION\_NOT\_RUNNING;}
+215     \textcolor{comment}{//int current\_calibration\_status; // Used to detect lowering edge}
+216     \textcolor{keyword}{static} \textcolor{keywordtype}{int} previous\_datalogger\_status = \hyperlink{datalogger_8h_a1a224da36800f52f56f30619849f7f5d}{DATALOGGER\_NOT\_RUNNING};
+217     \textcolor{keywordtype}{int} current\_datalogger\_status; \textcolor{comment}{// Used to detect rising edge}
+218     \textcolor{keywordtype}{char} user =0;
+219    \textcolor{comment}{/* int buff\_i=0; //i of buffer}
+220 \textcolor{comment}{    int i, j, k, equal=0;}
+221 \textcolor{comment}{    short int buff[3][3][3]; //\{acc,gyr,mag\}\{x,y,z\}\{i=1,2,3\}}
+222 \textcolor{comment}{*/}
+223 
+224     \textcolor{comment}{// Main communication/control thread}
+225 
+226     \textcolor{comment}{//Acquire}
+227     \hyperlink{main_8c_ac7af894858cf396a219d632f40afdc8d}{total}++;
+228     \textcolor{keywordflow}{if}( \hyperlink{communication_2communication_8c_a26f82e8af3b5ce23d5cd3a41db6e0b68}{read\_all\_data}(\hyperlink{main_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a8a870f383fc9ba0b682fdc9b8c0d2734}{i2c\_dev}, \hyperlink{main_8c_adec2468b88cf50b20e5cf399a3b7e994}{spi\_param}.
+      \hyperlink{structSPI__PARAM__STRUCT_abe385c44333d268d17cf648c8e371cad}{spi\_dev}, &\hyperlink{main_8c_a0f81e5b5621e6e2b2467daa7d12268c4}{imu\_data}, &\hyperlink{main2_8c_a5650ece8c3a277c7f158d75ae65265fa}{eff\_data}, &\hyperlink{main2_8c_abc42e18d2909e9bc119316283f4ed9db}{mra\_data}, &
+      \hyperlink{main_8c_aaa441e18ae805c4f3efb0b5231d1cfe7}{enc\_data}) != \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS})
+229       \hyperlink{main_8c_a4f35e5ea2395561d0bd3b2f45612dc2c}{failure}++;
+230         \textcolor{comment}{/*buff\_i=buff\_i%5;}
+231 \textcolor{comment}{        buff[0][0][buff\_i]=imu\_data.acc.x;}
+232 \textcolor{comment}{        buff[0][1][buff\_i]=imu\_data.acc.y;}
+233 \textcolor{comment}{        buff[0][2][buff\_i]=imu\_data.acc.z;}
+234 \textcolor{comment}{        buff[1][0][buff\_i]=imu\_data.gyr.x;}
+235 \textcolor{comment}{        buff[1][0][buff\_i]=imu\_data.gyr.x;}
+236 \textcolor{comment}{        buff[1][1][buff\_i]=imu\_data.gyr.y;}
+237 \textcolor{comment}{        buff[1][2][buff\_i]=imu\_data.gyr.z;}
+238 \textcolor{comment}{        buff[2][0][buff\_i]=imu\_data.mag.x;}
+239 \textcolor{comment}{        buff[2][1][buff\_i]=imu\_data.mag.y;}
+240 \textcolor{comment}{        buff[2][2][buff\_i]=imu\_data.mag.z;}
+241 \textcolor{comment}{        buff\_i++;}
+242 \textcolor{comment}{        }
+243 \textcolor{comment}{        for( i=0; i<3; i++)}
+244 \textcolor{comment}{        \{}
+245 \textcolor{comment}{          }
+246 \textcolor{comment}{          for( j=0; j<3; j++)}
+247 \textcolor{comment}{            for( k=1; k<3; k++)}
+248 \textcolor{comment}{            \{}
+249 \textcolor{comment}{              if( buff[i][j][k]==buff[i][j][0] )}
+250 \textcolor{comment}{                equal=1;}
+251 \textcolor{comment}{              else}
+252 \textcolor{comment}{                equal=0;}
+253 \textcolor{comment}{            \}}
+254 \textcolor{comment}{          if( equal==1)}
+255 \textcolor{comment}{            i=3;}
+256 \textcolor{comment}{        \}}
+257 \textcolor{comment}{        if( equal==1 )}
+258 \textcolor{comment}{        \{}
+259 \textcolor{comment}{          devices\_init(&imu\_param, &spi\_param, &mra\_data);}
+260 \textcolor{comment}{          equal=0;}
+261 \textcolor{comment}{        \}*/}
+262 \textcolor{comment}{/*    if(read\_all\_data(imu\_param.i2c\_dev, spi\_param.spi\_dev, &imu\_data, &eff\_data) != SUCCESS)}
+263 \textcolor{comment}{    \{}
+264 \textcolor{comment}{        failure++;}
+265 \textcolor{comment}{    \}}
+266 \textcolor{comment}{*/}
+267     \textcolor{comment}{// Calibrate and Estimate}
+268     \textcolor{comment}{//calibrate\_all(&imu\_data);}
+269     \textcolor{comment}{//calibration\_calibrate\_all(&pwm\_read\_data, &scp1000\_data, &battery\_data, &gps\_data, &imu\_data,
+       &pitot\_data, &sonar\_data, &calibration\_local\_coordinate\_system\_data, &calibration\_altimeter\_data,
+       &calibration\_local\_fields\_data, &gps\_measure, &imu\_measure, &magnetometer\_measure);}
+270     \textcolor{comment}{//estimation\_update\_state\_estimate(&estimation\_data, &gps\_measure, &imu\_measure, &magnetometer\_measure,
+       &sonar\_measure, &calibration\_local\_fields\_data, task\_1\_period\_us/(double)1e6);}
+271 
+272     \textcolor{comment}{// Control}
+273     \hyperlink{main2_8c_abc42e18d2909e9bc119316283f4ed9db}{mra\_data}.\hyperlink{structMRA__DATA__STRUCT_a64b4e6bb604e58de593a60c87942b966}{v\_ctl}=1275+(uint8\_t)(800*cosf(\hyperlink{main2_8c_a2a2a647912528f7aa86812528dbfe02f}{t\_task\_1\_global}*1000));
+274     \textcolor{comment}{//control\_main\_task(t\_task\_1\_global, &pwm\_write\_data, &pwm\_read\_data, &control\_data, &estimation\_data);}
+275 
+276     \textcolor{comment}{// Actuate}
+277     \hyperlink{communication_2communication_8c_a1d5f01d0124cff7030b5c4951b4bbefa}{actuate}(\hyperlink{main_8c_adec2468b88cf50b20e5cf399a3b7e994}{spi\_param}.\hyperlink{structSPI__PARAM__STRUCT_abe385c44333d268d17cf648c8e371cad}{spi\_dev}, &\hyperlink{main2_8c_abc42e18d2909e9bc119316283f4ed9db}{mra\_data});
+278     \textcolor{comment}{//protocol\_send\_actuation\_data(&pwm\_write\_data);}
+279 
+280     \textcolor{comment}{// Log}
+281     \textcolor{comment}{/*user=getch();}
+282 \textcolor{comment}{    switch(user)\{}
+283 \textcolor{comment}{      case 'e': }
+284 \textcolor{comment}{        exit\_program();}
+285 \textcolor{comment}{        break;}
+286 \textcolor{comment}{      case 'a':}
+287 \textcolor{comment}{        acquire=1;}
+288 \textcolor{comment}{        break;}
+289 \textcolor{comment}{      case 's':}
+290 \textcolor{comment}{        acquire=0;}
+291 \textcolor{comment}{        break;}
+292 \textcolor{comment}{      default:}
+293 \textcolor{comment}{        break;}
+294 \textcolor{comment}{    \}*/}
+295     current\_datalogger\_status = \hyperlink{datalogger_8c_a46fd1290d9ee97d5fc7171e1e0dcb0aa}{datalogger\_status}();
+296     \textcolor{keywordflow}{if}( (current\_datalogger\_status == \hyperlink{datalogger_8h_a2cf92051a019c8ec1b5c4f5380758f62}{DATALOGGER\_RUNNING}))
+297     \{
+298         \textcolor{keywordflow}{if}(previous\_datalogger\_status == \hyperlink{datalogger_8h_a1a224da36800f52f56f30619849f7f5d}{DATALOGGER\_NOT\_RUNNING}) \textcolor{comment}{// Rising edge}
+299         \{
+300             \hyperlink{datalogger_8c_afb69d166f8d53042825174cee225ea49}{datalogger\_set\_Ts}(\hyperlink{main2_8c_afffc21b0b726e6f4a572d0eefd3b5d69}{task\_1\_period\_us}/1e6);
+301             \hyperlink{main2_8c_a97a188c3a74115770124cf0bf0c1e407}{reset\_timer}();
+302         \}
+303         \hyperlink{datalogger_8c_ad89a56e2f057ace8c28d78eb67703e7d}{datalogger\_update}(\hyperlink{main2_8c_a2a2a647912528f7aa86812528dbfe02f}{t\_task\_1\_global}, 
+      \hyperlink{main2_8c_acdaa4a9b0e1be3dfa53b52df6410ad3b}{T\_task\_1\_exec\_global}, \hyperlink{main2_8c_a9629c77cd3dba9d47d15c2e51bdde09d}{T\_task\_2\_exec\_global}, 
+      \hyperlink{main2_8c_a86c2efd6da48b362806cdbb5b1e711d8}{t0}, &\hyperlink{main_8c_a0f81e5b5621e6e2b2467daa7d12268c4}{imu\_data}, &\hyperlink{main2_8c_a5650ece8c3a277c7f158d75ae65265fa}{eff\_data}, &\hyperlink{main2_8c_abc42e18d2909e9bc119316283f4ed9db}{mra\_data} \textcolor{comment}{/*&imu\_measure, &magnetometer\_measure,
+       &estimation\_data, &control\_data*/});
+304   \textcolor{comment}{//printf("\(\backslash\)n    %d\(\backslash\)t|",i);}
+305  \textcolor{comment}{/* printw("%d\(\backslash\)t|",eff\_data.F.x);}
+306 \textcolor{comment}{    printw("\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t|",imu\_data.acc.x,imu\_data.acc.y,imu\_data.acc.z);}
+307 \textcolor{comment}{    printw("\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t|",imu\_data.mag.x,imu\_data.mag.y,imu\_data.mag.z);}
+308 \textcolor{comment}{    printw("\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t%d",imu\_data.gyr.x,imu\_data.gyr.y,imu\_data.gyr.z, imu\_data.temp);}
+309 \textcolor{comment}{    printw("\(\backslash\)t%d\(\backslash\)t%d",eff\_data.new\_data,imu\_data.new\_data);}
+310 \textcolor{comment}{    printw("\(\backslash\)t%d\(\backslash\)t%d",mra\_data.Out\_0, mra\_data.Read\_0);}
+311 \textcolor{comment}{    printw("\(\backslash\)n");}
+312 \textcolor{comment}{    refresh();*/}
+313     \}
+314     previous\_datalogger\_status = current\_datalogger\_status;
+315 
+316 \textcolor{comment}{/*    current\_calibration\_status = calibration\_get\_status();}
+317 \textcolor{comment}{    if(current\_calibration\_status == CALIBRATION\_RUNNING)}
+318 \textcolor{comment}{    \{}
+319 \textcolor{comment}{        calibration\_imu\_add\_sample\_bias\_estimate(&imu\_data);}
+320 \textcolor{comment}{        calibration\_altimeter\_add\_sample\_initial\_pressure(&scp1000\_data, &calibration\_altimeter\_data);}
+321 \textcolor{comment}{    \}}
+322 \textcolor{comment}{    else // Calibration not running}
+323 \textcolor{comment}{    \{}
+324 \textcolor{comment}{        if(previous\_calibration\_status == CALIBRATION\_RUNNING) // Lowering edge}
+325 \textcolor{comment}{        \{}
+326 \textcolor{comment}{            calibration\_imu\_finish\_bias\_estimate(&imu\_data);}
+327 \textcolor{comment}{            calibration\_altimeter\_finish\_initial\_pressure\_estimate(&calibration\_altimeter\_data);}
+328 \textcolor{comment}{        \}}
+329 \textcolor{comment}{    \}}
+330 \textcolor{comment}{    previous\_calibration\_status = current\_calibration\_status;}
+331 \textcolor{comment}{*/}
+332     \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};
+333 \}
 \end{DoxyCode}
 
 
-Here is the call graph for this function\-:
-\nopagebreak
+Here is the call graph for this function\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -512,62 +413,61 @@ Referenced by timer\-\_\-function\-\_\-task\-\_\-2().
 
 
 \begin{DoxyCode}
-\{
-
-    \textcolor{keywordtype}{int} i, j, k, equal=0;
-
-    \textcolor{comment}{// UI thread}
-    \textcolor{keywordflow}{if}(\hyperlink{main2_8c_a5045187bb0afe92c41ce73bc602fd3ca}{telemetry\_mode} == \hyperlink{ui_8h_a5f863c47136ccbe4db74101b9a3e83ca}{UI\_NCURSES\_MODE})
-    \{
-        \hyperlink{group__ui_ga42e4dac2d138061a74c572358c8ebf49}{ui\_update}(&\hyperlink{main2_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\_data}, &\hyperlink{main2_8c_a5650ece8c3a277c7f158d75ae65265fa}{eff\_data}, &\hyperlink{main2_8c_abc42e18d2909e9bc119316283f4ed9db}{mra\_data}
-      ,&\hyperlink{main2_8c_aaa441e18ae805c4f3efb0b5231d1cfe7}{enc\_data}, \hyperlink{main2_8c_ac7af894858cf396a219d632f40afdc8d}{total}, \hyperlink{main2_8c_a4f35e5ea2395561d0bd3b2f45612dc2c}{failure});
-    \}
-                
-            \hyperlink{main2_8c_ac0f4eb3a1def152855159c698feaf977}{buff\_i}=\hyperlink{main2_8c_ac0f4eb3a1def152855159c698feaf977}{buff\_i}%5;
-        \hyperlink{main2_8c_aaa9d39905d1be632c8232f11155291d0}{buff}[0][0][\hyperlink{main2_8c_ac0f4eb3a1def152855159c698feaf977}{buff\_i}]=\hyperlink{main2_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\_data}.\hyperlink{structIMU__DATA__STRUCT_a448f284bf44eb503affda586ad5fa9d2}{acc}.\hyperlink{structDATA__XYZ_a54c1596e9f9969fd9c21e8458024ecfb}{x};
-        \hyperlink{main2_8c_aaa9d39905d1be632c8232f11155291d0}{buff}[0][1][\hyperlink{main2_8c_ac0f4eb3a1def152855159c698feaf977}{buff\_i}]=\hyperlink{main2_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\_data}.\hyperlink{structIMU__DATA__STRUCT_a448f284bf44eb503affda586ad5fa9d2}{acc}.\hyperlink{structDATA__XYZ_a94bbb1c889bf53eb6a5fffa2b39322cf}{y};
-        \hyperlink{main2_8c_aaa9d39905d1be632c8232f11155291d0}{buff}[0][2][\hyperlink{main2_8c_ac0f4eb3a1def152855159c698feaf977}{buff\_i}]=\hyperlink{main2_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\_data}.\hyperlink{structIMU__DATA__STRUCT_a448f284bf44eb503affda586ad5fa9d2}{acc}.\hyperlink{structDATA__XYZ_a69e89ab0ec6e5d72fc5d54f62cc07fb5}{z};
-        \hyperlink{main2_8c_aaa9d39905d1be632c8232f11155291d0}{buff}[1][0][\hyperlink{main2_8c_ac0f4eb3a1def152855159c698feaf977}{buff\_i}]=\hyperlink{main2_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\_data}.\hyperlink{structIMU__DATA__STRUCT_a0c1ac26626e4434a2ee124a1928a23a1}{gyr}.\hyperlink{structDATA__XYZ_a54c1596e9f9969fd9c21e8458024ecfb}{x};
-        \hyperlink{main2_8c_aaa9d39905d1be632c8232f11155291d0}{buff}[1][0][\hyperlink{main2_8c_ac0f4eb3a1def152855159c698feaf977}{buff\_i}]=\hyperlink{main2_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\_data}.\hyperlink{structIMU__DATA__STRUCT_a0c1ac26626e4434a2ee124a1928a23a1}{gyr}.\hyperlink{structDATA__XYZ_a54c1596e9f9969fd9c21e8458024ecfb}{x};
-        \hyperlink{main2_8c_aaa9d39905d1be632c8232f11155291d0}{buff}[1][1][\hyperlink{main2_8c_ac0f4eb3a1def152855159c698feaf977}{buff\_i}]=\hyperlink{main2_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\_data}.\hyperlink{structIMU__DATA__STRUCT_a0c1ac26626e4434a2ee124a1928a23a1}{gyr}.\hyperlink{structDATA__XYZ_a94bbb1c889bf53eb6a5fffa2b39322cf}{y};
-        \hyperlink{main2_8c_aaa9d39905d1be632c8232f11155291d0}{buff}[1][2][\hyperlink{main2_8c_ac0f4eb3a1def152855159c698feaf977}{buff\_i}]=\hyperlink{main2_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\_data}.\hyperlink{structIMU__DATA__STRUCT_a0c1ac26626e4434a2ee124a1928a23a1}{gyr}.\hyperlink{structDATA__XYZ_a69e89ab0ec6e5d72fc5d54f62cc07fb5}{z};
-        \hyperlink{main2_8c_aaa9d39905d1be632c8232f11155291d0}{buff}[2][0][\hyperlink{main2_8c_ac0f4eb3a1def152855159c698feaf977}{buff\_i}]=\hyperlink{main2_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\_data}.\hyperlink{structIMU__DATA__STRUCT_a40c7df8b6d49297aa52873cfd9b60daa}{mag}.\hyperlink{structDATA__XYZ_a54c1596e9f9969fd9c21e8458024ecfb}{x};
-        \hyperlink{main2_8c_aaa9d39905d1be632c8232f11155291d0}{buff}[2][1][\hyperlink{main2_8c_ac0f4eb3a1def152855159c698feaf977}{buff\_i}]=\hyperlink{main2_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\_data}.\hyperlink{structIMU__DATA__STRUCT_a40c7df8b6d49297aa52873cfd9b60daa}{mag}.\hyperlink{structDATA__XYZ_a94bbb1c889bf53eb6a5fffa2b39322cf}{y};
-        \hyperlink{main2_8c_aaa9d39905d1be632c8232f11155291d0}{buff}[2][2][\hyperlink{main2_8c_ac0f4eb3a1def152855159c698feaf977}{buff\_i}]=\hyperlink{main2_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\_data}.\hyperlink{structIMU__DATA__STRUCT_a40c7df8b6d49297aa52873cfd9b60daa}{mag}.\hyperlink{structDATA__XYZ_a69e89ab0ec6e5d72fc5d54f62cc07fb5}{z};
-        \hyperlink{main2_8c_ac0f4eb3a1def152855159c698feaf977}{buff\_i}++;
-        
-        \textcolor{keywordflow}{for}( i=0; i<3; i++)
-        \{
-          
-          \textcolor{keywordflow}{for}( j=0; j<3; j++)
-            \textcolor{keywordflow}{for}( k=1; k<3; k++)
-            \{
-              \textcolor{keywordflow}{if}( \hyperlink{main2_8c_aaa9d39905d1be632c8232f11155291d0}{buff}[i][j][k]==\hyperlink{main2_8c_aaa9d39905d1be632c8232f11155291d0}{buff}[i][j][0] )
-                equal=1;
-              \textcolor{keywordflow}{else}
-                equal=0;
-            \}
-          \textcolor{keywordflow}{if}( equal==1)
-            i=3;
-        \}
-        \textcolor{keywordflow}{if}( equal==1 )
-        \{
-          close(\hyperlink{main2_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a8a870f383fc9ba0b682fdc9b8c0d2734}{i2c\_dev});
-          close(\hyperlink{main2_8c_adec2468b88cf50b20e5cf399a3b7e994}{spi\_param}.\hyperlink{structSPI__PARAM__STRUCT_abe385c44333d268d17cf648c8e371cad}{spi\_dev});
-          \hyperlink{communication_2communication_8c_a2d1e523ff70db11ca4096f97af5da000}{devices\_init}(&\hyperlink{main2_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}, &\hyperlink{main2_8c_adec2468b88cf50b20e5cf399a3b7e994}{spi\_param}, &
+336 \{
+337 
+338     \textcolor{keywordtype}{int} i, j, k, equal=0;
+339 
+340     \textcolor{comment}{// UI thread}
+341     \textcolor{keywordflow}{if}(\hyperlink{main2_8c_a5045187bb0afe92c41ce73bc602fd3ca}{telemetry\_mode} == \hyperlink{ui_8h_a5f863c47136ccbe4db74101b9a3e83ca}{UI\_NCURSES\_MODE})
+342     \{
+343         \hyperlink{group__ui_ga42e4dac2d138061a74c572358c8ebf49}{ui\_update}(&\hyperlink{main_8c_a0f81e5b5621e6e2b2467daa7d12268c4}{imu\_data}, &\hyperlink{main2_8c_a5650ece8c3a277c7f158d75ae65265fa}{eff\_data}, &\hyperlink{main2_8c_abc42e18d2909e9bc119316283f4ed9db}{mra\_data},&
+      \hyperlink{main_8c_aaa441e18ae805c4f3efb0b5231d1cfe7}{enc\_data}, \hyperlink{main_8c_ac7af894858cf396a219d632f40afdc8d}{total}, \hyperlink{main_8c_a4f35e5ea2395561d0bd3b2f45612dc2c}{failure});
+344     \}
+345                 
+346             \hyperlink{main2_8c_ac0f4eb3a1def152855159c698feaf977}{buff\_i}=\hyperlink{main2_8c_ac0f4eb3a1def152855159c698feaf977}{buff\_i}%5;
+347         \hyperlink{main2_8c_aaa9d39905d1be632c8232f11155291d0}{buff}[0][0][\hyperlink{main2_8c_ac0f4eb3a1def152855159c698feaf977}{buff\_i}]=\hyperlink{main_8c_a0f81e5b5621e6e2b2467daa7d12268c4}{imu\_data}.acc.x;
+348         \hyperlink{main2_8c_aaa9d39905d1be632c8232f11155291d0}{buff}[0][1][\hyperlink{main2_8c_ac0f4eb3a1def152855159c698feaf977}{buff\_i}]=\hyperlink{main_8c_a0f81e5b5621e6e2b2467daa7d12268c4}{imu\_data}.acc.y;
+349         \hyperlink{main2_8c_aaa9d39905d1be632c8232f11155291d0}{buff}[0][2][\hyperlink{main2_8c_ac0f4eb3a1def152855159c698feaf977}{buff\_i}]=\hyperlink{main_8c_a0f81e5b5621e6e2b2467daa7d12268c4}{imu\_data}.acc.z;
+350         \hyperlink{main2_8c_aaa9d39905d1be632c8232f11155291d0}{buff}[1][0][\hyperlink{main2_8c_ac0f4eb3a1def152855159c698feaf977}{buff\_i}]=\hyperlink{main_8c_a0f81e5b5621e6e2b2467daa7d12268c4}{imu\_data}.gyr.x;
+351         \hyperlink{main2_8c_aaa9d39905d1be632c8232f11155291d0}{buff}[1][0][\hyperlink{main2_8c_ac0f4eb3a1def152855159c698feaf977}{buff\_i}]=\hyperlink{main_8c_a0f81e5b5621e6e2b2467daa7d12268c4}{imu\_data}.gyr.x;
+352         \hyperlink{main2_8c_aaa9d39905d1be632c8232f11155291d0}{buff}[1][1][\hyperlink{main2_8c_ac0f4eb3a1def152855159c698feaf977}{buff\_i}]=\hyperlink{main_8c_a0f81e5b5621e6e2b2467daa7d12268c4}{imu\_data}.gyr.y;
+353         \hyperlink{main2_8c_aaa9d39905d1be632c8232f11155291d0}{buff}[1][2][\hyperlink{main2_8c_ac0f4eb3a1def152855159c698feaf977}{buff\_i}]=\hyperlink{main_8c_a0f81e5b5621e6e2b2467daa7d12268c4}{imu\_data}.gyr.z;
+354         \hyperlink{main2_8c_aaa9d39905d1be632c8232f11155291d0}{buff}[2][0][\hyperlink{main2_8c_ac0f4eb3a1def152855159c698feaf977}{buff\_i}]=\hyperlink{main_8c_a0f81e5b5621e6e2b2467daa7d12268c4}{imu\_data}.mag.x;
+355         \hyperlink{main2_8c_aaa9d39905d1be632c8232f11155291d0}{buff}[2][1][\hyperlink{main2_8c_ac0f4eb3a1def152855159c698feaf977}{buff\_i}]=\hyperlink{main_8c_a0f81e5b5621e6e2b2467daa7d12268c4}{imu\_data}.mag.y;
+356         \hyperlink{main2_8c_aaa9d39905d1be632c8232f11155291d0}{buff}[2][2][\hyperlink{main2_8c_ac0f4eb3a1def152855159c698feaf977}{buff\_i}]=\hyperlink{main_8c_a0f81e5b5621e6e2b2467daa7d12268c4}{imu\_data}.mag.z;
+357         \hyperlink{main2_8c_ac0f4eb3a1def152855159c698feaf977}{buff\_i}++;
+358         
+359         \textcolor{keywordflow}{for}( i=0; i<3; i++)
+360         \{
+361           
+362           \textcolor{keywordflow}{for}( j=0; j<3; j++)
+363             \textcolor{keywordflow}{for}( k=1; k<3; k++)
+364             \{
+365               \textcolor{keywordflow}{if}( \hyperlink{main2_8c_aaa9d39905d1be632c8232f11155291d0}{buff}[i][j][k]==\hyperlink{main2_8c_aaa9d39905d1be632c8232f11155291d0}{buff}[i][j][0] )
+366                 equal=1;
+367               \textcolor{keywordflow}{else}
+368                 equal=0;
+369             \}
+370           \textcolor{keywordflow}{if}( equal==1)
+371             i=3;
+372         \}
+373         \textcolor{keywordflow}{if}( equal==1 )
+374         \{
+375           close(\hyperlink{main_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a8a870f383fc9ba0b682fdc9b8c0d2734}{i2c\_dev});
+376           close(\hyperlink{main_8c_adec2468b88cf50b20e5cf399a3b7e994}{spi\_param}.\hyperlink{structSPI__PARAM__STRUCT_abe385c44333d268d17cf648c8e371cad}{spi\_dev});
+377           \hyperlink{communication_2communication_8c_a2d1e523ff70db11ca4096f97af5da000}{devices\_init}(&\hyperlink{main_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}, &\hyperlink{main_8c_adec2468b88cf50b20e5cf399a3b7e994}{spi\_param}, &
       \hyperlink{main2_8c_abc42e18d2909e9bc119316283f4ed9db}{mra\_data});
-          equal=0;
-        \}
-    \textcolor{comment}{/*if(telemetry\_mode == UI\_MAVLINK\_MODE)}
-\textcolor{comment}{    \{}
-\textcolor{comment}{        mavlink\_module\_update(t\_task\_1\_global, t0, &battery\_data, &gps\_data,
-       &imu\_data, &pitot\_data, &pwm\_read\_data, &pwm\_write\_data, &scp1000\_data,
-       &sonar\_data, &gps\_measure, &imu\_measure, &magnetometer\_measure, &estimation\_data,
-       &control\_data);}
-\textcolor{comment}{    \}*/}
-
-    \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};
-\}
+378           equal=0;
+379         \}
+380     \textcolor{comment}{/*if(telemetry\_mode == UI\_MAVLINK\_MODE)}
+381 \textcolor{comment}{    \{}
+382 \textcolor{comment}{        mavlink\_module\_update(t\_task\_1\_global, t0, &battery\_data, &gps\_data, &imu\_data, &pitot\_data,
+       &pwm\_read\_data, &pwm\_write\_data, &scp1000\_data, &sonar\_data, &gps\_measure, &imu\_measure, &magnetometer\_measure,
+       &estimation\_data, &control\_data);}
+383 \textcolor{comment}{    \}*/}
+384 
+385     \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};
+386 \}
 \end{DoxyCode}
 
 
@@ -613,10 +513,10 @@ Referenced by periodic\-\_\-task\-\_\-1().
 
 
 \begin{DoxyCode}
-\{
-    \hyperlink{main2_8c_a86c2efd6da48b362806cdbb5b1e711d8}{t0} = \hyperlink{main2_8c_a2a2a647912528f7aa86812528dbfe02f}{t\_task\_1\_global};
-    \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};
-\}
+598 \{
+599     \hyperlink{main2_8c_a86c2efd6da48b362806cdbb5b1e711d8}{t0} = \hyperlink{main2_8c_a2a2a647912528f7aa86812528dbfe02f}{t\_task\_1\_global};
+600     \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};
+601 \}
 \end{DoxyCode}
 
 
@@ -651,68 +551,66 @@ Referenced by f\-\_\-timer\-\_\-task\-\_\-1().
 
 
 \begin{DoxyCode}
-\{
-    \textcolor{keywordtype}{int} \hyperlink{communication_2communication_8c_a6e27f49150e9a14580fb313cc2777e00}{status} = 0;
-    \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval timereset;
-    \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval time;
-    \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval time\_exec\_start;
-    \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval time\_exec\_end;
-    \textcolor{keyword}{static} \textcolor{keywordtype}{double} T\_task,t\_task,t\_task\_previous;
-    \textcolor{keyword}{static} \textcolor{keywordtype}{double} T\_task\_mean,T\_task\_min,T\_task\_max,T\_task\_exec;
-
-    gettimeofday(&time\_exec\_start, NULL);
-
-    \textcolor{comment}{// Time calculation}
-    \textcolor{keywordflow}{if}(\hyperlink{main2_8c_a764ebf75ba887a9ecf7bf8fe124960e0}{flag\_task\_1\_firstexecution})
-    \{
-        gettimeofday(&timereset, NULL);
-        t\_task = 0.0;
-        T\_task\_mean = 0.0;
-        T\_task\_min = 0.0;
-        T\_task\_max = 0.0;
-        T\_task\_exec = 0.0;
-    \}
-
-    gettimeofday(&time, NULL);
-    t\_task = ((time.tv\_sec - timereset.tv\_sec) + (time.tv\_usec - timereset.
-      tv\_usec)*1e-6);
-    T\_task = t\_task - t\_task\_previous;
-    t\_task\_previous = t\_task;
-
-    \textcolor{keywordflow}{if}(\hyperlink{main2_8c_a764ebf75ba887a9ecf7bf8fe124960e0}{flag\_task\_1\_firstexecution})
-    \{
-        T\_task\_mean = T\_task;
-        T\_task\_min  = 1e200;
-        T\_task\_max  = 0.0;
-        \hyperlink{main2_8c_a86c2efd6da48b362806cdbb5b1e711d8}{t0} = t\_task;
-    \}
-    \textcolor{keywordflow}{else}
-    \{
-        T\_task\_mean = 0.05*T\_task + 0.95*T\_task\_mean;
-        \textcolor{keywordflow}{if}(T\_task < T\_task\_min) T\_task\_min  = T\_task;
-        \textcolor{keywordflow}{if}(T\_task > T\_task\_max) T\_task\_max  = T\_task;
-    \}
-
-    \textcolor{comment}{// Run the thread}
-    status = \hyperlink{main2_8c_a26855b7739897854265d51aa61329390}{periodic\_task\_1}();
-
-    gettimeofday(&time\_exec\_end, NULL);
-    T\_task\_exec = ((time\_exec\_end.tv\_sec - time\_exec\_start.tv\_sec) + (
-      time\_exec\_end.tv\_usec - time\_exec\_start.tv\_usec)*1e-6);
-
-    \hyperlink{main2_8c_a2a2a647912528f7aa86812528dbfe02f}{t\_task\_1\_global} = t\_task;
-    \hyperlink{main2_8c_a738c330c86a365e72ce29ebca3f1e572}{T\_task\_1\_mean\_global} = T\_task\_mean;
-    \hyperlink{main2_8c_a86222e255aeeb47598a4fc91ab6c2b1a}{T\_task\_1\_min\_global} = T\_task\_min;
-    \hyperlink{main2_8c_aa714e30d738039b5bf665742beb31739}{T\_task\_1\_max\_global} = T\_task\_max;
-    \hyperlink{main2_8c_acdaa4a9b0e1be3dfa53b52df6410ad3b}{T\_task\_1\_exec\_global} = T\_task\_exec;
-
-    \hyperlink{main2_8c_a764ebf75ba887a9ecf7bf8fe124960e0}{flag\_task\_1\_firstexecution} = 0;
-\}
+485 \{
+486     \textcolor{keywordtype}{int} \hyperlink{communication_2communication_8c_a6e27f49150e9a14580fb313cc2777e00}{status} = 0;
+487     \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval timereset;
+488     \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval time;
+489     \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval time\_exec\_start;
+490     \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval time\_exec\_end;
+491     \textcolor{keyword}{static} \textcolor{keywordtype}{double} T\_task,t\_task,t\_task\_previous;
+492     \textcolor{keyword}{static} \textcolor{keywordtype}{double} T\_task\_mean,T\_task\_min,T\_task\_max,T\_task\_exec;
+493 
+494     gettimeofday(&time\_exec\_start, NULL);
+495 
+496     \textcolor{comment}{// Time calculation}
+497     \textcolor{keywordflow}{if}(\hyperlink{main2_8c_a764ebf75ba887a9ecf7bf8fe124960e0}{flag\_task\_1\_firstexecution})
+498     \{
+499         gettimeofday(&timereset, NULL);
+500         t\_task = 0.0;
+501         T\_task\_mean = 0.0;
+502         T\_task\_min = 0.0;
+503         T\_task\_max = 0.0;
+504         T\_task\_exec = 0.0;
+505     \}
+506 
+507     gettimeofday(&time, NULL);
+508     t\_task = ((time.tv\_sec - timereset.tv\_sec) + (time.tv\_usec - timereset.tv\_usec)*1e-6);
+509     T\_task = t\_task - t\_task\_previous;
+510     t\_task\_previous = t\_task;
+511 
+512     \textcolor{keywordflow}{if}(\hyperlink{main2_8c_a764ebf75ba887a9ecf7bf8fe124960e0}{flag\_task\_1\_firstexecution})
+513     \{
+514         T\_task\_mean = T\_task;
+515         T\_task\_min  = 1e200;
+516         T\_task\_max  = 0.0;
+517         \hyperlink{main2_8c_a86c2efd6da48b362806cdbb5b1e711d8}{t0} = t\_task;
+518     \}
+519     \textcolor{keywordflow}{else}
+520     \{
+521         T\_task\_mean = 0.05*T\_task + 0.95*T\_task\_mean;
+522         \textcolor{keywordflow}{if}(T\_task < T\_task\_min) T\_task\_min  = T\_task;
+523         \textcolor{keywordflow}{if}(T\_task > T\_task\_max) T\_task\_max  = T\_task;
+524     \}
+525 
+526     \textcolor{comment}{// Run the thread}
+527     status = \hyperlink{main2_8c_a26855b7739897854265d51aa61329390}{periodic\_task\_1}();
+528 
+529     gettimeofday(&time\_exec\_end, NULL);
+530     T\_task\_exec = ((time\_exec\_end.tv\_sec - time\_exec\_start.tv\_sec) + (time\_exec\_end.tv\_usec - 
+      time\_exec\_start.tv\_usec)*1e-6);
+531 
+532     \hyperlink{main2_8c_a2a2a647912528f7aa86812528dbfe02f}{t\_task\_1\_global} = t\_task;
+533     \hyperlink{main2_8c_a738c330c86a365e72ce29ebca3f1e572}{T\_task\_1\_mean\_global} = T\_task\_mean;
+534     \hyperlink{main2_8c_a86222e255aeeb47598a4fc91ab6c2b1a}{T\_task\_1\_min\_global} = T\_task\_min;
+535     \hyperlink{main2_8c_aa714e30d738039b5bf665742beb31739}{T\_task\_1\_max\_global} = T\_task\_max;
+536     \hyperlink{main2_8c_acdaa4a9b0e1be3dfa53b52df6410ad3b}{T\_task\_1\_exec\_global} = T\_task\_exec;
+537 
+538     \hyperlink{main2_8c_a764ebf75ba887a9ecf7bf8fe124960e0}{flag\_task\_1\_firstexecution} = 0;
+539 \}
 \end{DoxyCode}
 
 
-Here is the call graph for this function\-:
-\nopagebreak
+Here is the call graph for this function\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -754,62 +652,61 @@ Referenced by f\-\_\-timer\-\_\-task\-\_\-2().
 
 
 \begin{DoxyCode}
-\{
-    \textcolor{keywordtype}{int} \hyperlink{communication_2communication_8c_a6e27f49150e9a14580fb313cc2777e00}{status} = 0;
-    \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval timereset;
-    \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval time;
-    \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval time\_exec\_start;
-    \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval time\_exec\_end;
-    \textcolor{keyword}{static} \textcolor{keywordtype}{double} T\_task,t\_task,t\_task\_previous;
-    \textcolor{keyword}{static} \textcolor{keywordtype}{double} T\_task\_mean,T\_task\_min,T\_task\_max,T\_task\_exec;
-
-    gettimeofday(&time\_exec\_start, NULL);
-
-    \textcolor{comment}{// Time calculation}
-    \textcolor{keywordflow}{if}(\hyperlink{main2_8c_a60e039269ae4a130db1bdbc4a709c437}{flag\_task\_2\_firstexecution})
-    \{
-        gettimeofday(&timereset, NULL);
-        t\_task = 0.0;
-        T\_task\_mean = 0.0;
-        T\_task\_min = 0.0;
-        T\_task\_max = 0.0;
-        T\_task\_exec = 0.0;
-    \}
-
-    gettimeofday(&time, NULL);
-    t\_task = ((time.tv\_sec - timereset.tv\_sec) + (time.tv\_usec - timereset.
-      tv\_usec)*1e-6);
-    T\_task = t\_task - t\_task\_previous;
-    t\_task\_previous = t\_task;
-
-    \textcolor{keywordflow}{if}(\hyperlink{main2_8c_a60e039269ae4a130db1bdbc4a709c437}{flag\_task\_2\_firstexecution})
-    \{
-        T\_task\_mean = T\_task;
-        T\_task\_min  = 1e200;
-        T\_task\_max  = 0.0;
-    \}
-    \textcolor{keywordflow}{else}
-    \{
-        T\_task\_mean = 0.05*T\_task + 0.95*T\_task\_mean;
-        \textcolor{keywordflow}{if}(T\_task < T\_task\_min) T\_task\_min  = T\_task;
-        \textcolor{keywordflow}{if}(T\_task > T\_task\_max) T\_task\_max  = T\_task;
-    \}
-
-    \textcolor{comment}{// Run the thread}
-    status = \hyperlink{main2_8c_a944f7352f18ed248c1b1143f51edc391}{periodic\_task\_2}();
-
-    gettimeofday(&time\_exec\_end, NULL);
-    T\_task\_exec = ((time\_exec\_end.tv\_sec - time\_exec\_start.tv\_sec) + (
-      time\_exec\_end.tv\_usec - time\_exec\_start.tv\_usec)*1e-6);
-
-    \hyperlink{main2_8c_a08f794ff34d918d3d34d771e11e4aba3}{t\_task\_2\_global} = t\_task;
-    \hyperlink{main2_8c_af4e19d5a9b24aa56c8ebff6ad1aa2b95}{T\_task\_2\_mean\_global} = T\_task\_mean;
-    \hyperlink{main2_8c_ab7712cb13ce6206dd138a51e2053e36c}{T\_task\_2\_min\_global} = T\_task\_min;
-    \hyperlink{main2_8c_a1cd82006c46f46176730e876d272cc14}{T\_task\_2\_max\_global} = T\_task\_max;
-    \hyperlink{main2_8c_a9629c77cd3dba9d47d15c2e51bdde09d}{T\_task\_2\_exec\_global} = T\_task\_exec;
-
-    \hyperlink{main2_8c_a60e039269ae4a130db1bdbc4a709c437}{flag\_task\_2\_firstexecution} = 0;
-\}
+542 \{
+543     \textcolor{keywordtype}{int} \hyperlink{communication_2communication_8c_a6e27f49150e9a14580fb313cc2777e00}{status} = 0;
+544     \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval timereset;
+545     \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval time;
+546     \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval time\_exec\_start;
+547     \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval time\_exec\_end;
+548     \textcolor{keyword}{static} \textcolor{keywordtype}{double} T\_task,t\_task,t\_task\_previous;
+549     \textcolor{keyword}{static} \textcolor{keywordtype}{double} T\_task\_mean,T\_task\_min,T\_task\_max,T\_task\_exec;
+550 
+551     gettimeofday(&time\_exec\_start, NULL);
+552 
+553     \textcolor{comment}{// Time calculation}
+554     \textcolor{keywordflow}{if}(\hyperlink{main2_8c_a60e039269ae4a130db1bdbc4a709c437}{flag\_task\_2\_firstexecution})
+555     \{
+556         gettimeofday(&timereset, NULL);
+557         t\_task = 0.0;
+558         T\_task\_mean = 0.0;
+559         T\_task\_min = 0.0;
+560         T\_task\_max = 0.0;
+561         T\_task\_exec = 0.0;
+562     \}
+563 
+564     gettimeofday(&time, NULL);
+565     t\_task = ((time.tv\_sec - timereset.tv\_sec) + (time.tv\_usec - timereset.tv\_usec)*1e-6);
+566     T\_task = t\_task - t\_task\_previous;
+567     t\_task\_previous = t\_task;
+568 
+569     \textcolor{keywordflow}{if}(\hyperlink{main2_8c_a60e039269ae4a130db1bdbc4a709c437}{flag\_task\_2\_firstexecution})
+570     \{
+571         T\_task\_mean = T\_task;
+572         T\_task\_min  = 1e200;
+573         T\_task\_max  = 0.0;
+574     \}
+575     \textcolor{keywordflow}{else}
+576     \{
+577         T\_task\_mean = 0.05*T\_task + 0.95*T\_task\_mean;
+578         \textcolor{keywordflow}{if}(T\_task < T\_task\_min) T\_task\_min  = T\_task;
+579         \textcolor{keywordflow}{if}(T\_task > T\_task\_max) T\_task\_max  = T\_task;
+580     \}
+581 
+582     \textcolor{comment}{// Run the thread}
+583     status = \hyperlink{main2_8c_a944f7352f18ed248c1b1143f51edc391}{periodic\_task\_2}();
+584 
+585     gettimeofday(&time\_exec\_end, NULL);
+586     T\_task\_exec = ((time\_exec\_end.tv\_sec - time\_exec\_start.tv\_sec) + (time\_exec\_end.tv\_usec - 
+      time\_exec\_start.tv\_usec)*1e-6);
+587 
+588     \hyperlink{main2_8c_a08f794ff34d918d3d34d771e11e4aba3}{t\_task\_2\_global} = t\_task;
+589     \hyperlink{main2_8c_af4e19d5a9b24aa56c8ebff6ad1aa2b95}{T\_task\_2\_mean\_global} = T\_task\_mean;
+590     \hyperlink{main2_8c_ab7712cb13ce6206dd138a51e2053e36c}{T\_task\_2\_min\_global} = T\_task\_min;
+591     \hyperlink{main2_8c_a1cd82006c46f46176730e876d272cc14}{T\_task\_2\_max\_global} = T\_task\_max;
+592     \hyperlink{main2_8c_a9629c77cd3dba9d47d15c2e51bdde09d}{T\_task\_2\_exec\_global} = T\_task\_exec;
+593 
+594     \hyperlink{main2_8c_a60e039269ae4a130db1bdbc4a709c437}{flag\_task\_2\_firstexecution} = 0;
+595 \}
 \end{DoxyCode}
 
 
@@ -855,42 +752,41 @@ Referenced by main().
 
 
 \begin{DoxyCode}
-\{
-    \textcolor{keyword}{struct }itimerspec itimer;
-    \textcolor{keyword}{struct }sigevent sigev;
-    \textcolor{keywordtype}{int} erno = 0;
-
-    \hyperlink{main2_8c_a764ebf75ba887a9ecf7bf8fe124960e0}{flag\_task\_1\_firstexecution} = 1;
-
-    itimer.it\_interval.tv\_sec=0;
-    itimer.it\_interval.tv\_nsec=\hyperlink{main2_8c_afffc21b0b726e6f4a572d0eefd3b5d69}{task\_1\_period\_us} * 1000;
-    itimer.it\_value=itimer.it\_interval;
-
-    memset(&sigev, 0, \textcolor{keyword}{sizeof} (\textcolor{keyword}{struct} sigevent));
-
-    sigev.sigev\_value.sival\_int = 0;
-    sigev.sigev\_notify = SIGEV\_THREAD;
-    sigev.sigev\_notify\_attributes = NULL;
-    sigev.sigev\_notify\_function = \hyperlink{main2_8c_a5ce2b6a7dd4d00c90fe18098091044aa}{f\_timer\_task\_1};
-
-    \textcolor{keywordflow}{if} (timer\_create(CLOCK\_REALTIME, &sigev, &\hyperlink{main2_8c_a904a157c5d5f94416cd450f511635af1}{timer\_task\_1}) < 0)
-    \{
-        fprintf(stderr, \textcolor{stringliteral}{"[%d]: %s\(\backslash\)n"}, \_\_LINE\_\_, strerror(erno));
-        exit(erno);
-    \}
-
-    \textcolor{keywordflow}{if}(timer\_settime(\hyperlink{main2_8c_a904a157c5d5f94416cd450f511635af1}{timer\_task\_1}, 0, &itimer, NULL) < 0)
-    \{
-        fprintf(stderr, \textcolor{stringliteral}{"[%d]: %s\(\backslash\)n"}, \_\_LINE\_\_, strerror(erno));
-        exit(erno);
-    \}
-
-\}
+401 \{
+402     \textcolor{keyword}{struct }itimerspec itimer;
+403     \textcolor{keyword}{struct }sigevent sigev;
+404     \textcolor{keywordtype}{int} erno = 0;
+405 
+406     \hyperlink{main2_8c_a764ebf75ba887a9ecf7bf8fe124960e0}{flag\_task\_1\_firstexecution} = 1;
+407 
+408     itimer.it\_interval.tv\_sec=0;
+409     itimer.it\_interval.tv\_nsec=\hyperlink{main2_8c_afffc21b0b726e6f4a572d0eefd3b5d69}{task\_1\_period\_us} * 1000;
+410     itimer.it\_value=itimer.it\_interval;
+411 
+412     memset(&sigev, 0, \textcolor{keyword}{sizeof} (\textcolor{keyword}{struct} sigevent));
+413 
+414     sigev.sigev\_value.sival\_int = 0;
+415     sigev.sigev\_notify = SIGEV\_THREAD;
+416     sigev.sigev\_notify\_attributes = NULL;
+417     sigev.sigev\_notify\_function = \hyperlink{main2_8c_a5ce2b6a7dd4d00c90fe18098091044aa}{f\_timer\_task\_1};
+418 
+419     \textcolor{keywordflow}{if} (timer\_create(CLOCK\_REALTIME, &sigev, &\hyperlink{main2_8c_a904a157c5d5f94416cd450f511635af1}{timer\_task\_1}) < 0)
+420     \{
+421         fprintf(stderr, \textcolor{stringliteral}{"[%d]: %s\(\backslash\)n"}, \_\_LINE\_\_, strerror(erno));
+422         exit(erno);
+423     \}
+424 
+425     \textcolor{keywordflow}{if}(timer\_settime(\hyperlink{main2_8c_a904a157c5d5f94416cd450f511635af1}{timer\_task\_1}, 0, &itimer, NULL) < 0)
+426     \{
+427         fprintf(stderr, \textcolor{stringliteral}{"[%d]: %s\(\backslash\)n"}, \_\_LINE\_\_, strerror(erno));
+428         exit(erno);
+429     \}
+430 
+431 \}
 \end{DoxyCode}
 
 
-Here is the call graph for this function\-:
-\nopagebreak
+Here is the call graph for this function\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -931,35 +827,35 @@ Referenced by main().
 
 
 \begin{DoxyCode}
-\{
-    \textcolor{keyword}{struct }itimerspec itimer;
-    \textcolor{keyword}{struct }sigevent sigev;
-    \textcolor{keywordtype}{int} erno = 0;
-
-    \hyperlink{main2_8c_a60e039269ae4a130db1bdbc4a709c437}{flag\_task\_2\_firstexecution} = 1;
-
-    itimer.it\_interval.tv\_sec=0;
-    itimer.it\_interval.tv\_nsec=\hyperlink{main2_8c_a5166d431d5448a1538e75f5469c19c7b}{task\_2\_period\_us} * 1000;
-    itimer.it\_value=itimer.it\_interval;
-
-    memset (&sigev, 0, \textcolor{keyword}{sizeof} (\textcolor{keyword}{struct} sigevent));
-    sigev.sigev\_value.sival\_int = 0;
-    sigev.sigev\_notify = SIGEV\_THREAD;
-    sigev.sigev\_notify\_attributes = NULL;
-    sigev.sigev\_notify\_function = \hyperlink{main2_8c_a735ebf3d0d37c7d8187199e6565bcb5c}{f\_timer\_task\_2};
-
-    \textcolor{keywordflow}{if}(timer\_create(CLOCK\_REALTIME, &sigev, &\hyperlink{main2_8c_adf6e8e22925f399f086dea8671f39c08}{timer\_task\_2}) < 0)
-    \{
-        fprintf(stderr, \textcolor{stringliteral}{"[%d]: %s\(\backslash\)n"}, \_\_LINE\_\_, strerror(erno));
-        exit(erno);
-    \}
-
-    \textcolor{keywordflow}{if}(timer\_settime(\hyperlink{main2_8c_adf6e8e22925f399f086dea8671f39c08}{timer\_task\_2}, 0, &itimer, NULL) < 0)
-    \{
-        fprintf(stderr, \textcolor{stringliteral}{"[%d]: %s\(\backslash\)n"}, \_\_LINE\_\_, strerror(erno));
-        exit(erno);
-    \}
-\}
+434 \{
+435     \textcolor{keyword}{struct }itimerspec itimer;
+436     \textcolor{keyword}{struct }sigevent sigev;
+437     \textcolor{keywordtype}{int} erno = 0;
+438 
+439     \hyperlink{main2_8c_a60e039269ae4a130db1bdbc4a709c437}{flag\_task\_2\_firstexecution} = 1;
+440 
+441     itimer.it\_interval.tv\_sec=0;
+442     itimer.it\_interval.tv\_nsec=\hyperlink{main2_8c_a5166d431d5448a1538e75f5469c19c7b}{task\_2\_period\_us} * 1000;
+443     itimer.it\_value=itimer.it\_interval;
+444 
+445     memset (&sigev, 0, \textcolor{keyword}{sizeof} (\textcolor{keyword}{struct} sigevent));
+446     sigev.sigev\_value.sival\_int = 0;
+447     sigev.sigev\_notify = SIGEV\_THREAD;
+448     sigev.sigev\_notify\_attributes = NULL;
+449     sigev.sigev\_notify\_function = \hyperlink{main2_8c_a735ebf3d0d37c7d8187199e6565bcb5c}{f\_timer\_task\_2};
+450 
+451     \textcolor{keywordflow}{if}(timer\_create(CLOCK\_REALTIME, &sigev, &\hyperlink{main2_8c_adf6e8e22925f399f086dea8671f39c08}{timer\_task\_2}) < 0)
+452     \{
+453         fprintf(stderr, \textcolor{stringliteral}{"[%d]: %s\(\backslash\)n"}, \_\_LINE\_\_, strerror(erno));
+454         exit(erno);
+455     \}
+456 
+457     \textcolor{keywordflow}{if}(timer\_settime(\hyperlink{main2_8c_adf6e8e22925f399f086dea8671f39c08}{timer\_task\_2}, 0, &itimer, NULL) < 0)
+458     \{
+459         fprintf(stderr, \textcolor{stringliteral}{"[%d]: %s\(\backslash\)n"}, \_\_LINE\_\_, strerror(erno));
+460         exit(erno);
+461     \}
+462 \}
 \end{DoxyCode}
 
 
@@ -1005,14 +901,14 @@ Referenced by main().
 
 
 \begin{DoxyCode}
-\{
-    \textcolor{keywordtype}{int} erno = 0;
-    \textcolor{keywordflow}{if}(timer\_delete(\hyperlink{main2_8c_a904a157c5d5f94416cd450f511635af1}{timer\_task\_1}) < 0)
-    \{
-        fprintf(stderr, \textcolor{stringliteral}{"[%d]: %s\(\backslash\)n"}, \_\_LINE\_\_, strerror(erno));
-        exit(erno);
-    \}
-\}
+465 \{
+466     \textcolor{keywordtype}{int} erno = 0;
+467     \textcolor{keywordflow}{if}(timer\_delete(\hyperlink{main2_8c_a904a157c5d5f94416cd450f511635af1}{timer\_task\_1}) < 0)
+468     \{
+469         fprintf(stderr, \textcolor{stringliteral}{"[%d]: %s\(\backslash\)n"}, \_\_LINE\_\_, strerror(erno));
+470         exit(erno);
+471     \}
+472 \}
 \end{DoxyCode}
 
 
@@ -1046,14 +942,14 @@ Referenced by main().
 
 
 \begin{DoxyCode}
-\{
-    \textcolor{keywordtype}{int} erno = 0;
-    \textcolor{keywordflow}{if}(timer\_delete(\hyperlink{main2_8c_adf6e8e22925f399f086dea8671f39c08}{timer\_task\_2}) < 0)
-    \{
-        fprintf(stderr, \textcolor{stringliteral}{"[%d]: %s\(\backslash\)n"}, \_\_LINE\_\_, strerror(erno));
-        exit(erno);
-    \}
-\}
+475 \{
+476     \textcolor{keywordtype}{int} erno = 0;
+477     \textcolor{keywordflow}{if}(timer\_delete(\hyperlink{main2_8c_adf6e8e22925f399f086dea8671f39c08}{timer\_task\_2}) < 0)
+478     \{
+479         fprintf(stderr, \textcolor{stringliteral}{"[%d]: %s\(\backslash\)n"}, \_\_LINE\_\_, strerror(erno));
+480         exit(erno);
+481     \}
+482 \}
 \end{DoxyCode}
 
 

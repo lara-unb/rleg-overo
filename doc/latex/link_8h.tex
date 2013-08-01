@@ -80,18 +80,18 @@ Referenced by Robot\-\_\-add\-Link().
 
 
 \begin{DoxyCode}
-                                                                 \{
-        
-        \hyperlink{structLink}{Link}* l = (\hyperlink{structLink}{Link}*)malloc(\textcolor{keyword}{sizeof}(\hyperlink{structLink}{Link}));
-        l->\hyperlink{structLink_a88e705bc7fb6c7c8c7fa6987b52667d6}{theta} = theta;
-        l->\hyperlink{structLink_a4e5e4ea2ef9be2aae1e9fdef406be185}{d}     = d;
-        l->\hyperlink{structLink_a3ef89c4478d7e2de8a59de9c88052123}{a}     = a;
-        l->\hyperlink{structLink_ab838e5bc121c212cb1a81fdf78de8757}{alpha} = alpha;
-        l->\hyperlink{structLink_a9ba28f0b8b867ad4624abb9730ef30d2}{jvel}  = 0;
-        l->\hyperlink{structLink_a185503cf680f8e9395c19c0521997c5c}{n} = NULL;
-        
-        \textcolor{keywordflow}{return} l;
-\}
+26                                                                  \{
+27         
+28         \hyperlink{structLink}{Link}* l = (\hyperlink{structLink}{Link}*)malloc(\textcolor{keyword}{sizeof}(\hyperlink{structLink}{Link}));
+29         l->\hyperlink{structLink_a88e705bc7fb6c7c8c7fa6987b52667d6}{theta} = theta;
+30         l->\hyperlink{structLink_a4e5e4ea2ef9be2aae1e9fdef406be185}{d}     = d;
+31         l->\hyperlink{structLink_a3ef89c4478d7e2de8a59de9c88052123}{a}     = a;
+32         l->\hyperlink{structLink_ab838e5bc121c212cb1a81fdf78de8757}{alpha} = alpha;
+33         l->\hyperlink{structLink_a9ba28f0b8b867ad4624abb9730ef30d2}{jvel}  = 0;
+34         l->\hyperlink{structLink_a185503cf680f8e9395c19c0521997c5c}{n} = NULL;
+35         
+36         \textcolor{keywordflow}{return} l;
+37 \}
 \end{DoxyCode}
 
 
@@ -137,40 +137,40 @@ Referenced by Robot\-\_\-\-F\-K\-M(), Robot\-\_\-get\-A\-Jacobian(), and Robot\-
 
 
 \begin{DoxyCode}
-                      \{
-
-        \textcolor{comment}{//Link's values}
-        \textcolor{keywordtype}{double} theta = l->\hyperlink{structLink_a88e705bc7fb6c7c8c7fa6987b52667d6}{theta};
-        \textcolor{keywordtype}{double} d = l->\hyperlink{structLink_a4e5e4ea2ef9be2aae1e9fdef406be185}{d};
-        \textcolor{keywordtype}{double} a = l->\hyperlink{structLink_a3ef89c4478d7e2de8a59de9c88052123}{a};
-        \textcolor{keywordtype}{double} alpha = l->\hyperlink{structLink_ab838e5bc121c212cb1a81fdf78de8757}{alpha};
-
-        \textcolor{comment}{//Used values}
-        \textcolor{keywordtype}{double} ct2 = cos(theta/2); \textcolor{keywordtype}{double} st2 = sin(theta/2);
-        \textcolor{keywordtype}{double} ca2 = cos(alpha/2); \textcolor{keywordtype}{double} sa2 = sin(alpha/2);
-        \textcolor{keywordtype}{double} d2 = d/2;           \textcolor{keywordtype}{double} a2 = a/2;
-
-        \textcolor{comment}{//Memory Alloc  }
-        \hyperlink{structDQ}{DQ}* dq = \hyperlink{dualquaternion_8h_aaa019fc9bc7de2150887a4b323cedc50}{DQ\_alloc}();
-        \hyperlink{structQ}{Q}* pp = \hyperlink{quaternion_8h_a2267ada2076193cc73def7d5df3281c0}{Q\_alloc}();
-        \hyperlink{structQ}{Q}* dp = \hyperlink{quaternion_8h_a2267ada2076193cc73def7d5df3281c0}{Q\_alloc}();
-        
-        \textcolor{comment}{//Calculation}
-    pp->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0] = ct2*ca2;
-        pp->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1] = ct2*sa2;
-        pp->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2] = st2*sa2;
-        pp->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3] = st2*ca2;
-        dp->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0] = (-d2)*pp->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3] - (a2)*pp->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1];
-        dp->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1] = (-d2)*pp->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2] + (a2)*pp->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0];
-        dp->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2] =  (d2)*pp->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1] + (a2)*pp->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3];
-        dp->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3] =  (d2)*pp->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0] - (a2)*pp->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2];
-        
-        \textcolor{comment}{//Atrib}
-        dq->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p} = pp;
-        dq->\hyperlink{structDQ_a535cdb52876521fd6abbfcf211a7c702}{d} = dp;
-        
-        \textcolor{keywordflow}{return} dq;
-\}
+55                       \{
+56 
+57         \textcolor{comment}{//Link's values}
+58         \textcolor{keywordtype}{double} theta = l->\hyperlink{structLink_a88e705bc7fb6c7c8c7fa6987b52667d6}{theta};
+59         \textcolor{keywordtype}{double} d = l->\hyperlink{structLink_a4e5e4ea2ef9be2aae1e9fdef406be185}{d};
+60         \textcolor{keywordtype}{double} a = l->\hyperlink{structLink_a3ef89c4478d7e2de8a59de9c88052123}{a};
+61         \textcolor{keywordtype}{double} alpha = l->\hyperlink{structLink_ab838e5bc121c212cb1a81fdf78de8757}{alpha};
+62 
+63         \textcolor{comment}{//Used values}
+64         \textcolor{keywordtype}{double} ct2 = cos(theta/2); \textcolor{keywordtype}{double} st2 = sin(theta/2);
+65         \textcolor{keywordtype}{double} ca2 = cos(alpha/2); \textcolor{keywordtype}{double} sa2 = sin(alpha/2);
+66         \textcolor{keywordtype}{double} d2 = d/2;           \textcolor{keywordtype}{double} a2 = a/2;
+67 
+68         \textcolor{comment}{//Memory Alloc  }
+69         \hyperlink{structDQ}{DQ}* dq = \hyperlink{dualquaternion_8h_aaa019fc9bc7de2150887a4b323cedc50}{DQ\_alloc}();
+70         \hyperlink{structQ}{Q}* pp = \hyperlink{quaternion_8h_a2267ada2076193cc73def7d5df3281c0}{Q\_alloc}();
+71         \hyperlink{structQ}{Q}* dp = \hyperlink{quaternion_8h_a2267ada2076193cc73def7d5df3281c0}{Q\_alloc}();
+72         
+73         \textcolor{comment}{//Calculation}
+74     pp->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0] = ct2*ca2;
+75         pp->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1] = ct2*sa2;
+76         pp->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2] = st2*sa2;
+77         pp->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3] = st2*ca2;
+78         dp->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0] = (-d2)*pp->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3] - (a2)*pp->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1];
+79         dp->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1] = (-d2)*pp->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2] + (a2)*pp->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0];
+80         dp->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2] =  (d2)*pp->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1] + (a2)*pp->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3];
+81         dp->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3] =  (d2)*pp->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0] - (a2)*pp->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2];
+82         
+83         \textcolor{comment}{//Atrib}
+84         dq->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p} = pp;
+85         dq->\hyperlink{structDQ_a535cdb52876521fd6abbfcf211a7c702}{d} = dp;
+86         
+87         \textcolor{keywordflow}{return} dq;
+88 \}
 \end{DoxyCode}
 
 
@@ -220,9 +220,9 @@ Referenced by Robot\-\_\-free().
 
 
 \begin{DoxyCode}
-                       \{
-        free(l);
-\}
+44                        \{
+45         free(l);
+46 \}
 \end{DoxyCode}
 
 

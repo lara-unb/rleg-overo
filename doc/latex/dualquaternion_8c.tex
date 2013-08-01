@@ -106,9 +106,9 @@ Referenced by D\-Q\-\_\-create(), D\-Q\-\_\-create\-From\-Quaternion(), D\-Q\-\_
 
 
 \begin{DoxyCode}
-              \{
-        \textcolor{keywordflow}{return} (\hyperlink{structDQ}{DQ}*)malloc(\textcolor{keyword}{sizeof}(\hyperlink{structDQ}{DQ}));
-\}
+30               \{
+31         \textcolor{keywordflow}{return} (\hyperlink{structDQ}{DQ}*)malloc(\textcolor{keyword}{sizeof}(\hyperlink{structDQ}{DQ}));
+32 \}
 \end{DoxyCode}
 
 
@@ -175,13 +175,12 @@ Referenced by Cartesian\-\_\-pose\-\_\-controller\-::print\-Pose(), Robot\-\_\-\
 
 
 \begin{DoxyCode}
-                                                                               
-                    \{
-        \hyperlink{structDQ}{DQ}* dq = \hyperlink{dualquaternion_8h_aaa019fc9bc7de2150887a4b323cedc50}{DQ\_alloc}();
-        dq->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p} = \hyperlink{quaternion_8h_a84783e9bd4743081f08605d38779a07e}{Q\_create}(a,b,c,d);     
-        dq->\hyperlink{structDQ_a535cdb52876521fd6abbfcf211a7c702}{d} = \hyperlink{quaternion_8h_a84783e9bd4743081f08605d38779a07e}{Q\_create}(e,f,g,h);
-        \textcolor{keywordflow}{return} dq;
-\}
+47                                                                                              \{
+48         \hyperlink{structDQ}{DQ}* dq = \hyperlink{dualquaternion_8h_aaa019fc9bc7de2150887a4b323cedc50}{DQ\_alloc}();
+49         dq->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p} = \hyperlink{quaternion_8h_a84783e9bd4743081f08605d38779a07e}{Q\_create}(a,b,c,d);     
+50         dq->\hyperlink{structDQ_a535cdb52876521fd6abbfcf211a7c702}{d} = \hyperlink{quaternion_8h_a84783e9bd4743081f08605d38779a07e}{Q\_create}(e,f,g,h);
+51         \textcolor{keywordflow}{return} dq;
+52 \}
 \end{DoxyCode}
 
 
@@ -237,15 +236,15 @@ References D\-Q\-::d, D\-Q\-\_\-alloc(), F\-A\-L\-S\-E, D\-Q\-::p, Q\-\_\-copy()
 
 
 \begin{DoxyCode}
-                                       \{
-        \hyperlink{structDQ}{DQ}* dq = \hyperlink{dualquaternion_8h_aaa019fc9bc7de2150887a4b323cedc50}{DQ\_alloc}();
-        \textcolor{comment}{//Primary part is r}
-        dq->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p} = \hyperlink{quaternion_8h_a7220df72e5bbbdcb37aa6c10c873465b}{Q\_copy}(r);
-        \textcolor{comment}{//Dual part is (1/2)*(t*r)}
-        \hyperlink{structQ}{Q}* temp = \hyperlink{quaternion_8h_a1cb224f6a30ff843d54647642c84e737}{Q\_mult}(t,r,\hyperlink{dualquaternion_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE},\hyperlink{dualquaternion_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
-        dq->\hyperlink{structDQ_a535cdb52876521fd6abbfcf211a7c702}{d} = \hyperlink{quaternion_8h_a2384fed3e10ec7a91e6d4e9deae3d8b9}{Q\_multd}(0.5,temp,\hyperlink{dualquaternion_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
-        \textcolor{keywordflow}{return} dq;
-\}
+61                                        \{
+62         \hyperlink{structDQ}{DQ}* dq = \hyperlink{dualquaternion_8h_aaa019fc9bc7de2150887a4b323cedc50}{DQ\_alloc}();
+63         \textcolor{comment}{//Primary part is r}
+64         dq->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p} = \hyperlink{quaternion_8h_a7220df72e5bbbdcb37aa6c10c873465b}{Q\_copy}(r);
+65         \textcolor{comment}{//Dual part is (1/2)*(t*r)}
+66         \hyperlink{structQ}{Q}* temp = \hyperlink{quaternion_8h_a1cb224f6a30ff843d54647642c84e737}{Q\_mult}(t,r,\hyperlink{dualquaternion_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE},\hyperlink{dualquaternion_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+67         dq->\hyperlink{structDQ_a535cdb52876521fd6abbfcf211a7c702}{d} = \hyperlink{quaternion_8h_a2384fed3e10ec7a91e6d4e9deae3d8b9}{Q\_multd}(0.5,temp,\hyperlink{dualquaternion_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+68         \textcolor{keywordflow}{return} dq;
+69 \}
 \end{DoxyCode}
 
 
@@ -291,12 +290,12 @@ Referenced by Cartesian\-\_\-pose\-\_\-controller\-::control(), D\-Q\-\_\-mult()
 
 
 \begin{DoxyCode}
-                   \{
-        \hyperlink{quaternion_8h_a69ecc76f665022f81be1702c20865de4}{Q\_free}(dq->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p});
-        \hyperlink{quaternion_8h_a69ecc76f665022f81be1702c20865de4}{Q\_free}(dq->\hyperlink{structDQ_a535cdb52876521fd6abbfcf211a7c702}{d});
-        free(dq);
-        \textcolor{keywordflow}{return} NULL;
-\}
+104                    \{
+105         \hyperlink{quaternion_8h_a69ecc76f665022f81be1702c20865de4}{Q\_free}(dq->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p});
+106         \hyperlink{quaternion_8h_a69ecc76f665022f81be1702c20865de4}{Q\_free}(dq->\hyperlink{structDQ_a535cdb52876521fd6abbfcf211a7c702}{d});
+107         free(dq);
+108         \textcolor{keywordflow}{return} NULL;
+109 \}
 \end{DoxyCode}
 
 
@@ -353,11 +352,11 @@ Referenced by main().
 
 
 \begin{DoxyCode}
-                               \{
-
-        \textcolor{keywordflow}{return} \hyperlink{quaternion_8h_a0aa9e1db8e5d2177cbd62077eb6e7e52}{Q\_getPitchAngle}(dq->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p});
-        
-\}
+150                                \{
+151 
+152         \textcolor{keywordflow}{return} \hyperlink{quaternion_8h_a0aa9e1db8e5d2177cbd62077eb6e7e52}{Q\_getPitchAngle}(dq->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p});
+153         
+154 \}
 \end{DoxyCode}
 
 
@@ -414,10 +413,10 @@ Referenced by Cartesian\-\_\-pose\-\_\-controller\-::print\-Pose().
 
 
 \begin{DoxyCode}
-                  \{
-        \hyperlink{structQ}{Q}* r = \hyperlink{quaternion_8h_a7220df72e5bbbdcb37aa6c10c873465b}{Q\_copy}(dq->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p});
-        \textcolor{keywordflow}{return} r;
-\}
+77                   \{
+78         \hyperlink{structQ}{Q}* r = \hyperlink{quaternion_8h_a7220df72e5bbbdcb37aa6c10c873465b}{Q\_copy}(dq->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p});
+79         \textcolor{keywordflow}{return} r;
+80 \}
 \end{DoxyCode}
 
 
@@ -474,15 +473,15 @@ Referenced by main(), Cartesian\-\_\-pose\-\_\-controller\-::print\-Pose(), and 
 
 
 \begin{DoxyCode}
-                  \{
-        \hyperlink{structQ}{Q}* t;
-
-        \textcolor{comment}{//2*(dq->d*(dq->p)')}
-        t = \hyperlink{quaternion_8h_a2384fed3e10ec7a91e6d4e9deae3d8b9}{Q\_multd}(2,\hyperlink{quaternion_8h_a1cb224f6a30ff843d54647642c84e737}{Q\_mult}(dq->\hyperlink{structDQ_a535cdb52876521fd6abbfcf211a7c702}{d},\hyperlink{quaternion_8h_ac9d0d4ab98e4353ba0feca69adde42f8}{Q\_getConj}(dq->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p},\hyperlink{dualquaternion_8c_aa93f0eb578d23995850d61f7d61c55c1}{
-      FALSE}),\hyperlink{dualquaternion_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE},\hyperlink{dualquaternion_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE}),\hyperlink{dualquaternion_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
-
-        \textcolor{keywordflow}{return} t;
-\}
+88                   \{
+89         \hyperlink{structQ}{Q}* t;
+90 
+91         \textcolor{comment}{//2*(dq->d*(dq->p)')}
+92         t = \hyperlink{quaternion_8h_a2384fed3e10ec7a91e6d4e9deae3d8b9}{Q\_multd}(2,\hyperlink{quaternion_8h_a1cb224f6a30ff843d54647642c84e737}{Q\_mult}(dq->\hyperlink{structDQ_a535cdb52876521fd6abbfcf211a7c702}{d},\hyperlink{quaternion_8h_ac9d0d4ab98e4353ba0feca69adde42f8}{Q\_getConj}(dq->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p},\hyperlink{dualquaternion_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE}),
+      \hyperlink{dualquaternion_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE},\hyperlink{dualquaternion_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE}),\hyperlink{dualquaternion_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+93 
+94         \textcolor{keywordflow}{return} t;
+95 \}
 \end{DoxyCode}
 
 
@@ -547,26 +546,26 @@ Referenced by Robot\-\_\-\-F\-K\-M(), Robot\-\_\-get\-A\-Jacobian(), and Robot\-
 
 
 \begin{DoxyCode}
-                                               \{
-
-        \textcolor{comment}{//Alloc}
-        \hyperlink{structDQ}{DQ}* c = \hyperlink{dualquaternion_8h_aaa019fc9bc7de2150887a4b323cedc50}{DQ\_alloc}();
-        \hyperlink{structQ}{Q}* temp1;
-        \hyperlink{structQ}{Q}* temp2;
-        
-        \textcolor{comment}{//Primary Part = P(a)*P(b).}
-        c->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p} = \hyperlink{quaternion_8h_a1cb224f6a30ff843d54647642c84e737}{Q\_mult}(a->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p},b->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p},\hyperlink{dualquaternion_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE},\hyperlink{dualquaternion_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
-        
-        \textcolor{comment}{//Dual Part    = P(a)*D(b) + D(a)*P(b)}
-    temp1 = \hyperlink{quaternion_8h_a1cb224f6a30ff843d54647642c84e737}{Q\_mult}(a->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p},b->\hyperlink{structDQ_a535cdb52876521fd6abbfcf211a7c702}{d},\hyperlink{dualquaternion_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE},\hyperlink{dualquaternion_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
-        temp2 = \hyperlink{quaternion_8h_a1cb224f6a30ff843d54647642c84e737}{Q\_mult}(a->\hyperlink{structDQ_a535cdb52876521fd6abbfcf211a7c702}{d},b->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p},\hyperlink{dualquaternion_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE},\hyperlink{dualquaternion_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
-        c->\hyperlink{structDQ_a535cdb52876521fd6abbfcf211a7c702}{d}  = \hyperlink{quaternion_8h_a729fe3e2a8b70d933b53990ba245ea15}{Q\_add}(temp1,temp2,\hyperlink{dualquaternion_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE},\hyperlink{dualquaternion_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
-
-        \textcolor{keywordflow}{if}(freeA)\{\hyperlink{dualquaternion_8h_a1d21b6cb665c04de4be5aca50804caf4}{DQ\_free}(a);\}
-        \textcolor{keywordflow}{if}(freeB)\{\hyperlink{dualquaternion_8h_a1d21b6cb665c04de4be5aca50804caf4}{DQ\_free}(b);\}
-        
-        \textcolor{keywordflow}{return} c;
-\}
+123                                                \{
+124 
+125         \textcolor{comment}{//Alloc}
+126         \hyperlink{structDQ}{DQ}* c = \hyperlink{dualquaternion_8h_aaa019fc9bc7de2150887a4b323cedc50}{DQ\_alloc}();
+127         \hyperlink{structQ}{Q}* temp1;
+128         \hyperlink{structQ}{Q}* temp2;
+129         
+130         \textcolor{comment}{//Primary Part = P(a)*P(b).}
+131         c->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p} = \hyperlink{quaternion_8h_a1cb224f6a30ff843d54647642c84e737}{Q\_mult}(a->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p},b->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p},\hyperlink{dualquaternion_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE},\hyperlink{dualquaternion_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+132         
+133         \textcolor{comment}{//Dual Part    = P(a)*D(b) + D(a)*P(b)}
+134     temp1 = \hyperlink{quaternion_8h_a1cb224f6a30ff843d54647642c84e737}{Q\_mult}(a->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p},b->\hyperlink{structDQ_a535cdb52876521fd6abbfcf211a7c702}{d},\hyperlink{dualquaternion_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE},\hyperlink{dualquaternion_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+135         temp2 = \hyperlink{quaternion_8h_a1cb224f6a30ff843d54647642c84e737}{Q\_mult}(a->\hyperlink{structDQ_a535cdb52876521fd6abbfcf211a7c702}{d},b->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p},\hyperlink{dualquaternion_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE},\hyperlink{dualquaternion_8c_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+136         c->\hyperlink{structDQ_a535cdb52876521fd6abbfcf211a7c702}{d}  = \hyperlink{quaternion_8h_a729fe3e2a8b70d933b53990ba245ea15}{Q\_add}(temp1,temp2,\hyperlink{dualquaternion_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE},\hyperlink{dualquaternion_8c_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+137 
+138         \textcolor{keywordflow}{if}(freeA)\{\hyperlink{dualquaternion_8h_a1d21b6cb665c04de4be5aca50804caf4}{DQ\_free}(a);\}
+139         \textcolor{keywordflow}{if}(freeB)\{\hyperlink{dualquaternion_8h_a1d21b6cb665c04de4be5aca50804caf4}{DQ\_free}(b);\}
+140         
+141         \textcolor{keywordflow}{return} c;
+142 \}
 \end{DoxyCode}
 
 
@@ -616,9 +615,8 @@ References D\-Q\-::d, D\-Q\-::p, and Q\-::v.
 
 
 \begin{DoxyCode}
-                     \{
-        printf(\textcolor{stringliteral}{"\(\backslash\)t[%e %e %e %e  %e %e %e %e]\(\backslash\)n"},dq->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0],dq->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1],dq
-      ->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2],dq->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3],dq->\hyperlink{structDQ_a535cdb52876521fd6abbfcf211a7c702}{d}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0],dq->\hyperlink{structDQ_a535cdb52876521fd6abbfcf211a7c702}{d}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1],dq->\hyperlink{structDQ_a535cdb52876521fd6abbfcf211a7c702}{d}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2],dq->\hyperlink{structDQ_a535cdb52876521fd6abbfcf211a7c702}{d}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3]
-      );
-\}
+162                      \{
+163         printf(\textcolor{stringliteral}{"\(\backslash\)t[%e %e %e %e  %e %e %e %e]\(\backslash\)n"},dq->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0],dq->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1],dq->
+      \hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2],dq->\hyperlink{structDQ_a878210bff170f4392d6cbe2d4704ffdc}{p}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3],dq->\hyperlink{structDQ_a535cdb52876521fd6abbfcf211a7c702}{d}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[0],dq->\hyperlink{structDQ_a535cdb52876521fd6abbfcf211a7c702}{d}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[1],dq->\hyperlink{structDQ_a535cdb52876521fd6abbfcf211a7c702}{d}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[2],dq->\hyperlink{structDQ_a535cdb52876521fd6abbfcf211a7c702}{d}->\hyperlink{structQ_a2a0074b583999340d42804e4c1141ac4}{v}[3]);
+164 \}
 \end{DoxyCode}

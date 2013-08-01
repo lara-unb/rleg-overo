@@ -6,29 +6,12 @@ Collaboration diagram for Functions to Magnetometer H\-M\-C5883\-:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{group__mag}
+\includegraphics[width=326pt]{group__mag}
 \end{center}
 \end{figure}
-\subsection*{Macros}
-\begin{DoxyCompactItemize}
-\item 
-\#define \hyperlink{group__mag_ga33f53b04fe0f887e8d9d99e4374c0ddf}{M\-A\-G\-\_\-\-B\-I\-A\-S\-\_\-\-X}~-\/143
-\item 
-\#define \hyperlink{group__mag_ga92407f4dfd1c63cede9a5307b379c569}{M\-A\-G\-\_\-\-B\-I\-A\-S\-\_\-\-Y}~-\/101
-\item 
-\#define \hyperlink{group__mag_ga9662c4fff54f93bcc4e043e84e79d623}{M\-A\-G\-\_\-\-B\-I\-A\-S\-\_\-\-Z}~3
-\item 
-\#define \hyperlink{group__mag_gaa49abc19ca0fda3324df06bddae2c1d4}{M\-A\-G\-\_\-\-F\-S\-\_\-\-X}~177
-\item 
-\#define \hyperlink{group__mag_ga5c5e64196104a5e5ebac3c594220eb5c}{M\-A\-G\-\_\-\-F\-S\-\_\-\-Y}~139
-\item 
-\#define \hyperlink{group__mag_gaebfc43ba340d89fa86b4a5c07cc7c924}{M\-A\-G\-\_\-\-F\-S\-\_\-\-Z}~85
-\end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-int \hyperlink{group__mag_gab5d0ae421cd4bb10b1b7a1eda167416b}{mag\-\_\-write\-\_\-reg} (int \hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\-\_\-dev}, uint8\-\_\-t reg, uint8\-\_\-t data)
-\begin{DoxyCompactList}\small\item\em W\-R\-I\-T\-E T\-O R\-E\-G\-I\-S\-T\-E\-R. \end{DoxyCompactList}\item 
 uint8\-\_\-t $\ast$ \hyperlink{group__mag_ga6830eaeae2298320e1e8c902e4edd709}{mag\-\_\-read\-\_\-reg} (int \hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\-\_\-dev}, uint8\-\_\-t reg, uint8\-\_\-t count)
 \begin{DoxyCompactList}\small\item\em R\-E\-A\-D C\-O\-U\-N\-T 8-\/\-B\-I\-T R\-E\-G\-I\-S\-T\-E\-R I\-N S\-E\-Q\-U\-E\-N\-C\-E. \end{DoxyCompactList}\item 
 int \hyperlink{group__mag_gab42ae0d0a2a6f37cf36d856c072b7f34}{mag\-\_\-read\-\_\-all\-\_\-data} (int \hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\-\_\-dev}, short int $\ast$data)
@@ -38,75 +21,6 @@ short int \hyperlink{group__mag_ga542a31ccd07cd2c3e8e2b68cdb6d219e}{mag\-\_\-rea
 
 
 \subsection{Detailed Description}
-
-
-\subsection{Macro Definition Documentation}
-\hypertarget{group__mag_ga33f53b04fe0f887e8d9d99e4374c0ddf}{\index{Functions to Magnetometer H\-M\-C5883@{Functions to Magnetometer H\-M\-C5883}!M\-A\-G\-\_\-\-B\-I\-A\-S\-\_\-\-X@{M\-A\-G\-\_\-\-B\-I\-A\-S\-\_\-\-X}}
-\index{M\-A\-G\-\_\-\-B\-I\-A\-S\-\_\-\-X@{M\-A\-G\-\_\-\-B\-I\-A\-S\-\_\-\-X}!Functions to Magnetometer HMC5883@{Functions to Magnetometer H\-M\-C5883}}
-\subsubsection[{M\-A\-G\-\_\-\-B\-I\-A\-S\-\_\-\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-G\-\_\-\-B\-I\-A\-S\-\_\-\-X~-\/143}}\label{group__mag_ga33f53b04fe0f887e8d9d99e4374c0ddf}
-
-
-Definition at line 31 of file calibration.\-h.
-
-
-
-Referenced by calibrate\-\_\-imu().
-
-\hypertarget{group__mag_ga92407f4dfd1c63cede9a5307b379c569}{\index{Functions to Magnetometer H\-M\-C5883@{Functions to Magnetometer H\-M\-C5883}!M\-A\-G\-\_\-\-B\-I\-A\-S\-\_\-\-Y@{M\-A\-G\-\_\-\-B\-I\-A\-S\-\_\-\-Y}}
-\index{M\-A\-G\-\_\-\-B\-I\-A\-S\-\_\-\-Y@{M\-A\-G\-\_\-\-B\-I\-A\-S\-\_\-\-Y}!Functions to Magnetometer HMC5883@{Functions to Magnetometer H\-M\-C5883}}
-\subsubsection[{M\-A\-G\-\_\-\-B\-I\-A\-S\-\_\-\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-G\-\_\-\-B\-I\-A\-S\-\_\-\-Y~-\/101}}\label{group__mag_ga92407f4dfd1c63cede9a5307b379c569}
-
-
-Definition at line 32 of file calibration.\-h.
-
-
-
-Referenced by calibrate\-\_\-imu().
-
-\hypertarget{group__mag_ga9662c4fff54f93bcc4e043e84e79d623}{\index{Functions to Magnetometer H\-M\-C5883@{Functions to Magnetometer H\-M\-C5883}!M\-A\-G\-\_\-\-B\-I\-A\-S\-\_\-\-Z@{M\-A\-G\-\_\-\-B\-I\-A\-S\-\_\-\-Z}}
-\index{M\-A\-G\-\_\-\-B\-I\-A\-S\-\_\-\-Z@{M\-A\-G\-\_\-\-B\-I\-A\-S\-\_\-\-Z}!Functions to Magnetometer HMC5883@{Functions to Magnetometer H\-M\-C5883}}
-\subsubsection[{M\-A\-G\-\_\-\-B\-I\-A\-S\-\_\-\-Z}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-G\-\_\-\-B\-I\-A\-S\-\_\-\-Z~3}}\label{group__mag_ga9662c4fff54f93bcc4e043e84e79d623}
-
-
-Definition at line 33 of file calibration.\-h.
-
-
-
-Referenced by calibrate\-\_\-imu().
-
-\hypertarget{group__mag_gaa49abc19ca0fda3324df06bddae2c1d4}{\index{Functions to Magnetometer H\-M\-C5883@{Functions to Magnetometer H\-M\-C5883}!M\-A\-G\-\_\-\-F\-S\-\_\-\-X@{M\-A\-G\-\_\-\-F\-S\-\_\-\-X}}
-\index{M\-A\-G\-\_\-\-F\-S\-\_\-\-X@{M\-A\-G\-\_\-\-F\-S\-\_\-\-X}!Functions to Magnetometer HMC5883@{Functions to Magnetometer H\-M\-C5883}}
-\subsubsection[{M\-A\-G\-\_\-\-F\-S\-\_\-\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-G\-\_\-\-F\-S\-\_\-\-X~177}}\label{group__mag_gaa49abc19ca0fda3324df06bddae2c1d4}
-
-
-Definition at line 34 of file calibration.\-h.
-
-
-
-Referenced by calibrate\-\_\-imu().
-
-\hypertarget{group__mag_ga5c5e64196104a5e5ebac3c594220eb5c}{\index{Functions to Magnetometer H\-M\-C5883@{Functions to Magnetometer H\-M\-C5883}!M\-A\-G\-\_\-\-F\-S\-\_\-\-Y@{M\-A\-G\-\_\-\-F\-S\-\_\-\-Y}}
-\index{M\-A\-G\-\_\-\-F\-S\-\_\-\-Y@{M\-A\-G\-\_\-\-F\-S\-\_\-\-Y}!Functions to Magnetometer HMC5883@{Functions to Magnetometer H\-M\-C5883}}
-\subsubsection[{M\-A\-G\-\_\-\-F\-S\-\_\-\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-G\-\_\-\-F\-S\-\_\-\-Y~139}}\label{group__mag_ga5c5e64196104a5e5ebac3c594220eb5c}
-
-
-Definition at line 35 of file calibration.\-h.
-
-
-
-Referenced by calibrate\-\_\-imu().
-
-\hypertarget{group__mag_gaebfc43ba340d89fa86b4a5c07cc7c924}{\index{Functions to Magnetometer H\-M\-C5883@{Functions to Magnetometer H\-M\-C5883}!M\-A\-G\-\_\-\-F\-S\-\_\-\-Z@{M\-A\-G\-\_\-\-F\-S\-\_\-\-Z}}
-\index{M\-A\-G\-\_\-\-F\-S\-\_\-\-Z@{M\-A\-G\-\_\-\-F\-S\-\_\-\-Z}!Functions to Magnetometer HMC5883@{Functions to Magnetometer H\-M\-C5883}}
-\subsubsection[{M\-A\-G\-\_\-\-F\-S\-\_\-\-Z}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-G\-\_\-\-F\-S\-\_\-\-Z~85}}\label{group__mag_gaebfc43ba340d89fa86b4a5c07cc7c924}
-
-
-Definition at line 36 of file calibration.\-h.
-
-
-
-Referenced by calibrate\-\_\-imu().
-
 
 
 \subsection{Function Documentation}
@@ -139,33 +53,31 @@ Referenced by read\-\_\-all\-\_\-data().
 
 
 \begin{DoxyCode}
-\{
-  uint8\_t i, j;
-  uint8\_t *data8;
-  \textcolor{keyword}{union }result
-  \{
-    \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} usgnd[3];
-    \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} sgnd[3];
-  \} result;
-  \textcolor{comment}{//result=(union result*)malloc(3*sizeof(union result));}
-  \textcolor{keywordflow}{if}( (data8=\hyperlink{group__mag_ga6830eaeae2298320e1e8c902e4edd709}{mag\_read\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev},\hyperlink{communication_2imu__regs_8h_a4f883328e7ae117996e334145ddd0032}{MAG\_DATAX1},6))==
-      NULL)
-  \{
-    \textcolor{comment}{//perror("Read accelerometer register failed");}
-    \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
-  \}
-  \textcolor{comment}{//result.usgnd=(unsigned int*)malloc(3*sizeof(unsigned int));}
-  j=0;
-  \textcolor{keywordflow}{for}(i=0; i<3; i++)
-  \{
-    result.usgnd[j]=0;
-    result.usgnd[j]=result.usgnd[j]|((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} int)data8[i*2+1])|(((\textcolor{keywordtype}{
-      unsigned} int)data8[i*2])<<8);
-    data[j]=result.sgnd[j];
-    j=2-i; \textcolor{comment}{// trick used to change the sorting of the data from XZY to XYZ}
-  \}
-  \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};  
-\}
+122 \{
+123   uint8\_t i, j;
+124   uint8\_t *data8;
+125   \textcolor{keyword}{union }result
+126   \{
+127     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} usgnd[3];
+128     \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} sgnd[3];
+129   \} result;
+130   \textcolor{comment}{//result=(union result*)malloc(3*sizeof(union result));}
+131   \textcolor{keywordflow}{if}( (data8=\hyperlink{group__mag_ga6830eaeae2298320e1e8c902e4edd709}{mag\_read\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev},\hyperlink{communication_2imu__regs_8h_a4f883328e7ae117996e334145ddd0032}{MAG\_DATAX1},6))==NULL)
+132   \{
+133     \textcolor{comment}{//perror("Read accelerometer register failed");}
+134     \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
+135   \}
+136   \textcolor{comment}{//result.usgnd=(unsigned int*)malloc(3*sizeof(unsigned int));}
+137   j=0;
+138   \textcolor{keywordflow}{for}(i=0; i<3; i++)
+139   \{
+140     result.usgnd[j]=0;
+141     result.usgnd[j]=result.usgnd[j]|((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} int)data8[i*2+1])|(((\textcolor{keywordtype}{unsigned} int)data8[i*2])<<8);
+142     data[j]=result.sgnd[j];
+143     j=2-i; \textcolor{comment}{// trick used to change the sorting of the data from XZY to XYZ}
+144   \}
+145   \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};  
+146 \}
 \end{DoxyCode}
 
 
@@ -204,33 +116,32 @@ Definition at line 148 of file mag\-\_\-functions.\-c.
 
 
 \begin{DoxyCode}
-\{
-  uint8\_t *data;
-  \textcolor{keyword}{union }result
-  \{
-    \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} usgnd;
-    \textcolor{keywordtype}{int} sgnd;
-  \}result;
-
-  \textcolor{keywordflow}{switch}(axis)\{
-    \textcolor{keywordflow}{case} \textcolor{charliteral}{'X'}:
-      data=\hyperlink{group__mag_ga6830eaeae2298320e1e8c902e4edd709}{mag\_read\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev},\hyperlink{communication_2imu__regs_8h_a4f883328e7ae117996e334145ddd0032}{MAG\_DATAX1},2);
-      \textcolor{keywordflow}{break};
-    \textcolor{keywordflow}{case} \textcolor{charliteral}{'Y'}:
-      data=\hyperlink{group__mag_ga6830eaeae2298320e1e8c902e4edd709}{mag\_read\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev},\hyperlink{communication_2imu__regs_8h_ae218906702b1e40c2b6970f97dd0cfe4}{MAG\_DATAY1},2);
-      \textcolor{keywordflow}{break};
-    \textcolor{keywordflow}{case} \textcolor{charliteral}{'Z'}:
-      data=\hyperlink{group__mag_ga6830eaeae2298320e1e8c902e4edd709}{mag\_read\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev},\hyperlink{communication_2imu__regs_8h_a81d7d9236ec69a1a229e4fa7c6299fde}{MAG\_DATAZ1},2);
-      \textcolor{keywordflow}{break};
-    \textcolor{keywordflow}{default}:
-      \textcolor{comment}{//perror("Wrong argument for axis in mag\_read\_data");}
-      \textcolor{keywordflow}{return} -1;
-  \}
-  result.usgnd=0;
-  result.usgnd=result.usgnd|(((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} int)data[1]))|(((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \textcolor{keywordtype}{
-      int})data[0])<<8);
-  \textcolor{keywordflow}{return} result.sgnd;
-\}
+149 \{
+150   uint8\_t *data;
+151   \textcolor{keyword}{union }result
+152   \{
+153     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} usgnd;
+154     \textcolor{keywordtype}{int} sgnd;
+155   \}result;
+156 
+157   \textcolor{keywordflow}{switch}(axis)\{
+158     \textcolor{keywordflow}{case} \textcolor{charliteral}{'X'}:
+159       data=\hyperlink{group__mag_ga6830eaeae2298320e1e8c902e4edd709}{mag\_read\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev},\hyperlink{communication_2imu__regs_8h_a4f883328e7ae117996e334145ddd0032}{MAG\_DATAX1},2);
+160       \textcolor{keywordflow}{break};
+161     \textcolor{keywordflow}{case} \textcolor{charliteral}{'Y'}:
+162       data=\hyperlink{group__mag_ga6830eaeae2298320e1e8c902e4edd709}{mag\_read\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev},\hyperlink{communication_2imu__regs_8h_ae218906702b1e40c2b6970f97dd0cfe4}{MAG\_DATAY1},2);
+163       \textcolor{keywordflow}{break};
+164     \textcolor{keywordflow}{case} \textcolor{charliteral}{'Z'}:
+165       data=\hyperlink{group__mag_ga6830eaeae2298320e1e8c902e4edd709}{mag\_read\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev},\hyperlink{communication_2imu__regs_8h_a81d7d9236ec69a1a229e4fa7c6299fde}{MAG\_DATAZ1},2);
+166       \textcolor{keywordflow}{break};
+167     \textcolor{keywordflow}{default}:
+168       \textcolor{comment}{//perror("Wrong argument for axis in mag\_read\_data");}
+169       \textcolor{keywordflow}{return} -1;
+170   \}
+171   result.usgnd=0;
+172   result.usgnd=result.usgnd|(((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} int)data[1]))|(((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \textcolor{keywordtype}{int})data[0])<<8);
+173   \textcolor{keywordflow}{return} result.sgnd;
+174 \}
 \end{DoxyCode}
 \hypertarget{group__mag_ga6830eaeae2298320e1e8c902e4edd709}{\index{Functions to Magnetometer H\-M\-C5883@{Functions to Magnetometer H\-M\-C5883}!mag\-\_\-read\-\_\-reg@{mag\-\_\-read\-\_\-reg}}
 \index{mag\-\_\-read\-\_\-reg@{mag\-\_\-read\-\_\-reg}!Functions to Magnetometer HMC5883@{Functions to Magnetometer H\-M\-C5883}}
@@ -264,26 +175,26 @@ Referenced by mag\-\_\-read\-\_\-all\-\_\-data(), and mag\-\_\-read\-\_\-data().
 
 
 \begin{DoxyCode}
-\{
-  uint8\_t data[13];
-  \textcolor{keywordtype}{int} i;
-
-  \textcolor{comment}{//data=(uint8\_t*)malloc((count+1)*sizeof(data));}
-  
-  data[0] = reg;
-
-  \textcolor{keywordflow}{if} (write(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev}, &data, 1) != 1) \{            
-        \textcolor{comment}{//perror("write before read");}
-        \textcolor{keywordflow}{return} NULL;
-  \}
-  data[0] = 0;
-  \textcolor{keywordflow}{if} (read(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev}, &data, count) != count) \{
-        \textcolor{comment}{//perror("read");}
-        \textcolor{keywordflow}{return} NULL;    
-  \}
-
-  \textcolor{keywordflow}{return} data;
-\}
+32 \{
+33   uint8\_t data[13];
+34   \textcolor{keywordtype}{int} i;
+35 
+36   \textcolor{comment}{//data=(uint8\_t*)malloc((count+1)*sizeof(data));}
+37   
+38   data[0] = reg;
+39 
+40   \textcolor{keywordflow}{if} (write(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev}, &data, 1) != 1) \{            
+41         \textcolor{comment}{//perror("write before read");}
+42         \textcolor{keywordflow}{return} NULL;
+43   \}
+44   data[0] = 0;
+45   \textcolor{keywordflow}{if} (read(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev}, &data, count) != count) \{
+46         \textcolor{comment}{//perror("read");}
+47         \textcolor{keywordflow}{return} NULL;    
+48   \}
+49 
+50   \textcolor{keywordflow}{return} data;
+51 \}
 \end{DoxyCode}
 
 
@@ -292,72 +203,6 @@ Here is the caller graph for this function\-:\nopagebreak
 \begin{center}
 \leavevmode
 \includegraphics[width=292pt]{group__mag_ga6830eaeae2298320e1e8c902e4edd709_icgraph}
-\end{center}
-\end{figure}
-
-
-\hypertarget{group__mag_gab5d0ae421cd4bb10b1b7a1eda167416b}{\index{Functions to Magnetometer H\-M\-C5883@{Functions to Magnetometer H\-M\-C5883}!mag\-\_\-write\-\_\-reg@{mag\-\_\-write\-\_\-reg}}
-\index{mag\-\_\-write\-\_\-reg@{mag\-\_\-write\-\_\-reg}!Functions to Magnetometer HMC5883@{Functions to Magnetometer H\-M\-C5883}}
-\subsubsection[{mag\-\_\-write\-\_\-reg}]{\setlength{\rightskip}{0pt plus 5cm}int mag\-\_\-write\-\_\-reg (
-\begin{DoxyParamCaption}
-\item[{int}]{i2c\-\_\-dev, }
-\item[{uint8\-\_\-t}]{reg, }
-\item[{uint8\-\_\-t}]{data}
-\end{DoxyParamCaption}
-)}}\label{group__mag_gab5d0ae421cd4bb10b1b7a1eda167416b}
-
-
-W\-R\-I\-T\-E T\-O R\-E\-G\-I\-S\-T\-E\-R. 
-
-
-\begin{DoxyParams}[1]{Parameters}
- & {\em i2c\-\_\-dev} & \\
-\hline
- & {\em reg} & \\
-\hline
-\mbox{\tt in}  & {\em } & W\-R\-I\-T\-E T\-O R\-E\-G\-I\-S\-T\-E\-R.\\
-\hline
-\end{DoxyParams}
-Implements the I2\-C communication between Gumstix Overo Fire and H\-M\-C5883 \begin{DoxyAuthor}{Author}
-Caio Gustavo Mesquita Ângelo 
-\end{DoxyAuthor}
-
-
-Definition at line 10 of file mag\-\_\-functions.\-c.
-
-
-
-Referenced by mag\-\_\-init().
-
-
-\begin{DoxyCode}
-\{
-  uint8\_t reg\_data[2];
-
-  reg\_data[0] = reg;
-  reg\_data[1] = data;
-
-  \textcolor{keywordflow}{if}( \hyperlink{communication_2imu__regs_8h_a0173afba6efc0e164495bf506a9758d2}{MAG\_MODE}<reg )
-  \{
-      \textcolor{comment}{//perror("Write unsucessful: Not a valid writable register");}
-      \textcolor{keywordflow}{return} -1;
-  \}
-        
-  \textcolor{keywordflow}{if} (write(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev}, &reg\_data, 2) != 2) \{                
-          \textcolor{comment}{//perror("Write unsuccessful");}
-          \textcolor{keywordflow}{return} -1;
-  \}
-
-  \textcolor{keywordflow}{return} 1;
-\}
-\end{DoxyCode}
-
-
-Here is the caller graph for this function\-:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=250pt]{group__mag_gab5d0ae421cd4bb10b1b7a1eda167416b_icgraph}
 \end{center}
 \end{figure}
 
