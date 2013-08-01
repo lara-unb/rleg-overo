@@ -17,7 +17,6 @@
  * @defgroup taskS Scheduler for tasks
  */
 
-
 /**
  * Task to schedule definition
  */
@@ -51,6 +50,7 @@ void timer_start_task(TASK_S *task);
 /**
  * Stop some task
  * @ingroup taskS
+ * @todo verify use of variable 'erno'
  */
 void timer_stop_task(TASK_S *task);
 #endif

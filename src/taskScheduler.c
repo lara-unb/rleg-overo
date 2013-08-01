@@ -2,6 +2,8 @@
  *
  */
 
+#include "taskScheduler.h"
+
 void timer_new_task(TASK_S *task,void *runFuntion){
   (*task).t_global = 0.0;
   (*task).T_exec_global = 0.0;
@@ -95,4 +97,12 @@ void timer_function_task(TASK_S *task)
   (*task).T_exec_global = T_task_exec;
 
   (*task).isFirstExecution = 0;
+}
+
+void timer_stop_task(TASK_S *task){
+  int erno = 0;
+  if(timer_delete((*task).timer)<0){
+    fprintf(stderr,"[%d]:%s\n",__LINE__,strerror(erno));
+    exit(erno);
+  }
 }

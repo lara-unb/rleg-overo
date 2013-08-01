@@ -40,5 +40,4 @@ void control_byKneeAngle(&ang_data,&mra_data){
   if((ang_data->ang -ANG_MAX)< 0.1)
     mra_data.v_ctl = 6000;
 }
-
 */

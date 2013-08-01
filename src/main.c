@@ -4,10 +4,11 @@
  * @version 0.1
  */
 
-#include<stdio.h>
-#include"Communication/communication.h"
+#include <stdio.h>
+#include "Communication/communication.h"
 #include "main.h"
 #include "taskScheduler.h"
+//#include "control/control.h"
 
 /*Strutures for tasks:*/
   TASK_S task1,task2;
@@ -23,6 +24,9 @@
 /* UI statistics */
 int total = 0;
 int failure = 0;
+int acquire = 0;
+
+int quittask = 0;
 
 int main(void){
   int return_value = SUCCESS;
@@ -49,7 +53,7 @@ int main(void){
 
   // Task for control UI:
   timer_new_task(&task1,ui_task);
-  //timer_new_task(task2,ui_task);
+  //timer_new_task(task2,control_task);
 
 
 /*Initialization:*/
@@ -66,13 +70,15 @@ int main(void){
   timer_start_task(&task1);
   //timer_start_task(task2);
 
-  while(return_value == SUCCESS){
-    task1->runFunction();
+/* Main loop: */
+  while(quittask == 0){
+    // 
   }
 
 /*Shutting Down:*/
   timer_stop_task(&task1);
   //usleep(2000);
+  //timer_stop_task(&task2);
 
   if(ui_close()==FAILURE){
     return_value == FAILURE;
@@ -84,12 +90,27 @@ int main(void){
   return return_value;
 }
 
-void ui_task(){
+int ui_task(){
   total++;
 
   if(read_all_data(imu_param.i2c_dev, spi_param.spi_dev, &imu_data,&eff_data, &mra_data, &enc_data) != SUCCESS) failure++;
 
   ui_update(&imu_data, &eff_data, &mra_data,&enc_data, total, failure);
+  return SUCCESS;
+}
+
+int control_task(){
+  total++;
+
+/*Input*/
+  if(read_all_data(imu_param.i2c_dev, spi_param.spi_dev, &imu_data,&eff_data, &mra_data, &enc_data) != SUCCESS) failure++;
+  
+/* Control */
+  mra_data.v_ctl=1275+(uint8_t)(800*cosf(t_task_1_global*1000));
+  //control_main(task1.t_global,&imu_data,&eff_data,&mra_data);
+/* Actuate */
+  actuate(spi_param.spi_dev,&mra_data);
+
   return SUCCESS;
 }
 
