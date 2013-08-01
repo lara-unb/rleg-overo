@@ -48,9 +48,11 @@ int main(void){
   spi_param.cs=0;
 
   // Task for control UI:
-  timer_new_task(task1,ui_task);
+  timer_new_task(&task1,ui_task);
+  //timer_new_task(task2,ui_task);
 
-/* Initialization:*/
+
+/*Initialization:*/
   if(devices_init(&imu_param,&spi_param,&mra_data)!=SUCCESS){
     perror("Unsuccesful devices initialization");
     return FAILURE;
@@ -61,15 +63,34 @@ int main(void){
     return FAILURE;
   }
 
+  timer_start_task(&task1);
+  //timer_start_task(task2);
+
   while(return_value == SUCCESS){
     task1->runFunction();
   }
+
+/*Shutting Down:*/
+  timer_stop_task(&task1);
+  //usleep(2000);
+
+  if(ui_close()==FAILURE){
+    return_value == FAILURE;
+  }
+
+  close(imu_param.i2c_dev);
+  close(spi_param.spi_dev);
 
   return return_value;
 }
 
 void ui_task(){
+  total++;
+
+  if(read_all_data(imu_param.i2c_dev, spi_param.spi_dev, &imu_data,&eff_data, &mra_data, &enc_data) != SUCCESS) failure++;
+
   ui_update(&imu_data, &eff_data, &mra_data,&enc_data, total, failure);
+  return SUCCESS;
 }
 
 /**
