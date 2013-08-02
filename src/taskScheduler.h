@@ -9,6 +9,8 @@
 #include <pthread.h>
 #include <sys/time.h>
 #include <time.h>
+#include <stdlib.h>
+#include <stdio.h>
 
 #ifndef TASK_SCHEDULER_H_INCLUDED
 #define TASK_SCHEDULER_H_INCLUDED
@@ -39,7 +41,7 @@ typedef struct taskS{
  * @param *task
  * @param *voidFunction Pointer to the function called to execute
  */
-void timer_new_task(TASK_S *task,timer_t timer ,void *runFuntion);
+void timer_new_task(TASK_S *task,void *runFunction);
 
 /**
  * Start some task

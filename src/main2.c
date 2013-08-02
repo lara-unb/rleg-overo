@@ -18,7 +18,6 @@
 #include "ui.h"
 #include "main2.h"
 #include "calibration/calibration.h"
-#include "taskScheduler.h"
 
 /* This runs tasks in three points:
  * 1) In the while(quittask == 0) loop: background (semi-periodic, usleep governed) tasks (datalogger update)

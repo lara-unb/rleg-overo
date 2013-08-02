@@ -5,9 +5,11 @@
  */
 
 #include <stdio.h>
-#include "Communication/communication.h"
+#include <math.h>
+#include "communication/communication.h"
 #include "main.h"
 #include "taskScheduler.h"
+#include "ui.h"
 //#include "control/control.h"
 
 /*Strutures for tasks:*/
@@ -18,8 +20,10 @@
   SPI_PARAM_STRUCT spi_param;
 
 /*Strutures for communicate*/
-  IMU_DATA_STRUT imu_data;
+  EFF_DATA_STRUCT eff_data;
+  IMU_DATA_STRUCT imu_data;
   ENC_DATA_STRUCT enc_data;
+  MRA_DATA_STRUCT mra_data;
 
 /* UI statistics */
 int total = 0;
@@ -81,7 +85,7 @@ int main(void){
   //timer_stop_task(&task2);
 
   if(ui_close()==FAILURE){
-    return_value == FAILURE;
+    return_value = FAILURE;
   }
 
   close(imu_param.i2c_dev);
@@ -106,7 +110,7 @@ int control_task(){
   if(read_all_data(imu_param.i2c_dev, spi_param.spi_dev, &imu_data,&eff_data, &mra_data, &enc_data) != SUCCESS) failure++;
   
 /* Control */
-  mra_data.v_ctl=1275+(uint8_t)(800*cosf(t_task_1_global*1000));
+  mra_data.v_ctl=1275+(uint8_t)(800*cosf(task1.t_global*1000));
   //control_main(task1.t_global,&imu_data,&eff_data,&mra_data);
 /* Actuate */
   actuate(spi_param.spi_dev,&mra_data);

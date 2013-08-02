@@ -4,7 +4,7 @@
 
 #include "taskScheduler.h"
 
-void timer_new_task(TASK_S *task,void *runFuntion){
+void timer_new_task(TASK_S *task,void *runFunction){
   (*task).t_global = 0.0;
   (*task).T_exec_global = 0.0;
   (*task).T_mean_global = 0.0;
@@ -31,7 +31,7 @@ void timer_start_task(TASK_S *task){
   sigev.sigev_value.sival_int = 0;
   sigev.sigev_notify = SIGEV_THREAD;
   sigev.sigev_notify_attributes = NULL;
-  sigev.sigev_notify_function = f_timer_task_1;
+  sigev.sigev_notify_function = f_timer_task_1;//<verify thi line
 
   if (timer_create(CLOCK_REALTIME, &sigev, &((*task).timer)) < 0)
   {
@@ -85,7 +85,7 @@ void timer_function_task(TASK_S *task)
     }
 
   // Run the thread
-  status = (*task).runFunction();
+  status = (*task).run();
 
   gettimeofday(&time_exec_end, NULL);
   T_task_exec = ((time_exec_end.tv_sec - time_exec_start.tv_sec) + (time_exec_end.tv_usec - time_exec_start.tv_usec)*1e-6);

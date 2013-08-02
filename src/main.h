@@ -19,4 +19,7 @@
 
 int main(void);
 
+int ui_task();
+int control_task();
+
 #endif
