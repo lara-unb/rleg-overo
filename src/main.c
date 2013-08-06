@@ -31,6 +31,7 @@ int failure = 0;
 int acquire = 0;
 
 int quittask = 0;
+int t0 = 0;
 
 int main(void){
   int return_value = SUCCESS;
@@ -94,7 +95,7 @@ int main(void){
   return return_value;
 }
 
-int ui_task(){
+static void ui_task(int signo){
   total++;
 
   if(read_all_data(imu_param.i2c_dev, spi_param.spi_dev, &imu_data,&eff_data, &mra_data, &enc_data) != SUCCESS) failure++;
@@ -103,7 +104,7 @@ int ui_task(){
   return SUCCESS;
 }
 
-int control_task(){
+static void control_task(int signo){
   total++;
 
 /*Input*/
@@ -114,17 +115,16 @@ int control_task(){
   //control_main(task1.t_global,&imu_data,&eff_data,&mra_data);
 /* Actuate */
   actuate(spi_param.spi_dev,&mra_data);
-
-  return SUCCESS;
 }
 
 int get_time(double *time_control_task_s, double *Ts_control_task_s, double *mean_time_control_task_s, double *t0_control_task_s)
 {
-  //    *time_control_task_s = t_task_1_global;
-  //  *Ts_control_task_s = task_1_period_us/1e6;
-  //  *mean_time_control_task_s = T_task_1_mean_global;
-  //  *t0_control_task_s = t0;
-    return SUCCESS;
+  *time_control_task_s = task1->t_global;
+  *Ts_control_task_s = (task_1->period_us)/1e6;
+  *mean_time_control_task_s = task_1->T_mean_global;
+  *t0_control_task_s = t0;
+
+  return SUCCESS;
 }
 
 /**

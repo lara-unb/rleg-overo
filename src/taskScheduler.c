@@ -22,25 +22,37 @@ void timer_start_task(TASK_S *task){
   int erno = 0;
 
   (*task).isFirstExecution = 1;
+  //
+  struct sigevent evp;
 
-  itimer.it_interval.tv_sec = 0;
-  itimer.it_interval.tv_nsec= (*task).period_us*1000;
-  itimer.it_value = itimer.it_interval;
+  evp.sigev_value.sival_ptr = &timer;
+  evp.sigev_notify = SIGEV_SIGNAL;
+  evp.sigev_signo = SIGUSR1;
 
-  memset(&sigev,0,sizeof(struct sigevent));
-
-  sigev.sigev_value.sival_int = 0;
-  sigev.sigev_notify = SIGEV_THREAD;
-  sigev.sigev_notify_attributes = NULL;
-  //sigev.sigev_notify_function = f_timer_task_1;//<verify thi line
-
-  if (timer_create(CLOCK_REALTIME, &sigev, &((*task).timer)) < 0)
+  if ( timer_create ( CLOCK_REALTIME, &evp, &timer) )
   {
     fprintf(stderr, "[%d]: %s\n", __LINE__, strerror(erno));
     exit(erno);
   }
 
-  if(timer_settime((*task).timer,0,&itimer,NULL) < 0)
+
+  // Signal handler configuration
+  struct sigaction satimer;
+  satimer.sa_handler = task->run;
+  sigemptyset( &satimer.sa_mask );
+  satimer.sa_flags = SA_RESTART;
+  if ( sigaction ( SIGUSR1, &satimer, NULL ) < 0)
+  {
+    printw( "ERROR: sigaction.\n" );
+    fprintf(stderr, "[%d]: %s\n", __LINE__, strerror(erno));
+    exit(erno);
+  }
+
+  itimer.it_interval.tv_sec = 0;
+  itimer.it_interval.tv_nsec= task->period_us*1000;
+  itimer.it_value = itimer.it_interval;
+
+  if(timer_settime(task->timer,0,&itimer,NULL) < 0)
   {
     fprintf(stderr,"[%d]: %s\n", __LINE__, strerror(erno));
     exit(erno);
