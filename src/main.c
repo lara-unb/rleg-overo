@@ -8,7 +8,7 @@
 #include <math.h>
 #include "communication/communication.h"
 #include "main.h"
-#include "taskScheduler.h"
+//#include "taskScheduler.h"
 #include "ui.h"
 //#include "control/control.h"
 
@@ -56,7 +56,7 @@ int main(void){
   spi_param.cs=0;
 
   // Task for control UI:
-  timer_new_task(&task1,ui_task);
+  //timer_new_task(&task1,ui_task);
   //timer_new_task(task2,control_task);
 
 
@@ -71,16 +71,16 @@ int main(void){
     return FAILURE;
   }
 
-  timer_start_task(&task1);
+  //timer_start_task(&task1);
   //timer_start_task(task2);
 
 /* Main loop: */
   while(quittask == 0){
-    // 
+    ui_task();
   }
 
 /*Shutting Down:*/
-  timer_stop_task(&task1);
+  //timer_stop_task(&task1);
   //usleep(2000);
   //timer_stop_task(&task2);
 
@@ -116,6 +116,15 @@ int control_task(){
   actuate(spi_param.spi_dev,&mra_data);
 
   return SUCCESS;
+}
+
+int get_time(double *time_control_task_s, double *Ts_control_task_s, double *mean_time_control_task_s, double *t0_control_task_s)
+{
+  //    *time_control_task_s = t_task_1_global;
+  //  *Ts_control_task_s = task_1_period_us/1e6;
+  //  *mean_time_control_task_s = T_task_1_mean_global;
+  //  *t0_control_task_s = t0;
+    return SUCCESS;
 }
 
 /**

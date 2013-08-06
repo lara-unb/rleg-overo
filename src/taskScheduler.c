@@ -2,6 +2,7 @@
  *
  */
 
+#include <string.h>
 #include "taskScheduler.h"
 
 void timer_new_task(TASK_S *task,void *runFunction){
@@ -31,7 +32,7 @@ void timer_start_task(TASK_S *task){
   sigev.sigev_value.sival_int = 0;
   sigev.sigev_notify = SIGEV_THREAD;
   sigev.sigev_notify_attributes = NULL;
-  sigev.sigev_notify_function = f_timer_task_1;//<verify thi line
+  //sigev.sigev_notify_function = f_timer_task_1;//<verify thi line
 
   if (timer_create(CLOCK_REALTIME, &sigev, &((*task).timer)) < 0)
   {
@@ -75,7 +76,7 @@ void timer_function_task(TASK_S *task)
       T_task_mean = T_task;
       T_task_min  = 1e200;
       T_task_max  = 0.0;
-      t0 = t_task;
+      //t0 = t_task;
     }
   else
     {
@@ -85,7 +86,7 @@ void timer_function_task(TASK_S *task)
     }
 
   // Run the thread
-  status = (*task).run();
+  //status = task->run();
 
   gettimeofday(&time_exec_end, NULL);
   T_task_exec = ((time_exec_end.tv_sec - time_exec_start.tv_sec) + (time_exec_end.tv_usec - time_exec_start.tv_usec)*1e-6);
@@ -106,3 +107,58 @@ void timer_stop_task(TASK_S *task){
     exit(erno);
   }
 }
+
+/*
+#include <time.h>
+#include <signal.h>
+#include <sys/time.h>
+
+> CONFIGURAÇÃO
+
+>> Primeiramente, usando timer_create
+
+// Periodic POSIX timer configuration
+timer_ttimer;
+struct sigeventevp;
+evp.sigev_value.sival_ptr = &timer;
+evp.sigev_notify = SIGEV_SIGNAL;
+evp.sigev_signo = SIGUSR1;
+if ( timer_create ( CLOCK_REALTIME, &evp, &timer) )
+{
+printw( "> ERROR: timer_create\n" );
+}
+>> Em seguida, o que fazer quando SIGUSR1 chamar? Com sigaction definimos que executamos a função (sa_handler) e reiniciamos o timer (SA_RESTART).
+
+// Signal handler configuration
+struct sigactionsatimer;
+satimer.sa_handler = npi_timer_handler;
+sigemptyset( &satimer.sa_mask );
+satimer.sa_flags = SA_RESTART;
+if ( sigaction ( SIGUSR1, &satimer, NULL ) < 0)
+{
+printw( "ERROR: sigaction.\n" );
+}
+
+> INICIALIZAÇÃO, em que TS_IN_NANO é o período estabelecido
+
+// Timer initialization
+struct itimerspec   timerPeriod;
+timerPeriod.it_value.tv_sec = 0;
+timerPeriod.it_value.tv_nsec = TS_IN_NANO;
+timerPeriod.it_interval.tv_sec = 0;
+timerPeriod.it_interval.tv_nsec = TS_IN_NANO;
+if ( timer_settime ( timer, 0, &timerPeriod, NULL ) != 0)
+{
+printw( "> ERROR: timer_settime.\n" );
+}
+
+> FUNÇÃO PERIÓDICA
+
+static void npi_timer_handler ( int signo )
+{
+// everything you want here
+}
+
+> FECHANDO O TIMER
+timer_delete ( timer );
+*/

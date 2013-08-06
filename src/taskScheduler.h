@@ -32,7 +32,7 @@ typedef struct taskS{
   volatile int period_us;
   volatile int isFirstExecution; ///< Flag to sign first Exec
   
-  void *run; ///< hook to the action 
+  void (*run)(void); ///< hook to the action 
 } TASK_S;
 
 /**
