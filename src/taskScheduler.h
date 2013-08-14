@@ -32,7 +32,7 @@ typedef struct taskS{
   volatile int period_us;
   volatile int isFirstExecution; ///< Flag to sign first Exec
   
-  static void (*run)(int); ///< hook to the action 
+  void (*run)(int); ///< hook to the action 
 } TASK_S;
 
 /**
@@ -41,7 +41,7 @@ typedef struct taskS{
  * @param *task
  * @param *voidFunction Pointer to the function called to execute
  */
-void timer_new_task(TASK_S *task,void *runFunction);
+void timer_new_task(TASK_S *task,void (*runFunction)(int));
 
 /**
  * Start some task

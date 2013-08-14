@@ -19,8 +19,8 @@
 
 int main(void);
 
-int ui_task();
-int control_task();
+static void ui_task(int signo);
+static void control_task(int signo);
 
 void exit_program(void);
 

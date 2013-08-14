@@ -5,7 +5,7 @@
 #include <string.h>
 #include "taskScheduler.h"
 
-void timer_new_task(TASK_S *task,void *runFunction){
+void timer_new_task(TASK_S *task,void (*runFunction)(int)){
   (*task).t_global = 0.0;
   (*task).T_exec_global = 0.0;
   (*task).T_mean_global = 0.0;
@@ -13,11 +13,12 @@ void timer_new_task(TASK_S *task,void *runFunction){
   (*task).period_us = 0.0;
   (*task).isFirstExecution = 1;
 
-  task->run = runFunction;
+  (*task).run = runFunction;
 }
 
 void timer_start_task(TASK_S *task){
   struct itimerspec itimer;
+  timer_t timer;
   struct sigevent sigev;
   int erno = 0;
 

@@ -8,7 +8,7 @@
 #include <math.h>
 #include "communication/communication.h"
 #include "main.h"
-//#include "taskScheduler.h"
+#include "taskScheduler.h"
 #include "ui.h"
 //#include "control/control.h"
 
@@ -57,9 +57,11 @@ int main(void){
   spi_param.cs=0;
 
   // Task for control UI:
-  //timer_new_task(&task1,ui_task);
-  //timer_new_task(task2,control_task);
+  timer_new_task(&task1,ui_task);
+  timer_new_task(&task2,control_task);
 
+  task1.period_us = 200;
+  task2.period_us = 1000;
 
 /*Initialization:*/
   if(devices_init(&imu_param,&spi_param,&mra_data)!=SUCCESS){
@@ -77,13 +79,13 @@ int main(void){
 
 /* Main loop: */
   while(quittask == 0){
-    ui_task();
+    ui_task(0);
   }
 
 /*Shutting Down:*/
-  //timer_stop_task(&task1);
-  //usleep(2000);
-  //timer_stop_task(&task2);
+  timer_stop_task(&task1);
+  usleep(2000);
+  timer_stop_task(&task2);
 
   if(ui_close()==FAILURE){
     return_value = FAILURE;
@@ -101,7 +103,7 @@ static void ui_task(int signo){
   if(read_all_data(imu_param.i2c_dev, spi_param.spi_dev, &imu_data,&eff_data, &mra_data, &enc_data) != SUCCESS) failure++;
 
   ui_update(&imu_data, &eff_data, &mra_data,&enc_data, total, failure);
-  return SUCCESS;
+
 }
 
 static void control_task(int signo){
@@ -119,9 +121,9 @@ static void control_task(int signo){
 
 int get_time(double *time_control_task_s, double *Ts_control_task_s, double *mean_time_control_task_s, double *t0_control_task_s)
 {
-  *time_control_task_s = task1->t_global;
-  *Ts_control_task_s = (task_1->period_us)/1e6;
-  *mean_time_control_task_s = task_1->T_mean_global;
+  *time_control_task_s = task1.t_global;
+  *Ts_control_task_s = (task1.period_us)/1e6;
+  *mean_time_control_task_s = task1.T_mean_global;
   *t0_control_task_s = t0;
 
   return SUCCESS;
