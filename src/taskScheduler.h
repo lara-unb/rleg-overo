@@ -1,19 +1,14 @@
 /**
  * Implentation of Scheduler for tasks:
- * @author Rafael
+ * @author Rafael Lima
  * @todo test it
  */
 
-#include <unistd.h>
-#include <signal.h>
-#include <pthread.h>
-#include <sys/time.h>
-#include <time.h>
-#include <stdlib.h>
-#include <stdio.h>
-
 #ifndef TASK_SCHEDULER_H_INCLUDED
 #define TASK_SCHEDULER_H_INCLUDED
+
+#include <time.h>
+#include <sys/time.h>
 
 /**
  * @defgroup taskS Scheduler for tasks
@@ -47,7 +42,7 @@ void timer_new_task(TASK_S *task,void (*runFunction)(int));
  * Start some task
  * @ingroup taskS
  */
-void timer_start_task(TASK_S *task);
+void timer_start_task(TASK_S *task, int period_us);
 
 /**
  * Stop some task

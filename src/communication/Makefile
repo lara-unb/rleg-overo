@@ -24,20 +24,20 @@ gyr_functions.o: gyr_functions.c imu_functions.h imu_regs.h
 spi_functions.o: spi_functions.c spi_functions.h
 	$(CC) -c spi_functions.c
 
-gpio_functions.o:	gpio_functions.c gpio_functions.h
+gpio_functions.o: gpio_functions.c gpio_functions.h
 	$(CC) -c gpio_functions.c
 
 encoder_functions.o: encoder_functions.c encoder_functions.h
 	$(CC) -c encoder_functions.c
 
-communication.o:	communication.c communication.h imu_functions.h imu_regs.h
+communication.o: communication.c communication.h imu_functions.h imu_regs.h encoder_functions.h
 	$(CC) -c communication.c
 
 .PHONY: print
 print:
         @echo Sources: $(SOURCES)
         @echo Objects: $(OBJECTS)
-      	@echo Headers: $(HEADERS)
+        @echo Headers: $(HEADERS)
         @echo Executable: $(EXECUTABLE)
 
 .PHONY: clean

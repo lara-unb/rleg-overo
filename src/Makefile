@@ -4,7 +4,7 @@ CCFLAGS = -Wall
 
 MAIN = main
 SOURCES = $(MAIN).c datalogger.c ui.c calibration.c taskScheduler.c
-HEADERS = $(MAIN).h datalogger.h ui.h #$(wildcard *.h)
+HEADERS = $(MAIN).h datalogger.h ui.h taskScheduler.h #$(wildcard *.h)
 CLEANDIRS = $(SUBDIRS:%=clean-%)
 
 #SOURCES = main.c
@@ -24,7 +24,7 @@ $(SUBDIRS):
 	@$(MAKE) -C $@
 @echo Objects: $(OBJECTS)
 
-OBJECTS = $(wildcard communication/*.o) $(MAIN).o datalogger.o ui.o calibration.o taskScheduler.o
+OBJECTS = $(wildcard communication/*.o) $(MAIN).o ui.o calibration.o taskScheduler.o datalogger.o
 OBJECTS+= $(wildcard gdatalogger/*.o)
 
 
@@ -62,6 +62,3 @@ clean: $(CLEANDIRS)
 $(CLEANDIRS): 
 	@$(MAKE) -C $(@:clean-%=%) clean
 	-rm -f newrleg *.o
-
-
-

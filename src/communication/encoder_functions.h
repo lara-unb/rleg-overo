@@ -44,9 +44,9 @@
 
 typedef struct enconder_data{
   int spi_dev;
-  int angle;
+  unsigned short int position;
   struct calibrate{
-    int angle;
+  unsigned short int position;
   }calib;
   int new_data;
 }ENC_DATA_STRUCT;

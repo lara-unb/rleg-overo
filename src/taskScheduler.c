@@ -1,8 +1,16 @@
-/**
+/** 
  *
  */
 
 #include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <pthread.h>
+#include <unistd.h>
+#include <signal.h>
+#include <sys/time.h>
+
 #include "taskScheduler.h"
 
 void timer_new_task(TASK_S *task,void (*runFunction)(int)){
@@ -16,21 +24,21 @@ void timer_new_task(TASK_S *task,void (*runFunction)(int)){
   (*task).run = runFunction;
 }
 
-void timer_start_task(TASK_S *task){
+void timer_start_task(TASK_S *task,int period_us){
   struct itimerspec itimer;
-  timer_t timer;
-  struct sigevent sigev;
-  int erno = 0;
-
-  (*task).isFirstExecution = 1;
-  //
+  timer_t *timer = &(task->timer);
   struct sigevent evp;
+  int erno = 0;
+  
+  task->isFirstExecution = 1;
+  task->period_us = period_us;
+  //
 
-  evp.sigev_value.sival_ptr = &timer;
+  evp.sigev_value.sival_ptr = timer;
   evp.sigev_notify = SIGEV_SIGNAL;
   evp.sigev_signo = SIGUSR1;
 
-  if ( timer_create ( CLOCK_REALTIME, &evp, &timer) )
+  if ( timer_create( CLOCK_REALTIME, &evp, timer) )
   {
     fprintf(stderr, "[%d]: %s\n", __LINE__, strerror(erno));
     exit(erno);
@@ -42,9 +50,9 @@ void timer_start_task(TASK_S *task){
   satimer.sa_handler = task->run;
   sigemptyset( &satimer.sa_mask );
   satimer.sa_flags = SA_RESTART;
-  if ( sigaction ( SIGUSR1, &satimer, NULL ) < 0)
+  if ( sigaction( SIGUSR1, &satimer, NULL ) < 0)
   {
-    printw( "ERROR: sigaction.\n" );
+    printf( "ERROR: sigaction.\n" );
     fprintf(stderr, "[%d]: %s\n", __LINE__, strerror(erno));
     exit(erno);
   }
@@ -62,7 +70,7 @@ void timer_start_task(TASK_S *task){
 
 void timer_function_task(TASK_S *task)
 {
-  int status = 0;
+  //int status = 0;
   static struct timeval timereset;
   static struct timeval time;
   static struct timeval time_exec_start;
@@ -138,7 +146,7 @@ evp.sigev_notify = SIGEV_SIGNAL;
 evp.sigev_signo = SIGUSR1;
 if ( timer_create ( CLOCK_REALTIME, &evp, &timer) )
 {
-printw( "> ERROR: timer_create\n" );
+printf( "> ERROR: timer_create\n" );
 }
 >> Em seguida, o que fazer quando SIGUSR1 chamar? Com sigaction definimos que executamos a função (sa_handler) e reiniciamos o timer (SA_RESTART).
 
@@ -149,7 +157,7 @@ sigemptyset( &satimer.sa_mask );
 satimer.sa_flags = SA_RESTART;
 if ( sigaction ( SIGUSR1, &satimer, NULL ) < 0)
 {
-printw( "ERROR: sigaction.\n" );
+printf( "ERROR: sigaction.\n" );
 }
 
 > INICIALIZAÇÃO, em que TS_IN_NANO é o período estabelecido
@@ -162,7 +170,7 @@ timerPeriod.it_interval.tv_sec = 0;
 timerPeriod.it_interval.tv_nsec = TS_IN_NANO;
 if ( timer_settime ( timer, 0, &timerPeriod, NULL ) != 0)
 {
-printw( "> ERROR: timer_settime.\n" );
+printf( "> ERROR: timer_settime.\n" );
 }
 
 > FUNÇÃO PERIÓDICA

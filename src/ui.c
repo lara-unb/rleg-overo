@@ -174,7 +174,7 @@ int ui_eff_data(EFF_DATA_STRUCT *peff_data)
 
 int ui_enc_data(ENC_DATA_STRUCT *enc_data)
 {
-   mvprintw(2,0,"Position (raw): %lf",enc_data->angle);
+   mvprintw(2,0,"Position (raw): %lf",enc_data->position);
    return SUCCESS;
 }
 
@@ -211,8 +211,8 @@ int ui_overview_data(int total, int failures, IMU_DATA_STRUCT *pimu_data, EFF_DA
 	mvprintw(12, 0, "Temp (bits):\t%d", pimu_data->temp);
 	mvprintw(12,40, "Temp (ºC):\t%lf", pimu_data->calib_temp);
 
-	mvprintw(13,0, "Encoder (bits):\t%d",enc_data->angle);
-	mvprintw(13,40, "Encoder (degree):\t%d",enc_data->angle);
+	mvprintw(13,0, "Encoder (bits):\t%d",enc_data->position);
+	mvprintw(13,40, "Encoder (degree):\t%d",enc_data->position);
 	//mvprintw(15,0,"Fx (bits): %d",peff_data->F.x);
 
 	//mvprintw(2,40,"Fx (N): %lf",peff_data->??);

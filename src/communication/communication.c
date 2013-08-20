@@ -147,7 +147,7 @@ int read_all_data(int i2c_dev, int spi_dev, IMU_DATA_STRUCT *imu_data,EFF_DATA_S
   enc_data->spi_dev = spi_dev;
   if( (gpio_write(GPIO_CS_S3,1)==FAILURE) || (gpio_write(GPIO_CS_S2,1)==FAILURE) || (gpio_write(GPIO_CS_S1,1)==FAILURE) || (gpio_write(GPIO_CS_S0,1)==FAILURE))
 	enc_data->new_data=FAILURE;
-  if(enc_read_pos(enc_data->spi_dev,&(enc_data->angle))==FAILURE)
+  if(enc_read_pos(enc_data->spi_dev,&(enc_data->position))==FAILURE)
     enc_data->new_data = FAILURE;
 #endif
 
