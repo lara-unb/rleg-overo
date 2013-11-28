@@ -25,11 +25,11 @@ int devices_init(IMU_PARAM_STRUCT *imu_param, SPI_PARAM_STRUCT *spi_param, MRA_D
 		return FAILURE;
   }
 
-  /*  if( (mag_init(imu_param->i2c_dev, imu_param->mag.rate, imu_param->mag.range, imu_param->mag.samples_avg, imu_param->mag.meas_mode, imu_param->mag.op_mode))< 0)
+  if( (mag_init(imu_param->i2c_dev, imu_param->mag.rate, imu_param->mag.range, imu_param->mag.samples_avg, imu_param->mag.meas_mode, imu_param->mag.op_mode))< 0)
   {
       perror("Error in magnetometer initialization");
       return FAILURE;
-      }*/
+      }
 
   if( ioctl(imu_param->i2c_dev, I2C_SLAVE, ADD_ITG3200) < 0) {
 		perror("ioctl(I2C_SLAVE) gyr");

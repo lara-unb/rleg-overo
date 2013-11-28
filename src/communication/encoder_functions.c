@@ -62,12 +62,13 @@ int enc_wait_for_ack(int spi_dev, uint8_t ack, int max_errors)
 {
     int errors = 0;
     uint8_t send = ENCODER_NO_OP;
-    uint8_t receive = 0;
+    uint8_t receive = 1;
 	
   //nanosleep(10);
 	//spi_trans_bytes(spi_dev,send,receive,1);
     while (receive != ack) {
         spi_trans_bytes(spi_dev,&send,&receive,1);
+        printf("\nReceive = 0x%x \n",receive);
         if (receive != ENCODER_WAIT_RESP) {
             errors++;
             if (errors > max_errors) { return FAILURE; }

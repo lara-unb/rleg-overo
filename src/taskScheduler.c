@@ -26,24 +26,21 @@ void timer_new_task(TASK_S *task,void (*runFunction)(int)){
 
 void timer_start_task(TASK_S *task,int period_us){
   struct itimerspec itimer;
-  timer_t *timer = &(task->timer);
   struct sigevent evp;
   int erno = 0;
   
   task->isFirstExecution = 1;
   task->period_us = period_us;
-  //
 
-  evp.sigev_value.sival_ptr = timer;
+  evp.sigev_value.sival_ptr = &(task->timer);
   evp.sigev_notify = SIGEV_SIGNAL;
   evp.sigev_signo = SIGUSR1;
 
-  if ( timer_create( CLOCK_REALTIME, &evp, timer) )
+  if(timer_create( CLOCK_REALTIME, &evp, &(task->timer))<0)
   {
     fprintf(stderr, "[%d]: %s\n", __LINE__, strerror(erno));
     exit(erno);
   }
-
 
   // Signal handler configuration
   struct sigaction satimer;
@@ -128,58 +125,3 @@ void timer_stop_task(TASK_S *task){
     exit(erno);
   }
 }
-
-/*
-#include <time.h>
-#include <signal.h>
-#include <sys/time.h>
-
-> CONFIGURAÇÃO
-
->> Primeiramente, usando timer_create
-
-// Periodic POSIX timer configuration
-timer_ttimer;
-struct sigeventevp;
-evp.sigev_value.sival_ptr = &timer;
-evp.sigev_notify = SIGEV_SIGNAL;
-evp.sigev_signo = SIGUSR1;
-if ( timer_create ( CLOCK_REALTIME, &evp, &timer) )
-{
-printf( "> ERROR: timer_create\n" );
-}
->> Em seguida, o que fazer quando SIGUSR1 chamar? Com sigaction definimos que executamos a função (sa_handler) e reiniciamos o timer (SA_RESTART).
-
-// Signal handler configuration
-struct sigactionsatimer;
-satimer.sa_handler = npi_timer_handler;
-sigemptyset( &satimer.sa_mask );
-satimer.sa_flags = SA_RESTART;
-if ( sigaction ( SIGUSR1, &satimer, NULL ) < 0)
-{
-printf( "ERROR: sigaction.\n" );
-}
-
-> INICIALIZAÇÃO, em que TS_IN_NANO é o período estabelecido
-
-// Timer initialization
-struct itimerspec   timerPeriod;
-timerPeriod.it_value.tv_sec = 0;
-timerPeriod.it_value.tv_nsec = TS_IN_NANO;
-timerPeriod.it_interval.tv_sec = 0;
-timerPeriod.it_interval.tv_nsec = TS_IN_NANO;
-if ( timer_settime ( timer, 0, &timerPeriod, NULL ) != 0)
-{
-printf( "> ERROR: timer_settime.\n" );
-}
-
-> FUNÇÃO PERIÓDICA
-
-static void npi_timer_handler ( int signo )
-{
-// everything you want here
-}
-
-> FECHANDO O TIMER
-timer_delete ( timer );
-*/

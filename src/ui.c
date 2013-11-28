@@ -74,7 +74,7 @@ int ui_update(IMU_DATA_STRUCT *pimu_data, EFF_DATA_STRUCT *peff_data, MRA_DATA_S
 		case UI_MRA:
 			if(ui_mra_data(pmra_data) != SUCCESS) return FAILURE;
 			break;
-        	case UI_ENC:
+        case UI_ENC:
           		if(ui_enc_data(enc_data) != SUCCESS) return FAILURE;
 			break;
 		case UI_OVERVIEW:
@@ -98,8 +98,9 @@ int ui_update(IMU_DATA_STRUCT *pimu_data, EFF_DATA_STRUCT *peff_data, MRA_DATA_S
 		case 'f': //EFF view
 			ui_state = UI_EFF;
 			break;
- 	        case 'e': // ENCODER view
-		        ui_state = UI_ENC;
+ 	    case 'e': // ENCODER view
+		    ui_state = UI_ENC;
+		    break;
 		case 'o': //Overview
 			ui_state = UI_OVERVIEW;
 			break;

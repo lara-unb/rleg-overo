@@ -41,6 +41,9 @@ void timer_new_task(TASK_S *task,void (*runFunction)(int));
 /**
  * Start some task
  * @ingroup taskS
+ * @param *task Struct whith task data
+ * @param period_us Period Value to repeat the task
+ * @todo verify how use two tasks
  */
 void timer_start_task(TASK_S *task, int period_us);
 

@@ -6,17 +6,10 @@ MAIN = main
 SOURCES = $(MAIN).c datalogger.c ui.c calibration.c taskScheduler.c
 HEADERS = $(MAIN).h datalogger.h ui.h taskScheduler.h #$(wildcard *.h)
 CLEANDIRS = $(SUBDIRS:%=clean-%)
-
-#SOURCES = main.c
-#OBJECTS = $(wildcard $(SUBDIRS)/*.o) main.o
-#HEADERS = $(wildcard *.h)
-
-#@echo Subdirs: $(SUBDIRS)
-
-#EXECUTABLE = main
+EXECUTABLE = newrleg
 
 .PHONY: all
-all: subdirs $(SOURCES) $(HEADERS) $(SUBDIRS) newrleg
+all: subdirs $(SOURCES) $(HEADERS) $(SUBDIRS) $(EXECUTABLE)
 
 .PHONY: subdirs $(SUBDIRS)
 subdirs: $(SUBDIRS)
@@ -24,11 +17,12 @@ $(SUBDIRS):
 	@$(MAKE) -C $@
 @echo Objects: $(OBJECTS)
 
-OBJECTS = $(wildcard communication/*.o) $(MAIN).o ui.o calibration.o taskScheduler.o datalogger.o
+OBJECTS = $(wildcard communication/*.o) $(MAIN).o ui.o datalogger.o calibration.o taskScheduler.o 
 OBJECTS+= $(wildcard gdatalogger/*.o)
 
+#EXECUTABLE = newrleg
 
-newrleg: $(OBJECTS)
+$(EXECUTABLE): $(OBJECTS)
 	$(CC) $(CCFLAGS) $(OBJECTS) -o $@
 
 $(MAIN).o: $(MAIN).c $(MAIN).h
@@ -52,7 +46,7 @@ print:
         @echo Sources: $(SOURCES)
         @echo Objects: $(OBJECTS)
         @echo Headers: $(HEADERS)
-        @echo Executable: newrleg
+        @echo Executable: $(EXECUTABLE)
 
         @echo Subdirs: $(SUBDIRS)
         @echo Cleandirs: $(CLEANDIRS)
@@ -61,4 +55,4 @@ print:
 clean: $(CLEANDIRS)
 $(CLEANDIRS): 
 	@$(MAKE) -C $(@:clean-%=%) clean
-	-rm -f newrleg *.o
+	-rm -f $(EXECUTABLE) *.o

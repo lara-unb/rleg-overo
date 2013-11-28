@@ -230,8 +230,8 @@ int spi_trans_bytes(int spi_dev,uint8_t *send, uint8_t *receive,int n){
 	 //< define send data 
 	uint8_t *tx;
 	tx = send;
-	uint8_t rx[n]; 
-	rx[0] = 0;
+	uint8_t rx[ARRAY_SIZE(tx)] = {0, }; 
+	//rx[0] = 0;
 
 	/*
 	* Transmitting data (full duplex):
@@ -248,7 +248,7 @@ int spi_trans_bytes(int spi_dev,uint8_t *send, uint8_t *receive,int n){
 
 	//Check transmittion:
 	if(ret == 1) return FAILURE;//pabort("can't send spi message");
-
+	printf("\nret != 1\n");
 	*receive = rx[0];//get the received data
 
 	return 1;

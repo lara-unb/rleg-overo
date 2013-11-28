@@ -15,6 +15,9 @@
 /*Strutures for tasks:*/
   TASK_S task1,task2;
 
+/* Task period*/
+#define TASK_UI_PERIOD 100000 //100ms
+
 /*Strutures for configuration*/
   IMU_PARAM_STRUCT imu_param;
   SPI_PARAM_STRUCT spi_param;
@@ -59,10 +62,7 @@ int main(void){
   // Task for control UI:
   timer_new_task(&task1,ui_task);
   timer_new_task(&task2,control_task);
-
-  task1.period_us = 200;
-  task2.period_us = 1000;
-
+  
 /*Initialization:*/
   if(devices_init(&imu_param,&spi_param,&mra_data)!=SUCCESS){
     perror("Unsuccesful devices initialization");
@@ -74,18 +74,18 @@ int main(void){
     return FAILURE;
   }
 
-  //timer_start_task(&task1);
+  timer_start_task(&task1,TASK_UI_PERIOD);
   //timer_start_task(task2);
 
 /* Main loop: */
   while(quittask == 0){
-    ui_task(0);
+    //ui_task(0);
   }
 
 /*Shutting Down:*/
   timer_stop_task(&task1);
   usleep(2000);
-  timer_stop_task(&task2);
+  //timer_stop_task(&task2);
 
   if(ui_close()==FAILURE){
     return_value = FAILURE;
