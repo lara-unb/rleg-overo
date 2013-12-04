@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['t',['T',['../classCartesian__controller.html#a35c6ddbb9624878f2807ff644a33e832',1,'Cartesian_controller']]],
-  ['t0',['t0',['../main2_8c.html#a86c2efd6da48b362806cdbb5b1e711d8',1,'t0():&#160;main2.c'],['../threads__linux_8c.html#a86c2efd6da48b362806cdbb5b1e711d8',1,'t0():&#160;threads_linux.c']]],
+  ['t0',['t0',['../main_8c.html#a98046aa9aba5dbcc867be625185aef46',1,'t0():&#160;main.c'],['../main2_8c.html#a86c2efd6da48b362806cdbb5b1e711d8',1,'t0():&#160;main2.c'],['../threads__linux_8c.html#a86c2efd6da48b362806cdbb5b1e711d8',1,'t0():&#160;threads_linux.c']]],
   ['t_5fexec_5fglobal',['T_exec_global',['../structTASK__S.html#ae06b712fd9963cff8192e9ef3140bc6d',1,'TASK_S']]],
   ['t_5fglobal',['t_global',['../structTASK__S.html#a29a175bdd4b9f880a2b69bb5186e3c7e',1,'TASK_S']]],
   ['t_5fmax_5fglobal',['T_max_global',['../structTASK__S.html#a430c874cbf361b6dbc75ad1540880948',1,'TASK_S']]],
@@ -23,11 +22,9 @@ var searchData=
   ['task_5f2_5fperiod_5fus',['task_2_period_us',['../main2_8c.html#a5166d431d5448a1538e75f5469c19c7b',1,'task_2_period_us():&#160;main2.c'],['../threads__linux_8c.html#a5166d431d5448a1538e75f5469c19c7b',1,'task_2_period_us():&#160;threads_linux.c']]],
   ['telemetry_5fmode',['telemetry_mode',['../main2_8c.html#a5045187bb0afe92c41ce73bc602fd3ca',1,'telemetry_mode():&#160;main2.c'],['../threads__linux_8c.html#a5045187bb0afe92c41ce73bc602fd3ca',1,'telemetry_mode():&#160;threads_linux.c'],['../ui_8c.html#a5045187bb0afe92c41ce73bc602fd3ca',1,'telemetry_mode():&#160;main2.c']]],
   ['temp',['temp',['../structIMU__DATA__STRUCT.html#a81e1dbf765c1d947ca6076aa1bbc73e7',1,'IMU_DATA_STRUCT']]],
-  ['theta',['theta',['../structLink.html#a88e705bc7fb6c7c8c7fa6987b52667d6',1,'Link']]],
-  ['thetas',['Thetas',['../classCartesian__controller.html#a0a0f818dad601cd9e3e26cb6959b8eb6',1,'Cartesian_controller']]],
   ['timer',['timer',['../structTASK__S.html#a17834f3d4f84241ccb4191f3cf7d7af3',1,'TASK_S']]],
   ['timer_5ftask_5f1',['timer_task_1',['../main2_8c.html#a904a157c5d5f94416cd450f511635af1',1,'timer_task_1():&#160;main2.c'],['../threads__linux_8c.html#a904a157c5d5f94416cd450f511635af1',1,'timer_task_1():&#160;threads_linux.c']]],
   ['timer_5ftask_5f2',['timer_task_2',['../main2_8c.html#adf6e8e22925f399f086dea8671f39c08',1,'timer_task_2():&#160;main2.c'],['../threads__linux_8c.html#adf6e8e22925f399f086dea8671f39c08',1,'timer_task_2():&#160;threads_linux.c']]],
   ['total',['total',['../main_8c.html#ac7af894858cf396a219d632f40afdc8d',1,'total():&#160;main.c'],['../main2_8c.html#ac7af894858cf396a219d632f40afdc8d',1,'total():&#160;main2.c'],['../threads__linux_8c.html#ac7af894858cf396a219d632f40afdc8d',1,'total():&#160;threads_linux.c']]],
-  ['type',['type',['../structMATLAB__DATAHEAD.html#ad3587e58da5ca6cbe3cd98d5e2f46202',1,'MATLAB_DATAHEAD::type()'],['../structGMATRIX__MATLAB__DATAHEAD.html#a20df828adf57355259f96b10f8f7a1ab',1,'GMATRIX_MATLAB_DATAHEAD::type()']]]
+  ['type',['type',['../structMATLAB__DATAHEAD.html#ad3587e58da5ca6cbe3cd98d5e2f46202',1,'MATLAB_DATAHEAD']]]
 ];

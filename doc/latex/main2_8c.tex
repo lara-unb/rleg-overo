@@ -1,64 +1,71 @@
-\hypertarget{main2_8c}{
-\section{main2.c File Reference}
-\label{main2_8c}\index{main2.c@{main2.c}}
+\hypertarget{main2_8c}{\section{main2.\-c File Reference}
+\label{main2_8c}\index{main2.\-c@{main2.\-c}}
 }
-{\ttfamily \#include $<$stdio.h$>$}\par
-{\ttfamily \#include $<$stdlib.h$>$}\par
-{\ttfamily \#include $<$unistd.h$>$}\par
-{\ttfamily \#include $<$signal.h$>$}\par
-{\ttfamily \#include $<$string.h$>$}\par
-{\ttfamily \#include $<$ncurses.h$>$}\par
-{\ttfamily \#include $<$time.h$>$}\par
-{\ttfamily \#include $<$sys/time.h$>$}\par
-{\ttfamily \#include $<$pthread.h$>$}\par
-{\ttfamily \#include $<$math.h$>$}\par
-{\ttfamily \#include \char`\"{}communication/communication.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}datalogger.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}ui.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}main2.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}calibration/calibration.h\char`\"{}}\par
-Include dependency graph for main2.c:This graph shows which files directly or indirectly include this file:\subsection*{Defines}
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$unistd.\-h$>$}\\*
+{\ttfamily \#include $<$signal.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include $<$ncurses.\-h$>$}\\*
+{\ttfamily \#include $<$time.\-h$>$}\\*
+{\ttfamily \#include $<$sys/time.\-h$>$}\\*
+{\ttfamily \#include $<$pthread.\-h$>$}\\*
+{\ttfamily \#include $<$math.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}communication/communication.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}datalogger.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ui.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}main2.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}calibration/calibration.\-h\char`\"{}}\\*
+Include dependency graph for main2.\-c\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main2_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \hyperlink{main2_8c_a95fe7f7d25a81aabd1194bac017074d8}{TASK1\_\-PERIOD\_\-US}~20000
+\#define \hyperlink{main2_8c_a95fe7f7d25a81aabd1194bac017074d8}{T\-A\-S\-K1\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-U\-S}~20000
 \item 
-\#define \hyperlink{main2_8c_adfe9b03db41d576a3beb124ec44a54d8}{TASK2\_\-PERIOD\_\-US}~100000
+\#define \hyperlink{main2_8c_adfe9b03db41d576a3beb124ec44a54d8}{T\-A\-S\-K2\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-U\-S}~100000
 \end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{main2_8c_a5ce2b6a7dd4d00c90fe18098091044aa}{f\_\-timer\_\-task\_\-1} (union sigval sigval)
+void \hyperlink{main2_8c_a5ce2b6a7dd4d00c90fe18098091044aa}{f\-\_\-timer\-\_\-task\-\_\-1} (union sigval sigval)
 \item 
-void \hyperlink{main2_8c_a735ebf3d0d37c7d8187199e6565bcb5c}{f\_\-timer\_\-task\_\-2} (union sigval sigval)
+void \hyperlink{main2_8c_a735ebf3d0d37c7d8187199e6565bcb5c}{f\-\_\-timer\-\_\-task\-\_\-2} (union sigval sigval)
 \item 
 int \hyperlink{main2_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
 \item 
-int \hyperlink{main2_8c_a26855b7739897854265d51aa61329390}{periodic\_\-task\_\-1} (void)
+int \hyperlink{main2_8c_a26855b7739897854265d51aa61329390}{periodic\-\_\-task\-\_\-1} (void)
 \item 
-int \hyperlink{main2_8c_a944f7352f18ed248c1b1143f51edc391}{periodic\_\-task\_\-2} (void)
+int \hyperlink{main2_8c_a944f7352f18ed248c1b1143f51edc391}{periodic\-\_\-task\-\_\-2} (void)
 \item 
-void \hyperlink{main2_8c_a5ce2b6a7dd4d00c90fe18098091044aa}{f\_\-timer\_\-task\_\-1} (union sigval sigval)
+void \hyperlink{main2_8c_a5ce2b6a7dd4d00c90fe18098091044aa}{f\-\_\-timer\-\_\-task\-\_\-1} (union sigval sigval)
 \item 
-void \hyperlink{main2_8c_a735ebf3d0d37c7d8187199e6565bcb5c}{f\_\-timer\_\-task\_\-2} (union sigval sigval)
+void \hyperlink{main2_8c_a735ebf3d0d37c7d8187199e6565bcb5c}{f\-\_\-timer\-\_\-task\-\_\-2} (union sigval sigval)
 \item 
-void \hyperlink{main2_8c_a0e411070b7f487a8ab6a60b180f50e12}{timer\_\-start\_\-task\_\-1} (void)
+void \hyperlink{main2_8c_a0e411070b7f487a8ab6a60b180f50e12}{timer\-\_\-start\-\_\-task\-\_\-1} (void)
 \item 
-void \hyperlink{main2_8c_ae59c93969d017f18e3e38b2f9f7888ca}{timer\_\-start\_\-task\_\-2} (void)
+void \hyperlink{main2_8c_ae59c93969d017f18e3e38b2f9f7888ca}{timer\-\_\-start\-\_\-task\-\_\-2} (void)
 \item 
-void \hyperlink{main2_8c_a54bb5066619e443a28ae5601b5ea3642}{timer\_\-stop\_\-task\_\-1} (void)
+void \hyperlink{main2_8c_a54bb5066619e443a28ae5601b5ea3642}{timer\-\_\-stop\-\_\-task\-\_\-1} (void)
 \item 
-void \hyperlink{main2_8c_a0c69dbcb7b2885a2de116b9d690280de}{timer\_\-stop\_\-task\_\-2} (void)
+void \hyperlink{main2_8c_a0c69dbcb7b2885a2de116b9d690280de}{timer\-\_\-stop\-\_\-task\-\_\-2} (void)
 \item 
-void \hyperlink{main2_8c_a90885bae1b9535b16e014fb928e98e37}{timer\_\-function\_\-task\_\-1} (void)
+void \hyperlink{main2_8c_a90885bae1b9535b16e014fb928e98e37}{timer\-\_\-function\-\_\-task\-\_\-1} (void)
 \item 
-void \hyperlink{main2_8c_a01c18e97a4488be2912eb738b2e7f890}{timer\_\-function\_\-task\_\-2} (void)
+void \hyperlink{main2_8c_a01c18e97a4488be2912eb738b2e7f890}{timer\-\_\-function\-\_\-task\-\_\-2} (void)
 \item 
-int \hyperlink{main2_8c_a97a188c3a74115770124cf0bf0c1e407}{reset\_\-timer} (void)
+int \hyperlink{main2_8c_a97a188c3a74115770124cf0bf0c1e407}{reset\-\_\-timer} (void)
 \item 
-int \hyperlink{main2_8c_a5b2b1fdd5e517470c10e84a2b2bcc5c8}{get\_\-time} (double $\ast$time\_\-control\_\-task\_\-s, double $\ast$Ts\_\-control\_\-task\_\-s, double $\ast$mean\_\-time\_\-control\_\-task\_\-s, double $\ast$t0\_\-control\_\-task\_\-s)
+int \hyperlink{main2_8c_a5b2b1fdd5e517470c10e84a2b2bcc5c8}{get\-\_\-time} (double $\ast$time\-\_\-control\-\_\-task\-\_\-s, double $\ast$Ts\-\_\-control\-\_\-task\-\_\-s, double $\ast$mean\-\_\-time\-\_\-control\-\_\-task\-\_\-s, double $\ast$t0\-\_\-control\-\_\-task\-\_\-s)
 \item 
-void \hyperlink{main2_8c_a5f05ce725141ddfab683e059b1cd95ea}{exit\_\-program} (void)
-\begin{DoxyCompactList}\small\item\em Internal function to end program. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+void \hyperlink{main2_8c_a5f05ce725141ddfab683e059b1cd95ea}{exit\-\_\-program} (void)
+\begin{DoxyCompactList}\small\item\em Internal function to end program. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
@@ -70,1440 +77,1544 @@ int \hyperlink{main2_8c_ac7af894858cf396a219d632f40afdc8d}{total} = 0
 \item 
 int \hyperlink{main2_8c_a4f35e5ea2395561d0bd3b2f45612dc2c}{failure} = 0
 \item 
-timer\_\-t \hyperlink{main2_8c_a904a157c5d5f94416cd450f511635af1}{timer\_\-task\_\-1}
+timer\-\_\-t \hyperlink{main2_8c_a904a157c5d5f94416cd450f511635af1}{timer\-\_\-task\-\_\-1}
 \item 
-volatile double \hyperlink{main2_8c_a2a2a647912528f7aa86812528dbfe02f}{t\_\-task\_\-1\_\-global} = 0.0
+volatile double \hyperlink{main2_8c_a2a2a647912528f7aa86812528dbfe02f}{t\-\_\-task\-\_\-1\-\_\-global} = 0.\-0
 \item 
-volatile double \hyperlink{main2_8c_acdaa4a9b0e1be3dfa53b52df6410ad3b}{T\_\-task\_\-1\_\-exec\_\-global} = 0.0
+volatile double \hyperlink{main2_8c_acdaa4a9b0e1be3dfa53b52df6410ad3b}{T\-\_\-task\-\_\-1\-\_\-exec\-\_\-global} = 0.\-0
 \item 
-volatile double \hyperlink{main2_8c_a738c330c86a365e72ce29ebca3f1e572}{T\_\-task\_\-1\_\-mean\_\-global} = 0.0
+volatile double \hyperlink{main2_8c_a738c330c86a365e72ce29ebca3f1e572}{T\-\_\-task\-\_\-1\-\_\-mean\-\_\-global} = 0.\-0
 \item 
-volatile double \hyperlink{main2_8c_a86222e255aeeb47598a4fc91ab6c2b1a}{T\_\-task\_\-1\_\-min\_\-global} = 0.0
+volatile double \hyperlink{main2_8c_a86222e255aeeb47598a4fc91ab6c2b1a}{T\-\_\-task\-\_\-1\-\_\-min\-\_\-global} = 0.\-0
 \item 
-volatile double \hyperlink{main2_8c_aa714e30d738039b5bf665742beb31739}{T\_\-task\_\-1\_\-max\_\-global} = 0.0
+volatile double \hyperlink{main2_8c_aa714e30d738039b5bf665742beb31739}{T\-\_\-task\-\_\-1\-\_\-max\-\_\-global} = 0.\-0
 \item 
-volatile int \hyperlink{main2_8c_afffc21b0b726e6f4a572d0eefd3b5d69}{task\_\-1\_\-period\_\-us} = TASK1\_\-PERIOD\_\-US
+volatile int \hyperlink{main2_8c_afffc21b0b726e6f4a572d0eefd3b5d69}{task\-\_\-1\-\_\-period\-\_\-us} = \hyperlink{threads__linux_8c_a95fe7f7d25a81aabd1194bac017074d8}{T\-A\-S\-K1\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-U\-S}
 \item 
-volatile int \hyperlink{main2_8c_a764ebf75ba887a9ecf7bf8fe124960e0}{flag\_\-task\_\-1\_\-firstexecution} = 1
+volatile int \hyperlink{main2_8c_a764ebf75ba887a9ecf7bf8fe124960e0}{flag\-\_\-task\-\_\-1\-\_\-firstexecution} = 1
 \item 
-volatile double \hyperlink{main2_8c_a86c2efd6da48b362806cdbb5b1e711d8}{t0} = 0.0
+volatile double \hyperlink{main2_8c_a86c2efd6da48b362806cdbb5b1e711d8}{t0} = 0.\-0
 \item 
-timer\_\-t \hyperlink{main2_8c_adf6e8e22925f399f086dea8671f39c08}{timer\_\-task\_\-2}
+timer\-\_\-t \hyperlink{main2_8c_adf6e8e22925f399f086dea8671f39c08}{timer\-\_\-task\-\_\-2}
 \item 
-volatile double \hyperlink{main2_8c_a08f794ff34d918d3d34d771e11e4aba3}{t\_\-task\_\-2\_\-global} = 0.0
+volatile double \hyperlink{main2_8c_a08f794ff34d918d3d34d771e11e4aba3}{t\-\_\-task\-\_\-2\-\_\-global} = 0.\-0
 \item 
-volatile double \hyperlink{main2_8c_a9629c77cd3dba9d47d15c2e51bdde09d}{T\_\-task\_\-2\_\-exec\_\-global} = 0.0
+volatile double \hyperlink{main2_8c_a9629c77cd3dba9d47d15c2e51bdde09d}{T\-\_\-task\-\_\-2\-\_\-exec\-\_\-global} = 0.\-0
 \item 
-volatile double \hyperlink{main2_8c_af4e19d5a9b24aa56c8ebff6ad1aa2b95}{T\_\-task\_\-2\_\-mean\_\-global} = 0.0
+volatile double \hyperlink{main2_8c_af4e19d5a9b24aa56c8ebff6ad1aa2b95}{T\-\_\-task\-\_\-2\-\_\-mean\-\_\-global} = 0.\-0
 \item 
-volatile double \hyperlink{main2_8c_ab7712cb13ce6206dd138a51e2053e36c}{T\_\-task\_\-2\_\-min\_\-global} = 0.0
+volatile double \hyperlink{main2_8c_ab7712cb13ce6206dd138a51e2053e36c}{T\-\_\-task\-\_\-2\-\_\-min\-\_\-global} = 0.\-0
 \item 
-volatile double \hyperlink{main2_8c_a1cd82006c46f46176730e876d272cc14}{T\_\-task\_\-2\_\-max\_\-global} = 0.0
+volatile double \hyperlink{main2_8c_a1cd82006c46f46176730e876d272cc14}{T\-\_\-task\-\_\-2\-\_\-max\-\_\-global} = 0.\-0
 \item 
-volatile int \hyperlink{main2_8c_a5166d431d5448a1538e75f5469c19c7b}{task\_\-2\_\-period\_\-us} = TASK2\_\-PERIOD\_\-US
+volatile int \hyperlink{main2_8c_a5166d431d5448a1538e75f5469c19c7b}{task\-\_\-2\-\_\-period\-\_\-us} = \hyperlink{threads__linux_8c_adfe9b03db41d576a3beb124ec44a54d8}{T\-A\-S\-K2\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-U\-S}
 \item 
-volatile int \hyperlink{main2_8c_a60e039269ae4a130db1bdbc4a709c437}{flag\_\-task\_\-2\_\-firstexecution} = 1
+volatile int \hyperlink{main2_8c_a60e039269ae4a130db1bdbc4a709c437}{flag\-\_\-task\-\_\-2\-\_\-firstexecution} = 1
 \item 
-unsigned int \hyperlink{main2_8c_a5045187bb0afe92c41ce73bc602fd3ca}{telemetry\_\-mode} = UI\_\-NCURSES\_\-MODE
+unsigned int \hyperlink{main2_8c_a5045187bb0afe92c41ce73bc602fd3ca}{telemetry\-\_\-mode} = \hyperlink{ui_8h_a5f863c47136ccbe4db74101b9a3e83ca}{U\-I\-\_\-\-N\-C\-U\-R\-S\-E\-S\-\_\-\-M\-O\-D\-E}
 \item 
-int \hyperlink{main2_8c_ac0f4eb3a1def152855159c698feaf977}{buff\_\-i} = 0
+int \hyperlink{main2_8c_ac0f4eb3a1def152855159c698feaf977}{buff\-\_\-i} = 0
 \item 
 short int \hyperlink{main2_8c_aaa9d39905d1be632c8232f11155291d0}{buff} \mbox{[}3\mbox{]}\mbox{[}3\mbox{]}\mbox{[}3\mbox{]}
 \item 
-\hyperlink{structIMU__PARAM__STRUCT}{IMU\_\-PARAM\_\-STRUCT} \hyperlink{main2_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_\-param}
+\hyperlink{structIMU__PARAM__STRUCT}{I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T} \hyperlink{main2_8c_a9c6b2109fb9402446f92995db60951b5}{imu\-\_\-param}
 \item 
-\hyperlink{structSPI__PARAM__STRUCT}{SPI\_\-PARAM\_\-STRUCT} \hyperlink{main2_8c_adec2468b88cf50b20e5cf399a3b7e994}{spi\_\-param}
+\hyperlink{structSPI__PARAM__STRUCT}{S\-P\-I\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T} \hyperlink{main2_8c_adec2468b88cf50b20e5cf399a3b7e994}{spi\-\_\-param}
 \item 
-\hyperlink{structIMU__DATA__STRUCT}{IMU\_\-DATA\_\-STRUCT} \hyperlink{main2_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\_\-data}
+\hyperlink{structIMU__DATA__STRUCT}{I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} \hyperlink{main2_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\-\_\-data}
 \item 
-\hyperlink{structEFF__DATA__STRUCT}{EFF\_\-DATA\_\-STRUCT} \hyperlink{main2_8c_a5650ece8c3a277c7f158d75ae65265fa}{eff\_\-data}
+\hyperlink{structEFF__DATA__STRUCT}{E\-F\-F\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} \hyperlink{main2_8c_a5650ece8c3a277c7f158d75ae65265fa}{eff\-\_\-data}
 \item 
-\hyperlink{structMRA__DATA__STRUCT}{MRA\_\-DATA\_\-STRUCT} \hyperlink{main2_8c_abc42e18d2909e9bc119316283f4ed9db}{mra\_\-data}
+\hyperlink{structMRA__DATA__STRUCT}{M\-R\-A\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} \hyperlink{main2_8c_abc42e18d2909e9bc119316283f4ed9db}{mra\-\_\-data}
 \item 
-\hyperlink{structENC__DATA__STRUCT}{ENC\_\-DATA\_\-STRUCT} \hyperlink{main2_8c_aaa441e18ae805c4f3efb0b5231d1cfe7}{enc\_\-data}
+\hyperlink{structENC__DATA__STRUCT}{E\-N\-C\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} \hyperlink{main2_8c_aaa441e18ae805c4f3efb0b5231d1cfe7}{enc\-\_\-data}
 \end{DoxyCompactItemize}
 
 
-\subsection{Define Documentation}
-\hypertarget{main2_8c_a95fe7f7d25a81aabd1194bac017074d8}{
-\index{main2.c@{main2.c}!TASK1\_\-PERIOD\_\-US@{TASK1\_\-PERIOD\_\-US}}
-\index{TASK1\_\-PERIOD\_\-US@{TASK1\_\-PERIOD\_\-US}!main2.c@{main2.c}}
-\subsubsection[{TASK1\_\-PERIOD\_\-US}]{\setlength{\rightskip}{0pt plus 5cm}\#define TASK1\_\-PERIOD\_\-US~20000}}
-\label{main2_8c_a95fe7f7d25a81aabd1194bac017074d8}
+\subsection{Macro Definition Documentation}
+\hypertarget{main2_8c_a95fe7f7d25a81aabd1194bac017074d8}{\index{main2.\-c@{main2.\-c}!T\-A\-S\-K1\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-U\-S@{T\-A\-S\-K1\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-U\-S}}
+\index{T\-A\-S\-K1\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-U\-S@{T\-A\-S\-K1\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-U\-S}!main2.c@{main2.\-c}}
+\subsubsection[{T\-A\-S\-K1\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-U\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-A\-S\-K1\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-U\-S~20000}}\label{main2_8c_a95fe7f7d25a81aabd1194bac017074d8}
 
 
-Definition at line 31 of file main2.c.
-
-
-
-Referenced by main(), and threads\_\-linux\_\-init().
-
-\hypertarget{main2_8c_adfe9b03db41d576a3beb124ec44a54d8}{
-\index{main2.c@{main2.c}!TASK2\_\-PERIOD\_\-US@{TASK2\_\-PERIOD\_\-US}}
-\index{TASK2\_\-PERIOD\_\-US@{TASK2\_\-PERIOD\_\-US}!main2.c@{main2.c}}
-\subsubsection[{TASK2\_\-PERIOD\_\-US}]{\setlength{\rightskip}{0pt plus 5cm}\#define TASK2\_\-PERIOD\_\-US~100000}}
-\label{main2_8c_adfe9b03db41d576a3beb124ec44a54d8}
-
-
-Definition at line 32 of file main2.c.
+Definition at line 31 of file main2.\-c.
 
 
 
-Referenced by main(), and threads\_\-linux\_\-init().
+Referenced by main().
+
+\hypertarget{main2_8c_adfe9b03db41d576a3beb124ec44a54d8}{\index{main2.\-c@{main2.\-c}!T\-A\-S\-K2\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-U\-S@{T\-A\-S\-K2\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-U\-S}}
+\index{T\-A\-S\-K2\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-U\-S@{T\-A\-S\-K2\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-U\-S}!main2.c@{main2.\-c}}
+\subsubsection[{T\-A\-S\-K2\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-U\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-A\-S\-K2\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-U\-S~100000}}\label{main2_8c_adfe9b03db41d576a3beb124ec44a54d8}
+
+
+Definition at line 32 of file main2.\-c.
+
+
+
+Referenced by main().
 
 
 
 \subsection{Function Documentation}
-\hypertarget{main2_8c_a5f05ce725141ddfab683e059b1cd95ea}{
-\index{main2.c@{main2.c}!exit\_\-program@{exit\_\-program}}
-\index{exit\_\-program@{exit\_\-program}!main2.c@{main2.c}}
-\subsubsection[{exit\_\-program}]{\setlength{\rightskip}{0pt plus 5cm}void exit\_\-program (void)}}
-\label{main2_8c_a5f05ce725141ddfab683e059b1cd95ea}
+\hypertarget{main2_8c_a5f05ce725141ddfab683e059b1cd95ea}{\index{main2.\-c@{main2.\-c}!exit\-\_\-program@{exit\-\_\-program}}
+\index{exit\-\_\-program@{exit\-\_\-program}!main2.c@{main2.\-c}}
+\subsubsection[{exit\-\_\-program}]{\setlength{\rightskip}{0pt plus 5cm}void exit\-\_\-program (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{main2_8c_a5f05ce725141ddfab683e059b1cd95ea}
 
 
 Internal function to end program. 
 
 
 
-Definition at line 611 of file main2.c.
+Definition at line 611 of file main2.\-c.
 
 
 
 References quittask.
 
 
+\begin{DoxyCode}
+\{
+        \hyperlink{main_8c_a9d28d012aca080b397aa05c88ee0e94c}{quittask} = 1;
+        \textcolor{keywordflow}{return};
+\}
+\end{DoxyCode}
+\hypertarget{main2_8c_a5ce2b6a7dd4d00c90fe18098091044aa}{\index{main2.\-c@{main2.\-c}!f\-\_\-timer\-\_\-task\-\_\-1@{f\-\_\-timer\-\_\-task\-\_\-1}}
+\index{f\-\_\-timer\-\_\-task\-\_\-1@{f\-\_\-timer\-\_\-task\-\_\-1}!main2.c@{main2.\-c}}
+\subsubsection[{f\-\_\-timer\-\_\-task\-\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}void f\-\_\-timer\-\_\-task\-\_\-1 (
+\begin{DoxyParamCaption}
+\item[{union sigval}]{sigval}
+\end{DoxyParamCaption}
+)}}\label{main2_8c_a5ce2b6a7dd4d00c90fe18098091044aa}
+
+
+Definition at line 387 of file main2.\-c.
+
+
+
+References timer\-\_\-function\-\_\-task\-\_\-1().
+
+
+
+Referenced by timer\-\_\-start\-\_\-task\-\_\-1().
 
 
 \begin{DoxyCode}
-612 {
-613         quittask = 1;
-614         return;
-615 }
+\{
+    sigval.sival\_int = 0; \textcolor{comment}{// Remove warning}
+    \hyperlink{main2_8c_a90885bae1b9535b16e014fb928e98e37}{timer\_function\_task\_1}();
+\}
 \end{DoxyCode}
 
 
-\hypertarget{main2_8c_a5ce2b6a7dd4d00c90fe18098091044aa}{
-\index{main2.c@{main2.c}!f\_\-timer\_\-task\_\-1@{f\_\-timer\_\-task\_\-1}}
-\index{f\_\-timer\_\-task\_\-1@{f\_\-timer\_\-task\_\-1}!main2.c@{main2.c}}
-\subsubsection[{f\_\-timer\_\-task\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}void f\_\-timer\_\-task\_\-1 (union sigval sigval)}}
-\label{main2_8c_a5ce2b6a7dd4d00c90fe18098091044aa}
-
-
-Definition at line 387 of file main2.c.
-
-
-
-References timer\_\-function\_\-task\_\-1().
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main2_8c_a5ce2b6a7dd4d00c90fe18098091044aa_cgraph}
+\end{center}
+\end{figure}
 
 
 
-Referenced by timer\_\-start\_\-task\_\-1().
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main2_8c_a5ce2b6a7dd4d00c90fe18098091044aa_icgraph}
+\end{center}
+\end{figure}
 
 
+\hypertarget{main2_8c_a5ce2b6a7dd4d00c90fe18098091044aa}{\index{main2.\-c@{main2.\-c}!f\-\_\-timer\-\_\-task\-\_\-1@{f\-\_\-timer\-\_\-task\-\_\-1}}
+\index{f\-\_\-timer\-\_\-task\-\_\-1@{f\-\_\-timer\-\_\-task\-\_\-1}!main2.c@{main2.\-c}}
+\subsubsection[{f\-\_\-timer\-\_\-task\-\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}void f\-\_\-timer\-\_\-task\-\_\-1 (
+\begin{DoxyParamCaption}
+\item[{union sigval sigval}]{}
+\end{DoxyParamCaption}
+)}}\label{main2_8c_a5ce2b6a7dd4d00c90fe18098091044aa}
+
+
+Definition at line 387 of file main2.\-c.
+
+
+
+References timer\-\_\-function\-\_\-task\-\_\-1().
+
+
+
+Referenced by timer\-\_\-start\-\_\-task\-\_\-1().
 
 
 \begin{DoxyCode}
-388 {
-389     sigval.sival_int = 0; // Remove warning
-390     timer_function_task_1();
-391 }
+\{
+    sigval.sival\_int = 0; \textcolor{comment}{// Remove warning}
+    \hyperlink{main2_8c_a90885bae1b9535b16e014fb928e98e37}{timer\_function\_task\_1}();
+\}
 \end{DoxyCode}
 
 
-
-
-Here is the call graph for this function:
-
-
-
-Here is the caller graph for this function:
-
-\hypertarget{main2_8c_a5ce2b6a7dd4d00c90fe18098091044aa}{
-\index{main2.c@{main2.c}!f\_\-timer\_\-task\_\-1@{f\_\-timer\_\-task\_\-1}}
-\index{f\_\-timer\_\-task\_\-1@{f\_\-timer\_\-task\_\-1}!main2.c@{main2.c}}
-\subsubsection[{f\_\-timer\_\-task\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}void f\_\-timer\_\-task\_\-1 (union sigval {\em sigval})}}
-\label{main2_8c_a5ce2b6a7dd4d00c90fe18098091044aa}
-
-
-Definition at line 387 of file main2.c.
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main2_8c_a5ce2b6a7dd4d00c90fe18098091044aa_cgraph}
+\end{center}
+\end{figure}
 
 
 
-References timer\_\-function\_\-task\_\-1().
+
+Here is the caller graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main2_8c_a5ce2b6a7dd4d00c90fe18098091044aa_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{main2_8c_a735ebf3d0d37c7d8187199e6565bcb5c}{\index{main2.\-c@{main2.\-c}!f\-\_\-timer\-\_\-task\-\_\-2@{f\-\_\-timer\-\_\-task\-\_\-2}}
+\index{f\-\_\-timer\-\_\-task\-\_\-2@{f\-\_\-timer\-\_\-task\-\_\-2}!main2.c@{main2.\-c}}
+\subsubsection[{f\-\_\-timer\-\_\-task\-\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}void f\-\_\-timer\-\_\-task\-\_\-2 (
+\begin{DoxyParamCaption}
+\item[{union sigval}]{sigval}
+\end{DoxyParamCaption}
+)}}\label{main2_8c_a735ebf3d0d37c7d8187199e6565bcb5c}
+
+
+Definition at line 393 of file main2.\-c.
 
 
 
-Referenced by timer\_\-start\_\-task\_\-1().
+References timer\-\_\-function\-\_\-task\-\_\-2().
 
 
+
+Referenced by timer\-\_\-start\-\_\-task\-\_\-2().
 
 
 \begin{DoxyCode}
-388 {
-389     sigval.sival_int = 0; // Remove warning
-390     timer_function_task_1();
-391 }
+\{
+    sigval.sival\_int = 0; \textcolor{comment}{// Remove warning}
+    \hyperlink{main2_8c_a01c18e97a4488be2912eb738b2e7f890}{timer\_function\_task\_2}();
+\}
 \end{DoxyCode}
 
 
-
-
-Here is the call graph for this function:
-
-
-
-Here is the caller graph for this function:
-
-\hypertarget{main2_8c_a735ebf3d0d37c7d8187199e6565bcb5c}{
-\index{main2.c@{main2.c}!f\_\-timer\_\-task\_\-2@{f\_\-timer\_\-task\_\-2}}
-\index{f\_\-timer\_\-task\_\-2@{f\_\-timer\_\-task\_\-2}!main2.c@{main2.c}}
-\subsubsection[{f\_\-timer\_\-task\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}void f\_\-timer\_\-task\_\-2 (union sigval sigval)}}
-\label{main2_8c_a735ebf3d0d37c7d8187199e6565bcb5c}
-
-
-Definition at line 393 of file main2.c.
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main2_8c_a735ebf3d0d37c7d8187199e6565bcb5c_cgraph}
+\end{center}
+\end{figure}
 
 
 
-References timer\_\-function\_\-task\_\-2().
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main2_8c_a735ebf3d0d37c7d8187199e6565bcb5c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{main2_8c_a735ebf3d0d37c7d8187199e6565bcb5c}{\index{main2.\-c@{main2.\-c}!f\-\_\-timer\-\_\-task\-\_\-2@{f\-\_\-timer\-\_\-task\-\_\-2}}
+\index{f\-\_\-timer\-\_\-task\-\_\-2@{f\-\_\-timer\-\_\-task\-\_\-2}!main2.c@{main2.\-c}}
+\subsubsection[{f\-\_\-timer\-\_\-task\-\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}void f\-\_\-timer\-\_\-task\-\_\-2 (
+\begin{DoxyParamCaption}
+\item[{union sigval sigval}]{}
+\end{DoxyParamCaption}
+)}}\label{main2_8c_a735ebf3d0d37c7d8187199e6565bcb5c}
+
+
+Definition at line 393 of file main2.\-c.
 
 
 
-Referenced by timer\_\-start\_\-task\_\-2().
+References timer\-\_\-function\-\_\-task\-\_\-2().
 
 
+
+Referenced by timer\-\_\-start\-\_\-task\-\_\-2().
 
 
 \begin{DoxyCode}
-394 {
-395     sigval.sival_int = 0; // Remove warning
-396     timer_function_task_2();
-397 }
+\{
+    sigval.sival\_int = 0; \textcolor{comment}{// Remove warning}
+    \hyperlink{main2_8c_a01c18e97a4488be2912eb738b2e7f890}{timer\_function\_task\_2}();
+\}
 \end{DoxyCode}
 
 
-
-
-Here is the call graph for this function:
-
-
-
-Here is the caller graph for this function:
-
-\hypertarget{main2_8c_a735ebf3d0d37c7d8187199e6565bcb5c}{
-\index{main2.c@{main2.c}!f\_\-timer\_\-task\_\-2@{f\_\-timer\_\-task\_\-2}}
-\index{f\_\-timer\_\-task\_\-2@{f\_\-timer\_\-task\_\-2}!main2.c@{main2.c}}
-\subsubsection[{f\_\-timer\_\-task\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}void f\_\-timer\_\-task\_\-2 (union sigval {\em sigval})}}
-\label{main2_8c_a735ebf3d0d37c7d8187199e6565bcb5c}
-
-
-Definition at line 393 of file main2.c.
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main2_8c_a735ebf3d0d37c7d8187199e6565bcb5c_cgraph}
+\end{center}
+\end{figure}
 
 
 
-References timer\_\-function\_\-task\_\-2().
+
+Here is the caller graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main2_8c_a735ebf3d0d37c7d8187199e6565bcb5c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{main2_8c_a5b2b1fdd5e517470c10e84a2b2bcc5c8}{\index{main2.\-c@{main2.\-c}!get\-\_\-time@{get\-\_\-time}}
+\index{get\-\_\-time@{get\-\_\-time}!main2.c@{main2.\-c}}
+\subsubsection[{get\-\_\-time}]{\setlength{\rightskip}{0pt plus 5cm}int get\-\_\-time (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{time\-\_\-control\-\_\-task\-\_\-s, }
+\item[{double $\ast$}]{Ts\-\_\-control\-\_\-task\-\_\-s, }
+\item[{double $\ast$}]{mean\-\_\-time\-\_\-control\-\_\-task\-\_\-s, }
+\item[{double $\ast$}]{t0\-\_\-control\-\_\-task\-\_\-s}
+\end{DoxyParamCaption}
+)}}\label{main2_8c_a5b2b1fdd5e517470c10e84a2b2bcc5c8}
+
+
+Definition at line 602 of file main2.\-c.
 
 
 
-Referenced by timer\_\-start\_\-task\_\-2().
-
-
+References T\-A\-S\-K\-\_\-\-S\-::period\-\_\-us, S\-U\-C\-C\-E\-S\-S, t0, T\-A\-S\-K\-\_\-\-S\-::t\-\_\-global, T\-A\-S\-K\-\_\-\-S\-::\-T\-\_\-mean\-\_\-global, t\-\_\-task\-\_\-1\-\_\-global, T\-\_\-task\-\_\-1\-\_\-mean\-\_\-global, and task\-\_\-1\-\_\-period\-\_\-us.
 
 
 \begin{DoxyCode}
-394 {
-395     sigval.sival_int = 0; // Remove warning
-396     timer_function_task_2();
-397 }
+\{
+    *time\_control\_task\_s = \hyperlink{main2_8c_a2a2a647912528f7aa86812528dbfe02f}{t\_task\_1\_global};
+    *Ts\_control\_task\_s = \hyperlink{main2_8c_afffc21b0b726e6f4a572d0eefd3b5d69}{task\_1\_period\_us}/1e6;
+    *mean\_time\_control\_task\_s = \hyperlink{main2_8c_a738c330c86a365e72ce29ebca3f1e572}{T\_task\_1\_mean\_global};
+    *t0\_control\_task\_s = \hyperlink{main_8c_a98046aa9aba5dbcc867be625185aef46}{t0};
+    \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};
+\}
 \end{DoxyCode}
+\hypertarget{main2_8c_a840291bc02cba5474a4cb46a9b9566fe}{\index{main2.\-c@{main2.\-c}!main@{main}}
+\index{main@{main}!main2.c@{main2.\-c}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{main2_8c_a840291bc02cba5474a4cb46a9b9566fe}
+
+
+Definition at line 88 of file main2.\-c.
 
 
 
-
-Here is the call graph for this function:
-
-
-
-Here is the caller graph for this function:
-
-\hypertarget{main2_8c_a5b2b1fdd5e517470c10e84a2b2bcc5c8}{
-\index{main2.c@{main2.c}!get\_\-time@{get\_\-time}}
-\index{get\_\-time@{get\_\-time}!main2.c@{main2.c}}
-\subsubsection[{get\_\-time}]{\setlength{\rightskip}{0pt plus 5cm}int get\_\-time (double $\ast$ {\em time\_\-control\_\-task\_\-s}, \/  double $\ast$ {\em Ts\_\-control\_\-task\_\-s}, \/  double $\ast$ {\em mean\_\-time\_\-control\_\-task\_\-s}, \/  double $\ast$ {\em t0\_\-control\_\-task\_\-s})}}
-\label{main2_8c_a5b2b1fdd5e517470c10e84a2b2bcc5c8}
-
-
-Definition at line 602 of file main2.c.
-
-
-
-References TASK\_\-S::period\_\-us, SUCCESS, t0, TASK\_\-S::t\_\-global, TASK\_\-S::T\_\-mean\_\-global, t\_\-task\_\-1\_\-global, T\_\-task\_\-1\_\-mean\_\-global, and task\_\-1\_\-period\_\-us.
-
-
+References I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::acc, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::param\-\_\-gyr\-::act, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::param\-\_\-gyr\-::clk\-\_\-source, S\-P\-I\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::cs, datalogger\-\_\-close(), datalogger\-\_\-init(), D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-R\-U\-N\-N\-I\-N\-G, datalogger\-\_\-status(), datalogger\-\_\-stop(), D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S, datalogger\-\_\-write\-\_\-file(), devices\-\_\-init(), F\-A\-I\-L\-U\-R\-E, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::param\-\_\-acc\-::full\-\_\-res, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::gyr, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::i2c\-\_\-dev, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::param\-\_\-gyr\-::lpf\-\_\-bw, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::mag, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::param\-\_\-mag\-::meas\-\_\-mode, S\-P\-I\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::mode, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::param\-\_\-mag\-::op\-\_\-mode, ping(), pong(), quittask, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::param\-\_\-acc\-::range, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::param\-\_\-mag\-::range, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::param\-\_\-acc\-::rate, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::param\-\_\-gyr\-::rate, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::param\-\_\-mag\-::rate, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::param\-\_\-mag\-::samples\-\_\-avg, S\-P\-I\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::speed, S\-P\-I\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::spi\-\_\-dev, status, S\-U\-C\-C\-E\-S\-S, task1, T\-A\-S\-K1\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-U\-S, task2, T\-A\-S\-K2\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-U\-S, task\-\_\-1\-\_\-period\-\_\-us, timer\-\_\-new\-\_\-task(), timer\-\_\-start\-\_\-task(), timer\-\_\-start\-\_\-task\-\_\-1(), timer\-\_\-start\-\_\-task\-\_\-2(), timer\-\_\-stop\-\_\-task(), timer\-\_\-stop\-\_\-task\-\_\-1(), timer\-\_\-stop\-\_\-task\-\_\-2(), ui\-\_\-close(), and ui\-\_\-init().
 
 
 \begin{DoxyCode}
-603 {
-604     *time_control_task_s = t_task_1_global;
-605     *Ts_control_task_s = task_1_period_us/1e6;
-606     *mean_time_control_task_s = T_task_1_mean_global;
-607     *t0_control_task_s = t0;
-608     return SUCCESS;
-609 }
+\{
+    \textcolor{keywordtype}{int} \hyperlink{communication_8c_a6e27f49150e9a14580fb313cc2777e00}{status} = 0;
+    \textcolor{keywordtype}{int} n = 0;
+    \textcolor{keywordtype}{int} return\_value = \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};    
+ 
+\textcolor{comment}{// Parameters for IMU and SPI}
+
+  \hyperlink{main_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a92172e4757d0f8f9135a659e406c12e5}{acc}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__acc_af57da5d956ffa7e49a184326b6b9c738}{full\_res}=1;
+  \hyperlink{main_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a92172e4757d0f8f9135a659e406c12e5}{acc}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__acc_a30e6a318cad098cd8379416705820f95}{rate}=100;
+  \hyperlink{main_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a92172e4757d0f8f9135a659e406c12e5}{acc}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__acc_a26199b298ef2d353192dfbc706bce8cf}{range}=16;
+  \hyperlink{main_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a5a4557868f1af679a1098808397b02ec}{gyr}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__gyr_a5aa70e1e9634411c89aacfbc570cc91c}{rate}=100;
+  \hyperlink{main_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a5a4557868f1af679a1098808397b02ec}{gyr}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__gyr_aa612f7299b43a1bf1fc597688c2fa02d}{lpf\_bw}=188;
+  \hyperlink{main_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a5a4557868f1af679a1098808397b02ec}{gyr}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__gyr_aca3b791cb480f2da4703d4c256a7de48}{clk\_source}=\textcolor{charliteral}{'Z'};
+  \hyperlink{main_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a5a4557868f1af679a1098808397b02ec}{gyr}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__gyr_a909d153e794ec443be04625ce00e4178}{act}=\textcolor{stringliteral}{"XYZ"};
+  \hyperlink{main_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a26b277dcaf05f3842995df888225f6f4}{mag}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__mag_a234de95423b604b05b851ef90890cea1}{rate}=75;
+  \hyperlink{main_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a26b277dcaf05f3842995df888225f6f4}{mag}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__mag_a40ad27ebdb5fde35257b1dc52e40f476}{range}=0;
+  \hyperlink{main_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a26b277dcaf05f3842995df888225f6f4}{mag}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__mag_a52c22cae6940eb39fb72aca66cfeba9a}{samples\_avg}=8;
+  \hyperlink{main_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a26b277dcaf05f3842995df888225f6f4}{mag}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__mag_a1f3536709c05310005d648f339d70c54}{meas\_mode}=0;
+  \hyperlink{main_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a26b277dcaf05f3842995df888225f6f4}{mag}.\hyperlink{structIMU__PARAM__STRUCT_1_1param__mag_a39b83b3e9ff5bdcafed0bdf6a2de584b}{op\_mode}=0;
+  
+  \hyperlink{main_8c_adec2468b88cf50b20e5cf399a3b7e994}{spi\_param}.\hyperlink{structSPI__PARAM__STRUCT_a82c546c99f6c3daed73c1e23426be847}{mode}=0;
+  \hyperlink{main_8c_adec2468b88cf50b20e5cf399a3b7e994}{spi\_param}.\hyperlink{structSPI__PARAM__STRUCT_a53a8d386594a81eb9bc6f971bfe36c54}{speed}=375000;
+  \hyperlink{main_8c_adec2468b88cf50b20e5cf399a3b7e994}{spi\_param}.\hyperlink{structSPI__PARAM__STRUCT_ae0d62e0a5554783d710b677a017e246f}{cs}=0;
+  
+   \textcolor{comment}{// printf("\(\backslash\)ngpio186 inicialmente = %d\(\backslash\)n",gpio\_read(GPIO\_S0));}
+  \textcolor{comment}{//printf("gpio10 inicialmente = %d\(\backslash\)n",gpio\_read(GPIO\_SHDN));}
+  
+\textcolor{comment}{// Initialization}
+
+  \textcolor{keywordflow}{if}( \hyperlink{communication_8c_a2d1e523ff70db11ca4096f97af5da000}{devices\_init}(&\hyperlink{main_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}, &\hyperlink{main_8c_adec2468b88cf50b20e5cf399a3b7e994}{spi\_param}, &
+      \hyperlink{main_8c_abc42e18d2909e9bc119316283f4ed9db}{mra\_data})==\hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE} )
+  \{
+    perror(\textcolor{stringliteral}{"Unsuccesful devices initialization"});
+    \textcolor{keywordflow}{return} -1;
+  \}
+  \textcolor{keywordflow}{if}( \hyperlink{datalogger_8c_a1977ef253746fd8c008a3641d9822551}{datalogger\_init}()!=\hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS} )
+  \{
+    perror(\textcolor{stringliteral}{"Unsuccesful datalogger initialization"});
+    \textcolor{keywordflow}{return} -1;
+  \}
+  \textcolor{keywordflow}{if}( \hyperlink{group__ui_gab7bfb453918dcc296ff0cea3c79453d0}{ui\_init}() != \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS})
+  \{
+    perror(\textcolor{stringliteral}{"Unsuccesful user interface initialization"});
+    \textcolor{keywordflow}{return} -1;
+  \}
+  \textcolor{comment}{// enc\_zero\_set(enc\_data)!=SUCCESS ? perror("Unsuccesfull encoder set zero
+       "); return -1;}
+
+  \textcolor{comment}{//gpio\_write(GPIO\_S0,1);}
+  \textcolor{comment}{//mra\_data.Out\_0=2275;}
+  \textcolor{comment}{//actuate(spi\_param.spi\_dev,&mra\_data);}
+ 
+  \textcolor{comment}{//return\_value=FAILURE;}
+  
+    \textcolor{comment}{// Main Loop}
+    \textcolor{keywordflow}{if}(return\_value != \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE})
+    \{
+        \textcolor{comment}{//datalogger\_start();}
+        \hyperlink{main2_8c_a0e411070b7f487a8ab6a60b180f50e12}{timer\_start\_task\_1}();
+        usleep(0.5*\hyperlink{main2_8c_afffc21b0b726e6f4a572d0eefd3b5d69}{task\_1\_period\_us});
+        \hyperlink{main2_8c_ae59c93969d017f18e3e38b2f9f7888ca}{timer\_start\_task\_2}();
+        usleep(5*\hyperlink{main2_8c_afffc21b0b726e6f4a572d0eefd3b5d69}{task\_1\_period\_us});
+        
+        \textcolor{keywordflow}{while}(\hyperlink{main_8c_a9d28d012aca080b397aa05c88ee0e94c}{quittask} == 0)
+        \{
+\textcolor{preprocessor}{            #if ANU\_COMPILE\_FOR\_OVERO}
+\textcolor{preprocessor}{}\textcolor{preprocessor}{            #else}
+\textcolor{preprocessor}{}            \textcolor{comment}{//if(datalogger\_status() == DATALOGGER\_RUNNING)
+       datalogger\_update\_IPC();}
+\textcolor{preprocessor}{            #endif}
+\textcolor{preprocessor}{}
+            
+            \textcolor{keywordflow}{if}(++n>100)
+            \{
+              \textcolor{comment}{//printf("n = %d\(\backslash\)n",n);}
+                \textcolor{keywordflow}{if}(\hyperlink{datalogger_8c_a46fd1290d9ee97d5fc7171e1e0dcb0aa}{datalogger\_status}() == \hyperlink{datalogger_8h_a2cf92051a019c8ec1b5c4f5380758f62}{DATALOGGER\_RUNNING}
+      ) \hyperlink{datalogger_8c_a2aedecfce53e1935a41615ceaf378013}{datalogger\_write\_file}();
+                n = 0;
+            \}
+            usleep(5*\hyperlink{main2_8c_afffc21b0b726e6f4a572d0eefd3b5d69}{task\_1\_period\_us});
+        \}
+        \hyperlink{datalogger_8c_aae2ffbc6cbf8f1cfecceb42c5139530a}{datalogger\_stop}();
+        \hyperlink{main2_8c_a54bb5066619e443a28ae5601b5ea3642}{timer\_stop\_task\_1}();
+        usleep(\hyperlink{main2_8c_a95fe7f7d25a81aabd1194bac017074d8}{TASK1\_PERIOD\_US});
+        \hyperlink{main2_8c_a0c69dbcb7b2885a2de116b9d690280de}{timer\_stop\_task\_2}();
+        usleep(\hyperlink{main2_8c_adfe9b03db41d576a3beb124ec44a54d8}{TASK2\_PERIOD\_US});
+    \}
+
+    status = \hyperlink{datalogger_8c_ad22dbe9e235e7ae5737a23796d13ffbd}{datalogger\_close}();
+    \textcolor{keywordflow}{if}(status != \hyperlink{datalogger_8h_abddebaf71d26d40183fccbb1a766b983}{DATALOGGER\_SUCCESS})
+    \{
+        return\_value = \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
+    \}
+
+    status = \hyperlink{group__ui_ga65d8b92b634da17c344458cd57e61f3e}{ui\_close}();
+    \textcolor{keywordflow}{if}(status != \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS})
+    \{
+        return\_value = \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
+    \}
+    
+\textcolor{comment}{/*}
+\textcolor{comment}{    status = protocol\_close();}
+\textcolor{comment}{    if(status != PROTOCOL\_SUCCESS)}
+\textcolor{comment}{    \{}
+\textcolor{comment}{        return\_value = FAILURE;}
+\textcolor{comment}{    \}}
+\textcolor{comment}{}
+\textcolor{comment}{    status = control\_close();}
+\textcolor{comment}{    if(status != CONTROL\_SUCCESS)}
+\textcolor{comment}{    \{}
+\textcolor{comment}{        return\_value = FAILURE;}
+\textcolor{comment}{    \}}
+\textcolor{comment}{}
+\textcolor{comment}{    status = estimation\_close(&estimation\_data);}
+\textcolor{comment}{    if(status != ESTIMATION\_SUCCESS)}
+\textcolor{comment}{    \{}
+\textcolor{comment}{        return\_value = FAILURE;}
+\textcolor{comment}{    \}}
+\textcolor{comment}{*/}
+     close(\hyperlink{main_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a8a870f383fc9ba0b682fdc9b8c0d2734}{i2c\_dev});
+     close(\hyperlink{main_8c_adec2468b88cf50b20e5cf399a3b7e994}{spi\_param}.\hyperlink{structSPI__PARAM__STRUCT_abe385c44333d268d17cf648c8e371cad}{spi\_dev});
+
+
+    \textcolor{keywordflow}{return} return\_value;
+\}
 \end{DoxyCode}
 
 
-\hypertarget{main2_8c_a840291bc02cba5474a4cb46a9b9566fe}{
-\index{main2.c@{main2.c}!main@{main}}
-\index{main@{main}!main2.c@{main2.c}}
-\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (void)}}
-\label{main2_8c_a840291bc02cba5474a4cb46a9b9566fe}
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main2_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph}
+\end{center}
+\end{figure}
 
 
-Definition at line 88 of file main2.c.
+\hypertarget{main2_8c_a26855b7739897854265d51aa61329390}{\index{main2.\-c@{main2.\-c}!periodic\-\_\-task\-\_\-1@{periodic\-\_\-task\-\_\-1}}
+\index{periodic\-\_\-task\-\_\-1@{periodic\-\_\-task\-\_\-1}!main2.c@{main2.\-c}}
+\subsubsection[{periodic\-\_\-task\-\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}int periodic\-\_\-task\-\_\-1 (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{main2_8c_a26855b7739897854265d51aa61329390}
+
+
+Definition at line 211 of file main2.\-c.
 
 
 
-References IMU\_\-PARAM\_\-STRUCT::acc, IMU\_\-PARAM\_\-STRUCT::param\_\-gyr::act, IMU\_\-PARAM\_\-STRUCT::param\_\-gyr::clk\_\-source, SPI\_\-PARAM\_\-STRUCT::cs, datalogger\_\-close(), datalogger\_\-init(), DATALOGGER\_\-RUNNING, datalogger\_\-status(), datalogger\_\-stop(), DATALOGGER\_\-SUCCESS, datalogger\_\-write\_\-file(), devices\_\-init(), FAILURE, IMU\_\-PARAM\_\-STRUCT::param\_\-acc::full\_\-res, IMU\_\-PARAM\_\-STRUCT::gyr, IMU\_\-PARAM\_\-STRUCT::i2c\_\-dev, IMU\_\-PARAM\_\-STRUCT::param\_\-gyr::lpf\_\-bw, IMU\_\-PARAM\_\-STRUCT::mag, IMU\_\-PARAM\_\-STRUCT::param\_\-mag::meas\_\-mode, SPI\_\-PARAM\_\-STRUCT::mode, IMU\_\-PARAM\_\-STRUCT::param\_\-mag::op\_\-mode, ping(), pong(), quittask, IMU\_\-PARAM\_\-STRUCT::param\_\-mag::range, IMU\_\-PARAM\_\-STRUCT::param\_\-acc::range, IMU\_\-PARAM\_\-STRUCT::param\_\-mag::rate, IMU\_\-PARAM\_\-STRUCT::param\_\-gyr::rate, IMU\_\-PARAM\_\-STRUCT::param\_\-acc::rate, IMU\_\-PARAM\_\-STRUCT::param\_\-mag::samples\_\-avg, SPI\_\-PARAM\_\-STRUCT::speed, SPI\_\-PARAM\_\-STRUCT::spi\_\-dev, status, SUCCESS, task1, TASK1\_\-PERIOD\_\-US, task2, TASK2\_\-PERIOD\_\-US, task\_\-1\_\-period\_\-us, timer\_\-new\_\-task(), timer\_\-start\_\-task(), timer\_\-start\_\-task\_\-1(), timer\_\-start\_\-task\_\-2(), timer\_\-stop\_\-task(), timer\_\-stop\_\-task\_\-1(), timer\_\-stop\_\-task\_\-2(), ui\_\-close(), and ui\_\-init().
+References actuate(), D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-N\-O\-T\-\_\-\-R\-U\-N\-N\-I\-N\-G, D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-R\-U\-N\-N\-I\-N\-G, datalogger\-\_\-set\-\_\-\-Ts(), datalogger\-\_\-status(), datalogger\-\_\-update(), failure, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::i2c\-\_\-dev, read\-\_\-all\-\_\-data(), reset\-\_\-timer(), S\-P\-I\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::spi\-\_\-dev, S\-U\-C\-C\-E\-S\-S, t0, T\-\_\-task\-\_\-1\-\_\-exec\-\_\-global, t\-\_\-task\-\_\-1\-\_\-global, T\-\_\-task\-\_\-2\-\_\-exec\-\_\-global, task\-\_\-1\-\_\-period\-\_\-us, total, and M\-R\-A\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::v\-\_\-ctl.
 
 
+
+Referenced by timer\-\_\-function\-\_\-task\-\_\-1().
 
 
 \begin{DoxyCode}
-89 {
-90     int status = 0;
-91     int n = 0;
-92     int return_value = SUCCESS;    
-93  
-94 // Parameters for IMU and SPI
-95 
-96   imu_param.acc.full_res=1;
-97   imu_param.acc.rate=100;
-98   imu_param.acc.range=16;
-99   imu_param.gyr.rate=100;
-100   imu_param.gyr.lpf_bw=188;
-101   imu_param.gyr.clk_source='Z';
-102   imu_param.gyr.act="XYZ";
-103   imu_param.mag.rate=75;
-104   imu_param.mag.range=0;
-105   imu_param.mag.samples_avg=8;
-106   imu_param.mag.meas_mode=0;
-107   imu_param.mag.op_mode=0;
-108   
-109   spi_param.mode=0;
-110   spi_param.speed=375000;
-111   spi_param.cs=0;
-112   
-113    // printf("\ngpio186 inicialmente = %d\n",gpio_read(GPIO_S0));
-114   //printf("gpio10 inicialmente = %d\n",gpio_read(GPIO_SHDN));
-115   
-116 // Initialization
-117 
-118   if( devices_init(&imu_param, &spi_param, &mra_data)==FAILURE )
-119   {
-120     perror("Unsuccesful devices initialization");
-121     return -1;
-122   }
-123   if( datalogger_init()!=SUCCESS )
-124   {
-125     perror("Unsuccesful datalogger initialization");
-126     return -1;
-127   }
-128   if( ui_init() != SUCCESS)
-129   {
-130     perror("Unsuccesful user interface initialization");
-131     return -1;
-132   }
-133   // enc_zero_set(enc_data)!=SUCCESS ? perror("Unsuccesfull encoder set zero "); 
-      return -1;
-134 
-135   //gpio_write(GPIO_S0,1);
-136   //mra_data.Out_0=2275;
-137   //actuate(spi_param.spi_dev,&mra_data);
-138  
-139   //return_value=FAILURE;
-140   
-141     // Main Loop
-142     if(return_value != FAILURE)
-143     {
-144         //datalogger_start();
-145         timer_start_task_1();
-146         usleep(0.5*task_1_period_us);
-147         timer_start_task_2();
-148         usleep(5*task_1_period_us);
-149         
-150         while(quittask == 0)
-151         {
-152             #if ANU_COMPILE_FOR_OVERO
-153             #else
-154             //if(datalogger_status() == DATALOGGER_RUNNING) datalogger_update_IPC
-      ();
-155             #endif
-156 
-157             
-158             if(++n>100)
-159             {
-160               //printf("n = %d\n",n);
-161                 if(datalogger_status() == DATALOGGER_RUNNING) 
-      datalogger_write_file();
-162                 n = 0;
-163             }
-164             usleep(5*task_1_period_us);
-165         }
-166         datalogger_stop();
-167         timer_stop_task_1();
-168         usleep(TASK1_PERIOD_US);
-169         timer_stop_task_2();
-170         usleep(TASK2_PERIOD_US);
-171     }
-172 
-173     status = datalogger_close();
-174     if(status != DATALOGGER_SUCCESS)
-175     {
-176         return_value = FAILURE;
-177     }
-178 
-179     status = ui_close();
-180     if(status != SUCCESS)
-181     {
-182         return_value = FAILURE;
-183     }
-184     
-185 /*
-186     status = protocol_close();
-187     if(status != PROTOCOL_SUCCESS)
-188     {
-189         return_value = FAILURE;
-190     }
-191 
-192     status = control_close();
-193     if(status != CONTROL_SUCCESS)
-194     {
-195         return_value = FAILURE;
-196     }
-197 
-198     status = estimation_close(&estimation_data);
-199     if(status != ESTIMATION_SUCCESS)
-200     {
-201         return_value = FAILURE;
-202     }
-203 */
-204      close(imu_param.i2c_dev);
-205      close(spi_param.spi_dev);
-206 
-207 
-208     return return_value;
-209 }
+\{
+    \textcolor{comment}{//static int previous\_calibration\_status = CALIBRATION\_NOT\_RUNNING;}
+    \textcolor{comment}{//int current\_calibration\_status; // Used to detect lowering edge}
+    \textcolor{keyword}{static} \textcolor{keywordtype}{int} previous\_datalogger\_status = \hyperlink{datalogger_8h_a1a224da36800f52f56f30619849f7f5d}{DATALOGGER\_NOT\_RUNNING}
+      ;
+    \textcolor{keywordtype}{int} current\_datalogger\_status; \textcolor{comment}{// Used to detect rising edge}
+    \textcolor{keywordtype}{char} user =0;
+   \textcolor{comment}{/* int buff\_i=0; //i of buffer}
+\textcolor{comment}{    int i, j, k, equal=0;}
+\textcolor{comment}{    short int buff[3][3][3]; //\{acc,gyr,mag\}\{x,y,z\}\{i=1,2,3\}}
+\textcolor{comment}{*/}
+
+    \textcolor{comment}{// Main communication/control thread}
+
+    \textcolor{comment}{//Acquire}
+    \hyperlink{main_8c_ac7af894858cf396a219d632f40afdc8d}{total}++;
+    \textcolor{keywordflow}{if}( \hyperlink{communication_8c_a26f82e8af3b5ce23d5cd3a41db6e0b68}{read\_all\_data}(\hyperlink{main_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a8a870f383fc9ba0b682fdc9b8c0d2734}{i2c\_dev}, \hyperlink{main_8c_adec2468b88cf50b20e5cf399a3b7e994}{spi\_param}
+      .\hyperlink{structSPI__PARAM__STRUCT_abe385c44333d268d17cf648c8e371cad}{spi\_dev}, &\hyperlink{main_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\_data}, &\hyperlink{main_8c_a5650ece8c3a277c7f158d75ae65265fa}{eff\_data}, &\hyperlink{main_8c_abc42e18d2909e9bc119316283f4ed9db}{mra\_data}, &
+      \hyperlink{main_8c_aaa441e18ae805c4f3efb0b5231d1cfe7}{enc\_data}) != \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS})
+      \hyperlink{main_8c_a4f35e5ea2395561d0bd3b2f45612dc2c}{failure}++;
+        \textcolor{comment}{/*buff\_i=buff\_i%5;}
+\textcolor{comment}{        buff[0][0][buff\_i]=imu\_data.acc.x;}
+\textcolor{comment}{        buff[0][1][buff\_i]=imu\_data.acc.y;}
+\textcolor{comment}{        buff[0][2][buff\_i]=imu\_data.acc.z;}
+\textcolor{comment}{        buff[1][0][buff\_i]=imu\_data.gyr.x;}
+\textcolor{comment}{        buff[1][0][buff\_i]=imu\_data.gyr.x;}
+\textcolor{comment}{        buff[1][1][buff\_i]=imu\_data.gyr.y;}
+\textcolor{comment}{        buff[1][2][buff\_i]=imu\_data.gyr.z;}
+\textcolor{comment}{        buff[2][0][buff\_i]=imu\_data.mag.x;}
+\textcolor{comment}{        buff[2][1][buff\_i]=imu\_data.mag.y;}
+\textcolor{comment}{        buff[2][2][buff\_i]=imu\_data.mag.z;}
+\textcolor{comment}{        buff\_i++;}
+\textcolor{comment}{        }
+\textcolor{comment}{        for( i=0; i<3; i++)}
+\textcolor{comment}{        \{}
+\textcolor{comment}{          }
+\textcolor{comment}{          for( j=0; j<3; j++)}
+\textcolor{comment}{            for( k=1; k<3; k++)}
+\textcolor{comment}{            \{}
+\textcolor{comment}{              if( buff[i][j][k]==buff[i][j][0] )}
+\textcolor{comment}{                equal=1;}
+\textcolor{comment}{              else}
+\textcolor{comment}{                equal=0;}
+\textcolor{comment}{            \}}
+\textcolor{comment}{          if( equal==1)}
+\textcolor{comment}{            i=3;}
+\textcolor{comment}{        \}}
+\textcolor{comment}{        if( equal==1 )}
+\textcolor{comment}{        \{}
+\textcolor{comment}{          devices\_init(&imu\_param, &spi\_param, &mra\_data);}
+\textcolor{comment}{          equal=0;}
+\textcolor{comment}{        \}*/}
+\textcolor{comment}{/*    if(read\_all\_data(imu\_param.i2c\_dev, spi\_param.spi\_dev, &imu\_data,
+       &eff\_data) != SUCCESS)}
+\textcolor{comment}{    \{}
+\textcolor{comment}{        failure++;}
+\textcolor{comment}{    \}}
+\textcolor{comment}{*/}
+    \textcolor{comment}{// Calibrate and Estimate}
+    \textcolor{comment}{//calibrate\_all(&imu\_data);}
+    \textcolor{comment}{//calibration\_calibrate\_all(&pwm\_read\_data, &scp1000\_data, &battery\_data,
+       &gps\_data, &imu\_data, &pitot\_data, &sonar\_data,
+       &calibration\_local\_coordinate\_system\_data, &calibration\_altimeter\_data, &calibration\_local\_fields\_data,
+       &gps\_measure, &imu\_measure, &magnetometer\_measure);}
+    \textcolor{comment}{//estimation\_update\_state\_estimate(&estimation\_data, &gps\_measure,
+       &imu\_measure, &magnetometer\_measure, &sonar\_measure, &calibration\_local\_fields\_data,
+       task\_1\_period\_us/(double)1e6);}
+
+    \textcolor{comment}{// Control}
+    \hyperlink{main_8c_abc42e18d2909e9bc119316283f4ed9db}{mra\_data}.\hyperlink{structMRA__DATA__STRUCT_a64b4e6bb604e58de593a60c87942b966}{v\_ctl}=1275+(uint8\_t)(800*cosf(\hyperlink{main2_8c_a2a2a647912528f7aa86812528dbfe02f}{t\_task\_1\_global}
+      *1000));
+    \textcolor{comment}{//control\_main\_task(t\_task\_1\_global, &pwm\_write\_data, &pwm\_read\_data,
+       &control\_data, &estimation\_data);}
+
+    \textcolor{comment}{// Actuate}
+    \hyperlink{communication_8c_a1d5f01d0124cff7030b5c4951b4bbefa}{actuate}(\hyperlink{main_8c_adec2468b88cf50b20e5cf399a3b7e994}{spi\_param}.\hyperlink{structSPI__PARAM__STRUCT_abe385c44333d268d17cf648c8e371cad}{spi\_dev}, &\hyperlink{main_8c_abc42e18d2909e9bc119316283f4ed9db}{mra\_data});
+    \textcolor{comment}{//protocol\_send\_actuation\_data(&pwm\_write\_data);}
+
+    \textcolor{comment}{// Log}
+    \textcolor{comment}{/*user=getch();}
+\textcolor{comment}{    switch(user)\{}
+\textcolor{comment}{      case 'e': }
+\textcolor{comment}{        exit\_program();}
+\textcolor{comment}{        break;}
+\textcolor{comment}{      case 'a':}
+\textcolor{comment}{        acquire=1;}
+\textcolor{comment}{        break;}
+\textcolor{comment}{      case 's':}
+\textcolor{comment}{        acquire=0;}
+\textcolor{comment}{        break;}
+\textcolor{comment}{      default:}
+\textcolor{comment}{        break;}
+\textcolor{comment}{    \}*/}
+    current\_datalogger\_status = \hyperlink{datalogger_8c_a46fd1290d9ee97d5fc7171e1e0dcb0aa}{datalogger\_status}();
+    \textcolor{keywordflow}{if}( (current\_datalogger\_status == \hyperlink{datalogger_8h_a2cf92051a019c8ec1b5c4f5380758f62}{DATALOGGER\_RUNNING}))
+    \{
+        \textcolor{keywordflow}{if}(previous\_datalogger\_status == \hyperlink{datalogger_8h_a1a224da36800f52f56f30619849f7f5d}{DATALOGGER\_NOT\_RUNNING}
+      ) \textcolor{comment}{// Rising edge}
+        \{
+            \hyperlink{datalogger_8c_afb69d166f8d53042825174cee225ea49}{datalogger\_set\_Ts}(\hyperlink{main2_8c_afffc21b0b726e6f4a572d0eefd3b5d69}{task\_1\_period\_us}
+      /1e6);
+            \hyperlink{main2_8c_a97a188c3a74115770124cf0bf0c1e407}{reset\_timer}();
+        \}
+        \hyperlink{datalogger_8c_ad89a56e2f057ace8c28d78eb67703e7d}{datalogger\_update}(\hyperlink{main2_8c_a2a2a647912528f7aa86812528dbfe02f}{t\_task\_1\_global}, 
+      \hyperlink{main2_8c_acdaa4a9b0e1be3dfa53b52df6410ad3b}{T\_task\_1\_exec\_global}, \hyperlink{main2_8c_a9629c77cd3dba9d47d15c2e51bdde09d}{T\_task\_2\_exec\_global}
+      , \hyperlink{main_8c_a98046aa9aba5dbcc867be625185aef46}{t0}, &\hyperlink{main_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\_data}, &\hyperlink{main_8c_a5650ece8c3a277c7f158d75ae65265fa}{eff\_data}, &\hyperlink{main_8c_abc42e18d2909e9bc119316283f4ed9db}{mra\_data} \textcolor{comment}{/*&imu\_measure,
+       &magnetometer\_measure, &estimation\_data, &control\_data*/});
+  \textcolor{comment}{//printf("\(\backslash\)n    %d\(\backslash\)t|",i);}
+ \textcolor{comment}{/* printw("%d\(\backslash\)t|",eff\_data.F.x);}
+\textcolor{comment}{    printw("\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t|",imu\_data.acc.x,imu\_data.acc.y,imu\_data.acc.z);}
+\textcolor{comment}{    printw("\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t|",imu\_data.mag.x,imu\_data.mag.y,imu\_data.mag.z);}
+\textcolor{comment}{    printw("\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t%d\(\backslash\)t%d",imu\_data.gyr.x,imu\_data.gyr.y,imu\_data.gyr.z,
+       imu\_data.temp);}
+\textcolor{comment}{    printw("\(\backslash\)t%d\(\backslash\)t%d",eff\_data.new\_data,imu\_data.new\_data);}
+\textcolor{comment}{    printw("\(\backslash\)t%d\(\backslash\)t%d",mra\_data.Out\_0, mra\_data.Read\_0);}
+\textcolor{comment}{    printw("\(\backslash\)n");}
+\textcolor{comment}{    refresh();*/}
+    \}
+    previous\_datalogger\_status = current\_datalogger\_status;
+
+\textcolor{comment}{/*    current\_calibration\_status = calibration\_get\_status();}
+\textcolor{comment}{    if(current\_calibration\_status == CALIBRATION\_RUNNING)}
+\textcolor{comment}{    \{}
+\textcolor{comment}{        calibration\_imu\_add\_sample\_bias\_estimate(&imu\_data);}
+\textcolor{comment}{        calibration\_altimeter\_add\_sample\_initial\_pressure(&scp1000\_data,
+       &calibration\_altimeter\_data);}
+\textcolor{comment}{    \}}
+\textcolor{comment}{    else // Calibration not running}
+\textcolor{comment}{    \{}
+\textcolor{comment}{        if(previous\_calibration\_status == CALIBRATION\_RUNNING) // Lowering edge}
+\textcolor{comment}{        \{}
+\textcolor{comment}{            calibration\_imu\_finish\_bias\_estimate(&imu\_data);}
+\textcolor{comment}{           
+       calibration\_altimeter\_finish\_initial\_pressure\_estimate(&calibration\_altimeter\_data);}
+\textcolor{comment}{        \}}
+\textcolor{comment}{    \}}
+\textcolor{comment}{    previous\_calibration\_status = current\_calibration\_status;}
+\textcolor{comment}{*/}
+    \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};
+\}
 \end{DoxyCode}
 
 
-
-
-Here is the call graph for this function:
-
-\hypertarget{main2_8c_a26855b7739897854265d51aa61329390}{
-\index{main2.c@{main2.c}!periodic\_\-task\_\-1@{periodic\_\-task\_\-1}}
-\index{periodic\_\-task\_\-1@{periodic\_\-task\_\-1}!main2.c@{main2.c}}
-\subsubsection[{periodic\_\-task\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}int periodic\_\-task\_\-1 (void)}}
-\label{main2_8c_a26855b7739897854265d51aa61329390}
-
-
-Definition at line 211 of file main2.c.
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main2_8c_a26855b7739897854265d51aa61329390_cgraph}
+\end{center}
+\end{figure}
 
 
 
-References actuate(), DATALOGGER\_\-NOT\_\-RUNNING, DATALOGGER\_\-RUNNING, datalogger\_\-set\_\-Ts(), datalogger\_\-status(), datalogger\_\-update(), failure, IMU\_\-PARAM\_\-STRUCT::i2c\_\-dev, read\_\-all\_\-data(), reset\_\-timer(), SPI\_\-PARAM\_\-STRUCT::spi\_\-dev, SUCCESS, t0, T\_\-task\_\-1\_\-exec\_\-global, t\_\-task\_\-1\_\-global, T\_\-task\_\-2\_\-exec\_\-global, task\_\-1\_\-period\_\-us, total, and MRA\_\-DATA\_\-STRUCT::v\_\-ctl.
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main2_8c_a26855b7739897854265d51aa61329390_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{main2_8c_a944f7352f18ed248c1b1143f51edc391}{\index{main2.\-c@{main2.\-c}!periodic\-\_\-task\-\_\-2@{periodic\-\_\-task\-\_\-2}}
+\index{periodic\-\_\-task\-\_\-2@{periodic\-\_\-task\-\_\-2}!main2.c@{main2.\-c}}
+\subsubsection[{periodic\-\_\-task\-\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}int periodic\-\_\-task\-\_\-2 (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{main2_8c_a944f7352f18ed248c1b1143f51edc391}
+
+
+Definition at line 334 of file main2.\-c.
 
 
 
-Referenced by timer\_\-function\_\-task\_\-1().
+References I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::acc, buff, buff\-\_\-i, devices\-\_\-init(), failure, I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::gyr, I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::i2c\-\_\-dev, I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::mag, S\-P\-I\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T\-::spi\-\_\-dev, S\-U\-C\-C\-E\-S\-S, telemetry\-\_\-mode, total, U\-I\-\_\-\-N\-C\-U\-R\-S\-E\-S\-\_\-\-M\-O\-D\-E, ui\-\_\-update(), D\-A\-T\-A\-\_\-\-X\-Y\-Z\-::x, D\-A\-T\-A\-\_\-\-X\-Y\-Z\-::y, and D\-A\-T\-A\-\_\-\-X\-Y\-Z\-::z.
 
 
+
+Referenced by timer\-\_\-function\-\_\-task\-\_\-2().
 
 
 \begin{DoxyCode}
-212 {
-213     //static int previous_calibration_status = CALIBRATION_NOT_RUNNING;
-214     //int current_calibration_status; // Used to detect lowering edge
-215     static int previous_datalogger_status = DATALOGGER_NOT_RUNNING;
-216     int current_datalogger_status; // Used to detect rising edge
-217     char user =0;
-218    /* int buff_i=0; //i of buffer
-219     int i, j, k, equal=0;
-220     short int buff[3][3][3]; //{acc,gyr,mag}{x,y,z}{i=1,2,3}
-221 */
-222 
-223     // Main communication/control thread
-224 
-225     //Acquire
-226     total++;
-227     if( read_all_data(imu_param.i2c_dev, spi_param.spi_dev, &imu_data, &eff_data,
-       &mra_data, &enc_data) != SUCCESS)
-228       failure++;
-229         /*buff_i=buff_i%5;
-230         buff[0][0][buff_i]=imu_data.acc.x;
-231         buff[0][1][buff_i]=imu_data.acc.y;
-232         buff[0][2][buff_i]=imu_data.acc.z;
-233         buff[1][0][buff_i]=imu_data.gyr.x;
-234         buff[1][0][buff_i]=imu_data.gyr.x;
-235         buff[1][1][buff_i]=imu_data.gyr.y;
-236         buff[1][2][buff_i]=imu_data.gyr.z;
-237         buff[2][0][buff_i]=imu_data.mag.x;
-238         buff[2][1][buff_i]=imu_data.mag.y;
-239         buff[2][2][buff_i]=imu_data.mag.z;
-240         buff_i++;
-241         
-242         for( i=0; i<3; i++)
-243         {
-244           
-245           for( j=0; j<3; j++)
-246             for( k=1; k<3; k++)
-247             {
-248               if( buff[i][j][k]==buff[i][j][0] )
-249                 equal=1;
-250               else
-251                 equal=0;
-252             }
-253           if( equal==1)
-254             i=3;
-255         }
-256         if( equal==1 )
-257         {
-258           devices_init(&imu_param, &spi_param, &mra_data);
-259           equal=0;
-260         }*/
-261 /*    if(read_all_data(imu_param.i2c_dev, spi_param.spi_dev, &imu_data, &eff_data
-      ) != SUCCESS)
-262     {
-263         failure++;
-264     }
-265 */
-266     // Calibrate and Estimate
-267     //calibrate_all(&imu_data);
-268     //calibration_calibrate_all(&pwm_read_data, &scp1000_data, &battery_data, &gp
-      s_data, &imu_data, &pitot_data, &sonar_data, &calibration_local_coordinate_system
-      _data, &calibration_altimeter_data, &calibration_local_fields_data, &gps_measure,
-       &imu_measure, &magnetometer_measure);
-269     //estimation_update_state_estimate(&estimation_data, &gps_measure, &imu_measu
-      re, &magnetometer_measure, &sonar_measure, &calibration_local_fields_data, task_1
-      _period_us/(double)1e6);
-270 
-271     // Control
-272     mra_data.v_ctl=1275+(uint8_t)(800*cosf(t_task_1_global*1000));
-273     //control_main_task(t_task_1_global, &pwm_write_data, &pwm_read_data, &contro
-      l_data, &estimation_data);
-274 
-275     // Actuate
-276     actuate(spi_param.spi_dev, &mra_data);
-277     //protocol_send_actuation_data(&pwm_write_data);
-278 
-279     // Log
-280     /*user=getch();
-281     switch(user){
-282       case 'e': 
-283         exit_program();
-284         break;
-285       case 'a':
-286         acquire=1;
-287         break;
-288       case 's':
-289         acquire=0;
-290         break;
-291       default:
-292         break;
-293     }*/
-294     current_datalogger_status = datalogger_status();
-295     if( (current_datalogger_status == DATALOGGER_RUNNING))
-296     {
-297         if(previous_datalogger_status == DATALOGGER_NOT_RUNNING) // Rising edge
-298         {
-299             datalogger_set_Ts(task_1_period_us/1e6);
-300             reset_timer();
-301         }
-302         datalogger_update(t_task_1_global, T_task_1_exec_global, 
-      T_task_2_exec_global, t0, &imu_data, &eff_data, &mra_data /*&imu_measure, &magnet
-      ometer_measure, &estimation_data, &control_data*/);
-303   //printf("\n    %d\t|",i);
-304  /* printw("%d\t|",eff_data.F.x);
-305     printw("\t%d\t%d\t%d\t|",imu_data.acc.x,imu_data.acc.y,imu_data.acc.z);
-306     printw("\t%d\t%d\t%d\t|",imu_data.mag.x,imu_data.mag.y,imu_data.mag.z);
-307     printw("\t%d\t%d\t%d\t%d",imu_data.gyr.x,imu_data.gyr.y,imu_data.gyr.z, imu_d
-      ata.temp);
-308     printw("\t%d\t%d",eff_data.new_data,imu_data.new_data);
-309     printw("\t%d\t%d",mra_data.Out_0, mra_data.Read_0);
-310     printw("\n");
-311     refresh();*/
-312     }
-313     previous_datalogger_status = current_datalogger_status;
-314 
-315 /*    current_calibration_status = calibration_get_status();
-316     if(current_calibration_status == CALIBRATION_RUNNING)
-317     {
-318         calibration_imu_add_sample_bias_estimate(&imu_data);
-319         calibration_altimeter_add_sample_initial_pressure(&scp1000_data, &calibra
-      tion_altimeter_data);
-320     }
-321     else // Calibration not running
-322     {
-323         if(previous_calibration_status == CALIBRATION_RUNNING) // Lowering edge
-324         {
-325             calibration_imu_finish_bias_estimate(&imu_data);
-326             calibration_altimeter_finish_initial_pressure_estimate(&calibration_a
-      ltimeter_data);
-327         }
-328     }
-329     previous_calibration_status = current_calibration_status;
-330 */
-331     return SUCCESS;
-332 }
+\{
+
+    \textcolor{keywordtype}{int} i, j, k, equal=0;
+
+    \textcolor{comment}{// UI thread}
+    \textcolor{keywordflow}{if}(\hyperlink{main2_8c_a5045187bb0afe92c41ce73bc602fd3ca}{telemetry\_mode} == \hyperlink{ui_8h_a5f863c47136ccbe4db74101b9a3e83ca}{UI\_NCURSES\_MODE})
+    \{
+        \hyperlink{group__ui_ga42e4dac2d138061a74c572358c8ebf49}{ui\_update}(&\hyperlink{main_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\_data}, &\hyperlink{main_8c_a5650ece8c3a277c7f158d75ae65265fa}{eff\_data}, &\hyperlink{main_8c_abc42e18d2909e9bc119316283f4ed9db}{mra\_data}
+      ,&\hyperlink{main_8c_aaa441e18ae805c4f3efb0b5231d1cfe7}{enc\_data}, \hyperlink{main_8c_ac7af894858cf396a219d632f40afdc8d}{total}, \hyperlink{main_8c_a4f35e5ea2395561d0bd3b2f45612dc2c}{failure});
+    \}
+                
+            \hyperlink{main2_8c_ac0f4eb3a1def152855159c698feaf977}{buff\_i}=\hyperlink{main2_8c_ac0f4eb3a1def152855159c698feaf977}{buff\_i}%5;
+        \hyperlink{main2_8c_aaa9d39905d1be632c8232f11155291d0}{buff}[0][0][\hyperlink{main2_8c_ac0f4eb3a1def152855159c698feaf977}{buff\_i}]=\hyperlink{main_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\_data}.\hyperlink{structIMU__DATA__STRUCT_a448f284bf44eb503affda586ad5fa9d2}{acc}.\hyperlink{structDATA__XYZ_a54c1596e9f9969fd9c21e8458024ecfb}{x};
+        \hyperlink{main2_8c_aaa9d39905d1be632c8232f11155291d0}{buff}[0][1][\hyperlink{main2_8c_ac0f4eb3a1def152855159c698feaf977}{buff\_i}]=\hyperlink{main_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\_data}.\hyperlink{structIMU__DATA__STRUCT_a448f284bf44eb503affda586ad5fa9d2}{acc}.\hyperlink{structDATA__XYZ_a94bbb1c889bf53eb6a5fffa2b39322cf}{y};
+        \hyperlink{main2_8c_aaa9d39905d1be632c8232f11155291d0}{buff}[0][2][\hyperlink{main2_8c_ac0f4eb3a1def152855159c698feaf977}{buff\_i}]=\hyperlink{main_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\_data}.\hyperlink{structIMU__DATA__STRUCT_a448f284bf44eb503affda586ad5fa9d2}{acc}.\hyperlink{structDATA__XYZ_a69e89ab0ec6e5d72fc5d54f62cc07fb5}{z};
+        \hyperlink{main2_8c_aaa9d39905d1be632c8232f11155291d0}{buff}[1][0][\hyperlink{main2_8c_ac0f4eb3a1def152855159c698feaf977}{buff\_i}]=\hyperlink{main_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\_data}.\hyperlink{structIMU__DATA__STRUCT_a0c1ac26626e4434a2ee124a1928a23a1}{gyr}.\hyperlink{structDATA__XYZ_a54c1596e9f9969fd9c21e8458024ecfb}{x};
+        \hyperlink{main2_8c_aaa9d39905d1be632c8232f11155291d0}{buff}[1][0][\hyperlink{main2_8c_ac0f4eb3a1def152855159c698feaf977}{buff\_i}]=\hyperlink{main_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\_data}.\hyperlink{structIMU__DATA__STRUCT_a0c1ac26626e4434a2ee124a1928a23a1}{gyr}.\hyperlink{structDATA__XYZ_a54c1596e9f9969fd9c21e8458024ecfb}{x};
+        \hyperlink{main2_8c_aaa9d39905d1be632c8232f11155291d0}{buff}[1][1][\hyperlink{main2_8c_ac0f4eb3a1def152855159c698feaf977}{buff\_i}]=\hyperlink{main_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\_data}.\hyperlink{structIMU__DATA__STRUCT_a0c1ac26626e4434a2ee124a1928a23a1}{gyr}.\hyperlink{structDATA__XYZ_a94bbb1c889bf53eb6a5fffa2b39322cf}{y};
+        \hyperlink{main2_8c_aaa9d39905d1be632c8232f11155291d0}{buff}[1][2][\hyperlink{main2_8c_ac0f4eb3a1def152855159c698feaf977}{buff\_i}]=\hyperlink{main_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\_data}.\hyperlink{structIMU__DATA__STRUCT_a0c1ac26626e4434a2ee124a1928a23a1}{gyr}.\hyperlink{structDATA__XYZ_a69e89ab0ec6e5d72fc5d54f62cc07fb5}{z};
+        \hyperlink{main2_8c_aaa9d39905d1be632c8232f11155291d0}{buff}[2][0][\hyperlink{main2_8c_ac0f4eb3a1def152855159c698feaf977}{buff\_i}]=\hyperlink{main_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\_data}.\hyperlink{structIMU__DATA__STRUCT_a40c7df8b6d49297aa52873cfd9b60daa}{mag}.\hyperlink{structDATA__XYZ_a54c1596e9f9969fd9c21e8458024ecfb}{x};
+        \hyperlink{main2_8c_aaa9d39905d1be632c8232f11155291d0}{buff}[2][1][\hyperlink{main2_8c_ac0f4eb3a1def152855159c698feaf977}{buff\_i}]=\hyperlink{main_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\_data}.\hyperlink{structIMU__DATA__STRUCT_a40c7df8b6d49297aa52873cfd9b60daa}{mag}.\hyperlink{structDATA__XYZ_a94bbb1c889bf53eb6a5fffa2b39322cf}{y};
+        \hyperlink{main2_8c_aaa9d39905d1be632c8232f11155291d0}{buff}[2][2][\hyperlink{main2_8c_ac0f4eb3a1def152855159c698feaf977}{buff\_i}]=\hyperlink{main_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\_data}.\hyperlink{structIMU__DATA__STRUCT_a40c7df8b6d49297aa52873cfd9b60daa}{mag}.\hyperlink{structDATA__XYZ_a69e89ab0ec6e5d72fc5d54f62cc07fb5}{z};
+        \hyperlink{main2_8c_ac0f4eb3a1def152855159c698feaf977}{buff\_i}++;
+        
+        \textcolor{keywordflow}{for}( i=0; i<3; i++)
+        \{
+          
+          \textcolor{keywordflow}{for}( j=0; j<3; j++)
+            \textcolor{keywordflow}{for}( k=1; k<3; k++)
+            \{
+              \textcolor{keywordflow}{if}( \hyperlink{main2_8c_aaa9d39905d1be632c8232f11155291d0}{buff}[i][j][k]==\hyperlink{main2_8c_aaa9d39905d1be632c8232f11155291d0}{buff}[i][j][0] )
+                equal=1;
+              \textcolor{keywordflow}{else}
+                equal=0;
+            \}
+          \textcolor{keywordflow}{if}( equal==1)
+            i=3;
+        \}
+        \textcolor{keywordflow}{if}( equal==1 )
+        \{
+          close(\hyperlink{main_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}.\hyperlink{structIMU__PARAM__STRUCT_a8a870f383fc9ba0b682fdc9b8c0d2734}{i2c\_dev});
+          close(\hyperlink{main_8c_adec2468b88cf50b20e5cf399a3b7e994}{spi\_param}.\hyperlink{structSPI__PARAM__STRUCT_abe385c44333d268d17cf648c8e371cad}{spi\_dev});
+          \hyperlink{communication_8c_a2d1e523ff70db11ca4096f97af5da000}{devices\_init}(&\hyperlink{main_8c_a9c6b2109fb9402446f92995db60951b5}{imu\_param}, &\hyperlink{main_8c_adec2468b88cf50b20e5cf399a3b7e994}{spi\_param}, &
+      \hyperlink{main_8c_abc42e18d2909e9bc119316283f4ed9db}{mra\_data});
+          equal=0;
+        \}
+    \textcolor{comment}{/*if(telemetry\_mode == UI\_MAVLINK\_MODE)}
+\textcolor{comment}{    \{}
+\textcolor{comment}{        mavlink\_module\_update(t\_task\_1\_global, t0, &battery\_data, &gps\_data,
+       &imu\_data, &pitot\_data, &pwm\_read\_data, &pwm\_write\_data, &scp1000\_data,
+       &sonar\_data, &gps\_measure, &imu\_measure, &magnetometer\_measure, &estimation\_data,
+       &control\_data);}
+\textcolor{comment}{    \}*/}
+
+    \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};
+\}
 \end{DoxyCode}
 
 
-
-
-Here is the call graph for this function:
-
-
-
-Here is the caller graph for this function:
-
-\hypertarget{main2_8c_a944f7352f18ed248c1b1143f51edc391}{
-\index{main2.c@{main2.c}!periodic\_\-task\_\-2@{periodic\_\-task\_\-2}}
-\index{periodic\_\-task\_\-2@{periodic\_\-task\_\-2}!main2.c@{main2.c}}
-\subsubsection[{periodic\_\-task\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}int periodic\_\-task\_\-2 (void)}}
-\label{main2_8c_a944f7352f18ed248c1b1143f51edc391}
-
-
-Definition at line 334 of file main2.c.
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main2_8c_a944f7352f18ed248c1b1143f51edc391_cgraph}
+\end{center}
+\end{figure}
 
 
 
-References IMU\_\-DATA\_\-STRUCT::acc, buff, buff\_\-i, devices\_\-init(), failure, IMU\_\-DATA\_\-STRUCT::gyr, IMU\_\-PARAM\_\-STRUCT::i2c\_\-dev, IMU\_\-DATA\_\-STRUCT::mag, SPI\_\-PARAM\_\-STRUCT::spi\_\-dev, SUCCESS, telemetry\_\-mode, total, UI\_\-NCURSES\_\-MODE, ui\_\-update(), DATA\_\-XYZ::x, DATA\_\-XYZ::y, and DATA\_\-XYZ::z.
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main2_8c_a944f7352f18ed248c1b1143f51edc391_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{main2_8c_a97a188c3a74115770124cf0bf0c1e407}{\index{main2.\-c@{main2.\-c}!reset\-\_\-timer@{reset\-\_\-timer}}
+\index{reset\-\_\-timer@{reset\-\_\-timer}!main2.c@{main2.\-c}}
+\subsubsection[{reset\-\_\-timer}]{\setlength{\rightskip}{0pt plus 5cm}int reset\-\_\-timer (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{main2_8c_a97a188c3a74115770124cf0bf0c1e407}
+
+
+Definition at line 596 of file main2.\-c.
 
 
 
-Referenced by timer\_\-function\_\-task\_\-2().
+References S\-U\-C\-C\-E\-S\-S, t0, and t\-\_\-task\-\_\-1\-\_\-global.
 
 
+
+Referenced by periodic\-\_\-task\-\_\-1().
 
 
 \begin{DoxyCode}
-335 {
-336 
-337     int i, j, k, equal=0;
-338 
-339     // UI thread
-340     if(telemetry_mode == UI_NCURSES_MODE)
-341     {
-342         ui_update(&imu_data, &eff_data, &mra_data,&enc_data, total, failure);
-343     }
-344                 
-345             buff_i=buff_i%5;
-346         buff[0][0][buff_i]=imu_data.acc.x;
-347         buff[0][1][buff_i]=imu_data.acc.y;
-348         buff[0][2][buff_i]=imu_data.acc.z;
-349         buff[1][0][buff_i]=imu_data.gyr.x;
-350         buff[1][0][buff_i]=imu_data.gyr.x;
-351         buff[1][1][buff_i]=imu_data.gyr.y;
-352         buff[1][2][buff_i]=imu_data.gyr.z;
-353         buff[2][0][buff_i]=imu_data.mag.x;
-354         buff[2][1][buff_i]=imu_data.mag.y;
-355         buff[2][2][buff_i]=imu_data.mag.z;
-356         buff_i++;
-357         
-358         for( i=0; i<3; i++)
-359         {
-360           
-361           for( j=0; j<3; j++)
-362             for( k=1; k<3; k++)
-363             {
-364               if( buff[i][j][k]==buff[i][j][0] )
-365                 equal=1;
-366               else
-367                 equal=0;
-368             }
-369           if( equal==1)
-370             i=3;
-371         }
-372         if( equal==1 )
-373         {
-374           close(imu_param.i2c_dev);
-375           close(spi_param.spi_dev);
-376           devices_init(&imu_param, &spi_param, &mra_data);
-377           equal=0;
-378         }
-379     /*if(telemetry_mode == UI_MAVLINK_MODE)
-380     {
-381         mavlink_module_update(t_task_1_global, t0, &battery_data, &gps_data, &imu
-      _data, &pitot_data, &pwm_read_data, &pwm_write_data, &scp1000_data, &sonar_data, 
-      &gps_measure, &imu_measure, &magnetometer_measure, &estimation_data, &control_dat
-      a);
-382     }*/
-383 
-384     return SUCCESS;
-385 }
+\{
+    \hyperlink{main_8c_a98046aa9aba5dbcc867be625185aef46}{t0} = \hyperlink{main2_8c_a2a2a647912528f7aa86812528dbfe02f}{t\_task\_1\_global};
+    \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};
+\}
 \end{DoxyCode}
 
 
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main2_8c_a97a188c3a74115770124cf0bf0c1e407_icgraph}
+\end{center}
+\end{figure}
 
 
-Here is the call graph for this function:
+\hypertarget{main2_8c_a90885bae1b9535b16e014fb928e98e37}{\index{main2.\-c@{main2.\-c}!timer\-\_\-function\-\_\-task\-\_\-1@{timer\-\_\-function\-\_\-task\-\_\-1}}
+\index{timer\-\_\-function\-\_\-task\-\_\-1@{timer\-\_\-function\-\_\-task\-\_\-1}!main2.c@{main2.\-c}}
+\subsubsection[{timer\-\_\-function\-\_\-task\-\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}void timer\-\_\-function\-\_\-task\-\_\-1 (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{main2_8c_a90885bae1b9535b16e014fb928e98e37}
+
+
+Definition at line 483 of file main2.\-c.
 
 
 
-Here is the caller graph for this function:
-
-\hypertarget{main2_8c_a97a188c3a74115770124cf0bf0c1e407}{
-\index{main2.c@{main2.c}!reset\_\-timer@{reset\_\-timer}}
-\index{reset\_\-timer@{reset\_\-timer}!main2.c@{main2.c}}
-\subsubsection[{reset\_\-timer}]{\setlength{\rightskip}{0pt plus 5cm}int reset\_\-timer (void)}}
-\label{main2_8c_a97a188c3a74115770124cf0bf0c1e407}
-
-
-Definition at line 596 of file main2.c.
+References flag\-\_\-task\-\_\-1\-\_\-firstexecution, periodic\-\_\-task\-\_\-1(), status, t0, T\-\_\-task\-\_\-1\-\_\-exec\-\_\-global, t\-\_\-task\-\_\-1\-\_\-global, T\-\_\-task\-\_\-1\-\_\-max\-\_\-global, T\-\_\-task\-\_\-1\-\_\-mean\-\_\-global, and T\-\_\-task\-\_\-1\-\_\-min\-\_\-global.
 
 
 
-References SUCCESS, t0, and t\_\-task\_\-1\_\-global.
-
-
-
-Referenced by periodic\_\-task\_\-1().
-
-
+Referenced by f\-\_\-timer\-\_\-task\-\_\-1().
 
 
 \begin{DoxyCode}
-597 {
-598     t0 = t_task_1_global;
-599     return SUCCESS;
-600 }
+\{
+    \textcolor{keywordtype}{int} \hyperlink{communication_8c_a6e27f49150e9a14580fb313cc2777e00}{status} = 0;
+    \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval timereset;
+    \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval time;
+    \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval time\_exec\_start;
+    \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval time\_exec\_end;
+    \textcolor{keyword}{static} \textcolor{keywordtype}{double} T\_task,t\_task,t\_task\_previous;
+    \textcolor{keyword}{static} \textcolor{keywordtype}{double} T\_task\_mean,T\_task\_min,T\_task\_max,T\_task\_exec;
+
+    gettimeofday(&time\_exec\_start, NULL);
+
+    \textcolor{comment}{// Time calculation}
+    \textcolor{keywordflow}{if}(\hyperlink{main2_8c_a764ebf75ba887a9ecf7bf8fe124960e0}{flag\_task\_1\_firstexecution})
+    \{
+        gettimeofday(&timereset, NULL);
+        t\_task = 0.0;
+        T\_task\_mean = 0.0;
+        T\_task\_min = 0.0;
+        T\_task\_max = 0.0;
+        T\_task\_exec = 0.0;
+    \}
+
+    gettimeofday(&time, NULL);
+    t\_task = ((time.tv\_sec - timereset.tv\_sec) + (time.tv\_usec - timereset.
+      tv\_usec)*1e-6);
+    T\_task = t\_task - t\_task\_previous;
+    t\_task\_previous = t\_task;
+
+    \textcolor{keywordflow}{if}(\hyperlink{main2_8c_a764ebf75ba887a9ecf7bf8fe124960e0}{flag\_task\_1\_firstexecution})
+    \{
+        T\_task\_mean = T\_task;
+        T\_task\_min  = 1e200;
+        T\_task\_max  = 0.0;
+        \hyperlink{main_8c_a98046aa9aba5dbcc867be625185aef46}{t0} = t\_task;
+    \}
+    \textcolor{keywordflow}{else}
+    \{
+        T\_task\_mean = 0.05*T\_task + 0.95*T\_task\_mean;
+        \textcolor{keywordflow}{if}(T\_task < T\_task\_min) T\_task\_min  = T\_task;
+        \textcolor{keywordflow}{if}(T\_task > T\_task\_max) T\_task\_max  = T\_task;
+    \}
+
+    \textcolor{comment}{// Run the thread}
+    status = \hyperlink{main2_8c_a26855b7739897854265d51aa61329390}{periodic\_task\_1}();
+
+    gettimeofday(&time\_exec\_end, NULL);
+    T\_task\_exec = ((time\_exec\_end.tv\_sec - time\_exec\_start.tv\_sec) + (
+      time\_exec\_end.tv\_usec - time\_exec\_start.tv\_usec)*1e-6);
+
+    \hyperlink{main2_8c_a2a2a647912528f7aa86812528dbfe02f}{t\_task\_1\_global} = t\_task;
+    \hyperlink{main2_8c_a738c330c86a365e72ce29ebca3f1e572}{T\_task\_1\_mean\_global} = T\_task\_mean;
+    \hyperlink{main2_8c_a86222e255aeeb47598a4fc91ab6c2b1a}{T\_task\_1\_min\_global} = T\_task\_min;
+    \hyperlink{main2_8c_aa714e30d738039b5bf665742beb31739}{T\_task\_1\_max\_global} = T\_task\_max;
+    \hyperlink{main2_8c_acdaa4a9b0e1be3dfa53b52df6410ad3b}{T\_task\_1\_exec\_global} = T\_task\_exec;
+
+    \hyperlink{main2_8c_a764ebf75ba887a9ecf7bf8fe124960e0}{flag\_task\_1\_firstexecution} = 0;
+\}
 \end{DoxyCode}
 
 
-
-
-Here is the caller graph for this function:
-
-\hypertarget{main2_8c_a90885bae1b9535b16e014fb928e98e37}{
-\index{main2.c@{main2.c}!timer\_\-function\_\-task\_\-1@{timer\_\-function\_\-task\_\-1}}
-\index{timer\_\-function\_\-task\_\-1@{timer\_\-function\_\-task\_\-1}!main2.c@{main2.c}}
-\subsubsection[{timer\_\-function\_\-task\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}void timer\_\-function\_\-task\_\-1 (void)}}
-\label{main2_8c_a90885bae1b9535b16e014fb928e98e37}
-
-
-Definition at line 483 of file main2.c.
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main2_8c_a90885bae1b9535b16e014fb928e98e37_cgraph}
+\end{center}
+\end{figure}
 
 
 
-References flag\_\-task\_\-1\_\-firstexecution, periodic\_\-task\_\-1(), status, t0, T\_\-task\_\-1\_\-exec\_\-global, t\_\-task\_\-1\_\-global, T\_\-task\_\-1\_\-max\_\-global, T\_\-task\_\-1\_\-mean\_\-global, and T\_\-task\_\-1\_\-min\_\-global.
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main2_8c_a90885bae1b9535b16e014fb928e98e37_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{main2_8c_a01c18e97a4488be2912eb738b2e7f890}{\index{main2.\-c@{main2.\-c}!timer\-\_\-function\-\_\-task\-\_\-2@{timer\-\_\-function\-\_\-task\-\_\-2}}
+\index{timer\-\_\-function\-\_\-task\-\_\-2@{timer\-\_\-function\-\_\-task\-\_\-2}!main2.c@{main2.\-c}}
+\subsubsection[{timer\-\_\-function\-\_\-task\-\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}void timer\-\_\-function\-\_\-task\-\_\-2 (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{main2_8c_a01c18e97a4488be2912eb738b2e7f890}
+
+
+Definition at line 540 of file main2.\-c.
 
 
 
-Referenced by f\_\-timer\_\-task\_\-1().
+References flag\-\_\-task\-\_\-2\-\_\-firstexecution, periodic\-\_\-task\-\_\-2(), status, T\-\_\-task\-\_\-2\-\_\-exec\-\_\-global, t\-\_\-task\-\_\-2\-\_\-global, T\-\_\-task\-\_\-2\-\_\-max\-\_\-global, T\-\_\-task\-\_\-2\-\_\-mean\-\_\-global, and T\-\_\-task\-\_\-2\-\_\-min\-\_\-global.
 
 
+
+Referenced by f\-\_\-timer\-\_\-task\-\_\-2().
 
 
 \begin{DoxyCode}
-484 {
-485     int status = 0;
-486     static struct timeval timereset;
-487     static struct timeval time;
-488     static struct timeval time_exec_start;
-489     static struct timeval time_exec_end;
-490     static double T_task,t_task,t_task_previous;
-491     static double T_task_mean,T_task_min,T_task_max,T_task_exec;
-492 
-493     gettimeofday(&time_exec_start, NULL);
-494 
-495     // Time calculation
-496     if(flag_task_1_firstexecution)
-497     {
-498         gettimeofday(&timereset, NULL);
-499         t_task = 0.0;
-500         T_task_mean = 0.0;
-501         T_task_min = 0.0;
-502         T_task_max = 0.0;
-503         T_task_exec = 0.0;
-504     }
-505 
-506     gettimeofday(&time, NULL);
-507     t_task = ((time.tv_sec - timereset.tv_sec) + (time.tv_usec - timereset.tv_use
-      c)*1e-6);
-508     T_task = t_task - t_task_previous;
-509     t_task_previous = t_task;
-510 
-511     if(flag_task_1_firstexecution)
-512     {
-513         T_task_mean = T_task;
-514         T_task_min  = 1e200;
-515         T_task_max  = 0.0;
-516         t0 = t_task;
-517     }
-518     else
-519     {
-520         T_task_mean = 0.05*T_task + 0.95*T_task_mean;
-521         if(T_task < T_task_min) T_task_min  = T_task;
-522         if(T_task > T_task_max) T_task_max  = T_task;
-523     }
-524 
-525     // Run the thread
-526     status = periodic_task_1();
-527 
-528     gettimeofday(&time_exec_end, NULL);
-529     T_task_exec = ((time_exec_end.tv_sec - time_exec_start.tv_sec) + (time_exec_e
-      nd.tv_usec - time_exec_start.tv_usec)*1e-6);
-530 
-531     t_task_1_global = t_task;
-532     T_task_1_mean_global = T_task_mean;
-533     T_task_1_min_global = T_task_min;
-534     T_task_1_max_global = T_task_max;
-535     T_task_1_exec_global = T_task_exec;
-536 
-537     flag_task_1_firstexecution = 0;
-538 }
+\{
+    \textcolor{keywordtype}{int} \hyperlink{communication_8c_a6e27f49150e9a14580fb313cc2777e00}{status} = 0;
+    \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval timereset;
+    \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval time;
+    \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval time\_exec\_start;
+    \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval time\_exec\_end;
+    \textcolor{keyword}{static} \textcolor{keywordtype}{double} T\_task,t\_task,t\_task\_previous;
+    \textcolor{keyword}{static} \textcolor{keywordtype}{double} T\_task\_mean,T\_task\_min,T\_task\_max,T\_task\_exec;
+
+    gettimeofday(&time\_exec\_start, NULL);
+
+    \textcolor{comment}{// Time calculation}
+    \textcolor{keywordflow}{if}(\hyperlink{main2_8c_a60e039269ae4a130db1bdbc4a709c437}{flag\_task\_2\_firstexecution})
+    \{
+        gettimeofday(&timereset, NULL);
+        t\_task = 0.0;
+        T\_task\_mean = 0.0;
+        T\_task\_min = 0.0;
+        T\_task\_max = 0.0;
+        T\_task\_exec = 0.0;
+    \}
+
+    gettimeofday(&time, NULL);
+    t\_task = ((time.tv\_sec - timereset.tv\_sec) + (time.tv\_usec - timereset.
+      tv\_usec)*1e-6);
+    T\_task = t\_task - t\_task\_previous;
+    t\_task\_previous = t\_task;
+
+    \textcolor{keywordflow}{if}(\hyperlink{main2_8c_a60e039269ae4a130db1bdbc4a709c437}{flag\_task\_2\_firstexecution})
+    \{
+        T\_task\_mean = T\_task;
+        T\_task\_min  = 1e200;
+        T\_task\_max  = 0.0;
+    \}
+    \textcolor{keywordflow}{else}
+    \{
+        T\_task\_mean = 0.05*T\_task + 0.95*T\_task\_mean;
+        \textcolor{keywordflow}{if}(T\_task < T\_task\_min) T\_task\_min  = T\_task;
+        \textcolor{keywordflow}{if}(T\_task > T\_task\_max) T\_task\_max  = T\_task;
+    \}
+
+    \textcolor{comment}{// Run the thread}
+    status = \hyperlink{main2_8c_a944f7352f18ed248c1b1143f51edc391}{periodic\_task\_2}();
+
+    gettimeofday(&time\_exec\_end, NULL);
+    T\_task\_exec = ((time\_exec\_end.tv\_sec - time\_exec\_start.tv\_sec) + (
+      time\_exec\_end.tv\_usec - time\_exec\_start.tv\_usec)*1e-6);
+
+    \hyperlink{main2_8c_a08f794ff34d918d3d34d771e11e4aba3}{t\_task\_2\_global} = t\_task;
+    \hyperlink{main2_8c_af4e19d5a9b24aa56c8ebff6ad1aa2b95}{T\_task\_2\_mean\_global} = T\_task\_mean;
+    \hyperlink{main2_8c_ab7712cb13ce6206dd138a51e2053e36c}{T\_task\_2\_min\_global} = T\_task\_min;
+    \hyperlink{main2_8c_a1cd82006c46f46176730e876d272cc14}{T\_task\_2\_max\_global} = T\_task\_max;
+    \hyperlink{main2_8c_a9629c77cd3dba9d47d15c2e51bdde09d}{T\_task\_2\_exec\_global} = T\_task\_exec;
+
+    \hyperlink{main2_8c_a60e039269ae4a130db1bdbc4a709c437}{flag\_task\_2\_firstexecution} = 0;
+\}
 \end{DoxyCode}
 
 
-
-
-Here is the call graph for this function:
-
-
-
-Here is the caller graph for this function:
-
-\hypertarget{main2_8c_a01c18e97a4488be2912eb738b2e7f890}{
-\index{main2.c@{main2.c}!timer\_\-function\_\-task\_\-2@{timer\_\-function\_\-task\_\-2}}
-\index{timer\_\-function\_\-task\_\-2@{timer\_\-function\_\-task\_\-2}!main2.c@{main2.c}}
-\subsubsection[{timer\_\-function\_\-task\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}void timer\_\-function\_\-task\_\-2 (void)}}
-\label{main2_8c_a01c18e97a4488be2912eb738b2e7f890}
-
-
-Definition at line 540 of file main2.c.
-
-
-
-References flag\_\-task\_\-2\_\-firstexecution, periodic\_\-task\_\-2(), status, T\_\-task\_\-2\_\-exec\_\-global, t\_\-task\_\-2\_\-global, T\_\-task\_\-2\_\-max\_\-global, T\_\-task\_\-2\_\-mean\_\-global, and T\_\-task\_\-2\_\-min\_\-global.
-
-
-
-Referenced by f\_\-timer\_\-task\_\-2().
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main2_8c_a01c18e97a4488be2912eb738b2e7f890_cgraph}
+\end{center}
+\end{figure}
 
 
 
 
-\begin{DoxyCode}
-541 {
-542     int status = 0;
-543     static struct timeval timereset;
-544     static struct timeval time;
-545     static struct timeval time_exec_start;
-546     static struct timeval time_exec_end;
-547     static double T_task,t_task,t_task_previous;
-548     static double T_task_mean,T_task_min,T_task_max,T_task_exec;
-549 
-550     gettimeofday(&time_exec_start, NULL);
-551 
-552     // Time calculation
-553     if(flag_task_2_firstexecution)
-554     {
-555         gettimeofday(&timereset, NULL);
-556         t_task = 0.0;
-557         T_task_mean = 0.0;
-558         T_task_min = 0.0;
-559         T_task_max = 0.0;
-560         T_task_exec = 0.0;
-561     }
-562 
-563     gettimeofday(&time, NULL);
-564     t_task = ((time.tv_sec - timereset.tv_sec) + (time.tv_usec - timereset.tv_use
-      c)*1e-6);
-565     T_task = t_task - t_task_previous;
-566     t_task_previous = t_task;
-567 
-568     if(flag_task_2_firstexecution)
-569     {
-570         T_task_mean = T_task;
-571         T_task_min  = 1e200;
-572         T_task_max  = 0.0;
-573     }
-574     else
-575     {
-576         T_task_mean = 0.05*T_task + 0.95*T_task_mean;
-577         if(T_task < T_task_min) T_task_min  = T_task;
-578         if(T_task > T_task_max) T_task_max  = T_task;
-579     }
-580 
-581     // Run the thread
-582     status = periodic_task_2();
-583 
-584     gettimeofday(&time_exec_end, NULL);
-585     T_task_exec = ((time_exec_end.tv_sec - time_exec_start.tv_sec) + (time_exec_e
-      nd.tv_usec - time_exec_start.tv_usec)*1e-6);
-586 
-587     t_task_2_global = t_task;
-588     T_task_2_mean_global = T_task_mean;
-589     T_task_2_min_global = T_task_min;
-590     T_task_2_max_global = T_task_max;
-591     T_task_2_exec_global = T_task_exec;
-592 
-593     flag_task_2_firstexecution = 0;
-594 }
-\end{DoxyCode}
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main2_8c_a01c18e97a4488be2912eb738b2e7f890_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{main2_8c_a0e411070b7f487a8ab6a60b180f50e12}{\index{main2.\-c@{main2.\-c}!timer\-\_\-start\-\_\-task\-\_\-1@{timer\-\_\-start\-\_\-task\-\_\-1}}
+\index{timer\-\_\-start\-\_\-task\-\_\-1@{timer\-\_\-start\-\_\-task\-\_\-1}!main2.c@{main2.\-c}}
+\subsubsection[{timer\-\_\-start\-\_\-task\-\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}void timer\-\_\-start\-\_\-task\-\_\-1 (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{main2_8c_a0e411070b7f487a8ab6a60b180f50e12}
+
+
+Definition at line 399 of file main2.\-c.
 
 
 
-
-Here is the call graph for this function:
-
-
-
-Here is the caller graph for this function:
-
-\hypertarget{main2_8c_a0e411070b7f487a8ab6a60b180f50e12}{
-\index{main2.c@{main2.c}!timer\_\-start\_\-task\_\-1@{timer\_\-start\_\-task\_\-1}}
-\index{timer\_\-start\_\-task\_\-1@{timer\_\-start\_\-task\_\-1}!main2.c@{main2.c}}
-\subsubsection[{timer\_\-start\_\-task\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}void timer\_\-start\_\-task\_\-1 (void)}}
-\label{main2_8c_a0e411070b7f487a8ab6a60b180f50e12}
-
-
-Definition at line 399 of file main2.c.
-
-
-
-References f\_\-timer\_\-task\_\-1(), flag\_\-task\_\-1\_\-firstexecution, task\_\-1\_\-period\_\-us, and timer\_\-task\_\-1.
+References f\-\_\-timer\-\_\-task\-\_\-1(), flag\-\_\-task\-\_\-1\-\_\-firstexecution, task\-\_\-1\-\_\-period\-\_\-us, and timer\-\_\-task\-\_\-1.
 
 
 
 Referenced by main().
 
 
-
-
 \begin{DoxyCode}
-400 {
-401     struct itimerspec itimer;
-402     struct sigevent sigev;
-403     int erno = 0;
-404 
-405     flag_task_1_firstexecution = 1;
-406 
-407     itimer.it_interval.tv_sec=0;
-408     itimer.it_interval.tv_nsec=task_1_period_us * 1000;
-409     itimer.it_value=itimer.it_interval;
-410 
-411     memset(&sigev, 0, sizeof (struct sigevent));
-412 
-413     sigev.sigev_value.sival_int = 0;
-414     sigev.sigev_notify = SIGEV_THREAD;
-415     sigev.sigev_notify_attributes = NULL;
-416     sigev.sigev_notify_function = f_timer_task_1;
-417 
-418     if (timer_create(CLOCK_REALTIME, &sigev, &timer_task_1) < 0)
-419     {
-420         fprintf(stderr, "[%d]: %s\n", __LINE__, strerror(erno));
-421         exit(erno);
-422     }
-423 
-424     if(timer_settime(timer_task_1, 0, &itimer, NULL) < 0)
-425     {
-426         fprintf(stderr, "[%d]: %s\n", __LINE__, strerror(erno));
-427         exit(erno);
-428     }
-429 
-430 }
+\{
+    \textcolor{keyword}{struct }itimerspec itimer;
+    \textcolor{keyword}{struct }sigevent sigev;
+    \textcolor{keywordtype}{int} erno = 0;
+
+    \hyperlink{main2_8c_a764ebf75ba887a9ecf7bf8fe124960e0}{flag\_task\_1\_firstexecution} = 1;
+
+    itimer.it\_interval.tv\_sec=0;
+    itimer.it\_interval.tv\_nsec=\hyperlink{main2_8c_afffc21b0b726e6f4a572d0eefd3b5d69}{task\_1\_period\_us} * 1000;
+    itimer.it\_value=itimer.it\_interval;
+
+    memset(&sigev, 0, \textcolor{keyword}{sizeof} (\textcolor{keyword}{struct} sigevent));
+
+    sigev.sigev\_value.sival\_int = 0;
+    sigev.sigev\_notify = SIGEV\_THREAD;
+    sigev.sigev\_notify\_attributes = NULL;
+    sigev.sigev\_notify\_function = \hyperlink{main2_8c_a5ce2b6a7dd4d00c90fe18098091044aa}{f\_timer\_task\_1};
+
+    \textcolor{keywordflow}{if} (timer\_create(CLOCK\_REALTIME, &sigev, &\hyperlink{main2_8c_a904a157c5d5f94416cd450f511635af1}{timer\_task\_1}) < 0)
+    \{
+        fprintf(stderr, \textcolor{stringliteral}{"[%d]: %s\(\backslash\)n"}, \_\_LINE\_\_, strerror(erno));
+        exit(erno);
+    \}
+
+    \textcolor{keywordflow}{if}(timer\_settime(\hyperlink{main2_8c_a904a157c5d5f94416cd450f511635af1}{timer\_task\_1}, 0, &itimer, NULL) < 0)
+    \{
+        fprintf(stderr, \textcolor{stringliteral}{"[%d]: %s\(\backslash\)n"}, \_\_LINE\_\_, strerror(erno));
+        exit(erno);
+    \}
+
+\}
 \end{DoxyCode}
 
 
-
-
-Here is the call graph for this function:
-
-
-
-Here is the caller graph for this function:
-
-\hypertarget{main2_8c_ae59c93969d017f18e3e38b2f9f7888ca}{
-\index{main2.c@{main2.c}!timer\_\-start\_\-task\_\-2@{timer\_\-start\_\-task\_\-2}}
-\index{timer\_\-start\_\-task\_\-2@{timer\_\-start\_\-task\_\-2}!main2.c@{main2.c}}
-\subsubsection[{timer\_\-start\_\-task\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}void timer\_\-start\_\-task\_\-2 (void)}}
-\label{main2_8c_ae59c93969d017f18e3e38b2f9f7888ca}
-
-
-Definition at line 432 of file main2.c.
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main2_8c_a0e411070b7f487a8ab6a60b180f50e12_cgraph}
+\end{center}
+\end{figure}
 
 
 
-References f\_\-timer\_\-task\_\-2(), flag\_\-task\_\-2\_\-firstexecution, task\_\-2\_\-period\_\-us, and timer\_\-task\_\-2.
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{main2_8c_a0e411070b7f487a8ab6a60b180f50e12_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{main2_8c_ae59c93969d017f18e3e38b2f9f7888ca}{\index{main2.\-c@{main2.\-c}!timer\-\_\-start\-\_\-task\-\_\-2@{timer\-\_\-start\-\_\-task\-\_\-2}}
+\index{timer\-\_\-start\-\_\-task\-\_\-2@{timer\-\_\-start\-\_\-task\-\_\-2}!main2.c@{main2.\-c}}
+\subsubsection[{timer\-\_\-start\-\_\-task\-\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}void timer\-\_\-start\-\_\-task\-\_\-2 (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{main2_8c_ae59c93969d017f18e3e38b2f9f7888ca}
+
+
+Definition at line 432 of file main2.\-c.
+
+
+
+References f\-\_\-timer\-\_\-task\-\_\-2(), flag\-\_\-task\-\_\-2\-\_\-firstexecution, task\-\_\-2\-\_\-period\-\_\-us, and timer\-\_\-task\-\_\-2.
 
 
 
 Referenced by main().
 
 
-
-
 \begin{DoxyCode}
-433 {
-434     struct itimerspec itimer;
-435     struct sigevent sigev;
-436     int erno = 0;
-437 
-438     flag_task_2_firstexecution = 1;
-439 
-440     itimer.it_interval.tv_sec=0;
-441     itimer.it_interval.tv_nsec=task_2_period_us * 1000;
-442     itimer.it_value=itimer.it_interval;
-443 
-444     memset (&sigev, 0, sizeof (struct sigevent));
-445     sigev.sigev_value.sival_int = 0;
-446     sigev.sigev_notify = SIGEV_THREAD;
-447     sigev.sigev_notify_attributes = NULL;
-448     sigev.sigev_notify_function = f_timer_task_2;
-449 
-450     if(timer_create(CLOCK_REALTIME, &sigev, &timer_task_2) < 0)
-451     {
-452         fprintf(stderr, "[%d]: %s\n", __LINE__, strerror(erno));
-453         exit(erno);
-454     }
-455 
-456     if(timer_settime(timer_task_2, 0, &itimer, NULL) < 0)
-457     {
-458         fprintf(stderr, "[%d]: %s\n", __LINE__, strerror(erno));
-459         exit(erno);
-460     }
-461 }
+\{
+    \textcolor{keyword}{struct }itimerspec itimer;
+    \textcolor{keyword}{struct }sigevent sigev;
+    \textcolor{keywordtype}{int} erno = 0;
+
+    \hyperlink{main2_8c_a60e039269ae4a130db1bdbc4a709c437}{flag\_task\_2\_firstexecution} = 1;
+
+    itimer.it\_interval.tv\_sec=0;
+    itimer.it\_interval.tv\_nsec=\hyperlink{main2_8c_a5166d431d5448a1538e75f5469c19c7b}{task\_2\_period\_us} * 1000;
+    itimer.it\_value=itimer.it\_interval;
+
+    memset (&sigev, 0, \textcolor{keyword}{sizeof} (\textcolor{keyword}{struct} sigevent));
+    sigev.sigev\_value.sival\_int = 0;
+    sigev.sigev\_notify = SIGEV\_THREAD;
+    sigev.sigev\_notify\_attributes = NULL;
+    sigev.sigev\_notify\_function = \hyperlink{main2_8c_a735ebf3d0d37c7d8187199e6565bcb5c}{f\_timer\_task\_2};
+
+    \textcolor{keywordflow}{if}(timer\_create(CLOCK\_REALTIME, &sigev, &\hyperlink{main2_8c_adf6e8e22925f399f086dea8671f39c08}{timer\_task\_2}) < 0)
+    \{
+        fprintf(stderr, \textcolor{stringliteral}{"[%d]: %s\(\backslash\)n"}, \_\_LINE\_\_, strerror(erno));
+        exit(erno);
+    \}
+
+    \textcolor{keywordflow}{if}(timer\_settime(\hyperlink{main2_8c_adf6e8e22925f399f086dea8671f39c08}{timer\_task\_2}, 0, &itimer, NULL) < 0)
+    \{
+        fprintf(stderr, \textcolor{stringliteral}{"[%d]: %s\(\backslash\)n"}, \_\_LINE\_\_, strerror(erno));
+        exit(erno);
+    \}
+\}
 \end{DoxyCode}
 
 
-
-
-Here is the call graph for this function:
-
-
-
-Here is the caller graph for this function:
-
-\hypertarget{main2_8c_a54bb5066619e443a28ae5601b5ea3642}{
-\index{main2.c@{main2.c}!timer\_\-stop\_\-task\_\-1@{timer\_\-stop\_\-task\_\-1}}
-\index{timer\_\-stop\_\-task\_\-1@{timer\_\-stop\_\-task\_\-1}!main2.c@{main2.c}}
-\subsubsection[{timer\_\-stop\_\-task\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}void timer\_\-stop\_\-task\_\-1 (void)}}
-\label{main2_8c_a54bb5066619e443a28ae5601b5ea3642}
-
-
-Definition at line 463 of file main2.c.
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main2_8c_ae59c93969d017f18e3e38b2f9f7888ca_cgraph}
+\end{center}
+\end{figure}
 
 
 
-References timer\_\-task\_\-1.
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{main2_8c_ae59c93969d017f18e3e38b2f9f7888ca_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{main2_8c_a54bb5066619e443a28ae5601b5ea3642}{\index{main2.\-c@{main2.\-c}!timer\-\_\-stop\-\_\-task\-\_\-1@{timer\-\_\-stop\-\_\-task\-\_\-1}}
+\index{timer\-\_\-stop\-\_\-task\-\_\-1@{timer\-\_\-stop\-\_\-task\-\_\-1}!main2.c@{main2.\-c}}
+\subsubsection[{timer\-\_\-stop\-\_\-task\-\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}void timer\-\_\-stop\-\_\-task\-\_\-1 (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{main2_8c_a54bb5066619e443a28ae5601b5ea3642}
+
+
+Definition at line 463 of file main2.\-c.
+
+
+
+References timer\-\_\-task\-\_\-1.
 
 
 
 Referenced by main().
 
 
-
-
 \begin{DoxyCode}
-464 {
-465     int erno = 0;
-466     if(timer_delete(timer_task_1) < 0)
-467     {
-468         fprintf(stderr, "[%d]: %s\n", __LINE__, strerror(erno));
-469         exit(erno);
-470     }
-471 }
+\{
+    \textcolor{keywordtype}{int} erno = 0;
+    \textcolor{keywordflow}{if}(timer\_delete(\hyperlink{main2_8c_a904a157c5d5f94416cd450f511635af1}{timer\_task\_1}) < 0)
+    \{
+        fprintf(stderr, \textcolor{stringliteral}{"[%d]: %s\(\backslash\)n"}, \_\_LINE\_\_, strerror(erno));
+        exit(erno);
+    \}
+\}
 \end{DoxyCode}
 
 
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{main2_8c_a54bb5066619e443a28ae5601b5ea3642_icgraph}
+\end{center}
+\end{figure}
 
 
-Here is the caller graph for this function:
-
-\hypertarget{main2_8c_a0c69dbcb7b2885a2de116b9d690280de}{
-\index{main2.c@{main2.c}!timer\_\-stop\_\-task\_\-2@{timer\_\-stop\_\-task\_\-2}}
-\index{timer\_\-stop\_\-task\_\-2@{timer\_\-stop\_\-task\_\-2}!main2.c@{main2.c}}
-\subsubsection[{timer\_\-stop\_\-task\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}void timer\_\-stop\_\-task\_\-2 (void)}}
-\label{main2_8c_a0c69dbcb7b2885a2de116b9d690280de}
-
-
-Definition at line 473 of file main2.c.
+\hypertarget{main2_8c_a0c69dbcb7b2885a2de116b9d690280de}{\index{main2.\-c@{main2.\-c}!timer\-\_\-stop\-\_\-task\-\_\-2@{timer\-\_\-stop\-\_\-task\-\_\-2}}
+\index{timer\-\_\-stop\-\_\-task\-\_\-2@{timer\-\_\-stop\-\_\-task\-\_\-2}!main2.c@{main2.\-c}}
+\subsubsection[{timer\-\_\-stop\-\_\-task\-\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}void timer\-\_\-stop\-\_\-task\-\_\-2 (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{main2_8c_a0c69dbcb7b2885a2de116b9d690280de}
 
 
+Definition at line 473 of file main2.\-c.
 
-References timer\_\-task\_\-2.
+
+
+References timer\-\_\-task\-\_\-2.
 
 
 
 Referenced by main().
 
 
-
-
 \begin{DoxyCode}
-474 {
-475     int erno = 0;
-476     if(timer_delete(timer_task_2) < 0)
-477     {
-478         fprintf(stderr, "[%d]: %s\n", __LINE__, strerror(erno));
-479         exit(erno);
-480     }
-481 }
+\{
+    \textcolor{keywordtype}{int} erno = 0;
+    \textcolor{keywordflow}{if}(timer\_delete(\hyperlink{main2_8c_adf6e8e22925f399f086dea8671f39c08}{timer\_task\_2}) < 0)
+    \{
+        fprintf(stderr, \textcolor{stringliteral}{"[%d]: %s\(\backslash\)n"}, \_\_LINE\_\_, strerror(erno));
+        exit(erno);
+    \}
+\}
 \end{DoxyCode}
 
 
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{main2_8c_a0c69dbcb7b2885a2de116b9d690280de_icgraph}
+\end{center}
+\end{figure}
 
-
-Here is the caller graph for this function:
 
 
 
 \subsection{Variable Documentation}
-\hypertarget{main2_8c_a95a859aa805a58cd4c59e172d250de4a}{
-\index{main2.c@{main2.c}!acquire@{acquire}}
-\index{acquire@{acquire}!main2.c@{main2.c}}
-\subsubsection[{acquire}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf acquire} = 0}}
-\label{main2_8c_a95a859aa805a58cd4c59e172d250de4a}
+\hypertarget{main2_8c_a95a859aa805a58cd4c59e172d250de4a}{\index{main2.\-c@{main2.\-c}!acquire@{acquire}}
+\index{acquire@{acquire}!main2.c@{main2.\-c}}
+\subsubsection[{acquire}]{\setlength{\rightskip}{0pt plus 5cm}int acquire = 0}}\label{main2_8c_a95a859aa805a58cd4c59e172d250de4a}
 
 
-Definition at line 40 of file main2.c.
+Definition at line 40 of file main2.\-c.
 
-\hypertarget{main2_8c_aaa9d39905d1be632c8232f11155291d0}{
-\index{main2.c@{main2.c}!buff@{buff}}
-\index{buff@{buff}!main2.c@{main2.c}}
-\subsubsection[{buff}]{\setlength{\rightskip}{0pt plus 5cm}short int {\bf buff}\mbox{[}3\mbox{]}\mbox{[}3\mbox{]}\mbox{[}3\mbox{]}}}
-\label{main2_8c_aaa9d39905d1be632c8232f11155291d0}
+\hypertarget{main2_8c_aaa9d39905d1be632c8232f11155291d0}{\index{main2.\-c@{main2.\-c}!buff@{buff}}
+\index{buff@{buff}!main2.c@{main2.\-c}}
+\subsubsection[{buff}]{\setlength{\rightskip}{0pt plus 5cm}short int buff\mbox{[}3\mbox{]}\mbox{[}3\mbox{]}\mbox{[}3\mbox{]}}}\label{main2_8c_aaa9d39905d1be632c8232f11155291d0}
 
 
-Definition at line 68 of file main2.c.
+Definition at line 68 of file main2.\-c.
 
 
 
-Referenced by periodic\_\-task\_\-2().
+Referenced by periodic\-\_\-task\-\_\-2().
 
-\hypertarget{main2_8c_ac0f4eb3a1def152855159c698feaf977}{
-\index{main2.c@{main2.c}!buff\_\-i@{buff\_\-i}}
-\index{buff\_\-i@{buff\_\-i}!main2.c@{main2.c}}
-\subsubsection[{buff\_\-i}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf buff\_\-i} = 0}}
-\label{main2_8c_ac0f4eb3a1def152855159c698feaf977}
+\hypertarget{main2_8c_ac0f4eb3a1def152855159c698feaf977}{\index{main2.\-c@{main2.\-c}!buff\-\_\-i@{buff\-\_\-i}}
+\index{buff\-\_\-i@{buff\-\_\-i}!main2.c@{main2.\-c}}
+\subsubsection[{buff\-\_\-i}]{\setlength{\rightskip}{0pt plus 5cm}int buff\-\_\-i = 0}}\label{main2_8c_ac0f4eb3a1def152855159c698feaf977}
 
 
-Definition at line 67 of file main2.c.
+Definition at line 67 of file main2.\-c.
 
 
 
-Referenced by periodic\_\-task\_\-2().
+Referenced by periodic\-\_\-task\-\_\-2().
 
-\hypertarget{main2_8c_a5650ece8c3a277c7f158d75ae65265fa}{
-\index{main2.c@{main2.c}!eff\_\-data@{eff\_\-data}}
-\index{eff\_\-data@{eff\_\-data}!main2.c@{main2.c}}
-\subsubsection[{eff\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf EFF\_\-DATA\_\-STRUCT} {\bf eff\_\-data}}}
-\label{main2_8c_a5650ece8c3a277c7f158d75ae65265fa}
+\hypertarget{main2_8c_a5650ece8c3a277c7f158d75ae65265fa}{\index{main2.\-c@{main2.\-c}!eff\-\_\-data@{eff\-\_\-data}}
+\index{eff\-\_\-data@{eff\-\_\-data}!main2.c@{main2.\-c}}
+\subsubsection[{eff\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\-F\-F\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} eff\-\_\-data}}\label{main2_8c_a5650ece8c3a277c7f158d75ae65265fa}
 
 
-Definition at line 75 of file main2.c.
+Definition at line 75 of file main2.\-c.
 
-\hypertarget{main2_8c_aaa441e18ae805c4f3efb0b5231d1cfe7}{
-\index{main2.c@{main2.c}!enc\_\-data@{enc\_\-data}}
-\index{enc\_\-data@{enc\_\-data}!main2.c@{main2.c}}
-\subsubsection[{enc\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ENC\_\-DATA\_\-STRUCT} {\bf enc\_\-data}}}
-\label{main2_8c_aaa441e18ae805c4f3efb0b5231d1cfe7}
+\hypertarget{main2_8c_aaa441e18ae805c4f3efb0b5231d1cfe7}{\index{main2.\-c@{main2.\-c}!enc\-\_\-data@{enc\-\_\-data}}
+\index{enc\-\_\-data@{enc\-\_\-data}!main2.c@{main2.\-c}}
+\subsubsection[{enc\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\-N\-C\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} enc\-\_\-data}}\label{main2_8c_aaa441e18ae805c4f3efb0b5231d1cfe7}
 
 
-Definition at line 77 of file main2.c.
+Definition at line 77 of file main2.\-c.
 
-\hypertarget{main2_8c_a4f35e5ea2395561d0bd3b2f45612dc2c}{
-\index{main2.c@{main2.c}!failure@{failure}}
-\index{failure@{failure}!main2.c@{main2.c}}
-\subsubsection[{failure}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf failure} = 0}}
-\label{main2_8c_a4f35e5ea2395561d0bd3b2f45612dc2c}
+\hypertarget{main2_8c_a4f35e5ea2395561d0bd3b2f45612dc2c}{\index{main2.\-c@{main2.\-c}!failure@{failure}}
+\index{failure@{failure}!main2.c@{main2.\-c}}
+\subsubsection[{failure}]{\setlength{\rightskip}{0pt plus 5cm}int failure = 0}}\label{main2_8c_a4f35e5ea2395561d0bd3b2f45612dc2c}
 
 
-Definition at line 42 of file main2.c.
+Definition at line 42 of file main2.\-c.
 
-\hypertarget{main2_8c_a764ebf75ba887a9ecf7bf8fe124960e0}{
-\index{main2.c@{main2.c}!flag\_\-task\_\-1\_\-firstexecution@{flag\_\-task\_\-1\_\-firstexecution}}
-\index{flag\_\-task\_\-1\_\-firstexecution@{flag\_\-task\_\-1\_\-firstexecution}!main2.c@{main2.c}}
-\subsubsection[{flag\_\-task\_\-1\_\-firstexecution}]{\setlength{\rightskip}{0pt plus 5cm}volatile int {\bf flag\_\-task\_\-1\_\-firstexecution} = 1}}
-\label{main2_8c_a764ebf75ba887a9ecf7bf8fe124960e0}
+\hypertarget{main2_8c_a764ebf75ba887a9ecf7bf8fe124960e0}{\index{main2.\-c@{main2.\-c}!flag\-\_\-task\-\_\-1\-\_\-firstexecution@{flag\-\_\-task\-\_\-1\-\_\-firstexecution}}
+\index{flag\-\_\-task\-\_\-1\-\_\-firstexecution@{flag\-\_\-task\-\_\-1\-\_\-firstexecution}!main2.c@{main2.\-c}}
+\subsubsection[{flag\-\_\-task\-\_\-1\-\_\-firstexecution}]{\setlength{\rightskip}{0pt plus 5cm}volatile int flag\-\_\-task\-\_\-1\-\_\-firstexecution = 1}}\label{main2_8c_a764ebf75ba887a9ecf7bf8fe124960e0}
 
 
-Definition at line 52 of file main2.c.
+Definition at line 52 of file main2.\-c.
 
 
 
-Referenced by threads\_\-linux\_\-timer\_\-function\_\-task\_\-1(), threads\_\-linux\_\-timer\_\-start\_\-task\_\-1(), timer\_\-function\_\-task\_\-1(), and timer\_\-start\_\-task\_\-1().
+Referenced by threads\-\_\-linux\-\_\-timer\-\_\-function\-\_\-task\-\_\-1(), threads\-\_\-linux\-\_\-timer\-\_\-start\-\_\-task\-\_\-1(), timer\-\_\-function\-\_\-task\-\_\-1(), and timer\-\_\-start\-\_\-task\-\_\-1().
 
-\hypertarget{main2_8c_a60e039269ae4a130db1bdbc4a709c437}{
-\index{main2.c@{main2.c}!flag\_\-task\_\-2\_\-firstexecution@{flag\_\-task\_\-2\_\-firstexecution}}
-\index{flag\_\-task\_\-2\_\-firstexecution@{flag\_\-task\_\-2\_\-firstexecution}!main2.c@{main2.c}}
-\subsubsection[{flag\_\-task\_\-2\_\-firstexecution}]{\setlength{\rightskip}{0pt plus 5cm}volatile int {\bf flag\_\-task\_\-2\_\-firstexecution} = 1}}
-\label{main2_8c_a60e039269ae4a130db1bdbc4a709c437}
+\hypertarget{main2_8c_a60e039269ae4a130db1bdbc4a709c437}{\index{main2.\-c@{main2.\-c}!flag\-\_\-task\-\_\-2\-\_\-firstexecution@{flag\-\_\-task\-\_\-2\-\_\-firstexecution}}
+\index{flag\-\_\-task\-\_\-2\-\_\-firstexecution@{flag\-\_\-task\-\_\-2\-\_\-firstexecution}!main2.c@{main2.\-c}}
+\subsubsection[{flag\-\_\-task\-\_\-2\-\_\-firstexecution}]{\setlength{\rightskip}{0pt plus 5cm}volatile int flag\-\_\-task\-\_\-2\-\_\-firstexecution = 1}}\label{main2_8c_a60e039269ae4a130db1bdbc4a709c437}
 
 
-Definition at line 64 of file main2.c.
+Definition at line 64 of file main2.\-c.
 
 
 
-Referenced by threads\_\-linux\_\-timer\_\-function\_\-task\_\-2(), threads\_\-linux\_\-timer\_\-start\_\-task\_\-2(), timer\_\-function\_\-task\_\-2(), and timer\_\-start\_\-task\_\-2().
+Referenced by threads\-\_\-linux\-\_\-timer\-\_\-function\-\_\-task\-\_\-2(), threads\-\_\-linux\-\_\-timer\-\_\-start\-\_\-task\-\_\-2(), timer\-\_\-function\-\_\-task\-\_\-2(), and timer\-\_\-start\-\_\-task\-\_\-2().
 
-\hypertarget{main2_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{
-\index{main2.c@{main2.c}!imu\_\-data@{imu\_\-data}}
-\index{imu\_\-data@{imu\_\-data}!main2.c@{main2.c}}
-\subsubsection[{imu\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf IMU\_\-DATA\_\-STRUCT} {\bf imu\_\-data}}}
-\label{main2_8c_a3cfea12cbe9ca7f1681c950e4cd68606}
+\hypertarget{main2_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{\index{main2.\-c@{main2.\-c}!imu\-\_\-data@{imu\-\_\-data}}
+\index{imu\-\_\-data@{imu\-\_\-data}!main2.c@{main2.\-c}}
+\subsubsection[{imu\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} imu\-\_\-data}}\label{main2_8c_a3cfea12cbe9ca7f1681c950e4cd68606}
 
 
-Definition at line 74 of file main2.c.
+Definition at line 74 of file main2.\-c.
 
-\hypertarget{main2_8c_a9c6b2109fb9402446f92995db60951b5}{
-\index{main2.c@{main2.c}!imu\_\-param@{imu\_\-param}}
-\index{imu\_\-param@{imu\_\-param}!main2.c@{main2.c}}
-\subsubsection[{imu\_\-param}]{\setlength{\rightskip}{0pt plus 5cm}{\bf IMU\_\-PARAM\_\-STRUCT} {\bf imu\_\-param}}}
-\label{main2_8c_a9c6b2109fb9402446f92995db60951b5}
+\hypertarget{main2_8c_a9c6b2109fb9402446f92995db60951b5}{\index{main2.\-c@{main2.\-c}!imu\-\_\-param@{imu\-\_\-param}}
+\index{imu\-\_\-param@{imu\-\_\-param}!main2.c@{main2.\-c}}
+\subsubsection[{imu\-\_\-param}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\-M\-U\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T} imu\-\_\-param}}\label{main2_8c_a9c6b2109fb9402446f92995db60951b5}
 
 
-Definition at line 72 of file main2.c.
+Definition at line 72 of file main2.\-c.
 
-\hypertarget{main2_8c_abc42e18d2909e9bc119316283f4ed9db}{
-\index{main2.c@{main2.c}!mra\_\-data@{mra\_\-data}}
-\index{mra\_\-data@{mra\_\-data}!main2.c@{main2.c}}
-\subsubsection[{mra\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf MRA\_\-DATA\_\-STRUCT} {\bf mra\_\-data}}}
-\label{main2_8c_abc42e18d2909e9bc119316283f4ed9db}
+\hypertarget{main2_8c_abc42e18d2909e9bc119316283f4ed9db}{\index{main2.\-c@{main2.\-c}!mra\-\_\-data@{mra\-\_\-data}}
+\index{mra\-\_\-data@{mra\-\_\-data}!main2.c@{main2.\-c}}
+\subsubsection[{mra\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\-R\-A\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} mra\-\_\-data}}\label{main2_8c_abc42e18d2909e9bc119316283f4ed9db}
 
 
-Definition at line 76 of file main2.c.
+Definition at line 76 of file main2.\-c.
 
-\hypertarget{main2_8c_a525dcecf4685bea1fbf92651ac0401fe}{
-\index{main2.c@{main2.c}!quittask@{quittask}}
-\index{quittask@{quittask}!main2.c@{main2.c}}
-\subsubsection[{quittask}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char {\bf quittask} = 0}}
-\label{main2_8c_a525dcecf4685bea1fbf92651ac0401fe}
+\hypertarget{main2_8c_a525dcecf4685bea1fbf92651ac0401fe}{\index{main2.\-c@{main2.\-c}!quittask@{quittask}}
+\index{quittask@{quittask}!main2.c@{main2.\-c}}
+\subsubsection[{quittask}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char quittask = 0}}\label{main2_8c_a525dcecf4685bea1fbf92651ac0401fe}
 
 
-Definition at line 39 of file main2.c.
+Definition at line 39 of file main2.\-c.
 
-\hypertarget{main2_8c_adec2468b88cf50b20e5cf399a3b7e994}{
-\index{main2.c@{main2.c}!spi\_\-param@{spi\_\-param}}
-\index{spi\_\-param@{spi\_\-param}!main2.c@{main2.c}}
-\subsubsection[{spi\_\-param}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SPI\_\-PARAM\_\-STRUCT} {\bf spi\_\-param}}}
-\label{main2_8c_adec2468b88cf50b20e5cf399a3b7e994}
+\hypertarget{main2_8c_adec2468b88cf50b20e5cf399a3b7e994}{\index{main2.\-c@{main2.\-c}!spi\-\_\-param@{spi\-\_\-param}}
+\index{spi\-\_\-param@{spi\-\_\-param}!main2.c@{main2.\-c}}
+\subsubsection[{spi\-\_\-param}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-P\-I\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-T\-R\-U\-C\-T} spi\-\_\-param}}\label{main2_8c_adec2468b88cf50b20e5cf399a3b7e994}
 
 
-Definition at line 73 of file main2.c.
+Definition at line 73 of file main2.\-c.
 
-\hypertarget{main2_8c_a86c2efd6da48b362806cdbb5b1e711d8}{
-\index{main2.c@{main2.c}!t0@{t0}}
-\index{t0@{t0}!main2.c@{main2.c}}
-\subsubsection[{t0}]{\setlength{\rightskip}{0pt plus 5cm}volatile double {\bf t0} = 0.0}}
-\label{main2_8c_a86c2efd6da48b362806cdbb5b1e711d8}
+\hypertarget{main2_8c_a86c2efd6da48b362806cdbb5b1e711d8}{\index{main2.\-c@{main2.\-c}!t0@{t0}}
+\index{t0@{t0}!main2.c@{main2.\-c}}
+\subsubsection[{t0}]{\setlength{\rightskip}{0pt plus 5cm}volatile double t0 = 0.\-0}}\label{main2_8c_a86c2efd6da48b362806cdbb5b1e711d8}
 
 
-Definition at line 53 of file main2.c.
+Definition at line 53 of file main2.\-c.
 
-\hypertarget{main2_8c_acdaa4a9b0e1be3dfa53b52df6410ad3b}{
-\index{main2.c@{main2.c}!T\_\-task\_\-1\_\-exec\_\-global@{T\_\-task\_\-1\_\-exec\_\-global}}
-\index{T\_\-task\_\-1\_\-exec\_\-global@{T\_\-task\_\-1\_\-exec\_\-global}!main2.c@{main2.c}}
-\subsubsection[{T\_\-task\_\-1\_\-exec\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double {\bf T\_\-task\_\-1\_\-exec\_\-global} = 0.0}}
-\label{main2_8c_acdaa4a9b0e1be3dfa53b52df6410ad3b}
+\hypertarget{main2_8c_acdaa4a9b0e1be3dfa53b52df6410ad3b}{\index{main2.\-c@{main2.\-c}!T\-\_\-task\-\_\-1\-\_\-exec\-\_\-global@{T\-\_\-task\-\_\-1\-\_\-exec\-\_\-global}}
+\index{T\-\_\-task\-\_\-1\-\_\-exec\-\_\-global@{T\-\_\-task\-\_\-1\-\_\-exec\-\_\-global}!main2.c@{main2.\-c}}
+\subsubsection[{T\-\_\-task\-\_\-1\-\_\-exec\-\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double T\-\_\-task\-\_\-1\-\_\-exec\-\_\-global = 0.\-0}}\label{main2_8c_acdaa4a9b0e1be3dfa53b52df6410ad3b}
 
 
-Definition at line 47 of file main2.c.
+Definition at line 47 of file main2.\-c.
 
 
 
-Referenced by periodic\_\-task\_\-1(), threads\_\-linux\_\-periodic\_\-task\_\-1(), threads\_\-linux\_\-timer\_\-function\_\-task\_\-1(), and timer\_\-function\_\-task\_\-1().
+Referenced by periodic\-\_\-task\-\_\-1(), threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-1(), threads\-\_\-linux\-\_\-timer\-\_\-function\-\_\-task\-\_\-1(), and timer\-\_\-function\-\_\-task\-\_\-1().
 
-\hypertarget{main2_8c_a2a2a647912528f7aa86812528dbfe02f}{
-\index{main2.c@{main2.c}!t\_\-task\_\-1\_\-global@{t\_\-task\_\-1\_\-global}}
-\index{t\_\-task\_\-1\_\-global@{t\_\-task\_\-1\_\-global}!main2.c@{main2.c}}
-\subsubsection[{t\_\-task\_\-1\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double {\bf t\_\-task\_\-1\_\-global} = 0.0}}
-\label{main2_8c_a2a2a647912528f7aa86812528dbfe02f}
+\hypertarget{main2_8c_a2a2a647912528f7aa86812528dbfe02f}{\index{main2.\-c@{main2.\-c}!t\-\_\-task\-\_\-1\-\_\-global@{t\-\_\-task\-\_\-1\-\_\-global}}
+\index{t\-\_\-task\-\_\-1\-\_\-global@{t\-\_\-task\-\_\-1\-\_\-global}!main2.c@{main2.\-c}}
+\subsubsection[{t\-\_\-task\-\_\-1\-\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double t\-\_\-task\-\_\-1\-\_\-global = 0.\-0}}\label{main2_8c_a2a2a647912528f7aa86812528dbfe02f}
 
 
-Definition at line 46 of file main2.c.
+Definition at line 46 of file main2.\-c.
 
 
 
-Referenced by get\_\-time(), periodic\_\-task\_\-1(), reset\_\-timer(), threads\_\-get\_\-time(), threads\_\-linux\_\-periodic\_\-task\_\-1(), threads\_\-linux\_\-periodic\_\-task\_\-2(), threads\_\-linux\_\-timer\_\-function\_\-task\_\-1(), threads\_\-reset\_\-timer(), and timer\_\-function\_\-task\_\-1().
+Referenced by get\-\_\-time(), periodic\-\_\-task\-\_\-1(), reset\-\_\-timer(), threads\-\_\-get\-\_\-time(), threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-1(), threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-2(), threads\-\_\-linux\-\_\-timer\-\_\-function\-\_\-task\-\_\-1(), threads\-\_\-reset\-\_\-timer(), and timer\-\_\-function\-\_\-task\-\_\-1().
 
-\hypertarget{main2_8c_aa714e30d738039b5bf665742beb31739}{
-\index{main2.c@{main2.c}!T\_\-task\_\-1\_\-max\_\-global@{T\_\-task\_\-1\_\-max\_\-global}}
-\index{T\_\-task\_\-1\_\-max\_\-global@{T\_\-task\_\-1\_\-max\_\-global}!main2.c@{main2.c}}
-\subsubsection[{T\_\-task\_\-1\_\-max\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double {\bf T\_\-task\_\-1\_\-max\_\-global} = 0.0}}
-\label{main2_8c_aa714e30d738039b5bf665742beb31739}
+\hypertarget{main2_8c_aa714e30d738039b5bf665742beb31739}{\index{main2.\-c@{main2.\-c}!T\-\_\-task\-\_\-1\-\_\-max\-\_\-global@{T\-\_\-task\-\_\-1\-\_\-max\-\_\-global}}
+\index{T\-\_\-task\-\_\-1\-\_\-max\-\_\-global@{T\-\_\-task\-\_\-1\-\_\-max\-\_\-global}!main2.c@{main2.\-c}}
+\subsubsection[{T\-\_\-task\-\_\-1\-\_\-max\-\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double T\-\_\-task\-\_\-1\-\_\-max\-\_\-global = 0.\-0}}\label{main2_8c_aa714e30d738039b5bf665742beb31739}
 
 
-Definition at line 50 of file main2.c.
+Definition at line 50 of file main2.\-c.
 
 
 
-Referenced by threads\_\-linux\_\-timer\_\-function\_\-task\_\-1(), and timer\_\-function\_\-task\_\-1().
+Referenced by threads\-\_\-linux\-\_\-timer\-\_\-function\-\_\-task\-\_\-1(), and timer\-\_\-function\-\_\-task\-\_\-1().
 
-\hypertarget{main2_8c_a738c330c86a365e72ce29ebca3f1e572}{
-\index{main2.c@{main2.c}!T\_\-task\_\-1\_\-mean\_\-global@{T\_\-task\_\-1\_\-mean\_\-global}}
-\index{T\_\-task\_\-1\_\-mean\_\-global@{T\_\-task\_\-1\_\-mean\_\-global}!main2.c@{main2.c}}
-\subsubsection[{T\_\-task\_\-1\_\-mean\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double {\bf T\_\-task\_\-1\_\-mean\_\-global} = 0.0}}
-\label{main2_8c_a738c330c86a365e72ce29ebca3f1e572}
+\hypertarget{main2_8c_a738c330c86a365e72ce29ebca3f1e572}{\index{main2.\-c@{main2.\-c}!T\-\_\-task\-\_\-1\-\_\-mean\-\_\-global@{T\-\_\-task\-\_\-1\-\_\-mean\-\_\-global}}
+\index{T\-\_\-task\-\_\-1\-\_\-mean\-\_\-global@{T\-\_\-task\-\_\-1\-\_\-mean\-\_\-global}!main2.c@{main2.\-c}}
+\subsubsection[{T\-\_\-task\-\_\-1\-\_\-mean\-\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double T\-\_\-task\-\_\-1\-\_\-mean\-\_\-global = 0.\-0}}\label{main2_8c_a738c330c86a365e72ce29ebca3f1e572}
 
 
-Definition at line 48 of file main2.c.
+Definition at line 48 of file main2.\-c.
 
 
 
-Referenced by get\_\-time(), threads\_\-get\_\-time(), threads\_\-linux\_\-timer\_\-function\_\-task\_\-1(), and timer\_\-function\_\-task\_\-1().
+Referenced by get\-\_\-time(), threads\-\_\-get\-\_\-time(), threads\-\_\-linux\-\_\-timer\-\_\-function\-\_\-task\-\_\-1(), and timer\-\_\-function\-\_\-task\-\_\-1().
 
-\hypertarget{main2_8c_a86222e255aeeb47598a4fc91ab6c2b1a}{
-\index{main2.c@{main2.c}!T\_\-task\_\-1\_\-min\_\-global@{T\_\-task\_\-1\_\-min\_\-global}}
-\index{T\_\-task\_\-1\_\-min\_\-global@{T\_\-task\_\-1\_\-min\_\-global}!main2.c@{main2.c}}
-\subsubsection[{T\_\-task\_\-1\_\-min\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double {\bf T\_\-task\_\-1\_\-min\_\-global} = 0.0}}
-\label{main2_8c_a86222e255aeeb47598a4fc91ab6c2b1a}
+\hypertarget{main2_8c_a86222e255aeeb47598a4fc91ab6c2b1a}{\index{main2.\-c@{main2.\-c}!T\-\_\-task\-\_\-1\-\_\-min\-\_\-global@{T\-\_\-task\-\_\-1\-\_\-min\-\_\-global}}
+\index{T\-\_\-task\-\_\-1\-\_\-min\-\_\-global@{T\-\_\-task\-\_\-1\-\_\-min\-\_\-global}!main2.c@{main2.\-c}}
+\subsubsection[{T\-\_\-task\-\_\-1\-\_\-min\-\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double T\-\_\-task\-\_\-1\-\_\-min\-\_\-global = 0.\-0}}\label{main2_8c_a86222e255aeeb47598a4fc91ab6c2b1a}
 
 
-Definition at line 49 of file main2.c.
+Definition at line 49 of file main2.\-c.
 
 
 
-Referenced by threads\_\-linux\_\-timer\_\-function\_\-task\_\-1(), and timer\_\-function\_\-task\_\-1().
+Referenced by threads\-\_\-linux\-\_\-timer\-\_\-function\-\_\-task\-\_\-1(), and timer\-\_\-function\-\_\-task\-\_\-1().
 
-\hypertarget{main2_8c_a9629c77cd3dba9d47d15c2e51bdde09d}{
-\index{main2.c@{main2.c}!T\_\-task\_\-2\_\-exec\_\-global@{T\_\-task\_\-2\_\-exec\_\-global}}
-\index{T\_\-task\_\-2\_\-exec\_\-global@{T\_\-task\_\-2\_\-exec\_\-global}!main2.c@{main2.c}}
-\subsubsection[{T\_\-task\_\-2\_\-exec\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double {\bf T\_\-task\_\-2\_\-exec\_\-global} = 0.0}}
-\label{main2_8c_a9629c77cd3dba9d47d15c2e51bdde09d}
+\hypertarget{main2_8c_a9629c77cd3dba9d47d15c2e51bdde09d}{\index{main2.\-c@{main2.\-c}!T\-\_\-task\-\_\-2\-\_\-exec\-\_\-global@{T\-\_\-task\-\_\-2\-\_\-exec\-\_\-global}}
+\index{T\-\_\-task\-\_\-2\-\_\-exec\-\_\-global@{T\-\_\-task\-\_\-2\-\_\-exec\-\_\-global}!main2.c@{main2.\-c}}
+\subsubsection[{T\-\_\-task\-\_\-2\-\_\-exec\-\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double T\-\_\-task\-\_\-2\-\_\-exec\-\_\-global = 0.\-0}}\label{main2_8c_a9629c77cd3dba9d47d15c2e51bdde09d}
 
 
-Definition at line 59 of file main2.c.
+Definition at line 59 of file main2.\-c.
 
 
 
-Referenced by periodic\_\-task\_\-1(), threads\_\-linux\_\-periodic\_\-task\_\-1(), threads\_\-linux\_\-timer\_\-function\_\-task\_\-2(), and timer\_\-function\_\-task\_\-2().
+Referenced by periodic\-\_\-task\-\_\-1(), threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-1(), threads\-\_\-linux\-\_\-timer\-\_\-function\-\_\-task\-\_\-2(), and timer\-\_\-function\-\_\-task\-\_\-2().
 
-\hypertarget{main2_8c_a08f794ff34d918d3d34d771e11e4aba3}{
-\index{main2.c@{main2.c}!t\_\-task\_\-2\_\-global@{t\_\-task\_\-2\_\-global}}
-\index{t\_\-task\_\-2\_\-global@{t\_\-task\_\-2\_\-global}!main2.c@{main2.c}}
-\subsubsection[{t\_\-task\_\-2\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double {\bf t\_\-task\_\-2\_\-global} = 0.0}}
-\label{main2_8c_a08f794ff34d918d3d34d771e11e4aba3}
+\hypertarget{main2_8c_a08f794ff34d918d3d34d771e11e4aba3}{\index{main2.\-c@{main2.\-c}!t\-\_\-task\-\_\-2\-\_\-global@{t\-\_\-task\-\_\-2\-\_\-global}}
+\index{t\-\_\-task\-\_\-2\-\_\-global@{t\-\_\-task\-\_\-2\-\_\-global}!main2.c@{main2.\-c}}
+\subsubsection[{t\-\_\-task\-\_\-2\-\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double t\-\_\-task\-\_\-2\-\_\-global = 0.\-0}}\label{main2_8c_a08f794ff34d918d3d34d771e11e4aba3}
 
 
-Definition at line 58 of file main2.c.
+Definition at line 58 of file main2.\-c.
 
 
 
-Referenced by threads\_\-linux\_\-timer\_\-function\_\-task\_\-2(), and timer\_\-function\_\-task\_\-2().
+Referenced by threads\-\_\-linux\-\_\-timer\-\_\-function\-\_\-task\-\_\-2(), and timer\-\_\-function\-\_\-task\-\_\-2().
 
-\hypertarget{main2_8c_a1cd82006c46f46176730e876d272cc14}{
-\index{main2.c@{main2.c}!T\_\-task\_\-2\_\-max\_\-global@{T\_\-task\_\-2\_\-max\_\-global}}
-\index{T\_\-task\_\-2\_\-max\_\-global@{T\_\-task\_\-2\_\-max\_\-global}!main2.c@{main2.c}}
-\subsubsection[{T\_\-task\_\-2\_\-max\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double {\bf T\_\-task\_\-2\_\-max\_\-global} = 0.0}}
-\label{main2_8c_a1cd82006c46f46176730e876d272cc14}
+\hypertarget{main2_8c_a1cd82006c46f46176730e876d272cc14}{\index{main2.\-c@{main2.\-c}!T\-\_\-task\-\_\-2\-\_\-max\-\_\-global@{T\-\_\-task\-\_\-2\-\_\-max\-\_\-global}}
+\index{T\-\_\-task\-\_\-2\-\_\-max\-\_\-global@{T\-\_\-task\-\_\-2\-\_\-max\-\_\-global}!main2.c@{main2.\-c}}
+\subsubsection[{T\-\_\-task\-\_\-2\-\_\-max\-\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double T\-\_\-task\-\_\-2\-\_\-max\-\_\-global = 0.\-0}}\label{main2_8c_a1cd82006c46f46176730e876d272cc14}
 
 
-Definition at line 62 of file main2.c.
+Definition at line 62 of file main2.\-c.
 
 
 
-Referenced by threads\_\-linux\_\-timer\_\-function\_\-task\_\-2(), and timer\_\-function\_\-task\_\-2().
+Referenced by threads\-\_\-linux\-\_\-timer\-\_\-function\-\_\-task\-\_\-2(), and timer\-\_\-function\-\_\-task\-\_\-2().
 
-\hypertarget{main2_8c_af4e19d5a9b24aa56c8ebff6ad1aa2b95}{
-\index{main2.c@{main2.c}!T\_\-task\_\-2\_\-mean\_\-global@{T\_\-task\_\-2\_\-mean\_\-global}}
-\index{T\_\-task\_\-2\_\-mean\_\-global@{T\_\-task\_\-2\_\-mean\_\-global}!main2.c@{main2.c}}
-\subsubsection[{T\_\-task\_\-2\_\-mean\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double {\bf T\_\-task\_\-2\_\-mean\_\-global} = 0.0}}
-\label{main2_8c_af4e19d5a9b24aa56c8ebff6ad1aa2b95}
+\hypertarget{main2_8c_af4e19d5a9b24aa56c8ebff6ad1aa2b95}{\index{main2.\-c@{main2.\-c}!T\-\_\-task\-\_\-2\-\_\-mean\-\_\-global@{T\-\_\-task\-\_\-2\-\_\-mean\-\_\-global}}
+\index{T\-\_\-task\-\_\-2\-\_\-mean\-\_\-global@{T\-\_\-task\-\_\-2\-\_\-mean\-\_\-global}!main2.c@{main2.\-c}}
+\subsubsection[{T\-\_\-task\-\_\-2\-\_\-mean\-\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double T\-\_\-task\-\_\-2\-\_\-mean\-\_\-global = 0.\-0}}\label{main2_8c_af4e19d5a9b24aa56c8ebff6ad1aa2b95}
 
 
-Definition at line 60 of file main2.c.
+Definition at line 60 of file main2.\-c.
 
 
 
-Referenced by threads\_\-linux\_\-timer\_\-function\_\-task\_\-2(), and timer\_\-function\_\-task\_\-2().
+Referenced by threads\-\_\-linux\-\_\-timer\-\_\-function\-\_\-task\-\_\-2(), and timer\-\_\-function\-\_\-task\-\_\-2().
 
-\hypertarget{main2_8c_ab7712cb13ce6206dd138a51e2053e36c}{
-\index{main2.c@{main2.c}!T\_\-task\_\-2\_\-min\_\-global@{T\_\-task\_\-2\_\-min\_\-global}}
-\index{T\_\-task\_\-2\_\-min\_\-global@{T\_\-task\_\-2\_\-min\_\-global}!main2.c@{main2.c}}
-\subsubsection[{T\_\-task\_\-2\_\-min\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double {\bf T\_\-task\_\-2\_\-min\_\-global} = 0.0}}
-\label{main2_8c_ab7712cb13ce6206dd138a51e2053e36c}
+\hypertarget{main2_8c_ab7712cb13ce6206dd138a51e2053e36c}{\index{main2.\-c@{main2.\-c}!T\-\_\-task\-\_\-2\-\_\-min\-\_\-global@{T\-\_\-task\-\_\-2\-\_\-min\-\_\-global}}
+\index{T\-\_\-task\-\_\-2\-\_\-min\-\_\-global@{T\-\_\-task\-\_\-2\-\_\-min\-\_\-global}!main2.c@{main2.\-c}}
+\subsubsection[{T\-\_\-task\-\_\-2\-\_\-min\-\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double T\-\_\-task\-\_\-2\-\_\-min\-\_\-global = 0.\-0}}\label{main2_8c_ab7712cb13ce6206dd138a51e2053e36c}
 
 
-Definition at line 61 of file main2.c.
+Definition at line 61 of file main2.\-c.
 
 
 
-Referenced by threads\_\-linux\_\-timer\_\-function\_\-task\_\-2(), and timer\_\-function\_\-task\_\-2().
+Referenced by threads\-\_\-linux\-\_\-timer\-\_\-function\-\_\-task\-\_\-2(), and timer\-\_\-function\-\_\-task\-\_\-2().
 
-\hypertarget{main2_8c_afffc21b0b726e6f4a572d0eefd3b5d69}{
-\index{main2.c@{main2.c}!task\_\-1\_\-period\_\-us@{task\_\-1\_\-period\_\-us}}
-\index{task\_\-1\_\-period\_\-us@{task\_\-1\_\-period\_\-us}!main2.c@{main2.c}}
-\subsubsection[{task\_\-1\_\-period\_\-us}]{\setlength{\rightskip}{0pt plus 5cm}volatile int {\bf task\_\-1\_\-period\_\-us} = TASK1\_\-PERIOD\_\-US}}
-\label{main2_8c_afffc21b0b726e6f4a572d0eefd3b5d69}
+\hypertarget{main2_8c_afffc21b0b726e6f4a572d0eefd3b5d69}{\index{main2.\-c@{main2.\-c}!task\-\_\-1\-\_\-period\-\_\-us@{task\-\_\-1\-\_\-period\-\_\-us}}
+\index{task\-\_\-1\-\_\-period\-\_\-us@{task\-\_\-1\-\_\-period\-\_\-us}!main2.c@{main2.\-c}}
+\subsubsection[{task\-\_\-1\-\_\-period\-\_\-us}]{\setlength{\rightskip}{0pt plus 5cm}volatile int task\-\_\-1\-\_\-period\-\_\-us = {\bf T\-A\-S\-K1\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-U\-S}}}\label{main2_8c_afffc21b0b726e6f4a572d0eefd3b5d69}
 
 
-Definition at line 51 of file main2.c.
+Definition at line 51 of file main2.\-c.
 
 
 
-Referenced by get\_\-time(), main(), periodic\_\-task\_\-1(), threads\_\-get\_\-time(), threads\_\-linux\_\-init(), threads\_\-linux\_\-periodic\_\-task\_\-1(), threads\_\-linux\_\-timer\_\-start\_\-task\_\-1(), and timer\_\-start\_\-task\_\-1().
+Referenced by get\-\_\-time(), main(), periodic\-\_\-task\-\_\-1(), threads\-\_\-get\-\_\-time(), threads\-\_\-linux\-\_\-init(), threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-1(), threads\-\_\-linux\-\_\-timer\-\_\-start\-\_\-task\-\_\-1(), and timer\-\_\-start\-\_\-task\-\_\-1().
 
-\hypertarget{main2_8c_a5166d431d5448a1538e75f5469c19c7b}{
-\index{main2.c@{main2.c}!task\_\-2\_\-period\_\-us@{task\_\-2\_\-period\_\-us}}
-\index{task\_\-2\_\-period\_\-us@{task\_\-2\_\-period\_\-us}!main2.c@{main2.c}}
-\subsubsection[{task\_\-2\_\-period\_\-us}]{\setlength{\rightskip}{0pt plus 5cm}volatile int {\bf task\_\-2\_\-period\_\-us} = TASK2\_\-PERIOD\_\-US}}
-\label{main2_8c_a5166d431d5448a1538e75f5469c19c7b}
+\hypertarget{main2_8c_a5166d431d5448a1538e75f5469c19c7b}{\index{main2.\-c@{main2.\-c}!task\-\_\-2\-\_\-period\-\_\-us@{task\-\_\-2\-\_\-period\-\_\-us}}
+\index{task\-\_\-2\-\_\-period\-\_\-us@{task\-\_\-2\-\_\-period\-\_\-us}!main2.c@{main2.\-c}}
+\subsubsection[{task\-\_\-2\-\_\-period\-\_\-us}]{\setlength{\rightskip}{0pt plus 5cm}volatile int task\-\_\-2\-\_\-period\-\_\-us = {\bf T\-A\-S\-K2\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-U\-S}}}\label{main2_8c_a5166d431d5448a1538e75f5469c19c7b}
 
 
-Definition at line 63 of file main2.c.
+Definition at line 63 of file main2.\-c.
 
 
 
-Referenced by threads\_\-linux\_\-timer\_\-start\_\-task\_\-2(), and timer\_\-start\_\-task\_\-2().
+Referenced by threads\-\_\-linux\-\_\-timer\-\_\-start\-\_\-task\-\_\-2(), and timer\-\_\-start\-\_\-task\-\_\-2().
 
-\hypertarget{main2_8c_a5045187bb0afe92c41ce73bc602fd3ca}{
-\index{main2.c@{main2.c}!telemetry\_\-mode@{telemetry\_\-mode}}
-\index{telemetry\_\-mode@{telemetry\_\-mode}!main2.c@{main2.c}}
-\subsubsection[{telemetry\_\-mode}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf telemetry\_\-mode} = UI\_\-NCURSES\_\-MODE}}
-\label{main2_8c_a5045187bb0afe92c41ce73bc602fd3ca}
+\hypertarget{main2_8c_a5045187bb0afe92c41ce73bc602fd3ca}{\index{main2.\-c@{main2.\-c}!telemetry\-\_\-mode@{telemetry\-\_\-mode}}
+\index{telemetry\-\_\-mode@{telemetry\-\_\-mode}!main2.c@{main2.\-c}}
+\subsubsection[{telemetry\-\_\-mode}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int telemetry\-\_\-mode = {\bf U\-I\-\_\-\-N\-C\-U\-R\-S\-E\-S\-\_\-\-M\-O\-D\-E}}}\label{main2_8c_a5045187bb0afe92c41ce73bc602fd3ca}
 
 
-Definition at line 65 of file main2.c.
+Definition at line 65 of file main2.\-c.
 
 
 
-Referenced by periodic\_\-task\_\-2(), and threads\_\-linux\_\-periodic\_\-task\_\-2().
+Referenced by periodic\-\_\-task\-\_\-2(), and threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-2().
 
-\hypertarget{main2_8c_a904a157c5d5f94416cd450f511635af1}{
-\index{main2.c@{main2.c}!timer\_\-task\_\-1@{timer\_\-task\_\-1}}
-\index{timer\_\-task\_\-1@{timer\_\-task\_\-1}!main2.c@{main2.c}}
-\subsubsection[{timer\_\-task\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}timer\_\-t {\bf timer\_\-task\_\-1}}}
-\label{main2_8c_a904a157c5d5f94416cd450f511635af1}
+\hypertarget{main2_8c_a904a157c5d5f94416cd450f511635af1}{\index{main2.\-c@{main2.\-c}!timer\-\_\-task\-\_\-1@{timer\-\_\-task\-\_\-1}}
+\index{timer\-\_\-task\-\_\-1@{timer\-\_\-task\-\_\-1}!main2.c@{main2.\-c}}
+\subsubsection[{timer\-\_\-task\-\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}timer\-\_\-t timer\-\_\-task\-\_\-1}}\label{main2_8c_a904a157c5d5f94416cd450f511635af1}
 
 
-Definition at line 45 of file main2.c.
+Definition at line 45 of file main2.\-c.
 
 
 
-Referenced by threads\_\-linux\_\-timer\_\-start\_\-task\_\-1(), threads\_\-linux\_\-timer\_\-stop\_\-task\_\-1(), timer\_\-start\_\-task\_\-1(), and timer\_\-stop\_\-task\_\-1().
+Referenced by threads\-\_\-linux\-\_\-timer\-\_\-start\-\_\-task\-\_\-1(), threads\-\_\-linux\-\_\-timer\-\_\-stop\-\_\-task\-\_\-1(), timer\-\_\-start\-\_\-task\-\_\-1(), and timer\-\_\-stop\-\_\-task\-\_\-1().
 
-\hypertarget{main2_8c_adf6e8e22925f399f086dea8671f39c08}{
-\index{main2.c@{main2.c}!timer\_\-task\_\-2@{timer\_\-task\_\-2}}
-\index{timer\_\-task\_\-2@{timer\_\-task\_\-2}!main2.c@{main2.c}}
-\subsubsection[{timer\_\-task\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}timer\_\-t {\bf timer\_\-task\_\-2}}}
-\label{main2_8c_adf6e8e22925f399f086dea8671f39c08}
+\hypertarget{main2_8c_adf6e8e22925f399f086dea8671f39c08}{\index{main2.\-c@{main2.\-c}!timer\-\_\-task\-\_\-2@{timer\-\_\-task\-\_\-2}}
+\index{timer\-\_\-task\-\_\-2@{timer\-\_\-task\-\_\-2}!main2.c@{main2.\-c}}
+\subsubsection[{timer\-\_\-task\-\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}timer\-\_\-t timer\-\_\-task\-\_\-2}}\label{main2_8c_adf6e8e22925f399f086dea8671f39c08}
 
 
-Definition at line 57 of file main2.c.
+Definition at line 57 of file main2.\-c.
 
 
 
-Referenced by threads\_\-linux\_\-timer\_\-start\_\-task\_\-2(), threads\_\-linux\_\-timer\_\-stop\_\-task\_\-2(), timer\_\-start\_\-task\_\-2(), and timer\_\-stop\_\-task\_\-2().
+Referenced by threads\-\_\-linux\-\_\-timer\-\_\-start\-\_\-task\-\_\-2(), threads\-\_\-linux\-\_\-timer\-\_\-stop\-\_\-task\-\_\-2(), timer\-\_\-start\-\_\-task\-\_\-2(), and timer\-\_\-stop\-\_\-task\-\_\-2().
 
-\hypertarget{main2_8c_ac7af894858cf396a219d632f40afdc8d}{
-\index{main2.c@{main2.c}!total@{total}}
-\index{total@{total}!main2.c@{main2.c}}
-\subsubsection[{total}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf total} = 0}}
-\label{main2_8c_ac7af894858cf396a219d632f40afdc8d}
+\hypertarget{main2_8c_ac7af894858cf396a219d632f40afdc8d}{\index{main2.\-c@{main2.\-c}!total@{total}}
+\index{total@{total}!main2.c@{main2.\-c}}
+\subsubsection[{total}]{\setlength{\rightskip}{0pt plus 5cm}int total = 0}}\label{main2_8c_ac7af894858cf396a219d632f40afdc8d}
 
 
-Definition at line 41 of file main2.c.
+Definition at line 41 of file main2.\-c.
 

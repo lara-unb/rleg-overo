@@ -1,194 +1,243 @@
-\hypertarget{group__mag}{
-\section{Functions to Magnetometer HMC5883}
-\label{group__mag}\index{Functions to Magnetometer HMC5883@{Functions to Magnetometer HMC5883}}
+\hypertarget{group__mag}{\section{Functions to Magnetometer H\-M\-C5883}
+\label{group__mag}\index{Functions to Magnetometer H\-M\-C5883@{Functions to Magnetometer H\-M\-C5883}}
 }
-
-
-Collaboration diagram for Functions to Magnetometer HMC5883:
-
+Collaboration diagram for Functions to Magnetometer H\-M\-C5883\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{group__mag}
+\end{center}
+\end{figure}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-uint8\_\-t $\ast$ \hyperlink{group__mag_ga6830eaeae2298320e1e8c902e4edd709}{mag\_\-read\_\-reg} (int i2c\_\-dev, uint8\_\-t reg, uint8\_\-t count)
-\begin{DoxyCompactList}\small\item\em READ COUNT 8-\/BIT REGISTER IN SEQUENCE. \item\end{DoxyCompactList}\item 
-int \hyperlink{group__mag_gab42ae0d0a2a6f37cf36d856c072b7f34}{mag\_\-read\_\-all\_\-data} (int i2c\_\-dev, short int $\ast$data)
-\begin{DoxyCompactList}\small\item\em READ ALL DATA AT ONCE (X, Y and Z). \item\end{DoxyCompactList}\item 
-short int \hyperlink{group__mag_ga542a31ccd07cd2c3e8e2b68cdb6d219e}{mag\_\-read\_\-data} (int i2c\_\-dev, int axis)
-\begin{DoxyCompactList}\small\item\em READ DATA (X, Y or Z). \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+uint8\-\_\-t $\ast$ \hyperlink{group__mag_ga6830eaeae2298320e1e8c902e4edd709}{mag\-\_\-read\-\_\-reg} (int i2c\-\_\-dev, uint8\-\_\-t reg, uint8\-\_\-t count)
+\begin{DoxyCompactList}\small\item\em R\-E\-A\-D C\-O\-U\-N\-T 8-\/\-B\-I\-T R\-E\-G\-I\-S\-T\-E\-R I\-N S\-E\-Q\-U\-E\-N\-C\-E. \end{DoxyCompactList}\item 
+int \hyperlink{group__mag_gab42ae0d0a2a6f37cf36d856c072b7f34}{mag\-\_\-read\-\_\-all\-\_\-data} (int i2c\-\_\-dev, short int $\ast$data)
+\begin{DoxyCompactList}\small\item\em R\-E\-A\-D A\-L\-L D\-A\-T\-A A\-T O\-N\-C\-E (X, Y and Z) \end{DoxyCompactList}\item 
+short int \hyperlink{group__mag_ga542a31ccd07cd2c3e8e2b68cdb6d219e}{mag\-\_\-read\-\_\-data} (int i2c\-\_\-dev, int axis)
+\begin{DoxyCompactList}\small\item\em R\-E\-A\-D D\-A\-T\-A (X, Y or Z) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
 
 
 \subsection{Function Documentation}
-\hypertarget{group__mag_gab42ae0d0a2a6f37cf36d856c072b7f34}{
-\index{mag@{mag}!mag\_\-read\_\-all\_\-data@{mag\_\-read\_\-all\_\-data}}
-\index{mag\_\-read\_\-all\_\-data@{mag\_\-read\_\-all\_\-data}!mag@{mag}}
-\subsubsection[{mag\_\-read\_\-all\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}int mag\_\-read\_\-all\_\-data (int {\em i2c\_\-dev}, \/  short int $\ast$ {\em data})}}
-\label{group__mag_gab42ae0d0a2a6f37cf36d856c072b7f34}
+\hypertarget{group__mag_gab42ae0d0a2a6f37cf36d856c072b7f34}{\index{Functions to Magnetometer H\-M\-C5883@{Functions to Magnetometer H\-M\-C5883}!mag\-\_\-read\-\_\-all\-\_\-data@{mag\-\_\-read\-\_\-all\-\_\-data}}
+\index{mag\-\_\-read\-\_\-all\-\_\-data@{mag\-\_\-read\-\_\-all\-\_\-data}!Functions to Magnetometer HMC5883@{Functions to Magnetometer H\-M\-C5883}}
+\subsubsection[{mag\-\_\-read\-\_\-all\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}int mag\-\_\-read\-\_\-all\-\_\-data (
+\begin{DoxyParamCaption}
+\item[{int}]{i2c\-\_\-dev, }
+\item[{short int $\ast$}]{data}
+\end{DoxyParamCaption}
+)}}\label{group__mag_gab42ae0d0a2a6f37cf36d856c072b7f34}
 
 
-READ ALL DATA AT ONCE (X, Y and Z). 
+R\-E\-A\-D A\-L\-L D\-A\-T\-A A\-T O\-N\-C\-E (X, Y and Z) 
 
 
-\begin{DoxyParams}{Parameters}
-\item[{\em i2c\_\-dev}]\item[\mbox{$\rightarrow$} {\em $\ast$data}]\end{DoxyParams}
+\begin{DoxyParams}[1]{Parameters}
+ & {\em i2c\-\_\-dev} & \\
+\hline
+\mbox{\tt out}  & {\em $\ast$data} & \\
+\hline
+\end{DoxyParams}
 
 
-Definition at line 121 of file mag\_\-functions.c.
-
-
-
-References FAILURE, MAG\_\-DATAX1, mag\_\-read\_\-reg(), and SUCCESS.
-
-
-
-Referenced by read\_\-all\_\-data().
-
-
-
-
-\begin{DoxyCode}
-122 {
-123   uint8_t i, j;
-124   uint8_t *data8;
-125   union result
-126   {
-127     unsigned short int usgnd[3];
-128     short int sgnd[3];
-129   } result;
-130   //result=(union result*)malloc(3*sizeof(union result));
-131   if( (data8=mag_read_reg(i2c_dev,MAG_DATAX1,6))==NULL)
-132   {
-133     //perror("Read accelerometer register failed");
-134     return FAILURE;
-135   }
-136   //result.usgnd=(unsigned int*)malloc(3*sizeof(unsigned int));
-137   j=0;
-138   for(i=0; i<3; i++)
-139   {
-140     result.usgnd[j]=0;
-141     result.usgnd[j]=result.usgnd[j]|((unsigned short int)data8[i*2+1])|(((unsigne
-      d int)data8[i*2])<<8);
-142     data[j]=result.sgnd[j];
-143     j=2-i; // trick used to change the sorting of the data from XZY to XYZ
-144   }
-145   return SUCCESS;  
-146 }
-\end{DoxyCode}
+Definition at line 121 of file mag\-\_\-functions.\-c.
 
 
 
-
-Here is the call graph for this function:
-
-
-
-Here is the caller graph for this function:
-
-\hypertarget{group__mag_ga542a31ccd07cd2c3e8e2b68cdb6d219e}{
-\index{mag@{mag}!mag\_\-read\_\-data@{mag\_\-read\_\-data}}
-\index{mag\_\-read\_\-data@{mag\_\-read\_\-data}!mag@{mag}}
-\subsubsection[{mag\_\-read\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}short int mag\_\-read\_\-data (int {\em i2c\_\-dev}, \/  int {\em axis})}}
-\label{group__mag_ga542a31ccd07cd2c3e8e2b68cdb6d219e}
-
-
-READ DATA (X, Y or Z). 
-
-
-\begin{DoxyParams}{Parameters}
-\item[{\em i2c\_\-dev}]\item[{\em axis}]set the axis ('X' or 'Y' or 'Z') \end{DoxyParams}
-
-
-Definition at line 148 of file mag\_\-functions.c.
+References F\-A\-I\-L\-U\-R\-E, M\-A\-G\-\_\-\-D\-A\-T\-A\-X1, mag\-\_\-read\-\_\-reg(), and S\-U\-C\-C\-E\-S\-S.
 
 
 
-References MAG\_\-DATAX1, MAG\_\-DATAY1, MAG\_\-DATAZ1, and mag\_\-read\_\-reg().
-
-
+Referenced by read\-\_\-all\-\_\-data().
 
 
 \begin{DoxyCode}
-149 {
-150   uint8_t *data;
-151   union result
-152   {
-153     unsigned int usgnd;
-154     int sgnd;
-155   }result;
-156 
-157   switch(axis){
-158     case 'X':
-159       data=mag_read_reg(i2c_dev,MAG_DATAX1,2);
-160       break;
-161     case 'Y':
-162       data=mag_read_reg(i2c_dev,MAG_DATAY1,2);
-163       break;
-164     case 'Z':
-165       data=mag_read_reg(i2c_dev,MAG_DATAZ1,2);
-166       break;
-167     default:
-168       //perror("Wrong argument for axis in mag_read_data");
-169       return -1;
-170   }
-171   result.usgnd=0;
-172   result.usgnd=result.usgnd|(((unsigned short int)data[1]))|(((unsigned short int
-      )data[0])<<8);
-173   return result.sgnd;
-174 }
+\{
+  uint8\_t i, j;
+  uint8\_t *data8;
+  \textcolor{keyword}{union }result
+  \{
+    \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} usgnd[3];
+    \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} sgnd[3];
+  \} result;
+  \textcolor{comment}{//result=(union result*)malloc(3*sizeof(union result));}
+  \textcolor{keywordflow}{if}( (data8=\hyperlink{group__mag_ga6830eaeae2298320e1e8c902e4edd709}{mag\_read\_reg}(i2c\_dev,\hyperlink{imu__regs_8h_a4f883328e7ae117996e334145ddd0032}{MAG\_DATAX1},6))==NULL)
+  \{
+    \textcolor{comment}{//perror("Read accelerometer register failed");}
+    \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
+  \}
+  \textcolor{comment}{//result.usgnd=(unsigned int*)malloc(3*sizeof(unsigned int));}
+  j=0;
+  \textcolor{keywordflow}{for}(i=0; i<3; i++)
+  \{
+    result.usgnd[j]=0;
+    result.usgnd[j]=result.usgnd[j]|((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} int)data8[i*2+1])|(((\textcolor{keywordtype}{
+      unsigned} int)data8[i*2])<<8);
+    data[j]=result.sgnd[j];
+    j=2-i; \textcolor{comment}{// trick used to change the sorting of the data from XZY to XYZ}
+  \}
+  \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};  
+\}
 \end{DoxyCode}
 
 
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{group__mag_gab42ae0d0a2a6f37cf36d856c072b7f34_cgraph}
+\end{center}
+\end{figure}
 
 
-Here is the call graph for this function:
-
-\hypertarget{group__mag_ga6830eaeae2298320e1e8c902e4edd709}{
-\index{mag@{mag}!mag\_\-read\_\-reg@{mag\_\-read\_\-reg}}
-\index{mag\_\-read\_\-reg@{mag\_\-read\_\-reg}!mag@{mag}}
-\subsubsection[{mag\_\-read\_\-reg}]{\setlength{\rightskip}{0pt plus 5cm}uint8\_\-t$\ast$ mag\_\-read\_\-reg (int {\em i2c\_\-dev}, \/  uint8\_\-t {\em reg}, \/  uint8\_\-t {\em count})}}
-\label{group__mag_ga6830eaeae2298320e1e8c902e4edd709}
 
 
-READ COUNT 8-\/BIT REGISTER IN SEQUENCE. 
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__mag_gab42ae0d0a2a6f37cf36d856c072b7f34_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group__mag_ga542a31ccd07cd2c3e8e2b68cdb6d219e}{\index{Functions to Magnetometer H\-M\-C5883@{Functions to Magnetometer H\-M\-C5883}!mag\-\_\-read\-\_\-data@{mag\-\_\-read\-\_\-data}}
+\index{mag\-\_\-read\-\_\-data@{mag\-\_\-read\-\_\-data}!Functions to Magnetometer HMC5883@{Functions to Magnetometer H\-M\-C5883}}
+\subsubsection[{mag\-\_\-read\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}short int mag\-\_\-read\-\_\-data (
+\begin{DoxyParamCaption}
+\item[{int}]{i2c\-\_\-dev, }
+\item[{int}]{axis}
+\end{DoxyParamCaption}
+)}}\label{group__mag_ga542a31ccd07cd2c3e8e2b68cdb6d219e}
+
+
+R\-E\-A\-D D\-A\-T\-A (X, Y or Z) 
 
 
 \begin{DoxyParams}{Parameters}
-\item[{\em i2c\_\-dev}]\item[{\em reg}]\item[{\em count}]number of registers in sequence (1-\/13) \end{DoxyParams}
+{\em i2c\-\_\-dev} & \\
+\hline
+{\em axis} & set the axis ('X' or 'Y' or 'Z') \\
+\hline
+\end{DoxyParams}
 
 
-Definition at line 31 of file mag\_\-functions.c.
+Definition at line 148 of file mag\-\_\-functions.\-c.
 
 
 
-Referenced by mag\_\-read\_\-all\_\-data(), and mag\_\-read\_\-data().
-
-
+References M\-A\-G\-\_\-\-D\-A\-T\-A\-X1, M\-A\-G\-\_\-\-D\-A\-T\-A\-Y1, M\-A\-G\-\_\-\-D\-A\-T\-A\-Z1, and mag\-\_\-read\-\_\-reg().
 
 
 \begin{DoxyCode}
-32 {
-33   uint8_t data[13];
-34   int i;
-35 
-36   //data=(uint8_t*)malloc((count+1)*sizeof(data));
-37   
-38   data[0] = reg;
-39 
-40   if (write(i2c_dev, &data, 1) != 1) {           
-41         //perror("write before read");
-42         return NULL;
-43   }
-44   data[0] = 0;
-45   if (read(i2c_dev, &data, count) != count) {
-46         //perror("read");
-47         return NULL;    
-48   }
-49 
-50   return data;
-51 }
+\{
+  uint8\_t *data;
+  \textcolor{keyword}{union }result
+  \{
+    \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} usgnd;
+    \textcolor{keywordtype}{int} sgnd;
+  \}result;
+
+  \textcolor{keywordflow}{switch}(axis)\{
+    \textcolor{keywordflow}{case} \textcolor{charliteral}{'X'}:
+      data=\hyperlink{group__mag_ga6830eaeae2298320e1e8c902e4edd709}{mag\_read\_reg}(i2c\_dev,\hyperlink{imu__regs_8h_a4f883328e7ae117996e334145ddd0032}{MAG\_DATAX1},2);
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{case} \textcolor{charliteral}{'Y'}:
+      data=\hyperlink{group__mag_ga6830eaeae2298320e1e8c902e4edd709}{mag\_read\_reg}(i2c\_dev,\hyperlink{imu__regs_8h_ae218906702b1e40c2b6970f97dd0cfe4}{MAG\_DATAY1},2);
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{case} \textcolor{charliteral}{'Z'}:
+      data=\hyperlink{group__mag_ga6830eaeae2298320e1e8c902e4edd709}{mag\_read\_reg}(i2c\_dev,\hyperlink{imu__regs_8h_a81d7d9236ec69a1a229e4fa7c6299fde}{MAG\_DATAZ1},2);
+      \textcolor{keywordflow}{break};
+    \textcolor{keywordflow}{default}:
+      \textcolor{comment}{//perror("Wrong argument for axis in mag\_read\_data");}
+      \textcolor{keywordflow}{return} -1;
+  \}
+  result.usgnd=0;
+  result.usgnd=result.usgnd|(((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} int)data[1]))|(((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \textcolor{keywordtype}{
+      int})data[0])<<8);
+  \textcolor{keywordflow}{return} result.sgnd;
+\}
 \end{DoxyCode}
 
 
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{group__mag_ga542a31ccd07cd2c3e8e2b68cdb6d219e_cgraph}
+\end{center}
+\end{figure}
 
 
-Here is the caller graph for this function:
+\hypertarget{group__mag_ga6830eaeae2298320e1e8c902e4edd709}{\index{Functions to Magnetometer H\-M\-C5883@{Functions to Magnetometer H\-M\-C5883}!mag\-\_\-read\-\_\-reg@{mag\-\_\-read\-\_\-reg}}
+\index{mag\-\_\-read\-\_\-reg@{mag\-\_\-read\-\_\-reg}!Functions to Magnetometer HMC5883@{Functions to Magnetometer H\-M\-C5883}}
+\subsubsection[{mag\-\_\-read\-\_\-reg}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t$\ast$ mag\-\_\-read\-\_\-reg (
+\begin{DoxyParamCaption}
+\item[{int}]{i2c\-\_\-dev, }
+\item[{uint8\-\_\-t}]{reg, }
+\item[{uint8\-\_\-t}]{count}
+\end{DoxyParamCaption}
+)}}\label{group__mag_ga6830eaeae2298320e1e8c902e4edd709}
+
+
+R\-E\-A\-D C\-O\-U\-N\-T 8-\/\-B\-I\-T R\-E\-G\-I\-S\-T\-E\-R I\-N S\-E\-Q\-U\-E\-N\-C\-E. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i2c\-\_\-dev} & \\
+\hline
+{\em reg} & \\
+\hline
+{\em count} & number of registers in sequence (1-\/13) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 31 of file mag\-\_\-functions.\-c.
+
+
+
+Referenced by mag\-\_\-read\-\_\-all\-\_\-data(), and mag\-\_\-read\-\_\-data().
+
+
+\begin{DoxyCode}
+\{
+  uint8\_t data[13];
+  \textcolor{keywordtype}{int} i;
+
+  \textcolor{comment}{//data=(uint8\_t*)malloc((count+1)*sizeof(data));}
+  
+  data[0] = reg;
+
+  \textcolor{keywordflow}{if} (write(i2c\_dev, &data, 1) != 1) \{           
+        \textcolor{comment}{//perror("write before read");}
+        \textcolor{keywordflow}{return} NULL;
+  \}
+  data[0] = 0;
+  \textcolor{keywordflow}{if} (read(i2c\_dev, &data, count) != count) \{
+        \textcolor{comment}{//perror("read");}
+        \textcolor{keywordflow}{return} NULL;    
+  \}
+
+  \textcolor{keywordflow}{return} data;
+\}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__mag_ga6830eaeae2298320e1e8c902e4edd709_icgraph}
+\end{center}
+\end{figure}
+
 

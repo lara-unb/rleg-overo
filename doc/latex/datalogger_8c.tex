@@ -1,1020 +1,1246 @@
-\hypertarget{datalogger_8c}{
-\section{datalogger.c File Reference}
-\label{datalogger_8c}\index{datalogger.c@{datalogger.c}}
+\hypertarget{datalogger_8c}{\section{datalogger.\-c File Reference}
+\label{datalogger_8c}\index{datalogger.\-c@{datalogger.\-c}}
 }
-{\ttfamily \#include $<$stdlib.h$>$}\par
-{\ttfamily \#include $<$stdio.h$>$}\par
-{\ttfamily \#include $<$string.h$>$}\par
-{\ttfamily \#include $<$pthread.h$>$}\par
-{\ttfamily \#include \char`\"{}gdatalogger/gqueue.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}communication/communication.h\char`\"{}}\par
-Include dependency graph for datalogger.c:This graph shows which files directly or indirectly include this file:\subsection*{Functions}
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include $<$pthread.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}gdatalogger/gqueue.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}gdatalogger/gmatlabdatafile.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}gdatalogger/gdatalogger.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}communication/communication.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}datalogger.\-h\char`\"{}}\\*
+Include dependency graph for datalogger.\-c\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{datalogger_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-int \hyperlink{datalogger_8c_a54b06d9395b2e370a5a72beb7f9524b2}{datalogger\_\-lock\_\-mutex} (void)
+int \hyperlink{datalogger_8c_a54b06d9395b2e370a5a72beb7f9524b2}{datalogger\-\_\-lock\-\_\-mutex} (void)
 \item 
-int \hyperlink{datalogger_8c_a85453211c0c809083c36cc56b275aeeb}{datalogger\_\-unlock\_\-mutex} (void)
+int \hyperlink{datalogger_8c_a85453211c0c809083c36cc56b275aeeb}{datalogger\-\_\-unlock\-\_\-mutex} (void)
 \item 
-int \hyperlink{datalogger_8c_a1977ef253746fd8c008a3641d9822551}{datalogger\_\-init} (void)
+int \hyperlink{datalogger_8c_a1977ef253746fd8c008a3641d9822551}{datalogger\-\_\-init} (void)
 \item 
-int \hyperlink{datalogger_8c_ad22dbe9e235e7ae5737a23796d13ffbd}{datalogger\_\-close} (void)
+int \hyperlink{datalogger_8c_ad22dbe9e235e7ae5737a23796d13ffbd}{datalogger\-\_\-close} (void)
 \item 
-int \hyperlink{datalogger_8c_a2aedecfce53e1935a41615ceaf378013}{datalogger\_\-write\_\-file} (void)
+int \hyperlink{datalogger_8c_a2aedecfce53e1935a41615ceaf378013}{datalogger\-\_\-write\-\_\-file} (void)
 \item 
-int \hyperlink{datalogger_8c_a25bb814a0877f419ae09b08cd7e91ee9}{datalogger\_\-update\_\-IPC} (void)
+int \hyperlink{datalogger_8c_a25bb814a0877f419ae09b08cd7e91ee9}{datalogger\-\_\-update\-\_\-\-I\-P\-C} (void)
 \item 
-int \hyperlink{datalogger_8c_ad89a56e2f057ace8c28d78eb67703e7d}{datalogger\_\-update} (double t\_\-s, double t\_\-control\_\-exec\_\-s, double t\_\-ui\_\-exec\_\-s, double t0\_\-s, \hyperlink{structIMU__DATA__STRUCT}{IMU\_\-DATA\_\-STRUCT} $\ast$pimu\_\-data, \hyperlink{structEFF__DATA__STRUCT}{EFF\_\-DATA\_\-STRUCT} $\ast$peff\_\-data, \hyperlink{structMRA__DATA__STRUCT}{MRA\_\-DATA\_\-STRUCT} $\ast$pmra\_\-data)
+int \hyperlink{datalogger_8c_ad89a56e2f057ace8c28d78eb67703e7d}{datalogger\-\_\-update} (double t\-\_\-s, double t\-\_\-control\-\_\-exec\-\_\-s, double t\-\_\-ui\-\_\-exec\-\_\-s, double t0\-\_\-s, \hyperlink{structIMU__DATA__STRUCT}{I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$pimu\-\_\-data, \hyperlink{structEFF__DATA__STRUCT}{E\-F\-F\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$peff\-\_\-data, \hyperlink{structMRA__DATA__STRUCT}{M\-R\-A\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$pmra\-\_\-data)
 \item 
-int \hyperlink{datalogger_8c_afb69d166f8d53042825174cee225ea49}{datalogger\_\-set\_\-Ts} (double Ts)
+int \hyperlink{datalogger_8c_afb69d166f8d53042825174cee225ea49}{datalogger\-\_\-set\-\_\-\-Ts} (double Ts)
 \item 
-int \hyperlink{datalogger_8c_a46fd1290d9ee97d5fc7171e1e0dcb0aa}{datalogger\_\-status} (void)
+int \hyperlink{datalogger_8c_a46fd1290d9ee97d5fc7171e1e0dcb0aa}{datalogger\-\_\-status} (void)
 \item 
-int \hyperlink{datalogger_8c_a1f254ef380d595d6605c10811fd0dee6}{datalogger\_\-start} (void)
+int \hyperlink{datalogger_8c_a1f254ef380d595d6605c10811fd0dee6}{datalogger\-\_\-start} (void)
 \item 
-int \hyperlink{datalogger_8c_aae2ffbc6cbf8f1cfecceb42c5139530a}{datalogger\_\-stop} (void)
+int \hyperlink{datalogger_8c_aae2ffbc6cbf8f1cfecceb42c5139530a}{datalogger\-\_\-stop} (void)
 \item 
-int \hyperlink{datalogger_8c_a29bc3190cba1f225ad3b2eed899a6762}{datalogger\_\-file\_\-exists} (const char $\ast$filename)
+int \hyperlink{datalogger_8c_a29bc3190cba1f225ad3b2eed899a6762}{datalogger\-\_\-file\-\_\-exists} (const char $\ast$filename)
 \end{DoxyCompactItemize}
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{structGDATALOGGER}{GDATALOGGER} \hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+\hyperlink{structGDATALOGGER}{G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R} \hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{g\-Data\-Logger}
 \item 
-unsigned int \hyperlink{datalogger_8c_a35e8fbe04b90452afdc3c1be16ff6187}{datalogger\_\-initialized} = DATALOGGER\_\-NOT\_\-INITIALIZED
+unsigned int \hyperlink{datalogger_8c_a35e8fbe04b90452afdc3c1be16ff6187}{datalogger\-\_\-initialized} = \hyperlink{datalogger_8h_a4602a65fdfa920dfe832cfa50b7ee4c8}{D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-N\-O\-T\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-D}
 \item 
-unsigned int \hyperlink{datalogger_8c_a185c3ede96449d14f330fe5ac664e799}{datalogger\_\-running} = DATALOGGER\_\-NOT\_\-RUNNING
+unsigned int \hyperlink{datalogger_8c_a185c3ede96449d14f330fe5ac664e799}{datalogger\-\_\-running} = \hyperlink{datalogger_8h_a1a224da36800f52f56f30619849f7f5d}{D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-N\-O\-T\-\_\-\-R\-U\-N\-N\-I\-N\-G}
 \item 
-pthread\_\-mutex\_\-t \hyperlink{datalogger_8c_a824d6f7fd1d3898ba0b1100ba37875c6}{datalogger\_\-mutex} = PTHREAD\_\-MUTEX\_\-INITIALIZER
+pthread\-\_\-mutex\-\_\-t \hyperlink{datalogger_8c_a824d6f7fd1d3898ba0b1100ba37875c6}{datalogger\-\_\-mutex} = P\-T\-H\-R\-E\-A\-D\-\_\-\-M\-U\-T\-E\-X\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-R
 \end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
-\hypertarget{datalogger_8c_ad22dbe9e235e7ae5737a23796d13ffbd}{
-\index{datalogger.c@{datalogger.c}!datalogger\_\-close@{datalogger\_\-close}}
-\index{datalogger\_\-close@{datalogger\_\-close}!datalogger.c@{datalogger.c}}
-\subsubsection[{datalogger\_\-close}]{\setlength{\rightskip}{0pt plus 5cm}int datalogger\_\-close (void)}}
-\label{datalogger_8c_ad22dbe9e235e7ae5737a23796d13ffbd}
+\hypertarget{datalogger_8c_ad22dbe9e235e7ae5737a23796d13ffbd}{\index{datalogger.\-c@{datalogger.\-c}!datalogger\-\_\-close@{datalogger\-\_\-close}}
+\index{datalogger\-\_\-close@{datalogger\-\_\-close}!datalogger.c@{datalogger.\-c}}
+\subsubsection[{datalogger\-\_\-close}]{\setlength{\rightskip}{0pt plus 5cm}int datalogger\-\_\-close (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{datalogger_8c_ad22dbe9e235e7ae5737a23796d13ffbd}
 
 
-Definition at line 215 of file datalogger.c.
-
-
-
-References DATALOGGER\_\-ERROR\_\-NOT\_\-INITIALIZED, DATALOGGER\_\-INITIALIZED, datalogger\_\-initialized, datalogger\_\-lock\_\-mutex(), datalogger\_\-mutex, DATALOGGER\_\-NOT\_\-INITIALIZED, DATALOGGER\_\-SUCCESS, datalogger\_\-unlock\_\-mutex(), gDataLogger\_\-Close(), and gDataLogger\_\-MatfileUpdate().
-
-
-
-Referenced by main(), and threads\_\-linux\_\-init().
+Definition at line 215 of file datalogger.\-c.
 
 
 
-
-\begin{DoxyCode}
-216 {
-217     #if DATALOGGER_MODULE_ENABLED
-218         datalogger_lock_mutex();
-219         if(datalogger_initialized != DATALOGGER_INITIALIZED)
-220     {
-221             datalogger_unlock_mutex();
-222         return DATALOGGER_ERROR_NOT_INITIALIZED;
-223     }
-224 
-225     gDataLogger_MatfileUpdate(&gDataLogger); // Update data
-226     gDataLogger_Close(&gDataLogger); // Close datalogger
-227 
-228     datalogger_initialized = DATALOGGER_NOT_INITIALIZED;
-229     datalogger_unlock_mutex();
-230 
-231         #if ANU_COMPILE_FOR_XENOMAI
-232     rt_mutex_delete(&datalogger_mutex);
-233         #endif  //ANU_COMPILE_FOR_XENOMAI
-234 
-235     #endif //DATALOGGER_MODULE_ENABLED
-236 
-237     return DATALOGGER_SUCCESS;
-238 }
-\end{DoxyCode}
+References D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-E\-R\-R\-O\-R\-\_\-\-N\-O\-T\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-D, D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-D, datalogger\-\_\-initialized, datalogger\-\_\-lock\-\_\-mutex(), datalogger\-\_\-mutex, D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-N\-O\-T\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-D, D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S, datalogger\-\_\-unlock\-\_\-mutex(), g\-Data\-Logger\-\_\-\-Close(), and g\-Data\-Logger\-\_\-\-Matfile\-Update().
 
 
 
-
-Here is the call graph for this function:
-
-
-
-Here is the caller graph for this function:
-
-\hypertarget{datalogger_8c_a29bc3190cba1f225ad3b2eed899a6762}{
-\index{datalogger.c@{datalogger.c}!datalogger\_\-file\_\-exists@{datalogger\_\-file\_\-exists}}
-\index{datalogger\_\-file\_\-exists@{datalogger\_\-file\_\-exists}!datalogger.c@{datalogger.c}}
-\subsubsection[{datalogger\_\-file\_\-exists}]{\setlength{\rightskip}{0pt plus 5cm}int datalogger\_\-file\_\-exists (const char $\ast$ {\em filename})}}
-\label{datalogger_8c_a29bc3190cba1f225ad3b2eed899a6762}
-
-
-Definition at line 618 of file datalogger.c.
-
-
-
-References DATALOGGER\_\-FAILURE, and DATALOGGER\_\-SUCCESS.
-
-
-
-Referenced by datalogger\_\-init().
-
-
+Referenced by main(), and threads\-\_\-linux\-\_\-init().
 
 
 \begin{DoxyCode}
-619 {
-620     FILE *file;
-621     if((file = fopen(filename, "r")))
-622     {
-623         fclose(file);
-624         return DATALOGGER_SUCCESS;
-625     }
-626     return DATALOGGER_FAILURE;
-627 }
-\end{DoxyCode}
-
-
-
-
-Here is the caller graph for this function:
-
-\hypertarget{datalogger_8c_a1977ef253746fd8c008a3641d9822551}{
-\index{datalogger.c@{datalogger.c}!datalogger\_\-init@{datalogger\_\-init}}
-\index{datalogger\_\-init@{datalogger\_\-init}!datalogger.c@{datalogger.c}}
-\subsubsection[{datalogger\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}int datalogger\_\-init (void)}}
-\label{datalogger_8c_a1977ef253746fd8c008a3641d9822551}
-
-
-Definition at line 41 of file datalogger.c.
-
-
-
-References DATALOGGER\_\-FAILURE, datalogger\_\-file\_\-exists(), DATALOGGER\_\-FILE\_\-NAME, DATALOGGER\_\-FOLDER, DATALOGGER\_\-INITIALIZED, datalogger\_\-initialized, datalogger\_\-lock\_\-mutex(), DATALOGGER\_\-LOG\_\-CALIBRATED\_\-IMU, DATALOGGER\_\-LOG\_\-EFFORTS, DATALOGGER\_\-LOG\_\-EXECTIMES, DATALOGGER\_\-LOG\_\-MRA, DATALOGGER\_\-LOG\_\-RAW\_\-IMU, DATALOGGER\_\-LOG\_\-TIME, datalogger\_\-mutex, DATALOGGER\_\-NOT\_\-RUNNING, datalogger\_\-running, DATALOGGER\_\-STANDARD\_\-QUEUE\_\-SIZE, DATALOGGER\_\-SUCCESS, datalogger\_\-unlock\_\-mutex(), gDataLogger\_\-DeclareVariable(), gDataLogger\_\-Init(), and gDataLogger\_\-InsertVariable().
-
-
-
-Referenced by main(), and threads\_\-linux\_\-init().
-
-
-
-
-\begin{DoxyCode}
-42 {
-43     #if DATALOGGER_MODULE_ENABLED
-44     double enabled_variables[16][1];
-45     char datalogger_filename[256];
-46         #if ANU_COMPILE_FOR_XENOMAI
-47     rt_mutex_create(&datalogger_mutex,"Data Logger Mutex");
-48         #endif
-49     datalogger_lock_mutex();
-50 
-51     if(datalogger_initialized == DATALOGGER_INITIALIZED)
-52     {
-53         datalogger_unlock_mutex();
-54         return DATALOGGER_FAILURE;
-55     }
-56 
-57     datalogger_running = DATALOGGER_NOT_RUNNING;
-58 
-59         // Init datalogger
-60     strcpy(datalogger_filename, DATALOGGER_FOLDER);
-61     strcat(datalogger_filename, "/");
-62     strcat(datalogger_filename, DATALOGGER_FILE_NAME);
-63     strcat(datalogger_filename, ".mat");
-64         #if DATALOGGER_ENABLE_NEW_FILE_ENNUMERATION
-65     char datalogger_tmp[256];
-66     int i = 0;
-67     if(datalogger_file_exists(datalogger_filename) == DATALOGGER_SUCCESS) // File
-       exists
-68     {
-69         strcpy(datalogger_tmp, DATALOGGER_FOLDER);
-70         strcat(datalogger_tmp, "/");
-71         strcat(datalogger_tmp, DATALOGGER_FILE_NAME);
-72         strcat(datalogger_tmp, "_%d.mat");
-73         do
-74         {
-75             sprintf(datalogger_filename, datalogger_tmp, ++i);
-76         }
-77         while((datalogger_file_exists(datalogger_filename) == DATALOGGER_SUCCESS)
-       && (i<100));
-78         if(i == 100)
-79         {
-80             datalogger_unlock_mutex();
-81             return DATALOGGER_FAILURE;
-82         }
-83     }
-84         #endif //DATALOGGER_ENABLE_NEW_FILE_ENNUMERATION
-85 
-86     if(!gDataLogger_Init(&gDataLogger, datalogger_filename, NULL))
-87     {
-88         datalogger_unlock_mutex();
-89         return DATALOGGER_FAILURE;
-90     }
-91 
-92         // Declare variables
-93         // Arguments for gDataLogger_DeclareVariable:
-94         // datalogger pointer, variable name, units, number of rows, number of co
-      lumns, queue size
-95 
-96         // Variable that tells MATLAB which variables are enabled
-97     enabled_variables[0][0] = (double) DATALOGGER_LOG_TIME;
-98     enabled_variables[1][0] = (double) DATALOGGER_LOG_EXECTIMES;
-99     enabled_variables[2][0] = (double) DATALOGGER_LOG_RAW_IMU;
-100     enabled_variables[3][0] = (double) DATALOGGER_LOG_CALIBRATED_IMU;
-101     enabled_variables[4][0] = (double) DATALOGGER_LOG_EFFORTS;
-102     enabled_variables[5][0] = (double) DATALOGGER_LOG_MRA;
-103     //enabled_variables[12][0] = (double) DATALOGGER_LOG_LOCAL_COORDINATE_SYSTEM;
-      
-104     //enabled_variables[13][0] = (double) DATALOGGER_LOG_LOCAL_FIELDS;
-105     //enabled_variables[14][0] = (double) DATALOGGER_LOG_ESTIMATOR;
-106     //enabled_variables[15][0] = (double) DATALOGGER_LOG_CONTROLLERS;
-107 
-108     gDataLogger_DeclareVariable(&gDataLogger, "enabled_vars", "", 6, 1, 1);
-109     gDataLogger_InsertVariable(&gDataLogger, "enabled_vars", &enabled_variables[0
-      ][0]);
-110 
-111         #if DATALOGGER_LOG_TIME
-112         gDataLogger_DeclareVariable(&gDataLogger, "t", "s", 1, 1, 
-      DATALOGGER_STANDARD_QUEUE_SIZE);
-113     gDataLogger_DeclareVariable(&gDataLogger, "Ts", "s", 1, 1, 1);
-114     #endif // DATALOGGER_LOG_TIME
-115 
-116     #if DATALOGGER_LOG_EXECTIMES
-117     gDataLogger_DeclareVariable(&gDataLogger, "t_control_exec", "s", 1, 1, 
-      DATALOGGER_STANDARD_QUEUE_SIZE);
-118     gDataLogger_DeclareVariable(&gDataLogger, "t_ui_exec", "s", 1, 1, 
-      DATALOGGER_STANDARD_QUEUE_SIZE);
-119     #endif // DATALOGGER_LOG_EXECTIMES
-120 
-121         #if DATALOGGER_LOG_RAW_IMU
-122         gDataLogger_DeclareVariable(&gDataLogger, "imu_accelerometer_x_raw", "raw
-      ", 1, 1, DATALOGGER_STANDARD_QUEUE_SIZE);
-123         gDataLogger_DeclareVariable(&gDataLogger, "imu_accelerometer_y_raw", "raw
-      ", 1, 1, DATALOGGER_STANDARD_QUEUE_SIZE);
-124         gDataLogger_DeclareVariable(&gDataLogger, "imu_accelerometer_z_raw", "raw
-      ", 1, 1, DATALOGGER_STANDARD_QUEUE_SIZE);
-125         gDataLogger_DeclareVariable(&gDataLogger, "imu_magnetometer_x_raw", "raw"
-      , 1, 1, DATALOGGER_STANDARD_QUEUE_SIZE);
-126         gDataLogger_DeclareVariable(&gDataLogger, "imu_magnetometer_y_raw", "raw"
-      , 1, 1, DATALOGGER_STANDARD_QUEUE_SIZE);
-127         gDataLogger_DeclareVariable(&gDataLogger, "imu_magnetometer_z_raw", "raw"
-      , 1, 1, DATALOGGER_STANDARD_QUEUE_SIZE);
-128         gDataLogger_DeclareVariable(&gDataLogger, "imu_gyrometer_x_raw", "raw", 1
-      , 1, DATALOGGER_STANDARD_QUEUE_SIZE);
-129         gDataLogger_DeclareVariable(&gDataLogger, "imu_gyrometer_y_raw", "raw", 1
-      , 1, DATALOGGER_STANDARD_QUEUE_SIZE);
-130         gDataLogger_DeclareVariable(&gDataLogger, "imu_gyrometer_z_raw", "raw", 1
-      , 1, DATALOGGER_STANDARD_QUEUE_SIZE);
-131     gDataLogger_DeclareVariable(&gDataLogger, "imu_valid_data", "", 1, 1, 
-      DATALOGGER_STANDARD_QUEUE_SIZE);
-132         #endif // DATALOGGER_LOG_IMU
-133         
-134     #if DATALOGGER_LOG_EFFORTS
-135     gDataLogger_DeclareVariable(&gDataLogger, "Vin0", "mV", 1, 1, 
-      DATALOGGER_STANDARD_QUEUE_SIZE);
-136     gDataLogger_DeclareVariable(&gDataLogger, "Vin0_valid_data", "", 1, 1, 
-      DATALOGGER_STANDARD_QUEUE_SIZE);
-137     #endif
-138     
-139     #if DATALOGGER_LOG_MRA
-140     gDataLogger_DeclareVariable(&gDataLogger, "v_ctl", "mV", 1, 1, 
-      DATALOGGER_STANDARD_QUEUE_SIZE);
-141     gDataLogger_DeclareVariable(&gDataLogger, "v_ctl_read", "mV", 1, 1, 
-      DATALOGGER_STANDARD_QUEUE_SIZE);
-142     #endif
-143 
-144     #if DATALOGGER_LOG_CALIBRATED_IMU
-145     gDataLogger_DeclareVariable(&gDataLogger, "imu_accelerometer_x_g", "g", 1, 1,
-       DATALOGGER_STANDARD_QUEUE_SIZE);
-146     gDataLogger_DeclareVariable(&gDataLogger, "imu_accelerometer_y_g", "g", 1, 1,
-       DATALOGGER_STANDARD_QUEUE_SIZE);
-147     gDataLogger_DeclareVariable(&gDataLogger, "imu_accelerometer_z_g", "g", 1, 1,
-       DATALOGGER_STANDARD_QUEUE_SIZE);
-148     gDataLogger_DeclareVariable(&gDataLogger, "imu_magnetometer_x_B", "B", 1, 1, 
-      DATALOGGER_STANDARD_QUEUE_SIZE);
-149     gDataLogger_DeclareVariable(&gDataLogger, "imu_magnetometer_y_B", "B", 1, 1, 
-      DATALOGGER_STANDARD_QUEUE_SIZE);
-150     gDataLogger_DeclareVariable(&gDataLogger, "imu_magnetometer_z_B", "B", 1, 1, 
-      DATALOGGER_STANDARD_QUEUE_SIZE);
-151     gDataLogger_DeclareVariable(&gDataLogger, "imu_gyrometer_x_rads", "rads", 1, 
-      1, DATALOGGER_STANDARD_QUEUE_SIZE);
-152     gDataLogger_DeclareVariable(&gDataLogger, "imu_gyrometer_y_rads", "rads", 1, 
-      1, DATALOGGER_STANDARD_QUEUE_SIZE);
-153     gDataLogger_DeclareVariable(&gDataLogger, "imu_gyrometer_z_rads", "rads", 1, 
-      1, DATALOGGER_STANDARD_QUEUE_SIZE);
-154     gDataLogger_DeclareVariable(&gDataLogger, "imu_calibrated_valid_data", "", 1,
-       1, DATALOGGER_STANDARD_QUEUE_SIZE);
-155     //gDataLogger_DeclareVariable(&gDataLogger, "imu_calibrated_valid_acceleromet
-      er_data", "", 1, 1, DATALOGGER_STANDARD_QUEUE_SIZE);
-156     //gDataLogger_DeclareVariable(&gDataLogger, "imu_calibrated_valid_gyrometer_d
-      ata", "", 1, 1, DATALOGGER_STANDARD_QUEUE_SIZE);
-157     //gDataLogger_DeclareVariable(&gDataLogger, "imu_calibrated_valid_magnetomete
-      r_data", "", 1, 1, DATALOGGER_STANDARD_QUEUE_SIZE);
-158     #endif // DATALOGGER_LOG_CALIBRATED_IMU
-159 
-160 
-161 /*
-162     #if DATALOGGER_LOG_LOCAL_COORDINATE_SYSTEM
-163     gDataLogger_DeclareVariable(&gDataLogger, "initial_altitude", "m", 1, 1, 1);
-164     gDataLogger_DeclareVariable(&gDataLogger, "initial_latitude", "radians", 1, 1
-      , 1);
-165     gDataLogger_DeclareVariable(&gDataLogger, "initial_longitude", "radians", 1, 
-      1, 1);
-166     gDataLogger_DeclareVariable(&gDataLogger, "initial_ecef_x", "m", 1, 1, 1);
-167     gDataLogger_DeclareVariable(&gDataLogger, "initial_ecef_y", "m", 1, 1, 1);
-168     gDataLogger_DeclareVariable(&gDataLogger, "initial_ecef_z", "m", 1, 1, 1);
-169     gDataLogger_DeclareVariable(&gDataLogger, "rotation_matrix", "matrix", 3, 3, 
-      1);
-170     #endif // DATALOGGER_LOG_LOCAL_COORDINATE_SYSTEM
-171 
-172     #if DATALOGGER_LOG_LOCAL_FIELDS
-173     gDataLogger_DeclareVariable(&gDataLogger, "local_magnetic", "field", 3, 1, 1)
+\{
+\textcolor{preprocessor}{    #if DATALOGGER\_MODULE\_ENABLED}
+\textcolor{preprocessor}{}        \hyperlink{datalogger_8c_a54b06d9395b2e370a5a72beb7f9524b2}{datalogger\_lock\_mutex}();
+        \textcolor{keywordflow}{if}(\hyperlink{datalogger_8c_a35e8fbe04b90452afdc3c1be16ff6187}{datalogger\_initialized} != 
+      \hyperlink{datalogger_8h_a684c343d340004b77ca2b782934c96ca}{DATALOGGER\_INITIALIZED})
+    \{
+            \hyperlink{datalogger_8c_a85453211c0c809083c36cc56b275aeeb}{datalogger\_unlock\_mutex}();
+        \textcolor{keywordflow}{return} \hyperlink{datalogger_8h_a60df7fe0e61b757ad6a9db106b0eb43e}{DATALOGGER\_ERROR\_NOT\_INITIALIZED}
       ;
-174     gDataLogger_DeclareVariable(&gDataLogger, "local_gravity", "field", 3, 1, 1);
-      
-175     gDataLogger_DeclareVariable(&gDataLogger, "magnetic_magnitude", "uT", 1, 1, 1
+    \}
+
+    \hyperlink{gdatalogger_8c_a05dc8ce832b941280d7de26057992640}{gDataLogger\_MatfileUpdate}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger})
+      ; \textcolor{comment}{// Update data}
+    \hyperlink{gdatalogger_8c_a0ac95f84c6ee484c4ad0351530f1c468}{gDataLogger\_Close}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}); \textcolor{comment}{// Close
+       datalogger}
+
+    \hyperlink{datalogger_8c_a35e8fbe04b90452afdc3c1be16ff6187}{datalogger\_initialized} = \hyperlink{datalogger_8h_a4602a65fdfa920dfe832cfa50b7ee4c8}{DATALOGGER\_NOT\_INITIALIZED}
+      ;
+    \hyperlink{datalogger_8c_a85453211c0c809083c36cc56b275aeeb}{datalogger\_unlock\_mutex}();
+
+\textcolor{preprocessor}{        #if ANU\_COMPILE\_FOR\_XENOMAI}
+\textcolor{preprocessor}{}    rt\_mutex\_delete(&\hyperlink{datalogger_8c_a824d6f7fd1d3898ba0b1100ba37875c6}{datalogger\_mutex});
+\textcolor{preprocessor}{        #endif  //ANU\_COMPILE\_FOR\_XENOMAI}
+\textcolor{preprocessor}{}
+\textcolor{preprocessor}{    #endif //DATALOGGER\_MODULE\_ENABLED}
+\textcolor{preprocessor}{}
+    \textcolor{keywordflow}{return} \hyperlink{datalogger_8h_abddebaf71d26d40183fccbb1a766b983}{DATALOGGER\_SUCCESS};
+\}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{datalogger_8c_ad22dbe9e235e7ae5737a23796d13ffbd_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{datalogger_8c_ad22dbe9e235e7ae5737a23796d13ffbd_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{datalogger_8c_a29bc3190cba1f225ad3b2eed899a6762}{\index{datalogger.\-c@{datalogger.\-c}!datalogger\-\_\-file\-\_\-exists@{datalogger\-\_\-file\-\_\-exists}}
+\index{datalogger\-\_\-file\-\_\-exists@{datalogger\-\_\-file\-\_\-exists}!datalogger.c@{datalogger.\-c}}
+\subsubsection[{datalogger\-\_\-file\-\_\-exists}]{\setlength{\rightskip}{0pt plus 5cm}int datalogger\-\_\-file\-\_\-exists (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename}
+\end{DoxyParamCaption}
+)}}\label{datalogger_8c_a29bc3190cba1f225ad3b2eed899a6762}
+
+
+Definition at line 618 of file datalogger.\-c.
+
+
+
+References D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-F\-A\-I\-L\-U\-R\-E, and D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S.
+
+
+
+Referenced by datalogger\-\_\-init().
+
+
+\begin{DoxyCode}
+\{
+    FILE *file;
+    \textcolor{keywordflow}{if}((file = fopen(filename, \textcolor{stringliteral}{"r"})))
+    \{
+        fclose(file);
+        \textcolor{keywordflow}{return} \hyperlink{datalogger_8h_abddebaf71d26d40183fccbb1a766b983}{DATALOGGER\_SUCCESS};
+    \}
+    \textcolor{keywordflow}{return} \hyperlink{datalogger_8h_ac52138ca42979f6e1f1d589020ff9f83}{DATALOGGER\_FAILURE};
+\}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{datalogger_8c_a29bc3190cba1f225ad3b2eed899a6762_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{datalogger_8c_a1977ef253746fd8c008a3641d9822551}{\index{datalogger.\-c@{datalogger.\-c}!datalogger\-\_\-init@{datalogger\-\_\-init}}
+\index{datalogger\-\_\-init@{datalogger\-\_\-init}!datalogger.c@{datalogger.\-c}}
+\subsubsection[{datalogger\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}int datalogger\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{datalogger_8c_a1977ef253746fd8c008a3641d9822551}
+
+
+Definition at line 41 of file datalogger.\-c.
+
+
+
+References D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-F\-A\-I\-L\-U\-R\-E, datalogger\-\_\-file\-\_\-exists(), D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-F\-I\-L\-E\-\_\-\-N\-A\-M\-E, D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-F\-O\-L\-D\-E\-R, D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-D, datalogger\-\_\-initialized, datalogger\-\_\-lock\-\_\-mutex(), D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-L\-O\-G\-\_\-\-C\-A\-L\-I\-B\-R\-A\-T\-E\-D\-\_\-\-I\-M\-U, D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-L\-O\-G\-\_\-\-E\-F\-F\-O\-R\-T\-S, D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-L\-O\-G\-\_\-\-E\-X\-E\-C\-T\-I\-M\-E\-S, D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-L\-O\-G\-\_\-\-M\-R\-A, D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-L\-O\-G\-\_\-\-R\-A\-W\-\_\-\-I\-M\-U, D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-L\-O\-G\-\_\-\-T\-I\-M\-E, datalogger\-\_\-mutex, D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-N\-O\-T\-\_\-\-R\-U\-N\-N\-I\-N\-G, datalogger\-\_\-running, D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-S\-T\-A\-N\-D\-A\-R\-D\-\_\-\-Q\-U\-E\-U\-E\-\_\-\-S\-I\-Z\-E, D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S, datalogger\-\_\-unlock\-\_\-mutex(), g\-Data\-Logger\-\_\-\-Declare\-Variable(), g\-Data\-Logger\-\_\-\-Init(), and g\-Data\-Logger\-\_\-\-Insert\-Variable().
+
+
+
+Referenced by main(), and threads\-\_\-linux\-\_\-init().
+
+
+\begin{DoxyCode}
+\{
+\textcolor{preprocessor}{    #if DATALOGGER\_MODULE\_ENABLED}
+\textcolor{preprocessor}{}    \textcolor{keywordtype}{double} enabled\_variables[16][1];
+    \textcolor{keywordtype}{char} datalogger\_filename[256];
+\textcolor{preprocessor}{        #if ANU\_COMPILE\_FOR\_XENOMAI}
+\textcolor{preprocessor}{}    rt\_mutex\_create(&\hyperlink{datalogger_8c_a824d6f7fd1d3898ba0b1100ba37875c6}{datalogger\_mutex},\textcolor{stringliteral}{"Data Logger Mutex"});
+\textcolor{preprocessor}{        #endif}
+\textcolor{preprocessor}{}    \hyperlink{datalogger_8c_a54b06d9395b2e370a5a72beb7f9524b2}{datalogger\_lock\_mutex}();
+
+    \textcolor{keywordflow}{if}(\hyperlink{datalogger_8c_a35e8fbe04b90452afdc3c1be16ff6187}{datalogger\_initialized} == \hyperlink{datalogger_8h_a684c343d340004b77ca2b782934c96ca}{DATALOGGER\_INITIALIZED}
+      )
+    \{
+        \hyperlink{datalogger_8c_a85453211c0c809083c36cc56b275aeeb}{datalogger\_unlock\_mutex}();
+        \textcolor{keywordflow}{return} \hyperlink{datalogger_8h_ac52138ca42979f6e1f1d589020ff9f83}{DATALOGGER\_FAILURE};
+    \}
+
+    \hyperlink{datalogger_8c_a185c3ede96449d14f330fe5ac664e799}{datalogger\_running} = \hyperlink{datalogger_8h_a1a224da36800f52f56f30619849f7f5d}{DATALOGGER\_NOT\_RUNNING}
+      ;
+
+        \textcolor{comment}{// Init datalogger}
+    strcpy(datalogger\_filename, \hyperlink{datalogger_8h_a29791c024463d251eeab6973a0299e7b}{DATALOGGER\_FOLDER});
+    strcat(datalogger\_filename, \textcolor{stringliteral}{"/"});
+    strcat(datalogger\_filename, \hyperlink{datalogger_8h_a23bf1fb88a2adab92e7c477d927b241c}{DATALOGGER\_FILE\_NAME});
+    strcat(datalogger\_filename, \textcolor{stringliteral}{".mat"});
+\textcolor{preprocessor}{        #if DATALOGGER\_ENABLE\_NEW\_FILE\_ENNUMERATION}
+\textcolor{preprocessor}{}    \textcolor{keywordtype}{char} datalogger\_tmp[256];
+    \textcolor{keywordtype}{int} i = 0;
+    \textcolor{keywordflow}{if}(\hyperlink{datalogger_8c_a29bc3190cba1f225ad3b2eed899a6762}{datalogger\_file\_exists}(datalogger\_filename) == 
+      \hyperlink{datalogger_8h_abddebaf71d26d40183fccbb1a766b983}{DATALOGGER\_SUCCESS}) \textcolor{comment}{// File exists}
+    \{
+        strcpy(datalogger\_tmp, \hyperlink{datalogger_8h_a29791c024463d251eeab6973a0299e7b}{DATALOGGER\_FOLDER});
+        strcat(datalogger\_tmp, \textcolor{stringliteral}{"/"});
+        strcat(datalogger\_tmp, \hyperlink{datalogger_8h_a23bf1fb88a2adab92e7c477d927b241c}{DATALOGGER\_FILE\_NAME});
+        strcat(datalogger\_tmp, \textcolor{stringliteral}{"\_%d.mat"});
+        \textcolor{keywordflow}{do}
+        \{
+            sprintf(datalogger\_filename, datalogger\_tmp, ++i);
+        \}
+        \textcolor{keywordflow}{while}((\hyperlink{datalogger_8c_a29bc3190cba1f225ad3b2eed899a6762}{datalogger\_file\_exists}(datalogger\_filename
+      ) == \hyperlink{datalogger_8h_abddebaf71d26d40183fccbb1a766b983}{DATALOGGER\_SUCCESS}) && (i<100));
+        \textcolor{keywordflow}{if}(i == 100)
+        \{
+            \hyperlink{datalogger_8c_a85453211c0c809083c36cc56b275aeeb}{datalogger\_unlock\_mutex}();
+            \textcolor{keywordflow}{return} \hyperlink{datalogger_8h_ac52138ca42979f6e1f1d589020ff9f83}{DATALOGGER\_FAILURE};
+        \}
+    \}
+\textcolor{preprocessor}{        #endif //DATALOGGER\_ENABLE\_NEW\_FILE\_ENNUMERATION}
+\textcolor{preprocessor}{}
+    \textcolor{keywordflow}{if}(!\hyperlink{gdatalogger_8c_ab5eeb22d60836d57bae0dde821337045}{gDataLogger\_Init}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}, 
+      datalogger\_filename, NULL))
+    \{
+        \hyperlink{datalogger_8c_a85453211c0c809083c36cc56b275aeeb}{datalogger\_unlock\_mutex}();
+        \textcolor{keywordflow}{return} \hyperlink{datalogger_8h_ac52138ca42979f6e1f1d589020ff9f83}{DATALOGGER\_FAILURE};
+    \}
+
+        \textcolor{comment}{// Declare variables}
+        \textcolor{comment}{// Arguments for gDataLogger\_DeclareVariable:}
+        \textcolor{comment}{// datalogger pointer, variable name, units, number of rows, number of
+       columns, queue size}
+
+        \textcolor{comment}{// Variable that tells MATLAB which variables are enabled}
+    enabled\_variables[0][0] = (double) \hyperlink{datalogger_8h_a9796dd7063d48a850456a4542c5a5fb5}{DATALOGGER\_LOG\_TIME};
+    enabled\_variables[1][0] = (double) \hyperlink{datalogger_8h_ade62d89afc68e01d78fa75ae491a9980}{DATALOGGER\_LOG\_EXECTIMES}
+      ;
+    enabled\_variables[2][0] = (double) \hyperlink{datalogger_8h_a1c623aa143d8b2e0d507e23425a02275}{DATALOGGER\_LOG\_RAW\_IMU}
+      ;
+    enabled\_variables[3][0] = (double) \hyperlink{datalogger_8h_aa80b147e8c585f7f630658025c24cd8c}{DATALOGGER\_LOG\_CALIBRATED\_IMU}
+      ;
+    enabled\_variables[4][0] = (double) \hyperlink{datalogger_8h_a210c5f76b25cb165226a337189a9715f}{DATALOGGER\_LOG\_EFFORTS}
+      ;
+    enabled\_variables[5][0] = (double) \hyperlink{datalogger_8h_ab2e9ad670e20d71c67230b1f064a0dcb}{DATALOGGER\_LOG\_MRA};
+    \textcolor{comment}{//enabled\_variables[12][0] = (double)
+       DATALOGGER\_LOG\_LOCAL\_COORDINATE\_SYSTEM;}
+    \textcolor{comment}{//enabled\_variables[13][0] = (double) DATALOGGER\_LOG\_LOCAL\_FIELDS;}
+    \textcolor{comment}{//enabled\_variables[14][0] = (double) DATALOGGER\_LOG\_ESTIMATOR;}
+    \textcolor{comment}{//enabled\_variables[15][0] = (double) DATALOGGER\_LOG\_CONTROLLERS;}
+
+    \hyperlink{gdatalogger_8c_a3f8f2b3c3f5edc72c3a1887965a544c1}{gDataLogger\_DeclareVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"enabled\_vars"}, \textcolor{stringliteral}{""}, 6, 1, 1);
+    \hyperlink{gdatalogger_8c_a32674e7c2afa8b78e99a0070cf4bcaf9}{gDataLogger\_InsertVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"enabled\_vars"}, &enabled\_variables[0][0]);
+
+\textcolor{preprocessor}{        #if DATALOGGER\_LOG\_TIME}
+\textcolor{preprocessor}{}        \hyperlink{gdatalogger_8c_a3f8f2b3c3f5edc72c3a1887965a544c1}{gDataLogger\_DeclareVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"t"}, \textcolor{stringliteral}{"s"}, 1, 1, \hyperlink{datalogger_8h_ac244ccff7e47d7f9e79c1b606664f4fa}{DATALOGGER\_STANDARD\_QUEUE\_SIZE});
+    \hyperlink{gdatalogger_8c_a3f8f2b3c3f5edc72c3a1887965a544c1}{gDataLogger\_DeclareVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"Ts"}, \textcolor{stringliteral}{"s"}, 1, 1, 1);
+\textcolor{preprocessor}{    #endif // DATALOGGER\_LOG\_TIME}
+\textcolor{preprocessor}{}
+\textcolor{preprocessor}{    #if DATALOGGER\_LOG\_EXECTIMES}
+\textcolor{preprocessor}{}    \hyperlink{gdatalogger_8c_a3f8f2b3c3f5edc72c3a1887965a544c1}{gDataLogger\_DeclareVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"t\_control\_exec"}, \textcolor{stringliteral}{"s"}, 1, 1, \hyperlink{datalogger_8h_ac244ccff7e47d7f9e79c1b606664f4fa}{DATALOGGER\_STANDARD\_QUEUE\_SIZE}
       );
-176     gDataLogger_DeclareVariable(&gDataLogger, "gravity_magnitude", "ms2", 1, 1, 1
+    \hyperlink{gdatalogger_8c_a3f8f2b3c3f5edc72c3a1887965a544c1}{gDataLogger\_DeclareVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"t\_ui\_exec"}, \textcolor{stringliteral}{"s"}, 1, 1, \hyperlink{datalogger_8h_ac244ccff7e47d7f9e79c1b606664f4fa}{DATALOGGER\_STANDARD\_QUEUE\_SIZE}
       );
-177     #endif // DATALOGGER_LOG_LOCAL_FIELDS
-178 
-179     #if DATALOGGER_LOG_ESTIMATOR
-180     gDataLogger_DeclareVariable(&gDataLogger, "estimated_roll_angle_radians", "ra
-      dians", 1, 1, DATALOGGER_STANDARD_QUEUE_SIZE);
-181     gDataLogger_DeclareVariable(&gDataLogger, "estimated_pitch_angle_radians", "r
-      adians", 1, 1, DATALOGGER_STANDARD_QUEUE_SIZE);
-182     gDataLogger_DeclareVariable(&gDataLogger, "estimated_yaw_angle_radians", "rad
-      ians", 1, 1, DATALOGGER_STANDARD_QUEUE_SIZE);
-183     gDataLogger_DeclareVariable(&gDataLogger, "estimated_q0", "quaternion", 1, 1,
-       DATALOGGER_STANDARD_QUEUE_SIZE);
-184     gDataLogger_DeclareVariable(&gDataLogger, "estimated_q1", "quaternion", 1, 1,
-       DATALOGGER_STANDARD_QUEUE_SIZE);
-185     gDataLogger_DeclareVariable(&gDataLogger, "estimated_q2", "quaternion", 1, 1,
-       DATALOGGER_STANDARD_QUEUE_SIZE);
-186     gDataLogger_DeclareVariable(&gDataLogger, "estimated_q3", "quaternion", 1, 1,
-       DATALOGGER_STANDARD_QUEUE_SIZE);
-187     gDataLogger_DeclareVariable(&gDataLogger, "estimated_x_position_meters", "met
-      ers", 1, 1, DATALOGGER_STANDARD_QUEUE_SIZE);
-188     gDataLogger_DeclareVariable(&gDataLogger, "estimated_y_position_meters", "met
-      ers", 1, 1, DATALOGGER_STANDARD_QUEUE_SIZE);
-189     gDataLogger_DeclareVariable(&gDataLogger, "estimated_z_position_meters", "met
-      ers", 1, 1, DATALOGGER_STANDARD_QUEUE_SIZE);
-190     gDataLogger_DeclareVariable(&gDataLogger, "estimated_x_velocity_meters_second
-      ", "meters", 1, 1, DATALOGGER_STANDARD_QUEUE_SIZE);
-191     gDataLogger_DeclareVariable(&gDataLogger, "estimated_y_velocity_meters_second
-      ", "meters", 1, 1, DATALOGGER_STANDARD_QUEUE_SIZE);
-192     gDataLogger_DeclareVariable(&gDataLogger, "estimated_z_velocity_meters_second
-      ", "meters", 1, 1, DATALOGGER_STANDARD_QUEUE_SIZE);
-193     #endif // DATALOGGER_LOG_ESTIMATOR
-194 
-195     #if DATALOGGER_LOG_CONTROLLERS
-196     gDataLogger_DeclareVariable(&gDataLogger, "control_roll_angle_trim_radians", 
-      "radians", 1, 1, DATALOGGER_STANDARD_QUEUE_SIZE);
-197     gDataLogger_DeclareVariable(&gDataLogger, "control_pitch_angle_trim_radians",
-       "radians", 1, 1, DATALOGGER_STANDARD_QUEUE_SIZE);
-198     gDataLogger_DeclareVariable(&gDataLogger, "control_yaw_angle_trim_radians", "
-      radians", 1, 1, DATALOGGER_STANDARD_QUEUE_SIZE);
-199     gDataLogger_DeclareVariable(&gDataLogger, "control_left_aileron_trim", "us", 
-      1, 1, DATALOGGER_STANDARD_QUEUE_SIZE);
-200     gDataLogger_DeclareVariable(&gDataLogger, "control_right_aileron_trim", "us",
-       1, 1, DATALOGGER_STANDARD_QUEUE_SIZE);
-201     gDataLogger_DeclareVariable(&gDataLogger, "control_elevator_trim", "us", 1, 1
-      , DATALOGGER_STANDARD_QUEUE_SIZE);
-202     gDataLogger_DeclareVariable(&gDataLogger, "control_rudder_trim", "us", 1, 1, 
-      DATALOGGER_STANDARD_QUEUE_SIZE);
-203     gDataLogger_DeclareVariable(&gDataLogger, "control_roll_angle_reference_radia
-      ns", "radians", 1, 1, DATALOGGER_STANDARD_QUEUE_SIZE);
-204     gDataLogger_DeclareVariable(&gDataLogger, "control_pitch_angle_reference_radi
-      ans", "radians", 1, 1, DATALOGGER_STANDARD_QUEUE_SIZE);
-205     gDataLogger_DeclareVariable(&gDataLogger, "control_yaw_angle_reference_radian
-      s", "radians", 1, 1, DATALOGGER_STANDARD_QUEUE_SIZE);
-206     #endif // DATALOGGER_LOG_CONTROLLERS
-207 */
-208     datalogger_initialized = DATALOGGER_INITIALIZED;
-209     datalogger_unlock_mutex();
-210     #endif //DATALOGGER_MODULE_ENABLED
-211 
-212     return DATALOGGER_SUCCESS;
-213 }
+\textcolor{preprocessor}{    #endif // DATALOGGER\_LOG\_EXECTIMES}
+\textcolor{preprocessor}{}
+\textcolor{preprocessor}{        #if DATALOGGER\_LOG\_RAW\_IMU}
+\textcolor{preprocessor}{}        \hyperlink{gdatalogger_8c_a3f8f2b3c3f5edc72c3a1887965a544c1}{gDataLogger\_DeclareVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"imu\_accelerometer\_x\_raw"}, \textcolor{stringliteral}{"raw"}, 1, 1, \hyperlink{datalogger_8h_ac244ccff7e47d7f9e79c1b606664f4fa}{DATALOGGER\_STANDARD\_QUEUE\_SIZE}
+      );
+        \hyperlink{gdatalogger_8c_a3f8f2b3c3f5edc72c3a1887965a544c1}{gDataLogger\_DeclareVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"imu\_accelerometer\_y\_raw"}, \textcolor{stringliteral}{"raw"}, 1, 1, \hyperlink{datalogger_8h_ac244ccff7e47d7f9e79c1b606664f4fa}{DATALOGGER\_STANDARD\_QUEUE\_SIZE}
+      );
+        \hyperlink{gdatalogger_8c_a3f8f2b3c3f5edc72c3a1887965a544c1}{gDataLogger\_DeclareVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"imu\_accelerometer\_z\_raw"}, \textcolor{stringliteral}{"raw"}, 1, 1, \hyperlink{datalogger_8h_ac244ccff7e47d7f9e79c1b606664f4fa}{DATALOGGER\_STANDARD\_QUEUE\_SIZE}
+      );
+        \hyperlink{gdatalogger_8c_a3f8f2b3c3f5edc72c3a1887965a544c1}{gDataLogger\_DeclareVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"imu\_magnetometer\_x\_raw"}, \textcolor{stringliteral}{"raw"}, 1, 1, \hyperlink{datalogger_8h_ac244ccff7e47d7f9e79c1b606664f4fa}{DATALOGGER\_STANDARD\_QUEUE\_SIZE}
+      );
+        \hyperlink{gdatalogger_8c_a3f8f2b3c3f5edc72c3a1887965a544c1}{gDataLogger\_DeclareVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"imu\_magnetometer\_y\_raw"}, \textcolor{stringliteral}{"raw"}, 1, 1, \hyperlink{datalogger_8h_ac244ccff7e47d7f9e79c1b606664f4fa}{DATALOGGER\_STANDARD\_QUEUE\_SIZE}
+      );
+        \hyperlink{gdatalogger_8c_a3f8f2b3c3f5edc72c3a1887965a544c1}{gDataLogger\_DeclareVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"imu\_magnetometer\_z\_raw"}, \textcolor{stringliteral}{"raw"}, 1, 1, \hyperlink{datalogger_8h_ac244ccff7e47d7f9e79c1b606664f4fa}{DATALOGGER\_STANDARD\_QUEUE\_SIZE}
+      );
+        \hyperlink{gdatalogger_8c_a3f8f2b3c3f5edc72c3a1887965a544c1}{gDataLogger\_DeclareVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"imu\_gyrometer\_x\_raw"}, \textcolor{stringliteral}{"raw"}, 1, 1, \hyperlink{datalogger_8h_ac244ccff7e47d7f9e79c1b606664f4fa}{DATALOGGER\_STANDARD\_QUEUE\_SIZE}
+      );
+        \hyperlink{gdatalogger_8c_a3f8f2b3c3f5edc72c3a1887965a544c1}{gDataLogger\_DeclareVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"imu\_gyrometer\_y\_raw"}, \textcolor{stringliteral}{"raw"}, 1, 1, \hyperlink{datalogger_8h_ac244ccff7e47d7f9e79c1b606664f4fa}{DATALOGGER\_STANDARD\_QUEUE\_SIZE}
+      );
+        \hyperlink{gdatalogger_8c_a3f8f2b3c3f5edc72c3a1887965a544c1}{gDataLogger\_DeclareVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"imu\_gyrometer\_z\_raw"}, \textcolor{stringliteral}{"raw"}, 1, 1, \hyperlink{datalogger_8h_ac244ccff7e47d7f9e79c1b606664f4fa}{DATALOGGER\_STANDARD\_QUEUE\_SIZE}
+      );
+    \hyperlink{gdatalogger_8c_a3f8f2b3c3f5edc72c3a1887965a544c1}{gDataLogger\_DeclareVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"imu\_valid\_data"}, \textcolor{stringliteral}{""}, 1, 1, \hyperlink{datalogger_8h_ac244ccff7e47d7f9e79c1b606664f4fa}{DATALOGGER\_STANDARD\_QUEUE\_SIZE}
+      );
+\textcolor{preprocessor}{        #endif // DATALOGGER\_LOG\_IMU}
+\textcolor{preprocessor}{}        
+\textcolor{preprocessor}{    #if DATALOGGER\_LOG\_EFFORTS}
+\textcolor{preprocessor}{}    \hyperlink{gdatalogger_8c_a3f8f2b3c3f5edc72c3a1887965a544c1}{gDataLogger\_DeclareVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"Vin0"}, \textcolor{stringliteral}{"mV"}, 1, 1, \hyperlink{datalogger_8h_ac244ccff7e47d7f9e79c1b606664f4fa}{DATALOGGER\_STANDARD\_QUEUE\_SIZE}
+      );
+    \hyperlink{gdatalogger_8c_a3f8f2b3c3f5edc72c3a1887965a544c1}{gDataLogger\_DeclareVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"Vin0\_valid\_data"}, \textcolor{stringliteral}{""}, 1, 1, \hyperlink{datalogger_8h_ac244ccff7e47d7f9e79c1b606664f4fa}{DATALOGGER\_STANDARD\_QUEUE\_SIZE}
+      );
+\textcolor{preprocessor}{    #endif}
+\textcolor{preprocessor}{}    
+\textcolor{preprocessor}{    #if DATALOGGER\_LOG\_MRA}
+\textcolor{preprocessor}{}    \hyperlink{gdatalogger_8c_a3f8f2b3c3f5edc72c3a1887965a544c1}{gDataLogger\_DeclareVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"v\_ctl"}, \textcolor{stringliteral}{"mV"}, 1, 1, \hyperlink{datalogger_8h_ac244ccff7e47d7f9e79c1b606664f4fa}{DATALOGGER\_STANDARD\_QUEUE\_SIZE}
+      );
+    \hyperlink{gdatalogger_8c_a3f8f2b3c3f5edc72c3a1887965a544c1}{gDataLogger\_DeclareVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"v\_ctl\_read"}, \textcolor{stringliteral}{"mV"}, 1, 1, \hyperlink{datalogger_8h_ac244ccff7e47d7f9e79c1b606664f4fa}{DATALOGGER\_STANDARD\_QUEUE\_SIZE}
+      );
+\textcolor{preprocessor}{    #endif}
+\textcolor{preprocessor}{}
+\textcolor{preprocessor}{    #if DATALOGGER\_LOG\_CALIBRATED\_IMU}
+\textcolor{preprocessor}{}    \hyperlink{gdatalogger_8c_a3f8f2b3c3f5edc72c3a1887965a544c1}{gDataLogger\_DeclareVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"imu\_accelerometer\_x\_g"}, \textcolor{stringliteral}{"g"}, 1, 1, \hyperlink{datalogger_8h_ac244ccff7e47d7f9e79c1b606664f4fa}{DATALOGGER\_STANDARD\_QUEUE\_SIZE}
+      );
+    \hyperlink{gdatalogger_8c_a3f8f2b3c3f5edc72c3a1887965a544c1}{gDataLogger\_DeclareVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"imu\_accelerometer\_y\_g"}, \textcolor{stringliteral}{"g"}, 1, 1, \hyperlink{datalogger_8h_ac244ccff7e47d7f9e79c1b606664f4fa}{DATALOGGER\_STANDARD\_QUEUE\_SIZE}
+      );
+    \hyperlink{gdatalogger_8c_a3f8f2b3c3f5edc72c3a1887965a544c1}{gDataLogger\_DeclareVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"imu\_accelerometer\_z\_g"}, \textcolor{stringliteral}{"g"}, 1, 1, \hyperlink{datalogger_8h_ac244ccff7e47d7f9e79c1b606664f4fa}{DATALOGGER\_STANDARD\_QUEUE\_SIZE}
+      );
+    \hyperlink{gdatalogger_8c_a3f8f2b3c3f5edc72c3a1887965a544c1}{gDataLogger\_DeclareVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"imu\_magnetometer\_x\_B"}, \textcolor{stringliteral}{"B"}, 1, 1, \hyperlink{datalogger_8h_ac244ccff7e47d7f9e79c1b606664f4fa}{DATALOGGER\_STANDARD\_QUEUE\_SIZE}
+      );
+    \hyperlink{gdatalogger_8c_a3f8f2b3c3f5edc72c3a1887965a544c1}{gDataLogger\_DeclareVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"imu\_magnetometer\_y\_B"}, \textcolor{stringliteral}{"B"}, 1, 1, \hyperlink{datalogger_8h_ac244ccff7e47d7f9e79c1b606664f4fa}{DATALOGGER\_STANDARD\_QUEUE\_SIZE}
+      );
+    \hyperlink{gdatalogger_8c_a3f8f2b3c3f5edc72c3a1887965a544c1}{gDataLogger\_DeclareVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"imu\_magnetometer\_z\_B"}, \textcolor{stringliteral}{"B"}, 1, 1, \hyperlink{datalogger_8h_ac244ccff7e47d7f9e79c1b606664f4fa}{DATALOGGER\_STANDARD\_QUEUE\_SIZE}
+      );
+    \hyperlink{gdatalogger_8c_a3f8f2b3c3f5edc72c3a1887965a544c1}{gDataLogger\_DeclareVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"imu\_gyrometer\_x\_rads"}, \textcolor{stringliteral}{"rads"}, 1, 1, \hyperlink{datalogger_8h_ac244ccff7e47d7f9e79c1b606664f4fa}{DATALOGGER\_STANDARD\_QUEUE\_SIZE}
+      );
+    \hyperlink{gdatalogger_8c_a3f8f2b3c3f5edc72c3a1887965a544c1}{gDataLogger\_DeclareVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"imu\_gyrometer\_y\_rads"}, \textcolor{stringliteral}{"rads"}, 1, 1, \hyperlink{datalogger_8h_ac244ccff7e47d7f9e79c1b606664f4fa}{DATALOGGER\_STANDARD\_QUEUE\_SIZE}
+      );
+    \hyperlink{gdatalogger_8c_a3f8f2b3c3f5edc72c3a1887965a544c1}{gDataLogger\_DeclareVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"imu\_gyrometer\_z\_rads"}, \textcolor{stringliteral}{"rads"}, 1, 1, \hyperlink{datalogger_8h_ac244ccff7e47d7f9e79c1b606664f4fa}{DATALOGGER\_STANDARD\_QUEUE\_SIZE}
+      );
+    \hyperlink{gdatalogger_8c_a3f8f2b3c3f5edc72c3a1887965a544c1}{gDataLogger\_DeclareVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"imu\_calibrated\_valid\_data"}, \textcolor{stringliteral}{""}, 1, 1, \hyperlink{datalogger_8h_ac244ccff7e47d7f9e79c1b606664f4fa}{DATALOGGER\_STANDARD\_QUEUE\_SIZE}
+      );
+    \textcolor{comment}{//gDataLogger\_DeclareVariable(&gDataLogger,
+       "imu\_calibrated\_valid\_accelerometer\_data", "", 1, 1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+    \textcolor{comment}{//gDataLogger\_DeclareVariable(&gDataLogger,
+       "imu\_calibrated\_valid\_gyrometer\_data", "", 1, 1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+    \textcolor{comment}{//gDataLogger\_DeclareVariable(&gDataLogger,
+       "imu\_calibrated\_valid\_magnetometer\_data", "", 1, 1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{preprocessor}{    #endif // DATALOGGER\_LOG\_CALIBRATED\_IMU}
+\textcolor{preprocessor}{}
+
+\textcolor{comment}{/*}
+\textcolor{comment}{    #if DATALOGGER\_LOG\_LOCAL\_COORDINATE\_SYSTEM}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "initial\_altitude", "m", 1, 1,
+       1);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "initial\_latitude", "radians", 1,
+       1, 1);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "initial\_longitude", "radians",
+       1, 1, 1);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "initial\_ecef\_x", "m", 1, 1, 1);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "initial\_ecef\_y", "m", 1, 1, 1);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "initial\_ecef\_z", "m", 1, 1, 1);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "rotation\_matrix", "matrix", 3,
+       3, 1);}
+\textcolor{comment}{    #endif // DATALOGGER\_LOG\_LOCAL\_COORDINATE\_SYSTEM}
+\textcolor{comment}{}
+\textcolor{comment}{    #if DATALOGGER\_LOG\_LOCAL\_FIELDS}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "local\_magnetic", "field", 3, 1,
+       1);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "local\_gravity", "field", 3, 1,
+       1);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "magnetic\_magnitude", "uT", 1, 1,
+       1);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "gravity\_magnitude", "ms2", 1, 1,
+       1);}
+\textcolor{comment}{    #endif // DATALOGGER\_LOG\_LOCAL\_FIELDS}
+\textcolor{comment}{}
+\textcolor{comment}{    #if DATALOGGER\_LOG\_ESTIMATOR}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "estimated\_roll\_angle\_radians",
+       "radians", 1, 1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "estimated\_pitch\_angle\_radians",
+       "radians", 1, 1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "estimated\_yaw\_angle\_radians",
+       "radians", 1, 1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "estimated\_q0", "quaternion", 1,
+       1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "estimated\_q1", "quaternion", 1,
+       1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "estimated\_q2", "quaternion", 1,
+       1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "estimated\_q3", "quaternion", 1,
+       1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "estimated\_x\_position\_meters",
+       "meters", 1, 1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "estimated\_y\_position\_meters",
+       "meters", 1, 1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "estimated\_z\_position\_meters",
+       "meters", 1, 1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger,
+       "estimated\_x\_velocity\_meters\_second", "meters", 1, 1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger,
+       "estimated\_y\_velocity\_meters\_second", "meters", 1, 1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger,
+       "estimated\_z\_velocity\_meters\_second", "meters", 1, 1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    #endif // DATALOGGER\_LOG\_ESTIMATOR}
+\textcolor{comment}{}
+\textcolor{comment}{    #if DATALOGGER\_LOG\_CONTROLLERS}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger,
+       "control\_roll\_angle\_trim\_radians", "radians", 1, 1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger,
+       "control\_pitch\_angle\_trim\_radians", "radians", 1, 1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "control\_yaw\_angle\_trim\_radians",
+       "radians", 1, 1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "control\_left\_aileron\_trim",
+       "us", 1, 1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "control\_right\_aileron\_trim",
+       "us", 1, 1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "control\_elevator\_trim", "us", 1,
+       1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger, "control\_rudder\_trim", "us", 1,
+       1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger,
+       "control\_roll\_angle\_reference\_radians", "radians", 1, 1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger,
+       "control\_pitch\_angle\_reference\_radians", "radians", 1, 1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    gDataLogger\_DeclareVariable(&gDataLogger,
+       "control\_yaw\_angle\_reference\_radians", "radians", 1, 1, DATALOGGER\_STANDARD\_QUEUE\_SIZE);}
+\textcolor{comment}{    #endif // DATALOGGER\_LOG\_CONTROLLERS}
+\textcolor{comment}{*/}
+    \hyperlink{datalogger_8c_a35e8fbe04b90452afdc3c1be16ff6187}{datalogger\_initialized} = \hyperlink{datalogger_8h_a684c343d340004b77ca2b782934c96ca}{DATALOGGER\_INITIALIZED}
+      ;
+    \hyperlink{datalogger_8c_a85453211c0c809083c36cc56b275aeeb}{datalogger\_unlock\_mutex}();
+\textcolor{preprocessor}{    #endif //DATALOGGER\_MODULE\_ENABLED}
+\textcolor{preprocessor}{}
+    \textcolor{keywordflow}{return} \hyperlink{datalogger_8h_abddebaf71d26d40183fccbb1a766b983}{DATALOGGER\_SUCCESS};
+\}
 \end{DoxyCode}
 
 
-
-
-Here is the call graph for this function:
-
-
-
-Here is the caller graph for this function:
-
-\hypertarget{datalogger_8c_a54b06d9395b2e370a5a72beb7f9524b2}{
-\index{datalogger.c@{datalogger.c}!datalogger\_\-lock\_\-mutex@{datalogger\_\-lock\_\-mutex}}
-\index{datalogger\_\-lock\_\-mutex@{datalogger\_\-lock\_\-mutex}!datalogger.c@{datalogger.c}}
-\subsubsection[{datalogger\_\-lock\_\-mutex}]{\setlength{\rightskip}{0pt plus 5cm}int datalogger\_\-lock\_\-mutex (void)}}
-\label{datalogger_8c_a54b06d9395b2e370a5a72beb7f9524b2}
-
-
-Definition at line 629 of file datalogger.c.
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{datalogger_8c_a1977ef253746fd8c008a3641d9822551_cgraph}
+\end{center}
+\end{figure}
 
 
 
-References datalogger\_\-mutex, and DATALOGGER\_\-SUCCESS.
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{datalogger_8c_a1977ef253746fd8c008a3641d9822551_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{datalogger_8c_a54b06d9395b2e370a5a72beb7f9524b2}{\index{datalogger.\-c@{datalogger.\-c}!datalogger\-\_\-lock\-\_\-mutex@{datalogger\-\_\-lock\-\_\-mutex}}
+\index{datalogger\-\_\-lock\-\_\-mutex@{datalogger\-\_\-lock\-\_\-mutex}!datalogger.c@{datalogger.\-c}}
+\subsubsection[{datalogger\-\_\-lock\-\_\-mutex}]{\setlength{\rightskip}{0pt plus 5cm}int datalogger\-\_\-lock\-\_\-mutex (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{datalogger_8c_a54b06d9395b2e370a5a72beb7f9524b2}
+
+
+Definition at line 629 of file datalogger.\-c.
 
 
 
-Referenced by datalogger\_\-close(), datalogger\_\-init(), datalogger\_\-set\_\-Ts(), datalogger\_\-start(), datalogger\_\-status(), datalogger\_\-stop(), datalogger\_\-update(), datalogger\_\-update\_\-IPC(), and datalogger\_\-write\_\-file().
+References datalogger\-\_\-mutex, and D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S.
 
 
+
+Referenced by datalogger\-\_\-close(), datalogger\-\_\-init(), datalogger\-\_\-set\-\_\-\-Ts(), datalogger\-\_\-start(), datalogger\-\_\-status(), datalogger\-\_\-stop(), datalogger\-\_\-update(), datalogger\-\_\-update\-\_\-\-I\-P\-C(), and datalogger\-\_\-write\-\_\-file().
 
 
 \begin{DoxyCode}
-630 {
-631         #if ANU_COMPILE_FOR_XENOMAI
-632         rt_mutex_acquire(&datalogger_mutex,TM_INFINITE);
-633         #else
-634         pthread_mutex_lock(&datalogger_mutex);
-635         #endif
-636         return DATALOGGER_SUCCESS;
-637 }
+\{
+\textcolor{preprocessor}{        #if ANU\_COMPILE\_FOR\_XENOMAI}
+\textcolor{preprocessor}{}        rt\_mutex\_acquire(&\hyperlink{datalogger_8c_a824d6f7fd1d3898ba0b1100ba37875c6}{datalogger\_mutex},TM\_INFINITE);
+\textcolor{preprocessor}{        #else}
+\textcolor{preprocessor}{}        pthread\_mutex\_lock(&\hyperlink{datalogger_8c_a824d6f7fd1d3898ba0b1100ba37875c6}{datalogger\_mutex});
+\textcolor{preprocessor}{        #endif}
+\textcolor{preprocessor}{}        \textcolor{keywordflow}{return} \hyperlink{datalogger_8h_abddebaf71d26d40183fccbb1a766b983}{DATALOGGER\_SUCCESS};
+\}
 \end{DoxyCode}
 
 
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{datalogger_8c_a54b06d9395b2e370a5a72beb7f9524b2_icgraph}
+\end{center}
+\end{figure}
 
 
-Here is the caller graph for this function:
-
-\hypertarget{datalogger_8c_afb69d166f8d53042825174cee225ea49}{
-\index{datalogger.c@{datalogger.c}!datalogger\_\-set\_\-Ts@{datalogger\_\-set\_\-Ts}}
-\index{datalogger\_\-set\_\-Ts@{datalogger\_\-set\_\-Ts}!datalogger.c@{datalogger.c}}
-\subsubsection[{datalogger\_\-set\_\-Ts}]{\setlength{\rightskip}{0pt plus 5cm}int datalogger\_\-set\_\-Ts (double {\em Ts})}}
-\label{datalogger_8c_afb69d166f8d53042825174cee225ea49}
-
-
-Definition at line 540 of file datalogger.c.
+\hypertarget{datalogger_8c_afb69d166f8d53042825174cee225ea49}{\index{datalogger.\-c@{datalogger.\-c}!datalogger\-\_\-set\-\_\-\-Ts@{datalogger\-\_\-set\-\_\-\-Ts}}
+\index{datalogger\-\_\-set\-\_\-\-Ts@{datalogger\-\_\-set\-\_\-\-Ts}!datalogger.c@{datalogger.\-c}}
+\subsubsection[{datalogger\-\_\-set\-\_\-\-Ts}]{\setlength{\rightskip}{0pt plus 5cm}int datalogger\-\_\-set\-\_\-\-Ts (
+\begin{DoxyParamCaption}
+\item[{double}]{Ts}
+\end{DoxyParamCaption}
+)}}\label{datalogger_8c_afb69d166f8d53042825174cee225ea49}
 
 
-
-References DATALOGGER\_\-ERROR\_\-NOT\_\-INITIALIZED, DATALOGGER\_\-INITIALIZED, datalogger\_\-initialized, datalogger\_\-lock\_\-mutex(), DATALOGGER\_\-SUCCESS, datalogger\_\-unlock\_\-mutex(), DATALOGGER\_\-VARIABLE\_\-INSERTED, DATALOGGER\_\-VARIABLE\_\-NOT\_\-INSERTED, DATALOGGER\_\-VARIBALE\_\-ALREADY\_\-INSERTED, and gDataLogger\_\-InsertVariable().
+Definition at line 540 of file datalogger.\-c.
 
 
 
-Referenced by periodic\_\-task\_\-1(), and threads\_\-linux\_\-periodic\_\-task\_\-1().
+References D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-E\-R\-R\-O\-R\-\_\-\-N\-O\-T\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-D, D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-D, datalogger\-\_\-initialized, datalogger\-\_\-lock\-\_\-mutex(), D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S, datalogger\-\_\-unlock\-\_\-mutex(), D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-V\-A\-R\-I\-A\-B\-L\-E\-\_\-\-I\-N\-S\-E\-R\-T\-E\-D, D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-V\-A\-R\-I\-A\-B\-L\-E\-\_\-\-N\-O\-T\-\_\-\-I\-N\-S\-E\-R\-T\-E\-D, D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-V\-A\-R\-I\-B\-A\-L\-E\-\_\-\-A\-L\-R\-E\-A\-D\-Y\-\_\-\-I\-N\-S\-E\-R\-T\-E\-D, and g\-Data\-Logger\-\_\-\-Insert\-Variable().
 
 
+
+Referenced by periodic\-\_\-task\-\_\-1(), and threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-1().
 
 
 \begin{DoxyCode}
-541 {
-542     static int datalogger_Ts_inserted = DATALOGGER_VARIABLE_NOT_INSERTED;
-543 
-544     datalogger_lock_mutex();
-545 
-546     if(datalogger_initialized != DATALOGGER_INITIALIZED)
-547     {
-548         datalogger_unlock_mutex();
-549         return DATALOGGER_ERROR_NOT_INITIALIZED;
-550     }
-551 
-552     #if DATALOGGER_LOG_TIME
-553     if(datalogger_Ts_inserted == DATALOGGER_VARIABLE_NOT_INSERTED)
-554     {
-555         datalogger_Ts_inserted = DATALOGGER_VARIABLE_INSERTED;
-556         gDataLogger_InsertVariable(&gDataLogger, "Ts", &Ts);
-557     }
-558     else
-559         {
-560         datalogger_unlock_mutex();
-561         return DATALOGGER_VARIBALE_ALREADY_INSERTED;
-562         }
-563     #else
-564     double tmp = Ts; // Remove warning
-565     #endif // DATALOGGER_LOG_TIME
-566 
-567     datalogger_unlock_mutex();
-568     return DATALOGGER_SUCCESS;
-569 }
+\{
+    \textcolor{keyword}{static} \textcolor{keywordtype}{int} datalogger\_Ts\_inserted = \hyperlink{datalogger_8h_a1f4fd2dbd981cf35467ab688c9157a74}{DATALOGGER\_VARIABLE\_NOT\_INSERTED}
+      ;
+
+    \hyperlink{datalogger_8c_a54b06d9395b2e370a5a72beb7f9524b2}{datalogger\_lock\_mutex}();
+
+    \textcolor{keywordflow}{if}(\hyperlink{datalogger_8c_a35e8fbe04b90452afdc3c1be16ff6187}{datalogger\_initialized} != \hyperlink{datalogger_8h_a684c343d340004b77ca2b782934c96ca}{DATALOGGER\_INITIALIZED}
+      )
+    \{
+        \hyperlink{datalogger_8c_a85453211c0c809083c36cc56b275aeeb}{datalogger\_unlock\_mutex}();
+        \textcolor{keywordflow}{return} \hyperlink{datalogger_8h_a60df7fe0e61b757ad6a9db106b0eb43e}{DATALOGGER\_ERROR\_NOT\_INITIALIZED}
+      ;
+    \}
+
+\textcolor{preprocessor}{    #if DATALOGGER\_LOG\_TIME}
+\textcolor{preprocessor}{}    \textcolor{keywordflow}{if}(datalogger\_Ts\_inserted == \hyperlink{datalogger_8h_a1f4fd2dbd981cf35467ab688c9157a74}{DATALOGGER\_VARIABLE\_NOT\_INSERTED}
+      )
+    \{
+        datalogger\_Ts\_inserted = \hyperlink{datalogger_8h_a181f9a0649abd26c74ed1a8a1710e25f}{DATALOGGER\_VARIABLE\_INSERTED}
+      ;
+        \hyperlink{gdatalogger_8c_a32674e7c2afa8b78e99a0070cf4bcaf9}{gDataLogger\_InsertVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"Ts"}, &Ts);
+    \}
+    \textcolor{keywordflow}{else}
+        \{
+        \hyperlink{datalogger_8c_a85453211c0c809083c36cc56b275aeeb}{datalogger\_unlock\_mutex}();
+        \textcolor{keywordflow}{return} \hyperlink{datalogger_8h_ac76269a113d60c063e857d14e4a2f640}{DATALOGGER\_VARIBALE\_ALREADY\_INSERTED}
+      ;
+        \}
+\textcolor{preprocessor}{    #else}
+\textcolor{preprocessor}{}    \textcolor{keywordtype}{double} tmp = Ts; \textcolor{comment}{// Remove warning}
+\textcolor{preprocessor}{    #endif // DATALOGGER\_LOG\_TIME}
+\textcolor{preprocessor}{}
+    \hyperlink{datalogger_8c_a85453211c0c809083c36cc56b275aeeb}{datalogger\_unlock\_mutex}();
+    \textcolor{keywordflow}{return} \hyperlink{datalogger_8h_abddebaf71d26d40183fccbb1a766b983}{DATALOGGER\_SUCCESS};
+\}
 \end{DoxyCode}
 
 
-
-
-Here is the call graph for this function:
-
-
-
-Here is the caller graph for this function:
-
-\hypertarget{datalogger_8c_a1f254ef380d595d6605c10811fd0dee6}{
-\index{datalogger.c@{datalogger.c}!datalogger\_\-start@{datalogger\_\-start}}
-\index{datalogger\_\-start@{datalogger\_\-start}!datalogger.c@{datalogger.c}}
-\subsubsection[{datalogger\_\-start}]{\setlength{\rightskip}{0pt plus 5cm}int datalogger\_\-start (void)}}
-\label{datalogger_8c_a1f254ef380d595d6605c10811fd0dee6}
-
-
-Definition at line 584 of file datalogger.c.
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{datalogger_8c_afb69d166f8d53042825174cee225ea49_cgraph}
+\end{center}
+\end{figure}
 
 
 
-References DATALOGGER\_\-ERROR\_\-NOT\_\-INITIALIZED, DATALOGGER\_\-INITIALIZED, datalogger\_\-initialized, datalogger\_\-lock\_\-mutex(), DATALOGGER\_\-RUNNING, datalogger\_\-running, DATALOGGER\_\-SUCCESS, and datalogger\_\-unlock\_\-mutex().
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{datalogger_8c_afb69d166f8d53042825174cee225ea49_icgraph}
+\end{center}
+\end{figure}
 
 
+\hypertarget{datalogger_8c_a1f254ef380d595d6605c10811fd0dee6}{\index{datalogger.\-c@{datalogger.\-c}!datalogger\-\_\-start@{datalogger\-\_\-start}}
+\index{datalogger\-\_\-start@{datalogger\-\_\-start}!datalogger.c@{datalogger.\-c}}
+\subsubsection[{datalogger\-\_\-start}]{\setlength{\rightskip}{0pt plus 5cm}int datalogger\-\_\-start (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{datalogger_8c_a1f254ef380d595d6605c10811fd0dee6}
+
+
+Definition at line 584 of file datalogger.\-c.
+
+
+
+References D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-E\-R\-R\-O\-R\-\_\-\-N\-O\-T\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-D, D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-D, datalogger\-\_\-initialized, datalogger\-\_\-lock\-\_\-mutex(), datalogger\-\_\-running, D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-R\-U\-N\-N\-I\-N\-G, D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S, and datalogger\-\_\-unlock\-\_\-mutex().
 
 
 \begin{DoxyCode}
-585 {
-586     #if DATALOGGER_MODULE_ENABLED
-587     datalogger_lock_mutex();
-588     if(datalogger_initialized != DATALOGGER_INITIALIZED)
-589     {
-590         datalogger_unlock_mutex();
-591         return DATALOGGER_ERROR_NOT_INITIALIZED;
-592     }
-593 
-594     datalogger_running = DATALOGGER_RUNNING;
-595     datalogger_unlock_mutex();
-596     #endif
-597 
-598     return DATALOGGER_SUCCESS;
-599 }
+\{
+\textcolor{preprocessor}{    #if DATALOGGER\_MODULE\_ENABLED}
+\textcolor{preprocessor}{}    \hyperlink{datalogger_8c_a54b06d9395b2e370a5a72beb7f9524b2}{datalogger\_lock\_mutex}();
+    \textcolor{keywordflow}{if}(\hyperlink{datalogger_8c_a35e8fbe04b90452afdc3c1be16ff6187}{datalogger\_initialized} != \hyperlink{datalogger_8h_a684c343d340004b77ca2b782934c96ca}{DATALOGGER\_INITIALIZED}
+      )
+    \{
+        \hyperlink{datalogger_8c_a85453211c0c809083c36cc56b275aeeb}{datalogger\_unlock\_mutex}();
+        \textcolor{keywordflow}{return} \hyperlink{datalogger_8h_a60df7fe0e61b757ad6a9db106b0eb43e}{DATALOGGER\_ERROR\_NOT\_INITIALIZED}
+      ;
+    \}
+
+    \hyperlink{datalogger_8c_a185c3ede96449d14f330fe5ac664e799}{datalogger\_running} = \hyperlink{datalogger_8h_a2cf92051a019c8ec1b5c4f5380758f62}{DATALOGGER\_RUNNING}
+      ;
+    \hyperlink{datalogger_8c_a85453211c0c809083c36cc56b275aeeb}{datalogger\_unlock\_mutex}();
+\textcolor{preprocessor}{    #endif}
+\textcolor{preprocessor}{}
+    \textcolor{keywordflow}{return} \hyperlink{datalogger_8h_abddebaf71d26d40183fccbb1a766b983}{DATALOGGER\_SUCCESS};
+\}
 \end{DoxyCode}
 
 
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{datalogger_8c_a1f254ef380d595d6605c10811fd0dee6_cgraph}
+\end{center}
+\end{figure}
 
 
-Here is the call graph for this function:
-
-\hypertarget{datalogger_8c_a46fd1290d9ee97d5fc7171e1e0dcb0aa}{
-\index{datalogger.c@{datalogger.c}!datalogger\_\-status@{datalogger\_\-status}}
-\index{datalogger\_\-status@{datalogger\_\-status}!datalogger.c@{datalogger.c}}
-\subsubsection[{datalogger\_\-status}]{\setlength{\rightskip}{0pt plus 5cm}int datalogger\_\-status (void)}}
-\label{datalogger_8c_a46fd1290d9ee97d5fc7171e1e0dcb0aa}
-
-
-Definition at line 571 of file datalogger.c.
+\hypertarget{datalogger_8c_a46fd1290d9ee97d5fc7171e1e0dcb0aa}{\index{datalogger.\-c@{datalogger.\-c}!datalogger\-\_\-status@{datalogger\-\_\-status}}
+\index{datalogger\-\_\-status@{datalogger\-\_\-status}!datalogger.c@{datalogger.\-c}}
+\subsubsection[{datalogger\-\_\-status}]{\setlength{\rightskip}{0pt plus 5cm}int datalogger\-\_\-status (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{datalogger_8c_a46fd1290d9ee97d5fc7171e1e0dcb0aa}
 
 
-
-References DATALOGGER\_\-ERROR\_\-NOT\_\-INITIALIZED, DATALOGGER\_\-INITIALIZED, datalogger\_\-initialized, datalogger\_\-lock\_\-mutex(), datalogger\_\-running, and datalogger\_\-unlock\_\-mutex().
+Definition at line 571 of file datalogger.\-c.
 
 
 
-Referenced by main(), periodic\_\-task\_\-1(), threads\_\-linux\_\-init(), and threads\_\-linux\_\-periodic\_\-task\_\-1().
+References D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-E\-R\-R\-O\-R\-\_\-\-N\-O\-T\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-D, D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-D, datalogger\-\_\-initialized, datalogger\-\_\-lock\-\_\-mutex(), datalogger\-\_\-running, and datalogger\-\_\-unlock\-\_\-mutex().
 
 
+
+Referenced by main(), periodic\-\_\-task\-\_\-1(), threads\-\_\-linux\-\_\-init(), and threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-1().
 
 
 \begin{DoxyCode}
-572 {
-573     datalogger_lock_mutex();
-574     if(datalogger_initialized != DATALOGGER_INITIALIZED)
-575     {
-576         datalogger_unlock_mutex();
-577         return DATALOGGER_ERROR_NOT_INITIALIZED;
-578     }
-579 
-580     datalogger_unlock_mutex();
-581     return datalogger_running;
-582 }
+\{
+    \hyperlink{datalogger_8c_a54b06d9395b2e370a5a72beb7f9524b2}{datalogger\_lock\_mutex}();
+    \textcolor{keywordflow}{if}(\hyperlink{datalogger_8c_a35e8fbe04b90452afdc3c1be16ff6187}{datalogger\_initialized} != \hyperlink{datalogger_8h_a684c343d340004b77ca2b782934c96ca}{DATALOGGER\_INITIALIZED}
+      )
+    \{
+        \hyperlink{datalogger_8c_a85453211c0c809083c36cc56b275aeeb}{datalogger\_unlock\_mutex}();
+        \textcolor{keywordflow}{return} \hyperlink{datalogger_8h_a60df7fe0e61b757ad6a9db106b0eb43e}{DATALOGGER\_ERROR\_NOT\_INITIALIZED}
+      ;
+    \}
+
+    \hyperlink{datalogger_8c_a85453211c0c809083c36cc56b275aeeb}{datalogger\_unlock\_mutex}();
+    \textcolor{keywordflow}{return} \hyperlink{datalogger_8c_a185c3ede96449d14f330fe5ac664e799}{datalogger\_running};
+\}
 \end{DoxyCode}
 
 
-
-
-Here is the call graph for this function:
-
-
-
-Here is the caller graph for this function:
-
-\hypertarget{datalogger_8c_aae2ffbc6cbf8f1cfecceb42c5139530a}{
-\index{datalogger.c@{datalogger.c}!datalogger\_\-stop@{datalogger\_\-stop}}
-\index{datalogger\_\-stop@{datalogger\_\-stop}!datalogger.c@{datalogger.c}}
-\subsubsection[{datalogger\_\-stop}]{\setlength{\rightskip}{0pt plus 5cm}int datalogger\_\-stop (void)}}
-\label{datalogger_8c_aae2ffbc6cbf8f1cfecceb42c5139530a}
-
-
-Definition at line 601 of file datalogger.c.
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{datalogger_8c_a46fd1290d9ee97d5fc7171e1e0dcb0aa_cgraph}
+\end{center}
+\end{figure}
 
 
 
-References DATALOGGER\_\-ERROR\_\-NOT\_\-INITIALIZED, DATALOGGER\_\-INITIALIZED, datalogger\_\-initialized, datalogger\_\-lock\_\-mutex(), DATALOGGER\_\-NOT\_\-RUNNING, datalogger\_\-running, DATALOGGER\_\-SUCCESS, and datalogger\_\-unlock\_\-mutex().
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{datalogger_8c_a46fd1290d9ee97d5fc7171e1e0dcb0aa_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{datalogger_8c_aae2ffbc6cbf8f1cfecceb42c5139530a}{\index{datalogger.\-c@{datalogger.\-c}!datalogger\-\_\-stop@{datalogger\-\_\-stop}}
+\index{datalogger\-\_\-stop@{datalogger\-\_\-stop}!datalogger.c@{datalogger.\-c}}
+\subsubsection[{datalogger\-\_\-stop}]{\setlength{\rightskip}{0pt plus 5cm}int datalogger\-\_\-stop (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{datalogger_8c_aae2ffbc6cbf8f1cfecceb42c5139530a}
+
+
+Definition at line 601 of file datalogger.\-c.
+
+
+
+References D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-E\-R\-R\-O\-R\-\_\-\-N\-O\-T\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-D, D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-D, datalogger\-\_\-initialized, datalogger\-\_\-lock\-\_\-mutex(), D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-N\-O\-T\-\_\-\-R\-U\-N\-N\-I\-N\-G, datalogger\-\_\-running, D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S, and datalogger\-\_\-unlock\-\_\-mutex().
 
 
 
 Referenced by main().
 
 
-
-
 \begin{DoxyCode}
-602 {
-603     #if DATALOGGER_MODULE_ENABLED
-604     datalogger_lock_mutex();
-605     if(datalogger_initialized != DATALOGGER_INITIALIZED)
-606     {
-607         datalogger_unlock_mutex();
-608         return DATALOGGER_ERROR_NOT_INITIALIZED;
-609     }
-610 
-611     datalogger_running = DATALOGGER_NOT_RUNNING;
-612     datalogger_unlock_mutex();
-613     #endif
-614 
-615     return DATALOGGER_SUCCESS;
-616 }
-\end{DoxyCode}
-
-
-
-
-Here is the call graph for this function:
-
-
-
-Here is the caller graph for this function:
-
-\hypertarget{datalogger_8c_a85453211c0c809083c36cc56b275aeeb}{
-\index{datalogger.c@{datalogger.c}!datalogger\_\-unlock\_\-mutex@{datalogger\_\-unlock\_\-mutex}}
-\index{datalogger\_\-unlock\_\-mutex@{datalogger\_\-unlock\_\-mutex}!datalogger.c@{datalogger.c}}
-\subsubsection[{datalogger\_\-unlock\_\-mutex}]{\setlength{\rightskip}{0pt plus 5cm}int datalogger\_\-unlock\_\-mutex (void)}}
-\label{datalogger_8c_a85453211c0c809083c36cc56b275aeeb}
-
-
-Definition at line 639 of file datalogger.c.
-
-
-
-References datalogger\_\-mutex, and DATALOGGER\_\-SUCCESS.
-
-
-
-Referenced by datalogger\_\-close(), datalogger\_\-init(), datalogger\_\-set\_\-Ts(), datalogger\_\-start(), datalogger\_\-status(), datalogger\_\-stop(), datalogger\_\-update(), datalogger\_\-update\_\-IPC(), and datalogger\_\-write\_\-file().
-
-
-
-
-\begin{DoxyCode}
-640 {
-641         #if ANU_COMPILE_FOR_XENOMAI
-642         rt_mutex_release(&datalogger_mutex);
-643         #else
-644         pthread_mutex_unlock(&datalogger_mutex);
-645         #endif
-646         return DATALOGGER_SUCCESS;
-647 }
-\end{DoxyCode}
-
-
-
-
-Here is the caller graph for this function:
-
-\hypertarget{datalogger_8c_ad89a56e2f057ace8c28d78eb67703e7d}{
-\index{datalogger.c@{datalogger.c}!datalogger\_\-update@{datalogger\_\-update}}
-\index{datalogger\_\-update@{datalogger\_\-update}!datalogger.c@{datalogger.c}}
-\subsubsection[{datalogger\_\-update}]{\setlength{\rightskip}{0pt plus 5cm}int datalogger\_\-update (double {\em t\_\-s}, \/  double {\em t\_\-control\_\-exec\_\-s}, \/  double {\em t\_\-ui\_\-exec\_\-s}, \/  double {\em t0\_\-s}, \/  {\bf IMU\_\-DATA\_\-STRUCT} $\ast$ {\em pimu\_\-data}, \/  {\bf EFF\_\-DATA\_\-STRUCT} $\ast$ {\em peff\_\-data}, \/  {\bf MRA\_\-DATA\_\-STRUCT} $\ast$ {\em pmra\_\-data})}}
-\label{datalogger_8c_ad89a56e2f057ace8c28d78eb67703e7d}
-
-
-Definition at line 272 of file datalogger.c.
-
-
-
-References IMU\_\-DATA\_\-STRUCT::calibrated::acc, IMU\_\-DATA\_\-STRUCT::acc, IMU\_\-DATA\_\-STRUCT::calib, DATALOGGER\_\-ERROR\_\-NOT\_\-INITIALIZED, DATALOGGER\_\-INITIALIZED, datalogger\_\-initialized, datalogger\_\-lock\_\-mutex(), DATALOGGER\_\-SUCCESS, datalogger\_\-unlock\_\-mutex(), EFF\_\-DATA\_\-STRUCT::F, gDataLogger\_\-InsertVariable(), IMU\_\-DATA\_\-STRUCT::calibrated::gyr, IMU\_\-DATA\_\-STRUCT::gyr, IMU\_\-DATA\_\-STRUCT::calibrated::mag, IMU\_\-DATA\_\-STRUCT::mag, EFF\_\-DATA\_\-STRUCT::new\_\-data, IMU\_\-DATA\_\-STRUCT::new\_\-data, MRA\_\-DATA\_\-STRUCT::v\_\-ctl, MRA\_\-DATA\_\-STRUCT::v\_\-ctl\_\-read, DATA\_\-XYZ\_\-DOUBLE::x, DATA\_\-XYZ::x, DATA\_\-XYZ\_\-DOUBLE::y, DATA\_\-XYZ::y, DATA\_\-XYZ\_\-DOUBLE::z, and DATA\_\-XYZ::z.
-
-
-
-Referenced by periodic\_\-task\_\-1(), and threads\_\-linux\_\-periodic\_\-task\_\-1().
-
-
-
-
-\begin{DoxyCode}
-273 {
-274     double tmp = 0.0;
-275 
-276     datalogger_lock_mutex();
-277 
-278     if(datalogger_initialized != DATALOGGER_INITIALIZED)
-279     {
-280         datalogger_unlock_mutex();
-281         return DATALOGGER_ERROR_NOT_INITIALIZED;
-282     }
-283 
-284     #if DATALOGGER_LOG_TIME
-285     double tmp_t = t_s - t0_s;
-286     gDataLogger_InsertVariable(&gDataLogger, "t", &tmp_t);
-287     #else
-288     double tmp_t = 0.0;
-289     tmp_t = t_s; // Remove warning
-290     #endif // DATALOGGER_LOG_TIME
-291 
-292     #if DATALOGGER_LOG_EXECTIMES
-293     gDataLogger_InsertVariable(&gDataLogger, "t_control_exec", &t_control_exec_s)
+\{
+\textcolor{preprocessor}{    #if DATALOGGER\_MODULE\_ENABLED}
+\textcolor{preprocessor}{}    \hyperlink{datalogger_8c_a54b06d9395b2e370a5a72beb7f9524b2}{datalogger\_lock\_mutex}();
+    \textcolor{keywordflow}{if}(\hyperlink{datalogger_8c_a35e8fbe04b90452afdc3c1be16ff6187}{datalogger\_initialized} != \hyperlink{datalogger_8h_a684c343d340004b77ca2b782934c96ca}{DATALOGGER\_INITIALIZED}
+      )
+    \{
+        \hyperlink{datalogger_8c_a85453211c0c809083c36cc56b275aeeb}{datalogger\_unlock\_mutex}();
+        \textcolor{keywordflow}{return} \hyperlink{datalogger_8h_a60df7fe0e61b757ad6a9db106b0eb43e}{DATALOGGER\_ERROR\_NOT\_INITIALIZED}
       ;
-294     gDataLogger_InsertVariable(&gDataLogger, "t_ui_exec", &t_ui_exec_s);
-295     #else
-296     double tmp_e = 0.0; // Remove warning
-297     tmp_e = t_control_exec_s; // Remove warning
-298     tmp_e = t_ui_exec_s; // Remove warning
-299     #endif // DATALOGGER_LOG_EXECTIMES
-300 
-301 
-302     #if DATALOGGER_LOG_RAW_IMU
-303     tmp = (double) pimu_data->acc.x;
-304     gDataLogger_InsertVariable(&gDataLogger, "imu_accelerometer_x_raw", &tmp);
-305     tmp = (double) pimu_data->acc.y;
-306     gDataLogger_InsertVariable(&gDataLogger, "imu_accelerometer_y_raw", &tmp);
-307     tmp = (double) pimu_data->acc.z;
-308     gDataLogger_InsertVariable(&gDataLogger, "imu_accelerometer_z_raw", &tmp);
-309     tmp = (double) pimu_data->mag.x;
-310     gDataLogger_InsertVariable(&gDataLogger, "imu_magnetometer_x_raw", &tmp);
-311     tmp = (double) pimu_data->mag.y;
-312     gDataLogger_InsertVariable(&gDataLogger, "imu_magnetometer_y_raw", &tmp);
-313     tmp = (double) pimu_data->mag.z;
-314     gDataLogger_InsertVariable(&gDataLogger, "imu_magnetometer_z_raw", &tmp);
-315     tmp = (double) pimu_data->gyr.x;
-316     gDataLogger_InsertVariable(&gDataLogger, "imu_gyrometer_x_raw", &tmp);
-317     tmp = (double) pimu_data->gyr.y;
-318     gDataLogger_InsertVariable(&gDataLogger, "imu_gyrometer_y_raw", &tmp);
-319     tmp = (double) pimu_data->gyr.z;
-320     gDataLogger_InsertVariable(&gDataLogger, "imu_gyrometer_z_raw", &tmp);
-321     tmp = (double) pimu_data->new_data;
-322     gDataLogger_InsertVariable(&gDataLogger, "imu_valid_data", &tmp);
-323     #else
-324     double tmp_ri = 0; // Remove warning
-325     tmp_ri = pimu_data->new_data; // Remove warning ???
-326     #endif //DATALOGGER_LOG_RAW_IMU
-327     
-328     #if DATALOGGER_LOG_EFFORTS
-329     tmp = (double) peff_data->F.x;
-330     gDataLogger_InsertVariable(&gDataLogger, "Vin0", &tmp);
-331     tmp = (double) peff_data->new_data;
-332     gDataLogger_InsertVariable(&gDataLogger, "Vin0_valid_data", &tmp);
-333     #endif
-334     
-335     #if DATALOGGER_LOG_MRA
-336     tmp = (double) pmra_data->v_ctl;
-337     gDataLogger_InsertVariable(&gDataLogger, "v_ctl", &tmp);
-338     tmp = (double) pmra_data->v_ctl_read;
-339     gDataLogger_InsertVariable(&gDataLogger, "v_ctl_read", &tmp);
-340     #endif
-341     
-342     
-343        
-344     #if DATALOGGER_LOG_CALIBRATED_IMU
-345     gDataLogger_InsertVariable(&gDataLogger, "imu_accelerometer_x_g", &(pimu_data
-      ->calib.acc.x));
-346     gDataLogger_InsertVariable(&gDataLogger, "imu_accelerometer_y_g", &(pimu_data
-      ->calib.acc.y));
-347     gDataLogger_InsertVariable(&gDataLogger, "imu_accelerometer_z_g", &(pimu_data
-      ->calib.acc.z));
-348     gDataLogger_InsertVariable(&gDataLogger, "imu_magnetometer_x_B", &(pimu_data-
-      >calib.mag.x));
-349     gDataLogger_InsertVariable(&gDataLogger, "imu_magnetometer_y_B", &(pimu_data-
-      >calib.mag.y));
-350     gDataLogger_InsertVariable(&gDataLogger, "imu_magnetometer_z_B", &(pimu_data-
-      >calib.mag.z));
-351     gDataLogger_InsertVariable(&gDataLogger, "imu_gyrometer_x_rads", &(pimu_data-
-      >calib.gyr.x));
-352     gDataLogger_InsertVariable(&gDataLogger, "imu_gyrometer_y_rads", &(pimu_data-
-      >calib.gyr.y));
-353     gDataLogger_InsertVariable(&gDataLogger, "imu_gyrometer_z_rads", &(pimu_data-
-      >calib.gyr.z));
-354     tmp = (double) pimu_data->new_data;
-355     gDataLogger_InsertVariable(&gDataLogger, "imu_calibrated_valid_data", &tmp);
-356     //tmp = pimu_measure->FlagValidAccerometerMeasure;
-357     //gDataLogger_InsertVariable(&gDataLogger, "imu_calibrated_valid_acceleromete
-      r_data", &tmp);
-358     //tmp = pimu_measure->FlagValidGyrometerMeasure;
-359     //gDataLogger_InsertVariable(&gDataLogger, "imu_calibrated_valid_gyrometer_da
-      ta", &tmp);
-360     //tmp = pmagnetometer_measure->FlagValidMeasure;
-361     //gDataLogger_InsertVariable(&gDataLogger, "imu_calibrated_valid_magnetometer
-      _data", &tmp);
-362     #else
-363     double tmp_ci = 0.0;
-364     tmp_ci = pimu_measure->ax; // Remove warning
-365     tmp_ci = pmagnetometer_measure->mx; // Remove warning
-366     #endif // DATALOGGER_LOG_CALIBRATED_IMU
-367 
-368  /*
-369     #if DATALOGGER_LOG_ESTIMATOR
-370     gDataLogger_InsertVariable(&gDataLogger, "estimated_roll_angle_radians", &(pe
-      stimation_data->roll_angle_radians));
-371     gDataLogger_InsertVariable(&gDataLogger, "estimated_pitch_angle_radians", &(p
-      estimation_data->pitch_angle_radians));
-372     gDataLogger_InsertVariable(&gDataLogger, "estimated_yaw_angle_radians", &(pes
-      timation_data->yaw_angle_radians));
-373     gDataLogger_InsertVariable(&gDataLogger, "estimated_q0", &(pestimation_data->
-      q0));
-374     gDataLogger_InsertVariable(&gDataLogger, "estimated_q1", &(pestimation_data->
-      q1));
-375     gDataLogger_InsertVariable(&gDataLogger, "estimated_q2", &(pestimation_data->
-      q2));
-376     gDataLogger_InsertVariable(&gDataLogger, "estimated_q3", &(pestimation_data->
-      q3));
-377     gDataLogger_InsertVariable(&gDataLogger, "estimated_x_position_meters", &(pes
-      timation_data->x_position_meters));
-378     gDataLogger_InsertVariable(&gDataLogger, "estimated_y_position_meters", &(pes
-      timation_data->y_position_meters));
-379     gDataLogger_InsertVariable(&gDataLogger, "estimated_z_position_meters", &(pes
-      timation_data->z_position_meters));
-380     gDataLogger_InsertVariable(&gDataLogger, "estimated_x_velocity_meters_second"
-      , &(pestimation_data->x_velocity_meters_second));
-381     gDataLogger_InsertVariable(&gDataLogger, "estimated_y_velocity_meters_second"
-      , &(pestimation_data->y_velocity_meters_second));
-382     gDataLogger_InsertVariable(&gDataLogger, "estimated_z_velocity_meters_second"
-      , &(pestimation_data->z_velocity_meters_second));
-383         #else
-384     double tmp_est = 0.0;
-385         tmp_est = pestimation_data->roll_angle_radians; // Remove warning
-386     #endif // DATALOGGER_LOG_ESTIMATOR
-387 
-388     #if DATALOGGER_LOG_CONTROLLERS
-389         gDataLogger_InsertVariable(&gDataLogger, "control_roll_angle_trim_radians
-      ", &(pcontrol_data->roll_angle_trim_radians));
-390         gDataLogger_InsertVariable(&gDataLogger, "control_pitch_angle_trim_radian
-      s", &(pcontrol_data->pitch_angle_trim_radians));
-391         gDataLogger_InsertVariable(&gDataLogger, "control_yaw_angle_trim_radians"
-      , &(pcontrol_data->yaw_angle_trim_radians));
-392         gDataLogger_InsertVariable(&gDataLogger, "control_left_aileron_trim", &(p
-      control_data->left_aileron_trim));
-393         gDataLogger_InsertVariable(&gDataLogger, "control_right_aileron_trim", &(
-      pcontrol_data->right_aileron_trim));
-394         gDataLogger_InsertVariable(&gDataLogger, "control_elevator_trim", &(pcont
-      rol_data->elevator_trim));
-395         gDataLogger_InsertVariable(&gDataLogger, "control_rudder_trim", &(pcontro
-      l_data->rudder_trim));
-396         gDataLogger_InsertVariable(&gDataLogger, "control_roll_angle_reference_ra
-      dians", &(pcontrol_data->roll_angle_reference_radians));
-397         gDataLogger_InsertVariable(&gDataLogger, "control_pitch_angle_reference_r
-      adians", &(pcontrol_data->pitch_angle_reference_radians));
-398         gDataLogger_InsertVariable(&gDataLogger, "control_yaw_angle_reference_rad
-      ians", &(pcontrol_data->yaw_angle_reference_radians));
-399     #else
-400     double tmp_control = 0.0;
-401     tmp_control = pcontrol_data->roll_angle_trim_radians;
-402     #endif // DATALOGGER_LOG_CONTROLLERS
-403 */
-404     datalogger_unlock_mutex();
-405 
-406     return DATALOGGER_SUCCESS;
-407 }
+    \}
+
+    \hyperlink{datalogger_8c_a185c3ede96449d14f330fe5ac664e799}{datalogger\_running} = \hyperlink{datalogger_8h_a1a224da36800f52f56f30619849f7f5d}{DATALOGGER\_NOT\_RUNNING}
+      ;
+    \hyperlink{datalogger_8c_a85453211c0c809083c36cc56b275aeeb}{datalogger\_unlock\_mutex}();
+\textcolor{preprocessor}{    #endif}
+\textcolor{preprocessor}{}
+    \textcolor{keywordflow}{return} \hyperlink{datalogger_8h_abddebaf71d26d40183fccbb1a766b983}{DATALOGGER\_SUCCESS};
+\}
 \end{DoxyCode}
 
 
-
-
-Here is the call graph for this function:
-
-
-
-Here is the caller graph for this function:
-
-\hypertarget{datalogger_8c_a25bb814a0877f419ae09b08cd7e91ee9}{
-\index{datalogger.c@{datalogger.c}!datalogger\_\-update\_\-IPC@{datalogger\_\-update\_\-IPC}}
-\index{datalogger\_\-update\_\-IPC@{datalogger\_\-update\_\-IPC}!datalogger.c@{datalogger.c}}
-\subsubsection[{datalogger\_\-update\_\-IPC}]{\setlength{\rightskip}{0pt plus 5cm}int datalogger\_\-update\_\-IPC (void)}}
-\label{datalogger_8c_a25bb814a0877f419ae09b08cd7e91ee9}
-
-
-Definition at line 256 of file datalogger.c.
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{datalogger_8c_aae2ffbc6cbf8f1cfecceb42c5139530a_cgraph}
+\end{center}
+\end{figure}
 
 
 
-References DATALOGGER\_\-ERROR\_\-NOT\_\-INITIALIZED, DATALOGGER\_\-INITIALIZED, datalogger\_\-initialized, datalogger\_\-lock\_\-mutex(), DATALOGGER\_\-SUCCESS, datalogger\_\-unlock\_\-mutex(), and gDataLogger\_\-IPCUpdate().
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{datalogger_8c_aae2ffbc6cbf8f1cfecceb42c5139530a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{datalogger_8c_a85453211c0c809083c36cc56b275aeeb}{\index{datalogger.\-c@{datalogger.\-c}!datalogger\-\_\-unlock\-\_\-mutex@{datalogger\-\_\-unlock\-\_\-mutex}}
+\index{datalogger\-\_\-unlock\-\_\-mutex@{datalogger\-\_\-unlock\-\_\-mutex}!datalogger.c@{datalogger.\-c}}
+\subsubsection[{datalogger\-\_\-unlock\-\_\-mutex}]{\setlength{\rightskip}{0pt plus 5cm}int datalogger\-\_\-unlock\-\_\-mutex (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{datalogger_8c_a85453211c0c809083c36cc56b275aeeb}
+
+
+Definition at line 639 of file datalogger.\-c.
 
 
 
-Referenced by threads\_\-linux\_\-init().
+References datalogger\-\_\-mutex, and D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S.
 
 
+
+Referenced by datalogger\-\_\-close(), datalogger\-\_\-init(), datalogger\-\_\-set\-\_\-\-Ts(), datalogger\-\_\-start(), datalogger\-\_\-status(), datalogger\-\_\-stop(), datalogger\-\_\-update(), datalogger\-\_\-update\-\_\-\-I\-P\-C(), and datalogger\-\_\-write\-\_\-file().
 
 
 \begin{DoxyCode}
-257 {
-258     #if DATALOGGER_MODULE_ENABLED
-259     datalogger_lock_mutex();
-260     if(datalogger_initialized != DATALOGGER_INITIALIZED)
-261     {
-262         datalogger_unlock_mutex();
-263         return DATALOGGER_ERROR_NOT_INITIALIZED;
-264     }
-265 
-266     gDataLogger_IPCUpdate(&gDataLogger); // Manages IPC
-267     datalogger_unlock_mutex();
-268     #endif
-269     return DATALOGGER_SUCCESS;
-270 }
+\{
+\textcolor{preprocessor}{        #if ANU\_COMPILE\_FOR\_XENOMAI}
+\textcolor{preprocessor}{}        rt\_mutex\_release(&\hyperlink{datalogger_8c_a824d6f7fd1d3898ba0b1100ba37875c6}{datalogger\_mutex});
+\textcolor{preprocessor}{        #else}
+\textcolor{preprocessor}{}        pthread\_mutex\_unlock(&\hyperlink{datalogger_8c_a824d6f7fd1d3898ba0b1100ba37875c6}{datalogger\_mutex});
+\textcolor{preprocessor}{        #endif}
+\textcolor{preprocessor}{}        \textcolor{keywordflow}{return} \hyperlink{datalogger_8h_abddebaf71d26d40183fccbb1a766b983}{DATALOGGER\_SUCCESS};
+\}
 \end{DoxyCode}
 
 
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{datalogger_8c_a85453211c0c809083c36cc56b275aeeb_icgraph}
+\end{center}
+\end{figure}
 
 
-Here is the call graph for this function:
+\hypertarget{datalogger_8c_ad89a56e2f057ace8c28d78eb67703e7d}{\index{datalogger.\-c@{datalogger.\-c}!datalogger\-\_\-update@{datalogger\-\_\-update}}
+\index{datalogger\-\_\-update@{datalogger\-\_\-update}!datalogger.c@{datalogger.\-c}}
+\subsubsection[{datalogger\-\_\-update}]{\setlength{\rightskip}{0pt plus 5cm}int datalogger\-\_\-update (
+\begin{DoxyParamCaption}
+\item[{double}]{t\-\_\-s, }
+\item[{double}]{t\-\_\-control\-\_\-exec\-\_\-s, }
+\item[{double}]{t\-\_\-ui\-\_\-exec\-\_\-s, }
+\item[{double}]{t0\-\_\-s, }
+\item[{{\bf I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$}]{pimu\-\_\-data, }
+\item[{{\bf E\-F\-F\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$}]{peff\-\_\-data, }
+\item[{{\bf M\-R\-A\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$}]{pmra\-\_\-data}
+\end{DoxyParamCaption}
+)}}\label{datalogger_8c_ad89a56e2f057ace8c28d78eb67703e7d}
+
+
+Definition at line 272 of file datalogger.\-c.
 
 
 
-Here is the caller graph for this function:
-
-\hypertarget{datalogger_8c_a2aedecfce53e1935a41615ceaf378013}{
-\index{datalogger.c@{datalogger.c}!datalogger\_\-write\_\-file@{datalogger\_\-write\_\-file}}
-\index{datalogger\_\-write\_\-file@{datalogger\_\-write\_\-file}!datalogger.c@{datalogger.c}}
-\subsubsection[{datalogger\_\-write\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}int datalogger\_\-write\_\-file (void)}}
-\label{datalogger_8c_a2aedecfce53e1935a41615ceaf378013}
-
-
-Definition at line 240 of file datalogger.c.
+References I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::acc, I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::calibrated\-::acc, I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::calib, D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-E\-R\-R\-O\-R\-\_\-\-N\-O\-T\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-D, D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-D, datalogger\-\_\-initialized, datalogger\-\_\-lock\-\_\-mutex(), D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S, datalogger\-\_\-unlock\-\_\-mutex(), E\-F\-F\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::\-F, g\-Data\-Logger\-\_\-\-Insert\-Variable(), I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::gyr, I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::calibrated\-::gyr, I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::mag, I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::calibrated\-::mag, I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::new\-\_\-data, E\-F\-F\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::new\-\_\-data, M\-R\-A\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::v\-\_\-ctl, M\-R\-A\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::v\-\_\-ctl\-\_\-read, D\-A\-T\-A\-\_\-\-X\-Y\-Z\-::x, D\-A\-T\-A\-\_\-\-X\-Y\-Z\-\_\-\-D\-O\-U\-B\-L\-E\-::x, D\-A\-T\-A\-\_\-\-X\-Y\-Z\-::y, D\-A\-T\-A\-\_\-\-X\-Y\-Z\-\_\-\-D\-O\-U\-B\-L\-E\-::y, D\-A\-T\-A\-\_\-\-X\-Y\-Z\-::z, and D\-A\-T\-A\-\_\-\-X\-Y\-Z\-\_\-\-D\-O\-U\-B\-L\-E\-::z.
 
 
 
-References DATALOGGER\_\-ERROR\_\-NOT\_\-INITIALIZED, DATALOGGER\_\-INITIALIZED, datalogger\_\-initialized, datalogger\_\-lock\_\-mutex(), DATALOGGER\_\-SUCCESS, datalogger\_\-unlock\_\-mutex(), and gDataLogger\_\-MatfileUpdate().
-
-
-
-Referenced by main(), and threads\_\-linux\_\-init().
-
-
+Referenced by periodic\-\_\-task\-\_\-1(), and threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-1().
 
 
 \begin{DoxyCode}
-241 {
-242     #if DATALOGGER_MODULE_ENABLED
-243     datalogger_lock_mutex();
-244     if(datalogger_initialized != DATALOGGER_INITIALIZED)
-245     {
-246         datalogger_unlock_mutex();
-247         return DATALOGGER_ERROR_NOT_INITIALIZED;
-248     }
-249     gDataLogger_MatfileUpdate(&gDataLogger); // Empty buffers in the file
-250     datalogger_unlock_mutex();
-251     #endif
-252 
-253     return DATALOGGER_SUCCESS;
-254 }
+\{
+    \textcolor{keywordtype}{double} tmp = 0.0;
+
+    \hyperlink{datalogger_8c_a54b06d9395b2e370a5a72beb7f9524b2}{datalogger\_lock\_mutex}();
+
+    \textcolor{keywordflow}{if}(\hyperlink{datalogger_8c_a35e8fbe04b90452afdc3c1be16ff6187}{datalogger\_initialized} != \hyperlink{datalogger_8h_a684c343d340004b77ca2b782934c96ca}{DATALOGGER\_INITIALIZED}
+      )
+    \{
+        \hyperlink{datalogger_8c_a85453211c0c809083c36cc56b275aeeb}{datalogger\_unlock\_mutex}();
+        \textcolor{keywordflow}{return} \hyperlink{datalogger_8h_a60df7fe0e61b757ad6a9db106b0eb43e}{DATALOGGER\_ERROR\_NOT\_INITIALIZED}
+      ;
+    \}
+
+\textcolor{preprocessor}{    #if DATALOGGER\_LOG\_TIME}
+\textcolor{preprocessor}{}    \textcolor{keywordtype}{double} tmp\_t = t\_s - t0\_s;
+    \hyperlink{gdatalogger_8c_a32674e7c2afa8b78e99a0070cf4bcaf9}{gDataLogger\_InsertVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"t"}, &tmp\_t);
+\textcolor{preprocessor}{    #else}
+\textcolor{preprocessor}{}    \textcolor{keywordtype}{double} tmp\_t = 0.0;
+    tmp\_t = t\_s; \textcolor{comment}{// Remove warning}
+\textcolor{preprocessor}{    #endif // DATALOGGER\_LOG\_TIME}
+\textcolor{preprocessor}{}
+\textcolor{preprocessor}{    #if DATALOGGER\_LOG\_EXECTIMES}
+\textcolor{preprocessor}{}    \hyperlink{gdatalogger_8c_a32674e7c2afa8b78e99a0070cf4bcaf9}{gDataLogger\_InsertVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"t\_control\_exec"}, &t\_control\_exec\_s);
+    \hyperlink{gdatalogger_8c_a32674e7c2afa8b78e99a0070cf4bcaf9}{gDataLogger\_InsertVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"t\_ui\_exec"}, &t\_ui\_exec\_s);
+\textcolor{preprocessor}{    #else}
+\textcolor{preprocessor}{}    \textcolor{keywordtype}{double} tmp\_e = 0.0; \textcolor{comment}{// Remove warning}
+    tmp\_e = t\_control\_exec\_s; \textcolor{comment}{// Remove warning}
+    tmp\_e = t\_ui\_exec\_s; \textcolor{comment}{// Remove warning}
+\textcolor{preprocessor}{    #endif // DATALOGGER\_LOG\_EXECTIMES}
+\textcolor{preprocessor}{}
+
+\textcolor{preprocessor}{    #if DATALOGGER\_LOG\_RAW\_IMU}
+\textcolor{preprocessor}{}    tmp = (double) pimu\_data->\hyperlink{structIMU__DATA__STRUCT_a448f284bf44eb503affda586ad5fa9d2}{acc}.\hyperlink{structDATA__XYZ_a54c1596e9f9969fd9c21e8458024ecfb}{x};
+    \hyperlink{gdatalogger_8c_a32674e7c2afa8b78e99a0070cf4bcaf9}{gDataLogger\_InsertVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"imu\_accelerometer\_x\_raw"}, &tmp);
+    tmp = (double) pimu\_data->\hyperlink{structIMU__DATA__STRUCT_a448f284bf44eb503affda586ad5fa9d2}{acc}.\hyperlink{structDATA__XYZ_a94bbb1c889bf53eb6a5fffa2b39322cf}{y};
+    \hyperlink{gdatalogger_8c_a32674e7c2afa8b78e99a0070cf4bcaf9}{gDataLogger\_InsertVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"imu\_accelerometer\_y\_raw"}, &tmp);
+    tmp = (double) pimu\_data->\hyperlink{structIMU__DATA__STRUCT_a448f284bf44eb503affda586ad5fa9d2}{acc}.\hyperlink{structDATA__XYZ_a69e89ab0ec6e5d72fc5d54f62cc07fb5}{z};
+    \hyperlink{gdatalogger_8c_a32674e7c2afa8b78e99a0070cf4bcaf9}{gDataLogger\_InsertVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"imu\_accelerometer\_z\_raw"}, &tmp);
+    tmp = (double) pimu\_data->\hyperlink{structIMU__DATA__STRUCT_a40c7df8b6d49297aa52873cfd9b60daa}{mag}.\hyperlink{structDATA__XYZ_a54c1596e9f9969fd9c21e8458024ecfb}{x};
+    \hyperlink{gdatalogger_8c_a32674e7c2afa8b78e99a0070cf4bcaf9}{gDataLogger\_InsertVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"imu\_magnetometer\_x\_raw"}, &tmp);
+    tmp = (double) pimu\_data->\hyperlink{structIMU__DATA__STRUCT_a40c7df8b6d49297aa52873cfd9b60daa}{mag}.\hyperlink{structDATA__XYZ_a94bbb1c889bf53eb6a5fffa2b39322cf}{y};
+    \hyperlink{gdatalogger_8c_a32674e7c2afa8b78e99a0070cf4bcaf9}{gDataLogger\_InsertVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"imu\_magnetometer\_y\_raw"}, &tmp);
+    tmp = (double) pimu\_data->\hyperlink{structIMU__DATA__STRUCT_a40c7df8b6d49297aa52873cfd9b60daa}{mag}.\hyperlink{structDATA__XYZ_a69e89ab0ec6e5d72fc5d54f62cc07fb5}{z};
+    \hyperlink{gdatalogger_8c_a32674e7c2afa8b78e99a0070cf4bcaf9}{gDataLogger\_InsertVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"imu\_magnetometer\_z\_raw"}, &tmp);
+    tmp = (double) pimu\_data->\hyperlink{structIMU__DATA__STRUCT_a0c1ac26626e4434a2ee124a1928a23a1}{gyr}.\hyperlink{structDATA__XYZ_a54c1596e9f9969fd9c21e8458024ecfb}{x};
+    \hyperlink{gdatalogger_8c_a32674e7c2afa8b78e99a0070cf4bcaf9}{gDataLogger\_InsertVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"imu\_gyrometer\_x\_raw"}, &tmp);
+    tmp = (double) pimu\_data->\hyperlink{structIMU__DATA__STRUCT_a0c1ac26626e4434a2ee124a1928a23a1}{gyr}.\hyperlink{structDATA__XYZ_a94bbb1c889bf53eb6a5fffa2b39322cf}{y};
+    \hyperlink{gdatalogger_8c_a32674e7c2afa8b78e99a0070cf4bcaf9}{gDataLogger\_InsertVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"imu\_gyrometer\_y\_raw"}, &tmp);
+    tmp = (double) pimu\_data->\hyperlink{structIMU__DATA__STRUCT_a0c1ac26626e4434a2ee124a1928a23a1}{gyr}.\hyperlink{structDATA__XYZ_a69e89ab0ec6e5d72fc5d54f62cc07fb5}{z};
+    \hyperlink{gdatalogger_8c_a32674e7c2afa8b78e99a0070cf4bcaf9}{gDataLogger\_InsertVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"imu\_gyrometer\_z\_raw"}, &tmp);
+    tmp = (double) pimu\_data->\hyperlink{structIMU__DATA__STRUCT_a99924252176326418863e511d4fa437b}{new\_data};
+    \hyperlink{gdatalogger_8c_a32674e7c2afa8b78e99a0070cf4bcaf9}{gDataLogger\_InsertVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"imu\_valid\_data"}, &tmp);
+\textcolor{preprocessor}{    #else}
+\textcolor{preprocessor}{}    \textcolor{keywordtype}{double} tmp\_ri = 0; \textcolor{comment}{// Remove warning}
+    tmp\_ri = pimu\_data->\hyperlink{structIMU__DATA__STRUCT_a99924252176326418863e511d4fa437b}{new\_data}; \textcolor{comment}{// Remove warning ???}
+\textcolor{preprocessor}{    #endif //DATALOGGER\_LOG\_RAW\_IMU}
+\textcolor{preprocessor}{}    
+\textcolor{preprocessor}{    #if DATALOGGER\_LOG\_EFFORTS}
+\textcolor{preprocessor}{}    tmp = (double) peff\_data->\hyperlink{structEFF__DATA__STRUCT_abe8952947b54bf9c247f3429ee3aeb44}{F}.\hyperlink{structDATA__XYZ_a54c1596e9f9969fd9c21e8458024ecfb}{x};
+    \hyperlink{gdatalogger_8c_a32674e7c2afa8b78e99a0070cf4bcaf9}{gDataLogger\_InsertVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"Vin0"}, &tmp);
+    tmp = (double) peff\_data->\hyperlink{structEFF__DATA__STRUCT_aa42ebc512dd79fa6ebf998162a149446}{new\_data};
+    \hyperlink{gdatalogger_8c_a32674e7c2afa8b78e99a0070cf4bcaf9}{gDataLogger\_InsertVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"Vin0\_valid\_data"}, &tmp);
+\textcolor{preprocessor}{    #endif}
+\textcolor{preprocessor}{}    
+\textcolor{preprocessor}{    #if DATALOGGER\_LOG\_MRA}
+\textcolor{preprocessor}{}    tmp = (double) pmra\_data->\hyperlink{structMRA__DATA__STRUCT_a64b4e6bb604e58de593a60c87942b966}{v\_ctl};
+    \hyperlink{gdatalogger_8c_a32674e7c2afa8b78e99a0070cf4bcaf9}{gDataLogger\_InsertVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"v\_ctl"}, &tmp);
+    tmp = (double) pmra\_data->\hyperlink{structMRA__DATA__STRUCT_a3a31d57268c33b21ac915fdc27dfe474}{v\_ctl\_read};
+    \hyperlink{gdatalogger_8c_a32674e7c2afa8b78e99a0070cf4bcaf9}{gDataLogger\_InsertVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"v\_ctl\_read"}, &tmp);
+\textcolor{preprocessor}{    #endif}
+\textcolor{preprocessor}{}    
+    
+       
+\textcolor{preprocessor}{    #if DATALOGGER\_LOG\_CALIBRATED\_IMU}
+\textcolor{preprocessor}{}    \hyperlink{gdatalogger_8c_a32674e7c2afa8b78e99a0070cf4bcaf9}{gDataLogger\_InsertVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"imu\_accelerometer\_x\_g"}, &(pimu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a281a7fdb40a05ed97388f18b9bb90c81}{acc}.\hyperlink{structDATA__XYZ__DOUBLE_a22868cc99a423900e7b82d015a5eb91f}{x}));
+    \hyperlink{gdatalogger_8c_a32674e7c2afa8b78e99a0070cf4bcaf9}{gDataLogger\_InsertVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"imu\_accelerometer\_y\_g"}, &(pimu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a281a7fdb40a05ed97388f18b9bb90c81}{acc}.\hyperlink{structDATA__XYZ__DOUBLE_a198a27b5df3b5b0bf461b0e481e22a82}{y}));
+    \hyperlink{gdatalogger_8c_a32674e7c2afa8b78e99a0070cf4bcaf9}{gDataLogger\_InsertVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"imu\_accelerometer\_z\_g"}, &(pimu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a281a7fdb40a05ed97388f18b9bb90c81}{acc}.\hyperlink{structDATA__XYZ__DOUBLE_a9556e8868c223ff3e28756ea18a284c0}{z}));
+    \hyperlink{gdatalogger_8c_a32674e7c2afa8b78e99a0070cf4bcaf9}{gDataLogger\_InsertVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"imu\_magnetometer\_x\_B"}, &(pimu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a2fde6c6759e0fda17e272c32096cb9ec}{mag}.\hyperlink{structDATA__XYZ__DOUBLE_a22868cc99a423900e7b82d015a5eb91f}{x}));
+    \hyperlink{gdatalogger_8c_a32674e7c2afa8b78e99a0070cf4bcaf9}{gDataLogger\_InsertVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"imu\_magnetometer\_y\_B"}, &(pimu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a2fde6c6759e0fda17e272c32096cb9ec}{mag}.\hyperlink{structDATA__XYZ__DOUBLE_a198a27b5df3b5b0bf461b0e481e22a82}{y}));
+    \hyperlink{gdatalogger_8c_a32674e7c2afa8b78e99a0070cf4bcaf9}{gDataLogger\_InsertVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"imu\_magnetometer\_z\_B"}, &(pimu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a2fde6c6759e0fda17e272c32096cb9ec}{mag}.\hyperlink{structDATA__XYZ__DOUBLE_a9556e8868c223ff3e28756ea18a284c0}{z}));
+    \hyperlink{gdatalogger_8c_a32674e7c2afa8b78e99a0070cf4bcaf9}{gDataLogger\_InsertVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"imu\_gyrometer\_x\_rads"}, &(pimu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a8a54aded6ce608f1b7d2b4a0c52c248b}{gyr}.\hyperlink{structDATA__XYZ__DOUBLE_a22868cc99a423900e7b82d015a5eb91f}{x}));
+    \hyperlink{gdatalogger_8c_a32674e7c2afa8b78e99a0070cf4bcaf9}{gDataLogger\_InsertVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"imu\_gyrometer\_y\_rads"}, &(pimu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a8a54aded6ce608f1b7d2b4a0c52c248b}{gyr}.\hyperlink{structDATA__XYZ__DOUBLE_a198a27b5df3b5b0bf461b0e481e22a82}{y}));
+    \hyperlink{gdatalogger_8c_a32674e7c2afa8b78e99a0070cf4bcaf9}{gDataLogger\_InsertVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"imu\_gyrometer\_z\_rads"}, &(pimu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a8a54aded6ce608f1b7d2b4a0c52c248b}{gyr}.\hyperlink{structDATA__XYZ__DOUBLE_a9556e8868c223ff3e28756ea18a284c0}{z}));
+    tmp = (double) pimu\_data->\hyperlink{structIMU__DATA__STRUCT_a99924252176326418863e511d4fa437b}{new\_data};
+    \hyperlink{gdatalogger_8c_a32674e7c2afa8b78e99a0070cf4bcaf9}{gDataLogger\_InsertVariable}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}
+      , \textcolor{stringliteral}{"imu\_calibrated\_valid\_data"}, &tmp);
+    \textcolor{comment}{//tmp = pimu\_measure->FlagValidAccerometerMeasure;}
+    \textcolor{comment}{//gDataLogger\_InsertVariable(&gDataLogger,
+       "imu\_calibrated\_valid\_accelerometer\_data", &tmp);}
+    \textcolor{comment}{//tmp = pimu\_measure->FlagValidGyrometerMeasure;}
+    \textcolor{comment}{//gDataLogger\_InsertVariable(&gDataLogger,
+       "imu\_calibrated\_valid\_gyrometer\_data", &tmp);}
+    \textcolor{comment}{//tmp = pmagnetometer\_measure->FlagValidMeasure;}
+    \textcolor{comment}{//gDataLogger\_InsertVariable(&gDataLogger,
+       "imu\_calibrated\_valid\_magnetometer\_data", &tmp);}
+\textcolor{preprocessor}{    #else}
+\textcolor{preprocessor}{}    \textcolor{keywordtype}{double} tmp\_ci = 0.0;
+    tmp\_ci = pimu\_measure->ax; \textcolor{comment}{// Remove warning}
+    tmp\_ci = pmagnetometer\_measure->mx; \textcolor{comment}{// Remove warning}
+\textcolor{preprocessor}{    #endif // DATALOGGER\_LOG\_CALIBRATED\_IMU}
+\textcolor{preprocessor}{}
+ \textcolor{comment}{/*}
+\textcolor{comment}{    #if DATALOGGER\_LOG\_ESTIMATOR}
+\textcolor{comment}{    gDataLogger\_InsertVariable(&gDataLogger, "estimated\_roll\_angle\_radians",
+       &(pestimation\_data->roll\_angle\_radians));}
+\textcolor{comment}{    gDataLogger\_InsertVariable(&gDataLogger, "estimated\_pitch\_angle\_radians",
+       &(pestimation\_data->pitch\_angle\_radians));}
+\textcolor{comment}{    gDataLogger\_InsertVariable(&gDataLogger, "estimated\_yaw\_angle\_radians",
+       &(pestimation\_data->yaw\_angle\_radians));}
+\textcolor{comment}{    gDataLogger\_InsertVariable(&gDataLogger, "estimated\_q0",
+       &(pestimation\_data->q0));}
+\textcolor{comment}{    gDataLogger\_InsertVariable(&gDataLogger, "estimated\_q1",
+       &(pestimation\_data->q1));}
+\textcolor{comment}{    gDataLogger\_InsertVariable(&gDataLogger, "estimated\_q2",
+       &(pestimation\_data->q2));}
+\textcolor{comment}{    gDataLogger\_InsertVariable(&gDataLogger, "estimated\_q3",
+       &(pestimation\_data->q3));}
+\textcolor{comment}{    gDataLogger\_InsertVariable(&gDataLogger, "estimated\_x\_position\_meters",
+       &(pestimation\_data->x\_position\_meters));}
+\textcolor{comment}{    gDataLogger\_InsertVariable(&gDataLogger, "estimated\_y\_position\_meters",
+       &(pestimation\_data->y\_position\_meters));}
+\textcolor{comment}{    gDataLogger\_InsertVariable(&gDataLogger, "estimated\_z\_position\_meters",
+       &(pestimation\_data->z\_position\_meters));}
+\textcolor{comment}{    gDataLogger\_InsertVariable(&gDataLogger,
+       "estimated\_x\_velocity\_meters\_second", &(pestimation\_data->x\_velocity\_meters\_second));}
+\textcolor{comment}{    gDataLogger\_InsertVariable(&gDataLogger,
+       "estimated\_y\_velocity\_meters\_second", &(pestimation\_data->y\_velocity\_meters\_second));}
+\textcolor{comment}{    gDataLogger\_InsertVariable(&gDataLogger,
+       "estimated\_z\_velocity\_meters\_second", &(pestimation\_data->z\_velocity\_meters\_second));}
+\textcolor{comment}{        #else}
+\textcolor{comment}{    double tmp\_est = 0.0;}
+\textcolor{comment}{        tmp\_est = pestimation\_data->roll\_angle\_radians; // Remove warning}
+\textcolor{comment}{    #endif // DATALOGGER\_LOG\_ESTIMATOR}
+\textcolor{comment}{}
+\textcolor{comment}{    #if DATALOGGER\_LOG\_CONTROLLERS}
+\textcolor{comment}{        gDataLogger\_InsertVariable(&gDataLogger,
+       "control\_roll\_angle\_trim\_radians", &(pcontrol\_data->roll\_angle\_trim\_radians));}
+\textcolor{comment}{        gDataLogger\_InsertVariable(&gDataLogger,
+       "control\_pitch\_angle\_trim\_radians", &(pcontrol\_data->pitch\_angle\_trim\_radians));}
+\textcolor{comment}{        gDataLogger\_InsertVariable(&gDataLogger,
+       "control\_yaw\_angle\_trim\_radians", &(pcontrol\_data->yaw\_angle\_trim\_radians));}
+\textcolor{comment}{        gDataLogger\_InsertVariable(&gDataLogger, "control\_left\_aileron\_trim",
+       &(pcontrol\_data->left\_aileron\_trim));}
+\textcolor{comment}{        gDataLogger\_InsertVariable(&gDataLogger, "control\_right\_aileron\_trim",
+       &(pcontrol\_data->right\_aileron\_trim));}
+\textcolor{comment}{        gDataLogger\_InsertVariable(&gDataLogger, "control\_elevator\_trim",
+       &(pcontrol\_data->elevator\_trim));}
+\textcolor{comment}{        gDataLogger\_InsertVariable(&gDataLogger, "control\_rudder\_trim",
+       &(pcontrol\_data->rudder\_trim));}
+\textcolor{comment}{        gDataLogger\_InsertVariable(&gDataLogger,
+       "control\_roll\_angle\_reference\_radians", &(pcontrol\_data->roll\_angle\_reference\_radians));}
+\textcolor{comment}{        gDataLogger\_InsertVariable(&gDataLogger,
+       "control\_pitch\_angle\_reference\_radians", &(pcontrol\_data->pitch\_angle\_reference\_radians));}
+\textcolor{comment}{        gDataLogger\_InsertVariable(&gDataLogger,
+       "control\_yaw\_angle\_reference\_radians", &(pcontrol\_data->yaw\_angle\_reference\_radians));}
+\textcolor{comment}{    #else}
+\textcolor{comment}{    double tmp\_control = 0.0;}
+\textcolor{comment}{    tmp\_control = pcontrol\_data->roll\_angle\_trim\_radians;}
+\textcolor{comment}{    #endif // DATALOGGER\_LOG\_CONTROLLERS}
+\textcolor{comment}{*/}
+    \hyperlink{datalogger_8c_a85453211c0c809083c36cc56b275aeeb}{datalogger\_unlock\_mutex}();
+
+    \textcolor{keywordflow}{return} \hyperlink{datalogger_8h_abddebaf71d26d40183fccbb1a766b983}{DATALOGGER\_SUCCESS};
+\}
 \end{DoxyCode}
 
 
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{datalogger_8c_ad89a56e2f057ace8c28d78eb67703e7d_cgraph}
+\end{center}
+\end{figure}
 
 
-Here is the call graph for this function:
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{datalogger_8c_ad89a56e2f057ace8c28d78eb67703e7d_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{datalogger_8c_a25bb814a0877f419ae09b08cd7e91ee9}{\index{datalogger.\-c@{datalogger.\-c}!datalogger\-\_\-update\-\_\-\-I\-P\-C@{datalogger\-\_\-update\-\_\-\-I\-P\-C}}
+\index{datalogger\-\_\-update\-\_\-\-I\-P\-C@{datalogger\-\_\-update\-\_\-\-I\-P\-C}!datalogger.c@{datalogger.\-c}}
+\subsubsection[{datalogger\-\_\-update\-\_\-\-I\-P\-C}]{\setlength{\rightskip}{0pt plus 5cm}int datalogger\-\_\-update\-\_\-\-I\-P\-C (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{datalogger_8c_a25bb814a0877f419ae09b08cd7e91ee9}
+
+
+Definition at line 256 of file datalogger.\-c.
 
 
 
-Here is the caller graph for this function:
+References D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-E\-R\-R\-O\-R\-\_\-\-N\-O\-T\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-D, D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-D, datalogger\-\_\-initialized, datalogger\-\_\-lock\-\_\-mutex(), D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S, datalogger\-\_\-unlock\-\_\-mutex(), and g\-Data\-Logger\-\_\-\-I\-P\-C\-Update().
+
+
+
+Referenced by threads\-\_\-linux\-\_\-init().
+
+
+\begin{DoxyCode}
+\{
+\textcolor{preprocessor}{    #if DATALOGGER\_MODULE\_ENABLED}
+\textcolor{preprocessor}{}    \hyperlink{datalogger_8c_a54b06d9395b2e370a5a72beb7f9524b2}{datalogger\_lock\_mutex}();
+    \textcolor{keywordflow}{if}(\hyperlink{datalogger_8c_a35e8fbe04b90452afdc3c1be16ff6187}{datalogger\_initialized} != \hyperlink{datalogger_8h_a684c343d340004b77ca2b782934c96ca}{DATALOGGER\_INITIALIZED}
+      )
+    \{
+        \hyperlink{datalogger_8c_a85453211c0c809083c36cc56b275aeeb}{datalogger\_unlock\_mutex}();
+        \textcolor{keywordflow}{return} \hyperlink{datalogger_8h_a60df7fe0e61b757ad6a9db106b0eb43e}{DATALOGGER\_ERROR\_NOT\_INITIALIZED}
+      ;
+    \}
+
+    \hyperlink{gdatalogger_8c_afa42a993493cf98d32da11e4279816f7}{gDataLogger\_IPCUpdate}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger}); \textcolor{comment}{//
+       Manages IPC}
+    \hyperlink{datalogger_8c_a85453211c0c809083c36cc56b275aeeb}{datalogger\_unlock\_mutex}();
+\textcolor{preprocessor}{    #endif}
+\textcolor{preprocessor}{}    \textcolor{keywordflow}{return} \hyperlink{datalogger_8h_abddebaf71d26d40183fccbb1a766b983}{DATALOGGER\_SUCCESS};
+\}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{datalogger_8c_a25bb814a0877f419ae09b08cd7e91ee9_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{datalogger_8c_a25bb814a0877f419ae09b08cd7e91ee9_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{datalogger_8c_a2aedecfce53e1935a41615ceaf378013}{\index{datalogger.\-c@{datalogger.\-c}!datalogger\-\_\-write\-\_\-file@{datalogger\-\_\-write\-\_\-file}}
+\index{datalogger\-\_\-write\-\_\-file@{datalogger\-\_\-write\-\_\-file}!datalogger.c@{datalogger.\-c}}
+\subsubsection[{datalogger\-\_\-write\-\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}int datalogger\-\_\-write\-\_\-file (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{datalogger_8c_a2aedecfce53e1935a41615ceaf378013}
+
+
+Definition at line 240 of file datalogger.\-c.
+
+
+
+References D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-E\-R\-R\-O\-R\-\_\-\-N\-O\-T\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-D, D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-D, datalogger\-\_\-initialized, datalogger\-\_\-lock\-\_\-mutex(), D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S, datalogger\-\_\-unlock\-\_\-mutex(), and g\-Data\-Logger\-\_\-\-Matfile\-Update().
+
+
+
+Referenced by main(), and threads\-\_\-linux\-\_\-init().
+
+
+\begin{DoxyCode}
+\{
+\textcolor{preprocessor}{    #if DATALOGGER\_MODULE\_ENABLED}
+\textcolor{preprocessor}{}    \hyperlink{datalogger_8c_a54b06d9395b2e370a5a72beb7f9524b2}{datalogger\_lock\_mutex}();
+    \textcolor{keywordflow}{if}(\hyperlink{datalogger_8c_a35e8fbe04b90452afdc3c1be16ff6187}{datalogger\_initialized} != \hyperlink{datalogger_8h_a684c343d340004b77ca2b782934c96ca}{DATALOGGER\_INITIALIZED}
+      )
+    \{
+        \hyperlink{datalogger_8c_a85453211c0c809083c36cc56b275aeeb}{datalogger\_unlock\_mutex}();
+        \textcolor{keywordflow}{return} \hyperlink{datalogger_8h_a60df7fe0e61b757ad6a9db106b0eb43e}{DATALOGGER\_ERROR\_NOT\_INITIALIZED}
+      ;
+    \}
+    \hyperlink{gdatalogger_8c_a05dc8ce832b941280d7de26057992640}{gDataLogger\_MatfileUpdate}(&\hyperlink{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{gDataLogger})
+      ; \textcolor{comment}{// Empty buffers in the file}
+    \hyperlink{datalogger_8c_a85453211c0c809083c36cc56b275aeeb}{datalogger\_unlock\_mutex}();
+\textcolor{preprocessor}{    #endif}
+\textcolor{preprocessor}{}
+    \textcolor{keywordflow}{return} \hyperlink{datalogger_8h_abddebaf71d26d40183fccbb1a766b983}{DATALOGGER\_SUCCESS};
+\}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{datalogger_8c_a2aedecfce53e1935a41615ceaf378013_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{datalogger_8c_a2aedecfce53e1935a41615ceaf378013_icgraph}
+\end{center}
+\end{figure}
+
 
 
 
 \subsection{Variable Documentation}
-\hypertarget{datalogger_8c_a35e8fbe04b90452afdc3c1be16ff6187}{
-\index{datalogger.c@{datalogger.c}!datalogger\_\-initialized@{datalogger\_\-initialized}}
-\index{datalogger\_\-initialized@{datalogger\_\-initialized}!datalogger.c@{datalogger.c}}
-\subsubsection[{datalogger\_\-initialized}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf datalogger\_\-initialized} = DATALOGGER\_\-NOT\_\-INITIALIZED}}
-\label{datalogger_8c_a35e8fbe04b90452afdc3c1be16ff6187}
+\hypertarget{datalogger_8c_a35e8fbe04b90452afdc3c1be16ff6187}{\index{datalogger.\-c@{datalogger.\-c}!datalogger\-\_\-initialized@{datalogger\-\_\-initialized}}
+\index{datalogger\-\_\-initialized@{datalogger\-\_\-initialized}!datalogger.c@{datalogger.\-c}}
+\subsubsection[{datalogger\-\_\-initialized}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int datalogger\-\_\-initialized = {\bf D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-N\-O\-T\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-D}}}\label{datalogger_8c_a35e8fbe04b90452afdc3c1be16ff6187}
 
 
-Definition at line 29 of file datalogger.c.
-
-
-
-Referenced by datalogger\_\-close(), datalogger\_\-init(), datalogger\_\-set\_\-Ts(), datalogger\_\-start(), datalogger\_\-status(), datalogger\_\-stop(), datalogger\_\-update(), datalogger\_\-update\_\-IPC(), and datalogger\_\-write\_\-file().
-
-\hypertarget{datalogger_8c_a824d6f7fd1d3898ba0b1100ba37875c6}{
-\index{datalogger.c@{datalogger.c}!datalogger\_\-mutex@{datalogger\_\-mutex}}
-\index{datalogger\_\-mutex@{datalogger\_\-mutex}!datalogger.c@{datalogger.c}}
-\subsubsection[{datalogger\_\-mutex}]{\setlength{\rightskip}{0pt plus 5cm}pthread\_\-mutex\_\-t {\bf datalogger\_\-mutex} = PTHREAD\_\-MUTEX\_\-INITIALIZER}}
-\label{datalogger_8c_a824d6f7fd1d3898ba0b1100ba37875c6}
-
-
-Definition at line 34 of file datalogger.c.
+Definition at line 29 of file datalogger.\-c.
 
 
 
-Referenced by datalogger\_\-close(), datalogger\_\-init(), datalogger\_\-lock\_\-mutex(), and datalogger\_\-unlock\_\-mutex().
+Referenced by datalogger\-\_\-close(), datalogger\-\_\-init(), datalogger\-\_\-set\-\_\-\-Ts(), datalogger\-\_\-start(), datalogger\-\_\-status(), datalogger\-\_\-stop(), datalogger\-\_\-update(), datalogger\-\_\-update\-\_\-\-I\-P\-C(), and datalogger\-\_\-write\-\_\-file().
 
-\hypertarget{datalogger_8c_a185c3ede96449d14f330fe5ac664e799}{
-\index{datalogger.c@{datalogger.c}!datalogger\_\-running@{datalogger\_\-running}}
-\index{datalogger\_\-running@{datalogger\_\-running}!datalogger.c@{datalogger.c}}
-\subsubsection[{datalogger\_\-running}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf datalogger\_\-running} = DATALOGGER\_\-NOT\_\-RUNNING}}
-\label{datalogger_8c_a185c3ede96449d14f330fe5ac664e799}
+\hypertarget{datalogger_8c_a824d6f7fd1d3898ba0b1100ba37875c6}{\index{datalogger.\-c@{datalogger.\-c}!datalogger\-\_\-mutex@{datalogger\-\_\-mutex}}
+\index{datalogger\-\_\-mutex@{datalogger\-\_\-mutex}!datalogger.c@{datalogger.\-c}}
+\subsubsection[{datalogger\-\_\-mutex}]{\setlength{\rightskip}{0pt plus 5cm}pthread\-\_\-mutex\-\_\-t datalogger\-\_\-mutex = P\-T\-H\-R\-E\-A\-D\-\_\-\-M\-U\-T\-E\-X\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-R}}\label{datalogger_8c_a824d6f7fd1d3898ba0b1100ba37875c6}
 
 
-Definition at line 30 of file datalogger.c.
+Definition at line 34 of file datalogger.\-c.
 
 
 
-Referenced by datalogger\_\-init(), datalogger\_\-start(), datalogger\_\-status(), and datalogger\_\-stop().
+Referenced by datalogger\-\_\-close(), datalogger\-\_\-init(), datalogger\-\_\-lock\-\_\-mutex(), and datalogger\-\_\-unlock\-\_\-mutex().
 
-\hypertarget{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{
-\index{datalogger.c@{datalogger.c}!gDataLogger@{gDataLogger}}
-\index{gDataLogger@{gDataLogger}!datalogger.c@{datalogger.c}}
-\subsubsection[{gDataLogger}]{\setlength{\rightskip}{0pt plus 5cm}{\bf GDATALOGGER} {\bf gDataLogger}}}
-\label{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}
+\hypertarget{datalogger_8c_a185c3ede96449d14f330fe5ac664e799}{\index{datalogger.\-c@{datalogger.\-c}!datalogger\-\_\-running@{datalogger\-\_\-running}}
+\index{datalogger\-\_\-running@{datalogger\-\_\-running}!datalogger.c@{datalogger.\-c}}
+\subsubsection[{datalogger\-\_\-running}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int datalogger\-\_\-running = {\bf D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-N\-O\-T\-\_\-\-R\-U\-N\-N\-I\-N\-G}}}\label{datalogger_8c_a185c3ede96449d14f330fe5ac664e799}
 
 
-Definition at line 28 of file datalogger.c.
+Definition at line 30 of file datalogger.\-c.
+
+
+
+Referenced by datalogger\-\_\-init(), datalogger\-\_\-start(), datalogger\-\_\-status(), and datalogger\-\_\-stop().
+
+\hypertarget{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}{\index{datalogger.\-c@{datalogger.\-c}!g\-Data\-Logger@{g\-Data\-Logger}}
+\index{g\-Data\-Logger@{g\-Data\-Logger}!datalogger.c@{datalogger.\-c}}
+\subsubsection[{g\-Data\-Logger}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\-D\-A\-T\-A\-L\-O\-G\-G\-E\-R} g\-Data\-Logger}}\label{datalogger_8c_abe3b9c2c4e21e79c7b046b5986d13acc}
+
+
+Definition at line 28 of file datalogger.\-c.
 

@@ -4,18 +4,9 @@ var searchData=
   ['gdatalogger_2eh',['gdatalogger.h',['../gdatalogger_8h.html',1,'']]],
   ['gmatlabdatafile_2ec',['gmatlabdatafile.c',['../gmatlabdatafile_8c.html',1,'']]],
   ['gmatlabdatafile_2eh',['gmatlabdatafile.h',['../gmatlabdatafile_8h.html',1,'']]],
-  ['gmatrix_2ec',['gmatrix.c',['../gmatrix_8c.html',1,'']]],
-  ['gmatrix_2eh',['gmatrix.h',['../gmatrix_8h.html',1,'']]],
-  ['gmatrix_5flinalg_2ec',['gmatrix_linalg.c',['../gmatrix__linalg_8c.html',1,'']]],
-  ['gmatrix_5flinalg_2eh',['gmatrix_linalg.h',['../gmatrix__linalg_8h.html',1,'']]],
-  ['gmatrix_5fplus_2ec',['gmatrix_plus.c',['../gmatrix__plus_8c.html',1,'']]],
-  ['gmatrix_5fplus_2eh',['gmatrix_plus.h',['../gmatrix__plus_8h.html',1,'']]],
-  ['gpio_5ffunctions_2ec',['gpio_functions.c',['../CommunicationV0_2gpio__functions_8c.html',1,'']]],
-  ['gpio_5ffunctions_2ec',['gpio_functions.c',['../communication_2gpio__functions_8c.html',1,'']]],
-  ['gpio_5ffunctions_2eh',['gpio_functions.h',['../CommunicationV0_2gpio__functions_8h.html',1,'']]],
-  ['gpio_5ffunctions_2eh',['gpio_functions.h',['../communication_2gpio__functions_8h.html',1,'']]],
+  ['gpio_5ffunctions_2ec',['gpio_functions.c',['../gpio__functions_8c.html',1,'']]],
+  ['gpio_5ffunctions_2eh',['gpio_functions.h',['../gpio__functions_8h.html',1,'']]],
   ['gqueue_2ec',['gqueue.c',['../gqueue_8c.html',1,'']]],
   ['gqueue_2eh',['gqueue.h',['../gqueue_8h.html',1,'']]],
-  ['gyr_5ffunctions_2ec',['gyr_functions.c',['../CommunicationV0_2gyr__functions_8c.html',1,'']]],
-  ['gyr_5ffunctions_2ec',['gyr_functions.c',['../communication_2gyr__functions_8c.html',1,'']]]
+  ['gyr_5ffunctions_2ec',['gyr_functions.c',['../gyr__functions_8c.html',1,'']]]
 ];

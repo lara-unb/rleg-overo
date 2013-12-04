@@ -1,10 +1,7 @@
 var searchData=
 [
-  ['d',['D',['../classCartesian__controller.html#a8c470b652ce436d8e48f126073fc2593',1,'Cartesian_controller::D()'],['../structDQ.html#a535cdb52876521fd6abbfcf211a7c702',1,'DQ::d()'],['../structLink.html#a4e5e4ea2ef9be2aae1e9fdef406be185',1,'Link::d()']]],
-  ['d_5fref',['D_ref',['../classCartesian__controller.html#abb248cb3215a574fe8e1bb8fb0b8626d',1,'Cartesian_controller']]],
-  ['dac_5fshut_5fdown',['dac_shut_down',['../communication_2communication_8c.html#a8c7a00eda165bde1af4ca55c693e6acf',1,'communication.c']]],
-  ['dac_5fwrite',['dac_write',['../communication_2spi__functions_8c.html#a5c52e64c336d59215ce0a4b6f340dc9f',1,'dac_write(int spi_dev, uint8_t ch, uint8_t _shdn, unsigned short int data):&#160;spi_functions.c'],['../communication_2spi__functions_8h.html#a5c52e64c336d59215ce0a4b6f340dc9f',1,'dac_write(int spi_dev, uint8_t ch, uint8_t _shdn, unsigned short int data):&#160;spi_functions.c'],['../CommunicationV0_2spi__functions_8c.html#a9fe5e6b0c564de89398a80e1689b717f',1,'dac_write(int spi_dev, uint8_t ch, uint8_t _shdn, unsigned short int data):&#160;spi_functions.c'],['../CommunicationV0_2spi__functions_8h.html#a9fe5e6b0c564de89398a80e1689b717f',1,'dac_write(int spi_dev, uint8_t ch, uint8_t _shdn, unsigned short int data):&#160;spi_functions.c']]],
-  ['data',['Data',['../structGMATRIX.html#a62d318aa861b4e19c3e4ee7056980fb1',1,'GMATRIX']]],
+  ['dac_5fshut_5fdown',['dac_shut_down',['../communication_8c.html#a8c7a00eda165bde1af4ca55c693e6acf',1,'communication.c']]],
+  ['dac_5fwrite',['dac_write',['../spi__functions_8c.html#a5c52e64c336d59215ce0a4b6f340dc9f',1,'dac_write(int spi_dev, uint8_t ch, uint8_t _shdn, unsigned short int data):&#160;spi_functions.c'],['../spi__functions_8h.html#a5c52e64c336d59215ce0a4b6f340dc9f',1,'dac_write(int spi_dev, uint8_t ch, uint8_t _shdn, unsigned short int data):&#160;spi_functions.c']]],
   ['data_5fxyz',['DATA_XYZ',['../structDATA__XYZ.html',1,'']]],
   ['data_5fxyz_5fdouble',['DATA_XYZ_DOUBLE',['../structDATA__XYZ__DOUBLE.html',1,'']]],
   ['datalogger_2ec',['datalogger.c',['../datalogger_8c.html',1,'']]],
@@ -44,22 +41,7 @@ var searchData=
   ['datalogger_5fvariable_5fnot_5finserted',['DATALOGGER_VARIABLE_NOT_INSERTED',['../datalogger_8h.html#a1f4fd2dbd981cf35467ab688c9157a74',1,'datalogger.h']]],
   ['datalogger_5fvaribale_5falready_5finserted',['DATALOGGER_VARIBALE_ALREADY_INSERTED',['../datalogger_8h.html#ac76269a113d60c063e857d14e4a2f640',1,'datalogger.h']]],
   ['datalogger_5fwrite_5ffile',['datalogger_write_file',['../datalogger_8c.html#a2aedecfce53e1935a41615ceaf378013',1,'datalogger_write_file(void):&#160;datalogger.c'],['../datalogger_8h.html#a2aedecfce53e1935a41615ceaf378013',1,'datalogger_write_file(void):&#160;datalogger.c']]],
-  ['delay',['delay',['../communication_2spi__functions_8c.html#adc4674f6ea53803d98fa2ec36759e77d',1,'delay():&#160;spi_functions.c'],['../CommunicationV0_2spi__functions_8c.html#adc4674f6ea53803d98fa2ec36759e77d',1,'delay():&#160;spi_functions.c']]],
-  ['devices_5finit',['devices_init',['../communication_2communication_8c.html#a2d1e523ff70db11ca4096f97af5da000',1,'devices_init(IMU_PARAM_STRUCT *imu_param, SPI_PARAM_STRUCT *spi_param, MRA_DATA_STRUCT *mra_data):&#160;communication.c'],['../communication_2communication_8h.html#a2d1e523ff70db11ca4096f97af5da000',1,'devices_init(IMU_PARAM_STRUCT *imu_param, SPI_PARAM_STRUCT *spi_param, MRA_DATA_STRUCT *mra_data):&#160;communication.c']]],
-  ['dofs',['dofs',['../structRobot.html#a51d4a86ac5314a1ed8614d5664c80747',1,'Robot']]],
-  ['dq',['DQ',['../structDQ.html',1,'']]],
-  ['dq_5falloc',['DQ_alloc',['../dualquaternion_8h.html#aaa019fc9bc7de2150887a4b323cedc50',1,'DQ_alloc():&#160;dualquaternion.c'],['../dualquaternion_8c.html#aaa019fc9bc7de2150887a4b323cedc50',1,'DQ_alloc():&#160;dualquaternion.c']]],
-  ['dq_5fcreate',['DQ_create',['../dualquaternion_8h.html#a8b1057516bdc2c0cb14127791cf356cf',1,'DQ_create(double a, double b, double c, double d, double e, double f, double g, double h):&#160;dualquaternion.c'],['../dualquaternion_8c.html#a8b1057516bdc2c0cb14127791cf356cf',1,'DQ_create(double a, double b, double c, double d, double e, double f, double g, double h):&#160;dualquaternion.c']]],
-  ['dq_5fcreatefromquaternion',['DQ_createFromQuaternion',['../dualquaternion_8h.html#a6a31e7cb25e1ad1ea6e55ffc22cb4657',1,'DQ_createFromQuaternion(Q *t, Q *r):&#160;dualquaternion.c'],['../dualquaternion_8c.html#a6a31e7cb25e1ad1ea6e55ffc22cb4657',1,'DQ_createFromQuaternion(Q *t, Q *r):&#160;dualquaternion.c']]],
-  ['dq_5ffree',['DQ_free',['../dualquaternion_8h.html#a1d21b6cb665c04de4be5aca50804caf4',1,'DQ_free(DQ *dq):&#160;dualquaternion.c'],['../dualquaternion_8c.html#a1d21b6cb665c04de4be5aca50804caf4',1,'DQ_free(DQ *dq):&#160;dualquaternion.c']]],
-  ['dq_5fgetpitchangle',['DQ_getPitchAngle',['../dualquaternion_8h.html#a30322537a067df9c54aa58cb37acb80e',1,'DQ_getPitchAngle(DQ *dq):&#160;dualquaternion.c'],['../dualquaternion_8c.html#a30322537a067df9c54aa58cb37acb80e',1,'DQ_getPitchAngle(DQ *dq):&#160;dualquaternion.c']]],
-  ['dq_5fgetr',['DQ_getR',['../dualquaternion_8h.html#a35b3966af2f77ad5a8f47126948720fb',1,'DQ_getR(DQ *dq):&#160;dualquaternion.c'],['../dualquaternion_8c.html#a35b3966af2f77ad5a8f47126948720fb',1,'DQ_getR(DQ *dq):&#160;dualquaternion.c']]],
-  ['dq_5fgett',['DQ_getT',['../dualquaternion_8h.html#a80e2f2aded851388d4f18d486a0b9455',1,'DQ_getT(DQ *dq):&#160;dualquaternion.c'],['../dualquaternion_8c.html#a80e2f2aded851388d4f18d486a0b9455',1,'DQ_getT(DQ *dq):&#160;dualquaternion.c']]],
-  ['dq_5fmult',['DQ_mult',['../dualquaternion_8h.html#a6618a3e5a7446724565f92271068a985',1,'DQ_mult(DQ *a, DQ *b, int freeA, int freeB):&#160;dualquaternion.c'],['../dualquaternion_8c.html#a6618a3e5a7446724565f92271068a985',1,'DQ_mult(DQ *a, DQ *b, int freeA, int freeB):&#160;dualquaternion.c']]],
-  ['dq_5fprint',['DQ_print',['../dualquaternion_8h.html#a32bd8ae3088e7d0d6157cbee1109ec35',1,'DQ_print(DQ *dq):&#160;dualquaternion.c'],['../dualquaternion_8c.html#a32bd8ae3088e7d0d6157cbee1109ec35',1,'DQ_print(DQ *dq):&#160;dualquaternion.c']]],
-  ['dthetas',['DThetas',['../classCartesian__controller.html#a5d6419e62e130150edfcbd82b1dadcae',1,'Cartesian_controller']]],
-  ['dualquaternion',['DualQuaternion',['../dualquaternion_8h.html#a362acaa7702856f0fd5106e2ff755b92',1,'dualquaternion.h']]],
-  ['dualquaternion_2ec',['dualquaternion.c',['../dualquaternion_8c.html',1,'']]],
-  ['dualquaternion_2eh',['dualquaternion.h',['../dualquaternion_8h.html',1,'']]],
-  ['dummy_5fmatrices',['DUMMY_MATRICES',['../structDUMMY__MATRICES.html',1,'']]]
+  ['delay',['delay',['../spi__functions_8c.html#adc4674f6ea53803d98fa2ec36759e77d',1,'spi_functions.c']]],
+  ['devices_5finit',['devices_init',['../communication_8c.html#a2d1e523ff70db11ca4096f97af5da000',1,'devices_init(IMU_PARAM_STRUCT *imu_param, SPI_PARAM_STRUCT *spi_param, MRA_DATA_STRUCT *mra_data):&#160;communication.c'],['../communication_8h.html#a2d1e523ff70db11ca4096f97af5da000',1,'devices_init(IMU_PARAM_STRUCT *imu_param, SPI_PARAM_STRUCT *spi_param, MRA_DATA_STRUCT *mra_data):&#160;communication.c']]],
+  ['dummie_2ec',['dummie.c',['../dummie_8c.html',1,'']]]
 ];

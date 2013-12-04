@@ -1,8 +1,8 @@
 <map id="calibration/calibration.h" name="calibration/calibration.h">
-<area shape="rect" id="node3" href="$communication_2communication_8h.html" title="../communication/communication.h" alt="" coords="492,83,716,112"/>
-<area shape="rect" id="node5" href="$communication_2imu__functions_8h.html" title="imu_functions.h" alt="" coords="547,160,661,189"/>
-<area shape="rect" id="node29" href="$communication_2imu__regs_8h.html" title="imu_regs.h" alt="" coords="1069,237,1155,267"/>
-<area shape="rect" id="node31" href="$communication_2spi__functions_8h.html" title="spi_functions.h" alt="" coords="817,160,927,189"/>
-<area shape="rect" id="node45" href="$communication_2gpio__functions_8h.html" title="gpio_functions.h" alt="" coords="212,160,329,189"/>
+<area shape="rect" id="node3" href="$communication_8h.html" title="../communication/communication.h" alt="" coords="492,83,716,112"/>
+<area shape="rect" id="node5" href="$imu__functions_8h.html" title="Rev 0 &#45; 06/11/2012 RLEG project &#45; 2012." alt="" coords="547,160,661,189"/>
+<area shape="rect" id="node29" href="$imu__regs_8h.html" title="Registers that are present in each device from the IMU (ADXL345, ITG3200 and HMC5883)" alt="" coords="1069,237,1155,267"/>
+<area shape="rect" id="node31" href="$spi__functions_8h.html" title="spi_functions.h" alt="" coords="817,160,927,189"/>
+<area shape="rect" id="node45" href="$gpio__functions_8h.html" title="gpio_functions.h" alt="" coords="212,160,329,189"/>
 <area shape="rect" id="node52" href="$encoder__functions_8h.html" title="Rev 0 &#45; 18/06/2013 RLEG project &#45; 2013." alt="" coords="384,160,523,189"/>
 </map>

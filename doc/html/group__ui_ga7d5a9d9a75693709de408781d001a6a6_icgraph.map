@@ -1,9 +1,9 @@
 <map id="ui_imu_data" name="ui_imu_data">
 <area shape="rect" id="node3" href="$group__ui.html#ga42e4dac2d138061a74c572358c8ebf49" title="Update Screen with new data of sensors." alt="" coords="148,59,225,88"/>
-<area shape="rect" id="node5" href="$main_8c.html#a8007959bfd1230feb2298965e39f2a70" title="ui_task" alt="" coords="319,5,383,35"/>
+<area shape="rect" id="node5" href="$main_8c.html#ad6a9f022b4d089093836712320731f6a" title="ui_task" alt="" coords="319,5,383,35"/>
 <area shape="rect" id="node9" href="$main2_8h.html#a944f7352f18ed248c1b1143f51edc391" title="periodic_task_2" alt="" coords="295,59,407,88"/>
 <area shape="rect" id="node19" href="$threads__linux_8c.html#ad535241b6b29d076beb2cd75a880aaea" title="threads_linux_periodic\l_task_2" alt="" coords="276,111,425,158"/>
-<area shape="rect" id="node7" href="$main2_8h.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="525,5,576,35"/>
+<area shape="rect" id="node7" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="525,5,576,35"/>
 <area shape="rect" id="node11" href="$main2_8h.html#a01c18e97a4488be2912eb738b2e7f890" title="timer_function_task_2" alt="" coords="476,59,625,88"/>
 <area shape="rect" id="node13" href="$main2_8c.html#a735ebf3d0d37c7d8187199e6565bcb5c" title="f_timer_task_2" alt="" coords="689,59,796,88"/>
 <area shape="rect" id="node15" href="$main2_8h.html#ae59c93969d017f18e3e38b2f9f7888ca" title="timer_start_task_2" alt="" coords="861,59,992,88"/>

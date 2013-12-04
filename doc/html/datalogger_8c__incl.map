@@ -2,11 +2,11 @@
 <area shape="rect" id="node11" href="$gqueue_8h.html" title="gdatalogger/gqueue.h" alt="" coords="1247,83,1393,112"/>
 <area shape="rect" id="node13" href="$gmatlabdatafile_8h.html" title="gdatalogger/gmatlabdatafile.h" alt="" coords="1417,83,1609,112"/>
 <area shape="rect" id="node15" href="$gdatalogger_8h.html" title="gdatalogger/gdatalogger.h" alt="" coords="1633,83,1804,112"/>
-<area shape="rect" id="node17" href="$communication_2communication_8h.html" title="communication/communication.h" alt="" coords="783,83,996,112"/>
+<area shape="rect" id="node17" href="$communication_8h.html" title="communication/communication.h" alt="" coords="783,83,996,112"/>
 <area shape="rect" id="node76" href="$datalogger_8h.html" title="datalogger.h" alt="" coords="1828,83,1921,112"/>
-<area shape="rect" id="node19" href="$communication_2imu__functions_8h.html" title="imu_functions.h" alt="" coords="908,160,1023,189"/>
-<area shape="rect" id="node40" href="$communication_2imu__regs_8h.html" title="imu_regs.h" alt="" coords="1429,237,1515,267"/>
-<area shape="rect" id="node42" href="$communication_2spi__functions_8h.html" title="spi_functions.h" alt="" coords="471,160,580,189"/>
-<area shape="rect" id="node56" href="$communication_2gpio__functions_8h.html" title="gpio_functions.h" alt="" coords="604,160,721,189"/>
+<area shape="rect" id="node19" href="$imu__functions_8h.html" title="Rev 0 &#45; 06/11/2012 RLEG project &#45; 2012." alt="" coords="908,160,1023,189"/>
+<area shape="rect" id="node40" href="$imu__regs_8h.html" title="Registers that are present in each device from the IMU (ADXL345, ITG3200 and HMC5883)" alt="" coords="1429,237,1515,267"/>
+<area shape="rect" id="node42" href="$spi__functions_8h.html" title="spi_functions.h" alt="" coords="471,160,580,189"/>
+<area shape="rect" id="node56" href="$gpio__functions_8h.html" title="gpio_functions.h" alt="" coords="604,160,721,189"/>
 <area shape="rect" id="node63" href="$encoder__functions_8h.html" title="Rev 0 &#45; 18/06/2013 RLEG project &#45; 2013." alt="" coords="745,160,884,189"/>
 </map>

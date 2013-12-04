@@ -1,131 +1,116 @@
-\hypertarget{structGQUEUECONTROL}{
-\section{GQUEUECONTROL Struct Reference}
-\label{structGQUEUECONTROL}\index{GQUEUECONTROL@{GQUEUECONTROL}}
+\hypertarget{structGQUEUECONTROL}{\section{G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L Struct Reference}
+\label{structGQUEUECONTROL}\index{G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L@{G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L}}
 }
 
 
-{\ttfamily \#include \char`\"{}gqueue.h\char`\"{}}
+{\ttfamily \#include \char`\"{}gqueue.\-h\char`\"{}}
 
 \subsection*{Data Fields}
 \begin{DoxyCompactItemize}
 \item 
 int \hyperlink{structGQUEUECONTROL_a4db75bcca77dbc6ea7d8d5c3cd3a365f}{Size}
 \item 
-int \hyperlink{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}{ReadIndex} \mbox{[}MAXSIZE\_\-QUEUE\_\-READ\_\-GATES\mbox{]}
+int \hyperlink{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}{Read\-Index} \mbox{[}\hyperlink{gqueue_8h_ac3f84fecc52fe0f23ea7d5157cb92997}{M\-A\-X\-S\-I\-Z\-E\-\_\-\-Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-S}\mbox{]}
 \item 
-int \hyperlink{structGQUEUECONTROL_a614237a6b5ee3fca394e40a0274d5b43}{WriteIndex}
+int \hyperlink{structGQUEUECONTROL_a614237a6b5ee3fca394e40a0274d5b43}{Write\-Index}
 \item 
-int \hyperlink{structGQUEUECONTROL_a790618cf693d7e4249fec2f5074b40e3}{NReaders}
+int \hyperlink{structGQUEUECONTROL_a790618cf693d7e4249fec2f5074b40e3}{N\-Readers}
 \item 
-int \hyperlink{structGQUEUECONTROL_a4d58bdb6b0dc93bb6034c4209b6e7915}{FlagStillNotWritten}
+int \hyperlink{structGQUEUECONTROL_a4d58bdb6b0dc93bb6034c4209b6e7915}{Flag\-Still\-Not\-Written}
 \item 
-int \hyperlink{structGQUEUECONTROL_a9336a08f0410235b38b78638b0e3f882}{FlagStillNotRead} \mbox{[}MAXSIZE\_\-QUEUE\_\-READ\_\-GATES\mbox{]}
+int \hyperlink{structGQUEUECONTROL_a9336a08f0410235b38b78638b0e3f882}{Flag\-Still\-Not\-Read} \mbox{[}\hyperlink{gqueue_8h_ac3f84fecc52fe0f23ea7d5157cb92997}{M\-A\-X\-S\-I\-Z\-E\-\_\-\-Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-S}\mbox{]}
 \item 
-int \hyperlink{structGQUEUECONTROL_a5f54a26afa8554ed2f161b83aba14f5c}{FlagFull} \mbox{[}MAXSIZE\_\-QUEUE\_\-READ\_\-GATES\mbox{]}
+int \hyperlink{structGQUEUECONTROL_a5f54a26afa8554ed2f161b83aba14f5c}{Flag\-Full} \mbox{[}\hyperlink{gqueue_8h_ac3f84fecc52fe0f23ea7d5157cb92997}{M\-A\-X\-S\-I\-Z\-E\-\_\-\-Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-S}\mbox{]}
 \end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 
 
-Definition at line 35 of file gqueue.h.
+Definition at line 35 of file gqueue.\-h.
 
 
 
 \subsection{Field Documentation}
-\hypertarget{structGQUEUECONTROL_a5f54a26afa8554ed2f161b83aba14f5c}{
-\index{GQUEUECONTROL@{GQUEUECONTROL}!FlagFull@{FlagFull}}
-\index{FlagFull@{FlagFull}!GQUEUECONTROL@{GQUEUECONTROL}}
-\subsubsection[{FlagFull}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf GQUEUECONTROL::FlagFull}\mbox{[}MAXSIZE\_\-QUEUE\_\-READ\_\-GATES\mbox{]}}}
-\label{structGQUEUECONTROL_a5f54a26afa8554ed2f161b83aba14f5c}
+\hypertarget{structGQUEUECONTROL_a5f54a26afa8554ed2f161b83aba14f5c}{\index{G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L@{G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L}!Flag\-Full@{Flag\-Full}}
+\index{Flag\-Full@{Flag\-Full}!GQUEUECONTROL@{G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L}}
+\subsubsection[{Flag\-Full}]{\setlength{\rightskip}{0pt plus 5cm}int G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L\-::\-Flag\-Full\mbox{[}{\bf M\-A\-X\-S\-I\-Z\-E\-\_\-\-Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-S}\mbox{]}}}\label{structGQUEUECONTROL_a5f54a26afa8554ed2f161b83aba14f5c}
 
 
-Definition at line 45 of file gqueue.h.
-
-
-
-Referenced by gDataLogger\_\-InsertVariable(), gQUEUE\_\-Init(), gQUEUE\_\-RequestLastReadIndex(), gQUEUE\_\-RequestReadIndex(), and gQUEUE\_\-RequestWriteIndex().
-
-\hypertarget{structGQUEUECONTROL_a9336a08f0410235b38b78638b0e3f882}{
-\index{GQUEUECONTROL@{GQUEUECONTROL}!FlagStillNotRead@{FlagStillNotRead}}
-\index{FlagStillNotRead@{FlagStillNotRead}!GQUEUECONTROL@{GQUEUECONTROL}}
-\subsubsection[{FlagStillNotRead}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf GQUEUECONTROL::FlagStillNotRead}\mbox{[}MAXSIZE\_\-QUEUE\_\-READ\_\-GATES\mbox{]}}}
-\label{structGQUEUECONTROL_a9336a08f0410235b38b78638b0e3f882}
-
-
-Definition at line 44 of file gqueue.h.
+Definition at line 45 of file gqueue.\-h.
 
 
 
-Referenced by gQUEUE\_\-Init(), gQUEUE\_\-RequestLastReadIndex(), and gQUEUE\_\-RequestReadIndex().
+Referenced by g\-Data\-Logger\-\_\-\-Insert\-Variable(), g\-Q\-U\-E\-U\-E\-\_\-\-Init(), g\-Q\-U\-E\-U\-E\-\_\-\-Request\-Last\-Read\-Index(), g\-Q\-U\-E\-U\-E\-\_\-\-Request\-Read\-Index(), and g\-Q\-U\-E\-U\-E\-\_\-\-Request\-Write\-Index().
 
-\hypertarget{structGQUEUECONTROL_a4d58bdb6b0dc93bb6034c4209b6e7915}{
-\index{GQUEUECONTROL@{GQUEUECONTROL}!FlagStillNotWritten@{FlagStillNotWritten}}
-\index{FlagStillNotWritten@{FlagStillNotWritten}!GQUEUECONTROL@{GQUEUECONTROL}}
-\subsubsection[{FlagStillNotWritten}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf GQUEUECONTROL::FlagStillNotWritten}}}
-\label{structGQUEUECONTROL_a4d58bdb6b0dc93bb6034c4209b6e7915}
+\hypertarget{structGQUEUECONTROL_a9336a08f0410235b38b78638b0e3f882}{\index{G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L@{G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L}!Flag\-Still\-Not\-Read@{Flag\-Still\-Not\-Read}}
+\index{Flag\-Still\-Not\-Read@{Flag\-Still\-Not\-Read}!GQUEUECONTROL@{G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L}}
+\subsubsection[{Flag\-Still\-Not\-Read}]{\setlength{\rightskip}{0pt plus 5cm}int G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L\-::\-Flag\-Still\-Not\-Read\mbox{[}{\bf M\-A\-X\-S\-I\-Z\-E\-\_\-\-Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-S}\mbox{]}}}\label{structGQUEUECONTROL_a9336a08f0410235b38b78638b0e3f882}
 
 
-Definition at line 43 of file gqueue.h.
+Definition at line 44 of file gqueue.\-h.
 
 
 
-Referenced by gQUEUE\_\-GetReadIndex(), gQUEUE\_\-GetWriteIndex(), gQUEUE\_\-Init(), gQUEUE\_\-RequestLastReadIndex(), gQUEUE\_\-RequestReadIndex(), and gQUEUE\_\-RequestWriteIndex().
+Referenced by g\-Q\-U\-E\-U\-E\-\_\-\-Init(), g\-Q\-U\-E\-U\-E\-\_\-\-Request\-Last\-Read\-Index(), and g\-Q\-U\-E\-U\-E\-\_\-\-Request\-Read\-Index().
 
-\hypertarget{structGQUEUECONTROL_a790618cf693d7e4249fec2f5074b40e3}{
-\index{GQUEUECONTROL@{GQUEUECONTROL}!NReaders@{NReaders}}
-\index{NReaders@{NReaders}!GQUEUECONTROL@{GQUEUECONTROL}}
-\subsubsection[{NReaders}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf GQUEUECONTROL::NReaders}}}
-\label{structGQUEUECONTROL_a790618cf693d7e4249fec2f5074b40e3}
+\hypertarget{structGQUEUECONTROL_a4d58bdb6b0dc93bb6034c4209b6e7915}{\index{G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L@{G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L}!Flag\-Still\-Not\-Written@{Flag\-Still\-Not\-Written}}
+\index{Flag\-Still\-Not\-Written@{Flag\-Still\-Not\-Written}!GQUEUECONTROL@{G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L}}
+\subsubsection[{Flag\-Still\-Not\-Written}]{\setlength{\rightskip}{0pt plus 5cm}int G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L\-::\-Flag\-Still\-Not\-Written}}\label{structGQUEUECONTROL_a4d58bdb6b0dc93bb6034c4209b6e7915}
 
 
-Definition at line 42 of file gqueue.h.
+Definition at line 43 of file gqueue.\-h.
 
 
 
-Referenced by gQUEUE\_\-GetNumberOfUnreadData(), gQUEUE\_\-GetReadIndex(), gQUEUE\_\-Init(), gQUEUE\_\-RequestLastReadIndex(), gQUEUE\_\-RequestReadIndex(), gQUEUE\_\-RequestWriteIndex(), and gQUEUE\_\-UnwrapReadIndex().
+Referenced by g\-Q\-U\-E\-U\-E\-\_\-\-Get\-Read\-Index(), g\-Q\-U\-E\-U\-E\-\_\-\-Get\-Write\-Index(), g\-Q\-U\-E\-U\-E\-\_\-\-Init(), g\-Q\-U\-E\-U\-E\-\_\-\-Request\-Last\-Read\-Index(), g\-Q\-U\-E\-U\-E\-\_\-\-Request\-Read\-Index(), and g\-Q\-U\-E\-U\-E\-\_\-\-Request\-Write\-Index().
 
-\hypertarget{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}{
-\index{GQUEUECONTROL@{GQUEUECONTROL}!ReadIndex@{ReadIndex}}
-\index{ReadIndex@{ReadIndex}!GQUEUECONTROL@{GQUEUECONTROL}}
-\subsubsection[{ReadIndex}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf GQUEUECONTROL::ReadIndex}\mbox{[}MAXSIZE\_\-QUEUE\_\-READ\_\-GATES\mbox{]}}}
-\label{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}
+\hypertarget{structGQUEUECONTROL_a790618cf693d7e4249fec2f5074b40e3}{\index{G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L@{G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L}!N\-Readers@{N\-Readers}}
+\index{N\-Readers@{N\-Readers}!GQUEUECONTROL@{G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L}}
+\subsubsection[{N\-Readers}]{\setlength{\rightskip}{0pt plus 5cm}int G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L\-::\-N\-Readers}}\label{structGQUEUECONTROL_a790618cf693d7e4249fec2f5074b40e3}
 
 
-Definition at line 37 of file gqueue.h.
+Definition at line 42 of file gqueue.\-h.
 
 
 
-Referenced by gQUEUE\_\-GetNumberOfUnreadData(), gQUEUE\_\-GetReadIndex(), gQUEUE\_\-Init(), gQUEUE\_\-RequestLastReadIndex(), gQUEUE\_\-RequestReadIndex(), gQUEUE\_\-RequestWriteIndex(), and gQUEUE\_\-UnwrapReadIndex().
+Referenced by g\-Q\-U\-E\-U\-E\-\_\-\-Get\-Number\-Of\-Unread\-Data(), g\-Q\-U\-E\-U\-E\-\_\-\-Get\-Read\-Index(), g\-Q\-U\-E\-U\-E\-\_\-\-Init(), g\-Q\-U\-E\-U\-E\-\_\-\-Request\-Last\-Read\-Index(), g\-Q\-U\-E\-U\-E\-\_\-\-Request\-Read\-Index(), g\-Q\-U\-E\-U\-E\-\_\-\-Request\-Write\-Index(), and g\-Q\-U\-E\-U\-E\-\_\-\-Unwrap\-Read\-Index().
 
-\hypertarget{structGQUEUECONTROL_a4db75bcca77dbc6ea7d8d5c3cd3a365f}{
-\index{GQUEUECONTROL@{GQUEUECONTROL}!Size@{Size}}
-\index{Size@{Size}!GQUEUECONTROL@{GQUEUECONTROL}}
-\subsubsection[{Size}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf GQUEUECONTROL::Size}}}
-\label{structGQUEUECONTROL_a4db75bcca77dbc6ea7d8d5c3cd3a365f}
+\hypertarget{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}{\index{G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L@{G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L}!Read\-Index@{Read\-Index}}
+\index{Read\-Index@{Read\-Index}!GQUEUECONTROL@{G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L}}
+\subsubsection[{Read\-Index}]{\setlength{\rightskip}{0pt plus 5cm}int G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L\-::\-Read\-Index\mbox{[}{\bf M\-A\-X\-S\-I\-Z\-E\-\_\-\-Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-S}\mbox{]}}}\label{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}
 
 
-Definition at line 36 of file gqueue.h.
+Definition at line 37 of file gqueue.\-h.
 
 
 
-Referenced by gQUEUE\_\-GetNumberOfUnreadData(), gQUEUE\_\-GetReadIndex(), gQUEUE\_\-GetWriteIndex(), gQUEUE\_\-Init(), gQUEUE\_\-RequestWriteIndex(), gQUEUE\_\-UnwrapReadIndex(), and gQUEUE\_\-UnwrapWriteIndex().
+Referenced by g\-Q\-U\-E\-U\-E\-\_\-\-Get\-Number\-Of\-Unread\-Data(), g\-Q\-U\-E\-U\-E\-\_\-\-Get\-Read\-Index(), g\-Q\-U\-E\-U\-E\-\_\-\-Init(), g\-Q\-U\-E\-U\-E\-\_\-\-Request\-Last\-Read\-Index(), g\-Q\-U\-E\-U\-E\-\_\-\-Request\-Read\-Index(), g\-Q\-U\-E\-U\-E\-\_\-\-Request\-Write\-Index(), and g\-Q\-U\-E\-U\-E\-\_\-\-Unwrap\-Read\-Index().
 
-\hypertarget{structGQUEUECONTROL_a614237a6b5ee3fca394e40a0274d5b43}{
-\index{GQUEUECONTROL@{GQUEUECONTROL}!WriteIndex@{WriteIndex}}
-\index{WriteIndex@{WriteIndex}!GQUEUECONTROL@{GQUEUECONTROL}}
-\subsubsection[{WriteIndex}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf GQUEUECONTROL::WriteIndex}}}
-\label{structGQUEUECONTROL_a614237a6b5ee3fca394e40a0274d5b43}
+\hypertarget{structGQUEUECONTROL_a4db75bcca77dbc6ea7d8d5c3cd3a365f}{\index{G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L@{G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L}!Size@{Size}}
+\index{Size@{Size}!GQUEUECONTROL@{G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L}}
+\subsubsection[{Size}]{\setlength{\rightskip}{0pt plus 5cm}int G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L\-::\-Size}}\label{structGQUEUECONTROL_a4db75bcca77dbc6ea7d8d5c3cd3a365f}
 
 
-Definition at line 38 of file gqueue.h.
+Definition at line 36 of file gqueue.\-h.
 
 
 
-Referenced by gQUEUE\_\-GetNumberOfUnreadData(), gQUEUE\_\-GetWriteIndex(), gQUEUE\_\-Init(), gQUEUE\_\-RequestLastReadIndex(), gQUEUE\_\-RequestReadIndex(), gQUEUE\_\-RequestWriteIndex(), and gQUEUE\_\-UnwrapWriteIndex().
+Referenced by g\-Q\-U\-E\-U\-E\-\_\-\-Get\-Number\-Of\-Unread\-Data(), g\-Q\-U\-E\-U\-E\-\_\-\-Get\-Read\-Index(), g\-Q\-U\-E\-U\-E\-\_\-\-Get\-Write\-Index(), g\-Q\-U\-E\-U\-E\-\_\-\-Init(), g\-Q\-U\-E\-U\-E\-\_\-\-Request\-Write\-Index(), g\-Q\-U\-E\-U\-E\-\_\-\-Unwrap\-Read\-Index(), and g\-Q\-U\-E\-U\-E\-\_\-\-Unwrap\-Write\-Index().
+
+\hypertarget{structGQUEUECONTROL_a614237a6b5ee3fca394e40a0274d5b43}{\index{G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L@{G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L}!Write\-Index@{Write\-Index}}
+\index{Write\-Index@{Write\-Index}!GQUEUECONTROL@{G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L}}
+\subsubsection[{Write\-Index}]{\setlength{\rightskip}{0pt plus 5cm}int G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L\-::\-Write\-Index}}\label{structGQUEUECONTROL_a614237a6b5ee3fca394e40a0274d5b43}
+
+
+Definition at line 38 of file gqueue.\-h.
 
 
 
-The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+Referenced by g\-Q\-U\-E\-U\-E\-\_\-\-Get\-Number\-Of\-Unread\-Data(), g\-Q\-U\-E\-U\-E\-\_\-\-Get\-Write\-Index(), g\-Q\-U\-E\-U\-E\-\_\-\-Init(), g\-Q\-U\-E\-U\-E\-\_\-\-Request\-Last\-Read\-Index(), g\-Q\-U\-E\-U\-E\-\_\-\-Request\-Read\-Index(), g\-Q\-U\-E\-U\-E\-\_\-\-Request\-Write\-Index(), and g\-Q\-U\-E\-U\-E\-\_\-\-Unwrap\-Write\-Index().
+
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
 \item 
-gdatalogger/\hyperlink{gqueue_8h}{gqueue.h}\end{DoxyCompactItemize}
+gdatalogger/\hyperlink{gqueue_8h}{gqueue.\-h}\end{DoxyCompactItemize}

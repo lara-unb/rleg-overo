@@ -13,7 +13,9 @@ var indexSectionsWithContent =
   3: "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000101111100000100101111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
   4: "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111111111001111111110111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
   5: "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
-  6: "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000110111101000100010111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+  6: "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000110111101000100010111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  7: "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001001001000000001100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  8: "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
 };
 
 var indexSectionNames =
@@ -24,7 +26,9 @@ var indexSectionNames =
   3: "functions",
   4: "variables",
   5: "typedefs",
-  6: "defines"
+  6: "defines",
+  7: "groups",
+  8: "pages"
 };
 
 function convertToId(search)
@@ -269,11 +273,11 @@ function SearchBox(name, resultsPath, inFrame, label)
         var node = child.firstChild;
         if (j==id)
         {
-          node.innerHTML='&bull;';
+          node.innerHTML='&#8226;';
         }
         else
         {
-          node.innerHTML='&nbsp;';
+          node.innerHTML='&#160;';
         }
         j++;
       }
@@ -366,7 +370,7 @@ function SearchBox(name, resultsPath, inFrame, label)
        hasResultsPage = false;
     }
 
-    window.frames.MSearchResults.location.href = resultsPageWithSearch;  
+    window.frames.MSearchResults.location = resultsPageWithSearch;  
     var domPopupSearchResultsWindow = this.DOMPopupSearchResultsWindow();
 
     if (domPopupSearchResultsWindow.style.display!='block')
@@ -385,8 +389,8 @@ function SearchBox(name, resultsPath, inFrame, label)
        else
        {
          var domPopupSearchResults = this.DOMPopupSearchResults();
-         var left = getXPos(domSearchBox) + domSearchBox.offsetWidth;
-         var top  = getYPos(domSearchBox) + domSearchBox.offsetHeight + 1;
+         var left = getXPos(domSearchBox) + 150; // domSearchBox.offsetWidth;
+         var top  = getYPos(domSearchBox) + 20;  // domSearchBox.offsetHeight + 1;
          domPopupSearchResultsWindow.style.display = 'block';
          left -= domPopupSearchResults.offsetWidth;
          domPopupSearchResultsWindow.style.top     = top  + 'px';
@@ -736,3 +740,72 @@ function SearchResults(name)
       return false;
     }
 }
+
+function setKeyActions(elem,action)
+{
+  elem.setAttribute('onkeydown',action);
+  elem.setAttribute('onkeypress',action);
+  elem.setAttribute('onkeyup',action);
+}
+
+function setClassAttr(elem,attr)
+{
+  elem.setAttribute('class',attr);
+  elem.setAttribute('className',attr);
+}
+
+function createResults()
+{
+  var results = document.getElementById("SRResults");
+  for (var e=0; e<searchData.length; e++)
+  {
+    var id = searchData[e][0];
+    var srResult = document.createElement('div');
+    srResult.setAttribute('id','SR_'+id);
+    setClassAttr(srResult,'SRResult');
+    var srEntry = document.createElement('div');
+    setClassAttr(srEntry,'SREntry');
+    var srLink = document.createElement('a');
+    srLink.setAttribute('id','Item'+e);
+    setKeyActions(srLink,'return searchResults.Nav(event,'+e+')');
+    setClassAttr(srLink,'SRSymbol');
+    srLink.innerHTML = searchData[e][1][0];
+    srEntry.appendChild(srLink);
+    if (searchData[e][1].length==2) // single result
+    {
+      srLink.setAttribute('href',searchData[e][1][1][0]);
+      if (searchData[e][1][1][1])
+      {
+       srLink.setAttribute('target','_parent');
+      }
+      var srScope = document.createElement('span');
+      setClassAttr(srScope,'SRScope');
+      srScope.innerHTML = searchData[e][1][1][2];
+      srEntry.appendChild(srScope);
+    }
+    else // multiple results
+    {
+      srLink.setAttribute('href','javascript:searchResults.Toggle("SR_'+id+'")');
+      var srChildren = document.createElement('div');
+      setClassAttr(srChildren,'SRChildren');
+      for (var c=0; c<searchData[e][1].length-1; c++)
+      {
+        var srChild = document.createElement('a');
+        srChild.setAttribute('id','Item'+e+'_c'+c);
+        setKeyActions(srChild,'return searchResults.NavChild(event,'+e+','+c+')');
+        setClassAttr(srChild,'SRScope');
+        srChild.setAttribute('href',searchData[e][1][c+1][0]);
+        if (searchData[e][1][c+1][1])
+        {
+         srChild.setAttribute('target','_parent');
+        }
+        srChild.innerHTML = searchData[e][1][c+1][2];
+        srChildren.appendChild(srChild);
+      }
+      srEntry.appendChild(srChildren);
+    }
+    srResult.appendChild(srEntry);
+    results.appendChild(srResult);
+  }
+}
+

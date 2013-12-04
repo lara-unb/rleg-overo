@@ -1,13 +1,13 @@
 <map id="enc_wait_for_ack" name="enc_wait_for_ack">
-<area shape="rect" id="node3" href="$group__enc.html#ga813c09cc4d9af8b357fe440a9438e685" title="READ POSITION." alt="" coords="180,85,281,115"/>
-<area shape="rect" id="node24" href="$group__enc.html#gaebbe7b9d3c2571f7481cefacbe36c498" title="SET ZERO POINT." alt="" coords="181,139,280,168"/>
-<area shape="rect" id="node5" href="$communication_2communication_8h.html#a26f82e8af3b5ce23d5cd3a41db6e0b68" title="READ ALL DATA FROM SENSORS AND ADC." alt="" coords="331,85,429,115"/>
-<area shape="rect" id="node7" href="$main2_8h.html#a26855b7739897854265d51aa61329390" title="periodic_task_1" alt="" coords="479,59,591,88"/>
-<area shape="rect" id="node21" href="$main_8c.html#a8007959bfd1230feb2298965e39f2a70" title="ui_task" alt="" coords="684,111,748,140"/>
-<area shape="rect" id="node9" href="$main2_8h.html#a90885bae1b9535b16e014fb928e98e37" title="timer_function_task_1" alt="" coords="641,57,791,87"/>
-<area shape="rect" id="node11" href="$main2_8c.html#a5ce2b6a7dd4d00c90fe18098091044aa" title="f_timer_task_1" alt="" coords="841,57,948,87"/>
-<area shape="rect" id="node13" href="$group__taskS.html#gac088a054258396a6e2dba77908f22b42" title="Start some task." alt="" coords="1005,59,1120,88"/>
-<area shape="rect" id="node17" href="$main2_8h.html#a0e411070b7f487a8ab6a60b180f50e12" title="timer_start_task_1" alt="" coords="997,5,1128,35"/>
-<area shape="rect" id="node15" href="$main2_8h.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="1176,85,1227,115"/>
-<area shape="rect" id="node19" href="$main2_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="1176,5,1227,35"/>
+<area shape="rect" id="node3" href="$group__enc.html#ga813c09cc4d9af8b357fe440a9438e685" title="READ POSITION." alt="" coords="180,59,281,88"/>
+<area shape="rect" id="node24" href="$group__enc.html#gaebbe7b9d3c2571f7481cefacbe36c498" title="SET ZERO POINT." alt="" coords="181,112,280,141"/>
+<area shape="rect" id="node5" href="$communication_8h.html#a26f82e8af3b5ce23d5cd3a41db6e0b68" title="READ ALL DATA FROM SENSORS AND ADC." alt="" coords="331,59,429,88"/>
+<area shape="rect" id="node7" href="$main_8c.html#af2478600d5d8aaeda10d1eb1ce463919" title="control_task" alt="" coords="488,5,581,35"/>
+<area shape="rect" id="node11" href="$main2_8h.html#a26855b7739897854265d51aa61329390" title="periodic_task_1" alt="" coords="479,112,591,141"/>
+<area shape="rect" id="node21" href="$main_8c.html#ad6a9f022b4d089093836712320731f6a" title="ui_task" alt="" coords="503,59,567,88"/>
+<area shape="rect" id="node9" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="691,32,741,61"/>
+<area shape="rect" id="node13" href="$main2_8h.html#a90885bae1b9535b16e014fb928e98e37" title="timer_function_task_1" alt="" coords="641,112,791,141"/>
+<area shape="rect" id="node15" href="$main2_8c.html#a5ce2b6a7dd4d00c90fe18098091044aa" title="f_timer_task_1" alt="" coords="841,112,948,141"/>
+<area shape="rect" id="node17" href="$main2_8h.html#a0e411070b7f487a8ab6a60b180f50e12" title="timer_start_task_1" alt="" coords="997,112,1128,141"/>
+<area shape="rect" id="node19" href="$main2_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="1176,112,1227,141"/>
 </map>

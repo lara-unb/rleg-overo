@@ -1,47 +1,48 @@
-\hypertarget{calibration_2calibration_8c}{
-\section{calibration/calibration.c File Reference}
-\label{calibration_2calibration_8c}\index{calibration/calibration.c@{calibration/calibration.c}}
+\hypertarget{calibration_2calibration_8c}{\section{calibration/calibration.c File Reference}
+\label{calibration_2calibration_8c}\index{calibration/calibration.\-c@{calibration/calibration.\-c}}
 }
-{\ttfamily \#include $<$stdio.h$>$}\par
-{\ttfamily \#include $<$stdlib.h$>$}\par
-{\ttfamily \#include \char`\"{}calibration.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}imu\_\-functions.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}spi\_\-functions.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}gpio\_\-functions.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}encoder\_\-functions.h\char`\"{}}\par
-{\ttfamily \#include \char`\"{}imu\_\-regs.h\char`\"{}}\par
-Include dependency graph for calibration.c:This graph shows which files directly or indirectly include this file:\subsection*{Functions}
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}calibration.\-h\char`\"{}}\\*
+Include dependency graph for calibration.\-c\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{calibration_2calibration_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{group__calibrate_ga043045246cf217758281222214c4addc}{calibrate\_\-all} (\hyperlink{structIMU__DATA__STRUCT}{IMU\_\-DATA\_\-STRUCT} $\ast$\hyperlink{threads__linux_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\_\-data})
-\begin{DoxyCompactList}\small\item\em Calibrate all sensors. \item\end{DoxyCompactList}\item 
-void \hyperlink{group__calibrate_gaecfc81d152db2843b5d1517729804d63}{calibrate\_\-imu} (\hyperlink{structIMU__DATA__STRUCT}{IMU\_\-DATA\_\-STRUCT} $\ast$\hyperlink{threads__linux_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\_\-data})
-\begin{DoxyCompactList}\small\item\em Calibrate imu sensors. \item\end{DoxyCompactList}\item 
-void \hyperlink{calibration_2calibration_8c_ae8f1281c6870b23c1c158b30998f7568}{calibrate\_\-enc} (\hyperlink{structENC__DATA__STRUCT}{ENC\_\-DATA\_\-STRUCT} $\ast$\hyperlink{main2_8c_aaa441e18ae805c4f3efb0b5231d1cfe7}{enc\_\-data})
-\begin{DoxyCompactList}\small\item\em Calibrate encoder to return values in the rage of 0 to 90. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+void \hyperlink{group__calibrate_ga043045246cf217758281222214c4addc}{calibrate\-\_\-all} (\hyperlink{structIMU__DATA__STRUCT}{I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$\hyperlink{threads__linux_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\-\_\-data})
+\begin{DoxyCompactList}\small\item\em Calibrate all sensors. \end{DoxyCompactList}\item 
+void \hyperlink{group__calibrate_gaecfc81d152db2843b5d1517729804d63}{calibrate\-\_\-imu} (\hyperlink{structIMU__DATA__STRUCT}{I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$\hyperlink{threads__linux_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\-\_\-data})
+\begin{DoxyCompactList}\small\item\em Calibrate imu sensors. \end{DoxyCompactList}\item 
+void \hyperlink{calibration_2calibration_8c_ae8f1281c6870b23c1c158b30998f7568}{calibrate\-\_\-enc} (\hyperlink{structENC__DATA__STRUCT}{E\-N\-C\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$\hyperlink{main2_8c_aaa441e18ae805c4f3efb0b5231d1cfe7}{enc\-\_\-data})
+\begin{DoxyCompactList}\small\item\em Calibrate encoder to return values in the rage of 0 to 90. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
-\hypertarget{calibration_2calibration_8c_ae8f1281c6870b23c1c158b30998f7568}{
-\index{calibration/calibration.c@{calibration/calibration.c}!calibrate\_\-enc@{calibrate\_\-enc}}
-\index{calibrate\_\-enc@{calibrate\_\-enc}!calibration/calibration.c@{calibration/calibration.c}}
-\subsubsection[{calibrate\_\-enc}]{\setlength{\rightskip}{0pt plus 5cm}void calibrate\_\-enc ({\bf ENC\_\-DATA\_\-STRUCT} $\ast$ {\em enc\_\-data})}}
-\label{calibration_2calibration_8c_ae8f1281c6870b23c1c158b30998f7568}
+\hypertarget{calibration_2calibration_8c_ae8f1281c6870b23c1c158b30998f7568}{\index{calibration/calibration.\-c@{calibration/calibration.\-c}!calibrate\-\_\-enc@{calibrate\-\_\-enc}}
+\index{calibrate\-\_\-enc@{calibrate\-\_\-enc}!calibration/calibration.c@{calibration/calibration.\-c}}
+\subsubsection[{calibrate\-\_\-enc}]{\setlength{\rightskip}{0pt plus 5cm}void calibrate\-\_\-enc (
+\begin{DoxyParamCaption}
+\item[{{\bf E\-N\-C\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$}]{enc\-\_\-data}
+\end{DoxyParamCaption}
+)}}\label{calibration_2calibration_8c_ae8f1281c6870b23c1c158b30998f7568}
 
 
 Calibrate encoder to return values in the rage of 0 to 90. 
 
 
 
-Definition at line 33 of file calibration.c.
-
-
+Definition at line 33 of file calibration.\-c.
 
 
 \begin{DoxyCode}
-33                                              {
-34   enc_data->calib.position = ((ENC_MAX - enc_data->position)/ENC_FS);
-35 }
+                                             \{
+  enc\_data->\hyperlink{structENC__DATA__STRUCT_af227e5bbb714b830cc570432bda0a468}{calib}.\hyperlink{structENC__DATA__STRUCT_1_1calibrate_aed5100f7dc3d1f358a633c043e13cba2}{position} = ((\hyperlink{calibration_2calibration_8h_a496f1fb8343dc6e6bcdf07eb28557f41}{ENC\_MAX} - enc\_data->\hyperlink{structENC__DATA__STRUCT_ac3a53ed44ecaf87285518a091e1d2c24}{position}
+      )/\hyperlink{calibration_2calibration_8h_adf9edcc7e266ed7333f7570965f5956a}{ENC\_FS});
+\}
 \end{DoxyCode}
-
-

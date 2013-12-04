@@ -1,10 +1,10 @@
 <map id="get_time" name="get_time">
 <area shape="rect" id="node3" href="$ui_8h.html#a8d5e19833fec51919aad6e78bb74619a" title="Print ALL sensors data." alt="" coords="125,59,248,88"/>
 <area shape="rect" id="node5" href="$group__ui.html#ga42e4dac2d138061a74c572358c8ebf49" title="Update Screen with new data of sensors." alt="" coords="297,59,375,88"/>
-<area shape="rect" id="node7" href="$main_8c.html#a8007959bfd1230feb2298965e39f2a70" title="ui_task" alt="" coords="468,5,532,35"/>
+<area shape="rect" id="node7" href="$main_8c.html#ad6a9f022b4d089093836712320731f6a" title="ui_task" alt="" coords="468,5,532,35"/>
 <area shape="rect" id="node11" href="$main2_8h.html#a944f7352f18ed248c1b1143f51edc391" title="periodic_task_2" alt="" coords="444,59,556,88"/>
 <area shape="rect" id="node21" href="$threads__linux_8c.html#ad535241b6b29d076beb2cd75a880aaea" title="threads_linux_periodic\l_task_2" alt="" coords="425,111,575,158"/>
-<area shape="rect" id="node9" href="$main2_8h.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="675,5,725,35"/>
+<area shape="rect" id="node9" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="675,5,725,35"/>
 <area shape="rect" id="node13" href="$main2_8h.html#a01c18e97a4488be2912eb738b2e7f890" title="timer_function_task_2" alt="" coords="625,59,775,88"/>
 <area shape="rect" id="node15" href="$main2_8c.html#a735ebf3d0d37c7d8187199e6565bcb5c" title="f_timer_task_2" alt="" coords="839,59,945,88"/>
 <area shape="rect" id="node17" href="$main2_8h.html#ae59c93969d017f18e3e38b2f9f7888ca" title="timer_start_task_2" alt="" coords="1011,59,1141,88"/>

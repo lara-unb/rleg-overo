@@ -1,63 +1,78 @@
-\hypertarget{encoder__functions_8h}{
-\section{communication/encoder\_\-functions.h File Reference}
-\label{encoder__functions_8h}\index{communication/encoder\_\-functions.h@{communication/encoder\_\-functions.h}}
+\hypertarget{encoder__functions_8h}{\section{communication/encoder\-\_\-functions.h File Reference}
+\label{encoder__functions_8h}\index{communication/encoder\-\_\-functions.\-h@{communication/encoder\-\_\-functions.\-h}}
 }
 
 
-Rev 0 -\/ 18/06/2013 RLEG project -\/ 2013.  
+Rev 0 -\/ 18/06/2013 R\-L\-E\-G project -\/ 2013.  
 
 
-{\ttfamily \#include $<$stdio.h$>$}\par
-{\ttfamily \#include $<$stdint.h$>$}\par
-{\ttfamily \#include $<$stdlib.h$>$}\par
-{\ttfamily \#include $<$string.h$>$}\par
-{\ttfamily \#include $<$errno.h$>$}\par
-{\ttfamily \#include $<$unistd.h$>$}\par
-{\ttfamily \#include $<$sys/types.h$>$}\par
-{\ttfamily \#include $<$sys/stat.h$>$}\par
-{\ttfamily \#include $<$sys/ioctl.h$>$}\par
-{\ttfamily \#include $<$fcntl.h$>$}\par
-Include dependency graph for encoder\_\-functions.h:This graph shows which files directly or indirectly include this file:\subsection*{Data Structures}
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$stdint.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include $<$errno.\-h$>$}\\*
+{\ttfamily \#include $<$unistd.\-h$>$}\\*
+{\ttfamily \#include $<$sys/types.\-h$>$}\\*
+{\ttfamily \#include $<$sys/stat.\-h$>$}\\*
+{\ttfamily \#include $<$sys/ioctl.\-h$>$}\\*
+{\ttfamily \#include $<$fcntl.\-h$>$}\\*
+Include dependency graph for encoder\-\_\-functions.\-h\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{encoder__functions_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{encoder__functions_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
 \begin{DoxyCompactItemize}
 \item 
-struct \hyperlink{structENC__DATA__STRUCT}{ENC\_\-DATA\_\-STRUCT}
+struct \hyperlink{structENC__DATA__STRUCT}{E\-N\-C\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T}
 \item 
-struct \hyperlink{structENC__DATA__STRUCT_1_1calibrate}{ENC\_\-DATA\_\-STRUCT::calibrate}
+struct \hyperlink{structENC__DATA__STRUCT_1_1calibrate}{E\-N\-C\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::calibrate}
 \end{DoxyCompactItemize}
-\subsection*{Defines}
+\subsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \hyperlink{encoder__functions_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS}~1
+\#define \hyperlink{encoder__functions_8h_aa90cac659d18e8ef6294c7ae337f6b58}{S\-U\-C\-C\-E\-S\-S}~1
 \item 
-\#define \hyperlink{encoder__functions_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE}~-\/1
+\#define \hyperlink{encoder__functions_8h_a6d58f9ac447476b4e084d7ca383f5183}{F\-A\-I\-L\-U\-R\-E}~-\/1
 \item 
-\#define \hyperlink{encoder__functions_8h_ac10b0f18ed2164776ad6843aa7908592}{ENCODER\_\-NO\_\-OP}~0x00
+\#define \hyperlink{encoder__functions_8h_ac10b0f18ed2164776ad6843aa7908592}{E\-N\-C\-O\-D\-E\-R\-\_\-\-N\-O\-\_\-\-O\-P}~0x00
 \item 
-\#define \hyperlink{encoder__functions_8h_a24e6c0e05e904b10f56ae184da9e2aca}{ENCODER\_\-RD\_\-POS}~0x10
+\#define \hyperlink{encoder__functions_8h_a24e6c0e05e904b10f56ae184da9e2aca}{E\-N\-C\-O\-D\-E\-R\-\_\-\-R\-D\-\_\-\-P\-O\-S}~0x10
 \item 
-\#define \hyperlink{encoder__functions_8h_aa2fec4e0eb5a7b3668158a57952b9dbe}{ENCODER\_\-SET\_\-ZERO\_\-PT}~0x70
+\#define \hyperlink{encoder__functions_8h_aa2fec4e0eb5a7b3668158a57952b9dbe}{E\-N\-C\-O\-D\-E\-R\-\_\-\-S\-E\-T\-\_\-\-Z\-E\-R\-O\-\_\-\-P\-T}~0x70
 \item 
-\#define \hyperlink{encoder__functions_8h_ab815abd4b9b825c60dbb04aad0d0e846}{ENCODER\_\-EEPROM\_\-WR}~0x80
+\#define \hyperlink{encoder__functions_8h_ab815abd4b9b825c60dbb04aad0d0e846}{E\-N\-C\-O\-D\-E\-R\-\_\-\-E\-E\-P\-R\-O\-M\-\_\-\-W\-R}~0x80
 \item 
-\#define \hyperlink{encoder__functions_8h_aa3f0b6d222591f8f7332f74106eaa0ca}{ENCODER\_\-EEPROM\_\-RD}~0x90
+\#define \hyperlink{encoder__functions_8h_aa3f0b6d222591f8f7332f74106eaa0ca}{E\-N\-C\-O\-D\-E\-R\-\_\-\-E\-E\-P\-R\-O\-M\-\_\-\-R\-D}~0x90
 \item 
-\#define \hyperlink{encoder__functions_8h_a77c3a97f7312d858d04ec3b4e1fb2176}{ENCODER\_\-WAIT\_\-RESP}~0xA5
+\#define \hyperlink{encoder__functions_8h_a77c3a97f7312d858d04ec3b4e1fb2176}{E\-N\-C\-O\-D\-E\-R\-\_\-\-W\-A\-I\-T\-\_\-\-R\-E\-S\-P}~0x\-A5
 \item 
-\#define \hyperlink{encoder__functions_8h_a9ec306f36d50c7375e74f0d1c55a3a67}{INT\_\-MAX}~5
+\#define \hyperlink{encoder__functions_8h_a9ec306f36d50c7375e74f0d1c55a3a67}{I\-N\-T\-\_\-\-M\-A\-X}~5
 \end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-int \hyperlink{group__enc_ga813c09cc4d9af8b357fe440a9438e685}{enc\_\-read\_\-pos} (int spi\_\-dev, unsigned short int $\ast$data)
-\begin{DoxyCompactList}\small\item\em READ POSITION. \item\end{DoxyCompactList}\item 
-int \hyperlink{group__enc_gaebbe7b9d3c2571f7481cefacbe36c498}{enc\_\-zero\_\-set} (int spi\_\-dev)
-\begin{DoxyCompactList}\small\item\em SET ZERO POINT. \item\end{DoxyCompactList}\item 
-int \hyperlink{group__enc_gad82fb44f2e735628ec95e003e4a1f93c}{enc\_\-wait\_\-for\_\-ack} (int spi\_\-dev, uint8\_\-t ack, int max\_\-errors)
-\begin{DoxyCompactList}\small\item\em send command and delay between reads \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+int \hyperlink{group__enc_ga813c09cc4d9af8b357fe440a9438e685}{enc\-\_\-read\-\_\-pos} (int spi\-\_\-dev, unsigned short int $\ast$data)
+\begin{DoxyCompactList}\small\item\em R\-E\-A\-D P\-O\-S\-I\-T\-I\-O\-N. \end{DoxyCompactList}\item 
+int \hyperlink{group__enc_gaebbe7b9d3c2571f7481cefacbe36c498}{enc\-\_\-zero\-\_\-set} (int spi\-\_\-dev)
+\begin{DoxyCompactList}\small\item\em S\-E\-T Z\-E\-R\-O P\-O\-I\-N\-T. \end{DoxyCompactList}\item 
+int \hyperlink{group__enc_gad82fb44f2e735628ec95e003e4a1f93c}{enc\-\_\-wait\-\_\-for\-\_\-ack} (int spi\-\_\-dev, uint8\-\_\-t ack, int max\-\_\-errors)
+\begin{DoxyCompactList}\small\item\em send command and delay between reads \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-Rev 0 -\/ 18/06/2013 RLEG project -\/ 2013. main commmands of the AMT 203 encoder \begin{DoxyAuthor}{Author}
+Rev 0 -\/ 18/06/2013 R\-L\-E\-G project -\/ 2013. main commmands of the A\-M\-T 203 encoder \begin{DoxyAuthor}{Author}
 Claudia Ochoa 
 \end{DoxyAuthor}
 \begin{DoxyDate}{Date}
@@ -65,113 +80,95 @@ Claudia Ochoa
 \end{DoxyDate}
 
 
-Definition in file \hyperlink{encoder__functions_8h_source}{encoder\_\-functions.h}.
+Definition in file \hyperlink{encoder__functions_8h_source}{encoder\-\_\-functions.\-h}.
 
 
 
-\subsection{Define Documentation}
-\hypertarget{encoder__functions_8h_aa3f0b6d222591f8f7332f74106eaa0ca}{
-\index{encoder\_\-functions.h@{encoder\_\-functions.h}!ENCODER\_\-EEPROM\_\-RD@{ENCODER\_\-EEPROM\_\-RD}}
-\index{ENCODER\_\-EEPROM\_\-RD@{ENCODER\_\-EEPROM\_\-RD}!encoder_functions.h@{encoder\_\-functions.h}}
-\subsubsection[{ENCODER\_\-EEPROM\_\-RD}]{\setlength{\rightskip}{0pt plus 5cm}\#define ENCODER\_\-EEPROM\_\-RD~0x90}}
-\label{encoder__functions_8h_aa3f0b6d222591f8f7332f74106eaa0ca}
+\subsection{Macro Definition Documentation}
+\hypertarget{encoder__functions_8h_aa3f0b6d222591f8f7332f74106eaa0ca}{\index{encoder\-\_\-functions.\-h@{encoder\-\_\-functions.\-h}!E\-N\-C\-O\-D\-E\-R\-\_\-\-E\-E\-P\-R\-O\-M\-\_\-\-R\-D@{E\-N\-C\-O\-D\-E\-R\-\_\-\-E\-E\-P\-R\-O\-M\-\_\-\-R\-D}}
+\index{E\-N\-C\-O\-D\-E\-R\-\_\-\-E\-E\-P\-R\-O\-M\-\_\-\-R\-D@{E\-N\-C\-O\-D\-E\-R\-\_\-\-E\-E\-P\-R\-O\-M\-\_\-\-R\-D}!encoder_functions.h@{encoder\-\_\-functions.\-h}}
+\subsubsection[{E\-N\-C\-O\-D\-E\-R\-\_\-\-E\-E\-P\-R\-O\-M\-\_\-\-R\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-N\-C\-O\-D\-E\-R\-\_\-\-E\-E\-P\-R\-O\-M\-\_\-\-R\-D~0x90}}\label{encoder__functions_8h_aa3f0b6d222591f8f7332f74106eaa0ca}
 
 
-Definition at line 34 of file encoder\_\-functions.h.
+Definition at line 34 of file encoder\-\_\-functions.\-h.
 
-\hypertarget{encoder__functions_8h_ab815abd4b9b825c60dbb04aad0d0e846}{
-\index{encoder\_\-functions.h@{encoder\_\-functions.h}!ENCODER\_\-EEPROM\_\-WR@{ENCODER\_\-EEPROM\_\-WR}}
-\index{ENCODER\_\-EEPROM\_\-WR@{ENCODER\_\-EEPROM\_\-WR}!encoder_functions.h@{encoder\_\-functions.h}}
-\subsubsection[{ENCODER\_\-EEPROM\_\-WR}]{\setlength{\rightskip}{0pt plus 5cm}\#define ENCODER\_\-EEPROM\_\-WR~0x80}}
-\label{encoder__functions_8h_ab815abd4b9b825c60dbb04aad0d0e846}
+\hypertarget{encoder__functions_8h_ab815abd4b9b825c60dbb04aad0d0e846}{\index{encoder\-\_\-functions.\-h@{encoder\-\_\-functions.\-h}!E\-N\-C\-O\-D\-E\-R\-\_\-\-E\-E\-P\-R\-O\-M\-\_\-\-W\-R@{E\-N\-C\-O\-D\-E\-R\-\_\-\-E\-E\-P\-R\-O\-M\-\_\-\-W\-R}}
+\index{E\-N\-C\-O\-D\-E\-R\-\_\-\-E\-E\-P\-R\-O\-M\-\_\-\-W\-R@{E\-N\-C\-O\-D\-E\-R\-\_\-\-E\-E\-P\-R\-O\-M\-\_\-\-W\-R}!encoder_functions.h@{encoder\-\_\-functions.\-h}}
+\subsubsection[{E\-N\-C\-O\-D\-E\-R\-\_\-\-E\-E\-P\-R\-O\-M\-\_\-\-W\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-N\-C\-O\-D\-E\-R\-\_\-\-E\-E\-P\-R\-O\-M\-\_\-\-W\-R~0x80}}\label{encoder__functions_8h_ab815abd4b9b825c60dbb04aad0d0e846}
 
 
-Definition at line 33 of file encoder\_\-functions.h.
+Definition at line 33 of file encoder\-\_\-functions.\-h.
 
 
 
-Referenced by enc\_\-zero\_\-set().
+Referenced by enc\-\_\-zero\-\_\-set().
 
-\hypertarget{encoder__functions_8h_ac10b0f18ed2164776ad6843aa7908592}{
-\index{encoder\_\-functions.h@{encoder\_\-functions.h}!ENCODER\_\-NO\_\-OP@{ENCODER\_\-NO\_\-OP}}
-\index{ENCODER\_\-NO\_\-OP@{ENCODER\_\-NO\_\-OP}!encoder_functions.h@{encoder\_\-functions.h}}
-\subsubsection[{ENCODER\_\-NO\_\-OP}]{\setlength{\rightskip}{0pt plus 5cm}\#define ENCODER\_\-NO\_\-OP~0x00}}
-\label{encoder__functions_8h_ac10b0f18ed2164776ad6843aa7908592}
+\hypertarget{encoder__functions_8h_ac10b0f18ed2164776ad6843aa7908592}{\index{encoder\-\_\-functions.\-h@{encoder\-\_\-functions.\-h}!E\-N\-C\-O\-D\-E\-R\-\_\-\-N\-O\-\_\-\-O\-P@{E\-N\-C\-O\-D\-E\-R\-\_\-\-N\-O\-\_\-\-O\-P}}
+\index{E\-N\-C\-O\-D\-E\-R\-\_\-\-N\-O\-\_\-\-O\-P@{E\-N\-C\-O\-D\-E\-R\-\_\-\-N\-O\-\_\-\-O\-P}!encoder_functions.h@{encoder\-\_\-functions.\-h}}
+\subsubsection[{E\-N\-C\-O\-D\-E\-R\-\_\-\-N\-O\-\_\-\-O\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-N\-C\-O\-D\-E\-R\-\_\-\-N\-O\-\_\-\-O\-P~0x00}}\label{encoder__functions_8h_ac10b0f18ed2164776ad6843aa7908592}
 
 
-Definition at line 30 of file encoder\_\-functions.h.
+Definition at line 30 of file encoder\-\_\-functions.\-h.
 
 
 
-Referenced by enc\_\-read\_\-pos(), and enc\_\-wait\_\-for\_\-ack().
+Referenced by enc\-\_\-read\-\_\-pos(), and enc\-\_\-wait\-\_\-for\-\_\-ack().
 
-\hypertarget{encoder__functions_8h_a24e6c0e05e904b10f56ae184da9e2aca}{
-\index{encoder\_\-functions.h@{encoder\_\-functions.h}!ENCODER\_\-RD\_\-POS@{ENCODER\_\-RD\_\-POS}}
-\index{ENCODER\_\-RD\_\-POS@{ENCODER\_\-RD\_\-POS}!encoder_functions.h@{encoder\_\-functions.h}}
-\subsubsection[{ENCODER\_\-RD\_\-POS}]{\setlength{\rightskip}{0pt plus 5cm}\#define ENCODER\_\-RD\_\-POS~0x10}}
-\label{encoder__functions_8h_a24e6c0e05e904b10f56ae184da9e2aca}
+\hypertarget{encoder__functions_8h_a24e6c0e05e904b10f56ae184da9e2aca}{\index{encoder\-\_\-functions.\-h@{encoder\-\_\-functions.\-h}!E\-N\-C\-O\-D\-E\-R\-\_\-\-R\-D\-\_\-\-P\-O\-S@{E\-N\-C\-O\-D\-E\-R\-\_\-\-R\-D\-\_\-\-P\-O\-S}}
+\index{E\-N\-C\-O\-D\-E\-R\-\_\-\-R\-D\-\_\-\-P\-O\-S@{E\-N\-C\-O\-D\-E\-R\-\_\-\-R\-D\-\_\-\-P\-O\-S}!encoder_functions.h@{encoder\-\_\-functions.\-h}}
+\subsubsection[{E\-N\-C\-O\-D\-E\-R\-\_\-\-R\-D\-\_\-\-P\-O\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-N\-C\-O\-D\-E\-R\-\_\-\-R\-D\-\_\-\-P\-O\-S~0x10}}\label{encoder__functions_8h_a24e6c0e05e904b10f56ae184da9e2aca}
 
 
-Definition at line 31 of file encoder\_\-functions.h.
+Definition at line 31 of file encoder\-\_\-functions.\-h.
 
 
 
-Referenced by enc\_\-read\_\-pos().
+Referenced by enc\-\_\-read\-\_\-pos().
 
-\hypertarget{encoder__functions_8h_aa2fec4e0eb5a7b3668158a57952b9dbe}{
-\index{encoder\_\-functions.h@{encoder\_\-functions.h}!ENCODER\_\-SET\_\-ZERO\_\-PT@{ENCODER\_\-SET\_\-ZERO\_\-PT}}
-\index{ENCODER\_\-SET\_\-ZERO\_\-PT@{ENCODER\_\-SET\_\-ZERO\_\-PT}!encoder_functions.h@{encoder\_\-functions.h}}
-\subsubsection[{ENCODER\_\-SET\_\-ZERO\_\-PT}]{\setlength{\rightskip}{0pt plus 5cm}\#define ENCODER\_\-SET\_\-ZERO\_\-PT~0x70}}
-\label{encoder__functions_8h_aa2fec4e0eb5a7b3668158a57952b9dbe}
+\hypertarget{encoder__functions_8h_aa2fec4e0eb5a7b3668158a57952b9dbe}{\index{encoder\-\_\-functions.\-h@{encoder\-\_\-functions.\-h}!E\-N\-C\-O\-D\-E\-R\-\_\-\-S\-E\-T\-\_\-\-Z\-E\-R\-O\-\_\-\-P\-T@{E\-N\-C\-O\-D\-E\-R\-\_\-\-S\-E\-T\-\_\-\-Z\-E\-R\-O\-\_\-\-P\-T}}
+\index{E\-N\-C\-O\-D\-E\-R\-\_\-\-S\-E\-T\-\_\-\-Z\-E\-R\-O\-\_\-\-P\-T@{E\-N\-C\-O\-D\-E\-R\-\_\-\-S\-E\-T\-\_\-\-Z\-E\-R\-O\-\_\-\-P\-T}!encoder_functions.h@{encoder\-\_\-functions.\-h}}
+\subsubsection[{E\-N\-C\-O\-D\-E\-R\-\_\-\-S\-E\-T\-\_\-\-Z\-E\-R\-O\-\_\-\-P\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-N\-C\-O\-D\-E\-R\-\_\-\-S\-E\-T\-\_\-\-Z\-E\-R\-O\-\_\-\-P\-T~0x70}}\label{encoder__functions_8h_aa2fec4e0eb5a7b3668158a57952b9dbe}
 
 
-Definition at line 32 of file encoder\_\-functions.h.
+Definition at line 32 of file encoder\-\_\-functions.\-h.
 
 
 
-Referenced by enc\_\-zero\_\-set().
+Referenced by enc\-\_\-zero\-\_\-set().
 
-\hypertarget{encoder__functions_8h_a77c3a97f7312d858d04ec3b4e1fb2176}{
-\index{encoder\_\-functions.h@{encoder\_\-functions.h}!ENCODER\_\-WAIT\_\-RESP@{ENCODER\_\-WAIT\_\-RESP}}
-\index{ENCODER\_\-WAIT\_\-RESP@{ENCODER\_\-WAIT\_\-RESP}!encoder_functions.h@{encoder\_\-functions.h}}
-\subsubsection[{ENCODER\_\-WAIT\_\-RESP}]{\setlength{\rightskip}{0pt plus 5cm}\#define ENCODER\_\-WAIT\_\-RESP~0xA5}}
-\label{encoder__functions_8h_a77c3a97f7312d858d04ec3b4e1fb2176}
+\hypertarget{encoder__functions_8h_a77c3a97f7312d858d04ec3b4e1fb2176}{\index{encoder\-\_\-functions.\-h@{encoder\-\_\-functions.\-h}!E\-N\-C\-O\-D\-E\-R\-\_\-\-W\-A\-I\-T\-\_\-\-R\-E\-S\-P@{E\-N\-C\-O\-D\-E\-R\-\_\-\-W\-A\-I\-T\-\_\-\-R\-E\-S\-P}}
+\index{E\-N\-C\-O\-D\-E\-R\-\_\-\-W\-A\-I\-T\-\_\-\-R\-E\-S\-P@{E\-N\-C\-O\-D\-E\-R\-\_\-\-W\-A\-I\-T\-\_\-\-R\-E\-S\-P}!encoder_functions.h@{encoder\-\_\-functions.\-h}}
+\subsubsection[{E\-N\-C\-O\-D\-E\-R\-\_\-\-W\-A\-I\-T\-\_\-\-R\-E\-S\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-N\-C\-O\-D\-E\-R\-\_\-\-W\-A\-I\-T\-\_\-\-R\-E\-S\-P~0x\-A5}}\label{encoder__functions_8h_a77c3a97f7312d858d04ec3b4e1fb2176}
 
 
-Definition at line 37 of file encoder\_\-functions.h.
+Definition at line 37 of file encoder\-\_\-functions.\-h.
 
 
 
-Referenced by enc\_\-wait\_\-for\_\-ack().
+Referenced by enc\-\_\-wait\-\_\-for\-\_\-ack().
 
-\hypertarget{encoder__functions_8h_a6d58f9ac447476b4e084d7ca383f5183}{
-\index{encoder\_\-functions.h@{encoder\_\-functions.h}!FAILURE@{FAILURE}}
-\index{FAILURE@{FAILURE}!encoder_functions.h@{encoder\_\-functions.h}}
-\subsubsection[{FAILURE}]{\setlength{\rightskip}{0pt plus 5cm}\#define FAILURE~-\/1}}
-\label{encoder__functions_8h_a6d58f9ac447476b4e084d7ca383f5183}
+\hypertarget{encoder__functions_8h_a6d58f9ac447476b4e084d7ca383f5183}{\index{encoder\-\_\-functions.\-h@{encoder\-\_\-functions.\-h}!F\-A\-I\-L\-U\-R\-E@{F\-A\-I\-L\-U\-R\-E}}
+\index{F\-A\-I\-L\-U\-R\-E@{F\-A\-I\-L\-U\-R\-E}!encoder_functions.h@{encoder\-\_\-functions.\-h}}
+\subsubsection[{F\-A\-I\-L\-U\-R\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-A\-I\-L\-U\-R\-E~-\/1}}\label{encoder__functions_8h_a6d58f9ac447476b4e084d7ca383f5183}
 
 
-Definition at line 27 of file encoder\_\-functions.h.
+Definition at line 27 of file encoder\-\_\-functions.\-h.
 
-\hypertarget{encoder__functions_8h_a9ec306f36d50c7375e74f0d1c55a3a67}{
-\index{encoder\_\-functions.h@{encoder\_\-functions.h}!INT\_\-MAX@{INT\_\-MAX}}
-\index{INT\_\-MAX@{INT\_\-MAX}!encoder_functions.h@{encoder\_\-functions.h}}
-\subsubsection[{INT\_\-MAX}]{\setlength{\rightskip}{0pt plus 5cm}\#define INT\_\-MAX~5}}
-\label{encoder__functions_8h_a9ec306f36d50c7375e74f0d1c55a3a67}
+\hypertarget{encoder__functions_8h_a9ec306f36d50c7375e74f0d1c55a3a67}{\index{encoder\-\_\-functions.\-h@{encoder\-\_\-functions.\-h}!I\-N\-T\-\_\-\-M\-A\-X@{I\-N\-T\-\_\-\-M\-A\-X}}
+\index{I\-N\-T\-\_\-\-M\-A\-X@{I\-N\-T\-\_\-\-M\-A\-X}!encoder_functions.h@{encoder\-\_\-functions.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-M\-A\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-M\-A\-X~5}}\label{encoder__functions_8h_a9ec306f36d50c7375e74f0d1c55a3a67}
 
 
-Definition at line 39 of file encoder\_\-functions.h.
+Definition at line 39 of file encoder\-\_\-functions.\-h.
 
 
 
-Referenced by enc\_\-read\_\-pos(), and enc\_\-zero\_\-set().
+Referenced by enc\-\_\-read\-\_\-pos(), and enc\-\_\-zero\-\_\-set().
 
-\hypertarget{encoder__functions_8h_aa90cac659d18e8ef6294c7ae337f6b58}{
-\index{encoder\_\-functions.h@{encoder\_\-functions.h}!SUCCESS@{SUCCESS}}
-\index{SUCCESS@{SUCCESS}!encoder_functions.h@{encoder\_\-functions.h}}
-\subsubsection[{SUCCESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define SUCCESS~1}}
-\label{encoder__functions_8h_aa90cac659d18e8ef6294c7ae337f6b58}
+\hypertarget{encoder__functions_8h_aa90cac659d18e8ef6294c7ae337f6b58}{\index{encoder\-\_\-functions.\-h@{encoder\-\_\-functions.\-h}!S\-U\-C\-C\-E\-S\-S@{S\-U\-C\-C\-E\-S\-S}}
+\index{S\-U\-C\-C\-E\-S\-S@{S\-U\-C\-C\-E\-S\-S}!encoder_functions.h@{encoder\-\_\-functions.\-h}}
+\subsubsection[{S\-U\-C\-C\-E\-S\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-U\-C\-C\-E\-S\-S~1}}\label{encoder__functions_8h_aa90cac659d18e8ef6294c7ae337f6b58}
 
 
-Definition at line 26 of file encoder\_\-functions.h.
+Definition at line 26 of file encoder\-\_\-functions.\-h.
 

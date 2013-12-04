@@ -1,101 +1,102 @@
-\hypertarget{taskScheduler_8c}{
-\section{taskScheduler.c File Reference}
-\label{taskScheduler_8c}\index{taskScheduler.c@{taskScheduler.c}}
+\hypertarget{taskScheduler_8c}{\section{task\-Scheduler.\-c File Reference}
+\label{taskScheduler_8c}\index{task\-Scheduler.\-c@{task\-Scheduler.\-c}}
 }
-{\ttfamily \#include $<$string.h$>$}\par
-{\ttfamily \#include $<$stdio.h$>$}\par
-{\ttfamily \#include $<$stdlib.h$>$}\par
-{\ttfamily \#include $<$time.h$>$}\par
-{\ttfamily \#include $<$pthread.h$>$}\par
-{\ttfamily \#include $<$unistd.h$>$}\par
-{\ttfamily \#include $<$signal.h$>$}\par
-{\ttfamily \#include $<$sys/time.h$>$}\par
-{\ttfamily \#include \char`\"{}taskScheduler.h\char`\"{}}\par
-Include dependency graph for taskScheduler.c:\subsection*{Functions}
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$time.\-h$>$}\\*
+{\ttfamily \#include $<$pthread.\-h$>$}\\*
+{\ttfamily \#include $<$unistd.\-h$>$}\\*
+{\ttfamily \#include $<$signal.\-h$>$}\\*
+{\ttfamily \#include $<$sys/time.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}task\-Scheduler.\-h\char`\"{}}\\*
+Include dependency graph for task\-Scheduler.\-c\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{taskScheduler_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{group__taskS_ga1e7e694ed290112386d363ee2630dd82}{timer\_\-new\_\-task} (\hyperlink{structTASK__S}{TASK\_\-S} $\ast$task, void($\ast$runFunction)(int))
-\begin{DoxyCompactList}\small\item\em Create a task. \item\end{DoxyCompactList}\item 
-void \hyperlink{group__taskS_gabb62dbc29029e7950ee72aeb78c83dfc}{timer\_\-start\_\-task} (\hyperlink{structTASK__S}{TASK\_\-S} $\ast$task, int period\_\-us)
-\begin{DoxyCompactList}\small\item\em Start some task. \item\end{DoxyCompactList}\item 
-void \hyperlink{taskScheduler_8c_a39e4b92cd20da5838951ab5b0ad19fbb}{timer\_\-function\_\-task} (\hyperlink{structTASK__S}{TASK\_\-S} $\ast$task)
+void \hyperlink{group__taskS_ga1e7e694ed290112386d363ee2630dd82}{timer\-\_\-new\-\_\-task} (\hyperlink{structTASK__S}{T\-A\-S\-K\-\_\-\-S} $\ast$task, void($\ast$run\-Function)(int))
+\begin{DoxyCompactList}\small\item\em Create a task. \end{DoxyCompactList}\item 
+void \hyperlink{group__taskS_gabb62dbc29029e7950ee72aeb78c83dfc}{timer\-\_\-start\-\_\-task} (\hyperlink{structTASK__S}{T\-A\-S\-K\-\_\-\-S} $\ast$task, int period\-\_\-us)
+\begin{DoxyCompactList}\small\item\em Start some task. \end{DoxyCompactList}\item 
+void \hyperlink{taskScheduler_8c_a39e4b92cd20da5838951ab5b0ad19fbb}{timer\-\_\-function\-\_\-task} (\hyperlink{structTASK__S}{T\-A\-S\-K\-\_\-\-S} $\ast$task)
 \item 
-void \hyperlink{group__taskS_ga8e48eacaac7d9cf7d82cc71cfbcd4b56}{timer\_\-stop\_\-task} (\hyperlink{structTASK__S}{TASK\_\-S} $\ast$task)
-\begin{DoxyCompactList}\small\item\em Stop some task. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+void \hyperlink{group__taskS_ga8e48eacaac7d9cf7d82cc71cfbcd4b56}{timer\-\_\-stop\-\_\-task} (\hyperlink{structTASK__S}{T\-A\-S\-K\-\_\-\-S} $\ast$task)
+\begin{DoxyCompactList}\small\item\em Stop some task. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
-\hypertarget{taskScheduler_8c_a39e4b92cd20da5838951ab5b0ad19fbb}{
-\index{taskScheduler.c@{taskScheduler.c}!timer\_\-function\_\-task@{timer\_\-function\_\-task}}
-\index{timer\_\-function\_\-task@{timer\_\-function\_\-task}!taskScheduler.c@{taskScheduler.c}}
-\subsubsection[{timer\_\-function\_\-task}]{\setlength{\rightskip}{0pt plus 5cm}void timer\_\-function\_\-task ({\bf TASK\_\-S} $\ast$ {\em task})}}
-\label{taskScheduler_8c_a39e4b92cd20da5838951ab5b0ad19fbb}
+\hypertarget{taskScheduler_8c_a39e4b92cd20da5838951ab5b0ad19fbb}{\index{task\-Scheduler.\-c@{task\-Scheduler.\-c}!timer\-\_\-function\-\_\-task@{timer\-\_\-function\-\_\-task}}
+\index{timer\-\_\-function\-\_\-task@{timer\-\_\-function\-\_\-task}!taskScheduler.c@{task\-Scheduler.\-c}}
+\subsubsection[{timer\-\_\-function\-\_\-task}]{\setlength{\rightskip}{0pt plus 5cm}void timer\-\_\-function\-\_\-task (
+\begin{DoxyParamCaption}
+\item[{{\bf T\-A\-S\-K\-\_\-\-S} $\ast$}]{task}
+\end{DoxyParamCaption}
+)}}\label{taskScheduler_8c_a39e4b92cd20da5838951ab5b0ad19fbb}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000003}{Todo}]make a function to set all times to zero \end{DoxyRefDesc}
 
 
-\begin{Desc}
-\item[\hyperlink{todo__todo000003}{Todo}]make a function to set all times to zero \end{Desc}
-
-
-
-
-Definition at line 68 of file taskScheduler.c.
-
-
+Definition at line 68 of file task\-Scheduler.\-c.
 
 
 \begin{DoxyCode}
-69 {
-70   //int status = 0;
-71   static struct timeval timereset;
-72   static struct timeval time;
-73   static struct timeval time_exec_start;
-74   static struct timeval time_exec_end;
-75   static double T_task,t_task,t_task_previous;
-76   static double T_task_mean,T_task_min,T_task_max,T_task_exec;
-77 
-78   gettimeofday(&time_exec_start, NULL);
-79 
-80   // Time calculation
-81   if((*task).isFirstExecution)
-82     {
-83       gettimeofday(&timereset, NULL);
-85     }
-86 
-87   gettimeofday(&time, NULL);
-88   t_task = ((time.tv_sec - timereset.tv_sec) + (time.tv_usec - timereset.tv_usec)
-      *1e-6);
-89   T_task = t_task - t_task_previous;
-90   t_task_previous = t_task;
-91 
-92   if((*task).isFirstExecution)
-93     {
-94       T_task_mean = T_task;
-95       T_task_min  = 1e200;
-96       T_task_max  = 0.0;
-97       //t0 = t_task;
-98     }
-99   else
-100     {
-101       T_task_mean = 0.05*T_task + 0.95*T_task_mean;
-102       if(T_task < T_task_min) T_task_min  = T_task;
-103       if(T_task > T_task_max) T_task_max  = T_task;
-104     }
-105 
-106   // Run the thread
-107   //status = task->run();
-108 
-109   gettimeofday(&time_exec_end, NULL);
-110   T_task_exec = ((time_exec_end.tv_sec - time_exec_start.tv_sec) + (time_exec_end
-      .tv_usec - time_exec_start.tv_usec)*1e-6);
-111 
-112   (*task).t_global = t_task;
-113   (*task).T_mean_global = T_task_mean;
-114   (*task).T_min_global = T_task_min;
-115   (*task).T_max_global = T_task_max;
-116   (*task).T_exec_global = T_task_exec;
-117 
-118   (*task).isFirstExecution = 0;
-119 }
+\{
+  \textcolor{comment}{//int status = 0;}
+  \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval timereset;
+  \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval time;
+  \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval time\_exec\_start;
+  \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval time\_exec\_end;
+  \textcolor{keyword}{static} \textcolor{keywordtype}{double} T\_task,t\_task,t\_task\_previous;
+  \textcolor{keyword}{static} \textcolor{keywordtype}{double} T\_task\_mean,T\_task\_min,T\_task\_max,T\_task\_exec;
+
+  gettimeofday(&time\_exec\_start, NULL);
+
+  \textcolor{comment}{// Time calculation}
+  \textcolor{keywordflow}{if}((*task).isFirstExecution)
+    \{
+      gettimeofday(&timereset, NULL);
+    \}
+
+  gettimeofday(&time, NULL);
+  t\_task = ((time.tv\_sec - timereset.tv\_sec) + (time.tv\_usec - timereset.
+      tv\_usec)*1e-6);
+  T\_task = t\_task - t\_task\_previous;
+  t\_task\_previous = t\_task;
+
+  \textcolor{keywordflow}{if}((*task).isFirstExecution)
+    \{
+      T\_task\_mean = T\_task;
+      T\_task\_min  = 1e200;
+      T\_task\_max  = 0.0;
+      \textcolor{comment}{//t0 = t\_task;}
+    \}
+  \textcolor{keywordflow}{else}
+    \{
+      T\_task\_mean = 0.05*T\_task + 0.95*T\_task\_mean;
+      \textcolor{keywordflow}{if}(T\_task < T\_task\_min) T\_task\_min  = T\_task;
+      \textcolor{keywordflow}{if}(T\_task > T\_task\_max) T\_task\_max  = T\_task;
+    \}
+
+  \textcolor{comment}{// Run the thread}
+  \textcolor{comment}{//status = task->run();}
+
+  gettimeofday(&time\_exec\_end, NULL);
+  T\_task\_exec = ((time\_exec\_end.tv\_sec - time\_exec\_start.tv\_sec) + (
+      time\_exec\_end.tv\_usec - time\_exec\_start.tv\_usec)*1e-6);
+
+  (*task).t\_global = t\_task;
+  (*task).T\_mean\_global = T\_task\_mean;
+  (*task).T\_min\_global = T\_task\_min;
+  (*task).T\_max\_global = T\_task\_max;
+  (*task).T\_exec\_global = T\_task\_exec;
+
+  (*task).isFirstExecution = 0;
+\}
 \end{DoxyCode}
-
-

@@ -1,206 +1,257 @@
-\hypertarget{group__enc}{
-\section{Function of Encoder AMT203}
-\label{group__enc}\index{Function of Encoder AMT203@{Function of Encoder AMT203}}
+\hypertarget{group__enc}{\section{Function of Encoder A\-M\-T203}
+\label{group__enc}\index{Function of Encoder A\-M\-T203@{Function of Encoder A\-M\-T203}}
 }
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-int \hyperlink{group__enc_ga813c09cc4d9af8b357fe440a9438e685}{enc\_\-read\_\-pos} (int spi\_\-dev, unsigned short int $\ast$data)
-\begin{DoxyCompactList}\small\item\em READ POSITION. \item\end{DoxyCompactList}\item 
-int \hyperlink{group__enc_gaebbe7b9d3c2571f7481cefacbe36c498}{enc\_\-zero\_\-set} (int spi\_\-dev)
-\begin{DoxyCompactList}\small\item\em SET ZERO POINT. \item\end{DoxyCompactList}\item 
-int \hyperlink{group__enc_gad82fb44f2e735628ec95e003e4a1f93c}{enc\_\-wait\_\-for\_\-ack} (int spi\_\-dev, uint8\_\-t ack, int max\_\-errors)
-\begin{DoxyCompactList}\small\item\em send command and delay between reads \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+int \hyperlink{group__enc_ga813c09cc4d9af8b357fe440a9438e685}{enc\-\_\-read\-\_\-pos} (int spi\-\_\-dev, unsigned short int $\ast$data)
+\begin{DoxyCompactList}\small\item\em R\-E\-A\-D P\-O\-S\-I\-T\-I\-O\-N. \end{DoxyCompactList}\item 
+int \hyperlink{group__enc_gaebbe7b9d3c2571f7481cefacbe36c498}{enc\-\_\-zero\-\_\-set} (int spi\-\_\-dev)
+\begin{DoxyCompactList}\small\item\em S\-E\-T Z\-E\-R\-O P\-O\-I\-N\-T. \end{DoxyCompactList}\item 
+int \hyperlink{group__enc_gad82fb44f2e735628ec95e003e4a1f93c}{enc\-\_\-wait\-\_\-for\-\_\-ack} (int spi\-\_\-dev, uint8\-\_\-t ack, int max\-\_\-errors)
+\begin{DoxyCompactList}\small\item\em send command and delay between reads \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
 
 
 \subsection{Function Documentation}
-\hypertarget{group__enc_ga813c09cc4d9af8b357fe440a9438e685}{
-\index{enc@{enc}!enc\_\-read\_\-pos@{enc\_\-read\_\-pos}}
-\index{enc\_\-read\_\-pos@{enc\_\-read\_\-pos}!enc@{enc}}
-\subsubsection[{enc\_\-read\_\-pos}]{\setlength{\rightskip}{0pt plus 5cm}int enc\_\-read\_\-pos (int {\em spi\_\-dev}, \/  unsigned short int $\ast$ {\em data})}}
-\label{group__enc_ga813c09cc4d9af8b357fe440a9438e685}
+\hypertarget{group__enc_ga813c09cc4d9af8b357fe440a9438e685}{\index{Function of Encoder A\-M\-T203@{Function of Encoder A\-M\-T203}!enc\-\_\-read\-\_\-pos@{enc\-\_\-read\-\_\-pos}}
+\index{enc\-\_\-read\-\_\-pos@{enc\-\_\-read\-\_\-pos}!Function of Encoder AMT203@{Function of Encoder A\-M\-T203}}
+\subsubsection[{enc\-\_\-read\-\_\-pos}]{\setlength{\rightskip}{0pt plus 5cm}int enc\-\_\-read\-\_\-pos (
+\begin{DoxyParamCaption}
+\item[{int}]{spi\-\_\-dev, }
+\item[{unsigned short int $\ast$}]{data}
+\end{DoxyParamCaption}
+)}}\label{group__enc_ga813c09cc4d9af8b357fe440a9438e685}
 
 
-READ POSITION. 
+R\-E\-A\-D P\-O\-S\-I\-T\-I\-O\-N. 
 
 
-\begin{DoxyParams}{Parameters}
-\item[{\em spi\_\-dev}]Communication Port \item[\mbox{$\leftarrow$} {\em $\ast$data}]Data to read \end{DoxyParams}
+\begin{DoxyParams}[1]{Parameters}
+ & {\em spi\-\_\-dev} & Communication Port \\
+\hline
+\mbox{\tt in}  & {\em $\ast$data} & Data to read \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-flag with SUCCESS or FAILURE 
+flag with S\-U\-C\-C\-E\-S\-S or F\-A\-I\-L\-U\-R\-E 
 \end{DoxyReturn}
-
-
 Check this function, in case of error put delay before each byte data
 
-
-
-Definition at line 37 of file encoder\_\-functions.c.
-
-
-
-References ARRAY\_\-SIZE, enc\_\-wait\_\-for\_\-ack(), ENCODER\_\-NO\_\-OP, ENCODER\_\-RD\_\-POS, FAILURE, INT\_\-MAX, spi\_\-trans\_\-bytes(), and SUCCESS.
+Definition at line 37 of file encoder\-\_\-functions.\-c.
 
 
 
-Referenced by read\_\-all\_\-data().
+References A\-R\-R\-A\-Y\-\_\-\-S\-I\-Z\-E, enc\-\_\-wait\-\_\-for\-\_\-ack(), E\-N\-C\-O\-D\-E\-R\-\_\-\-N\-O\-\_\-\-O\-P, E\-N\-C\-O\-D\-E\-R\-\_\-\-R\-D\-\_\-\-P\-O\-S, F\-A\-I\-L\-U\-R\-E, I\-N\-T\-\_\-\-M\-A\-X, spi\-\_\-trans\-\_\-bytes(), and S\-U\-C\-C\-E\-S\-S.
 
 
+
+Referenced by read\-\_\-all\-\_\-data().
 
 
 \begin{DoxyCode}
-37                                                       {
-38 
-39     uint8_t send[] = {ENCODER_RD_POS,ENCODER_NO_OP};
-40     uint8_t receive[ARRAY_SIZE(send)] = {0, };
-41     uint8_t buffer[ARRAY_SIZE(send)] = {0, } ;
-42     
-43     /* Send command */
-44     spi_trans_bytes(spi_dev,send,receive,1);
-45     if (enc_wait_for_ack(spi_dev, ENCODER_RD_POS, INT_MAX) != SUCCESS) { 
-46         return FAILURE; 
-47     }
-48 
-49     send[0]=ENCODER_NO_OP;
-50 
-51     if(spi_trans_bytes(spi_dev,send,receive,2) != SUCCESS) { 
-52         return FAILURE; 
-53     }
-54 
-55     buffer[0] = receive[0];
-56 
-60     if(spi_trans_bytes(spi_dev,send,receive,2) != SUCCESS) { 
-61         return FAILURE; 
-62     }
-63 
-64     buffer[1] = receive[0];
-65 
-66     *data = buffer[0]*256+buffer[1];
-67 
-68     //printf("\nreceive = 0x %2x %2x %d\n",buffer[0],buffer[1],data);
-69 
-70    return SUCCESS;
-71 }
+                                                      \{
+
+    uint8\_t send[] = \{\hyperlink{encoder__functions_8h_a24e6c0e05e904b10f56ae184da9e2aca}{ENCODER\_RD\_POS},\hyperlink{encoder__functions_8h_ac10b0f18ed2164776ad6843aa7908592}{ENCODER\_NO\_OP}\};
+    uint8\_t receive[\hyperlink{spi__functions_8h_a25f003de16c08a4888b69f619d70f427}{ARRAY\_SIZE}(send)] = \{0, \};
+    uint8\_t buffer[\hyperlink{spi__functions_8h_a25f003de16c08a4888b69f619d70f427}{ARRAY\_SIZE}(send)] = \{0, \} ;
+    
+    \textcolor{comment}{/* Send command */}
+    \hyperlink{spi__functions_8c_a3ae450d2b3ece27bb6036f811a7625a9}{spi\_trans\_bytes}(spi\_dev,send,receive,1);
+    \textcolor{keywordflow}{if} (\hyperlink{group__enc_gad82fb44f2e735628ec95e003e4a1f93c}{enc\_wait\_for\_ack}(spi\_dev, \hyperlink{encoder__functions_8h_a24e6c0e05e904b10f56ae184da9e2aca}{ENCODER\_RD\_POS},
+       \hyperlink{encoder__functions_8h_a9ec306f36d50c7375e74f0d1c55a3a67}{INT\_MAX}) != \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS}) \{ 
+        \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE}; 
+    \}
+
+    send[0]=\hyperlink{encoder__functions_8h_ac10b0f18ed2164776ad6843aa7908592}{ENCODER\_NO\_OP};
+
+    \textcolor{keywordflow}{if}(\hyperlink{spi__functions_8c_a3ae450d2b3ece27bb6036f811a7625a9}{spi\_trans\_bytes}(spi\_dev,send,receive,2) != \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS}
+      ) \{ 
+        \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE}; 
+    \}
+
+    buffer[0] = receive[0];
+
+    \textcolor{keywordflow}{if}(\hyperlink{spi__functions_8c_a3ae450d2b3ece27bb6036f811a7625a9}{spi\_trans\_bytes}(spi\_dev,send,receive,2) != \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS}
+      ) \{ 
+        \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE}; 
+    \}
+
+    buffer[1] = receive[0];
+
+    *data = buffer[0]*256+buffer[1];
+
+    \textcolor{comment}{//printf("\(\backslash\)nreceive = 0x %2x %2x %d\(\backslash\)n",buffer[0],buffer[1],data);}
+
+   \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};
+\}
 \end{DoxyCode}
 
 
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__enc_ga813c09cc4d9af8b357fe440a9438e685_cgraph}
+\end{center}
+\end{figure}
 
 
-Here is the call graph for this function:
 
 
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__enc_ga813c09cc4d9af8b357fe440a9438e685_icgraph}
+\end{center}
+\end{figure}
 
-Here is the caller graph for this function:
 
-\hypertarget{group__enc_gad82fb44f2e735628ec95e003e4a1f93c}{
-\index{enc@{enc}!enc\_\-wait\_\-for\_\-ack@{enc\_\-wait\_\-for\_\-ack}}
-\index{enc\_\-wait\_\-for\_\-ack@{enc\_\-wait\_\-for\_\-ack}!enc@{enc}}
-\subsubsection[{enc\_\-wait\_\-for\_\-ack}]{\setlength{\rightskip}{0pt plus 5cm}int enc\_\-wait\_\-for\_\-ack (int {\em spi\_\-dev}, \/  uint8\_\-t {\em ack}, \/  int {\em max\_\-errors})}}
-\label{group__enc_gad82fb44f2e735628ec95e003e4a1f93c}
+\hypertarget{group__enc_gad82fb44f2e735628ec95e003e4a1f93c}{\index{Function of Encoder A\-M\-T203@{Function of Encoder A\-M\-T203}!enc\-\_\-wait\-\_\-for\-\_\-ack@{enc\-\_\-wait\-\_\-for\-\_\-ack}}
+\index{enc\-\_\-wait\-\_\-for\-\_\-ack@{enc\-\_\-wait\-\_\-for\-\_\-ack}!Function of Encoder AMT203@{Function of Encoder A\-M\-T203}}
+\subsubsection[{enc\-\_\-wait\-\_\-for\-\_\-ack}]{\setlength{\rightskip}{0pt plus 5cm}int enc\-\_\-wait\-\_\-for\-\_\-ack (
+\begin{DoxyParamCaption}
+\item[{int}]{spi\-\_\-dev, }
+\item[{uint8\-\_\-t}]{ack, }
+\item[{int}]{max\-\_\-errors}
+\end{DoxyParamCaption}
+)}}\label{group__enc_gad82fb44f2e735628ec95e003e4a1f93c}
 
 
 send command and delay between reads 
 
 
-\begin{DoxyParams}{Parameters}
-\item[{\em spi\_\-dev}]Communication Dev \item[\mbox{$\leftarrow$} {\em data}]Data to write \end{DoxyParams}
+\begin{DoxyParams}[1]{Parameters}
+ & {\em spi\-\_\-dev} & Communication Dev \\
+\hline
+\mbox{\tt in}  & {\em data} & Data to write \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-flag with SUCCESS or FAILURE 
+flag with S\-U\-C\-C\-E\-S\-S or F\-A\-I\-L\-U\-R\-E 
 \end{DoxyReturn}
 
 
-Definition at line 73 of file encoder\_\-functions.c.
+Definition at line 73 of file encoder\-\_\-functions.\-c.
 
 
 
-References ENCODER\_\-NO\_\-OP, ENCODER\_\-WAIT\_\-RESP, FAILURE, spi\_\-trans\_\-bytes(), and SUCCESS.
+References E\-N\-C\-O\-D\-E\-R\-\_\-\-N\-O\-\_\-\-O\-P, E\-N\-C\-O\-D\-E\-R\-\_\-\-W\-A\-I\-T\-\_\-\-R\-E\-S\-P, F\-A\-I\-L\-U\-R\-E, spi\-\_\-trans\-\_\-bytes(), and S\-U\-C\-C\-E\-S\-S.
 
 
 
-Referenced by enc\_\-read\_\-pos(), and enc\_\-zero\_\-set().
-
-
+Referenced by enc\-\_\-read\-\_\-pos(), and enc\-\_\-zero\-\_\-set().
 
 
 \begin{DoxyCode}
-74 {
-75     int errors = 0;
-76     uint8_t send = ENCODER_NO_OP;
-77     uint8_t receive = 1;
-78         
-79   //nanosleep(10);
-80         //spi_trans_bytes(spi_dev,send,receive,1);
-81     while (receive != ack) {
-82         spi_trans_bytes(spi_dev,&send,&receive,1);
-83         //printf("\nReceive = 0x%x \n",receive);
-84         if (receive != ENCODER_WAIT_RESP) {
-85             errors++;
-86             if (errors > max_errors) { return FAILURE; }
-87         }
-88     }
-89 
-90 
-91     return SUCCESS;
-92 }
+\{
+    \textcolor{keywordtype}{int} errors = 0;
+    uint8\_t send = \hyperlink{encoder__functions_8h_ac10b0f18ed2164776ad6843aa7908592}{ENCODER\_NO\_OP};
+    uint8\_t receive = 1;
+        
+  \textcolor{comment}{//nanosleep(10);}
+        \textcolor{comment}{//spi\_trans\_bytes(spi\_dev,send,receive,1);}
+    \textcolor{keywordflow}{while} (receive != ack) \{
+        \hyperlink{spi__functions_8c_a3ae450d2b3ece27bb6036f811a7625a9}{spi\_trans\_bytes}(spi\_dev,&send,&receive,1);
+        \textcolor{comment}{//printf("\(\backslash\)nReceive = 0x%x \(\backslash\)n",receive);}
+        \textcolor{keywordflow}{if} (receive != \hyperlink{encoder__functions_8h_a77c3a97f7312d858d04ec3b4e1fb2176}{ENCODER\_WAIT\_RESP}) \{
+            errors++;
+            \textcolor{keywordflow}{if} (errors > max\_errors) \{ \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE}; \}
+        \}
+    \}
+
+
+    \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};
+\}
 \end{DoxyCode}
 
 
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{group__enc_gad82fb44f2e735628ec95e003e4a1f93c_cgraph}
+\end{center}
+\end{figure}
 
 
-Here is the call graph for this function:
 
 
-
-Here is the caller graph for this function:
-
-\hypertarget{group__enc_gaebbe7b9d3c2571f7481cefacbe36c498}{
-\index{enc@{enc}!enc\_\-zero\_\-set@{enc\_\-zero\_\-set}}
-\index{enc\_\-zero\_\-set@{enc\_\-zero\_\-set}!enc@{enc}}
-\subsubsection[{enc\_\-zero\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}int enc\_\-zero\_\-set (int {\em spi\_\-dev})}}
-\label{group__enc_gaebbe7b9d3c2571f7481cefacbe36c498}
-
-
-SET ZERO POINT. 
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__enc_gad82fb44f2e735628ec95e003e4a1f93c_icgraph}
+\end{center}
+\end{figure}
 
 
-\begin{DoxyParams}{Parameters}
-\item[{\em spi\_\-dev}]Communication Dev \item[\mbox{$\leftarrow$} {\em data}]Data to write\end{DoxyParams}
+\hypertarget{group__enc_gaebbe7b9d3c2571f7481cefacbe36c498}{\index{Function of Encoder A\-M\-T203@{Function of Encoder A\-M\-T203}!enc\-\_\-zero\-\_\-set@{enc\-\_\-zero\-\_\-set}}
+\index{enc\-\_\-zero\-\_\-set@{enc\-\_\-zero\-\_\-set}!Function of Encoder AMT203@{Function of Encoder A\-M\-T203}}
+\subsubsection[{enc\-\_\-zero\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}int enc\-\_\-zero\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{int}]{spi\-\_\-dev}
+\end{DoxyParamCaption}
+)}}\label{group__enc_gaebbe7b9d3c2571f7481cefacbe36c498}
+
+
+S\-E\-T Z\-E\-R\-O P\-O\-I\-N\-T. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em spi\-\_\-dev} & Communication Dev \\
+\hline
+\mbox{\tt in}  & {\em data} & Data to write\\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-flag with SUCCESS or FAILURE 
+flag with S\-U\-C\-C\-E\-S\-S or F\-A\-I\-L\-U\-R\-E 
 \end{DoxyReturn}
 
 
-Definition at line 19 of file encoder\_\-functions.c.
+Definition at line 19 of file encoder\-\_\-functions.\-c.
 
 
 
-References enc\_\-wait\_\-for\_\-ack(), ENCODER\_\-EEPROM\_\-WR, ENCODER\_\-SET\_\-ZERO\_\-PT, FAILURE, INT\_\-MAX, spi\_\-trans\_\-bytes(), and SUCCESS.
-
-
+References enc\-\_\-wait\-\_\-for\-\_\-ack(), E\-N\-C\-O\-D\-E\-R\-\_\-\-E\-E\-P\-R\-O\-M\-\_\-\-W\-R, E\-N\-C\-O\-D\-E\-R\-\_\-\-S\-E\-T\-\_\-\-Z\-E\-R\-O\-\_\-\-P\-T, F\-A\-I\-L\-U\-R\-E, I\-N\-T\-\_\-\-M\-A\-X, spi\-\_\-trans\-\_\-bytes(), and S\-U\-C\-C\-E\-S\-S.
 
 
 \begin{DoxyCode}
-19                              {
-20 
-21     uint8_t send = ENCODER_SET_ZERO_PT;
-22     uint8_t receive = 0;
-23     
-24     /* Send command */
-25     spi_trans_bytes(spi_dev,&send,&receive,1);
-26     if (enc_wait_for_ack(spi_dev, ENCODER_EEPROM_WR, INT_MAX) != SUCCESS){ 
-27         return FAILURE;
-28     }
-29 
-30     /* Note: 
-31      *   From datasheet, the encoder must be power-cycled after this command
-32      *   for the new zero position to be used in the position calculation. */
-33 
-34     return SUCCESS;
-35 }
+                             \{
+
+    uint8\_t send = \hyperlink{encoder__functions_8h_aa2fec4e0eb5a7b3668158a57952b9dbe}{ENCODER\_SET\_ZERO\_PT};
+    uint8\_t receive = 0;
+    
+    \textcolor{comment}{/* Send command */}
+    \hyperlink{spi__functions_8c_a3ae450d2b3ece27bb6036f811a7625a9}{spi\_trans\_bytes}(spi\_dev,&send,&receive,1);
+    \textcolor{keywordflow}{if} (\hyperlink{group__enc_gad82fb44f2e735628ec95e003e4a1f93c}{enc\_wait\_for\_ack}(spi\_dev, \hyperlink{encoder__functions_8h_ab815abd4b9b825c60dbb04aad0d0e846}{ENCODER\_EEPROM\_WR}
+      , \hyperlink{encoder__functions_8h_a9ec306f36d50c7375e74f0d1c55a3a67}{INT\_MAX}) != \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS})\{ 
+        \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
+    \}
+
+    \textcolor{comment}{/* Note: }
+\textcolor{comment}{     *   From datasheet, the encoder must be power-cycled after this command}
+\textcolor{comment}{     *   for the new zero position to be used in the position calculation. */}
+
+    \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};
+\}
 \end{DoxyCode}
 
 
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__enc_gaebbe7b9d3c2571f7481cefacbe36c498_cgraph}
+\end{center}
+\end{figure}
 
-
-Here is the call graph for this function:
 

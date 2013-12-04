@@ -1,376 +1,346 @@
-\hypertarget{calibration_2calibration_8h}{
-\section{calibration/calibration.h File Reference}
-\label{calibration_2calibration_8h}\index{calibration/calibration.h@{calibration/calibration.h}}
+\hypertarget{calibration_2calibration_8h}{\section{calibration/calibration.h File Reference}
+\label{calibration_2calibration_8h}\index{calibration/calibration.\-h@{calibration/calibration.\-h}}
 }
-{\ttfamily \#include \char`\"{}../communication/communication.h\char`\"{}}\par
-Include dependency graph for calibration.h:This graph shows which files directly or indirectly include this file:\subsection*{Defines}
+{\ttfamily \#include \char`\"{}../communication/communication.\-h\char`\"{}}\\*
+Include dependency graph for calibration.\-h\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{calibration_2calibration_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{calibration_2calibration_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS}~1
+\#define \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{S\-U\-C\-C\-E\-S\-S}~1
 \item 
-\#define \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE}~-\/1
+\#define \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{F\-A\-I\-L\-U\-R\-E}~-\/1
 \item 
-\#define \hyperlink{calibration_2calibration_8h_a355ea8f6ceed1e1d419a3ea2271bfca3}{ACC\_\-BIAS\_\-X}~19.2
+\#define \hyperlink{calibration_2calibration_8h_a355ea8f6ceed1e1d419a3ea2271bfca3}{A\-C\-C\-\_\-\-B\-I\-A\-S\-\_\-\-X}~19.\-2
 \item 
-\#define \hyperlink{calibration_2calibration_8h_a34180f1c97e84a814ef181f62bf4b68f}{ACC\_\-BIAS\_\-Y}~6.024
+\#define \hyperlink{calibration_2calibration_8h_a34180f1c97e84a814ef181f62bf4b68f}{A\-C\-C\-\_\-\-B\-I\-A\-S\-\_\-\-Y}~6.\-024
 \item 
-\#define \hyperlink{calibration_2calibration_8h_a794f762650b6f228ffb8d50d1323dbea}{ACC\_\-BIAS\_\-Z}~-\/18.97
+\#define \hyperlink{calibration_2calibration_8h_a794f762650b6f228ffb8d50d1323dbea}{A\-C\-C\-\_\-\-B\-I\-A\-S\-\_\-\-Z}~-\/18.\-97
 \item 
-\#define \hyperlink{calibration_2calibration_8h_a76e6967cb5a86ec34986b4583ac09831}{ACC\_\-FS\_\-X}~262.82
+\#define \hyperlink{calibration_2calibration_8h_a76e6967cb5a86ec34986b4583ac09831}{A\-C\-C\-\_\-\-F\-S\-\_\-\-X}~262.\-82
 \item 
-\#define \hyperlink{calibration_2calibration_8h_a13d3aaab3b5800b11351cbd1246c8918}{ACC\_\-FS\_\-Y}~262.15
+\#define \hyperlink{calibration_2calibration_8h_a13d3aaab3b5800b11351cbd1246c8918}{A\-C\-C\-\_\-\-F\-S\-\_\-\-Y}~262.\-15
 \item 
-\#define \hyperlink{calibration_2calibration_8h_af1d3370cc0958289199c8c13470602d4}{ACC\_\-FS\_\-Z}~252.20
+\#define \hyperlink{calibration_2calibration_8h_af1d3370cc0958289199c8c13470602d4}{A\-C\-C\-\_\-\-F\-S\-\_\-\-Z}~252.\-20
 \item 
-\#define \hyperlink{calibration_2calibration_8h_a33f53b04fe0f887e8d9d99e4374c0ddf}{MAG\_\-BIAS\_\-X}~-\/143
+\#define \hyperlink{calibration_2calibration_8h_a33f53b04fe0f887e8d9d99e4374c0ddf}{M\-A\-G\-\_\-\-B\-I\-A\-S\-\_\-\-X}~-\/143
 \item 
-\#define \hyperlink{calibration_2calibration_8h_a92407f4dfd1c63cede9a5307b379c569}{MAG\_\-BIAS\_\-Y}~-\/101
+\#define \hyperlink{calibration_2calibration_8h_a92407f4dfd1c63cede9a5307b379c569}{M\-A\-G\-\_\-\-B\-I\-A\-S\-\_\-\-Y}~-\/101
 \item 
-\#define \hyperlink{calibration_2calibration_8h_a9662c4fff54f93bcc4e043e84e79d623}{MAG\_\-BIAS\_\-Z}~3
+\#define \hyperlink{calibration_2calibration_8h_a9662c4fff54f93bcc4e043e84e79d623}{M\-A\-G\-\_\-\-B\-I\-A\-S\-\_\-\-Z}~3
 \item 
-\#define \hyperlink{calibration_2calibration_8h_aa49abc19ca0fda3324df06bddae2c1d4}{MAG\_\-FS\_\-X}~177
+\#define \hyperlink{calibration_2calibration_8h_aa49abc19ca0fda3324df06bddae2c1d4}{M\-A\-G\-\_\-\-F\-S\-\_\-\-X}~177
 \item 
-\#define \hyperlink{calibration_2calibration_8h_a5c5e64196104a5e5ebac3c594220eb5c}{MAG\_\-FS\_\-Y}~139
+\#define \hyperlink{calibration_2calibration_8h_a5c5e64196104a5e5ebac3c594220eb5c}{M\-A\-G\-\_\-\-F\-S\-\_\-\-Y}~139
 \item 
-\#define \hyperlink{calibration_2calibration_8h_aebfc43ba340d89fa86b4a5c07cc7c924}{MAG\_\-FS\_\-Z}~85
+\#define \hyperlink{calibration_2calibration_8h_aebfc43ba340d89fa86b4a5c07cc7c924}{M\-A\-G\-\_\-\-F\-S\-\_\-\-Z}~85
 \item 
-\#define \hyperlink{calibration_2calibration_8h_a69780ffe3a15aad4121fed56d5e47377}{GYR\_\-BIAS\_\-X}~-\/60.9046
+\#define \hyperlink{calibration_2calibration_8h_a69780ffe3a15aad4121fed56d5e47377}{G\-Y\-R\-\_\-\-B\-I\-A\-S\-\_\-\-X}~-\/60.\-9046
 \item 
-\#define \hyperlink{calibration_2calibration_8h_af3264a08be995ea97ae8581128873877}{GYR\_\-BIAS\_\-Y}~40.9062
+\#define \hyperlink{calibration_2calibration_8h_af3264a08be995ea97ae8581128873877}{G\-Y\-R\-\_\-\-B\-I\-A\-S\-\_\-\-Y}~40.\-9062
 \item 
-\#define \hyperlink{calibration_2calibration_8h_aa10980bbf5b1dd91704d4dab98fcf991}{GYR\_\-BIAS\_\-Z}~0.8769
+\#define \hyperlink{calibration_2calibration_8h_aa10980bbf5b1dd91704d4dab98fcf991}{G\-Y\-R\-\_\-\-B\-I\-A\-S\-\_\-\-Z}~0.\-8769
 \item 
-\#define \hyperlink{calibration_2calibration_8h_a8fe84f8c6d39f41d8622fd0cbce3a522}{GYR\_\-FS\_\-X}~0.001214142
+\#define \hyperlink{calibration_2calibration_8h_a8fe84f8c6d39f41d8622fd0cbce3a522}{G\-Y\-R\-\_\-\-F\-S\-\_\-\-X}~0.\-001214142
 \item 
-\#define \hyperlink{calibration_2calibration_8h_a4be2e0fa7596546bb4699862d0fe4183}{GYR\_\-FS\_\-Y}~0.001214142
+\#define \hyperlink{calibration_2calibration_8h_a4be2e0fa7596546bb4699862d0fe4183}{G\-Y\-R\-\_\-\-F\-S\-\_\-\-Y}~0.\-001214142
 \item 
-\#define \hyperlink{calibration_2calibration_8h_aaee2ece0c43cc20d7c531ab79dcd06c8}{GYR\_\-FS\_\-Z}~0.001214142
+\#define \hyperlink{calibration_2calibration_8h_aaee2ece0c43cc20d7c531ab79dcd06c8}{G\-Y\-R\-\_\-\-F\-S\-\_\-\-Z}~0.\-001214142
 \item 
-\#define \hyperlink{calibration_2calibration_8h_adf9edcc7e266ed7333f7570965f5956a}{ENC\_\-FS}~0.08789062
+\#define \hyperlink{calibration_2calibration_8h_adf9edcc7e266ed7333f7570965f5956a}{E\-N\-C\-\_\-\-F\-S}~0.\-08789062
 \item 
-\#define \hyperlink{calibration_2calibration_8h_a496f1fb8343dc6e6bcdf07eb28557f41}{ENC\_\-MAX}~4096
+\#define \hyperlink{calibration_2calibration_8h_a496f1fb8343dc6e6bcdf07eb28557f41}{E\-N\-C\-\_\-\-M\-A\-X}~4096
 \end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{group__calibrate_ga043045246cf217758281222214c4addc}{calibrate\_\-all} (\hyperlink{structIMU__DATA__STRUCT}{IMU\_\-DATA\_\-STRUCT} $\ast$\hyperlink{threads__linux_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\_\-data})
-\begin{DoxyCompactList}\small\item\em Calibrate all sensors. \item\end{DoxyCompactList}\item 
-void \hyperlink{group__calibrate_gaecfc81d152db2843b5d1517729804d63}{calibrate\_\-imu} (\hyperlink{structIMU__DATA__STRUCT}{IMU\_\-DATA\_\-STRUCT} $\ast$\hyperlink{threads__linux_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\_\-data})
-\begin{DoxyCompactList}\small\item\em Calibrate imu sensors. \item\end{DoxyCompactList}\item 
-void \hyperlink{calibration_2calibration_8h_ae8f1281c6870b23c1c158b30998f7568}{calibrate\_\-enc} (\hyperlink{structENC__DATA__STRUCT}{ENC\_\-DATA\_\-STRUCT} $\ast$\hyperlink{main2_8c_aaa441e18ae805c4f3efb0b5231d1cfe7}{enc\_\-data})
-\begin{DoxyCompactList}\small\item\em Calibrate encoder to return values in the rage of 0 to 90. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+void \hyperlink{group__calibrate_ga043045246cf217758281222214c4addc}{calibrate\-\_\-all} (\hyperlink{structIMU__DATA__STRUCT}{I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$\hyperlink{threads__linux_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\-\_\-data})
+\begin{DoxyCompactList}\small\item\em Calibrate all sensors. \end{DoxyCompactList}\item 
+void \hyperlink{group__calibrate_gaecfc81d152db2843b5d1517729804d63}{calibrate\-\_\-imu} (\hyperlink{structIMU__DATA__STRUCT}{I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$\hyperlink{threads__linux_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\-\_\-data})
+\begin{DoxyCompactList}\small\item\em Calibrate imu sensors. \end{DoxyCompactList}\item 
+void \hyperlink{calibration_2calibration_8h_ae8f1281c6870b23c1c158b30998f7568}{calibrate\-\_\-enc} (\hyperlink{structENC__DATA__STRUCT}{E\-N\-C\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$\hyperlink{main2_8c_aaa441e18ae805c4f3efb0b5231d1cfe7}{enc\-\_\-data})
+\begin{DoxyCompactList}\small\item\em Calibrate encoder to return values in the rage of 0 to 90. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{Define Documentation}
-\hypertarget{calibration_2calibration_8h_a355ea8f6ceed1e1d419a3ea2271bfca3}{
-\index{calibration/calibration.h@{calibration/calibration.h}!ACC\_\-BIAS\_\-X@{ACC\_\-BIAS\_\-X}}
-\index{ACC\_\-BIAS\_\-X@{ACC\_\-BIAS\_\-X}!calibration/calibration.h@{calibration/calibration.h}}
-\subsubsection[{ACC\_\-BIAS\_\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define ACC\_\-BIAS\_\-X~19.2}}
-\label{calibration_2calibration_8h_a355ea8f6ceed1e1d419a3ea2271bfca3}
+\subsection{Macro Definition Documentation}
+\hypertarget{calibration_2calibration_8h_a355ea8f6ceed1e1d419a3ea2271bfca3}{\index{calibration/calibration.\-h@{calibration/calibration.\-h}!A\-C\-C\-\_\-\-B\-I\-A\-S\-\_\-\-X@{A\-C\-C\-\_\-\-B\-I\-A\-S\-\_\-\-X}}
+\index{A\-C\-C\-\_\-\-B\-I\-A\-S\-\_\-\-X@{A\-C\-C\-\_\-\-B\-I\-A\-S\-\_\-\-X}!calibration/calibration.h@{calibration/calibration.\-h}}
+\subsubsection[{A\-C\-C\-\_\-\-B\-I\-A\-S\-\_\-\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-C\-C\-\_\-\-B\-I\-A\-S\-\_\-\-X~19.\-2}}\label{calibration_2calibration_8h_a355ea8f6ceed1e1d419a3ea2271bfca3}
 
 
-Definition at line 15 of file calibration.h.
+Definition at line 15 of file calibration.\-h.
 
 
 
-Referenced by calibrate\_\-imu().
+Referenced by calibrate\-\_\-imu().
 
-\hypertarget{calibration_2calibration_8h_a34180f1c97e84a814ef181f62bf4b68f}{
-\index{calibration/calibration.h@{calibration/calibration.h}!ACC\_\-BIAS\_\-Y@{ACC\_\-BIAS\_\-Y}}
-\index{ACC\_\-BIAS\_\-Y@{ACC\_\-BIAS\_\-Y}!calibration/calibration.h@{calibration/calibration.h}}
-\subsubsection[{ACC\_\-BIAS\_\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define ACC\_\-BIAS\_\-Y~6.024}}
-\label{calibration_2calibration_8h_a34180f1c97e84a814ef181f62bf4b68f}
+\hypertarget{calibration_2calibration_8h_a34180f1c97e84a814ef181f62bf4b68f}{\index{calibration/calibration.\-h@{calibration/calibration.\-h}!A\-C\-C\-\_\-\-B\-I\-A\-S\-\_\-\-Y@{A\-C\-C\-\_\-\-B\-I\-A\-S\-\_\-\-Y}}
+\index{A\-C\-C\-\_\-\-B\-I\-A\-S\-\_\-\-Y@{A\-C\-C\-\_\-\-B\-I\-A\-S\-\_\-\-Y}!calibration/calibration.h@{calibration/calibration.\-h}}
+\subsubsection[{A\-C\-C\-\_\-\-B\-I\-A\-S\-\_\-\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-C\-C\-\_\-\-B\-I\-A\-S\-\_\-\-Y~6.\-024}}\label{calibration_2calibration_8h_a34180f1c97e84a814ef181f62bf4b68f}
 
 
-Definition at line 16 of file calibration.h.
+Definition at line 16 of file calibration.\-h.
 
 
 
-Referenced by calibrate\_\-imu().
+Referenced by calibrate\-\_\-imu().
 
-\hypertarget{calibration_2calibration_8h_a794f762650b6f228ffb8d50d1323dbea}{
-\index{calibration/calibration.h@{calibration/calibration.h}!ACC\_\-BIAS\_\-Z@{ACC\_\-BIAS\_\-Z}}
-\index{ACC\_\-BIAS\_\-Z@{ACC\_\-BIAS\_\-Z}!calibration/calibration.h@{calibration/calibration.h}}
-\subsubsection[{ACC\_\-BIAS\_\-Z}]{\setlength{\rightskip}{0pt plus 5cm}\#define ACC\_\-BIAS\_\-Z~-\/18.97}}
-\label{calibration_2calibration_8h_a794f762650b6f228ffb8d50d1323dbea}
+\hypertarget{calibration_2calibration_8h_a794f762650b6f228ffb8d50d1323dbea}{\index{calibration/calibration.\-h@{calibration/calibration.\-h}!A\-C\-C\-\_\-\-B\-I\-A\-S\-\_\-\-Z@{A\-C\-C\-\_\-\-B\-I\-A\-S\-\_\-\-Z}}
+\index{A\-C\-C\-\_\-\-B\-I\-A\-S\-\_\-\-Z@{A\-C\-C\-\_\-\-B\-I\-A\-S\-\_\-\-Z}!calibration/calibration.h@{calibration/calibration.\-h}}
+\subsubsection[{A\-C\-C\-\_\-\-B\-I\-A\-S\-\_\-\-Z}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-C\-C\-\_\-\-B\-I\-A\-S\-\_\-\-Z~-\/18.\-97}}\label{calibration_2calibration_8h_a794f762650b6f228ffb8d50d1323dbea}
 
 
-Definition at line 17 of file calibration.h.
+Definition at line 17 of file calibration.\-h.
 
 
 
-Referenced by calibrate\_\-imu().
+Referenced by calibrate\-\_\-imu().
 
-\hypertarget{calibration_2calibration_8h_a76e6967cb5a86ec34986b4583ac09831}{
-\index{calibration/calibration.h@{calibration/calibration.h}!ACC\_\-FS\_\-X@{ACC\_\-FS\_\-X}}
-\index{ACC\_\-FS\_\-X@{ACC\_\-FS\_\-X}!calibration/calibration.h@{calibration/calibration.h}}
-\subsubsection[{ACC\_\-FS\_\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define ACC\_\-FS\_\-X~262.82}}
-\label{calibration_2calibration_8h_a76e6967cb5a86ec34986b4583ac09831}
+\hypertarget{calibration_2calibration_8h_a76e6967cb5a86ec34986b4583ac09831}{\index{calibration/calibration.\-h@{calibration/calibration.\-h}!A\-C\-C\-\_\-\-F\-S\-\_\-\-X@{A\-C\-C\-\_\-\-F\-S\-\_\-\-X}}
+\index{A\-C\-C\-\_\-\-F\-S\-\_\-\-X@{A\-C\-C\-\_\-\-F\-S\-\_\-\-X}!calibration/calibration.h@{calibration/calibration.\-h}}
+\subsubsection[{A\-C\-C\-\_\-\-F\-S\-\_\-\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-C\-C\-\_\-\-F\-S\-\_\-\-X~262.\-82}}\label{calibration_2calibration_8h_a76e6967cb5a86ec34986b4583ac09831}
 
 
-Definition at line 18 of file calibration.h.
+Definition at line 18 of file calibration.\-h.
 
 
 
-Referenced by calibrate\_\-imu().
+Referenced by calibrate\-\_\-imu().
 
-\hypertarget{calibration_2calibration_8h_a13d3aaab3b5800b11351cbd1246c8918}{
-\index{calibration/calibration.h@{calibration/calibration.h}!ACC\_\-FS\_\-Y@{ACC\_\-FS\_\-Y}}
-\index{ACC\_\-FS\_\-Y@{ACC\_\-FS\_\-Y}!calibration/calibration.h@{calibration/calibration.h}}
-\subsubsection[{ACC\_\-FS\_\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define ACC\_\-FS\_\-Y~262.15}}
-\label{calibration_2calibration_8h_a13d3aaab3b5800b11351cbd1246c8918}
+\hypertarget{calibration_2calibration_8h_a13d3aaab3b5800b11351cbd1246c8918}{\index{calibration/calibration.\-h@{calibration/calibration.\-h}!A\-C\-C\-\_\-\-F\-S\-\_\-\-Y@{A\-C\-C\-\_\-\-F\-S\-\_\-\-Y}}
+\index{A\-C\-C\-\_\-\-F\-S\-\_\-\-Y@{A\-C\-C\-\_\-\-F\-S\-\_\-\-Y}!calibration/calibration.h@{calibration/calibration.\-h}}
+\subsubsection[{A\-C\-C\-\_\-\-F\-S\-\_\-\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-C\-C\-\_\-\-F\-S\-\_\-\-Y~262.\-15}}\label{calibration_2calibration_8h_a13d3aaab3b5800b11351cbd1246c8918}
 
 
-Definition at line 19 of file calibration.h.
+Definition at line 19 of file calibration.\-h.
 
 
 
-Referenced by calibrate\_\-imu().
+Referenced by calibrate\-\_\-imu().
 
-\hypertarget{calibration_2calibration_8h_af1d3370cc0958289199c8c13470602d4}{
-\index{calibration/calibration.h@{calibration/calibration.h}!ACC\_\-FS\_\-Z@{ACC\_\-FS\_\-Z}}
-\index{ACC\_\-FS\_\-Z@{ACC\_\-FS\_\-Z}!calibration/calibration.h@{calibration/calibration.h}}
-\subsubsection[{ACC\_\-FS\_\-Z}]{\setlength{\rightskip}{0pt plus 5cm}\#define ACC\_\-FS\_\-Z~252.20}}
-\label{calibration_2calibration_8h_af1d3370cc0958289199c8c13470602d4}
+\hypertarget{calibration_2calibration_8h_af1d3370cc0958289199c8c13470602d4}{\index{calibration/calibration.\-h@{calibration/calibration.\-h}!A\-C\-C\-\_\-\-F\-S\-\_\-\-Z@{A\-C\-C\-\_\-\-F\-S\-\_\-\-Z}}
+\index{A\-C\-C\-\_\-\-F\-S\-\_\-\-Z@{A\-C\-C\-\_\-\-F\-S\-\_\-\-Z}!calibration/calibration.h@{calibration/calibration.\-h}}
+\subsubsection[{A\-C\-C\-\_\-\-F\-S\-\_\-\-Z}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-C\-C\-\_\-\-F\-S\-\_\-\-Z~252.\-20}}\label{calibration_2calibration_8h_af1d3370cc0958289199c8c13470602d4}
 
 
-Definition at line 20 of file calibration.h.
+Definition at line 20 of file calibration.\-h.
 
 
 
-Referenced by calibrate\_\-imu().
+Referenced by calibrate\-\_\-imu().
 
-\hypertarget{calibration_2calibration_8h_adf9edcc7e266ed7333f7570965f5956a}{
-\index{calibration/calibration.h@{calibration/calibration.h}!ENC\_\-FS@{ENC\_\-FS}}
-\index{ENC\_\-FS@{ENC\_\-FS}!calibration/calibration.h@{calibration/calibration.h}}
-\subsubsection[{ENC\_\-FS}]{\setlength{\rightskip}{0pt plus 5cm}\#define ENC\_\-FS~0.08789062}}
-\label{calibration_2calibration_8h_adf9edcc7e266ed7333f7570965f5956a}
+\hypertarget{calibration_2calibration_8h_adf9edcc7e266ed7333f7570965f5956a}{\index{calibration/calibration.\-h@{calibration/calibration.\-h}!E\-N\-C\-\_\-\-F\-S@{E\-N\-C\-\_\-\-F\-S}}
+\index{E\-N\-C\-\_\-\-F\-S@{E\-N\-C\-\_\-\-F\-S}!calibration/calibration.h@{calibration/calibration.\-h}}
+\subsubsection[{E\-N\-C\-\_\-\-F\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-N\-C\-\_\-\-F\-S~0.\-08789062}}\label{calibration_2calibration_8h_adf9edcc7e266ed7333f7570965f5956a}
 
 
-Definition at line 38 of file calibration.h.
+Definition at line 38 of file calibration.\-h.
 
 
 
-Referenced by calibrate\_\-enc().
+Referenced by calibrate\-\_\-enc().
 
-\hypertarget{calibration_2calibration_8h_a496f1fb8343dc6e6bcdf07eb28557f41}{
-\index{calibration/calibration.h@{calibration/calibration.h}!ENC\_\-MAX@{ENC\_\-MAX}}
-\index{ENC\_\-MAX@{ENC\_\-MAX}!calibration/calibration.h@{calibration/calibration.h}}
-\subsubsection[{ENC\_\-MAX}]{\setlength{\rightskip}{0pt plus 5cm}\#define ENC\_\-MAX~4096}}
-\label{calibration_2calibration_8h_a496f1fb8343dc6e6bcdf07eb28557f41}
+\hypertarget{calibration_2calibration_8h_a496f1fb8343dc6e6bcdf07eb28557f41}{\index{calibration/calibration.\-h@{calibration/calibration.\-h}!E\-N\-C\-\_\-\-M\-A\-X@{E\-N\-C\-\_\-\-M\-A\-X}}
+\index{E\-N\-C\-\_\-\-M\-A\-X@{E\-N\-C\-\_\-\-M\-A\-X}!calibration/calibration.h@{calibration/calibration.\-h}}
+\subsubsection[{E\-N\-C\-\_\-\-M\-A\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-N\-C\-\_\-\-M\-A\-X~4096}}\label{calibration_2calibration_8h_a496f1fb8343dc6e6bcdf07eb28557f41}
 
 
-Definition at line 39 of file calibration.h.
+Definition at line 39 of file calibration.\-h.
 
 
 
-Referenced by calibrate\_\-enc().
+Referenced by calibrate\-\_\-enc().
 
-\hypertarget{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{
-\index{calibration/calibration.h@{calibration/calibration.h}!FAILURE@{FAILURE}}
-\index{FAILURE@{FAILURE}!calibration/calibration.h@{calibration/calibration.h}}
-\subsubsection[{FAILURE}]{\setlength{\rightskip}{0pt plus 5cm}\#define FAILURE~-\/1}}
-\label{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}
+\hypertarget{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{\index{calibration/calibration.\-h@{calibration/calibration.\-h}!F\-A\-I\-L\-U\-R\-E@{F\-A\-I\-L\-U\-R\-E}}
+\index{F\-A\-I\-L\-U\-R\-E@{F\-A\-I\-L\-U\-R\-E}!calibration/calibration.h@{calibration/calibration.\-h}}
+\subsubsection[{F\-A\-I\-L\-U\-R\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-A\-I\-L\-U\-R\-E~-\/1}}\label{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}
 
 
-Definition at line 7 of file calibration.h.
+Definition at line 7 of file calibration.\-h.
 
 
 
-Referenced by acc\_\-init(), acc\_\-read\_\-all\_\-data(), acc\_\-write\_\-reg(), actuate(), adc\_\-read(), dac\_\-write(), devices\_\-init(), enc\_\-read\_\-pos(), enc\_\-wait\_\-for\_\-ack(), enc\_\-zero\_\-set(), gpio\_\-read(), gpio\_\-write(), gyr\_\-read\_\-all\_\-data(), gyr\_\-write\_\-reg(), mag\_\-read\_\-all\_\-data(), main(), read\_\-all\_\-data(), spi\_\-trans\_\-bytes(), and ui\_\-update().
+Referenced by acc\-\_\-init(), acc\-\_\-read\-\_\-all\-\_\-data(), acc\-\_\-write\-\_\-reg(), actuate(), devices\-\_\-init(), enc\-\_\-read\-\_\-pos(), enc\-\_\-wait\-\_\-for\-\_\-ack(), enc\-\_\-zero\-\_\-set(), gpio\-\_\-read(), gpio\-\_\-write(), gyr\-\_\-read\-\_\-all\-\_\-data(), gyr\-\_\-write\-\_\-reg(), mag\-\_\-read\-\_\-all\-\_\-data(), main(), read\-\_\-all\-\_\-data(), and ui\-\_\-update().
 
-\hypertarget{calibration_2calibration_8h_a69780ffe3a15aad4121fed56d5e47377}{
-\index{calibration/calibration.h@{calibration/calibration.h}!GYR\_\-BIAS\_\-X@{GYR\_\-BIAS\_\-X}}
-\index{GYR\_\-BIAS\_\-X@{GYR\_\-BIAS\_\-X}!calibration/calibration.h@{calibration/calibration.h}}
-\subsubsection[{GYR\_\-BIAS\_\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define GYR\_\-BIAS\_\-X~-\/60.9046}}
-\label{calibration_2calibration_8h_a69780ffe3a15aad4121fed56d5e47377}
+\hypertarget{calibration_2calibration_8h_a69780ffe3a15aad4121fed56d5e47377}{\index{calibration/calibration.\-h@{calibration/calibration.\-h}!G\-Y\-R\-\_\-\-B\-I\-A\-S\-\_\-\-X@{G\-Y\-R\-\_\-\-B\-I\-A\-S\-\_\-\-X}}
+\index{G\-Y\-R\-\_\-\-B\-I\-A\-S\-\_\-\-X@{G\-Y\-R\-\_\-\-B\-I\-A\-S\-\_\-\-X}!calibration/calibration.h@{calibration/calibration.\-h}}
+\subsubsection[{G\-Y\-R\-\_\-\-B\-I\-A\-S\-\_\-\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-Y\-R\-\_\-\-B\-I\-A\-S\-\_\-\-X~-\/60.\-9046}}\label{calibration_2calibration_8h_a69780ffe3a15aad4121fed56d5e47377}
 
 
-Definition at line 30 of file calibration.h.
+Definition at line 30 of file calibration.\-h.
 
 
 
-Referenced by calibrate\_\-imu().
+Referenced by calibrate\-\_\-imu().
 
-\hypertarget{calibration_2calibration_8h_af3264a08be995ea97ae8581128873877}{
-\index{calibration/calibration.h@{calibration/calibration.h}!GYR\_\-BIAS\_\-Y@{GYR\_\-BIAS\_\-Y}}
-\index{GYR\_\-BIAS\_\-Y@{GYR\_\-BIAS\_\-Y}!calibration/calibration.h@{calibration/calibration.h}}
-\subsubsection[{GYR\_\-BIAS\_\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define GYR\_\-BIAS\_\-Y~40.9062}}
-\label{calibration_2calibration_8h_af3264a08be995ea97ae8581128873877}
+\hypertarget{calibration_2calibration_8h_af3264a08be995ea97ae8581128873877}{\index{calibration/calibration.\-h@{calibration/calibration.\-h}!G\-Y\-R\-\_\-\-B\-I\-A\-S\-\_\-\-Y@{G\-Y\-R\-\_\-\-B\-I\-A\-S\-\_\-\-Y}}
+\index{G\-Y\-R\-\_\-\-B\-I\-A\-S\-\_\-\-Y@{G\-Y\-R\-\_\-\-B\-I\-A\-S\-\_\-\-Y}!calibration/calibration.h@{calibration/calibration.\-h}}
+\subsubsection[{G\-Y\-R\-\_\-\-B\-I\-A\-S\-\_\-\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-Y\-R\-\_\-\-B\-I\-A\-S\-\_\-\-Y~40.\-9062}}\label{calibration_2calibration_8h_af3264a08be995ea97ae8581128873877}
 
 
-Definition at line 31 of file calibration.h.
+Definition at line 31 of file calibration.\-h.
 
 
 
-Referenced by calibrate\_\-imu().
+Referenced by calibrate\-\_\-imu().
 
-\hypertarget{calibration_2calibration_8h_aa10980bbf5b1dd91704d4dab98fcf991}{
-\index{calibration/calibration.h@{calibration/calibration.h}!GYR\_\-BIAS\_\-Z@{GYR\_\-BIAS\_\-Z}}
-\index{GYR\_\-BIAS\_\-Z@{GYR\_\-BIAS\_\-Z}!calibration/calibration.h@{calibration/calibration.h}}
-\subsubsection[{GYR\_\-BIAS\_\-Z}]{\setlength{\rightskip}{0pt plus 5cm}\#define GYR\_\-BIAS\_\-Z~0.8769}}
-\label{calibration_2calibration_8h_aa10980bbf5b1dd91704d4dab98fcf991}
+\hypertarget{calibration_2calibration_8h_aa10980bbf5b1dd91704d4dab98fcf991}{\index{calibration/calibration.\-h@{calibration/calibration.\-h}!G\-Y\-R\-\_\-\-B\-I\-A\-S\-\_\-\-Z@{G\-Y\-R\-\_\-\-B\-I\-A\-S\-\_\-\-Z}}
+\index{G\-Y\-R\-\_\-\-B\-I\-A\-S\-\_\-\-Z@{G\-Y\-R\-\_\-\-B\-I\-A\-S\-\_\-\-Z}!calibration/calibration.h@{calibration/calibration.\-h}}
+\subsubsection[{G\-Y\-R\-\_\-\-B\-I\-A\-S\-\_\-\-Z}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-Y\-R\-\_\-\-B\-I\-A\-S\-\_\-\-Z~0.\-8769}}\label{calibration_2calibration_8h_aa10980bbf5b1dd91704d4dab98fcf991}
 
 
-Definition at line 32 of file calibration.h.
+Definition at line 32 of file calibration.\-h.
 
 
 
-Referenced by calibrate\_\-imu().
+Referenced by calibrate\-\_\-imu().
 
-\hypertarget{calibration_2calibration_8h_a8fe84f8c6d39f41d8622fd0cbce3a522}{
-\index{calibration/calibration.h@{calibration/calibration.h}!GYR\_\-FS\_\-X@{GYR\_\-FS\_\-X}}
-\index{GYR\_\-FS\_\-X@{GYR\_\-FS\_\-X}!calibration/calibration.h@{calibration/calibration.h}}
-\subsubsection[{GYR\_\-FS\_\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define GYR\_\-FS\_\-X~0.001214142}}
-\label{calibration_2calibration_8h_a8fe84f8c6d39f41d8622fd0cbce3a522}
+\hypertarget{calibration_2calibration_8h_a8fe84f8c6d39f41d8622fd0cbce3a522}{\index{calibration/calibration.\-h@{calibration/calibration.\-h}!G\-Y\-R\-\_\-\-F\-S\-\_\-\-X@{G\-Y\-R\-\_\-\-F\-S\-\_\-\-X}}
+\index{G\-Y\-R\-\_\-\-F\-S\-\_\-\-X@{G\-Y\-R\-\_\-\-F\-S\-\_\-\-X}!calibration/calibration.h@{calibration/calibration.\-h}}
+\subsubsection[{G\-Y\-R\-\_\-\-F\-S\-\_\-\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-Y\-R\-\_\-\-F\-S\-\_\-\-X~0.\-001214142}}\label{calibration_2calibration_8h_a8fe84f8c6d39f41d8622fd0cbce3a522}
 
 
-Definition at line 33 of file calibration.h.
+Definition at line 33 of file calibration.\-h.
 
 
 
-Referenced by calibrate\_\-imu().
+Referenced by calibrate\-\_\-imu().
 
-\hypertarget{calibration_2calibration_8h_a4be2e0fa7596546bb4699862d0fe4183}{
-\index{calibration/calibration.h@{calibration/calibration.h}!GYR\_\-FS\_\-Y@{GYR\_\-FS\_\-Y}}
-\index{GYR\_\-FS\_\-Y@{GYR\_\-FS\_\-Y}!calibration/calibration.h@{calibration/calibration.h}}
-\subsubsection[{GYR\_\-FS\_\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define GYR\_\-FS\_\-Y~0.001214142}}
-\label{calibration_2calibration_8h_a4be2e0fa7596546bb4699862d0fe4183}
+\hypertarget{calibration_2calibration_8h_a4be2e0fa7596546bb4699862d0fe4183}{\index{calibration/calibration.\-h@{calibration/calibration.\-h}!G\-Y\-R\-\_\-\-F\-S\-\_\-\-Y@{G\-Y\-R\-\_\-\-F\-S\-\_\-\-Y}}
+\index{G\-Y\-R\-\_\-\-F\-S\-\_\-\-Y@{G\-Y\-R\-\_\-\-F\-S\-\_\-\-Y}!calibration/calibration.h@{calibration/calibration.\-h}}
+\subsubsection[{G\-Y\-R\-\_\-\-F\-S\-\_\-\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-Y\-R\-\_\-\-F\-S\-\_\-\-Y~0.\-001214142}}\label{calibration_2calibration_8h_a4be2e0fa7596546bb4699862d0fe4183}
 
 
-Definition at line 34 of file calibration.h.
+Definition at line 34 of file calibration.\-h.
 
 
 
-Referenced by calibrate\_\-imu().
+Referenced by calibrate\-\_\-imu().
 
-\hypertarget{calibration_2calibration_8h_aaee2ece0c43cc20d7c531ab79dcd06c8}{
-\index{calibration/calibration.h@{calibration/calibration.h}!GYR\_\-FS\_\-Z@{GYR\_\-FS\_\-Z}}
-\index{GYR\_\-FS\_\-Z@{GYR\_\-FS\_\-Z}!calibration/calibration.h@{calibration/calibration.h}}
-\subsubsection[{GYR\_\-FS\_\-Z}]{\setlength{\rightskip}{0pt plus 5cm}\#define GYR\_\-FS\_\-Z~0.001214142}}
-\label{calibration_2calibration_8h_aaee2ece0c43cc20d7c531ab79dcd06c8}
+\hypertarget{calibration_2calibration_8h_aaee2ece0c43cc20d7c531ab79dcd06c8}{\index{calibration/calibration.\-h@{calibration/calibration.\-h}!G\-Y\-R\-\_\-\-F\-S\-\_\-\-Z@{G\-Y\-R\-\_\-\-F\-S\-\_\-\-Z}}
+\index{G\-Y\-R\-\_\-\-F\-S\-\_\-\-Z@{G\-Y\-R\-\_\-\-F\-S\-\_\-\-Z}!calibration/calibration.h@{calibration/calibration.\-h}}
+\subsubsection[{G\-Y\-R\-\_\-\-F\-S\-\_\-\-Z}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-Y\-R\-\_\-\-F\-S\-\_\-\-Z~0.\-001214142}}\label{calibration_2calibration_8h_aaee2ece0c43cc20d7c531ab79dcd06c8}
 
 
-Definition at line 35 of file calibration.h.
+Definition at line 35 of file calibration.\-h.
 
 
 
-Referenced by calibrate\_\-imu().
+Referenced by calibrate\-\_\-imu().
 
-\hypertarget{calibration_2calibration_8h_a33f53b04fe0f887e8d9d99e4374c0ddf}{
-\index{calibration/calibration.h@{calibration/calibration.h}!MAG\_\-BIAS\_\-X@{MAG\_\-BIAS\_\-X}}
-\index{MAG\_\-BIAS\_\-X@{MAG\_\-BIAS\_\-X}!calibration/calibration.h@{calibration/calibration.h}}
-\subsubsection[{MAG\_\-BIAS\_\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define MAG\_\-BIAS\_\-X~-\/143}}
-\label{calibration_2calibration_8h_a33f53b04fe0f887e8d9d99e4374c0ddf}
+\hypertarget{calibration_2calibration_8h_a33f53b04fe0f887e8d9d99e4374c0ddf}{\index{calibration/calibration.\-h@{calibration/calibration.\-h}!M\-A\-G\-\_\-\-B\-I\-A\-S\-\_\-\-X@{M\-A\-G\-\_\-\-B\-I\-A\-S\-\_\-\-X}}
+\index{M\-A\-G\-\_\-\-B\-I\-A\-S\-\_\-\-X@{M\-A\-G\-\_\-\-B\-I\-A\-S\-\_\-\-X}!calibration/calibration.h@{calibration/calibration.\-h}}
+\subsubsection[{M\-A\-G\-\_\-\-B\-I\-A\-S\-\_\-\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-G\-\_\-\-B\-I\-A\-S\-\_\-\-X~-\/143}}\label{calibration_2calibration_8h_a33f53b04fe0f887e8d9d99e4374c0ddf}
 
 
-Definition at line 22 of file calibration.h.
+Definition at line 22 of file calibration.\-h.
 
 
 
-Referenced by calibrate\_\-imu().
+Referenced by calibrate\-\_\-imu().
 
-\hypertarget{calibration_2calibration_8h_a92407f4dfd1c63cede9a5307b379c569}{
-\index{calibration/calibration.h@{calibration/calibration.h}!MAG\_\-BIAS\_\-Y@{MAG\_\-BIAS\_\-Y}}
-\index{MAG\_\-BIAS\_\-Y@{MAG\_\-BIAS\_\-Y}!calibration/calibration.h@{calibration/calibration.h}}
-\subsubsection[{MAG\_\-BIAS\_\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define MAG\_\-BIAS\_\-Y~-\/101}}
-\label{calibration_2calibration_8h_a92407f4dfd1c63cede9a5307b379c569}
+\hypertarget{calibration_2calibration_8h_a92407f4dfd1c63cede9a5307b379c569}{\index{calibration/calibration.\-h@{calibration/calibration.\-h}!M\-A\-G\-\_\-\-B\-I\-A\-S\-\_\-\-Y@{M\-A\-G\-\_\-\-B\-I\-A\-S\-\_\-\-Y}}
+\index{M\-A\-G\-\_\-\-B\-I\-A\-S\-\_\-\-Y@{M\-A\-G\-\_\-\-B\-I\-A\-S\-\_\-\-Y}!calibration/calibration.h@{calibration/calibration.\-h}}
+\subsubsection[{M\-A\-G\-\_\-\-B\-I\-A\-S\-\_\-\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-G\-\_\-\-B\-I\-A\-S\-\_\-\-Y~-\/101}}\label{calibration_2calibration_8h_a92407f4dfd1c63cede9a5307b379c569}
 
 
-Definition at line 23 of file calibration.h.
+Definition at line 23 of file calibration.\-h.
 
 
 
-Referenced by calibrate\_\-imu().
+Referenced by calibrate\-\_\-imu().
 
-\hypertarget{calibration_2calibration_8h_a9662c4fff54f93bcc4e043e84e79d623}{
-\index{calibration/calibration.h@{calibration/calibration.h}!MAG\_\-BIAS\_\-Z@{MAG\_\-BIAS\_\-Z}}
-\index{MAG\_\-BIAS\_\-Z@{MAG\_\-BIAS\_\-Z}!calibration/calibration.h@{calibration/calibration.h}}
-\subsubsection[{MAG\_\-BIAS\_\-Z}]{\setlength{\rightskip}{0pt plus 5cm}\#define MAG\_\-BIAS\_\-Z~3}}
-\label{calibration_2calibration_8h_a9662c4fff54f93bcc4e043e84e79d623}
+\hypertarget{calibration_2calibration_8h_a9662c4fff54f93bcc4e043e84e79d623}{\index{calibration/calibration.\-h@{calibration/calibration.\-h}!M\-A\-G\-\_\-\-B\-I\-A\-S\-\_\-\-Z@{M\-A\-G\-\_\-\-B\-I\-A\-S\-\_\-\-Z}}
+\index{M\-A\-G\-\_\-\-B\-I\-A\-S\-\_\-\-Z@{M\-A\-G\-\_\-\-B\-I\-A\-S\-\_\-\-Z}!calibration/calibration.h@{calibration/calibration.\-h}}
+\subsubsection[{M\-A\-G\-\_\-\-B\-I\-A\-S\-\_\-\-Z}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-G\-\_\-\-B\-I\-A\-S\-\_\-\-Z~3}}\label{calibration_2calibration_8h_a9662c4fff54f93bcc4e043e84e79d623}
 
 
-Definition at line 24 of file calibration.h.
+Definition at line 24 of file calibration.\-h.
 
 
 
-Referenced by calibrate\_\-imu().
+Referenced by calibrate\-\_\-imu().
 
-\hypertarget{calibration_2calibration_8h_aa49abc19ca0fda3324df06bddae2c1d4}{
-\index{calibration/calibration.h@{calibration/calibration.h}!MAG\_\-FS\_\-X@{MAG\_\-FS\_\-X}}
-\index{MAG\_\-FS\_\-X@{MAG\_\-FS\_\-X}!calibration/calibration.h@{calibration/calibration.h}}
-\subsubsection[{MAG\_\-FS\_\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define MAG\_\-FS\_\-X~177}}
-\label{calibration_2calibration_8h_aa49abc19ca0fda3324df06bddae2c1d4}
+\hypertarget{calibration_2calibration_8h_aa49abc19ca0fda3324df06bddae2c1d4}{\index{calibration/calibration.\-h@{calibration/calibration.\-h}!M\-A\-G\-\_\-\-F\-S\-\_\-\-X@{M\-A\-G\-\_\-\-F\-S\-\_\-\-X}}
+\index{M\-A\-G\-\_\-\-F\-S\-\_\-\-X@{M\-A\-G\-\_\-\-F\-S\-\_\-\-X}!calibration/calibration.h@{calibration/calibration.\-h}}
+\subsubsection[{M\-A\-G\-\_\-\-F\-S\-\_\-\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-G\-\_\-\-F\-S\-\_\-\-X~177}}\label{calibration_2calibration_8h_aa49abc19ca0fda3324df06bddae2c1d4}
 
 
-Definition at line 25 of file calibration.h.
+Definition at line 25 of file calibration.\-h.
 
 
 
-Referenced by calibrate\_\-imu().
+Referenced by calibrate\-\_\-imu().
 
-\hypertarget{calibration_2calibration_8h_a5c5e64196104a5e5ebac3c594220eb5c}{
-\index{calibration/calibration.h@{calibration/calibration.h}!MAG\_\-FS\_\-Y@{MAG\_\-FS\_\-Y}}
-\index{MAG\_\-FS\_\-Y@{MAG\_\-FS\_\-Y}!calibration/calibration.h@{calibration/calibration.h}}
-\subsubsection[{MAG\_\-FS\_\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define MAG\_\-FS\_\-Y~139}}
-\label{calibration_2calibration_8h_a5c5e64196104a5e5ebac3c594220eb5c}
+\hypertarget{calibration_2calibration_8h_a5c5e64196104a5e5ebac3c594220eb5c}{\index{calibration/calibration.\-h@{calibration/calibration.\-h}!M\-A\-G\-\_\-\-F\-S\-\_\-\-Y@{M\-A\-G\-\_\-\-F\-S\-\_\-\-Y}}
+\index{M\-A\-G\-\_\-\-F\-S\-\_\-\-Y@{M\-A\-G\-\_\-\-F\-S\-\_\-\-Y}!calibration/calibration.h@{calibration/calibration.\-h}}
+\subsubsection[{M\-A\-G\-\_\-\-F\-S\-\_\-\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-G\-\_\-\-F\-S\-\_\-\-Y~139}}\label{calibration_2calibration_8h_a5c5e64196104a5e5ebac3c594220eb5c}
 
 
-Definition at line 26 of file calibration.h.
+Definition at line 26 of file calibration.\-h.
 
 
 
-Referenced by calibrate\_\-imu().
+Referenced by calibrate\-\_\-imu().
 
-\hypertarget{calibration_2calibration_8h_aebfc43ba340d89fa86b4a5c07cc7c924}{
-\index{calibration/calibration.h@{calibration/calibration.h}!MAG\_\-FS\_\-Z@{MAG\_\-FS\_\-Z}}
-\index{MAG\_\-FS\_\-Z@{MAG\_\-FS\_\-Z}!calibration/calibration.h@{calibration/calibration.h}}
-\subsubsection[{MAG\_\-FS\_\-Z}]{\setlength{\rightskip}{0pt plus 5cm}\#define MAG\_\-FS\_\-Z~85}}
-\label{calibration_2calibration_8h_aebfc43ba340d89fa86b4a5c07cc7c924}
+\hypertarget{calibration_2calibration_8h_aebfc43ba340d89fa86b4a5c07cc7c924}{\index{calibration/calibration.\-h@{calibration/calibration.\-h}!M\-A\-G\-\_\-\-F\-S\-\_\-\-Z@{M\-A\-G\-\_\-\-F\-S\-\_\-\-Z}}
+\index{M\-A\-G\-\_\-\-F\-S\-\_\-\-Z@{M\-A\-G\-\_\-\-F\-S\-\_\-\-Z}!calibration/calibration.h@{calibration/calibration.\-h}}
+\subsubsection[{M\-A\-G\-\_\-\-F\-S\-\_\-\-Z}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-G\-\_\-\-F\-S\-\_\-\-Z~85}}\label{calibration_2calibration_8h_aebfc43ba340d89fa86b4a5c07cc7c924}
 
 
-Definition at line 27 of file calibration.h.
+Definition at line 27 of file calibration.\-h.
 
 
 
-Referenced by calibrate\_\-imu().
+Referenced by calibrate\-\_\-imu().
 
-\hypertarget{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{
-\index{calibration/calibration.h@{calibration/calibration.h}!SUCCESS@{SUCCESS}}
-\index{SUCCESS@{SUCCESS}!calibration/calibration.h@{calibration/calibration.h}}
-\subsubsection[{SUCCESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define SUCCESS~1}}
-\label{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}
+\hypertarget{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{\index{calibration/calibration.\-h@{calibration/calibration.\-h}!S\-U\-C\-C\-E\-S\-S@{S\-U\-C\-C\-E\-S\-S}}
+\index{S\-U\-C\-C\-E\-S\-S@{S\-U\-C\-C\-E\-S\-S}!calibration/calibration.h@{calibration/calibration.\-h}}
+\subsubsection[{S\-U\-C\-C\-E\-S\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-U\-C\-C\-E\-S\-S~1}}\label{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}
 
 
-Definition at line 6 of file calibration.h.
+Definition at line 6 of file calibration.\-h.
 
 
 
-Referenced by acc\_\-init(), acc\_\-read\_\-all\_\-data(), acc\_\-write\_\-reg(), actuate(), adc\_\-read(), control\_\-task(), dac\_\-write(), devices\_\-init(), enc\_\-read\_\-pos(), enc\_\-wait\_\-for\_\-ack(), enc\_\-zero\_\-set(), get\_\-time(), gpio\_\-f\_\-write(), gpio\_\-write(), gyr\_\-read\_\-all\_\-data(), gyr\_\-write\_\-reg(), mag\_\-read\_\-all\_\-data(), main(), periodic\_\-task\_\-1(), periodic\_\-task\_\-2(), read\_\-all\_\-data(), reset\_\-timer(), spi\_\-trans\_\-bytes(), ui\_\-close(), ui\_\-eff\_\-data(), ui\_\-enc\_\-data(), ui\_\-imu\_\-data(), ui\_\-init(), ui\_\-mra\_\-data(), ui\_\-overview\_\-data(), ui\_\-task(), and ui\_\-update().
+Referenced by acc\-\_\-init(), acc\-\_\-read\-\_\-all\-\_\-data(), acc\-\_\-write\-\_\-reg(), actuate(), control\-\_\-task(), devices\-\_\-init(), enc\-\_\-read\-\_\-pos(), enc\-\_\-wait\-\_\-for\-\_\-ack(), enc\-\_\-zero\-\_\-set(), get\-\_\-time(), gpio\-\_\-f\-\_\-write(), gpio\-\_\-write(), gyr\-\_\-read\-\_\-all\-\_\-data(), gyr\-\_\-write\-\_\-reg(), mag\-\_\-read\-\_\-all\-\_\-data(), main(), periodic\-\_\-task\-\_\-1(), periodic\-\_\-task\-\_\-2(), read\-\_\-all\-\_\-data(), reset\-\_\-timer(), ui\-\_\-close(), ui\-\_\-eff\-\_\-data(), ui\-\_\-enc\-\_\-data(), ui\-\_\-imu\-\_\-data(), ui\-\_\-init(), ui\-\_\-mra\-\_\-data(), ui\-\_\-overview\-\_\-data(), ui\-\_\-task(), and ui\-\_\-update().
 
 
 
 \subsection{Function Documentation}
-\hypertarget{calibration_2calibration_8h_ae8f1281c6870b23c1c158b30998f7568}{
-\index{calibration/calibration.h@{calibration/calibration.h}!calibrate\_\-enc@{calibrate\_\-enc}}
-\index{calibrate\_\-enc@{calibrate\_\-enc}!calibration/calibration.h@{calibration/calibration.h}}
-\subsubsection[{calibrate\_\-enc}]{\setlength{\rightskip}{0pt plus 5cm}void calibrate\_\-enc ({\bf ENC\_\-DATA\_\-STRUCT} $\ast$ {\em enc\_\-data})}}
-\label{calibration_2calibration_8h_ae8f1281c6870b23c1c158b30998f7568}
+\hypertarget{calibration_2calibration_8h_ae8f1281c6870b23c1c158b30998f7568}{\index{calibration/calibration.\-h@{calibration/calibration.\-h}!calibrate\-\_\-enc@{calibrate\-\_\-enc}}
+\index{calibrate\-\_\-enc@{calibrate\-\_\-enc}!calibration/calibration.h@{calibration/calibration.\-h}}
+\subsubsection[{calibrate\-\_\-enc}]{\setlength{\rightskip}{0pt plus 5cm}void calibrate\-\_\-enc (
+\begin{DoxyParamCaption}
+\item[{{\bf E\-N\-C\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$}]{enc\-\_\-data}
+\end{DoxyParamCaption}
+)}}\label{calibration_2calibration_8h_ae8f1281c6870b23c1c158b30998f7568}
 
 
 Calibrate encoder to return values in the rage of 0 to 90. 
 
 
 
-Definition at line 33 of file calibration.c.
-
-
+Definition at line 33 of file calibration.\-c.
 
 
 \begin{DoxyCode}
-33                                              {
-34   enc_data->calib.position = ((ENC_MAX - enc_data->position)/ENC_FS);
-35 }
+                                             \{
+  enc\_data->\hyperlink{structENC__DATA__STRUCT_af227e5bbb714b830cc570432bda0a468}{calib}.\hyperlink{structENC__DATA__STRUCT_1_1calibrate_aed5100f7dc3d1f358a633c043e13cba2}{position} = ((\hyperlink{calibration_2calibration_8h_a496f1fb8343dc6e6bcdf07eb28557f41}{ENC\_MAX} - enc\_data->\hyperlink{structENC__DATA__STRUCT_ac3a53ed44ecaf87285518a091e1d2c24}{position}
+      )/\hyperlink{calibration_2calibration_8h_adf9edcc7e266ed7333f7570965f5956a}{ENC\_FS});
+\}
 \end{DoxyCode}
-
-
