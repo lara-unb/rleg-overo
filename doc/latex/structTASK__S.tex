@@ -1,5 +1,6 @@
-\hypertarget{structTASK__S}{\section{T\-A\-S\-K\-\_\-\-S Struct Reference}
-\label{structTASK__S}\index{T\-A\-S\-K\-\_\-\-S@{T\-A\-S\-K\-\_\-\-S}}
+\hypertarget{structTASK__S}{
+\section{TASK\_\-S Struct Reference}
+\label{structTASK__S}\index{TASK\_\-S@{TASK\_\-S}}
 }
 
 
@@ -8,116 +9,154 @@ Task to schedule definition.
 
 
 
-{\ttfamily \#include \char`\"{}task\-Scheduler.\-h\char`\"{}}
+{\ttfamily \#include \char`\"{}taskScheduler.h\char`\"{}}
 
 \subsection*{Data Fields}
 \begin{DoxyCompactItemize}
 \item 
-timer\-\_\-t \hyperlink{structTASK__S_a17834f3d4f84241ccb4191f3cf7d7af3}{timer}
+timer\_\-t \hyperlink{structTASK__S_a17834f3d4f84241ccb4191f3cf7d7af3}{timer}
 \item 
-volatile double \hyperlink{structTASK__S_a29a175bdd4b9f880a2b69bb5186e3c7e}{t\-\_\-global}
+volatile double \hyperlink{structTASK__S_a29a175bdd4b9f880a2b69bb5186e3c7e}{t\_\-global}
 \item 
-volatile double \hyperlink{structTASK__S_ae06b712fd9963cff8192e9ef3140bc6d}{T\-\_\-exec\-\_\-global}
+volatile double \hyperlink{structTASK__S_ae06b712fd9963cff8192e9ef3140bc6d}{T\_\-exec\_\-global}
 \item 
-volatile double \hyperlink{structTASK__S_a9ebae87e1b64869f328a47473f2ea7d7}{T\-\_\-mean\-\_\-global}
+volatile double \hyperlink{structTASK__S_a9ebae87e1b64869f328a47473f2ea7d7}{T\_\-mean\_\-global}
 \item 
-volatile double \hyperlink{structTASK__S_a430c874cbf361b6dbc75ad1540880948}{T\-\_\-max\-\_\-global}
+volatile double \hyperlink{structTASK__S_a430c874cbf361b6dbc75ad1540880948}{T\_\-max\_\-global}
 \item 
-volatile double \hyperlink{structTASK__S_a07174e333a0013f4d51b30509b388f58}{T\-\_\-min\-\_\-global}
+volatile double \hyperlink{structTASK__S_a07174e333a0013f4d51b30509b388f58}{T\_\-min\_\-global}
 \item 
-volatile int \hyperlink{structTASK__S_aabd8f80831e6cfd8e51bbd371eed907b}{period\-\_\-us}
+volatile int \hyperlink{structTASK__S_aabd8f80831e6cfd8e51bbd371eed907b}{period\_\-us}
 \item 
-volatile int \hyperlink{structTASK__S_a4b50404ee955691f1c62845cdc9de676}{is\-First\-Execution}
-\begin{DoxyCompactList}\small\item\em Flag to sign first Exec. \end{DoxyCompactList}\item 
-void $\ast$ \hyperlink{structTASK__S_abe9c219d2f60c43991788786735599f2}{run}
-\begin{DoxyCompactList}\small\item\em hook to the action \end{DoxyCompactList}\end{DoxyCompactItemize}
+volatile int \hyperlink{structTASK__S_a4b50404ee955691f1c62845cdc9de676}{isFirstExecution}
+\begin{DoxyCompactList}\small\item\em Flag to sign first Exec. \item\end{DoxyCompactList}\item 
+void($\ast$ \hyperlink{structTASK__S_a6ce7396d04fd08be26e2e8b75a276122}{run} )(int)
+\begin{DoxyCompactList}\small\item\em hook to the action \item\end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 Task to schedule definition. 
 
-Definition at line 23 of file task\-Scheduler.\-h.
+Definition at line 20 of file taskScheduler.h.
 
 
 
 \subsection{Field Documentation}
-\hypertarget{structTASK__S_a4b50404ee955691f1c62845cdc9de676}{\index{T\-A\-S\-K\-\_\-\-S@{T\-A\-S\-K\-\_\-\-S}!is\-First\-Execution@{is\-First\-Execution}}
-\index{is\-First\-Execution@{is\-First\-Execution}!TASK_S@{T\-A\-S\-K\-\_\-\-S}}
-\subsubsection[{is\-First\-Execution}]{\setlength{\rightskip}{0pt plus 5cm}volatile int T\-A\-S\-K\-\_\-\-S\-::is\-First\-Execution}}\label{structTASK__S_a4b50404ee955691f1c62845cdc9de676}
+\hypertarget{structTASK__S_a4b50404ee955691f1c62845cdc9de676}{
+\index{TASK\_\-S@{TASK\_\-S}!isFirstExecution@{isFirstExecution}}
+\index{isFirstExecution@{isFirstExecution}!TASK_S@{TASK\_\-S}}
+\subsubsection[{isFirstExecution}]{\setlength{\rightskip}{0pt plus 5cm}volatile int {\bf TASK\_\-S::isFirstExecution}}}
+\label{structTASK__S_a4b50404ee955691f1c62845cdc9de676}
 
 
 Flag to sign first Exec. 
 
 
 
-Definition at line 31 of file task\-Scheduler.\-h.
-
-\hypertarget{structTASK__S_aabd8f80831e6cfd8e51bbd371eed907b}{\index{T\-A\-S\-K\-\_\-\-S@{T\-A\-S\-K\-\_\-\-S}!period\-\_\-us@{period\-\_\-us}}
-\index{period\-\_\-us@{period\-\_\-us}!TASK_S@{T\-A\-S\-K\-\_\-\-S}}
-\subsubsection[{period\-\_\-us}]{\setlength{\rightskip}{0pt plus 5cm}volatile int T\-A\-S\-K\-\_\-\-S\-::period\-\_\-us}}\label{structTASK__S_aabd8f80831e6cfd8e51bbd371eed907b}
+Definition at line 28 of file taskScheduler.h.
 
 
-Definition at line 30 of file task\-Scheduler.\-h.
 
-\hypertarget{structTASK__S_abe9c219d2f60c43991788786735599f2}{\index{T\-A\-S\-K\-\_\-\-S@{T\-A\-S\-K\-\_\-\-S}!run@{run}}
-\index{run@{run}!TASK_S@{T\-A\-S\-K\-\_\-\-S}}
-\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ T\-A\-S\-K\-\_\-\-S\-::run}}\label{structTASK__S_abe9c219d2f60c43991788786735599f2}
+Referenced by timer\_\-start\_\-task().
+
+\hypertarget{structTASK__S_aabd8f80831e6cfd8e51bbd371eed907b}{
+\index{TASK\_\-S@{TASK\_\-S}!period\_\-us@{period\_\-us}}
+\index{period\_\-us@{period\_\-us}!TASK_S@{TASK\_\-S}}
+\subsubsection[{period\_\-us}]{\setlength{\rightskip}{0pt plus 5cm}volatile int {\bf TASK\_\-S::period\_\-us}}}
+\label{structTASK__S_aabd8f80831e6cfd8e51bbd371eed907b}
+
+
+Definition at line 27 of file taskScheduler.h.
+
+
+
+Referenced by get\_\-time(), and timer\_\-start\_\-task().
+
+\hypertarget{structTASK__S_a6ce7396d04fd08be26e2e8b75a276122}{
+\index{TASK\_\-S@{TASK\_\-S}!run@{run}}
+\index{run@{run}!TASK_S@{TASK\_\-S}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$ {\bf TASK\_\-S::run})(int)}}
+\label{structTASK__S_a6ce7396d04fd08be26e2e8b75a276122}
 
 
 hook to the action 
 
 
 
-Definition at line 33 of file task\-Scheduler.\-h.
+Definition at line 30 of file taskScheduler.h.
 
 
 
-Referenced by timer\-\_\-new\-\_\-task().
+Referenced by timer\_\-start\_\-task().
 
-\hypertarget{structTASK__S_ae06b712fd9963cff8192e9ef3140bc6d}{\index{T\-A\-S\-K\-\_\-\-S@{T\-A\-S\-K\-\_\-\-S}!T\-\_\-exec\-\_\-global@{T\-\_\-exec\-\_\-global}}
-\index{T\-\_\-exec\-\_\-global@{T\-\_\-exec\-\_\-global}!TASK_S@{T\-A\-S\-K\-\_\-\-S}}
-\subsubsection[{T\-\_\-exec\-\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double T\-A\-S\-K\-\_\-\-S\-::\-T\-\_\-exec\-\_\-global}}\label{structTASK__S_ae06b712fd9963cff8192e9ef3140bc6d}
-
-
-Definition at line 26 of file task\-Scheduler.\-h.
-
-\hypertarget{structTASK__S_a29a175bdd4b9f880a2b69bb5186e3c7e}{\index{T\-A\-S\-K\-\_\-\-S@{T\-A\-S\-K\-\_\-\-S}!t\-\_\-global@{t\-\_\-global}}
-\index{t\-\_\-global@{t\-\_\-global}!TASK_S@{T\-A\-S\-K\-\_\-\-S}}
-\subsubsection[{t\-\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double T\-A\-S\-K\-\_\-\-S\-::t\-\_\-global}}\label{structTASK__S_a29a175bdd4b9f880a2b69bb5186e3c7e}
+\hypertarget{structTASK__S_ae06b712fd9963cff8192e9ef3140bc6d}{
+\index{TASK\_\-S@{TASK\_\-S}!T\_\-exec\_\-global@{T\_\-exec\_\-global}}
+\index{T\_\-exec\_\-global@{T\_\-exec\_\-global}!TASK_S@{TASK\_\-S}}
+\subsubsection[{T\_\-exec\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double {\bf TASK\_\-S::T\_\-exec\_\-global}}}
+\label{structTASK__S_ae06b712fd9963cff8192e9ef3140bc6d}
 
 
-Definition at line 25 of file task\-Scheduler.\-h.
+Definition at line 23 of file taskScheduler.h.
 
-\hypertarget{structTASK__S_a430c874cbf361b6dbc75ad1540880948}{\index{T\-A\-S\-K\-\_\-\-S@{T\-A\-S\-K\-\_\-\-S}!T\-\_\-max\-\_\-global@{T\-\_\-max\-\_\-global}}
-\index{T\-\_\-max\-\_\-global@{T\-\_\-max\-\_\-global}!TASK_S@{T\-A\-S\-K\-\_\-\-S}}
-\subsubsection[{T\-\_\-max\-\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double T\-A\-S\-K\-\_\-\-S\-::\-T\-\_\-max\-\_\-global}}\label{structTASK__S_a430c874cbf361b6dbc75ad1540880948}
-
-
-Definition at line 28 of file task\-Scheduler.\-h.
-
-\hypertarget{structTASK__S_a9ebae87e1b64869f328a47473f2ea7d7}{\index{T\-A\-S\-K\-\_\-\-S@{T\-A\-S\-K\-\_\-\-S}!T\-\_\-mean\-\_\-global@{T\-\_\-mean\-\_\-global}}
-\index{T\-\_\-mean\-\_\-global@{T\-\_\-mean\-\_\-global}!TASK_S@{T\-A\-S\-K\-\_\-\-S}}
-\subsubsection[{T\-\_\-mean\-\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double T\-A\-S\-K\-\_\-\-S\-::\-T\-\_\-mean\-\_\-global}}\label{structTASK__S_a9ebae87e1b64869f328a47473f2ea7d7}
+\hypertarget{structTASK__S_a29a175bdd4b9f880a2b69bb5186e3c7e}{
+\index{TASK\_\-S@{TASK\_\-S}!t\_\-global@{t\_\-global}}
+\index{t\_\-global@{t\_\-global}!TASK_S@{TASK\_\-S}}
+\subsubsection[{t\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double {\bf TASK\_\-S::t\_\-global}}}
+\label{structTASK__S_a29a175bdd4b9f880a2b69bb5186e3c7e}
 
 
-Definition at line 27 of file task\-Scheduler.\-h.
-
-\hypertarget{structTASK__S_a07174e333a0013f4d51b30509b388f58}{\index{T\-A\-S\-K\-\_\-\-S@{T\-A\-S\-K\-\_\-\-S}!T\-\_\-min\-\_\-global@{T\-\_\-min\-\_\-global}}
-\index{T\-\_\-min\-\_\-global@{T\-\_\-min\-\_\-global}!TASK_S@{T\-A\-S\-K\-\_\-\-S}}
-\subsubsection[{T\-\_\-min\-\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double T\-A\-S\-K\-\_\-\-S\-::\-T\-\_\-min\-\_\-global}}\label{structTASK__S_a07174e333a0013f4d51b30509b388f58}
-
-
-Definition at line 29 of file task\-Scheduler.\-h.
-
-\hypertarget{structTASK__S_a17834f3d4f84241ccb4191f3cf7d7af3}{\index{T\-A\-S\-K\-\_\-\-S@{T\-A\-S\-K\-\_\-\-S}!timer@{timer}}
-\index{timer@{timer}!TASK_S@{T\-A\-S\-K\-\_\-\-S}}
-\subsubsection[{timer}]{\setlength{\rightskip}{0pt plus 5cm}timer\-\_\-t T\-A\-S\-K\-\_\-\-S\-::timer}}\label{structTASK__S_a17834f3d4f84241ccb4191f3cf7d7af3}
-
-
-Definition at line 24 of file task\-Scheduler.\-h.
+Definition at line 22 of file taskScheduler.h.
 
 
 
-The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+Referenced by control\_\-task(), and get\_\-time().
+
+\hypertarget{structTASK__S_a430c874cbf361b6dbc75ad1540880948}{
+\index{TASK\_\-S@{TASK\_\-S}!T\_\-max\_\-global@{T\_\-max\_\-global}}
+\index{T\_\-max\_\-global@{T\_\-max\_\-global}!TASK_S@{TASK\_\-S}}
+\subsubsection[{T\_\-max\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double {\bf TASK\_\-S::T\_\-max\_\-global}}}
+\label{structTASK__S_a430c874cbf361b6dbc75ad1540880948}
+
+
+Definition at line 25 of file taskScheduler.h.
+
+\hypertarget{structTASK__S_a9ebae87e1b64869f328a47473f2ea7d7}{
+\index{TASK\_\-S@{TASK\_\-S}!T\_\-mean\_\-global@{T\_\-mean\_\-global}}
+\index{T\_\-mean\_\-global@{T\_\-mean\_\-global}!TASK_S@{TASK\_\-S}}
+\subsubsection[{T\_\-mean\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double {\bf TASK\_\-S::T\_\-mean\_\-global}}}
+\label{structTASK__S_a9ebae87e1b64869f328a47473f2ea7d7}
+
+
+Definition at line 24 of file taskScheduler.h.
+
+
+
+Referenced by get\_\-time().
+
+\hypertarget{structTASK__S_a07174e333a0013f4d51b30509b388f58}{
+\index{TASK\_\-S@{TASK\_\-S}!T\_\-min\_\-global@{T\_\-min\_\-global}}
+\index{T\_\-min\_\-global@{T\_\-min\_\-global}!TASK_S@{TASK\_\-S}}
+\subsubsection[{T\_\-min\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double {\bf TASK\_\-S::T\_\-min\_\-global}}}
+\label{structTASK__S_a07174e333a0013f4d51b30509b388f58}
+
+
+Definition at line 26 of file taskScheduler.h.
+
+\hypertarget{structTASK__S_a17834f3d4f84241ccb4191f3cf7d7af3}{
+\index{TASK\_\-S@{TASK\_\-S}!timer@{timer}}
+\index{timer@{timer}!TASK_S@{TASK\_\-S}}
+\subsubsection[{timer}]{\setlength{\rightskip}{0pt plus 5cm}timer\_\-t {\bf TASK\_\-S::timer}}}
+\label{structTASK__S_a17834f3d4f84241ccb4191f3cf7d7af3}
+
+
+Definition at line 21 of file taskScheduler.h.
+
+
+
+Referenced by timer\_\-start\_\-task().
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
 \item 
-\hyperlink{taskScheduler_8h}{task\-Scheduler.\-h}\end{DoxyCompactItemize}
+\hyperlink{taskScheduler_8h}{taskScheduler.h}\end{DoxyCompactItemize}

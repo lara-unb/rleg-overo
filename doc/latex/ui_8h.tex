@@ -1,317 +1,289 @@
-\hypertarget{ui_8h}{\section{ui.\-h File Reference}
-\label{ui_8h}\index{ui.\-h@{ui.\-h}}
+\hypertarget{ui_8h}{
+\section{ui.h File Reference}
+\label{ui_8h}\index{ui.h@{ui.h}}
 }
-This graph shows which files directly or indirectly include this file\-:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=280pt]{ui_8h__dep__incl}
-\end{center}
-\end{figure}
-\subsection*{Macros}
+This graph shows which files directly or indirectly include this file:\subsection*{Defines}
 \begin{DoxyCompactItemize}
 \item 
-\#define \hyperlink{ui_8h_a5f863c47136ccbe4db74101b9a3e83ca}{U\-I\-\_\-\-N\-C\-U\-R\-S\-E\-S\-\_\-\-M\-O\-D\-E}~2
+\#define \hyperlink{ui_8h_a5f863c47136ccbe4db74101b9a3e83ca}{UI\_\-NCURSES\_\-MODE}~2
 \item 
-\#define \hyperlink{ui_8h_a0035316b48d542f3e842718bc2c90ca2}{U\-I\-\_\-\-M\-O\-D\-U\-L\-E\-\_\-\-E\-N\-A\-B\-L\-E\-D}~1
+\#define \hyperlink{ui_8h_a0035316b48d542f3e842718bc2c90ca2}{UI\_\-MODULE\_\-ENABLED}~1
 \item 
-\#define \hyperlink{ui_8h_ac62c939e115545fa9042c7ba6ca6f687}{U\-I\-\_\-\-D\-E\-B\-U\-G\-\_\-\-M\-O\-D\-E}~0
+\#define \hyperlink{ui_8h_ac62c939e115545fa9042c7ba6ca6f687}{UI\_\-DEBUG\_\-MODE}~0
 \item 
-\#define \hyperlink{ui_8h_aa90cac659d18e8ef6294c7ae337f6b58}{S\-U\-C\-C\-E\-S\-S}~1
+\#define \hyperlink{ui_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS}~1
 \item 
-\#define \hyperlink{ui_8h_a6d58f9ac447476b4e084d7ca383f5183}{F\-A\-I\-L\-U\-R\-E}~-\/1
+\#define \hyperlink{ui_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE}~-\/1
 \end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-int \hyperlink{group__ui_gab7bfb453918dcc296ff0cea3c79453d0}{ui\-\_\-init} (void)
-\begin{DoxyCompactList}\small\item\em Initialize U\-I. \end{DoxyCompactList}\item 
-int \hyperlink{group__ui_ga65d8b92b634da17c344458cd57e61f3e}{ui\-\_\-close} (void)
-\begin{DoxyCompactList}\small\item\em Close U\-I. \end{DoxyCompactList}\item 
-int \hyperlink{group__ui_ga42e4dac2d138061a74c572358c8ebf49}{ui\-\_\-update} (\hyperlink{structIMU__DATA__STRUCT}{I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$pimu\-\_\-data, \hyperlink{structEFF__DATA__STRUCT}{E\-F\-F\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$peff\-\_\-data, \hyperlink{structMRA__DATA__STRUCT}{M\-R\-A\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$pmra\-\_\-data, \hyperlink{structENC__DATA__STRUCT}{E\-N\-C\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$\hyperlink{main2_8c_aaa441e18ae805c4f3efb0b5231d1cfe7}{enc\-\_\-data}, int \hyperlink{threads__linux_8c_ac7af894858cf396a219d632f40afdc8d}{total}, int \hyperlink{threads__linux_8c_a4f35e5ea2395561d0bd3b2f45612dc2c}{failure})
-\begin{DoxyCompactList}\small\item\em Update Screen with new data of sensors. \end{DoxyCompactList}\item 
-int \hyperlink{group__ui_ga7d5a9d9a75693709de408781d001a6a6}{ui\-\_\-imu\-\_\-data} (\hyperlink{structIMU__DATA__STRUCT}{I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$pimu\-\_\-data)
-\begin{DoxyCompactList}\small\item\em Print I\-M\-U data. \end{DoxyCompactList}\item 
-int \hyperlink{ui_8h_af48496a4ce54378764bc4ca9eddfd498}{ui\-\_\-eff\-\_\-data} (\hyperlink{structEFF__DATA__STRUCT}{E\-F\-F\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$peff\-\_\-data)
+int \hyperlink{group__ui_gab7bfb453918dcc296ff0cea3c79453d0}{ui\_\-init} (void)
+\begin{DoxyCompactList}\small\item\em Initialize UI. \item\end{DoxyCompactList}\item 
+int \hyperlink{group__ui_ga65d8b92b634da17c344458cd57e61f3e}{ui\_\-close} (void)
+\begin{DoxyCompactList}\small\item\em Close UI. \item\end{DoxyCompactList}\item 
+int \hyperlink{group__ui_ga42e4dac2d138061a74c572358c8ebf49}{ui\_\-update} (\hyperlink{structIMU__DATA__STRUCT}{IMU\_\-DATA\_\-STRUCT} $\ast$pimu\_\-data, \hyperlink{structEFF__DATA__STRUCT}{EFF\_\-DATA\_\-STRUCT} $\ast$peff\_\-data, \hyperlink{structMRA__DATA__STRUCT}{MRA\_\-DATA\_\-STRUCT} $\ast$pmra\_\-data, \hyperlink{structENC__DATA__STRUCT}{ENC\_\-DATA\_\-STRUCT} $\ast$\hyperlink{main2_8c_aaa441e18ae805c4f3efb0b5231d1cfe7}{enc\_\-data}, int \hyperlink{threads__linux_8c_ac7af894858cf396a219d632f40afdc8d}{total}, int \hyperlink{threads__linux_8c_a4f35e5ea2395561d0bd3b2f45612dc2c}{failure})
+\begin{DoxyCompactList}\small\item\em Update Screen with new data of sensors. \item\end{DoxyCompactList}\item 
+int \hyperlink{group__ui_ga7d5a9d9a75693709de408781d001a6a6}{ui\_\-imu\_\-data} (\hyperlink{structIMU__DATA__STRUCT}{IMU\_\-DATA\_\-STRUCT} $\ast$pimu\_\-data)
+\begin{DoxyCompactList}\small\item\em Print IMU data. \item\end{DoxyCompactList}\item 
+int \hyperlink{ui_8h_af48496a4ce54378764bc4ca9eddfd498}{ui\_\-eff\_\-data} (\hyperlink{structEFF__DATA__STRUCT}{EFF\_\-DATA\_\-STRUCT} $\ast$peff\_\-data)
 \item 
-int \hyperlink{ui_8h_a3821f6ba38465f8d170f7b947869e7d9}{ui\-\_\-enc\-\_\-data} (\hyperlink{structENC__DATA__STRUCT}{E\-N\-C\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$\hyperlink{main2_8c_aaa441e18ae805c4f3efb0b5231d1cfe7}{enc\-\_\-data})
-\begin{DoxyCompactList}\small\item\em Print E\-N\-C\-O\-D\-E\-R data. \end{DoxyCompactList}\item 
-int \hyperlink{group__ui_gaefec243c5df45db0350c1abbccf20e3b}{ui\-\_\-mra\-\_\-data} (\hyperlink{structMRA__DATA__STRUCT}{M\-R\-A\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$pmra\-\_\-data)
-\begin{DoxyCompactList}\small\item\em Print M\-R\-A data. \end{DoxyCompactList}\item 
-int \hyperlink{ui_8h_a8d5e19833fec51919aad6e78bb74619a}{ui\-\_\-overview\-\_\-data} (int \hyperlink{threads__linux_8c_ac7af894858cf396a219d632f40afdc8d}{total}, int failures, \hyperlink{structIMU__DATA__STRUCT}{I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$pimu\-\_\-data, \hyperlink{structEFF__DATA__STRUCT}{E\-F\-F\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$peff\-\_\-data, \hyperlink{structMRA__DATA__STRUCT}{M\-R\-A\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$pmra\-\_\-data, \hyperlink{structENC__DATA__STRUCT}{E\-N\-C\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$\hyperlink{main2_8c_aaa441e18ae805c4f3efb0b5231d1cfe7}{enc\-\_\-data})
-\begin{DoxyCompactList}\small\item\em Print A\-L\-L sensors data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+int \hyperlink{ui_8h_a3821f6ba38465f8d170f7b947869e7d9}{ui\_\-enc\_\-data} (\hyperlink{structENC__DATA__STRUCT}{ENC\_\-DATA\_\-STRUCT} $\ast$\hyperlink{main2_8c_aaa441e18ae805c4f3efb0b5231d1cfe7}{enc\_\-data})
+\begin{DoxyCompactList}\small\item\em Print ENCODER data. \item\end{DoxyCompactList}\item 
+int \hyperlink{group__ui_gaefec243c5df45db0350c1abbccf20e3b}{ui\_\-mra\_\-data} (\hyperlink{structMRA__DATA__STRUCT}{MRA\_\-DATA\_\-STRUCT} $\ast$pmra\_\-data)
+\begin{DoxyCompactList}\small\item\em Print MRA data. \item\end{DoxyCompactList}\item 
+int \hyperlink{ui_8h_a8d5e19833fec51919aad6e78bb74619a}{ui\_\-overview\_\-data} (int \hyperlink{threads__linux_8c_ac7af894858cf396a219d632f40afdc8d}{total}, int failures, \hyperlink{structIMU__DATA__STRUCT}{IMU\_\-DATA\_\-STRUCT} $\ast$pimu\_\-data, \hyperlink{structEFF__DATA__STRUCT}{EFF\_\-DATA\_\-STRUCT} $\ast$peff\_\-data, \hyperlink{structMRA__DATA__STRUCT}{MRA\_\-DATA\_\-STRUCT} $\ast$pmra\_\-data, \hyperlink{structENC__DATA__STRUCT}{ENC\_\-DATA\_\-STRUCT} $\ast$\hyperlink{main2_8c_aaa441e18ae805c4f3efb0b5231d1cfe7}{enc\_\-data})
+\begin{DoxyCompactList}\small\item\em Print ALL sensors data. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{Macro Definition Documentation}
-\hypertarget{ui_8h_a6d58f9ac447476b4e084d7ca383f5183}{\index{ui.\-h@{ui.\-h}!F\-A\-I\-L\-U\-R\-E@{F\-A\-I\-L\-U\-R\-E}}
-\index{F\-A\-I\-L\-U\-R\-E@{F\-A\-I\-L\-U\-R\-E}!ui.h@{ui.\-h}}
-\subsubsection[{F\-A\-I\-L\-U\-R\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-A\-I\-L\-U\-R\-E~-\/1}}\label{ui_8h_a6d58f9ac447476b4e084d7ca383f5183}
+\subsection{Define Documentation}
+\hypertarget{ui_8h_a6d58f9ac447476b4e084d7ca383f5183}{
+\index{ui.h@{ui.h}!FAILURE@{FAILURE}}
+\index{FAILURE@{FAILURE}!ui.h@{ui.h}}
+\subsubsection[{FAILURE}]{\setlength{\rightskip}{0pt plus 5cm}\#define FAILURE~-\/1}}
+\label{ui_8h_a6d58f9ac447476b4e084d7ca383f5183}
 
 
-Definition at line 11 of file ui.\-h.
+Definition at line 11 of file ui.h.
 
-\hypertarget{ui_8h_aa90cac659d18e8ef6294c7ae337f6b58}{\index{ui.\-h@{ui.\-h}!S\-U\-C\-C\-E\-S\-S@{S\-U\-C\-C\-E\-S\-S}}
-\index{S\-U\-C\-C\-E\-S\-S@{S\-U\-C\-C\-E\-S\-S}!ui.h@{ui.\-h}}
-\subsubsection[{S\-U\-C\-C\-E\-S\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-U\-C\-C\-E\-S\-S~1}}\label{ui_8h_aa90cac659d18e8ef6294c7ae337f6b58}
-
-
-Definition at line 10 of file ui.\-h.
-
-\hypertarget{ui_8h_ac62c939e115545fa9042c7ba6ca6f687}{\index{ui.\-h@{ui.\-h}!U\-I\-\_\-\-D\-E\-B\-U\-G\-\_\-\-M\-O\-D\-E@{U\-I\-\_\-\-D\-E\-B\-U\-G\-\_\-\-M\-O\-D\-E}}
-\index{U\-I\-\_\-\-D\-E\-B\-U\-G\-\_\-\-M\-O\-D\-E@{U\-I\-\_\-\-D\-E\-B\-U\-G\-\_\-\-M\-O\-D\-E}!ui.h@{ui.\-h}}
-\subsubsection[{U\-I\-\_\-\-D\-E\-B\-U\-G\-\_\-\-M\-O\-D\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-I\-\_\-\-D\-E\-B\-U\-G\-\_\-\-M\-O\-D\-E~0}}\label{ui_8h_ac62c939e115545fa9042c7ba6ca6f687}
+\hypertarget{ui_8h_aa90cac659d18e8ef6294c7ae337f6b58}{
+\index{ui.h@{ui.h}!SUCCESS@{SUCCESS}}
+\index{SUCCESS@{SUCCESS}!ui.h@{ui.h}}
+\subsubsection[{SUCCESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define SUCCESS~1}}
+\label{ui_8h_aa90cac659d18e8ef6294c7ae337f6b58}
 
 
-Definition at line 8 of file ui.\-h.
+Definition at line 10 of file ui.h.
 
-\hypertarget{ui_8h_a0035316b48d542f3e842718bc2c90ca2}{\index{ui.\-h@{ui.\-h}!U\-I\-\_\-\-M\-O\-D\-U\-L\-E\-\_\-\-E\-N\-A\-B\-L\-E\-D@{U\-I\-\_\-\-M\-O\-D\-U\-L\-E\-\_\-\-E\-N\-A\-B\-L\-E\-D}}
-\index{U\-I\-\_\-\-M\-O\-D\-U\-L\-E\-\_\-\-E\-N\-A\-B\-L\-E\-D@{U\-I\-\_\-\-M\-O\-D\-U\-L\-E\-\_\-\-E\-N\-A\-B\-L\-E\-D}!ui.h@{ui.\-h}}
-\subsubsection[{U\-I\-\_\-\-M\-O\-D\-U\-L\-E\-\_\-\-E\-N\-A\-B\-L\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-I\-\_\-\-M\-O\-D\-U\-L\-E\-\_\-\-E\-N\-A\-B\-L\-E\-D~1}}\label{ui_8h_a0035316b48d542f3e842718bc2c90ca2}
-
-
-Definition at line 7 of file ui.\-h.
-
-\hypertarget{ui_8h_a5f863c47136ccbe4db74101b9a3e83ca}{\index{ui.\-h@{ui.\-h}!U\-I\-\_\-\-N\-C\-U\-R\-S\-E\-S\-\_\-\-M\-O\-D\-E@{U\-I\-\_\-\-N\-C\-U\-R\-S\-E\-S\-\_\-\-M\-O\-D\-E}}
-\index{U\-I\-\_\-\-N\-C\-U\-R\-S\-E\-S\-\_\-\-M\-O\-D\-E@{U\-I\-\_\-\-N\-C\-U\-R\-S\-E\-S\-\_\-\-M\-O\-D\-E}!ui.h@{ui.\-h}}
-\subsubsection[{U\-I\-\_\-\-N\-C\-U\-R\-S\-E\-S\-\_\-\-M\-O\-D\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-I\-\_\-\-N\-C\-U\-R\-S\-E\-S\-\_\-\-M\-O\-D\-E~2}}\label{ui_8h_a5f863c47136ccbe4db74101b9a3e83ca}
+\hypertarget{ui_8h_ac62c939e115545fa9042c7ba6ca6f687}{
+\index{ui.h@{ui.h}!UI\_\-DEBUG\_\-MODE@{UI\_\-DEBUG\_\-MODE}}
+\index{UI\_\-DEBUG\_\-MODE@{UI\_\-DEBUG\_\-MODE}!ui.h@{ui.h}}
+\subsubsection[{UI\_\-DEBUG\_\-MODE}]{\setlength{\rightskip}{0pt plus 5cm}\#define UI\_\-DEBUG\_\-MODE~0}}
+\label{ui_8h_ac62c939e115545fa9042c7ba6ca6f687}
 
 
-Definition at line 5 of file ui.\-h.
+Definition at line 8 of file ui.h.
+
+\hypertarget{ui_8h_a0035316b48d542f3e842718bc2c90ca2}{
+\index{ui.h@{ui.h}!UI\_\-MODULE\_\-ENABLED@{UI\_\-MODULE\_\-ENABLED}}
+\index{UI\_\-MODULE\_\-ENABLED@{UI\_\-MODULE\_\-ENABLED}!ui.h@{ui.h}}
+\subsubsection[{UI\_\-MODULE\_\-ENABLED}]{\setlength{\rightskip}{0pt plus 5cm}\#define UI\_\-MODULE\_\-ENABLED~1}}
+\label{ui_8h_a0035316b48d542f3e842718bc2c90ca2}
+
+
+Definition at line 7 of file ui.h.
+
+\hypertarget{ui_8h_a5f863c47136ccbe4db74101b9a3e83ca}{
+\index{ui.h@{ui.h}!UI\_\-NCURSES\_\-MODE@{UI\_\-NCURSES\_\-MODE}}
+\index{UI\_\-NCURSES\_\-MODE@{UI\_\-NCURSES\_\-MODE}!ui.h@{ui.h}}
+\subsubsection[{UI\_\-NCURSES\_\-MODE}]{\setlength{\rightskip}{0pt plus 5cm}\#define UI\_\-NCURSES\_\-MODE~2}}
+\label{ui_8h_a5f863c47136ccbe4db74101b9a3e83ca}
+
+
+Definition at line 5 of file ui.h.
 
 
 
-Referenced by periodic\-\_\-task\-\_\-2(), and threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-2().
+Referenced by periodic\_\-task\_\-2(), and threads\_\-linux\_\-periodic\_\-task\_\-2().
 
 
 
 \subsection{Function Documentation}
-\hypertarget{ui_8h_af48496a4ce54378764bc4ca9eddfd498}{\index{ui.\-h@{ui.\-h}!ui\-\_\-eff\-\_\-data@{ui\-\_\-eff\-\_\-data}}
-\index{ui\-\_\-eff\-\_\-data@{ui\-\_\-eff\-\_\-data}!ui.h@{ui.\-h}}
-\subsubsection[{ui\-\_\-eff\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}int ui\-\_\-eff\-\_\-data (
-\begin{DoxyParamCaption}
-\item[{{\bf E\-F\-F\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$}]{peff\-\_\-data}
-\end{DoxyParamCaption}
-)}}\label{ui_8h_af48496a4ce54378764bc4ca9eddfd498}
+\hypertarget{ui_8h_af48496a4ce54378764bc4ca9eddfd498}{
+\index{ui.h@{ui.h}!ui\_\-eff\_\-data@{ui\_\-eff\_\-data}}
+\index{ui\_\-eff\_\-data@{ui\_\-eff\_\-data}!ui.h@{ui.h}}
+\subsubsection[{ui\_\-eff\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}int ui\_\-eff\_\-data ({\bf EFF\_\-DATA\_\-STRUCT} $\ast$ {\em peff\_\-data})}}
+\label{ui_8h_af48496a4ce54378764bc4ca9eddfd498}
 
 
-Definition at line 157 of file ui.\-c.
-
-
-
-References E\-F\-F\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::\-F, E\-F\-F\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::\-M, S\-U\-C\-C\-E\-S\-S, D\-A\-T\-A\-\_\-\-X\-Y\-Z\-::x, D\-A\-T\-A\-\_\-\-X\-Y\-Z\-::y, and D\-A\-T\-A\-\_\-\-X\-Y\-Z\-::z.
+Definition at line 158 of file ui.c.
 
 
 
-Referenced by ui\-\_\-update().
+References EFF\_\-DATA\_\-STRUCT::F, EFF\_\-DATA\_\-STRUCT::M, SUCCESS, DATA\_\-XYZ::x, DATA\_\-XYZ::y, and DATA\_\-XYZ::z.
+
+
+
+Referenced by ui\_\-update().
+
+
 
 
 \begin{DoxyCode}
-158 \{
-159         mvprintw(2,0,\textcolor{stringliteral}{"Fx (bits): %d"},peff\_data->\hyperlink{structEFF__DATA__STRUCT_abe8952947b54bf9c247f3429ee3aeb44}{F}.\hyperlink{structDATA__XYZ_a54c1596e9f9969fd9c21e8458024ecfb}{x});
-160         \textcolor{comment}{//mvprintw(2,40,"Fx (N): %lf",peff\_data->??);}
-161         mvprintw(3,0,\textcolor{stringliteral}{"Fy (bits): %d"},peff\_data->\hyperlink{structEFF__DATA__STRUCT_abe8952947b54bf9c247f3429ee3aeb44}{F}.\hyperlink{structDATA__XYZ_a94bbb1c889bf53eb6a5fffa2b39322cf}{y});
-162         \textcolor{comment}{//mvprintw(3,40,"Fx (N): %lf",peff\_data->??);}
-163         mvprintw(4,0,\textcolor{stringliteral}{"Fz (bits): %d"},peff\_data->\hyperlink{structEFF__DATA__STRUCT_abe8952947b54bf9c247f3429ee3aeb44}{F}.\hyperlink{structDATA__XYZ_a69e89ab0ec6e5d72fc5d54f62cc07fb5}{z});
-164         \textcolor{comment}{//mvprintw(4,40,"Fx (N): %lf",peff\_data->??);}
-165         mvprintw(5,0,\textcolor{stringliteral}{"Mx (bits): %d"},peff\_data->\hyperlink{structEFF__DATA__STRUCT_aaf6e03b6e600295e0f5c706fc869e9d1}{M}.\hyperlink{structDATA__XYZ_a54c1596e9f9969fd9c21e8458024ecfb}{x});
-166         \textcolor{comment}{//mvprintw(5,40,"Mx (Nm): %lf",peff\_data->??);}
-167         mvprintw(6,0,\textcolor{stringliteral}{"My (bits): %d"},peff\_data->\hyperlink{structEFF__DATA__STRUCT_aaf6e03b6e600295e0f5c706fc869e9d1}{M}.\hyperlink{structDATA__XYZ_a94bbb1c889bf53eb6a5fffa2b39322cf}{y});
-168         \textcolor{comment}{//mvprintw(6,40,"My (Nm): %lf",peff\_data->??);}
-169         mvprintw(7,0,\textcolor{stringliteral}{"Mz (bits): %d"},peff\_data->\hyperlink{structEFF__DATA__STRUCT_aaf6e03b6e600295e0f5c706fc869e9d1}{M}.\hyperlink{structDATA__XYZ_a69e89ab0ec6e5d72fc5d54f62cc07fb5}{z});
-170         \textcolor{comment}{//mvprintw(7,40,"Mz (Nm): %lf",peff\_data->??);}
-171 
-172         \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};
-173 \}
+159 {
+160         mvprintw(2,0,"Fx (bits): %d",peff_data->F.x);
+161         //mvprintw(2,40,"Fx (N): %lf",peff_data->??);
+162         mvprintw(3,0,"Fy (bits): %d",peff_data->F.y);
+163         //mvprintw(3,40,"Fx (N): %lf",peff_data->??);
+164         mvprintw(4,0,"Fz (bits): %d",peff_data->F.z);
+165         //mvprintw(4,40,"Fx (N): %lf",peff_data->??);
+166         mvprintw(5,0,"Mx (bits): %d",peff_data->M.x);
+167         //mvprintw(5,40,"Mx (Nm): %lf",peff_data->??);
+168         mvprintw(6,0,"My (bits): %d",peff_data->M.y);
+169         //mvprintw(6,40,"My (Nm): %lf",peff_data->??);
+170         mvprintw(7,0,"Mz (bits): %d",peff_data->M.z);
+171         //mvprintw(7,40,"Mz (Nm): %lf",peff_data->??);
+172 
+173         return SUCCESS;
+174 }
 \end{DoxyCode}
 
 
-Here is the caller graph for this function\-:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{ui_8h_af48496a4ce54378764bc4ca9eddfd498_icgraph}
-\end{center}
-\end{figure}
 
 
-\hypertarget{ui_8h_a3821f6ba38465f8d170f7b947869e7d9}{\index{ui.\-h@{ui.\-h}!ui\-\_\-enc\-\_\-data@{ui\-\_\-enc\-\_\-data}}
-\index{ui\-\_\-enc\-\_\-data@{ui\-\_\-enc\-\_\-data}!ui.h@{ui.\-h}}
-\subsubsection[{ui\-\_\-enc\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}int ui\-\_\-enc\-\_\-data (
-\begin{DoxyParamCaption}
-\item[{{\bf E\-N\-C\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$}]{enc\-\_\-data}
-\end{DoxyParamCaption}
-)}}\label{ui_8h_a3821f6ba38465f8d170f7b947869e7d9}
+Here is the caller graph for this function:
+
+\hypertarget{ui_8h_a3821f6ba38465f8d170f7b947869e7d9}{
+\index{ui.h@{ui.h}!ui\_\-enc\_\-data@{ui\_\-enc\_\-data}}
+\index{ui\_\-enc\_\-data@{ui\_\-enc\_\-data}!ui.h@{ui.h}}
+\subsubsection[{ui\_\-enc\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}int ui\_\-enc\_\-data ({\bf ENC\_\-DATA\_\-STRUCT} $\ast$ {\em enc\_\-data})}}
+\label{ui_8h_a3821f6ba38465f8d170f7b947869e7d9}
 
 
-Print E\-N\-C\-O\-D\-E\-R data. 
+Print ENCODER data. 
 
 
 
-Definition at line 175 of file ui.\-c.
+Definition at line 176 of file ui.c.
 
 
 
-References E\-N\-C\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::angle, and S\-U\-C\-C\-E\-S\-S.
+References ENC\_\-DATA\_\-STRUCT::calib, ENC\_\-DATA\_\-STRUCT::calibrate::position, ENC\_\-DATA\_\-STRUCT::position, and SUCCESS.
 
 
 
-Referenced by ui\-\_\-update().
+Referenced by ui\_\-update().
+
+
 
 
 \begin{DoxyCode}
-176 \{
-177    mvprintw(2,0,\textcolor{stringliteral}{"Position (raw): %lf"},enc\_data->\hyperlink{structENC__DATA__STRUCT_ad25beb30fd5b975292f87db02ec9930a}{angle});
-178    \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};
-179 \}
+177 {
+178    mvprintw(2,0,"Position (raw): %lf",enc_data->position);
+179    mvprintw(3,0,"Position (degree): %lf",enc_data->calib.position);
+180    return SUCCESS;
+181 }
 \end{DoxyCode}
 
 
-Here is the caller graph for this function\-:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{ui_8h_a3821f6ba38465f8d170f7b947869e7d9_icgraph}
-\end{center}
-\end{figure}
 
 
-\hypertarget{ui_8h_a8d5e19833fec51919aad6e78bb74619a}{\index{ui.\-h@{ui.\-h}!ui\-\_\-overview\-\_\-data@{ui\-\_\-overview\-\_\-data}}
-\index{ui\-\_\-overview\-\_\-data@{ui\-\_\-overview\-\_\-data}!ui.h@{ui.\-h}}
-\subsubsection[{ui\-\_\-overview\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}int ui\-\_\-overview\-\_\-data (
-\begin{DoxyParamCaption}
-\item[{int}]{total, }
-\item[{int}]{failures, }
-\item[{{\bf I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$}]{pimu\-\_\-data, }
-\item[{{\bf E\-F\-F\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$}]{peff\-\_\-data, }
-\item[{{\bf M\-R\-A\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$}]{pmra\-\_\-data, }
-\item[{{\bf E\-N\-C\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$}]{enc\-\_\-data}
-\end{DoxyParamCaption}
-)}}\label{ui_8h_a8d5e19833fec51919aad6e78bb74619a}
+Here is the caller graph for this function:
+
+\hypertarget{ui_8h_a8d5e19833fec51919aad6e78bb74619a}{
+\index{ui.h@{ui.h}!ui\_\-overview\_\-data@{ui\_\-overview\_\-data}}
+\index{ui\_\-overview\_\-data@{ui\_\-overview\_\-data}!ui.h@{ui.h}}
+\subsubsection[{ui\_\-overview\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}int ui\_\-overview\_\-data (int {\em total}, \/  int {\em failures}, \/  {\bf IMU\_\-DATA\_\-STRUCT} $\ast$ {\em pimu\_\-data}, \/  {\bf EFF\_\-DATA\_\-STRUCT} $\ast$ {\em peff\_\-data}, \/  {\bf MRA\_\-DATA\_\-STRUCT} $\ast$ {\em pmra\_\-data}, \/  {\bf ENC\_\-DATA\_\-STRUCT} $\ast$ {\em enc\_\-data})}}
+\label{ui_8h_a8d5e19833fec51919aad6e78bb74619a}
 
 
-Print A\-L\-L sensors data. 
+Print ALL sensors data. 
 
 
 
-Definition at line 190 of file ui.\-c.
+Definition at line 192 of file ui.c.
 
 
 
-References I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::acc, I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::calibrated\-::acc, E\-N\-C\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::angle, I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::calib, I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::calib\-\_\-temp, get\-\_\-time(), I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::gyr, I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::calibrated\-::gyr, I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::mag, I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::calibrated\-::mag, S\-U\-C\-C\-E\-S\-S, t0, I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::temp, M\-R\-A\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::v\-\_\-ctl, M\-R\-A\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::v\-\_\-ctl\-\_\-read, D\-A\-T\-A\-\_\-\-X\-Y\-Z\-::x, D\-A\-T\-A\-\_\-\-X\-Y\-Z\-\_\-\-D\-O\-U\-B\-L\-E\-::x, D\-A\-T\-A\-\_\-\-X\-Y\-Z\-::y, D\-A\-T\-A\-\_\-\-X\-Y\-Z\-\_\-\-D\-O\-U\-B\-L\-E\-::y, D\-A\-T\-A\-\_\-\-X\-Y\-Z\-::z, and D\-A\-T\-A\-\_\-\-X\-Y\-Z\-\_\-\-D\-O\-U\-B\-L\-E\-::z.
+References IMU\_\-DATA\_\-STRUCT::calibrated::acc, IMU\_\-DATA\_\-STRUCT::acc, ENC\_\-DATA\_\-STRUCT::calib, IMU\_\-DATA\_\-STRUCT::calib, IMU\_\-DATA\_\-STRUCT::calib\_\-temp, get\_\-time(), IMU\_\-DATA\_\-STRUCT::calibrated::gyr, IMU\_\-DATA\_\-STRUCT::gyr, IMU\_\-DATA\_\-STRUCT::calibrated::mag, IMU\_\-DATA\_\-STRUCT::mag, ENC\_\-DATA\_\-STRUCT::calibrate::position, ENC\_\-DATA\_\-STRUCT::position, SUCCESS, t0, IMU\_\-DATA\_\-STRUCT::temp, MRA\_\-DATA\_\-STRUCT::v\_\-ctl, MRA\_\-DATA\_\-STRUCT::v\_\-ctl\_\-read, DATA\_\-XYZ\_\-DOUBLE::x, DATA\_\-XYZ::x, DATA\_\-XYZ\_\-DOUBLE::y, DATA\_\-XYZ::y, DATA\_\-XYZ\_\-DOUBLE::z, and DATA\_\-XYZ::z.
 
 
 
-Referenced by ui\-\_\-update().
+Referenced by ui\_\-update().
+
+
 
 
 \begin{DoxyCode}
-191 \{
-192         \textcolor{keywordtype}{float} error\_rate = 0.0;
-193         \textcolor{keywordtype}{double} t = 0.0;
-194         \textcolor{keywordtype}{double} Ts = 0.0;
-195         \textcolor{keywordtype}{double} mean\_exec\_time = 0.0;
-196         \textcolor{keywordtype}{double} \hyperlink{main2_8c_a86c2efd6da48b362806cdbb5b1e711d8}{t0} = 0.0;
-197 
-198         \hyperlink{main2_8c_a5b2b1fdd5e517470c10e84a2b2bcc5c8}{get\_time}(&t, &Ts, &mean\_exec\_time, &t0);
+193 {
+194         float error_rate = 0.0;
+195         double t = 0.0;
+196         double Ts = 0.0;
+197         double mean_exec_time = 0.0;
+198         double t0 = 0.0;
 199 
-200         error\_rate = (float)(((\textcolor{keywordtype}{float})failures/(\textcolor{keywordtype}{float})\hyperlink{main_8c_ac7af894858cf396a219d632f40afdc8d}{total})*100.0);
-201         mvprintw(2, 0, \textcolor{stringliteral}{"Communication Statistics: Total = %d Failures = %d Error Rate = %3.3f"},total, 
-      failures, error\_rate);
-202 
-203         mvprintw(4, 0,  \textcolor{stringliteral}{"IMU Accelerometer (bits):\(\backslash\)tX:%4d\(\backslash\)tY:%4d\(\backslash\)tZ:%4d"}, pimu\_data->
-      \hyperlink{structIMU__DATA__STRUCT_a448f284bf44eb503affda586ad5fa9d2}{acc}.\hyperlink{structDATA__XYZ_a54c1596e9f9969fd9c21e8458024ecfb}{x}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_a448f284bf44eb503affda586ad5fa9d2}{acc}.\hyperlink{structDATA__XYZ_a94bbb1c889bf53eb6a5fffa2b39322cf}{y}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_a448f284bf44eb503affda586ad5fa9d2}{acc}.\hyperlink{structDATA__XYZ_a69e89ab0ec6e5d72fc5d54f62cc07fb5}{z});
-204         mvprintw(5, 0, \textcolor{stringliteral}{"IMU Gyrometer (bits):\(\backslash\)t\(\backslash\)tX:%4d\(\backslash\)tY:%4d\(\backslash\)tZ:%4d"}, pimu\_data->
-      \hyperlink{structIMU__DATA__STRUCT_a0c1ac26626e4434a2ee124a1928a23a1}{gyr}.\hyperlink{structDATA__XYZ_a54c1596e9f9969fd9c21e8458024ecfb}{x}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_a0c1ac26626e4434a2ee124a1928a23a1}{gyr}.\hyperlink{structDATA__XYZ_a94bbb1c889bf53eb6a5fffa2b39322cf}{y}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_a0c1ac26626e4434a2ee124a1928a23a1}{gyr}.\hyperlink{structDATA__XYZ_a69e89ab0ec6e5d72fc5d54f62cc07fb5}{z});
-205         mvprintw(6, 0, \textcolor{stringliteral}{"IMU Magnetometer (bits):\(\backslash\)tX:%4d\(\backslash\)tY:%4d\(\backslash\)tZ:%4d"}, pimu\_data->
-      \hyperlink{structIMU__DATA__STRUCT_a40c7df8b6d49297aa52873cfd9b60daa}{mag}.\hyperlink{structDATA__XYZ_a54c1596e9f9969fd9c21e8458024ecfb}{x}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_a40c7df8b6d49297aa52873cfd9b60daa}{mag}.\hyperlink{structDATA__XYZ_a94bbb1c889bf53eb6a5fffa2b39322cf}{y}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_a40c7df8b6d49297aa52873cfd9b60daa}{mag}.\hyperlink{structDATA__XYZ_a69e89ab0ec6e5d72fc5d54f62cc07fb5}{z});
-206         
-207         mvprintw(8, 0,  \textcolor{stringliteral}{"IMU Accelerometer (g):\(\backslash\)t\(\backslash\)tX:%8.5lf\(\backslash\)tY:%8.5lf\(\backslash\)tZ:%8.5lf"}, pimu\_data->
-      \hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a281a7fdb40a05ed97388f18b9bb90c81}{acc}.\hyperlink{structDATA__XYZ__DOUBLE_a22868cc99a423900e7b82d015a5eb91f}{x}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a281a7fdb40a05ed97388f18b9bb90c81}{acc}.\hyperlink{structDATA__XYZ__DOUBLE_a198a27b5df3b5b0bf461b0e481e22a82}{y}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a281a7fdb40a05ed97388f18b9bb90c81}{acc}.
-      \hyperlink{structDATA__XYZ__DOUBLE_a9556e8868c223ff3e28756ea18a284c0}{z});
-208         mvprintw(9, 0, \textcolor{stringliteral}{"IMU Gyrometer (rad/s):\(\backslash\)t\(\backslash\)tX:%8.5lf\(\backslash\)tY:%8.5lf\(\backslash\)tZ:%8.5lf"}, pimu\_data->
-      \hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a8a54aded6ce608f1b7d2b4a0c52c248b}{gyr}.\hyperlink{structDATA__XYZ__DOUBLE_a22868cc99a423900e7b82d015a5eb91f}{x}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a8a54aded6ce608f1b7d2b4a0c52c248b}{gyr}.\hyperlink{structDATA__XYZ__DOUBLE_a198a27b5df3b5b0bf461b0e481e22a82}{y}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a8a54aded6ce608f1b7d2b4a0c52c248b}{gyr}.
-      \hyperlink{structDATA__XYZ__DOUBLE_a9556e8868c223ff3e28756ea18a284c0}{z});
-209         mvprintw(10, 0, \textcolor{stringliteral}{"IMU Magnetometer (B):\(\backslash\)t\(\backslash\)tX:%8.5lf\(\backslash\)tY:%8.5lf\(\backslash\)tZ:%8.5lf"}, pimu\_data->
-      \hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a2fde6c6759e0fda17e272c32096cb9ec}{mag}.\hyperlink{structDATA__XYZ__DOUBLE_a22868cc99a423900e7b82d015a5eb91f}{x}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a2fde6c6759e0fda17e272c32096cb9ec}{mag}.\hyperlink{structDATA__XYZ__DOUBLE_a198a27b5df3b5b0bf461b0e481e22a82}{y}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a2fde6c6759e0fda17e272c32096cb9ec}{mag}.
-      \hyperlink{structDATA__XYZ__DOUBLE_a9556e8868c223ff3e28756ea18a284c0}{z});
-210 
-211         mvprintw(12, 0, \textcolor{stringliteral}{"Temp (bits):\(\backslash\)t%d"}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_a81e1dbf765c1d947ca6076aa1bbc73e7}{temp});
-212         mvprintw(12,40, \textcolor{stringliteral}{"Temp (ºC):\(\backslash\)t%lf"}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_a3553fcee6beba17fe0c7711ac0483875}{calib\_temp});
-213 
-214         mvprintw(13,0, \textcolor{stringliteral}{"Encoder (bits):\(\backslash\)t%d"},enc\_data->\hyperlink{structENC__DATA__STRUCT_ad25beb30fd5b975292f87db02ec9930a}{angle});
-215         mvprintw(13,40, \textcolor{stringliteral}{"Encoder (degree):\(\backslash\)t%d"},enc\_data->\hyperlink{structENC__DATA__STRUCT_ad25beb30fd5b975292f87db02ec9930a}{angle});
-216         \textcolor{comment}{//mvprintw(15,0,"Fx (bits): %d",peff\_data->F.x);}
-217 
-218         \textcolor{comment}{//mvprintw(2,40,"Fx (N): %lf",peff\_data->??);}
-219         \textcolor{comment}{//mvprintw(15,0,"Fy (bits): %d",peff\_data->F.y);}
-220         \textcolor{comment}{//mvprintw(3,40,"Fx (N): %lf",peff\_data->??);}
-221         \textcolor{comment}{//mvprintw(16,0,"Fz (bits): %d",peff\_data->F.z);}
-222         \textcolor{comment}{//mvprintw(4,40,"Fx (N): %lf",peff\_data->??);}
-223         \textcolor{comment}{//mvprintw(17,0,"Mx (bits): %d",peff\_data->M.x);}
-224         \textcolor{comment}{//mvprintw(5,40,"Mx (Nm): %lf",peff\_data->??);}
-225         \textcolor{comment}{//mvprintw(18,0,"My (bits): %d",peff\_data->M.y);}
-226         \textcolor{comment}{//mvprintw(6,40,"My (Nm): %lf",peff\_data->??);}
-227         \textcolor{comment}{//mvprintw(19,0,"Mz (bits): %d",peff\_data->M.z);}
-228         \textcolor{comment}{//mvprintw(7,40,"Mz (Nm): %lf",peff\_data->??);}
-229         
-230         mvprintw(15, 0, \textcolor{stringliteral}{"Voltage Control Written (bits):\(\backslash\)t%4d"}, pmra\_data->\hyperlink{structMRA__DATA__STRUCT_a64b4e6bb604e58de593a60c87942b966}{v\_ctl});
-231         mvprintw(16, 0, \textcolor{stringliteral}{"Voltage Control Read (bits):\(\backslash\)t%4d"}, pmra\_data->
-      \hyperlink{structMRA__DATA__STRUCT_a3a31d57268c33b21ac915fdc27dfe474}{v\_ctl\_read});
-232 
-233     mvprintw(18, 0, \textcolor{stringliteral}{"Runtime: %4.2lf"}, t);
-234     \textcolor{comment}{//removed datalogger:}
-235     \textcolor{keywordflow}{if}(1)\textcolor{comment}{//if(datalogger\_status() == DATALOGGER\_NOT\_RUNNING)}
-236     \{
-237         mvprintw(18, 40, \textcolor{stringliteral}{"Datalogger stopped"});
-238     \}
-239     \textcolor{keywordflow}{else}
-240     \{
-241         mvprintw(18, 40, \textcolor{stringliteral}{"Datalogger runtime: %4.2lf"}, (t-t0));
-242     \}
-243 \textcolor{comment}{/*}
-244 \textcolor{comment}{    if(calibration\_get\_status() == CALIBRATION\_NOT\_RUNNING)}
-245 \textcolor{comment}{    \{}
-246 \textcolor{comment}{        mvprintw(15, 0, "Calibration stopped");}
-247 \textcolor{comment}{    \}}
-248 \textcolor{comment}{    else}
-249 \textcolor{comment}{    \{}
-250 \textcolor{comment}{        mvprintw(15, 0, "Calibration running");}
-251 \textcolor{comment}{    \}}
-252 \textcolor{comment}{*/}
-253         mvprintw(20, 0, \textcolor{stringliteral}{"I: IMU"});
-254         mvprintw(20, 20, \textcolor{stringliteral}{"F: Efforts"});
-255         mvprintw(20, 40, \textcolor{stringliteral}{"M: Magneto-rheological Actuator"});
-256         mvprintw(21, 0, \textcolor{stringliteral}{"E: Encoder"});
-257         mvprintw(21, 20, \textcolor{stringliteral}{"O: Overview"});
-258         \textcolor{comment}{//mvprintw(21, 40, "D: Datalogger Start/Stop");}
-259         mvprintw(22, 0, \textcolor{stringliteral}{"Q: Quit\(\backslash\)n"});
-260 
-261         \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};
-262 \}
+200         get_time(&t, &Ts, &mean_exec_time, &t0);
+201 
+202         error_rate = (float)(((float)failures/(float)total)*100.0);
+203         mvprintw(2, 0, "Communication Statistics: Total = %d Failures = %d Error 
+      Rate = %3.3f",total, failures, error_rate);
+204 
+205         mvprintw(4, 0,  "IMU Accelerometer (bits):\tX:%4d\tY:%4d\tZ:%4d", pimu_da
+      ta->acc.x, pimu_data->acc.y, pimu_data->acc.z);
+206         mvprintw(5, 0, "IMU Gyrometer (bits):\t\tX:%4d\tY:%4d\tZ:%4d", pimu_data-
+      >gyr.x, pimu_data->gyr.y, pimu_data->gyr.z);
+207         mvprintw(6, 0, "IMU Magnetometer (bits):\tX:%4d\tY:%4d\tZ:%4d", pimu_data
+      ->mag.x, pimu_data->mag.y, pimu_data->mag.z);
+208         
+209         mvprintw(8, 0,  "IMU Accelerometer (g):\t\tX:%8.5lf\tY:%8.5lf\tZ:%8.5lf",
+       pimu_data->calib.acc.x, pimu_data->calib.acc.y, pimu_data->calib.acc.z);
+210         mvprintw(9, 0, "IMU Gyrometer (rad/s):\t\tX:%8.5lf\tY:%8.5lf\tZ:%8.5lf", 
+      pimu_data->calib.gyr.x, pimu_data->calib.gyr.y, pimu_data->calib.gyr.z);
+211         mvprintw(10, 0, "IMU Magnetometer (B):\t\tX:%8.5lf\tY:%8.5lf\tZ:%8.5lf", 
+      pimu_data->calib.mag.x, pimu_data->calib.mag.y, pimu_data->calib.mag.z);
+212 
+213         mvprintw(12, 0, "Temp (bits):\t%d", pimu_data->temp);
+214         mvprintw(12,40, "Temp (ºC):\t%lf", pimu_data->calib_temp);
+215 
+216         mvprintw(13,0, "Encoder (bits):\t%d",enc_data->position);
+217         mvprintw(13,40, "Encoder (degree):\t%d",enc_data->calib.position);
+218         //mvprintw(15,0,"Fx (bits): %d",peff_data->F.x);
+219 
+220         //mvprintw(2,40,"Fx (N): %lf",peff_data->??);
+221         //mvprintw(15,0,"Fy (bits): %d",peff_data->F.y);
+222         //mvprintw(3,40,"Fx (N): %lf",peff_data->??);
+223         //mvprintw(16,0,"Fz (bits): %d",peff_data->F.z);
+224         //mvprintw(4,40,"Fx (N): %lf",peff_data->??);
+225         //mvprintw(17,0,"Mx (bits): %d",peff_data->M.x);
+226         //mvprintw(5,40,"Mx (Nm): %lf",peff_data->??);
+227         //mvprintw(18,0,"My (bits): %d",peff_data->M.y);
+228         //mvprintw(6,40,"My (Nm): %lf",peff_data->??);
+229         //mvprintw(19,0,"Mz (bits): %d",peff_data->M.z);
+230         //mvprintw(7,40,"Mz (Nm): %lf",peff_data->??);
+231         
+232         mvprintw(15, 0, "Voltage Control Written (bits):\t%4d", pmra_data->v_ctl)
+      ;
+233         mvprintw(16, 0, "Voltage Control Read (bits):\t%4d", pmra_data->
+      v_ctl_read);
+234 
+235     mvprintw(18, 0, "Runtime: %4.2lf", t);
+236     //removed datalogger:
+237     if(1)//if(datalogger_status() == DATALOGGER_NOT_RUNNING)
+238     {
+239         mvprintw(18, 40, "Datalogger stopped");
+240     }
+241     else
+242     {
+243         mvprintw(18, 40, "Datalogger runtime: %4.2lf", (t-t0));
+244     }
+245 /*
+246     if(calibration_get_status() == CALIBRATION_NOT_RUNNING)
+247     {
+248         mvprintw(15, 0, "Calibration stopped");
+249     }
+250     else
+251     {
+252         mvprintw(15, 0, "Calibration running");
+253     }
+254 */
+255         mvprintw(20, 0, "I: IMU");
+256         mvprintw(20, 20, "F: Efforts");
+257         mvprintw(20, 40, "M: Magneto-rheological Actuator");
+258         mvprintw(21, 0, "E: Encoder");
+259         mvprintw(21, 20, "O: Overview");
+260         //mvprintw(21, 40, "D: Datalogger Start/Stop");
+261         mvprintw(22, 0, "Q: Quit\n");
+262 
+263         return SUCCESS;
+264 }
 \end{DoxyCode}
 
 
-Here is the call graph for this function\-:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=262pt]{ui_8h_a8d5e19833fec51919aad6e78bb74619a_cgraph}
-\end{center}
-\end{figure}
+
+
+Here is the call graph for this function:
 
 
 
-
-Here is the caller graph for this function\-:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{ui_8h_a8d5e19833fec51919aad6e78bb74619a_icgraph}
-\end{center}
-\end{figure}
-
+Here is the caller graph for this function:
 

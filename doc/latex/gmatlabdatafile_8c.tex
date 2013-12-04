@@ -1,299 +1,274 @@
-\hypertarget{gmatlabdatafile_8c}{\section{gdatalogger/gmatlabdatafile.c File Reference}
-\label{gmatlabdatafile_8c}\index{gdatalogger/gmatlabdatafile.\-c@{gdatalogger/gmatlabdatafile.\-c}}
+\hypertarget{gmatlabdatafile_8c}{
+\section{gdatalogger/gmatlabdatafile.c File Reference}
+\label{gmatlabdatafile_8c}\index{gdatalogger/gmatlabdatafile.c@{gdatalogger/gmatlabdatafile.c}}
 }
-{\ttfamily \#include $<$stdio.\-h$>$}\\*
-{\ttfamily \#include $<$stdlib.\-h$>$}\\*
-{\ttfamily \#include $<$string.\-h$>$}\\*
-{\ttfamily \#include \char`\"{}gmatlabdatafile.\-h\char`\"{}}\\*
-Include dependency graph for gmatlabdatafile.\-c\-:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{gmatlabdatafile_8c__incl}
-\end{center}
-\end{figure}
-\subsection*{Data Structures}
+{\ttfamily \#include $<$stdio.h$>$}\par
+{\ttfamily \#include $<$stdlib.h$>$}\par
+{\ttfamily \#include $<$string.h$>$}\par
+{\ttfamily \#include \char`\"{}gmatlabdatafile.h\char`\"{}}\par
+Include dependency graph for gmatlabdatafile.c:\subsection*{Data Structures}
 \begin{DoxyCompactItemize}
 \item 
-struct \hyperlink{structMATLAB__DATAHEAD}{M\-A\-T\-L\-A\-B\-\_\-\-D\-A\-T\-A\-H\-E\-A\-D}
+struct \hyperlink{structMATLAB__DATAHEAD}{MATLAB\_\-DATAHEAD}
 \end{DoxyCompactItemize}
 \subsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
-typedef struct \hyperlink{structMATLAB__DATAHEAD}{M\-A\-T\-L\-A\-B\-\_\-\-D\-A\-T\-A\-H\-E\-A\-D} $\ast$ \hyperlink{gmatlabdatafile_8c_a558f122e40bebf320e29b4720893a94a}{P\-M\-A\-T\-L\-A\-B\-\_\-\-D\-A\-T\-A\-H\-E\-A\-D}
+typedef struct \hyperlink{structMATLAB__DATAHEAD}{MATLAB\_\-DATAHEAD} $\ast$ \hyperlink{gmatlabdatafile_8c_a558f122e40bebf320e29b4720893a94a}{PMATLAB\_\-DATAHEAD}
 \end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-int \hyperlink{gmatlabdatafile_8c_af53051d93a0e13032b8735451b077fb9}{g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Open\-Write} (\hyperlink{gmatlabdatafile_8h_ad671f2b5835bd3d8489ff011d38eace0}{P\-G\-M\-A\-T\-L\-A\-B\-D\-A\-T\-A\-F\-I\-L\-E\-C\-O\-N\-F\-I\-G} p\-G\-Matlab\-Data\-File\-Config, char $\ast$filename, char $\ast$dirname)
+int \hyperlink{gmatlabdatafile_8c_af53051d93a0e13032b8735451b077fb9}{gMATLABDataFile\_\-OpenWrite} (\hyperlink{structGMATLABDATAFILECONFIG}{PGMATLABDATAFILECONFIG} pGMatlabDataFileConfig, char $\ast$filename, char $\ast$dirname)
 \item 
-int \hyperlink{gmatlabdatafile_8c_a82d0dd8169ca82a67bb2d78ee1efbafe}{g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Open\-Read} (\hyperlink{gmatlabdatafile_8h_ad671f2b5835bd3d8489ff011d38eace0}{P\-G\-M\-A\-T\-L\-A\-B\-D\-A\-T\-A\-F\-I\-L\-E\-C\-O\-N\-F\-I\-G} p\-G\-Matlab\-Data\-File\-Config, char $\ast$filename, char $\ast$dirname)
+int \hyperlink{gmatlabdatafile_8c_a82d0dd8169ca82a67bb2d78ee1efbafe}{gMATLABDataFile\_\-OpenRead} (\hyperlink{structGMATLABDATAFILECONFIG}{PGMATLABDATAFILECONFIG} pGMatlabDataFileConfig, char $\ast$filename, char $\ast$dirname)
 \item 
-void \hyperlink{gmatlabdatafile_8c_ad38283a16cbd66a2834b2ca9f5c6c6e0}{g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Close} (\hyperlink{gmatlabdatafile_8h_ad671f2b5835bd3d8489ff011d38eace0}{P\-G\-M\-A\-T\-L\-A\-B\-D\-A\-T\-A\-F\-I\-L\-E\-C\-O\-N\-F\-I\-G} p\-G\-Matlab\-Data\-File\-Config)
+void \hyperlink{gmatlabdatafile_8c_ad38283a16cbd66a2834b2ca9f5c6c6e0}{gMATLABDataFile\_\-Close} (\hyperlink{structGMATLABDATAFILECONFIG}{PGMATLABDATAFILECONFIG} pGMatlabDataFileConfig)
 \item 
-int \hyperlink{gmatlabdatafile_8c_a3ecf28836f545707551fe8b8005c8954}{g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Save\-Vector} (\hyperlink{gmatlabdatafile_8h_ad671f2b5835bd3d8489ff011d38eace0}{P\-G\-M\-A\-T\-L\-A\-B\-D\-A\-T\-A\-F\-I\-L\-E\-C\-O\-N\-F\-I\-G} p\-G\-Matlab\-Data\-File\-Config, const char $\ast$varname, double $\ast$v, long nlin)
+int \hyperlink{gmatlabdatafile_8c_a3ecf28836f545707551fe8b8005c8954}{gMATLABDataFile\_\-SaveVector} (\hyperlink{structGMATLABDATAFILECONFIG}{PGMATLABDATAFILECONFIG} pGMatlabDataFileConfig, const char $\ast$varname, double $\ast$v, long nlin)
 \item 
-int \hyperlink{gmatlabdatafile_8c_a4c928bd4ef71adea00c53f157ab00bea}{g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Save\-Matrix} (\hyperlink{gmatlabdatafile_8h_ad671f2b5835bd3d8489ff011d38eace0}{P\-G\-M\-A\-T\-L\-A\-B\-D\-A\-T\-A\-F\-I\-L\-E\-C\-O\-N\-F\-I\-G} p\-G\-Matlab\-Data\-File\-Config, const char $\ast$varname, double $\ast$$\ast$m, long nlin, long ncol)
+int \hyperlink{gmatlabdatafile_8c_a4c928bd4ef71adea00c53f157ab00bea}{gMATLABDataFile\_\-SaveMatrix} (\hyperlink{structGMATLABDATAFILECONFIG}{PGMATLABDATAFILECONFIG} pGMatlabDataFileConfig, const char $\ast$varname, double $\ast$$\ast$m, long nlin, long ncol)
 \end{DoxyCompactItemize}
 
 
 \subsection{Typedef Documentation}
-\hypertarget{gmatlabdatafile_8c_a558f122e40bebf320e29b4720893a94a}{\index{gmatlabdatafile.\-c@{gmatlabdatafile.\-c}!P\-M\-A\-T\-L\-A\-B\-\_\-\-D\-A\-T\-A\-H\-E\-A\-D@{P\-M\-A\-T\-L\-A\-B\-\_\-\-D\-A\-T\-A\-H\-E\-A\-D}}
-\index{P\-M\-A\-T\-L\-A\-B\-\_\-\-D\-A\-T\-A\-H\-E\-A\-D@{P\-M\-A\-T\-L\-A\-B\-\_\-\-D\-A\-T\-A\-H\-E\-A\-D}!gmatlabdatafile.c@{gmatlabdatafile.\-c}}
-\subsubsection[{P\-M\-A\-T\-L\-A\-B\-\_\-\-D\-A\-T\-A\-H\-E\-A\-D}]{\setlength{\rightskip}{0pt plus 5cm}typedef  struct {\bf M\-A\-T\-L\-A\-B\-\_\-\-D\-A\-T\-A\-H\-E\-A\-D} $\ast$ {\bf P\-M\-A\-T\-L\-A\-B\-\_\-\-D\-A\-T\-A\-H\-E\-A\-D}}}\label{gmatlabdatafile_8c_a558f122e40bebf320e29b4720893a94a}
+\hypertarget{gmatlabdatafile_8c_a558f122e40bebf320e29b4720893a94a}{
+\index{gmatlabdatafile.c@{gmatlabdatafile.c}!PMATLAB\_\-DATAHEAD@{PMATLAB\_\-DATAHEAD}}
+\index{PMATLAB\_\-DATAHEAD@{PMATLAB\_\-DATAHEAD}!gmatlabdatafile.c@{gmatlabdatafile.c}}
+\subsubsection[{PMATLAB\_\-DATAHEAD}]{\setlength{\rightskip}{0pt plus 5cm}typedef  struct {\bf MATLAB\_\-DATAHEAD} $\ast$ {\bf PMATLAB\_\-DATAHEAD}}}
+\label{gmatlabdatafile_8c_a558f122e40bebf320e29b4720893a94a}
 
 
 \subsection{Function Documentation}
-\hypertarget{gmatlabdatafile_8c_ad38283a16cbd66a2834b2ca9f5c6c6e0}{\index{gmatlabdatafile.\-c@{gmatlabdatafile.\-c}!g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Close@{g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Close}}
-\index{g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Close@{g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Close}!gmatlabdatafile.c@{gmatlabdatafile.\-c}}
-\subsubsection[{g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Close}]{\setlength{\rightskip}{0pt plus 5cm}void g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Close (
-\begin{DoxyParamCaption}
-\item[{{\bf P\-G\-M\-A\-T\-L\-A\-B\-D\-A\-T\-A\-F\-I\-L\-E\-C\-O\-N\-F\-I\-G}}]{p\-G\-Matlab\-Data\-File\-Config}
-\end{DoxyParamCaption}
-)}}\label{gmatlabdatafile_8c_ad38283a16cbd66a2834b2ca9f5c6c6e0}
+\hypertarget{gmatlabdatafile_8c_ad38283a16cbd66a2834b2ca9f5c6c6e0}{
+\index{gmatlabdatafile.c@{gmatlabdatafile.c}!gMATLABDataFile\_\-Close@{gMATLABDataFile\_\-Close}}
+\index{gMATLABDataFile\_\-Close@{gMATLABDataFile\_\-Close}!gmatlabdatafile.c@{gmatlabdatafile.c}}
+\subsubsection[{gMATLABDataFile\_\-Close}]{\setlength{\rightskip}{0pt plus 5cm}void gMATLABDataFile\_\-Close ({\bf PGMATLABDATAFILECONFIG} {\em pGMatlabDataFileConfig})}}
+\label{gmatlabdatafile_8c_ad38283a16cbd66a2834b2ca9f5c6c6e0}
 
 
-Definition at line 58 of file gmatlabdatafile.\-c.
-
-
-
-References G\-M\-A\-T\-L\-A\-B\-D\-A\-T\-A\-F\-I\-L\-E\-C\-O\-N\-F\-I\-G\-::fp.
+Definition at line 58 of file gmatlabdatafile.c.
 
 
 
-Referenced by g\-Data\-Logger\-\_\-\-Close().
+References GMATLABDATAFILECONFIG::fp.
+
+
+
+Referenced by gDataLogger\_\-Close().
+
+
 
 
 \begin{DoxyCode}
-59 \{
-60         fclose(pGMatlabDataFileConfig->\hyperlink{structGMATLABDATAFILECONFIG_a900bde88d01e7b5380101446c89a06a6}{fp});
+59 {
+60         fclose(pGMatlabDataFileConfig->fp);
 61 
-62 \}
+62 }
 \end{DoxyCode}
 
 
-Here is the caller graph for this function\-:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{gmatlabdatafile_8c_ad38283a16cbd66a2834b2ca9f5c6c6e0_icgraph}
-\end{center}
-\end{figure}
 
 
-\hypertarget{gmatlabdatafile_8c_a82d0dd8169ca82a67bb2d78ee1efbafe}{\index{gmatlabdatafile.\-c@{gmatlabdatafile.\-c}!g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Open\-Read@{g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Open\-Read}}
-\index{g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Open\-Read@{g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Open\-Read}!gmatlabdatafile.c@{gmatlabdatafile.\-c}}
-\subsubsection[{g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Open\-Read}]{\setlength{\rightskip}{0pt plus 5cm}int g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Open\-Read (
-\begin{DoxyParamCaption}
-\item[{{\bf P\-G\-M\-A\-T\-L\-A\-B\-D\-A\-T\-A\-F\-I\-L\-E\-C\-O\-N\-F\-I\-G}}]{p\-G\-Matlab\-Data\-File\-Config, }
-\item[{char $\ast$}]{filename, }
-\item[{char $\ast$}]{dirname}
-\end{DoxyParamCaption}
-)}}\label{gmatlabdatafile_8c_a82d0dd8169ca82a67bb2d78ee1efbafe}
+Here is the caller graph for this function:
+
+\hypertarget{gmatlabdatafile_8c_a82d0dd8169ca82a67bb2d78ee1efbafe}{
+\index{gmatlabdatafile.c@{gmatlabdatafile.c}!gMATLABDataFile\_\-OpenRead@{gMATLABDataFile\_\-OpenRead}}
+\index{gMATLABDataFile\_\-OpenRead@{gMATLABDataFile\_\-OpenRead}!gmatlabdatafile.c@{gmatlabdatafile.c}}
+\subsubsection[{gMATLABDataFile\_\-OpenRead}]{\setlength{\rightskip}{0pt plus 5cm}int gMATLABDataFile\_\-OpenRead ({\bf PGMATLABDATAFILECONFIG} {\em pGMatlabDataFileConfig}, \/  char $\ast$ {\em filename}, \/  char $\ast$ {\em dirname})}}
+\label{gmatlabdatafile_8c_a82d0dd8169ca82a67bb2d78ee1efbafe}
 
 
-Definition at line 40 of file gmatlabdatafile.\-c.
+Definition at line 40 of file gmatlabdatafile.c.
 
 
 
-References F\-A\-L\-S\-E, G\-M\-A\-T\-L\-A\-B\-D\-A\-T\-A\-F\-I\-L\-E\-C\-O\-N\-F\-I\-G\-::\-File\-Name, G\-M\-A\-T\-L\-A\-B\-D\-A\-T\-A\-F\-I\-L\-E\-C\-O\-N\-F\-I\-G\-::\-Flag\-Still\-Not\-Saved, G\-M\-A\-T\-L\-A\-B\-D\-A\-T\-A\-F\-I\-L\-E\-C\-O\-N\-F\-I\-G\-::fp, and T\-R\-U\-E.
+References FALSE, GMATLABDATAFILECONFIG::FileName, GMATLABDATAFILECONFIG::FlagStillNotSaved, GMATLABDATAFILECONFIG::fp, and TRUE.
+
+
 
 
 \begin{DoxyCode}
-41 \{
-42         pGMatlabDataFileConfig->\hyperlink{structGMATLABDATAFILECONFIG_ada4eb3a8fbcfdcb41723f31d09e0bd19}{FileName}[0] = \textcolor{charliteral}{'\(\backslash\)0'};
-43         \textcolor{keywordflow}{if}(dirname!=NULL)
-44                 sprintf(pGMatlabDataFileConfig->\hyperlink{structGMATLABDATAFILECONFIG_ada4eb3a8fbcfdcb41723f31d09e0bd19}{FileName},\textcolor{stringliteral}{"%s"},dirname);
-45         strcat(pGMatlabDataFileConfig->\hyperlink{structGMATLABDATAFILECONFIG_ada4eb3a8fbcfdcb41723f31d09e0bd19}{FileName},filename);
-46         pGMatlabDataFileConfig->\hyperlink{structGMATLABDATAFILECONFIG_a58d1c2a70b22c7c08eccaaea77990db2}{FlagStillNotSaved} = \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
+41 {
+42         pGMatlabDataFileConfig->FileName[0] = '\0';
+43         if(dirname!=NULL)
+44                 sprintf(pGMatlabDataFileConfig->FileName,"%s",dirname);
+45         strcat(pGMatlabDataFileConfig->FileName,filename);
+46         pGMatlabDataFileConfig->FlagStillNotSaved = TRUE;
 47 
-48         pGMatlabDataFileConfig->\hyperlink{structGMATLABDATAFILECONFIG_a900bde88d01e7b5380101446c89a06a6}{fp} = fopen(pGMatlabDataFileConfig->\hyperlink{structGMATLABDATAFILECONFIG_ada4eb3a8fbcfdcb41723f31d09e0bd19}{FileName}, \textcolor{stringliteral}{"r"});
-49         \textcolor{keywordflow}{if}(pGMatlabDataFileConfig->\hyperlink{structGMATLABDATAFILECONFIG_a900bde88d01e7b5380101446c89a06a6}{fp}==NULL)\{
-50                 \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
-51         \}
-52         rewind(pGMatlabDataFileConfig->\hyperlink{structGMATLABDATAFILECONFIG_a900bde88d01e7b5380101446c89a06a6}{fp});
+48         pGMatlabDataFileConfig->fp = fopen(pGMatlabDataFileConfig->FileName, "r")
+      ;
+49         if(pGMatlabDataFileConfig->fp==NULL){
+50                 return FALSE;
+51         }
+52         rewind(pGMatlabDataFileConfig->fp);
 53 
-54         \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
+54         return TRUE;
 55 
-56 \}
+56 }
 \end{DoxyCode}
-\hypertarget{gmatlabdatafile_8c_af53051d93a0e13032b8735451b077fb9}{\index{gmatlabdatafile.\-c@{gmatlabdatafile.\-c}!g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Open\-Write@{g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Open\-Write}}
-\index{g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Open\-Write@{g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Open\-Write}!gmatlabdatafile.c@{gmatlabdatafile.\-c}}
-\subsubsection[{g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Open\-Write}]{\setlength{\rightskip}{0pt plus 5cm}int g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Open\-Write (
-\begin{DoxyParamCaption}
-\item[{{\bf P\-G\-M\-A\-T\-L\-A\-B\-D\-A\-T\-A\-F\-I\-L\-E\-C\-O\-N\-F\-I\-G}}]{p\-G\-Matlab\-Data\-File\-Config, }
-\item[{char $\ast$}]{filename, }
-\item[{char $\ast$}]{dirname}
-\end{DoxyParamCaption}
-)}}\label{gmatlabdatafile_8c_af53051d93a0e13032b8735451b077fb9}
 
 
-Definition at line 21 of file gmatlabdatafile.\-c.
+\hypertarget{gmatlabdatafile_8c_af53051d93a0e13032b8735451b077fb9}{
+\index{gmatlabdatafile.c@{gmatlabdatafile.c}!gMATLABDataFile\_\-OpenWrite@{gMATLABDataFile\_\-OpenWrite}}
+\index{gMATLABDataFile\_\-OpenWrite@{gMATLABDataFile\_\-OpenWrite}!gmatlabdatafile.c@{gmatlabdatafile.c}}
+\subsubsection[{gMATLABDataFile\_\-OpenWrite}]{\setlength{\rightskip}{0pt plus 5cm}int gMATLABDataFile\_\-OpenWrite ({\bf PGMATLABDATAFILECONFIG} {\em pGMatlabDataFileConfig}, \/  char $\ast$ {\em filename}, \/  char $\ast$ {\em dirname})}}
+\label{gmatlabdatafile_8c_af53051d93a0e13032b8735451b077fb9}
 
 
-
-References F\-A\-L\-S\-E, G\-M\-A\-T\-L\-A\-B\-D\-A\-T\-A\-F\-I\-L\-E\-C\-O\-N\-F\-I\-G\-::\-File\-Name, G\-M\-A\-T\-L\-A\-B\-D\-A\-T\-A\-F\-I\-L\-E\-C\-O\-N\-F\-I\-G\-::\-Flag\-Still\-Not\-Saved, G\-M\-A\-T\-L\-A\-B\-D\-A\-T\-A\-F\-I\-L\-E\-C\-O\-N\-F\-I\-G\-::fp, and T\-R\-U\-E.
+Definition at line 21 of file gmatlabdatafile.c.
 
 
 
-Referenced by g\-Data\-Logger\-\_\-\-Init().
+References FALSE, GMATLABDATAFILECONFIG::FileName, GMATLABDATAFILECONFIG::FlagStillNotSaved, GMATLABDATAFILECONFIG::fp, and TRUE.
+
+
+
+Referenced by gDataLogger\_\-Init().
+
+
 
 
 \begin{DoxyCode}
-22 \{
-23         pGMatlabDataFileConfig->\hyperlink{structGMATLABDATAFILECONFIG_ada4eb3a8fbcfdcb41723f31d09e0bd19}{FileName}[0] = \textcolor{charliteral}{'\(\backslash\)0'};
-24         \textcolor{keywordflow}{if}(dirname!=NULL)
-25                 sprintf(pGMatlabDataFileConfig->\hyperlink{structGMATLABDATAFILECONFIG_ada4eb3a8fbcfdcb41723f31d09e0bd19}{FileName},\textcolor{stringliteral}{"%s"},dirname);
-26         strcat(pGMatlabDataFileConfig->\hyperlink{structGMATLABDATAFILECONFIG_ada4eb3a8fbcfdcb41723f31d09e0bd19}{FileName},filename);
-27         pGMatlabDataFileConfig->\hyperlink{structGMATLABDATAFILECONFIG_a58d1c2a70b22c7c08eccaaea77990db2}{FlagStillNotSaved} = \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
+22 {
+23         pGMatlabDataFileConfig->FileName[0] = '\0';
+24         if(dirname!=NULL)
+25                 sprintf(pGMatlabDataFileConfig->FileName,"%s",dirname);
+26         strcat(pGMatlabDataFileConfig->FileName,filename);
+27         pGMatlabDataFileConfig->FlagStillNotSaved = TRUE;
 28 
-29         pGMatlabDataFileConfig->\hyperlink{structGMATLABDATAFILECONFIG_a900bde88d01e7b5380101446c89a06a6}{fp} = fopen(pGMatlabDataFileConfig->\hyperlink{structGMATLABDATAFILECONFIG_ada4eb3a8fbcfdcb41723f31d09e0bd19}{FileName}, \textcolor{stringliteral}{"w"});
-30         \textcolor{keywordflow}{if}(pGMatlabDataFileConfig->\hyperlink{structGMATLABDATAFILECONFIG_a900bde88d01e7b5380101446c89a06a6}{fp}==NULL)\{
-31                 printf(\textcolor{stringliteral}{"\(\backslash\)n pGMatlabDataFileConfig->fp==NULL: %s"},pGMatlabDataFileConfig->
-      \hyperlink{structGMATLABDATAFILECONFIG_ada4eb3a8fbcfdcb41723f31d09e0bd19}{FileName});
-32                 \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
-33         \}
-34         rewind(pGMatlabDataFileConfig->\hyperlink{structGMATLABDATAFILECONFIG_a900bde88d01e7b5380101446c89a06a6}{fp});
+29         pGMatlabDataFileConfig->fp = fopen(pGMatlabDataFileConfig->FileName, "w")
+      ;
+30         if(pGMatlabDataFileConfig->fp==NULL){
+31                 printf("\n pGMatlabDataFileConfig->fp==NULL: %s",pGMatlabDataFile
+      Config->FileName);
+32                 return FALSE;
+33         }
+34         rewind(pGMatlabDataFileConfig->fp);
 35 
-36         \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
+36         return TRUE;
 37 
-38 \}
+38 }
 \end{DoxyCode}
 
 
-Here is the caller graph for this function\-:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{gmatlabdatafile_8c_af53051d93a0e13032b8735451b077fb9_icgraph}
-\end{center}
-\end{figure}
 
 
-\hypertarget{gmatlabdatafile_8c_a4c928bd4ef71adea00c53f157ab00bea}{\index{gmatlabdatafile.\-c@{gmatlabdatafile.\-c}!g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Save\-Matrix@{g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Save\-Matrix}}
-\index{g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Save\-Matrix@{g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Save\-Matrix}!gmatlabdatafile.c@{gmatlabdatafile.\-c}}
-\subsubsection[{g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Save\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}int g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Save\-Matrix (
-\begin{DoxyParamCaption}
-\item[{{\bf P\-G\-M\-A\-T\-L\-A\-B\-D\-A\-T\-A\-F\-I\-L\-E\-C\-O\-N\-F\-I\-G}}]{p\-G\-Matlab\-Data\-File\-Config, }
-\item[{const char $\ast$}]{varname, }
-\item[{double $\ast$$\ast$}]{m, }
-\item[{long}]{nlin, }
-\item[{long}]{ncol}
-\end{DoxyParamCaption}
-)}}\label{gmatlabdatafile_8c_a4c928bd4ef71adea00c53f157ab00bea}
+Here is the caller graph for this function:
+
+\hypertarget{gmatlabdatafile_8c_a4c928bd4ef71adea00c53f157ab00bea}{
+\index{gmatlabdatafile.c@{gmatlabdatafile.c}!gMATLABDataFile\_\-SaveMatrix@{gMATLABDataFile\_\-SaveMatrix}}
+\index{gMATLABDataFile\_\-SaveMatrix@{gMATLABDataFile\_\-SaveMatrix}!gmatlabdatafile.c@{gmatlabdatafile.c}}
+\subsubsection[{gMATLABDataFile\_\-SaveMatrix}]{\setlength{\rightskip}{0pt plus 5cm}int gMATLABDataFile\_\-SaveMatrix ({\bf PGMATLABDATAFILECONFIG} {\em pGMatlabDataFileConfig}, \/  const char $\ast$ {\em varname}, \/  double $\ast$$\ast$ {\em m}, \/  long {\em nlin}, \/  long {\em ncol})}}
+\label{gmatlabdatafile_8c_a4c928bd4ef71adea00c53f157ab00bea}
 
 
-Definition at line 92 of file gmatlabdatafile.\-c.
+Definition at line 92 of file gmatlabdatafile.c.
 
 
 
-References F\-A\-L\-S\-E, G\-M\-A\-T\-L\-A\-B\-D\-A\-T\-A\-F\-I\-L\-E\-C\-O\-N\-F\-I\-G\-::\-Flag\-Still\-Not\-Saved, G\-M\-A\-T\-L\-A\-B\-D\-A\-T\-A\-F\-I\-L\-E\-C\-O\-N\-F\-I\-G\-::fp, M\-A\-T\-L\-A\-B\-\_\-\-D\-A\-T\-A\-H\-E\-A\-D\-::imagf, M\-A\-T\-L\-A\-B\-\_\-\-D\-A\-T\-A\-H\-E\-A\-D\-::mrows, M\-A\-T\-L\-A\-B\-\_\-\-D\-A\-T\-A\-H\-E\-A\-D\-::namlen, M\-A\-T\-L\-A\-B\-\_\-\-D\-A\-T\-A\-H\-E\-A\-D\-::ncols, T\-R\-U\-E, and M\-A\-T\-L\-A\-B\-\_\-\-D\-A\-T\-A\-H\-E\-A\-D\-::type.
+References FALSE, GMATLABDATAFILECONFIG::FlagStillNotSaved, GMATLABDATAFILECONFIG::fp, MATLAB\_\-DATAHEAD::imagf, MATLAB\_\-DATAHEAD::mrows, MATLAB\_\-DATAHEAD::namlen, MATLAB\_\-DATAHEAD::ncols, TRUE, and MATLAB\_\-DATAHEAD::type.
+
+
 
 
 \begin{DoxyCode}
-93 \{
-94         \hyperlink{structMATLAB__DATAHEAD}{MATLAB\_DATAHEAD} DataHead;
-95         \textcolor{keywordtype}{int} nl,nc;
-96         \textcolor{keywordtype}{double} *vcol;
+93 {
+94         MATLAB_DATAHEAD DataHead;
+95         int nl,nc;
+96         double *vcol;
 97 
-98         DataHead.\hyperlink{structMATLAB__DATAHEAD_ad3587e58da5ca6cbe3cd98d5e2f46202}{type}  = (long)(0);         
-99         DataHead.\hyperlink{structMATLAB__DATAHEAD_abf1ef02c93522915bd7fdf9f72df44b7}{mrows} = (long)(nlin);     
-100         DataHead.\hyperlink{structMATLAB__DATAHEAD_ae87d8eca5290fa03d01c79061498626f}{ncols} = (long)(ncol);
-101         DataHead.\hyperlink{structMATLAB__DATAHEAD_a7831e4f01682863fce4ba98071a7db08}{imagf} = (long)(0);
-102         DataHead.\hyperlink{structMATLAB__DATAHEAD_ad6e65844dcff1eb1cf7bf8752ba9a91c}{namlen} = (long)(strlen(varname)+1);
+98         DataHead.type  = (long)(0);             
+99         DataHead.mrows = (long)(nlin);  
+100         DataHead.ncols = (long)(ncol);
+101         DataHead.imagf = (long)(0);
+102         DataHead.namlen = (long)(strlen(varname)+1);
 103 
-104         \textcolor{keywordflow}{if}(! fwrite(&DataHead, \textcolor{keyword}{sizeof}(\hyperlink{structMATLAB__DATAHEAD}{MATLAB\_DATAHEAD}), 1, pGMatlabDataFileConfig->
-      \hyperlink{structGMATLABDATAFILECONFIG_a900bde88d01e7b5380101446c89a06a6}{fp}) )\{
-105                 \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
-106         \}
+104         if(! fwrite(&DataHead, sizeof(MATLAB_DATAHEAD), 1, pGMatlabDataFileConfig
+      ->fp) ){
+105                 return FALSE;
+106         }
 107 
-108         \textcolor{keywordflow}{if}(! fwrite(varname, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}), (strlen(varname)+1), pGMatlabDataFileConfig->
-      \hyperlink{structGMATLABDATAFILECONFIG_a900bde88d01e7b5380101446c89a06a6}{fp}))\{
-109                 \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
-110         \}
+108         if(! fwrite(varname, sizeof(char), (strlen(varname)+1), pGMatlabDataFileC
+      onfig->fp)){
+109                 return FALSE;
+110         }
 111 
-112         vcol = (\textcolor{keywordtype}{double}*)malloc(nlin*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}));
+112         vcol = (double*)malloc(nlin*sizeof(double));
 113 
-114         \textcolor{keywordflow}{for}(nc=0;nc<ncol;++nc)\{
-115                 \textcolor{keywordflow}{for}(nl=0;nl<nlin;++nl)\{
+114         for(nc=0;nc<ncol;++nc){
+115                 for(nl=0;nl<nlin;++nl){
 116                         vcol[nl] = m[nl][nc];
-117                 \}
-118                 \textcolor{keywordflow}{if}(! fwrite(vcol, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}), nlin, pGMatlabDataFileConfig->
-      \hyperlink{structGMATLABDATAFILECONFIG_a900bde88d01e7b5380101446c89a06a6}{fp}))\{
+117                 }
+118                 if(! fwrite(vcol, sizeof(double), nlin, pGMatlabDataFileConfig->
+      fp)){
 119                         free(vcol);
-120                         \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
-121                 \}
-122         \}
+120                         return FALSE;
+121                 }
+122         }
 123         free(vcol);
 124 
-125         pGMatlabDataFileConfig->\hyperlink{structGMATLABDATAFILECONFIG_a58d1c2a70b22c7c08eccaaea77990db2}{FlagStillNotSaved} = \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+125         pGMatlabDataFileConfig->FlagStillNotSaved = FALSE;
 126 
-127         \textcolor{keywordflow}{return}(\hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+127         return(TRUE);
 128 
-129 \}
+129 }
 \end{DoxyCode}
-\hypertarget{gmatlabdatafile_8c_a3ecf28836f545707551fe8b8005c8954}{\index{gmatlabdatafile.\-c@{gmatlabdatafile.\-c}!g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Save\-Vector@{g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Save\-Vector}}
-\index{g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Save\-Vector@{g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Save\-Vector}!gmatlabdatafile.c@{gmatlabdatafile.\-c}}
-\subsubsection[{g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Save\-Vector}]{\setlength{\rightskip}{0pt plus 5cm}int g\-M\-A\-T\-L\-A\-B\-Data\-File\-\_\-\-Save\-Vector (
-\begin{DoxyParamCaption}
-\item[{{\bf P\-G\-M\-A\-T\-L\-A\-B\-D\-A\-T\-A\-F\-I\-L\-E\-C\-O\-N\-F\-I\-G}}]{p\-G\-Matlab\-Data\-File\-Config, }
-\item[{const char $\ast$}]{varname, }
-\item[{double $\ast$}]{v, }
-\item[{long}]{nlin}
-\end{DoxyParamCaption}
-)}}\label{gmatlabdatafile_8c_a3ecf28836f545707551fe8b8005c8954}
 
 
-Definition at line 64 of file gmatlabdatafile.\-c.
+\hypertarget{gmatlabdatafile_8c_a3ecf28836f545707551fe8b8005c8954}{
+\index{gmatlabdatafile.c@{gmatlabdatafile.c}!gMATLABDataFile\_\-SaveVector@{gMATLABDataFile\_\-SaveVector}}
+\index{gMATLABDataFile\_\-SaveVector@{gMATLABDataFile\_\-SaveVector}!gmatlabdatafile.c@{gmatlabdatafile.c}}
+\subsubsection[{gMATLABDataFile\_\-SaveVector}]{\setlength{\rightskip}{0pt plus 5cm}int gMATLABDataFile\_\-SaveVector ({\bf PGMATLABDATAFILECONFIG} {\em pGMatlabDataFileConfig}, \/  const char $\ast$ {\em varname}, \/  double $\ast$ {\em v}, \/  long {\em nlin})}}
+\label{gmatlabdatafile_8c_a3ecf28836f545707551fe8b8005c8954}
+
+
+Definition at line 64 of file gmatlabdatafile.c.
 
 
 
-References F\-A\-L\-S\-E, G\-M\-A\-T\-L\-A\-B\-D\-A\-T\-A\-F\-I\-L\-E\-C\-O\-N\-F\-I\-G\-::\-Flag\-Still\-Not\-Saved, G\-M\-A\-T\-L\-A\-B\-D\-A\-T\-A\-F\-I\-L\-E\-C\-O\-N\-F\-I\-G\-::fp, M\-A\-T\-L\-A\-B\-\_\-\-D\-A\-T\-A\-H\-E\-A\-D\-::imagf, M\-A\-T\-L\-A\-B\-\_\-\-D\-A\-T\-A\-H\-E\-A\-D\-::mrows, M\-A\-T\-L\-A\-B\-\_\-\-D\-A\-T\-A\-H\-E\-A\-D\-::namlen, M\-A\-T\-L\-A\-B\-\_\-\-D\-A\-T\-A\-H\-E\-A\-D\-::ncols, T\-R\-U\-E, and M\-A\-T\-L\-A\-B\-\_\-\-D\-A\-T\-A\-H\-E\-A\-D\-::type.
+References FALSE, GMATLABDATAFILECONFIG::FlagStillNotSaved, GMATLABDATAFILECONFIG::fp, MATLAB\_\-DATAHEAD::imagf, MATLAB\_\-DATAHEAD::mrows, MATLAB\_\-DATAHEAD::namlen, MATLAB\_\-DATAHEAD::ncols, TRUE, and MATLAB\_\-DATAHEAD::type.
 
 
 
-Referenced by g\-Data\-Logger\-\_\-\-Close(), and g\-Data\-Logger\-\_\-\-Matfile\-Update().
+Referenced by gDataLogger\_\-Close(), and gDataLogger\_\-MatfileUpdate().
+
+
 
 
 \begin{DoxyCode}
-65 \{
-66         \hyperlink{structMATLAB__DATAHEAD}{MATLAB\_DATAHEAD} DataHead;
+65 {
+66         MATLAB_DATAHEAD DataHead;
 67 
-68         DataHead.\hyperlink{structMATLAB__DATAHEAD_ad3587e58da5ca6cbe3cd98d5e2f46202}{type}  = (long)(0);         
-69         DataHead.\hyperlink{structMATLAB__DATAHEAD_abf1ef02c93522915bd7fdf9f72df44b7}{mrows} = (long)(nlin);     
-70         DataHead.\hyperlink{structMATLAB__DATAHEAD_ae87d8eca5290fa03d01c79061498626f}{ncols} = (long)(1);
-71         DataHead.\hyperlink{structMATLAB__DATAHEAD_a7831e4f01682863fce4ba98071a7db08}{imagf} = (long)(0);
-72         DataHead.\hyperlink{structMATLAB__DATAHEAD_ad6e65844dcff1eb1cf7bf8752ba9a91c}{namlen} = (long)(strlen(varname)+1);
+68         DataHead.type  = (long)(0);             
+69         DataHead.mrows = (long)(nlin);  
+70         DataHead.ncols = (long)(1);
+71         DataHead.imagf = (long)(0);
+72         DataHead.namlen = (long)(strlen(varname)+1);
 73 
-74         \textcolor{keywordflow}{if}(! fwrite(&DataHead, \textcolor{keyword}{sizeof}(\hyperlink{structMATLAB__DATAHEAD}{MATLAB\_DATAHEAD}), 1, pGMatlabDataFileConfig->
-      \hyperlink{structGMATLABDATAFILECONFIG_a900bde88d01e7b5380101446c89a06a6}{fp}) )\{
-75                 \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
-76         \}
+74         if(! fwrite(&DataHead, sizeof(MATLAB_DATAHEAD), 1, pGMatlabDataFileConfig
+      ->fp) ){
+75                 return FALSE;
+76         }
 77 
-78         \textcolor{keywordflow}{if}(! fwrite(varname, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}), (strlen(varname)+1), pGMatlabDataFileConfig->
-      \hyperlink{structGMATLABDATAFILECONFIG_a900bde88d01e7b5380101446c89a06a6}{fp}))\{
-79                 \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
-80         \}
+78         if(! fwrite(varname, sizeof(char), (strlen(varname)+1), pGMatlabDataFileC
+      onfig->fp)){
+79                 return FALSE;
+80         }
 81 
-82         \textcolor{keywordflow}{if}(! fwrite(v, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}), nlin, pGMatlabDataFileConfig->\hyperlink{structGMATLABDATAFILECONFIG_a900bde88d01e7b5380101446c89a06a6}{fp}))\{
-83                 \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
-84         \}
+82         if(! fwrite(v, sizeof(double), nlin, pGMatlabDataFileConfig->fp)){
+83                 return FALSE;
+84         }
 85 
-86         pGMatlabDataFileConfig->\hyperlink{structGMATLABDATAFILECONFIG_a58d1c2a70b22c7c08eccaaea77990db2}{FlagStillNotSaved} = \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+86         pGMatlabDataFileConfig->FlagStillNotSaved = FALSE;
 87 
-88         \textcolor{keywordflow}{return}(\hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+88         return(TRUE);
 89 
-90 \}
+90 }
 \end{DoxyCode}
 
 
-Here is the caller graph for this function\-:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{gmatlabdatafile_8c_a3ecf28836f545707551fe8b8005c8954_icgraph}
-\end{center}
-\end{figure}
 
+
+Here is the caller graph for this function:
 

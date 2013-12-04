@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>RLEG: communication/communication.h Source File</title>
+<title>Rleg: communication/communication.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javaScript" src="search/search.js"></script>
@@ -18,6 +18,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="tabs">
     <ul>
       <li><a href="index.html"><span>Main&nbsp;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&nbsp;Pages</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="annotated.html"><span>Data&nbsp;Structures</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -38,122 +40,127 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="tabs">
     <ul>
       <li><a href="files.html"><span>File&nbsp;List</span></a></li>
+      <li><a href="globals.html"><span>Globals</span></a></li>
     </ul>
   </div>
-<h1>communication/communication.h</h1><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef COMMUNICATION_H</span>
-<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define COMMUNICATION_H</span>
-<a name="l00003"></a>00003 <span class="preprocessor"></span>
-<a name="l00004"></a>00004 <span class="preprocessor">#include &quot;imu_functions.h&quot;</span>
-<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;spi_functions.h&quot;</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;gpio_functions.h&quot;</span>
-<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;imu_regs.h&quot;</span>
-<a name="l00008"></a>00008 
-<a name="l00009"></a>00009 <span class="preprocessor">#define FAILURE         -1</span>
-<a name="l00010"></a>00010 <span class="preprocessor"></span><span class="preprocessor">#define SUCCESS         1</span>
-<a name="l00011"></a>00011 <span class="preprocessor"></span>
-<a name="l00012"></a>00012 <span class="preprocessor">#define GPIO_CS_S0              168     // GPIOs that select CS in Demux</span>
-<a name="l00013"></a>00013 <span class="preprocessor"></span><span class="preprocessor">#define GPIO_CS_S1              64</span>
-<a name="l00014"></a>00014 <span class="preprocessor"></span><span class="preprocessor">#define GPIO_CS_S2              176</span>
-<a name="l00015"></a>00015 <span class="preprocessor"></span><span class="preprocessor">#define GPIO_CS_S3              65</span>
-<a name="l00016"></a>00016 <span class="preprocessor"></span>
-<a name="l00017"></a>00017 <span class="preprocessor">#define GPIO_DAC_SHDN           66      // GPIO that deals with DAC power</span>
-<a name="l00018"></a>00018 <span class="preprocessor"></span><span class="preprocessor">#define GPIO_DAC_LDAC           67</span>
-<a name="l00019"></a>00019 <span class="preprocessor"></span>
-<a name="l00023"></a>00023 <span class="keyword">typedef</span> <span class="keyword">struct </span>imu_param{
-<a name="l00024"></a>00024     <span class="keyword">struct </span>param_acc{
-<a name="l00025"></a>00025       uint8_t full_res;
-<a name="l00026"></a>00026       uint16_t rate; 
-<a name="l00027"></a>00027       uint8_t range;
-<a name="l00028"></a>00028     }acc;
-<a name="l00029"></a>00029     <span class="keyword">struct </span>param_gyr {
-<a name="l00030"></a>00030       <span class="keywordtype">float</span> rate;
-<a name="l00031"></a>00031       <span class="keywordtype">short</span> <span class="keywordtype">int</span> lpf_bw;
-<a name="l00032"></a>00032       <span class="keywordtype">char</span> clk_source;
-<a name="l00033"></a>00033       <span class="keywordtype">char</span> *act;
-<a name="l00034"></a>00034     }gyr;
-<a name="l00035"></a>00035     <span class="keyword">struct </span>param_mag {
-<a name="l00036"></a>00036       uint8_t rate;
-<a name="l00037"></a>00037       uint8_t range;
-<a name="l00038"></a>00038       uint8_t samples_avg;
-<a name="l00039"></a>00039       uint8_t meas_mode;
-<a name="l00040"></a>00040       uint8_t op_mode;
-<a name="l00041"></a>00041     }mag;
-<a name="l00042"></a>00042     <span class="keywordtype">int</span> i2c_dev;
-<a name="l00043"></a>00043 }<a class="code" href="structIMU__PARAM__STRUCT.html">IMU_PARAM_STRUCT</a>;
-<a name="l00044"></a>00044 
-<a name="l00045"></a>00045 <span class="keyword">typedef</span> <span class="keyword">struct </span>spi_param{
-<a name="l00046"></a>00046     uint8_t mode;
-<a name="l00047"></a>00047     uint32_t speed;
-<a name="l00048"></a>00048     uint8_t cs;
-<a name="l00049"></a>00049     <span class="keywordtype">int</span> spi_dev;
-<a name="l00050"></a>00050 }<a class="code" href="structSPI__PARAM__STRUCT.html">SPI_PARAM_STRUCT</a>;
-<a name="l00051"></a>00051 
-<a name="l00055"></a>00055 <span class="keyword">typedef</span> <span class="keyword">struct </span>dataxyz{
-<a name="l00056"></a>00056     <span class="keywordtype">short</span> <span class="keywordtype">int</span> x;
-<a name="l00057"></a>00057     <span class="keywordtype">short</span> <span class="keywordtype">int</span> y;
-<a name="l00058"></a>00058     <span class="keywordtype">short</span> <span class="keywordtype">int</span> z;
-<a name="l00059"></a>00059 }<a class="code" href="structDATA__XYZ.html">DATA_XYZ</a>;
-<a name="l00060"></a>00060 
-<a name="l00064"></a>00064 <span class="keyword">typedef</span> <span class="keyword">struct </span>dataxyzdouble{
-<a name="l00065"></a>00065     <span class="keywordtype">double</span> x;
-<a name="l00066"></a>00066     <span class="keywordtype">double</span> y;
-<a name="l00067"></a>00067     <span class="keywordtype">double</span> z;
-<a name="l00068"></a>00068 }<a class="code" href="structDATA__XYZ__DOUBLE.html">DATA_XYZ_DOUBLE</a>;
-<a name="l00069"></a>00069 
-<a name="l00073"></a>00073 <span class="keyword">typedef</span> <span class="keyword">struct </span>imu_data{
-<a name="l00074"></a>00074   <a class="code" href="structDATA__XYZ.html">DATA_XYZ</a> acc;
-<a name="l00075"></a>00075   <a class="code" href="structDATA__XYZ.html">DATA_XYZ</a> gyr;
-<a name="l00076"></a>00076   <a class="code" href="structDATA__XYZ.html">DATA_XYZ</a> mag;
-<a name="l00077"></a>00077   <span class="keyword">struct </span>calibrated{
-<a name="l00078"></a>00078     <a class="code" href="structDATA__XYZ__DOUBLE.html">DATA_XYZ_DOUBLE</a> acc;
-<a name="l00079"></a>00079     <a class="code" href="structDATA__XYZ__DOUBLE.html">DATA_XYZ_DOUBLE</a> gyr;
-<a name="l00080"></a>00080     <a class="code" href="structDATA__XYZ__DOUBLE.html">DATA_XYZ_DOUBLE</a> mag;
-<a name="l00081"></a>00081   }calib;
-<a name="l00082"></a>00082   <span class="keywordtype">short</span> <span class="keywordtype">int</span> temp;
-<a name="l00083"></a>00083   <span class="keywordtype">double</span> calib_temp;
-<a name="l00084"></a>00084   uint8_t new_data;
-<a name="l00085"></a>00085 }<a class="code" href="structIMU__DATA__STRUCT.html">IMU_DATA_STRUCT</a>;
-<a name="l00086"></a>00086 <span class="comment">/*</span>
-<a name="l00087"></a>00087 <span class="comment">typedef struct ang_data{</span>
-<a name="l00088"></a>00088 <span class="comment">  short int knee;</span>
-<a name="l00089"></a>00089 <span class="comment">  //...</span>
-<a name="l00090"></a>00090 <span class="comment">}ANG_DATA_STRUCT;</span>
-<a name="l00091"></a>00091 <span class="comment">*/</span>
-<a name="l00092"></a>00092 <span class="keyword">typedef</span> <span class="keyword">struct </span>eff_data{
-<a name="l00093"></a>00093   <a class="code" href="structDATA__XYZ.html">DATA_XYZ</a> F;
-<a name="l00094"></a>00094   <a class="code" href="structDATA__XYZ.html">DATA_XYZ</a> M;
-<a name="l00095"></a>00095   uint8_t new_data;
-<a name="l00096"></a>00096 }<a class="code" href="structEFF__DATA__STRUCT.html">EFF_DATA_STRUCT</a>;
-<a name="l00097"></a>00097 <span class="comment">/*</span>
-<a name="l00098"></a>00098 <span class="comment">typedef struct dac_data{</span>
-<a name="l00099"></a>00099 <span class="comment">  short int Out_0;</span>
-<a name="l00100"></a>00100 <span class="comment">  short int Out_1;</span>
-<a name="l00101"></a>00101 <span class="comment">  short int Read_0;</span>
-<a name="l00102"></a>00102 <span class="comment">  short int Read_1;</span>
-<a name="l00103"></a>00103 <span class="comment">  int success;</span>
-<a name="l00104"></a>00104 <span class="comment">}DAC_DATA_STRUCT;</span>
-<a name="l00105"></a>00105 <span class="comment">*/</span>
-<a name="l00109"></a>00109 <span class="keyword">typedef</span> <span class="keyword">struct </span>mra_data{
-<a name="l00110"></a>00110   <span class="keywordtype">short</span> <span class="keywordtype">int</span> v_ctl; 
-<a name="l00111"></a>00111   <span class="keywordtype">short</span> <span class="keywordtype">int</span> v_ctl_read; 
-<a name="l00112"></a>00112   <span class="keywordtype">int</span> new_data; 
-<a name="l00113"></a>00113   <span class="keywordtype">int</span> new_ctl; 
-<a name="l00114"></a>00114 }<a class="code" href="structMRA__DATA__STRUCT.html">MRA_DATA_STRUCT</a>;
-<a name="l00115"></a>00115 
-<a name="l00122"></a>00122   <span class="keywordtype">int</span> devices_init(<a class="code" href="structIMU__PARAM__STRUCT.html">IMU_PARAM_STRUCT</a> *imu_param, <a class="code" href="structSPI__PARAM__STRUCT.html">SPI_PARAM_STRUCT</a> *spi_param, <a class="code" href="structMRA__DATA__STRUCT.html">MRA_DATA_STRUCT</a> *mra_data);
-<a name="l00123"></a>00123   
-<a name="l00124"></a>00124   <span class="comment">// READ ALL DATA FROM SENSORS AND ADC</span>
-<a name="l00125"></a>00125   <span class="keywordtype">int</span> read_all_data(<span class="keywordtype">int</span> i2c_dev, <span class="keywordtype">int</span> spi_dev, <a class="code" href="structIMU__DATA__STRUCT.html">IMU_DATA_STRUCT</a> *imu_data,<a class="code" href="structEFF__DATA__STRUCT.html">EFF_DATA_STRUCT</a> *eff_data, <a class="code" href="structMRA__DATA__STRUCT.html">MRA_DATA_STRUCT</a> *mra_data <span class="comment">/*, ANG_DATA_STRUCT &amp;ang_data*/</span>);
-<a name="l00126"></a>00126   <span class="keywordtype">void</span> actuate(<span class="keywordtype">int</span> spi_dev, <a class="code" href="structMRA__DATA__STRUCT.html">MRA_DATA_STRUCT</a> *mra_data);
-<a name="l00127"></a>00127   <span class="keywordtype">void</span> mra_shut_down(<span class="keywordtype">void</span>);
-<a name="l00128"></a>00128 <span class="preprocessor">#endif</span>
+<h1>communication/communication.h</h1><a href="communication_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00007"></a>00007 <span class="preprocessor">#ifndef COMMUNICATION_H</span>
+<a name="l00008"></a>00008 <span class="preprocessor"></span><span class="preprocessor">#define COMMUNICATION_H</span>
+<a name="l00009"></a>00009 <span class="preprocessor"></span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="imu__functions_8h.html" title="Rev 0 - 06/11/2012 RLEG project - 2012.">imu_functions.h</a>&quot;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="spi__functions_8h.html">spi_functions.h</a>&quot;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="gpio__functions_8h.html">gpio_functions.h</a>&quot;</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="encoder__functions_8h.html" title="Rev 0 - 18/06/2013 RLEG project - 2013.">encoder_functions.h</a>&quot;</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="imu__regs_8h.html" title="Registers that are present in each device from the IMU (ADXL345, ITG3200 and HMC5883)...">imu_regs.h</a>&quot;</span>
+<a name="l00015"></a>00015 
+<a name="l00016"></a><a class="code" href="communication_8h.html#a48ea000c2b251ce26ea35d300f319651">00016</a> <span class="preprocessor">#define GPIO_CS_S0              168     // GPIOs that select CS in Demux</span>
+<a name="l00017"></a><a class="code" href="communication_8h.html#a7672ba13ff6f297c347790586c9a02e0">00017</a> <span class="preprocessor"></span><span class="preprocessor">#define GPIO_CS_S1              64</span>
+<a name="l00018"></a><a class="code" href="communication_8h.html#a94b6d57532d1db55dc4efd9fb234f156">00018</a> <span class="preprocessor"></span><span class="preprocessor">#define GPIO_CS_S2              176</span>
+<a name="l00019"></a><a class="code" href="communication_8h.html#ad774f00fc71216488e24a803bf4eb6aa">00019</a> <span class="preprocessor"></span><span class="preprocessor">#define GPIO_CS_S3              65</span>
+<a name="l00020"></a>00020 <span class="preprocessor"></span>
+<a name="l00021"></a><a class="code" href="communication_8h.html#a99fc26a9596a1cb1f0f9936dbb8ccca6">00021</a> <span class="preprocessor">#define GPIO_DAC_SHDN           66      // GPIO that deals with DAC power</span>
+<a name="l00022"></a><a class="code" href="communication_8h.html#a014b45373b6ab21c681fc378bd8203f9">00022</a> <span class="preprocessor"></span><span class="preprocessor">#define GPIO_DAC_LDAC           67</span>
+<a name="l00023"></a>00023 <span class="preprocessor"></span>
+<a name="l00024"></a><a class="code" href="communication_8h.html#a23777679463cafcb68b0b28303fe5877">00024</a> <span class="preprocessor">#define USE_ENCODER             1</span>
+<a name="l00025"></a><a class="code" href="communication_8h.html#a8253255e4a1a7c9d1eb849d923244b54">00025</a> <span class="preprocessor"></span><span class="preprocessor">#define USE_IMU                 1</span>
+<a name="l00026"></a><a class="code" href="communication_8h.html#a1acd02cc5bc9a5945addaf6e4f65d39a">00026</a> <span class="preprocessor"></span><span class="preprocessor">#define USE_SPI                 1</span>
+<a name="l00027"></a>00027 <span class="preprocessor"></span>
+<a name="l00031"></a><a class="code" href="structIMU__PARAM__STRUCT.html">00031</a> <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="main_8c.html#a9c6b2109fb9402446f92995db60951b5">imu_param</a>{
+<a name="l00035"></a><a class="code" href="structIMU__PARAM__STRUCT_1_1param__acc.html">00035</a>     <span class="keyword">struct </span><a class="code" href="structIMU__PARAM__STRUCT_1_1param__acc.html" title="Accelerometer Parameters.">param_acc</a>{
+<a name="l00036"></a><a class="code" href="structIMU__PARAM__STRUCT_1_1param__acc.html#af57da5d956ffa7e49a184326b6b9c738">00036</a>       uint8_t full_res;
+<a name="l00037"></a><a class="code" href="structIMU__PARAM__STRUCT_1_1param__acc.html#a30e6a318cad098cd8379416705820f95">00037</a>       uint16_t rate; 
+<a name="l00038"></a><a class="code" href="structIMU__PARAM__STRUCT_1_1param__acc.html#a26199b298ef2d353192dfbc706bce8cf">00038</a>       uint8_t range;
+<a name="l00039"></a>00039     }acc;
+<a name="l00043"></a><a class="code" href="structIMU__PARAM__STRUCT_1_1param__gyr.html">00043</a>     <span class="keyword">struct </span><a class="code" href="structIMU__PARAM__STRUCT_1_1param__gyr.html" title="Gyrometer Parameters.">param_gyr</a> {
+<a name="l00044"></a><a class="code" href="structIMU__PARAM__STRUCT_1_1param__gyr.html#a5aa70e1e9634411c89aacfbc570cc91c">00044</a>       <span class="keywordtype">float</span> rate;
+<a name="l00045"></a><a class="code" href="structIMU__PARAM__STRUCT_1_1param__gyr.html#aa612f7299b43a1bf1fc597688c2fa02d">00045</a>       <span class="keywordtype">short</span> <span class="keywordtype">int</span> lpf_bw;
+<a name="l00046"></a><a class="code" href="structIMU__PARAM__STRUCT_1_1param__gyr.html#aca3b791cb480f2da4703d4c256a7de48">00046</a>       <span class="keywordtype">char</span> clk_source;
+<a name="l00047"></a><a class="code" href="structIMU__PARAM__STRUCT_1_1param__gyr.html#a909d153e794ec443be04625ce00e4178">00047</a>       <span class="keywordtype">char</span> *act;
+<a name="l00048"></a>00048     }gyr;
+<a name="l00052"></a><a class="code" href="structIMU__PARAM__STRUCT_1_1param__mag.html">00052</a>     <span class="keyword">struct </span><a class="code" href="structIMU__PARAM__STRUCT_1_1param__mag.html" title="Magnetometer Parameters.">param_mag</a> {
+<a name="l00053"></a><a class="code" href="structIMU__PARAM__STRUCT_1_1param__mag.html#a234de95423b604b05b851ef90890cea1">00053</a>       uint8_t rate;
+<a name="l00054"></a><a class="code" href="structIMU__PARAM__STRUCT_1_1param__mag.html#a40ad27ebdb5fde35257b1dc52e40f476">00054</a>       uint8_t range;
+<a name="l00055"></a><a class="code" href="structIMU__PARAM__STRUCT_1_1param__mag.html#a52c22cae6940eb39fb72aca66cfeba9a">00055</a>       uint8_t samples_avg;
+<a name="l00056"></a><a class="code" href="structIMU__PARAM__STRUCT_1_1param__mag.html#a1f3536709c05310005d648f339d70c54">00056</a>       uint8_t meas_mode;
+<a name="l00057"></a><a class="code" href="structIMU__PARAM__STRUCT_1_1param__mag.html#a39b83b3e9ff5bdcafed0bdf6a2de584b">00057</a>       uint8_t op_mode;
+<a name="l00058"></a>00058     }mag;
+<a name="l00059"></a><a class="code" href="structIMU__PARAM__STRUCT.html#a8a870f383fc9ba0b682fdc9b8c0d2734">00059</a>     <span class="keywordtype">int</span> i2c_dev;
+<a name="l00060"></a>00060 }<a class="code" href="structIMU__PARAM__STRUCT.html" title="Configs of IMU.">IMU_PARAM_STRUCT</a>;
+<a name="l00061"></a>00061 
+<a name="l00065"></a><a class="code" href="structSPI__PARAM__STRUCT.html">00065</a> <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="main_8c.html#adec2468b88cf50b20e5cf399a3b7e994">spi_param</a>{
+<a name="l00066"></a><a class="code" href="structSPI__PARAM__STRUCT.html#a82c546c99f6c3daed73c1e23426be847">00066</a>     uint8_t mode;
+<a name="l00067"></a><a class="code" href="structSPI__PARAM__STRUCT.html#a53a8d386594a81eb9bc6f971bfe36c54">00067</a>     uint32_t speed; 
+<a name="l00068"></a><a class="code" href="structSPI__PARAM__STRUCT.html#ae0d62e0a5554783d710b677a017e246f">00068</a>     uint8_t cs;
+<a name="l00069"></a><a class="code" href="structSPI__PARAM__STRUCT.html#abe385c44333d268d17cf648c8e371cad">00069</a>     <span class="keywordtype">int</span> spi_dev;
+<a name="l00070"></a>00070 }<a class="code" href="structSPI__PARAM__STRUCT.html" title="Configs for SPI.">SPI_PARAM_STRUCT</a>;
+<a name="l00071"></a>00071 
+<a name="l00075"></a><a class="code" href="structDATA__XYZ.html">00075</a> <span class="keyword">typedef</span> <span class="keyword">struct </span>dataxyz{
+<a name="l00076"></a><a class="code" href="structDATA__XYZ.html#a54c1596e9f9969fd9c21e8458024ecfb">00076</a>     <span class="keywordtype">short</span> <span class="keywordtype">int</span> x;
+<a name="l00077"></a><a class="code" href="structDATA__XYZ.html#a94bbb1c889bf53eb6a5fffa2b39322cf">00077</a>     <span class="keywordtype">short</span> <span class="keywordtype">int</span> y;
+<a name="l00078"></a><a class="code" href="structDATA__XYZ.html#a69e89ab0ec6e5d72fc5d54f62cc07fb5">00078</a>     <span class="keywordtype">short</span> <span class="keywordtype">int</span> z;
+<a name="l00079"></a>00079 }<a class="code" href="structDATA__XYZ.html" title="A structure to represent a 3d Vector.">DATA_XYZ</a>;
+<a name="l00080"></a>00080 
+<a name="l00084"></a><a class="code" href="structDATA__XYZ__DOUBLE.html">00084</a> <span class="keyword">typedef</span> <span class="keyword">struct </span>dataxyzdouble{
+<a name="l00085"></a><a class="code" href="structDATA__XYZ__DOUBLE.html#a22868cc99a423900e7b82d015a5eb91f">00085</a>     <span class="keywordtype">double</span> x;
+<a name="l00086"></a><a class="code" href="structDATA__XYZ__DOUBLE.html#a198a27b5df3b5b0bf461b0e481e22a82">00086</a>     <span class="keywordtype">double</span> y;
+<a name="l00087"></a><a class="code" href="structDATA__XYZ__DOUBLE.html#a9556e8868c223ff3e28756ea18a284c0">00087</a>     <span class="keywordtype">double</span> z;
+<a name="l00088"></a>00088 }<a class="code" href="structDATA__XYZ__DOUBLE.html" title="Vector definition on double.">DATA_XYZ_DOUBLE</a>;
+<a name="l00089"></a>00089 
+<a name="l00093"></a><a class="code" href="structIMU__DATA__STRUCT.html">00093</a> <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="main_8c.html#a3cfea12cbe9ca7f1681c950e4cd68606">imu_data</a>{
+<a name="l00094"></a><a class="code" href="structIMU__DATA__STRUCT.html#a448f284bf44eb503affda586ad5fa9d2">00094</a>   <a class="code" href="structDATA__XYZ.html" title="A structure to represent a 3d Vector.">DATA_XYZ</a> acc; 
+<a name="l00095"></a><a class="code" href="structIMU__DATA__STRUCT.html#a0c1ac26626e4434a2ee124a1928a23a1">00095</a>   <a class="code" href="structDATA__XYZ.html" title="A structure to represent a 3d Vector.">DATA_XYZ</a> gyr; 
+<a name="l00096"></a><a class="code" href="structIMU__DATA__STRUCT.html#a40c7df8b6d49297aa52873cfd9b60daa">00096</a>   <a class="code" href="structDATA__XYZ.html" title="A structure to represent a 3d Vector.">DATA_XYZ</a> mag; 
+<a name="l00097"></a><a class="code" href="structIMU__DATA__STRUCT_1_1calibrated.html">00097</a>   <span class="keyword">struct </span><a class="code" href="structIMU__DATA__STRUCT_1_1calibrated.html">calibrated</a>{
+<a name="l00098"></a><a class="code" href="structIMU__DATA__STRUCT_1_1calibrated.html#a281a7fdb40a05ed97388f18b9bb90c81">00098</a>     <a class="code" href="structDATA__XYZ__DOUBLE.html" title="Vector definition on double.">DATA_XYZ_DOUBLE</a> acc;
+<a name="l00099"></a><a class="code" href="structIMU__DATA__STRUCT_1_1calibrated.html#a8a54aded6ce608f1b7d2b4a0c52c248b">00099</a>     <a class="code" href="structDATA__XYZ__DOUBLE.html" title="Vector definition on double.">DATA_XYZ_DOUBLE</a> gyr;
+<a name="l00100"></a><a class="code" href="structIMU__DATA__STRUCT_1_1calibrated.html#a2fde6c6759e0fda17e272c32096cb9ec">00100</a>     <a class="code" href="structDATA__XYZ__DOUBLE.html" title="Vector definition on double.">DATA_XYZ_DOUBLE</a> mag;
+<a name="l00101"></a>00101   }calib;
+<a name="l00102"></a><a class="code" href="structIMU__DATA__STRUCT.html#a81e1dbf765c1d947ca6076aa1bbc73e7">00102</a>   <span class="keywordtype">short</span> <span class="keywordtype">int</span> temp;
+<a name="l00103"></a><a class="code" href="structIMU__DATA__STRUCT.html#a3553fcee6beba17fe0c7711ac0483875">00103</a>   <span class="keywordtype">double</span> calib_temp;
+<a name="l00104"></a><a class="code" href="structIMU__DATA__STRUCT.html#a99924252176326418863e511d4fa437b">00104</a>   uint8_t new_data;
+<a name="l00105"></a>00105 }<a class="code" href="structIMU__DATA__STRUCT.html" title="Data of IMU structure.">IMU_DATA_STRUCT</a>;
+<a name="l00106"></a>00106 <span class="comment">/*</span>
+<a name="l00107"></a>00107 <span class="comment">typedef struct ang_data{</span>
+<a name="l00108"></a>00108 <span class="comment">  short int knee;</span>
+<a name="l00109"></a>00109 <span class="comment">  //...</span>
+<a name="l00110"></a>00110 <span class="comment">}ANG_DATA_STRUCT;</span>
+<a name="l00111"></a>00111 <span class="comment">*/</span>
+<a name="l00112"></a><a class="code" href="structEFF__DATA__STRUCT.html">00112</a> <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="main_8c.html#a5650ece8c3a277c7f158d75ae65265fa">eff_data</a>{
+<a name="l00113"></a><a class="code" href="structEFF__DATA__STRUCT.html#abe8952947b54bf9c247f3429ee3aeb44">00113</a>   <a class="code" href="structDATA__XYZ.html" title="A structure to represent a 3d Vector.">DATA_XYZ</a> F;
+<a name="l00114"></a><a class="code" href="structEFF__DATA__STRUCT.html#aaf6e03b6e600295e0f5c706fc869e9d1">00114</a>   <a class="code" href="structDATA__XYZ.html" title="A structure to represent a 3d Vector.">DATA_XYZ</a> M;
+<a name="l00115"></a><a class="code" href="structEFF__DATA__STRUCT.html#aa42ebc512dd79fa6ebf998162a149446">00115</a>   uint8_t new_data;
+<a name="l00116"></a>00116 }<a class="code" href="structEFF__DATA__STRUCT.html">EFF_DATA_STRUCT</a>;
+<a name="l00117"></a>00117 <span class="comment">/*</span>
+<a name="l00118"></a>00118 <span class="comment">typedef struct dac_data{</span>
+<a name="l00119"></a>00119 <span class="comment">  short int Out_0;</span>
+<a name="l00120"></a>00120 <span class="comment">  short int Out_1;</span>
+<a name="l00121"></a>00121 <span class="comment">  short int Read_0;</span>
+<a name="l00122"></a>00122 <span class="comment">  short int Read_1;</span>
+<a name="l00123"></a>00123 <span class="comment">  int success;</span>
+<a name="l00124"></a>00124 <span class="comment">}DAC_DATA_STRUCT;</span>
+<a name="l00125"></a>00125 <span class="comment">*/</span>
+<a name="l00129"></a><a class="code" href="structMRA__DATA__STRUCT.html">00129</a> <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="main_8c.html#abc42e18d2909e9bc119316283f4ed9db">mra_data</a>{
+<a name="l00130"></a><a class="code" href="structMRA__DATA__STRUCT.html#a64b4e6bb604e58de593a60c87942b966">00130</a>   <span class="keywordtype">short</span> <span class="keywordtype">int</span> v_ctl; 
+<a name="l00131"></a><a class="code" href="structMRA__DATA__STRUCT.html#a3a31d57268c33b21ac915fdc27dfe474">00131</a>   <span class="keywordtype">short</span> <span class="keywordtype">int</span> v_ctl_read; 
+<a name="l00132"></a><a class="code" href="structMRA__DATA__STRUCT.html#afca6e851d302f3a786885a4e1eec79d7">00132</a>   <span class="keywordtype">int</span> new_data; 
+<a name="l00133"></a><a class="code" href="structMRA__DATA__STRUCT.html#a5b1af89ee717f5b14c18e8ac12e93e75">00133</a>   <span class="keywordtype">int</span> new_ctl; 
+<a name="l00134"></a>00134 }<a class="code" href="structMRA__DATA__STRUCT.html" title="Struct to control MRA.">MRA_DATA_STRUCT</a>;
+<a name="l00135"></a>00135 
+<a name="l00143"></a>00143   <span class="keywordtype">int</span> <a class="code" href="communication_8c.html#a2d1e523ff70db11ca4096f97af5da000" title="INITIALIZATION OF SENSORS AND DEVICES.">devices_init</a>(<a class="code" href="structIMU__PARAM__STRUCT.html" title="Configs of IMU.">IMU_PARAM_STRUCT</a> *<a class="code" href="main_8c.html#a9c6b2109fb9402446f92995db60951b5">imu_param</a>, <a class="code" href="structSPI__PARAM__STRUCT.html" title="Configs for SPI.">SPI_PARAM_STRUCT</a> *<a class="code" href="main_8c.html#adec2468b88cf50b20e5cf399a3b7e994">spi_param</a>, <a class="code" href="structMRA__DATA__STRUCT.html" title="Struct to control MRA.">MRA_DATA_STRUCT</a> *<a class="code" href="main_8c.html#abc42e18d2909e9bc119316283f4ed9db">mra_data</a>);
+<a name="l00144"></a>00144   
+<a name="l00154"></a>00154   <span class="keywordtype">int</span> <a class="code" href="communication_8c.html#a26f82e8af3b5ce23d5cd3a41db6e0b68" title="READ ALL DATA FROM SENSORS AND ADC.">read_all_data</a>(<span class="keywordtype">int</span> i2c_dev, <span class="keywordtype">int</span> spi_dev, <a class="code" href="structIMU__DATA__STRUCT.html" title="Data of IMU structure.">IMU_DATA_STRUCT</a> *<a class="code" href="main_8c.html#a3cfea12cbe9ca7f1681c950e4cd68606">imu_data</a>,<a class="code" href="structEFF__DATA__STRUCT.html">EFF_DATA_STRUCT</a> *<a class="code" href="main_8c.html#a5650ece8c3a277c7f158d75ae65265fa">eff_data</a>, <a class="code" href="structMRA__DATA__STRUCT.html" title="Struct to control MRA.">MRA_DATA_STRUCT</a> *<a class="code" href="main_8c.html#abc42e18d2909e9bc119316283f4ed9db">mra_data</a> , <a class="code" href="structENC__DATA__STRUCT.html">ENC_DATA_STRUCT</a> *<a class="code" href="main_8c.html#aaa441e18ae805c4f3efb0b5231d1cfe7">enc_data</a>);
+<a name="l00155"></a>00155   
+<a name="l00162"></a>00162   <span class="keywordtype">void</span> <a class="code" href="communication_8c.html#a1d5f01d0124cff7030b5c4951b4bbefa" title="Applies the control signal to the actuator.">actuate</a>(<span class="keywordtype">int</span> spi_dev, <a class="code" href="structMRA__DATA__STRUCT.html" title="Struct to control MRA.">MRA_DATA_STRUCT</a> *<a class="code" href="main_8c.html#abc42e18d2909e9bc119316283f4ed9db">mra_data</a>);
+<a name="l00163"></a>00163 
+<a name="l00168"></a>00168   <span class="keywordtype">void</span> <a class="code" href="communication_8h.html#a8da2a9706cfdbe1a7fae96aac9e4f516" title="Turn off MRA.">mra_shut_down</a>(<span class="keywordtype">void</span>);
+<a name="l00169"></a>00169 <span class="preprocessor">#endif</span>
 </pre></div></div>
 <!--- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&nbsp;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&nbsp;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -162,7 +169,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu Jun 6 20:09:26 2013 for RLEG by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Dec 4 12:19:21 2013 for Rleg by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

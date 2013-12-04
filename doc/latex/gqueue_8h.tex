@@ -1,669 +1,605 @@
-\hypertarget{gqueue_8h}{\section{gdatalogger/gqueue.h File Reference}
-\label{gqueue_8h}\index{gdatalogger/gqueue.\-h@{gdatalogger/gqueue.\-h}}
+\hypertarget{gqueue_8h}{
+\section{gdatalogger/gqueue.h File Reference}
+\label{gqueue_8h}\index{gdatalogger/gqueue.h@{gdatalogger/gqueue.h}}
 }
-This graph shows which files directly or indirectly include this file\-:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{gqueue_8h__dep__incl}
-\end{center}
-\end{figure}
-\subsection*{Data Structures}
+This graph shows which files directly or indirectly include this file:\subsection*{Data Structures}
 \begin{DoxyCompactItemize}
 \item 
-struct \hyperlink{structGQUEUECONTROL}{G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L}
+struct \hyperlink{structGQUEUECONTROL}{GQUEUECONTROL}
 \end{DoxyCompactItemize}
-\subsection*{Macros}
+\subsection*{Defines}
 \begin{DoxyCompactItemize}
 \item 
-\#define \hyperlink{gqueue_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{T\-R\-U\-E}~1
+\#define \hyperlink{gqueue_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE}~1
 \item 
-\#define \hyperlink{gqueue_8h_aa93f0eb578d23995850d61f7d61c55c1}{F\-A\-L\-S\-E}~0
+\#define \hyperlink{gqueue_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE}~0
 \item 
-\#define \hyperlink{gqueue_8h_ac3f84fecc52fe0f23ea7d5157cb92997}{M\-A\-X\-S\-I\-Z\-E\-\_\-\-Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-S}~5
+\#define \hyperlink{gqueue_8h_ac3f84fecc52fe0f23ea7d5157cb92997}{MAXSIZE\_\-QUEUE\_\-READ\_\-GATES}~5
 \item 
-\#define \hyperlink{gqueue_8h_a8b86910c01a28f01838c038cc34672e1}{Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-\_\-0}~0
+\#define \hyperlink{gqueue_8h_a8b86910c01a28f01838c038cc34672e1}{QUEUE\_\-READ\_\-GATE\_\-0}~0
 \item 
-\#define \hyperlink{gqueue_8h_aaaaea04d929e35142e01be4c56516370}{Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-\_\-1}~1
+\#define \hyperlink{gqueue_8h_aaaaea04d929e35142e01be4c56516370}{QUEUE\_\-READ\_\-GATE\_\-1}~1
 \item 
-\#define \hyperlink{gqueue_8h_abf70c568abf45a19626d44ae6ce335f1}{Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-\_\-2}~2
+\#define \hyperlink{gqueue_8h_abf70c568abf45a19626d44ae6ce335f1}{QUEUE\_\-READ\_\-GATE\_\-2}~2
 \item 
-\#define \hyperlink{gqueue_8h_a59e133f0d1912726949366d6b08cd3f5}{Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-\_\-3}~3
+\#define \hyperlink{gqueue_8h_a59e133f0d1912726949366d6b08cd3f5}{QUEUE\_\-READ\_\-GATE\_\-3}~3
 \item 
-\#define \hyperlink{gqueue_8h_a4771f3ff5f05b3a182aae96aed1e4509}{Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-\_\-4}~4
+\#define \hyperlink{gqueue_8h_a4771f3ff5f05b3a182aae96aed1e4509}{QUEUE\_\-READ\_\-GATE\_\-4}~4
 \item 
-\#define \hyperlink{gqueue_8h_acc22fd2421f798402da9d60eb1306a77}{G\-Q\-U\-E\-U\-E\-\_\-\-R\-T\-A\-I\-\_\-\-S\-U\-P\-P\-O\-R\-T}~0
+\#define \hyperlink{gqueue_8h_acc22fd2421f798402da9d60eb1306a77}{GQUEUE\_\-RTAI\_\-SUPPORT}~0
 \end{DoxyCompactItemize}
 \subsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
-typedef struct \hyperlink{structGQUEUECONTROL}{G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L} $\ast$ \hyperlink{gqueue_8h_ae87815147ae3a01555f1b9cb639d236a}{P\-G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L}
+typedef struct \hyperlink{structGQUEUECONTROL}{GQUEUECONTROL} $\ast$ \hyperlink{gqueue_8h_ae87815147ae3a01555f1b9cb639d236a}{PGQUEUECONTROL}
 \end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-int \hyperlink{gqueue_8h_a6edb74779d40a7a4328e32012fad8c0c}{g\-Q\-U\-E\-U\-E\-\_\-\-Init} (\hyperlink{gqueue_8h_ae87815147ae3a01555f1b9cb639d236a}{P\-G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L} p\-Queue\-Control, int Size, int N\-Readers)
+int \hyperlink{gqueue_8h_a6edb74779d40a7a4328e32012fad8c0c}{gQUEUE\_\-Init} (\hyperlink{structGQUEUECONTROL}{PGQUEUECONTROL} pQueueControl, int Size, int NReaders)
 \item 
-int \hyperlink{gqueue_8h_a273e65bb0fa92f17904f052a4def072d}{g\-Q\-U\-E\-U\-E\-\_\-\-Get\-Read\-Index} (\hyperlink{gqueue_8h_ae87815147ae3a01555f1b9cb639d236a}{P\-G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L} p\-Queue\-Control, int N\-Reader, int $\ast$Index, int Index\-Horizon)
+int \hyperlink{gqueue_8h_a273e65bb0fa92f17904f052a4def072d}{gQUEUE\_\-GetReadIndex} (\hyperlink{structGQUEUECONTROL}{PGQUEUECONTROL} pQueueControl, int NReader, int $\ast$Index, int IndexHorizon)
 \item 
-int \hyperlink{gqueue_8h_ae52e32b31c201f0ffc5134e30a4056ba}{g\-Q\-U\-E\-U\-E\-\_\-\-Get\-Write\-Index} (\hyperlink{gqueue_8h_ae87815147ae3a01555f1b9cb639d236a}{P\-G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L} p\-Queue\-Control, int $\ast$Index, int Index\-Horizon)
+int \hyperlink{gqueue_8h_ae52e32b31c201f0ffc5134e30a4056ba}{gQUEUE\_\-GetWriteIndex} (\hyperlink{structGQUEUECONTROL}{PGQUEUECONTROL} pQueueControl, int $\ast$Index, int IndexHorizon)
 \item 
-int \hyperlink{gqueue_8h_ab5ba087de92285fb4f9ed8c46440ac6f}{g\-Q\-U\-E\-U\-E\-\_\-\-Request\-Read\-Index} (\hyperlink{gqueue_8h_ae87815147ae3a01555f1b9cb639d236a}{P\-G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L} p\-Queue\-Control, int N\-Reader, int $\ast$Index)
+int \hyperlink{gqueue_8h_ab5ba087de92285fb4f9ed8c46440ac6f}{gQUEUE\_\-RequestReadIndex} (\hyperlink{structGQUEUECONTROL}{PGQUEUECONTROL} pQueueControl, int NReader, int $\ast$Index)
 \item 
-int \hyperlink{gqueue_8h_a7324fa957e7713c05cab4eb7993dc2ee}{g\-Q\-U\-E\-U\-E\-\_\-\-Request\-Write\-Index} (\hyperlink{gqueue_8h_ae87815147ae3a01555f1b9cb639d236a}{P\-G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L} p\-Queue\-Control, int $\ast$Index)
+int \hyperlink{gqueue_8h_a7324fa957e7713c05cab4eb7993dc2ee}{gQUEUE\_\-RequestWriteIndex} (\hyperlink{structGQUEUECONTROL}{PGQUEUECONTROL} pQueueControl, int $\ast$Index)
 \item 
-int \hyperlink{gqueue_8h_a61763c54eaa8dd611c81c75745e9b3b2}{g\-Q\-U\-E\-U\-E\-\_\-\-Request\-Last\-Read\-Index} (\hyperlink{gqueue_8h_ae87815147ae3a01555f1b9cb639d236a}{P\-G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L} p\-Queue\-Control, int N\-Reader, int $\ast$Index)
+int \hyperlink{gqueue_8h_a61763c54eaa8dd611c81c75745e9b3b2}{gQUEUE\_\-RequestLastReadIndex} (\hyperlink{structGQUEUECONTROL}{PGQUEUECONTROL} pQueueControl, int NReader, int $\ast$Index)
 \item 
-int \hyperlink{gqueue_8h_a070de567ba00fb02d6c480840c15d31d}{g\-Q\-U\-E\-U\-E\-\_\-\-Unwrap\-Write\-Index} (\hyperlink{gqueue_8h_ae87815147ae3a01555f1b9cb639d236a}{P\-G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L} p\-Queue\-Control)
+int \hyperlink{gqueue_8h_a070de567ba00fb02d6c480840c15d31d}{gQUEUE\_\-UnwrapWriteIndex} (\hyperlink{structGQUEUECONTROL}{PGQUEUECONTROL} pQueueControl)
 \item 
-int \hyperlink{gqueue_8h_abab4c6aeb3d57e43aa16285fe4f59f66}{g\-Q\-U\-E\-U\-E\-\_\-\-Unwrap\-Read\-Index} (\hyperlink{gqueue_8h_ae87815147ae3a01555f1b9cb639d236a}{P\-G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L} p\-Queue\-Control, int N\-Reader)
+int \hyperlink{gqueue_8h_abab4c6aeb3d57e43aa16285fe4f59f66}{gQUEUE\_\-UnwrapReadIndex} (\hyperlink{structGQUEUECONTROL}{PGQUEUECONTROL} pQueueControl, int NReader)
 \item 
-int \hyperlink{gqueue_8h_a7138af0e73adef329c891210ba747a2e}{g\-Q\-U\-E\-U\-E\-\_\-\-Get\-Number\-Of\-Unread\-Data} (\hyperlink{gqueue_8h_ae87815147ae3a01555f1b9cb639d236a}{P\-G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L} p\-Queue\-Control, int N\-Reader, int $\ast$Index)
+int \hyperlink{gqueue_8h_a7138af0e73adef329c891210ba747a2e}{gQUEUE\_\-GetNumberOfUnreadData} (\hyperlink{structGQUEUECONTROL}{PGQUEUECONTROL} pQueueControl, int NReader, int $\ast$Index)
 \end{DoxyCompactItemize}
 
 
-\subsection{Macro Definition Documentation}
-\hypertarget{gqueue_8h_aa93f0eb578d23995850d61f7d61c55c1}{\index{gqueue.\-h@{gqueue.\-h}!F\-A\-L\-S\-E@{F\-A\-L\-S\-E}}
-\index{F\-A\-L\-S\-E@{F\-A\-L\-S\-E}!gqueue.h@{gqueue.\-h}}
-\subsubsection[{F\-A\-L\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-A\-L\-S\-E~0}}\label{gqueue_8h_aa93f0eb578d23995850d61f7d61c55c1}
+\subsection{Define Documentation}
+\hypertarget{gqueue_8h_aa93f0eb578d23995850d61f7d61c55c1}{
+\index{gqueue.h@{gqueue.h}!FALSE@{FALSE}}
+\index{FALSE@{FALSE}!gqueue.h@{gqueue.h}}
+\subsubsection[{FALSE}]{\setlength{\rightskip}{0pt plus 5cm}\#define FALSE~0}}
+\label{gqueue_8h_aa93f0eb578d23995850d61f7d61c55c1}
 
 
-Definition at line 20 of file gqueue.\-h.
+Definition at line 20 of file gqueue.h.
 
-\hypertarget{gqueue_8h_acc22fd2421f798402da9d60eb1306a77}{\index{gqueue.\-h@{gqueue.\-h}!G\-Q\-U\-E\-U\-E\-\_\-\-R\-T\-A\-I\-\_\-\-S\-U\-P\-P\-O\-R\-T@{G\-Q\-U\-E\-U\-E\-\_\-\-R\-T\-A\-I\-\_\-\-S\-U\-P\-P\-O\-R\-T}}
-\index{G\-Q\-U\-E\-U\-E\-\_\-\-R\-T\-A\-I\-\_\-\-S\-U\-P\-P\-O\-R\-T@{G\-Q\-U\-E\-U\-E\-\_\-\-R\-T\-A\-I\-\_\-\-S\-U\-P\-P\-O\-R\-T}!gqueue.h@{gqueue.\-h}}
-\subsubsection[{G\-Q\-U\-E\-U\-E\-\_\-\-R\-T\-A\-I\-\_\-\-S\-U\-P\-P\-O\-R\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-Q\-U\-E\-U\-E\-\_\-\-R\-T\-A\-I\-\_\-\-S\-U\-P\-P\-O\-R\-T~0}}\label{gqueue_8h_acc22fd2421f798402da9d60eb1306a77}
-
-
-Definition at line 29 of file gqueue.\-h.
-
-\hypertarget{gqueue_8h_ac3f84fecc52fe0f23ea7d5157cb92997}{\index{gqueue.\-h@{gqueue.\-h}!M\-A\-X\-S\-I\-Z\-E\-\_\-\-Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-S@{M\-A\-X\-S\-I\-Z\-E\-\_\-\-Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-S}}
-\index{M\-A\-X\-S\-I\-Z\-E\-\_\-\-Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-S@{M\-A\-X\-S\-I\-Z\-E\-\_\-\-Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-S}!gqueue.h@{gqueue.\-h}}
-\subsubsection[{M\-A\-X\-S\-I\-Z\-E\-\_\-\-Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-X\-S\-I\-Z\-E\-\_\-\-Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-S~5}}\label{gqueue_8h_ac3f84fecc52fe0f23ea7d5157cb92997}
+\hypertarget{gqueue_8h_acc22fd2421f798402da9d60eb1306a77}{
+\index{gqueue.h@{gqueue.h}!GQUEUE\_\-RTAI\_\-SUPPORT@{GQUEUE\_\-RTAI\_\-SUPPORT}}
+\index{GQUEUE\_\-RTAI\_\-SUPPORT@{GQUEUE\_\-RTAI\_\-SUPPORT}!gqueue.h@{gqueue.h}}
+\subsubsection[{GQUEUE\_\-RTAI\_\-SUPPORT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GQUEUE\_\-RTAI\_\-SUPPORT~0}}
+\label{gqueue_8h_acc22fd2421f798402da9d60eb1306a77}
 
 
-Definition at line 22 of file gqueue.\-h.
+Definition at line 29 of file gqueue.h.
+
+\hypertarget{gqueue_8h_ac3f84fecc52fe0f23ea7d5157cb92997}{
+\index{gqueue.h@{gqueue.h}!MAXSIZE\_\-QUEUE\_\-READ\_\-GATES@{MAXSIZE\_\-QUEUE\_\-READ\_\-GATES}}
+\index{MAXSIZE\_\-QUEUE\_\-READ\_\-GATES@{MAXSIZE\_\-QUEUE\_\-READ\_\-GATES}!gqueue.h@{gqueue.h}}
+\subsubsection[{MAXSIZE\_\-QUEUE\_\-READ\_\-GATES}]{\setlength{\rightskip}{0pt plus 5cm}\#define MAXSIZE\_\-QUEUE\_\-READ\_\-GATES~5}}
+\label{gqueue_8h_ac3f84fecc52fe0f23ea7d5157cb92997}
+
+
+Definition at line 22 of file gqueue.h.
 
 
 
-Referenced by g\-Q\-U\-E\-U\-E\-\_\-\-Init().
+Referenced by gQUEUE\_\-Init().
 
-\hypertarget{gqueue_8h_a8b86910c01a28f01838c038cc34672e1}{\index{gqueue.\-h@{gqueue.\-h}!Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-\_\-0@{Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-\_\-0}}
-\index{Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-\_\-0@{Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-\_\-0}!gqueue.h@{gqueue.\-h}}
-\subsubsection[{Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-\_\-0}]{\setlength{\rightskip}{0pt plus 5cm}\#define Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-\_\-0~0}}\label{gqueue_8h_a8b86910c01a28f01838c038cc34672e1}
-
-
-Definition at line 23 of file gqueue.\-h.
-
-\hypertarget{gqueue_8h_aaaaea04d929e35142e01be4c56516370}{\index{gqueue.\-h@{gqueue.\-h}!Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-\_\-1@{Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-\_\-1}}
-\index{Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-\_\-1@{Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-\_\-1}!gqueue.h@{gqueue.\-h}}
-\subsubsection[{Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}\#define Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-\_\-1~1}}\label{gqueue_8h_aaaaea04d929e35142e01be4c56516370}
+\hypertarget{gqueue_8h_a8b86910c01a28f01838c038cc34672e1}{
+\index{gqueue.h@{gqueue.h}!QUEUE\_\-READ\_\-GATE\_\-0@{QUEUE\_\-READ\_\-GATE\_\-0}}
+\index{QUEUE\_\-READ\_\-GATE\_\-0@{QUEUE\_\-READ\_\-GATE\_\-0}!gqueue.h@{gqueue.h}}
+\subsubsection[{QUEUE\_\-READ\_\-GATE\_\-0}]{\setlength{\rightskip}{0pt plus 5cm}\#define QUEUE\_\-READ\_\-GATE\_\-0~0}}
+\label{gqueue_8h_a8b86910c01a28f01838c038cc34672e1}
 
 
-Definition at line 24 of file gqueue.\-h.
+Definition at line 23 of file gqueue.h.
 
-\hypertarget{gqueue_8h_abf70c568abf45a19626d44ae6ce335f1}{\index{gqueue.\-h@{gqueue.\-h}!Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-\_\-2@{Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-\_\-2}}
-\index{Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-\_\-2@{Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-\_\-2}!gqueue.h@{gqueue.\-h}}
-\subsubsection[{Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}\#define Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-\_\-2~2}}\label{gqueue_8h_abf70c568abf45a19626d44ae6ce335f1}
-
-
-Definition at line 25 of file gqueue.\-h.
-
-\hypertarget{gqueue_8h_a59e133f0d1912726949366d6b08cd3f5}{\index{gqueue.\-h@{gqueue.\-h}!Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-\_\-3@{Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-\_\-3}}
-\index{Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-\_\-3@{Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-\_\-3}!gqueue.h@{gqueue.\-h}}
-\subsubsection[{Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-\_\-3}]{\setlength{\rightskip}{0pt plus 5cm}\#define Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-\_\-3~3}}\label{gqueue_8h_a59e133f0d1912726949366d6b08cd3f5}
+\hypertarget{gqueue_8h_aaaaea04d929e35142e01be4c56516370}{
+\index{gqueue.h@{gqueue.h}!QUEUE\_\-READ\_\-GATE\_\-1@{QUEUE\_\-READ\_\-GATE\_\-1}}
+\index{QUEUE\_\-READ\_\-GATE\_\-1@{QUEUE\_\-READ\_\-GATE\_\-1}!gqueue.h@{gqueue.h}}
+\subsubsection[{QUEUE\_\-READ\_\-GATE\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}\#define QUEUE\_\-READ\_\-GATE\_\-1~1}}
+\label{gqueue_8h_aaaaea04d929e35142e01be4c56516370}
 
 
-Definition at line 26 of file gqueue.\-h.
+Definition at line 24 of file gqueue.h.
 
-\hypertarget{gqueue_8h_a4771f3ff5f05b3a182aae96aed1e4509}{\index{gqueue.\-h@{gqueue.\-h}!Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-\_\-4@{Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-\_\-4}}
-\index{Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-\_\-4@{Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-\_\-4}!gqueue.h@{gqueue.\-h}}
-\subsubsection[{Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-\_\-4}]{\setlength{\rightskip}{0pt plus 5cm}\#define Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-\_\-4~4}}\label{gqueue_8h_a4771f3ff5f05b3a182aae96aed1e4509}
-
-
-Definition at line 27 of file gqueue.\-h.
-
-\hypertarget{gqueue_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{\index{gqueue.\-h@{gqueue.\-h}!T\-R\-U\-E@{T\-R\-U\-E}}
-\index{T\-R\-U\-E@{T\-R\-U\-E}!gqueue.h@{gqueue.\-h}}
-\subsubsection[{T\-R\-U\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-R\-U\-E~1}}\label{gqueue_8h_aa8cecfc5c5c054d2875c03e77b7be15d}
+\hypertarget{gqueue_8h_abf70c568abf45a19626d44ae6ce335f1}{
+\index{gqueue.h@{gqueue.h}!QUEUE\_\-READ\_\-GATE\_\-2@{QUEUE\_\-READ\_\-GATE\_\-2}}
+\index{QUEUE\_\-READ\_\-GATE\_\-2@{QUEUE\_\-READ\_\-GATE\_\-2}!gqueue.h@{gqueue.h}}
+\subsubsection[{QUEUE\_\-READ\_\-GATE\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}\#define QUEUE\_\-READ\_\-GATE\_\-2~2}}
+\label{gqueue_8h_abf70c568abf45a19626d44ae6ce335f1}
 
 
-Definition at line 19 of file gqueue.\-h.
+Definition at line 25 of file gqueue.h.
+
+\hypertarget{gqueue_8h_a59e133f0d1912726949366d6b08cd3f5}{
+\index{gqueue.h@{gqueue.h}!QUEUE\_\-READ\_\-GATE\_\-3@{QUEUE\_\-READ\_\-GATE\_\-3}}
+\index{QUEUE\_\-READ\_\-GATE\_\-3@{QUEUE\_\-READ\_\-GATE\_\-3}!gqueue.h@{gqueue.h}}
+\subsubsection[{QUEUE\_\-READ\_\-GATE\_\-3}]{\setlength{\rightskip}{0pt plus 5cm}\#define QUEUE\_\-READ\_\-GATE\_\-3~3}}
+\label{gqueue_8h_a59e133f0d1912726949366d6b08cd3f5}
+
+
+Definition at line 26 of file gqueue.h.
+
+\hypertarget{gqueue_8h_a4771f3ff5f05b3a182aae96aed1e4509}{
+\index{gqueue.h@{gqueue.h}!QUEUE\_\-READ\_\-GATE\_\-4@{QUEUE\_\-READ\_\-GATE\_\-4}}
+\index{QUEUE\_\-READ\_\-GATE\_\-4@{QUEUE\_\-READ\_\-GATE\_\-4}!gqueue.h@{gqueue.h}}
+\subsubsection[{QUEUE\_\-READ\_\-GATE\_\-4}]{\setlength{\rightskip}{0pt plus 5cm}\#define QUEUE\_\-READ\_\-GATE\_\-4~4}}
+\label{gqueue_8h_a4771f3ff5f05b3a182aae96aed1e4509}
+
+
+Definition at line 27 of file gqueue.h.
+
+\hypertarget{gqueue_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{
+\index{gqueue.h@{gqueue.h}!TRUE@{TRUE}}
+\index{TRUE@{TRUE}!gqueue.h@{gqueue.h}}
+\subsubsection[{TRUE}]{\setlength{\rightskip}{0pt plus 5cm}\#define TRUE~1}}
+\label{gqueue_8h_aa8cecfc5c5c054d2875c03e77b7be15d}
+
+
+Definition at line 19 of file gqueue.h.
 
 
 
 \subsection{Typedef Documentation}
-\hypertarget{gqueue_8h_ae87815147ae3a01555f1b9cb639d236a}{\index{gqueue.\-h@{gqueue.\-h}!P\-G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L@{P\-G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L}}
-\index{P\-G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L@{P\-G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L}!gqueue.h@{gqueue.\-h}}
-\subsubsection[{P\-G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L}]{\setlength{\rightskip}{0pt plus 5cm}typedef  struct {\bf G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L} $\ast$ {\bf P\-G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L}}}\label{gqueue_8h_ae87815147ae3a01555f1b9cb639d236a}
+\hypertarget{gqueue_8h_ae87815147ae3a01555f1b9cb639d236a}{
+\index{gqueue.h@{gqueue.h}!PGQUEUECONTROL@{PGQUEUECONTROL}}
+\index{PGQUEUECONTROL@{PGQUEUECONTROL}!gqueue.h@{gqueue.h}}
+\subsubsection[{PGQUEUECONTROL}]{\setlength{\rightskip}{0pt plus 5cm}typedef  struct {\bf GQUEUECONTROL} $\ast$ {\bf PGQUEUECONTROL}}}
+\label{gqueue_8h_ae87815147ae3a01555f1b9cb639d236a}
 
 
 \subsection{Function Documentation}
-\hypertarget{gqueue_8h_a7138af0e73adef329c891210ba747a2e}{\index{gqueue.\-h@{gqueue.\-h}!g\-Q\-U\-E\-U\-E\-\_\-\-Get\-Number\-Of\-Unread\-Data@{g\-Q\-U\-E\-U\-E\-\_\-\-Get\-Number\-Of\-Unread\-Data}}
-\index{g\-Q\-U\-E\-U\-E\-\_\-\-Get\-Number\-Of\-Unread\-Data@{g\-Q\-U\-E\-U\-E\-\_\-\-Get\-Number\-Of\-Unread\-Data}!gqueue.h@{gqueue.\-h}}
-\subsubsection[{g\-Q\-U\-E\-U\-E\-\_\-\-Get\-Number\-Of\-Unread\-Data}]{\setlength{\rightskip}{0pt plus 5cm}int g\-Q\-U\-E\-U\-E\-\_\-\-Get\-Number\-Of\-Unread\-Data (
-\begin{DoxyParamCaption}
-\item[{{\bf P\-G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L}}]{p\-Queue\-Control, }
-\item[{int}]{N\-Reader, }
-\item[{int $\ast$}]{Index}
-\end{DoxyParamCaption}
-)}}\label{gqueue_8h_a7138af0e73adef329c891210ba747a2e}
+\hypertarget{gqueue_8h_a7138af0e73adef329c891210ba747a2e}{
+\index{gqueue.h@{gqueue.h}!gQUEUE\_\-GetNumberOfUnreadData@{gQUEUE\_\-GetNumberOfUnreadData}}
+\index{gQUEUE\_\-GetNumberOfUnreadData@{gQUEUE\_\-GetNumberOfUnreadData}!gqueue.h@{gqueue.h}}
+\subsubsection[{gQUEUE\_\-GetNumberOfUnreadData}]{\setlength{\rightskip}{0pt plus 5cm}int gQUEUE\_\-GetNumberOfUnreadData ({\bf PGQUEUECONTROL} {\em pQueueControl}, \/  int {\em NReader}, \/  int $\ast$ {\em Index})}}
+\label{gqueue_8h_a7138af0e73adef329c891210ba747a2e}
 
 
-Definition at line 314 of file gqueue.\-c.
+Definition at line 314 of file gqueue.c.
 
 
 
-References F\-A\-L\-S\-E, G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L\-::\-N\-Readers, G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L\-::\-Read\-Index, G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L\-::\-Size, T\-R\-U\-E, and G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L\-::\-Write\-Index.
+References FALSE, GQUEUECONTROL::NReaders, GQUEUECONTROL::ReadIndex, GQUEUECONTROL::Size, TRUE, and GQUEUECONTROL::WriteIndex.
 
 
 
-Referenced by g\-Data\-Logger\-\_\-\-I\-P\-C\-Update(), and g\-Data\-Logger\-\_\-\-Matfile\-Update().
+Referenced by gDataLogger\_\-IPCUpdate(), and gDataLogger\_\-MatfileUpdate().
+
+
 
 
 \begin{DoxyCode}
-315 \{
-316         \textcolor{keywordflow}{if}(NReader>=pQueueControl->\hyperlink{structGQUEUECONTROL_a790618cf693d7e4249fec2f5074b40e3}{NReaders})\{
-317                 \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
-318         \}
+315 {
+316         if(NReader>=pQueueControl->NReaders){
+317                 return FALSE;
+318         }
 319 
-320         \textcolor{keywordflow}{if}(pQueueControl->\hyperlink{structGQUEUECONTROL_a614237a6b5ee3fca394e40a0274d5b43}{WriteIndex} >= pQueueControl->\hyperlink{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}{ReadIndex}[NReader])\{
-321                 *Index = pQueueControl->\hyperlink{structGQUEUECONTROL_a614237a6b5ee3fca394e40a0274d5b43}{WriteIndex}-pQueueControl->
-      \hyperlink{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}{ReadIndex}[NReader];
-322         \}
-323         \textcolor{keywordflow}{else}\{
-324                 *Index = pQueueControl->\hyperlink{structGQUEUECONTROL_a4db75bcca77dbc6ea7d8d5c3cd3a365f}{Size}-(pQueueControl->\hyperlink{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}{ReadIndex}[NReader]-pQueueControl
-      ->\hyperlink{structGQUEUECONTROL_a614237a6b5ee3fca394e40a0274d5b43}{WriteIndex});
-325         \}
+320         if(pQueueControl->WriteIndex >= pQueueControl->ReadIndex[NReader]){
+321                 *Index = pQueueControl->WriteIndex-pQueueControl->ReadIndex[NRead
+      er];
+322         }
+323         else{
+324                 *Index = pQueueControl->Size-(pQueueControl->ReadIndex[NReader]-p
+      QueueControl->WriteIndex);
+325         }
 326         
-327         \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
-328 \}                      
+327         return TRUE;
+328 }                      
 \end{DoxyCode}
 
 
-Here is the caller graph for this function\-:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{gqueue_8h_a7138af0e73adef329c891210ba747a2e_icgraph}
-\end{center}
-\end{figure}
 
 
-\hypertarget{gqueue_8h_a273e65bb0fa92f17904f052a4def072d}{\index{gqueue.\-h@{gqueue.\-h}!g\-Q\-U\-E\-U\-E\-\_\-\-Get\-Read\-Index@{g\-Q\-U\-E\-U\-E\-\_\-\-Get\-Read\-Index}}
-\index{g\-Q\-U\-E\-U\-E\-\_\-\-Get\-Read\-Index@{g\-Q\-U\-E\-U\-E\-\_\-\-Get\-Read\-Index}!gqueue.h@{gqueue.\-h}}
-\subsubsection[{g\-Q\-U\-E\-U\-E\-\_\-\-Get\-Read\-Index}]{\setlength{\rightskip}{0pt plus 5cm}int g\-Q\-U\-E\-U\-E\-\_\-\-Get\-Read\-Index (
-\begin{DoxyParamCaption}
-\item[{{\bf P\-G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L}}]{p\-Queue\-Control, }
-\item[{int}]{N\-Reader, }
-\item[{int $\ast$}]{Index, }
-\item[{int}]{Index\-Horizon}
-\end{DoxyParamCaption}
-)}}\label{gqueue_8h_a273e65bb0fa92f17904f052a4def072d}
+Here is the caller graph for this function:
+
+\hypertarget{gqueue_8h_a273e65bb0fa92f17904f052a4def072d}{
+\index{gqueue.h@{gqueue.h}!gQUEUE\_\-GetReadIndex@{gQUEUE\_\-GetReadIndex}}
+\index{gQUEUE\_\-GetReadIndex@{gQUEUE\_\-GetReadIndex}!gqueue.h@{gqueue.h}}
+\subsubsection[{gQUEUE\_\-GetReadIndex}]{\setlength{\rightskip}{0pt plus 5cm}int gQUEUE\_\-GetReadIndex ({\bf PGQUEUECONTROL} {\em pQueueControl}, \/  int {\em NReader}, \/  int $\ast$ {\em Index}, \/  int {\em IndexHorizon})}}
+\label{gqueue_8h_a273e65bb0fa92f17904f052a4def072d}
 
 
-Definition at line 166 of file gqueue.\-c.
+Definition at line 166 of file gqueue.c.
 
 
 
-References B\-E\-G\-I\-N\-\_\-\-A\-T\-O\-M\-I\-C, E\-N\-D\-\_\-\-A\-T\-O\-M\-I\-C, F\-A\-L\-S\-E, G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L\-::\-Flag\-Still\-Not\-Written, g\-Q\-U\-E\-U\-E\-\_\-\-Unwrap\-Read\-Index(), G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L\-::\-N\-Readers, G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L\-::\-Read\-Index, G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L\-::\-Size, and T\-R\-U\-E.
+References BEGIN\_\-ATOMIC, END\_\-ATOMIC, FALSE, GQUEUECONTROL::FlagStillNotWritten, gQUEUE\_\-UnwrapReadIndex(), GQUEUECONTROL::NReaders, GQUEUECONTROL::ReadIndex, GQUEUECONTROL::Size, and TRUE.
+
+
 
 
 \begin{DoxyCode}
-167 \{
-168         \textcolor{keywordflow}{if}(NReader>=pQueueControl->\hyperlink{structGQUEUECONTROL_a790618cf693d7e4249fec2f5074b40e3}{NReaders})\{
-169                 \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
-170         \}
+167 {
+168         if(NReader>=pQueueControl->NReaders){
+169                 return FALSE;
+170         }
 171 
-172         \textcolor{keywordflow}{if}(pQueueControl->\hyperlink{structGQUEUECONTROL_a4d58bdb6b0dc93bb6034c4209b6e7915}{FlagStillNotWritten} == \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE})\{
-173                 \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
-174         \}
+172         if(pQueueControl->FlagStillNotWritten == TRUE){
+173                 return FALSE;
+174         }
 175     
-176 \hyperlink{gqueue_8c_a4dbeb573edcedfa8f803e1891730e526}{BEGIN\_ATOMIC}();
+176 BEGIN_ATOMIC();
 177 
-178         *Index = (pQueueControl->\hyperlink{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}{ReadIndex}[NReader]-IndexHorizon);
-179         \textcolor{keywordflow}{if}(*Index<0)\{
-180                 *Index += pQueueControl->\hyperlink{structGQUEUECONTROL_a4db75bcca77dbc6ea7d8d5c3cd3a365f}{Size};
-181         \}
-182         \hyperlink{gqueue_8c_abab4c6aeb3d57e43aa16285fe4f59f66}{gQUEUE\_UnwrapReadIndex}(pQueueControl, NReader);
+178         *Index = (pQueueControl->ReadIndex[NReader]-IndexHorizon);
+179         if(*Index<0){
+180                 *Index += pQueueControl->Size;
+181         }
+182         gQUEUE_UnwrapReadIndex(pQueueControl, NReader);
 183 
-184 \hyperlink{gqueue_8c_a8980cf83b4c1f4b1d693d1c9d2a54535}{END\_ATOMIC}();
+184 END_ATOMIC();
 185 
 186 
-187     \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
-188 \}                      
+187     return TRUE;
+188 }                      
 \end{DoxyCode}
 
 
-Here is the call graph for this function\-:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{gqueue_8h_a273e65bb0fa92f17904f052a4def072d_cgraph}
-\end{center}
-\end{figure}
 
 
-\hypertarget{gqueue_8h_ae52e32b31c201f0ffc5134e30a4056ba}{\index{gqueue.\-h@{gqueue.\-h}!g\-Q\-U\-E\-U\-E\-\_\-\-Get\-Write\-Index@{g\-Q\-U\-E\-U\-E\-\_\-\-Get\-Write\-Index}}
-\index{g\-Q\-U\-E\-U\-E\-\_\-\-Get\-Write\-Index@{g\-Q\-U\-E\-U\-E\-\_\-\-Get\-Write\-Index}!gqueue.h@{gqueue.\-h}}
-\subsubsection[{g\-Q\-U\-E\-U\-E\-\_\-\-Get\-Write\-Index}]{\setlength{\rightskip}{0pt plus 5cm}int g\-Q\-U\-E\-U\-E\-\_\-\-Get\-Write\-Index (
-\begin{DoxyParamCaption}
-\item[{{\bf P\-G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L}}]{p\-Queue\-Control, }
-\item[{int $\ast$}]{Index, }
-\item[{int}]{Index\-Horizon}
-\end{DoxyParamCaption}
-)}}\label{gqueue_8h_ae52e32b31c201f0ffc5134e30a4056ba}
+Here is the call graph for this function:
+
+\hypertarget{gqueue_8h_ae52e32b31c201f0ffc5134e30a4056ba}{
+\index{gqueue.h@{gqueue.h}!gQUEUE\_\-GetWriteIndex@{gQUEUE\_\-GetWriteIndex}}
+\index{gQUEUE\_\-GetWriteIndex@{gQUEUE\_\-GetWriteIndex}!gqueue.h@{gqueue.h}}
+\subsubsection[{gQUEUE\_\-GetWriteIndex}]{\setlength{\rightskip}{0pt plus 5cm}int gQUEUE\_\-GetWriteIndex ({\bf PGQUEUECONTROL} {\em pQueueControl}, \/  int $\ast$ {\em Index}, \/  int {\em IndexHorizon})}}
+\label{gqueue_8h_ae52e32b31c201f0ffc5134e30a4056ba}
 
 
-Definition at line 203 of file gqueue.\-c.
+Definition at line 203 of file gqueue.c.
 
 
 
-References B\-E\-G\-I\-N\-\_\-\-A\-T\-O\-M\-I\-C, E\-N\-D\-\_\-\-A\-T\-O\-M\-I\-C, F\-A\-L\-S\-E, G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L\-::\-Flag\-Still\-Not\-Written, g\-Q\-U\-E\-U\-E\-\_\-\-Unwrap\-Write\-Index(), G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L\-::\-Size, T\-R\-U\-E, and G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L\-::\-Write\-Index.
+References BEGIN\_\-ATOMIC, END\_\-ATOMIC, FALSE, GQUEUECONTROL::FlagStillNotWritten, gQUEUE\_\-UnwrapWriteIndex(), GQUEUECONTROL::Size, TRUE, and GQUEUECONTROL::WriteIndex.
+
+
 
 
 \begin{DoxyCode}
-204 \{
+204 {
 205 
-206     \textcolor{keywordflow}{if}(pQueueControl->\hyperlink{structGQUEUECONTROL_a4d58bdb6b0dc93bb6034c4209b6e7915}{FlagStillNotWritten} == \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE})\{
-207         \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
-208     \}
+206     if(pQueueControl->FlagStillNotWritten == TRUE){
+207         return FALSE;
+208     }
 209 
-210 \hyperlink{gqueue_8c_a4dbeb573edcedfa8f803e1891730e526}{BEGIN\_ATOMIC}();
+210 BEGIN_ATOMIC();
 211     
-212         *Index = (pQueueControl->\hyperlink{structGQUEUECONTROL_a614237a6b5ee3fca394e40a0274d5b43}{WriteIndex}-IndexHorizon);
-213         \textcolor{keywordflow}{if}(*Index<0)\{
-214                 *Index += pQueueControl->\hyperlink{structGQUEUECONTROL_a4db75bcca77dbc6ea7d8d5c3cd3a365f}{Size};
-215         \}
-216         \hyperlink{gqueue_8c_a070de567ba00fb02d6c480840c15d31d}{gQUEUE\_UnwrapWriteIndex}(pQueueControl);
+212         *Index = (pQueueControl->WriteIndex-IndexHorizon);
+213         if(*Index<0){
+214                 *Index += pQueueControl->Size;
+215         }
+216         gQUEUE_UnwrapWriteIndex(pQueueControl);
 217 
-218 \hyperlink{gqueue_8c_a8980cf83b4c1f4b1d693d1c9d2a54535}{END\_ATOMIC}();
+218 END_ATOMIC();
 219 
-220     \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
-221 \}                      
+220     return TRUE;
+221 }                      
 \end{DoxyCode}
 
 
-Here is the call graph for this function\-:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{gqueue_8h_ae52e32b31c201f0ffc5134e30a4056ba_cgraph}
-\end{center}
-\end{figure}
 
 
-\hypertarget{gqueue_8h_a6edb74779d40a7a4328e32012fad8c0c}{\index{gqueue.\-h@{gqueue.\-h}!g\-Q\-U\-E\-U\-E\-\_\-\-Init@{g\-Q\-U\-E\-U\-E\-\_\-\-Init}}
-\index{g\-Q\-U\-E\-U\-E\-\_\-\-Init@{g\-Q\-U\-E\-U\-E\-\_\-\-Init}!gqueue.h@{gqueue.\-h}}
-\subsubsection[{g\-Q\-U\-E\-U\-E\-\_\-\-Init}]{\setlength{\rightskip}{0pt plus 5cm}int g\-Q\-U\-E\-U\-E\-\_\-\-Init (
-\begin{DoxyParamCaption}
-\item[{{\bf P\-G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L}}]{p\-Queue\-Control, }
-\item[{int}]{Size, }
-\item[{int}]{N\-Readers}
-\end{DoxyParamCaption}
-)}}\label{gqueue_8h_a6edb74779d40a7a4328e32012fad8c0c}
+Here is the call graph for this function:
+
+\hypertarget{gqueue_8h_a6edb74779d40a7a4328e32012fad8c0c}{
+\index{gqueue.h@{gqueue.h}!gQUEUE\_\-Init@{gQUEUE\_\-Init}}
+\index{gQUEUE\_\-Init@{gQUEUE\_\-Init}!gqueue.h@{gqueue.h}}
+\subsubsection[{gQUEUE\_\-Init}]{\setlength{\rightskip}{0pt plus 5cm}int gQUEUE\_\-Init ({\bf PGQUEUECONTROL} {\em pQueueControl}, \/  int {\em Size}, \/  int {\em NReaders})}}
+\label{gqueue_8h_a6edb74779d40a7a4328e32012fad8c0c}
 
 
-Definition at line 31 of file gqueue.\-c.
+Definition at line 31 of file gqueue.c.
 
 
 
-References F\-A\-L\-S\-E, G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L\-::\-Flag\-Full, G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L\-::\-Flag\-Still\-Not\-Read, G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L\-::\-Flag\-Still\-Not\-Written, M\-A\-X\-S\-I\-Z\-E\-\_\-\-Q\-U\-E\-U\-E\-\_\-\-R\-E\-A\-D\-\_\-\-G\-A\-T\-E\-S, G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L\-::\-N\-Readers, G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L\-::\-Read\-Index, G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L\-::\-Size, T\-R\-U\-E, and G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L\-::\-Write\-Index.
+References FALSE, GQUEUECONTROL::FlagFull, GQUEUECONTROL::FlagStillNotRead, GQUEUECONTROL::FlagStillNotWritten, MAXSIZE\_\-QUEUE\_\-READ\_\-GATES, GQUEUECONTROL::NReaders, GQUEUECONTROL::ReadIndex, GQUEUECONTROL::Size, TRUE, and GQUEUECONTROL::WriteIndex.
 
 
 
-Referenced by g\-Data\-Logger\-\_\-\-Declare\-Variable().
+Referenced by gDataLogger\_\-DeclareVariable().
+
+
 
 
 \begin{DoxyCode}
-32 \{
-33         \textcolor{keywordtype}{int} n;
+32 {
+33         int n;
 34 
-35         \textcolor{keywordflow}{if}(NReaders > \hyperlink{gqueue_8h_ac3f84fecc52fe0f23ea7d5157cb92997}{MAXSIZE\_QUEUE\_READ\_GATES})\{
-36                 \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
-37         \}
+35         if(NReaders > MAXSIZE_QUEUE_READ_GATES){
+36                 return FALSE;
+37         }
 38 
-39         pQueueControl->\hyperlink{structGQUEUECONTROL_a4db75bcca77dbc6ea7d8d5c3cd3a365f}{Size} = Size,
-40         pQueueControl->\hyperlink{structGQUEUECONTROL_a790618cf693d7e4249fec2f5074b40e3}{NReaders} = NReaders;
-41         pQueueControl->\hyperlink{structGQUEUECONTROL_a4d58bdb6b0dc93bb6034c4209b6e7915}{FlagStillNotWritten} = \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
-42         \textcolor{keywordflow}{for}(n=0;n<NReaders;++n)\{
-43                 pQueueControl->\hyperlink{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}{ReadIndex}[n] = 0;
-44                 pQueueControl->\hyperlink{structGQUEUECONTROL_a9336a08f0410235b38b78638b0e3f882}{FlagStillNotRead}[n] = \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
-45                 pQueueControl->\hyperlink{structGQUEUECONTROL_a5f54a26afa8554ed2f161b83aba14f5c}{FlagFull}[n] = \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
-46         \}
-47         pQueueControl->\hyperlink{structGQUEUECONTROL_a614237a6b5ee3fca394e40a0274d5b43}{WriteIndex} = 0;
+39         pQueueControl->Size = Size,
+40         pQueueControl->NReaders = NReaders;
+41         pQueueControl->FlagStillNotWritten = TRUE;
+42         for(n=0;n<NReaders;++n){
+43                 pQueueControl->ReadIndex[n] = 0;
+44                 pQueueControl->FlagStillNotRead[n] = TRUE;
+45                 pQueueControl->FlagFull[n] = FALSE;
+46         }
+47         pQueueControl->WriteIndex = 0;
 48 
-49 \textcolor{preprocessor}{#if GQUEUE\_RTAI\_SUPPORT}
-50 \textcolor{preprocessor}{}        rt\_spl\_init(&pQueueControl->SPLAtomicAccess);
-51 \textcolor{preprocessor}{#endif}
-52 \textcolor{preprocessor}{}    \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
-53 \}                      
+49 #if GQUEUE_RTAI_SUPPORT
+50         rt_spl_init(&pQueueControl->SPLAtomicAccess);
+51 #endif
+52     return TRUE;
+53 }                      
 \end{DoxyCode}
 
 
-Here is the caller graph for this function\-:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{gqueue_8h_a6edb74779d40a7a4328e32012fad8c0c_icgraph}
-\end{center}
-\end{figure}
 
 
-\hypertarget{gqueue_8h_a61763c54eaa8dd611c81c75745e9b3b2}{\index{gqueue.\-h@{gqueue.\-h}!g\-Q\-U\-E\-U\-E\-\_\-\-Request\-Last\-Read\-Index@{g\-Q\-U\-E\-U\-E\-\_\-\-Request\-Last\-Read\-Index}}
-\index{g\-Q\-U\-E\-U\-E\-\_\-\-Request\-Last\-Read\-Index@{g\-Q\-U\-E\-U\-E\-\_\-\-Request\-Last\-Read\-Index}!gqueue.h@{gqueue.\-h}}
-\subsubsection[{g\-Q\-U\-E\-U\-E\-\_\-\-Request\-Last\-Read\-Index}]{\setlength{\rightskip}{0pt plus 5cm}int g\-Q\-U\-E\-U\-E\-\_\-\-Request\-Last\-Read\-Index (
-\begin{DoxyParamCaption}
-\item[{{\bf P\-G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L}}]{p\-Queue\-Control, }
-\item[{int}]{N\-Reader, }
-\item[{int $\ast$}]{Index}
-\end{DoxyParamCaption}
-)}}\label{gqueue_8h_a61763c54eaa8dd611c81c75745e9b3b2}
+Here is the caller graph for this function:
+
+\hypertarget{gqueue_8h_a61763c54eaa8dd611c81c75745e9b3b2}{
+\index{gqueue.h@{gqueue.h}!gQUEUE\_\-RequestLastReadIndex@{gQUEUE\_\-RequestLastReadIndex}}
+\index{gQUEUE\_\-RequestLastReadIndex@{gQUEUE\_\-RequestLastReadIndex}!gqueue.h@{gqueue.h}}
+\subsubsection[{gQUEUE\_\-RequestLastReadIndex}]{\setlength{\rightskip}{0pt plus 5cm}int gQUEUE\_\-RequestLastReadIndex ({\bf PGQUEUECONTROL} {\em pQueueControl}, \/  int {\em NReader}, \/  int $\ast$ {\em Index})}}
+\label{gqueue_8h_a61763c54eaa8dd611c81c75745e9b3b2}
 
 
-Definition at line 67 of file gqueue.\-c.
+Definition at line 67 of file gqueue.c.
 
 
 
-References B\-E\-G\-I\-N\-\_\-\-A\-T\-O\-M\-I\-C, E\-N\-D\-\_\-\-A\-T\-O\-M\-I\-C, F\-A\-L\-S\-E, G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L\-::\-Flag\-Full, G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L\-::\-Flag\-Still\-Not\-Read, G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L\-::\-Flag\-Still\-Not\-Written, g\-Q\-U\-E\-U\-E\-\_\-\-Unwrap\-Read\-Index(), G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L\-::\-N\-Readers, G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L\-::\-Read\-Index, T\-R\-U\-E, and G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L\-::\-Write\-Index.
+References BEGIN\_\-ATOMIC, END\_\-ATOMIC, FALSE, GQUEUECONTROL::FlagFull, GQUEUECONTROL::FlagStillNotRead, GQUEUECONTROL::FlagStillNotWritten, gQUEUE\_\-UnwrapReadIndex(), GQUEUECONTROL::NReaders, GQUEUECONTROL::ReadIndex, TRUE, and GQUEUECONTROL::WriteIndex.
+
+
 
 
 \begin{DoxyCode}
-68 \{
-69         \textcolor{keywordflow}{if}(NReader>=pQueueControl->\hyperlink{structGQUEUECONTROL_a790618cf693d7e4249fec2f5074b40e3}{NReaders})\{
-70                 \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
-71         \}
+68 {
+69         if(NReader>=pQueueControl->NReaders){
+70                 return FALSE;
+71         }
 72         
-73         \textcolor{keywordflow}{if}(pQueueControl->\hyperlink{structGQUEUECONTROL_a4d58bdb6b0dc93bb6034c4209b6e7915}{FlagStillNotWritten} == \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE})\{
-74                 \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
-75         \}
+73         if(pQueueControl->FlagStillNotWritten == TRUE){
+74                 return FALSE;
+75         }
 76 
-77 \hyperlink{gqueue_8c_a4dbeb573edcedfa8f803e1891730e526}{BEGIN\_ATOMIC}();
+77 BEGIN_ATOMIC();
 78         
-79         \textcolor{keywordflow}{if}(pQueueControl->\hyperlink{structGQUEUECONTROL_a9336a08f0410235b38b78638b0e3f882}{FlagStillNotRead}[NReader] == \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE})\{
-80                 pQueueControl->\hyperlink{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}{ReadIndex}[NReader] = pQueueControl->
-      \hyperlink{structGQUEUECONTROL_a614237a6b5ee3fca394e40a0274d5b43}{WriteIndex};
-81                 *Index = pQueueControl->\hyperlink{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}{ReadIndex}[NReader];
-82                 pQueueControl->\hyperlink{structGQUEUECONTROL_a9336a08f0410235b38b78638b0e3f882}{FlagStillNotRead}[NReader] = \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
-83         \}
-84         \textcolor{keywordflow}{else}\{
-85                 \textcolor{keywordflow}{if}(pQueueControl->\hyperlink{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}{ReadIndex}[NReader] == pQueueControl->
-      \hyperlink{structGQUEUECONTROL_a614237a6b5ee3fca394e40a0274d5b43}{WriteIndex})\{
-86                         pQueueControl->\hyperlink{structGQUEUECONTROL_a5f54a26afa8554ed2f161b83aba14f5c}{FlagFull}[NReader] = \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};  
+79         if(pQueueControl->FlagStillNotRead[NReader] == TRUE){
+80                 pQueueControl->ReadIndex[NReader] = pQueueControl->WriteIndex;
+81                 *Index = pQueueControl->ReadIndex[NReader];
+82                 pQueueControl->FlagStillNotRead[NReader] = FALSE;
+83         }
+84         else{
+85                 if(pQueueControl->ReadIndex[NReader] == pQueueControl->
+      WriteIndex){
+86                         pQueueControl->FlagFull[NReader] = FALSE;       
 87                         *Index = -1;
-88                 \}
-89                 \textcolor{keywordflow}{else}\{
-90                         pQueueControl->\hyperlink{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}{ReadIndex}[NReader] = pQueueControl->
-      \hyperlink{structGQUEUECONTROL_a614237a6b5ee3fca394e40a0274d5b43}{WriteIndex};
-91                         \hyperlink{gqueue_8c_abab4c6aeb3d57e43aa16285fe4f59f66}{gQUEUE\_UnwrapReadIndex}(pQueueControl,NReader);
-92                         *Index = pQueueControl->\hyperlink{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}{ReadIndex}[NReader];
-93                 \}
-94         \}
+88                 }
+89                 else{
+90                         pQueueControl->ReadIndex[NReader] = pQueueControl->
+      WriteIndex;
+91                         gQUEUE_UnwrapReadIndex(pQueueControl,NReader);
+92                         *Index = pQueueControl->ReadIndex[NReader];
+93                 }
+94         }
 95 
-96 \hyperlink{gqueue_8c_a8980cf83b4c1f4b1d693d1c9d2a54535}{END\_ATOMIC}();
+96 END_ATOMIC();
 97 
-98         \textcolor{keywordflow}{if}(*Index==-1)\{
-99                 \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
-100         \}  
+98         if(*Index==-1){
+99                 return FALSE;
+100         }  
 101 
-102     \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
-103 \}                      
+102     return TRUE;
+103 }                      
 \end{DoxyCode}
 
 
-Here is the call graph for this function\-:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{gqueue_8h_a61763c54eaa8dd611c81c75745e9b3b2_cgraph}
-\end{center}
-\end{figure}
 
 
-\hypertarget{gqueue_8h_ab5ba087de92285fb4f9ed8c46440ac6f}{\index{gqueue.\-h@{gqueue.\-h}!g\-Q\-U\-E\-U\-E\-\_\-\-Request\-Read\-Index@{g\-Q\-U\-E\-U\-E\-\_\-\-Request\-Read\-Index}}
-\index{g\-Q\-U\-E\-U\-E\-\_\-\-Request\-Read\-Index@{g\-Q\-U\-E\-U\-E\-\_\-\-Request\-Read\-Index}!gqueue.h@{gqueue.\-h}}
-\subsubsection[{g\-Q\-U\-E\-U\-E\-\_\-\-Request\-Read\-Index}]{\setlength{\rightskip}{0pt plus 5cm}int g\-Q\-U\-E\-U\-E\-\_\-\-Request\-Read\-Index (
-\begin{DoxyParamCaption}
-\item[{{\bf P\-G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L}}]{p\-Queue\-Control, }
-\item[{int}]{N\-Reader, }
-\item[{int $\ast$}]{Index}
-\end{DoxyParamCaption}
-)}}\label{gqueue_8h_ab5ba087de92285fb4f9ed8c46440ac6f}
+Here is the call graph for this function:
+
+\hypertarget{gqueue_8h_ab5ba087de92285fb4f9ed8c46440ac6f}{
+\index{gqueue.h@{gqueue.h}!gQUEUE\_\-RequestReadIndex@{gQUEUE\_\-RequestReadIndex}}
+\index{gQUEUE\_\-RequestReadIndex@{gQUEUE\_\-RequestReadIndex}!gqueue.h@{gqueue.h}}
+\subsubsection[{gQUEUE\_\-RequestReadIndex}]{\setlength{\rightskip}{0pt plus 5cm}int gQUEUE\_\-RequestReadIndex ({\bf PGQUEUECONTROL} {\em pQueueControl}, \/  int {\em NReader}, \/  int $\ast$ {\em Index})}}
+\label{gqueue_8h_ab5ba087de92285fb4f9ed8c46440ac6f}
 
 
-Definition at line 117 of file gqueue.\-c.
+Definition at line 117 of file gqueue.c.
 
 
 
-References B\-E\-G\-I\-N\-\_\-\-A\-T\-O\-M\-I\-C, E\-N\-D\-\_\-\-A\-T\-O\-M\-I\-C, F\-A\-L\-S\-E, G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L\-::\-Flag\-Full, G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L\-::\-Flag\-Still\-Not\-Read, G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L\-::\-Flag\-Still\-Not\-Written, g\-Q\-U\-E\-U\-E\-\_\-\-Unwrap\-Read\-Index(), G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L\-::\-N\-Readers, G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L\-::\-Read\-Index, T\-R\-U\-E, and G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L\-::\-Write\-Index.
+References BEGIN\_\-ATOMIC, END\_\-ATOMIC, FALSE, GQUEUECONTROL::FlagFull, GQUEUECONTROL::FlagStillNotRead, GQUEUECONTROL::FlagStillNotWritten, gQUEUE\_\-UnwrapReadIndex(), GQUEUECONTROL::NReaders, GQUEUECONTROL::ReadIndex, TRUE, and GQUEUECONTROL::WriteIndex.
 
 
 
-Referenced by g\-Data\-Logger\-\_\-\-I\-P\-C\-Update(), and g\-Data\-Logger\-\_\-\-Matfile\-Update().
+Referenced by gDataLogger\_\-IPCUpdate(), and gDataLogger\_\-MatfileUpdate().
+
+
 
 
 \begin{DoxyCode}
-118 \{
-119         \textcolor{keywordflow}{if}(NReader>=pQueueControl->\hyperlink{structGQUEUECONTROL_a790618cf693d7e4249fec2f5074b40e3}{NReaders})\{
-120                 \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
-121         \}
+118 {
+119         if(NReader>=pQueueControl->NReaders){
+120                 return FALSE;
+121         }
 122 
-123         \textcolor{keywordflow}{if}(pQueueControl->\hyperlink{structGQUEUECONTROL_a4d58bdb6b0dc93bb6034c4209b6e7915}{FlagStillNotWritten} == \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE})\{
-124                 \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
-125         \}
+123         if(pQueueControl->FlagStillNotWritten == TRUE){
+124                 return FALSE;
+125         }
 126     
-127 \hyperlink{gqueue_8c_a4dbeb573edcedfa8f803e1891730e526}{BEGIN\_ATOMIC}();
-128         \textcolor{keywordflow}{if}(pQueueControl->\hyperlink{structGQUEUECONTROL_a9336a08f0410235b38b78638b0e3f882}{FlagStillNotRead}[NReader] == \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE})\{
-129                 *Index = pQueueControl->\hyperlink{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}{ReadIndex}[NReader];
-130                 pQueueControl->\hyperlink{structGQUEUECONTROL_a9336a08f0410235b38b78638b0e3f882}{FlagStillNotRead}[NReader] = \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
-131         \}
-132         \textcolor{keywordflow}{else}\{
-133                 \textcolor{keywordflow}{if}(pQueueControl->\hyperlink{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}{ReadIndex}[NReader] == pQueueControl->
-      \hyperlink{structGQUEUECONTROL_a614237a6b5ee3fca394e40a0274d5b43}{WriteIndex})\{
-134                         pQueueControl->\hyperlink{structGQUEUECONTROL_a5f54a26afa8554ed2f161b83aba14f5c}{FlagFull}[NReader] = \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};  
+127 BEGIN_ATOMIC();
+128         if(pQueueControl->FlagStillNotRead[NReader] == TRUE){
+129                 *Index = pQueueControl->ReadIndex[NReader];
+130                 pQueueControl->FlagStillNotRead[NReader] = FALSE;
+131         }
+132         else{
+133                 if(pQueueControl->ReadIndex[NReader] == pQueueControl->
+      WriteIndex){
+134                         pQueueControl->FlagFull[NReader] = FALSE;       
 135                         *Index = -1;
-136                 \}
-137                 \textcolor{keywordflow}{else}\{
-138                         ++pQueueControl->\hyperlink{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}{ReadIndex}[NReader];
-139                         \hyperlink{gqueue_8c_abab4c6aeb3d57e43aa16285fe4f59f66}{gQUEUE\_UnwrapReadIndex}(pQueueControl,NReader);
-140                         *Index = pQueueControl->\hyperlink{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}{ReadIndex}[NReader];
-141                 \}
-142         \}
-143 \hyperlink{gqueue_8c_a8980cf83b4c1f4b1d693d1c9d2a54535}{END\_ATOMIC}();
+136                 }
+137                 else{
+138                         ++pQueueControl->ReadIndex[NReader];
+139                         gQUEUE_UnwrapReadIndex(pQueueControl,NReader);
+140                         *Index = pQueueControl->ReadIndex[NReader];
+141                 }
+142         }
+143 END_ATOMIC();
 144 
-145         \textcolor{keywordflow}{if}(*Index==-1)\{
-146                 \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
-147         \}  
+145         if(*Index==-1){
+146                 return FALSE;
+147         }  
 148 
-149     \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
-150 \}                      
+149     return TRUE;
+150 }                      
 \end{DoxyCode}
 
 
-Here is the call graph for this function\-:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{gqueue_8h_ab5ba087de92285fb4f9ed8c46440ac6f_cgraph}
-\end{center}
-\end{figure}
+
+
+Here is the call graph for this function:
 
 
 
+Here is the caller graph for this function:
 
-Here is the caller graph for this function\-:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{gqueue_8h_ab5ba087de92285fb4f9ed8c46440ac6f_icgraph}
-\end{center}
-\end{figure}
+\hypertarget{gqueue_8h_a7324fa957e7713c05cab4eb7993dc2ee}{
+\index{gqueue.h@{gqueue.h}!gQUEUE\_\-RequestWriteIndex@{gQUEUE\_\-RequestWriteIndex}}
+\index{gQUEUE\_\-RequestWriteIndex@{gQUEUE\_\-RequestWriteIndex}!gqueue.h@{gqueue.h}}
+\subsubsection[{gQUEUE\_\-RequestWriteIndex}]{\setlength{\rightskip}{0pt plus 5cm}int gQUEUE\_\-RequestWriteIndex ({\bf PGQUEUECONTROL} {\em pQueueControl}, \/  int $\ast$ {\em Index})}}
+\label{gqueue_8h_a7324fa957e7713c05cab4eb7993dc2ee}
 
 
-\hypertarget{gqueue_8h_a7324fa957e7713c05cab4eb7993dc2ee}{\index{gqueue.\-h@{gqueue.\-h}!g\-Q\-U\-E\-U\-E\-\_\-\-Request\-Write\-Index@{g\-Q\-U\-E\-U\-E\-\_\-\-Request\-Write\-Index}}
-\index{g\-Q\-U\-E\-U\-E\-\_\-\-Request\-Write\-Index@{g\-Q\-U\-E\-U\-E\-\_\-\-Request\-Write\-Index}!gqueue.h@{gqueue.\-h}}
-\subsubsection[{g\-Q\-U\-E\-U\-E\-\_\-\-Request\-Write\-Index}]{\setlength{\rightskip}{0pt plus 5cm}int g\-Q\-U\-E\-U\-E\-\_\-\-Request\-Write\-Index (
-\begin{DoxyParamCaption}
-\item[{{\bf P\-G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L}}]{p\-Queue\-Control, }
-\item[{int $\ast$}]{Index}
-\end{DoxyParamCaption}
-)}}\label{gqueue_8h_a7324fa957e7713c05cab4eb7993dc2ee}
-
-
-Definition at line 233 of file gqueue.\-c.
+Definition at line 233 of file gqueue.c.
 
 
 
-References B\-E\-G\-I\-N\-\_\-\-A\-T\-O\-M\-I\-C, E\-N\-D\-\_\-\-A\-T\-O\-M\-I\-C, F\-A\-L\-S\-E, G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L\-::\-Flag\-Full, G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L\-::\-Flag\-Still\-Not\-Written, g\-Q\-U\-E\-U\-E\-\_\-\-Unwrap\-Write\-Index(), G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L\-::\-N\-Readers, G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L\-::\-Read\-Index, G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L\-::\-Size, T\-R\-U\-E, and G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L\-::\-Write\-Index.
+References BEGIN\_\-ATOMIC, END\_\-ATOMIC, FALSE, GQUEUECONTROL::FlagFull, GQUEUECONTROL::FlagStillNotWritten, gQUEUE\_\-UnwrapWriteIndex(), GQUEUECONTROL::NReaders, GQUEUECONTROL::ReadIndex, GQUEUECONTROL::Size, TRUE, and GQUEUECONTROL::WriteIndex.
 
 
 
-Referenced by g\-Data\-Logger\-\_\-\-Insert\-Variable().
+Referenced by gDataLogger\_\-InsertVariable().
+
+
 
 
 \begin{DoxyCode}
-234 \{
-235         \textcolor{keywordtype}{int} n;
-236         \textcolor{keywordtype}{int}     FlagNotFull = \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
+234 {
+235         int n;
+236         int     FlagNotFull = TRUE;
 237 
-238 \hyperlink{gqueue_8c_a4dbeb573edcedfa8f803e1891730e526}{BEGIN\_ATOMIC}();
+238 BEGIN_ATOMIC();
 239     
-240     \textcolor{keywordflow}{if}(pQueueControl->\hyperlink{structGQUEUECONTROL_a4d58bdb6b0dc93bb6034c4209b6e7915}{FlagStillNotWritten} == \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE})\{
-241         *Index = pQueueControl->\hyperlink{structGQUEUECONTROL_a614237a6b5ee3fca394e40a0274d5b43}{WriteIndex};
-242         pQueueControl->\hyperlink{structGQUEUECONTROL_a4d58bdb6b0dc93bb6034c4209b6e7915}{FlagStillNotWritten} = \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
-243         \}
-244     \textcolor{keywordflow}{else}\{
-245                 \textcolor{comment}{/* Increment write index in two positions to test if queue is full */}
-246         pQueueControl->\hyperlink{structGQUEUECONTROL_a614237a6b5ee3fca394e40a0274d5b43}{WriteIndex} += 2; 
-247         \hyperlink{gqueue_8c_a070de567ba00fb02d6c480840c15d31d}{gQUEUE\_UnwrapWriteIndex}(pQueueControl);
+240     if(pQueueControl->FlagStillNotWritten == TRUE){
+241         *Index = pQueueControl->WriteIndex;
+242         pQueueControl->FlagStillNotWritten = FALSE;
+243         }
+244     else{
+245                 /* Increment write index in two positions to test if queue is ful
+      l */
+246         pQueueControl->WriteIndex += 2; 
+247         gQUEUE_UnwrapWriteIndex(pQueueControl);
 248         
-249                 \textcolor{keywordflow}{for}(n=0;n<pQueueControl->\hyperlink{structGQUEUECONTROL_a790618cf693d7e4249fec2f5074b40e3}{NReaders};++n)\{    
-250                         \textcolor{keywordflow}{if}(pQueueControl->\hyperlink{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}{ReadIndex}[n] == pQueueControl->
-      \hyperlink{structGQUEUECONTROL_a614237a6b5ee3fca394e40a0274d5b43}{WriteIndex})\{
-251                                 pQueueControl->\hyperlink{structGQUEUECONTROL_a5f54a26afa8554ed2f161b83aba14f5c}{FlagFull}[n] = \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
-252                                 FlagNotFull = \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
-253                         \}
-254                 \}
+249                 for(n=0;n<pQueueControl->NReaders;++n){    
+250                         if(pQueueControl->ReadIndex[n] == pQueueControl->
+      WriteIndex){
+251                                 pQueueControl->FlagFull[n] = TRUE;
+252                                 FlagNotFull = FALSE;
+253                         }
+254                 }
 255 
-256                 \textcolor{comment}{/* Decrement write index of one position to return to the correct state */}
-257         pQueueControl->\hyperlink{structGQUEUECONTROL_a614237a6b5ee3fca394e40a0274d5b43}{WriteIndex} += pQueueControl->\hyperlink{structGQUEUECONTROL_a4db75bcca77dbc6ea7d8d5c3cd3a365f}{Size}-1; 
-258         \hyperlink{gqueue_8c_a070de567ba00fb02d6c480840c15d31d}{gQUEUE\_UnwrapWriteIndex}(pQueueControl);
+256                 /* Decrement write index of one position to return to the correct
+       state */
+257         pQueueControl->WriteIndex += pQueueControl->Size-1; 
+258         gQUEUE_UnwrapWriteIndex(pQueueControl);
 259 
-260                 *Index = pQueueControl->\hyperlink{structGQUEUECONTROL_a614237a6b5ee3fca394e40a0274d5b43}{WriteIndex};
-261     \}
+260                 *Index = pQueueControl->WriteIndex;
+261     }
 262 
-263 \hyperlink{gqueue_8c_a8980cf83b4c1f4b1d693d1c9d2a54535}{END\_ATOMIC}();
+263 END_ATOMIC();
 264 
-265     \textcolor{keywordflow}{return} FlagNotFull;
-266 \}                      
+265     return FlagNotFull;
+266 }                      
 \end{DoxyCode}
 
 
-Here is the call graph for this function\-:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{gqueue_8h_a7324fa957e7713c05cab4eb7993dc2ee_cgraph}
-\end{center}
-\end{figure}
+
+
+Here is the call graph for this function:
 
 
 
+Here is the caller graph for this function:
 
-Here is the caller graph for this function\-:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{gqueue_8h_a7324fa957e7713c05cab4eb7993dc2ee_icgraph}
-\end{center}
-\end{figure}
+\hypertarget{gqueue_8h_abab4c6aeb3d57e43aa16285fe4f59f66}{
+\index{gqueue.h@{gqueue.h}!gQUEUE\_\-UnwrapReadIndex@{gQUEUE\_\-UnwrapReadIndex}}
+\index{gQUEUE\_\-UnwrapReadIndex@{gQUEUE\_\-UnwrapReadIndex}!gqueue.h@{gqueue.h}}
+\subsubsection[{gQUEUE\_\-UnwrapReadIndex}]{\setlength{\rightskip}{0pt plus 5cm}int gQUEUE\_\-UnwrapReadIndex ({\bf PGQUEUECONTROL} {\em pQueueControl}, \/  int {\em NReader})}}
+\label{gqueue_8h_abab4c6aeb3d57e43aa16285fe4f59f66}
 
 
-\hypertarget{gqueue_8h_abab4c6aeb3d57e43aa16285fe4f59f66}{\index{gqueue.\-h@{gqueue.\-h}!g\-Q\-U\-E\-U\-E\-\_\-\-Unwrap\-Read\-Index@{g\-Q\-U\-E\-U\-E\-\_\-\-Unwrap\-Read\-Index}}
-\index{g\-Q\-U\-E\-U\-E\-\_\-\-Unwrap\-Read\-Index@{g\-Q\-U\-E\-U\-E\-\_\-\-Unwrap\-Read\-Index}!gqueue.h@{gqueue.\-h}}
-\subsubsection[{g\-Q\-U\-E\-U\-E\-\_\-\-Unwrap\-Read\-Index}]{\setlength{\rightskip}{0pt plus 5cm}int g\-Q\-U\-E\-U\-E\-\_\-\-Unwrap\-Read\-Index (
-\begin{DoxyParamCaption}
-\item[{{\bf P\-G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L}}]{p\-Queue\-Control, }
-\item[{int}]{N\-Reader}
-\end{DoxyParamCaption}
-)}}\label{gqueue_8h_abab4c6aeb3d57e43aa16285fe4f59f66}
-
-
-Definition at line 277 of file gqueue.\-c.
+Definition at line 277 of file gqueue.c.
 
 
 
-References F\-A\-L\-S\-E, G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L\-::\-N\-Readers, G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L\-::\-Read\-Index, G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L\-::\-Size, and T\-R\-U\-E.
+References FALSE, GQUEUECONTROL::NReaders, GQUEUECONTROL::ReadIndex, GQUEUECONTROL::Size, and TRUE.
 
 
 
-Referenced by g\-Q\-U\-E\-U\-E\-\_\-\-Get\-Read\-Index(), g\-Q\-U\-E\-U\-E\-\_\-\-Request\-Last\-Read\-Index(), and g\-Q\-U\-E\-U\-E\-\_\-\-Request\-Read\-Index().
+Referenced by gQUEUE\_\-GetReadIndex(), gQUEUE\_\-RequestLastReadIndex(), and gQUEUE\_\-RequestReadIndex().
+
+
 
 
 \begin{DoxyCode}
-278 \{
-279         \textcolor{keywordflow}{if}(NReader>=pQueueControl->\hyperlink{structGQUEUECONTROL_a790618cf693d7e4249fec2f5074b40e3}{NReaders})\{
-280                 \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
-281         \}
+278 {
+279         if(NReader>=pQueueControl->NReaders){
+280                 return FALSE;
+281         }
 282 
-283         pQueueControl->\hyperlink{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}{ReadIndex}[NReader] = (pQueueControl->\hyperlink{structGQUEUECONTROL_aed43ab94887b0e203a23877fb26988b6}{ReadIndex}[NReader]) % (
-      pQueueControl->\hyperlink{structGQUEUECONTROL_a4db75bcca77dbc6ea7d8d5c3cd3a365f}{Size}); 
+283         pQueueControl->ReadIndex[NReader] = (pQueueControl->ReadIndex[NReader]) %
+       (pQueueControl->Size); 
 284   
-285         \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
-286 \}                      
+285         return TRUE;
+286 }                      
 \end{DoxyCode}
 
 
-Here is the caller graph for this function\-:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{gqueue_8h_abab4c6aeb3d57e43aa16285fe4f59f66_icgraph}
-\end{center}
-\end{figure}
 
 
-\hypertarget{gqueue_8h_a070de567ba00fb02d6c480840c15d31d}{\index{gqueue.\-h@{gqueue.\-h}!g\-Q\-U\-E\-U\-E\-\_\-\-Unwrap\-Write\-Index@{g\-Q\-U\-E\-U\-E\-\_\-\-Unwrap\-Write\-Index}}
-\index{g\-Q\-U\-E\-U\-E\-\_\-\-Unwrap\-Write\-Index@{g\-Q\-U\-E\-U\-E\-\_\-\-Unwrap\-Write\-Index}!gqueue.h@{gqueue.\-h}}
-\subsubsection[{g\-Q\-U\-E\-U\-E\-\_\-\-Unwrap\-Write\-Index}]{\setlength{\rightskip}{0pt plus 5cm}int g\-Q\-U\-E\-U\-E\-\_\-\-Unwrap\-Write\-Index (
-\begin{DoxyParamCaption}
-\item[{{\bf P\-G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L}}]{p\-Queue\-Control}
-\end{DoxyParamCaption}
-)}}\label{gqueue_8h_a070de567ba00fb02d6c480840c15d31d}
+Here is the caller graph for this function:
+
+\hypertarget{gqueue_8h_a070de567ba00fb02d6c480840c15d31d}{
+\index{gqueue.h@{gqueue.h}!gQUEUE\_\-UnwrapWriteIndex@{gQUEUE\_\-UnwrapWriteIndex}}
+\index{gQUEUE\_\-UnwrapWriteIndex@{gQUEUE\_\-UnwrapWriteIndex}!gqueue.h@{gqueue.h}}
+\subsubsection[{gQUEUE\_\-UnwrapWriteIndex}]{\setlength{\rightskip}{0pt plus 5cm}int gQUEUE\_\-UnwrapWriteIndex ({\bf PGQUEUECONTROL} {\em pQueueControl})}}
+\label{gqueue_8h_a070de567ba00fb02d6c480840c15d31d}
 
 
-Definition at line 297 of file gqueue.\-c.
+Definition at line 297 of file gqueue.c.
 
 
 
-References G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L\-::\-Size, T\-R\-U\-E, and G\-Q\-U\-E\-U\-E\-C\-O\-N\-T\-R\-O\-L\-::\-Write\-Index.
+References GQUEUECONTROL::Size, TRUE, and GQUEUECONTROL::WriteIndex.
 
 
 
-Referenced by g\-Q\-U\-E\-U\-E\-\_\-\-Get\-Write\-Index(), and g\-Q\-U\-E\-U\-E\-\_\-\-Request\-Write\-Index().
+Referenced by gQUEUE\_\-GetWriteIndex(), and gQUEUE\_\-RequestWriteIndex().
+
+
 
 
 \begin{DoxyCode}
-298 \{
-299         pQueueControl->\hyperlink{structGQUEUECONTROL_a614237a6b5ee3fca394e40a0274d5b43}{WriteIndex} = (pQueueControl->\hyperlink{structGQUEUECONTROL_a614237a6b5ee3fca394e40a0274d5b43}{WriteIndex}) % (pQueueControl->
-      \hyperlink{structGQUEUECONTROL_a4db75bcca77dbc6ea7d8d5c3cd3a365f}{Size}); 
+298 {
+299         pQueueControl->WriteIndex = (pQueueControl->WriteIndex) % (pQueueControl-
+      >Size); 
 300         
-301         \textcolor{keywordflow}{return} \hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
-302 \}                      
+301         return TRUE;
+302 }                      
 \end{DoxyCode}
 
 
-Here is the caller graph for this function\-:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{gqueue_8h_a070de567ba00fb02d6c480840c15d31d_icgraph}
-\end{center}
-\end{figure}
 
+
+Here is the caller graph for this function:
 

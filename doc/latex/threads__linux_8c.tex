@@ -1,73 +1,67 @@
-\hypertarget{threads__linux_8c}{\section{threads\-\_\-linux.\-c File Reference}
-\label{threads__linux_8c}\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}}
+\hypertarget{threads__linux_8c}{
+\section{threads\_\-linux.c File Reference}
+\label{threads__linux_8c}\index{threads\_\-linux.c@{threads\_\-linux.c}}
 }
-{\ttfamily \#include $<$stdio.\-h$>$}\\*
-{\ttfamily \#include $<$stdlib.\-h$>$}\\*
-{\ttfamily \#include $<$unistd.\-h$>$}\\*
-{\ttfamily \#include $<$signal.\-h$>$}\\*
-{\ttfamily \#include $<$string.\-h$>$}\\*
-{\ttfamily \#include $<$time.\-h$>$}\\*
-{\ttfamily \#include $<$sys/time.\-h$>$}\\*
-{\ttfamily \#include \char`\"{}gmatrix.\-h\char`\"{}}\\*
-{\ttfamily \#include \char`\"{}imu.\-h\char`\"{}}\\*
-{\ttfamily \#include \char`\"{}magnetometer.\-h\char`\"{}}\\*
-{\ttfamily \#include \char`\"{}gps.\-h\char`\"{}}\\*
-{\ttfamily \#include \char`\"{}sonar.\-h\char`\"{}}\\*
-{\ttfamily \#include \char`\"{}sensors.\-h\char`\"{}}\\*
-{\ttfamily \#include \char`\"{}calibration.\-h\char`\"{}}\\*
-{\ttfamily \#include \char`\"{}protocol.\-h\char`\"{}}\\*
-{\ttfamily \#include \char`\"{}estimation.\-h\char`\"{}}\\*
-{\ttfamily \#include \char`\"{}control.\-h\char`\"{}}\\*
-{\ttfamily \#include \char`\"{}datalogger.\-h\char`\"{}}\\*
-{\ttfamily \#include \char`\"{}ui.\-h\char`\"{}}\\*
-{\ttfamily \#include \char`\"{}mavlink\-\_\-module.\-h\char`\"{}}\\*
-{\ttfamily \#include \char`\"{}threads\-\_\-linux.\-h\char`\"{}}\\*
-Include dependency graph for threads\-\_\-linux.\-c\-:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{threads__linux_8c__incl}
-\end{center}
-\end{figure}
-\subsection*{Macros}
+{\ttfamily \#include $<$stdio.h$>$}\par
+{\ttfamily \#include $<$stdlib.h$>$}\par
+{\ttfamily \#include $<$unistd.h$>$}\par
+{\ttfamily \#include $<$signal.h$>$}\par
+{\ttfamily \#include $<$string.h$>$}\par
+{\ttfamily \#include $<$time.h$>$}\par
+{\ttfamily \#include $<$sys/time.h$>$}\par
+{\ttfamily \#include \char`\"{}gmatrix.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}imu.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}magnetometer.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}gps.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}sonar.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}sensors.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}calibration.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}protocol.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}estimation.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}control.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}datalogger.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}ui.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}mavlink\_\-module.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}threads\_\-linux.h\char`\"{}}\par
+Include dependency graph for threads\_\-linux.c:\subsection*{Defines}
 \begin{DoxyCompactItemize}
 \item 
-\#define \hyperlink{threads__linux_8c_a95fe7f7d25a81aabd1194bac017074d8}{T\-A\-S\-K1\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-U\-S}~20000
+\#define \hyperlink{threads__linux_8c_a95fe7f7d25a81aabd1194bac017074d8}{TASK1\_\-PERIOD\_\-US}~20000
 \item 
-\#define \hyperlink{threads__linux_8c_adfe9b03db41d576a3beb124ec44a54d8}{T\-A\-S\-K2\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-U\-S}~100000
+\#define \hyperlink{threads__linux_8c_adfe9b03db41d576a3beb124ec44a54d8}{TASK2\_\-PERIOD\_\-US}~100000
 \end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{threads__linux_8c_a86f471cf8f5e7b5242fa6b68589335a9}{threads\-\_\-linux\-\_\-timer\-\_\-task\-\_\-1} (union sigval sigval)
+void \hyperlink{threads__linux_8c_a86f471cf8f5e7b5242fa6b68589335a9}{threads\_\-linux\_\-timer\_\-task\_\-1} (union sigval sigval)
 \item 
-void \hyperlink{threads__linux_8c_aaff43cd760c084d80d045228b46fe784}{threads\-\_\-linux\-\_\-timer\-\_\-task\-\_\-2} (union sigval sigval)
+void \hyperlink{threads__linux_8c_aaff43cd760c084d80d045228b46fe784}{threads\_\-linux\_\-timer\_\-task\_\-2} (union sigval sigval)
 \item 
-int \hyperlink{threads__linux_8c_aff9795d781d7b334d45539707a641c23}{threads\-\_\-linux\-\_\-init} (void)
+int \hyperlink{threads__linux_8c_aff9795d781d7b334d45539707a641c23}{threads\_\-linux\_\-init} (void)
 \item 
-int \hyperlink{threads__linux_8c_a2e381152046e690e7264c1a479071048}{threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-1} (void)
+int \hyperlink{threads__linux_8c_a2e381152046e690e7264c1a479071048}{threads\_\-linux\_\-periodic\_\-task\_\-1} (void)
 \item 
-int \hyperlink{threads__linux_8c_ad535241b6b29d076beb2cd75a880aaea}{threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-2} (void)
+int \hyperlink{threads__linux_8c_ad535241b6b29d076beb2cd75a880aaea}{threads\_\-linux\_\-periodic\_\-task\_\-2} (void)
 \item 
-void \hyperlink{threads__linux_8c_a86f471cf8f5e7b5242fa6b68589335a9}{threads\-\_\-linux\-\_\-timer\-\_\-task\-\_\-1} (union sigval sigval)
+void \hyperlink{threads__linux_8c_a86f471cf8f5e7b5242fa6b68589335a9}{threads\_\-linux\_\-timer\_\-task\_\-1} (union sigval sigval)
 \item 
-void \hyperlink{threads__linux_8c_aaff43cd760c084d80d045228b46fe784}{threads\-\_\-linux\-\_\-timer\-\_\-task\-\_\-2} (union sigval sigval)
+void \hyperlink{threads__linux_8c_aaff43cd760c084d80d045228b46fe784}{threads\_\-linux\_\-timer\_\-task\_\-2} (union sigval sigval)
 \item 
-void \hyperlink{threads__linux_8c_a923a30158ef342937317b179dcb6d0fb}{threads\-\_\-linux\-\_\-timer\-\_\-start\-\_\-task\-\_\-1} (void)
+void \hyperlink{threads__linux_8c_a923a30158ef342937317b179dcb6d0fb}{threads\_\-linux\_\-timer\_\-start\_\-task\_\-1} (void)
 \item 
-void \hyperlink{threads__linux_8c_a59d6f60b682f360c3759cefad7ad2a4e}{threads\-\_\-linux\-\_\-timer\-\_\-start\-\_\-task\-\_\-2} (void)
+void \hyperlink{threads__linux_8c_a59d6f60b682f360c3759cefad7ad2a4e}{threads\_\-linux\_\-timer\_\-start\_\-task\_\-2} (void)
 \item 
-void \hyperlink{threads__linux_8c_a928ae9705d888293ed43a8109789716a}{threads\-\_\-linux\-\_\-timer\-\_\-stop\-\_\-task\-\_\-1} (void)
+void \hyperlink{threads__linux_8c_a928ae9705d888293ed43a8109789716a}{threads\_\-linux\_\-timer\_\-stop\_\-task\_\-1} (void)
 \item 
-void \hyperlink{threads__linux_8c_a78eb56e9ece1f0050dda425824fb6a71}{threads\-\_\-linux\-\_\-timer\-\_\-stop\-\_\-task\-\_\-2} (void)
+void \hyperlink{threads__linux_8c_a78eb56e9ece1f0050dda425824fb6a71}{threads\_\-linux\_\-timer\_\-stop\_\-task\_\-2} (void)
 \item 
-void \hyperlink{threads__linux_8c_ae03c8e3e8ea1514e4e7ca2005777e6f3}{threads\-\_\-linux\-\_\-timer\-\_\-function\-\_\-task\-\_\-1} (void)
+void \hyperlink{threads__linux_8c_ae03c8e3e8ea1514e4e7ca2005777e6f3}{threads\_\-linux\_\-timer\_\-function\_\-task\_\-1} (void)
 \item 
-void \hyperlink{threads__linux_8c_aa65173deca09202aea0f4a81a166545b}{threads\-\_\-linux\-\_\-timer\-\_\-function\-\_\-task\-\_\-2} (void)
+void \hyperlink{threads__linux_8c_aa65173deca09202aea0f4a81a166545b}{threads\_\-linux\_\-timer\_\-function\_\-task\_\-2} (void)
 \item 
-int \hyperlink{threads__linux_8c_a5ba2e82998677ad5d27022cc793583ec}{threads\-\_\-reset\-\_\-timer} (void)
+int \hyperlink{threads__linux_8c_a5ba2e82998677ad5d27022cc793583ec}{threads\_\-reset\_\-timer} (void)
 \item 
-int \hyperlink{threads__linux_8c_ae5690e0b5f0c81c9c9784bc05e204628}{threads\-\_\-get\-\_\-time} (double $\ast$time\-\_\-control\-\_\-task\-\_\-s, double $\ast$Ts\-\_\-control\-\_\-task\-\_\-s, double $\ast$mean\-\_\-time\-\_\-control\-\_\-task\-\_\-s, double $\ast$t0\-\_\-control\-\_\-task\-\_\-s)
+int \hyperlink{threads__linux_8c_ae5690e0b5f0c81c9c9784bc05e204628}{threads\_\-get\_\-time} (double $\ast$time\_\-control\_\-task\_\-s, double $\ast$Ts\_\-control\_\-task\_\-s, double $\ast$mean\_\-time\_\-control\_\-task\_\-s, double $\ast$t0\_\-control\_\-task\_\-s)
 \end{DoxyCompactItemize}
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
@@ -78,1549 +72,1464 @@ int \hyperlink{threads__linux_8c_ac7af894858cf396a219d632f40afdc8d}{total} = 0
 \item 
 int \hyperlink{threads__linux_8c_a4f35e5ea2395561d0bd3b2f45612dc2c}{failure} = 0
 \item 
-timer\-\_\-t \hyperlink{threads__linux_8c_a904a157c5d5f94416cd450f511635af1}{timer\-\_\-task\-\_\-1}
+timer\_\-t \hyperlink{threads__linux_8c_a904a157c5d5f94416cd450f511635af1}{timer\_\-task\_\-1}
 \item 
-volatile double \hyperlink{threads__linux_8c_a2a2a647912528f7aa86812528dbfe02f}{t\-\_\-task\-\_\-1\-\_\-global} = 0.\-0
+volatile double \hyperlink{threads__linux_8c_a2a2a647912528f7aa86812528dbfe02f}{t\_\-task\_\-1\_\-global} = 0.0
 \item 
-volatile double \hyperlink{threads__linux_8c_acdaa4a9b0e1be3dfa53b52df6410ad3b}{T\-\_\-task\-\_\-1\-\_\-exec\-\_\-global} = 0.\-0
+volatile double \hyperlink{threads__linux_8c_acdaa4a9b0e1be3dfa53b52df6410ad3b}{T\_\-task\_\-1\_\-exec\_\-global} = 0.0
 \item 
-volatile double \hyperlink{threads__linux_8c_a738c330c86a365e72ce29ebca3f1e572}{T\-\_\-task\-\_\-1\-\_\-mean\-\_\-global} = 0.\-0
+volatile double \hyperlink{threads__linux_8c_a738c330c86a365e72ce29ebca3f1e572}{T\_\-task\_\-1\_\-mean\_\-global} = 0.0
 \item 
-volatile double \hyperlink{threads__linux_8c_a86222e255aeeb47598a4fc91ab6c2b1a}{T\-\_\-task\-\_\-1\-\_\-min\-\_\-global} = 0.\-0
+volatile double \hyperlink{threads__linux_8c_a86222e255aeeb47598a4fc91ab6c2b1a}{T\_\-task\_\-1\_\-min\_\-global} = 0.0
 \item 
-volatile double \hyperlink{threads__linux_8c_aa714e30d738039b5bf665742beb31739}{T\-\_\-task\-\_\-1\-\_\-max\-\_\-global} = 0.\-0
+volatile double \hyperlink{threads__linux_8c_aa714e30d738039b5bf665742beb31739}{T\_\-task\_\-1\_\-max\_\-global} = 0.0
 \item 
-volatile int \hyperlink{threads__linux_8c_afffc21b0b726e6f4a572d0eefd3b5d69}{task\-\_\-1\-\_\-period\-\_\-us} = \hyperlink{threads__linux_8c_a95fe7f7d25a81aabd1194bac017074d8}{T\-A\-S\-K1\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-U\-S}
+volatile int \hyperlink{threads__linux_8c_afffc21b0b726e6f4a572d0eefd3b5d69}{task\_\-1\_\-period\_\-us} = TASK1\_\-PERIOD\_\-US
 \item 
-volatile int \hyperlink{threads__linux_8c_a764ebf75ba887a9ecf7bf8fe124960e0}{flag\-\_\-task\-\_\-1\-\_\-firstexecution} = 1
+volatile int \hyperlink{threads__linux_8c_a764ebf75ba887a9ecf7bf8fe124960e0}{flag\_\-task\_\-1\_\-firstexecution} = 1
 \item 
-volatile double \hyperlink{threads__linux_8c_a86c2efd6da48b362806cdbb5b1e711d8}{t0} = 0.\-0
+volatile double \hyperlink{threads__linux_8c_a86c2efd6da48b362806cdbb5b1e711d8}{t0} = 0.0
 \item 
-timer\-\_\-t \hyperlink{threads__linux_8c_adf6e8e22925f399f086dea8671f39c08}{timer\-\_\-task\-\_\-2}
+timer\_\-t \hyperlink{threads__linux_8c_adf6e8e22925f399f086dea8671f39c08}{timer\_\-task\_\-2}
 \item 
-volatile double \hyperlink{threads__linux_8c_a08f794ff34d918d3d34d771e11e4aba3}{t\-\_\-task\-\_\-2\-\_\-global} = 0.\-0
+volatile double \hyperlink{threads__linux_8c_a08f794ff34d918d3d34d771e11e4aba3}{t\_\-task\_\-2\_\-global} = 0.0
 \item 
-volatile double \hyperlink{threads__linux_8c_a9629c77cd3dba9d47d15c2e51bdde09d}{T\-\_\-task\-\_\-2\-\_\-exec\-\_\-global} = 0.\-0
+volatile double \hyperlink{threads__linux_8c_a9629c77cd3dba9d47d15c2e51bdde09d}{T\_\-task\_\-2\_\-exec\_\-global} = 0.0
 \item 
-volatile double \hyperlink{threads__linux_8c_af4e19d5a9b24aa56c8ebff6ad1aa2b95}{T\-\_\-task\-\_\-2\-\_\-mean\-\_\-global} = 0.\-0
+volatile double \hyperlink{threads__linux_8c_af4e19d5a9b24aa56c8ebff6ad1aa2b95}{T\_\-task\_\-2\_\-mean\_\-global} = 0.0
 \item 
-volatile double \hyperlink{threads__linux_8c_ab7712cb13ce6206dd138a51e2053e36c}{T\-\_\-task\-\_\-2\-\_\-min\-\_\-global} = 0.\-0
+volatile double \hyperlink{threads__linux_8c_ab7712cb13ce6206dd138a51e2053e36c}{T\_\-task\_\-2\_\-min\_\-global} = 0.0
 \item 
-volatile double \hyperlink{threads__linux_8c_a1cd82006c46f46176730e876d272cc14}{T\-\_\-task\-\_\-2\-\_\-max\-\_\-global} = 0.\-0
+volatile double \hyperlink{threads__linux_8c_a1cd82006c46f46176730e876d272cc14}{T\_\-task\_\-2\_\-max\_\-global} = 0.0
 \item 
-volatile int \hyperlink{threads__linux_8c_a5166d431d5448a1538e75f5469c19c7b}{task\-\_\-2\-\_\-period\-\_\-us} = \hyperlink{threads__linux_8c_adfe9b03db41d576a3beb124ec44a54d8}{T\-A\-S\-K2\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-U\-S}
+volatile int \hyperlink{threads__linux_8c_a5166d431d5448a1538e75f5469c19c7b}{task\_\-2\_\-period\_\-us} = TASK2\_\-PERIOD\_\-US
 \item 
-volatile int \hyperlink{threads__linux_8c_a60e039269ae4a130db1bdbc4a709c437}{flag\-\_\-task\-\_\-2\-\_\-firstexecution} = 1
+volatile int \hyperlink{threads__linux_8c_a60e039269ae4a130db1bdbc4a709c437}{flag\_\-task\_\-2\_\-firstexecution} = 1
 \item 
-unsigned int \hyperlink{threads__linux_8c_a5045187bb0afe92c41ce73bc602fd3ca}{telemetry\-\_\-mode} = \hyperlink{ui_8h_a5f863c47136ccbe4db74101b9a3e83ca}{U\-I\-\_\-\-N\-C\-U\-R\-S\-E\-S\-\_\-\-M\-O\-D\-E}
+unsigned int \hyperlink{threads__linux_8c_a5045187bb0afe92c41ce73bc602fd3ca}{telemetry\_\-mode} = UI\_\-NCURSES\_\-MODE
 \item 
-B\-A\-T\-T\-E\-R\-Y\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T \hyperlink{threads__linux_8c_a6e03a1c8574304386184af6cad0187a3}{battery\-\_\-data}
+BATTERY\_\-DATA\_\-STRUCT \hyperlink{threads__linux_8c_a6e03a1c8574304386184af6cad0187a3}{battery\_\-data}
 \item 
-G\-P\-S\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T \hyperlink{threads__linux_8c_a59e6bf03b78dd52adc07051320f6b954}{gps\-\_\-data}
+GPS\_\-DATA\_\-STRUCT \hyperlink{threads__linux_8c_a59e6bf03b78dd52adc07051320f6b954}{gps\_\-data}
 \item 
-\hyperlink{structIMU__DATA__STRUCT}{I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} \hyperlink{threads__linux_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\-\_\-data}
+\hyperlink{structIMU__DATA__STRUCT}{IMU\_\-DATA\_\-STRUCT} \hyperlink{threads__linux_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\_\-data}
 \item 
-P\-I\-T\-O\-T\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T \hyperlink{threads__linux_8c_a85a1e7d1f5cb0855de5c10c7da917e99}{pitot\-\_\-data}
+PITOT\_\-DATA\_\-STRUCT \hyperlink{threads__linux_8c_a85a1e7d1f5cb0855de5c10c7da917e99}{pitot\_\-data}
 \item 
-P\-W\-M\-\_\-\-R\-E\-A\-D\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T \hyperlink{threads__linux_8c_a47c600b0bafcb86f18d675174d1ff92b}{pwm\-\_\-read\-\_\-data}
+PWM\_\-READ\_\-DATA\_\-STRUCT \hyperlink{threads__linux_8c_a47c600b0bafcb86f18d675174d1ff92b}{pwm\_\-read\_\-data}
 \item 
-P\-W\-M\-\_\-\-W\-R\-I\-T\-E\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T \hyperlink{threads__linux_8c_ad8b6331e520d1bd524e2dc9053510fc2}{pwm\-\_\-write\-\_\-data}
+PWM\_\-WRITE\_\-DATA\_\-STRUCT \hyperlink{threads__linux_8c_ad8b6331e520d1bd524e2dc9053510fc2}{pwm\_\-write\_\-data}
 \item 
-S\-C\-P1000\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T \hyperlink{threads__linux_8c_a014e3c8e54ea93cd94fd3fef569125f8}{scp1000\-\_\-data}
+SCP1000\_\-DATA\_\-STRUCT \hyperlink{threads__linux_8c_a014e3c8e54ea93cd94fd3fef569125f8}{scp1000\_\-data}
 \item 
-S\-O\-N\-A\-R\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T \hyperlink{threads__linux_8c_aafb5fffcd42c3ad4ad9768df45a1a0b5}{sonar\-\_\-data}
+SONAR\_\-DATA\_\-STRUCT \hyperlink{threads__linux_8c_aafb5fffcd42c3ad4ad9768df45a1a0b5}{sonar\_\-data}
 \item 
-G\-P\-S\-M\-E\-A\-S\-U\-R\-E \hyperlink{threads__linux_8c_a5daa6ca8c168d5e8e73b14d96d6e148d}{gps\-\_\-measure}
+GPSMEASURE \hyperlink{threads__linux_8c_a5daa6ca8c168d5e8e73b14d96d6e148d}{gps\_\-measure}
 \item 
-I\-M\-U\-M\-E\-A\-S\-U\-R\-E \hyperlink{threads__linux_8c_aa5c997a268f9020148799d654d48dc14}{imu\-\_\-measure}
+IMUMEASURE \hyperlink{threads__linux_8c_aa5c997a268f9020148799d654d48dc14}{imu\_\-measure}
 \item 
-M\-A\-G\-N\-E\-T\-O\-M\-E\-T\-E\-R\-M\-E\-A\-S\-U\-R\-E \hyperlink{threads__linux_8c_a495506ba39b5cc85a3d4eee9b441fea4}{magnetometer\-\_\-measure}
+MAGNETOMETERMEASURE \hyperlink{threads__linux_8c_a495506ba39b5cc85a3d4eee9b441fea4}{magnetometer\_\-measure}
 \item 
-S\-O\-N\-A\-R\-M\-E\-A\-S\-U\-R\-E \hyperlink{threads__linux_8c_a5fe7e1a4ef5e77fabd20272e2f5e5381}{sonar\-\_\-measure}
+SONARMEASURE \hyperlink{threads__linux_8c_a5fe7e1a4ef5e77fabd20272e2f5e5381}{sonar\_\-measure}
 \item 
-C\-A\-L\-I\-B\-R\-A\-T\-I\-O\-N\-\_\-\-A\-L\-T\-I\-M\-E\-T\-E\-R\-\_\-\-S\-T\-R\-U\-C\-T \hyperlink{threads__linux_8c_a54474abecc241cd0ed5dd0a3b7f42a72}{calibration\-\_\-altimeter\-\_\-data}
+CALIBRATION\_\-ALTIMETER\_\-STRUCT \hyperlink{threads__linux_8c_a54474abecc241cd0ed5dd0a3b7f42a72}{calibration\_\-altimeter\_\-data}
 \item 
-C\-A\-L\-I\-B\-R\-A\-T\-I\-O\-N\-\_\-\-L\-O\-C\-A\-L\-\_\-\-C\-O\-O\-R\-D\-I\-N\-A\-T\-E\-\_\-\-S\-Y\-S\-T\-E\-M\-\_\-\-S\-T\-R\-U\-C\-T \hyperlink{threads__linux_8c_a6409aa72713a8e9cbecf43c9e6b4ef5f}{calibration\-\_\-local\-\_\-coordinate\-\_\-system\-\_\-data}
+CALIBRATION\_\-LOCAL\_\-COORDINATE\_\-SYSTEM\_\-STRUCT \hyperlink{threads__linux_8c_a6409aa72713a8e9cbecf43c9e6b4ef5f}{calibration\_\-local\_\-coordinate\_\-system\_\-data}
 \item 
-C\-A\-L\-I\-B\-R\-A\-T\-I\-O\-N\-\_\-\-L\-O\-C\-A\-L\-\_\-\-F\-I\-E\-L\-D\-S\-\_\-\-S\-T\-R\-U\-C\-T \hyperlink{threads__linux_8c_a520f88fc1d70b3ce27e0f9a3d9c6c2df}{calibration\-\_\-local\-\_\-fields\-\_\-data}
+CALIBRATION\_\-LOCAL\_\-FIELDS\_\-STRUCT \hyperlink{threads__linux_8c_a520f88fc1d70b3ce27e0f9a3d9c6c2df}{calibration\_\-local\_\-fields\_\-data}
 \item 
-E\-S\-T\-I\-M\-A\-T\-I\-O\-N\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T \hyperlink{threads__linux_8c_a65f14449a63da2de58fd36ac32df7f96}{estimation\-\_\-data}
+ESTIMATION\_\-DATA\_\-STRUCT \hyperlink{threads__linux_8c_a65f14449a63da2de58fd36ac32df7f96}{estimation\_\-data}
 \item 
-C\-O\-N\-T\-R\-O\-L\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T \hyperlink{threads__linux_8c_aff494a26c79d58504615f0502cfa8f31}{control\-\_\-data}
+CONTROL\_\-DATA\_\-STRUCT \hyperlink{threads__linux_8c_aff494a26c79d58504615f0502cfa8f31}{control\_\-data}
 \end{DoxyCompactItemize}
 
 
-\subsection{Macro Definition Documentation}
-\hypertarget{threads__linux_8c_a95fe7f7d25a81aabd1194bac017074d8}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!T\-A\-S\-K1\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-U\-S@{T\-A\-S\-K1\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-U\-S}}
-\index{T\-A\-S\-K1\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-U\-S@{T\-A\-S\-K1\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-U\-S}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{T\-A\-S\-K1\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-U\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-A\-S\-K1\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-U\-S~20000}}\label{threads__linux_8c_a95fe7f7d25a81aabd1194bac017074d8}
+\subsection{Define Documentation}
+\hypertarget{threads__linux_8c_a95fe7f7d25a81aabd1194bac017074d8}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!TASK1\_\-PERIOD\_\-US@{TASK1\_\-PERIOD\_\-US}}
+\index{TASK1\_\-PERIOD\_\-US@{TASK1\_\-PERIOD\_\-US}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{TASK1\_\-PERIOD\_\-US}]{\setlength{\rightskip}{0pt plus 5cm}\#define TASK1\_\-PERIOD\_\-US~20000}}
+\label{threads__linux_8c_a95fe7f7d25a81aabd1194bac017074d8}
 
 
-Definition at line 32 of file threads\-\_\-linux.\-c.
+Definition at line 32 of file threads\_\-linux.c.
+
+\hypertarget{threads__linux_8c_adfe9b03db41d576a3beb124ec44a54d8}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!TASK2\_\-PERIOD\_\-US@{TASK2\_\-PERIOD\_\-US}}
+\index{TASK2\_\-PERIOD\_\-US@{TASK2\_\-PERIOD\_\-US}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{TASK2\_\-PERIOD\_\-US}]{\setlength{\rightskip}{0pt plus 5cm}\#define TASK2\_\-PERIOD\_\-US~100000}}
+\label{threads__linux_8c_adfe9b03db41d576a3beb124ec44a54d8}
 
 
-
-Referenced by threads\-\_\-linux\-\_\-init().
-
-\hypertarget{threads__linux_8c_adfe9b03db41d576a3beb124ec44a54d8}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!T\-A\-S\-K2\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-U\-S@{T\-A\-S\-K2\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-U\-S}}
-\index{T\-A\-S\-K2\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-U\-S@{T\-A\-S\-K2\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-U\-S}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{T\-A\-S\-K2\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-U\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-A\-S\-K2\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-U\-S~100000}}\label{threads__linux_8c_adfe9b03db41d576a3beb124ec44a54d8}
-
-
-Definition at line 33 of file threads\-\_\-linux.\-c.
-
-
-
-Referenced by threads\-\_\-linux\-\_\-init().
+Definition at line 33 of file threads\_\-linux.c.
 
 
 
 \subsection{Function Documentation}
-\hypertarget{threads__linux_8c_ae5690e0b5f0c81c9c9784bc05e204628}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!threads\-\_\-get\-\_\-time@{threads\-\_\-get\-\_\-time}}
-\index{threads\-\_\-get\-\_\-time@{threads\-\_\-get\-\_\-time}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{threads\-\_\-get\-\_\-time}]{\setlength{\rightskip}{0pt plus 5cm}int threads\-\_\-get\-\_\-time (
-\begin{DoxyParamCaption}
-\item[{double $\ast$}]{time\-\_\-control\-\_\-task\-\_\-s, }
-\item[{double $\ast$}]{Ts\-\_\-control\-\_\-task\-\_\-s, }
-\item[{double $\ast$}]{mean\-\_\-time\-\_\-control\-\_\-task\-\_\-s, }
-\item[{double $\ast$}]{t0\-\_\-control\-\_\-task\-\_\-s}
-\end{DoxyParamCaption}
-)}}\label{threads__linux_8c_ae5690e0b5f0c81c9c9784bc05e204628}
+\hypertarget{threads__linux_8c_ae5690e0b5f0c81c9c9784bc05e204628}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!threads\_\-get\_\-time@{threads\_\-get\_\-time}}
+\index{threads\_\-get\_\-time@{threads\_\-get\_\-time}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{threads\_\-get\_\-time}]{\setlength{\rightskip}{0pt plus 5cm}int threads\_\-get\_\-time (double $\ast$ {\em time\_\-control\_\-task\_\-s}, \/  double $\ast$ {\em Ts\_\-control\_\-task\_\-s}, \/  double $\ast$ {\em mean\_\-time\_\-control\_\-task\_\-s}, \/  double $\ast$ {\em t0\_\-control\_\-task\_\-s})}}
+\label{threads__linux_8c_ae5690e0b5f0c81c9c9784bc05e204628}
 
 
-Definition at line 576 of file threads\-\_\-linux.\-c.
+Definition at line 576 of file threads\_\-linux.c.
 
 
 
-References t0, t\-\_\-task\-\_\-1\-\_\-global, T\-\_\-task\-\_\-1\-\_\-mean\-\_\-global, and task\-\_\-1\-\_\-period\-\_\-us.
+References t0, t\_\-task\_\-1\_\-global, T\_\-task\_\-1\_\-mean\_\-global, and task\_\-1\_\-period\_\-us.
+
+
 
 
 \begin{DoxyCode}
-577 \{
-578     *time\_control\_task\_s = \hyperlink{main2_8c_a2a2a647912528f7aa86812528dbfe02f}{t\_task\_1\_global};
-579     *Ts\_control\_task\_s = \hyperlink{main2_8c_afffc21b0b726e6f4a572d0eefd3b5d69}{task\_1\_period\_us}/1e6;
-580     *mean\_time\_control\_task\_s = \hyperlink{main2_8c_a738c330c86a365e72ce29ebca3f1e572}{T\_task\_1\_mean\_global};
-581     *t0\_control\_task\_s = \hyperlink{main2_8c_a86c2efd6da48b362806cdbb5b1e711d8}{t0};
-582     \textcolor{keywordflow}{return} THREADS\_LINUX\_SUCCESS;
-583 \}
+577 {
+578     *time_control_task_s = t_task_1_global;
+579     *Ts_control_task_s = task_1_period_us/1e6;
+580     *mean_time_control_task_s = T_task_1_mean_global;
+581     *t0_control_task_s = t0;
+582     return THREADS_LINUX_SUCCESS;
+583 }
 \end{DoxyCode}
-\hypertarget{threads__linux_8c_aff9795d781d7b334d45539707a641c23}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!threads\-\_\-linux\-\_\-init@{threads\-\_\-linux\-\_\-init}}
-\index{threads\-\_\-linux\-\_\-init@{threads\-\_\-linux\-\_\-init}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{threads\-\_\-linux\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}int threads\-\_\-linux\-\_\-init (
-\begin{DoxyParamCaption}
-\item[{void}]{}
-\end{DoxyParamCaption}
-)}}\label{threads__linux_8c_aff9795d781d7b334d45539707a641c23}
 
 
-Definition at line 94 of file threads\-\_\-linux.\-c.
+\hypertarget{threads__linux_8c_aff9795d781d7b334d45539707a641c23}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!threads\_\-linux\_\-init@{threads\_\-linux\_\-init}}
+\index{threads\_\-linux\_\-init@{threads\_\-linux\_\-init}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{threads\_\-linux\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}int threads\_\-linux\_\-init (void)}}
+\label{threads__linux_8c_aff9795d781d7b334d45539707a641c23}
+
+
+Definition at line 94 of file threads\_\-linux.c.
 
 
 
-References battery\-\_\-data, calibration\-\_\-altimeter\-\_\-data, calibration\-\_\-local\-\_\-coordinate\-\_\-system\-\_\-data, calibration\-\_\-local\-\_\-fields\-\_\-data, control\-\_\-data, datalogger\-\_\-close(), datalogger\-\_\-init(), D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-R\-U\-N\-N\-I\-N\-G, datalogger\-\_\-status(), D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S, datalogger\-\_\-update\-\_\-\-I\-P\-C(), datalogger\-\_\-write\-\_\-file(), estimation\-\_\-data, gps\-\_\-data, gps\-\_\-measure, imu\-\_\-measure, magnetometer\-\_\-measure, pitot\-\_\-data, pwm\-\_\-read\-\_\-data, pwm\-\_\-write\-\_\-data, quittask, scp1000\-\_\-data, sonar\-\_\-data, sonar\-\_\-measure, status, T\-A\-S\-K1\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-U\-S, T\-A\-S\-K2\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-U\-S, task\-\_\-1\-\_\-period\-\_\-us, threads\-\_\-linux\-\_\-timer\-\_\-start\-\_\-task\-\_\-1(), threads\-\_\-linux\-\_\-timer\-\_\-start\-\_\-task\-\_\-2(), threads\-\_\-linux\-\_\-timer\-\_\-stop\-\_\-task\-\_\-1(), threads\-\_\-linux\-\_\-timer\-\_\-stop\-\_\-task\-\_\-2(), ui\-\_\-close(), and ui\-\_\-init().
+References battery\_\-data, calibration\_\-altimeter\_\-data, calibration\_\-local\_\-coordinate\_\-system\_\-data, calibration\_\-local\_\-fields\_\-data, control\_\-data, datalogger\_\-close(), datalogger\_\-init(), DATALOGGER\_\-RUNNING, datalogger\_\-status(), DATALOGGER\_\-SUCCESS, datalogger\_\-update\_\-IPC(), datalogger\_\-write\_\-file(), estimation\_\-data, gps\_\-data, gps\_\-measure, imu\_\-measure, magnetometer\_\-measure, pitot\_\-data, pwm\_\-read\_\-data, pwm\_\-write\_\-data, quittask, scp1000\_\-data, sonar\_\-data, sonar\_\-measure, status, TASK1\_\-PERIOD\_\-US, TASK2\_\-PERIOD\_\-US, task\_\-1\_\-period\_\-us, threads\_\-linux\_\-timer\_\-start\_\-task\_\-1(), threads\_\-linux\_\-timer\_\-start\_\-task\_\-2(), threads\_\-linux\_\-timer\_\-stop\_\-task\_\-1(), threads\_\-linux\_\-timer\_\-stop\_\-task\_\-2(), ui\_\-close(), and ui\_\-init().
+
+
 
 
 \begin{DoxyCode}
-95 \{
-96     \textcolor{keywordtype}{int} \hyperlink{communication_2communication_8c_a6e27f49150e9a14580fb313cc2777e00}{status} = 0;
-97     \textcolor{keywordtype}{int} n = 0;
-98     \textcolor{keywordtype}{int} return\_value = THREADS\_LINUX\_SUCCESS;
+95 {
+96     int status = 0;
+97     int n = 0;
+98     int return_value = THREADS_LINUX_SUCCESS;
 99 
-100     \textcolor{comment}{// Init data}
-101     status = sensors\_init(&\hyperlink{threads__linux_8c_a6e03a1c8574304386184af6cad0187a3}{battery\_data}, &\hyperlink{threads__linux_8c_a59e6bf03b78dd52adc07051320f6b954}{gps\_data}, &
-      \hyperlink{main_8c_a0f81e5b5621e6e2b2467daa7d12268c4}{imu\_data}, &\hyperlink{threads__linux_8c_a85a1e7d1f5cb0855de5c10c7da917e99}{pitot\_data}, &\hyperlink{threads__linux_8c_a47c600b0bafcb86f18d675174d1ff92b}{pwm\_read\_data}, &
-      \hyperlink{threads__linux_8c_ad8b6331e520d1bd524e2dc9053510fc2}{pwm\_write\_data}, &\hyperlink{threads__linux_8c_a014e3c8e54ea93cd94fd3fef569125f8}{scp1000\_data}, &\hyperlink{threads__linux_8c_aafb5fffcd42c3ad4ad9768df45a1a0b5}{sonar\_data});
-102     \textcolor{keywordflow}{if}(status != SENSORS\_SUCCESS)
-103     \{
-104         return\_value = THREADS\_LINUX\_FAILURE;
-105     \}
+100     // Init data
+101     status = sensors_init(&battery_data, &gps_data, &imu_data, &pitot_data, &
+      pwm_read_data, &pwm_write_data, &scp1000_data, &sonar_data);
+102     if(status != SENSORS_SUCCESS)
+103     {
+104         return_value = THREADS_LINUX_FAILURE;
+105     }
 106 
-107     \textcolor{keywordflow}{if}(return\_value != THREADS\_LINUX\_FAILURE)
-108     \{
-109         status = calibration\_init(&\hyperlink{threads__linux_8c_a6409aa72713a8e9cbecf43c9e6b4ef5f}{calibration\_local\_coordinate\_system\_data}
-      , &\hyperlink{threads__linux_8c_a520f88fc1d70b3ce27e0f9a3d9c6c2df}{calibration\_local\_fields\_data}, &
-      \hyperlink{threads__linux_8c_a54474abecc241cd0ed5dd0a3b7f42a72}{calibration\_altimeter\_data});
-110         \textcolor{keywordflow}{if}(status != CALIBRATION\_SUCCESS)
-111         \{
-112             return\_value = THREADS\_LINUX\_FAILURE;
-113         \}
-114     \}
+107     if(return_value != THREADS_LINUX_FAILURE)
+108     {
+109         status = calibration_init(&calibration_local_coordinate_system_data, &
+      calibration_local_fields_data, &calibration_altimeter_data);
+110         if(status != CALIBRATION_SUCCESS)
+111         {
+112             return_value = THREADS_LINUX_FAILURE;
+113         }
+114     }
 115 
-116     \textcolor{keywordflow}{if}(return\_value != THREADS\_LINUX\_FAILURE)
-117     \{
-118         status = gps\_init(&\hyperlink{threads__linux_8c_a5daa6ca8c168d5e8e73b14d96d6e148d}{gps\_measure});
-119         \textcolor{keywordflow}{if}(status != 1)
-120         \{
-121             return\_value = THREADS\_LINUX\_FAILURE;
-122         \}
-123     \}
+116     if(return_value != THREADS_LINUX_FAILURE)
+117     {
+118         status = gps_init(&gps_measure);
+119         if(status != 1)
+120         {
+121             return_value = THREADS_LINUX_FAILURE;
+122         }
+123     }
 124 
-125     \textcolor{keywordflow}{if}(return\_value != THREADS\_LINUX\_FAILURE)
-126     \{
-127         status = imu\_init(&\hyperlink{threads__linux_8c_aa5c997a268f9020148799d654d48dc14}{imu\_measure});
-128         \textcolor{keywordflow}{if}(status != 1)
-129         \{
-130             return\_value = THREADS\_LINUX\_FAILURE;
-131         \}
-132     \}
+125     if(return_value != THREADS_LINUX_FAILURE)
+126     {
+127         status = imu_init(&imu_measure);
+128         if(status != 1)
+129         {
+130             return_value = THREADS_LINUX_FAILURE;
+131         }
+132     }
 133 
-134     \textcolor{keywordflow}{if}(return\_value != THREADS\_LINUX\_FAILURE)
-135     \{
-136         status = magnetometer\_init(&\hyperlink{threads__linux_8c_a495506ba39b5cc85a3d4eee9b441fea4}{magnetometer\_measure});
-137         \textcolor{keywordflow}{if}(status != 1)
-138         \{
-139             return\_value = THREADS\_LINUX\_FAILURE;
-140         \}
-141     \}
+134     if(return_value != THREADS_LINUX_FAILURE)
+135     {
+136         status = magnetometer_init(&magnetometer_measure);
+137         if(status != 1)
+138         {
+139             return_value = THREADS_LINUX_FAILURE;
+140         }
+141     }
 142 
-143     \textcolor{keywordflow}{if}(return\_value != THREADS\_LINUX\_FAILURE)
-144     \{
-145         status = sonar\_init(&\hyperlink{threads__linux_8c_a5fe7e1a4ef5e77fabd20272e2f5e5381}{sonar\_measure});
-146         \textcolor{keywordflow}{if}(status != 1)
-147         \{
-148                 return\_value = THREADS\_LINUX\_FAILURE;
-149         \}
-150     \}
+143     if(return_value != THREADS_LINUX_FAILURE)
+144     {
+145         status = sonar_init(&sonar_measure);
+146         if(status != 1)
+147         {
+148                 return_value = THREADS_LINUX_FAILURE;
+149         }
+150     }
 151 
-152     \textcolor{keywordflow}{if}(return\_value != THREADS\_LINUX\_FAILURE)
-153     \{
-154         status = estimation\_init(ESTIMATION\_DO\_NOT\_ESTIMATE\_ACCEL\_BIAS, &
-      \hyperlink{threads__linux_8c_a65f14449a63da2de58fd36ac32df7f96}{estimation\_data});
-155         \textcolor{keywordflow}{if}(status != ESTIMATION\_SUCCESS)
-156         \{
-157             return\_value = THREADS\_LINUX\_FAILURE;
-158         \}
-159     \}
+152     if(return_value != THREADS_LINUX_FAILURE)
+153     {
+154         status = estimation_init(ESTIMATION_DO_NOT_ESTIMATE_ACCEL_BIAS, &
+      estimation_data);
+155         if(status != ESTIMATION_SUCCESS)
+156         {
+157             return_value = THREADS_LINUX_FAILURE;
+158         }
+159     }
 160 
-161     \textcolor{keywordflow}{if}(return\_value != THREADS\_LINUX\_FAILURE)
-162     \{
-163         status = control\_init(&\hyperlink{threads__linux_8c_aff494a26c79d58504615f0502cfa8f31}{control\_data});
-164         \textcolor{keywordflow}{if}(status != CONTROL\_SUCCESS)
-165         \{
-166             return\_value = THREADS\_LINUX\_FAILURE;
-167         \}
-168     \}
+161     if(return_value != THREADS_LINUX_FAILURE)
+162     {
+163         status = control_init(&control_data);
+164         if(status != CONTROL_SUCCESS)
+165         {
+166             return_value = THREADS_LINUX_FAILURE;
+167         }
+168     }
 169 
-170     \textcolor{keywordflow}{if}(return\_value != THREADS\_LINUX\_FAILURE)
-171     \{
-172         status = protocol\_init();
-173         \textcolor{keywordflow}{if}(status != PROTOCOL\_SUCCESS)
-174         \{
-175             return\_value = THREADS\_LINUX\_FAILURE;
-176         \}
-177     \}
+170     if(return_value != THREADS_LINUX_FAILURE)
+171     {
+172         status = protocol_init();
+173         if(status != PROTOCOL_SUCCESS)
+174         {
+175             return_value = THREADS_LINUX_FAILURE;
+176         }
+177     }
 178 
-179     \textcolor{keywordflow}{if}(return\_value != THREADS\_LINUX\_FAILURE)
-180     \{
-181         status = \hyperlink{group__ui_gab7bfb453918dcc296ff0cea3c79453d0}{ui\_init}();
-182         \textcolor{keywordflow}{if}(status != UI\_SUCCESS)
-183         \{
-184             return\_value = THREADS\_LINUX\_FAILURE;
-185         \}
-186     \}
+179     if(return_value != THREADS_LINUX_FAILURE)
+180     {
+181         status = ui_init();
+182         if(status != UI_SUCCESS)
+183         {
+184             return_value = THREADS_LINUX_FAILURE;
+185         }
+186     }
 187 
-188     \textcolor{keywordflow}{if}(return\_value != THREADS\_LINUX\_FAILURE)
-189     \{
-190         status = \hyperlink{datalogger_8c_a1977ef253746fd8c008a3641d9822551}{datalogger\_init}();
-191         \textcolor{keywordflow}{if}(status != \hyperlink{datalogger_8h_abddebaf71d26d40183fccbb1a766b983}{DATALOGGER\_SUCCESS})
-192         \{
-193             return\_value = THREADS\_LINUX\_FAILURE;
-194         \}
-195     \}
+188     if(return_value != THREADS_LINUX_FAILURE)
+189     {
+190         status = datalogger_init();
+191         if(status != DATALOGGER_SUCCESS)
+192         {
+193             return_value = THREADS_LINUX_FAILURE;
+194         }
+195     }
 196 
-197     \textcolor{comment}{// Main Loop}
-198     \textcolor{keywordflow}{if}(return\_value != THREADS\_LINUX\_FAILURE)
-199     \{
-200         \hyperlink{threads__linux_8c_a923a30158ef342937317b179dcb6d0fb}{threads\_linux\_timer\_start\_task\_1}();
-201         usleep(0.5*\hyperlink{main2_8c_afffc21b0b726e6f4a572d0eefd3b5d69}{task\_1\_period\_us});
-202         \hyperlink{threads__linux_8c_a59d6f60b682f360c3759cefad7ad2a4e}{threads\_linux\_timer\_start\_task\_2}();
-203         usleep(5*\hyperlink{main2_8c_afffc21b0b726e6f4a572d0eefd3b5d69}{task\_1\_period\_us});
+197     // Main Loop
+198     if(return_value != THREADS_LINUX_FAILURE)
+199     {
+200         threads_linux_timer_start_task_1();
+201         usleep(0.5*task_1_period_us);
+202         threads_linux_timer_start_task_2();
+203         usleep(5*task_1_period_us);
 204 
-205         \textcolor{keywordflow}{while}(\hyperlink{main2_8c_a525dcecf4685bea1fbf92651ac0401fe}{quittask} == 0)
-206         \{
-207 \textcolor{preprocessor}{            #if ANU\_COMPILE\_FOR\_OVERO}
-208 \textcolor{preprocessor}{}\textcolor{preprocessor}{            #else}
-209 \textcolor{preprocessor}{}            \textcolor{keywordflow}{if}(\hyperlink{datalogger_8c_a46fd1290d9ee97d5fc7171e1e0dcb0aa}{datalogger\_status}() == \hyperlink{datalogger_8h_a2cf92051a019c8ec1b5c4f5380758f62}{DATALOGGER\_RUNNING}) 
-      \hyperlink{datalogger_8c_a25bb814a0877f419ae09b08cd7e91ee9}{datalogger\_update\_IPC}();
-210 \textcolor{preprocessor}{            #endif}
-211 \textcolor{preprocessor}{}            \textcolor{keywordflow}{if}(++n>100)
-212             \{
-213                 \textcolor{keywordflow}{if}(\hyperlink{datalogger_8c_a46fd1290d9ee97d5fc7171e1e0dcb0aa}{datalogger\_status}() == \hyperlink{datalogger_8h_a2cf92051a019c8ec1b5c4f5380758f62}{DATALOGGER\_RUNNING}) 
-      \hyperlink{datalogger_8c_a2aedecfce53e1935a41615ceaf378013}{datalogger\_write\_file}();
+205         while(quittask == 0)
+206         {
+207             #if ANU_COMPILE_FOR_OVERO
+208             #else
+209             if(datalogger_status() == DATALOGGER_RUNNING) datalogger_update_IPC()
+      ;
+210             #endif
+211             if(++n>100)
+212             {
+213                 if(datalogger_status() == DATALOGGER_RUNNING) 
+      datalogger_write_file();
 214                 n = 0;
-215             \}
-216             usleep(5*\hyperlink{main2_8c_afffc21b0b726e6f4a572d0eefd3b5d69}{task\_1\_period\_us});
-217         \}
+215             }
+216             usleep(5*task_1_period_us);
+217         }
 218 
-219         \hyperlink{threads__linux_8c_a928ae9705d888293ed43a8109789716a}{threads\_linux\_timer\_stop\_task\_1}();
-220         usleep(\hyperlink{threads__linux_8c_a95fe7f7d25a81aabd1194bac017074d8}{TASK1\_PERIOD\_US});
-221         \hyperlink{threads__linux_8c_a78eb56e9ece1f0050dda425824fb6a71}{threads\_linux\_timer\_stop\_task\_2}();
-222         usleep(\hyperlink{threads__linux_8c_adfe9b03db41d576a3beb124ec44a54d8}{TASK2\_PERIOD\_US});
-223     \}
+219         threads_linux_timer_stop_task_1();
+220         usleep(TASK1_PERIOD_US);
+221         threads_linux_timer_stop_task_2();
+222         usleep(TASK2_PERIOD_US);
+223     }
 224 
-225     status = \hyperlink{datalogger_8c_ad22dbe9e235e7ae5737a23796d13ffbd}{datalogger\_close}();
-226     \textcolor{keywordflow}{if}(status != \hyperlink{datalogger_8h_abddebaf71d26d40183fccbb1a766b983}{DATALOGGER\_SUCCESS})
-227     \{
-228         return\_value = THREADS\_LINUX\_FAILURE;
-229     \}
+225     status = datalogger_close();
+226     if(status != DATALOGGER_SUCCESS)
+227     {
+228         return_value = THREADS_LINUX_FAILURE;
+229     }
 230 
-231     status = \hyperlink{group__ui_ga65d8b92b634da17c344458cd57e61f3e}{ui\_close}();
-232     \textcolor{keywordflow}{if}(status != UI\_SUCCESS)
-233     \{
-234         return\_value = THREADS\_LINUX\_FAILURE;
-235     \}
+231     status = ui_close();
+232     if(status != UI_SUCCESS)
+233     {
+234         return_value = THREADS_LINUX_FAILURE;
+235     }
 236 
-237     status = protocol\_close();
-238     \textcolor{keywordflow}{if}(status != PROTOCOL\_SUCCESS)
-239     \{
-240         return\_value = THREADS\_LINUX\_FAILURE;
-241     \}
+237     status = protocol_close();
+238     if(status != PROTOCOL_SUCCESS)
+239     {
+240         return_value = THREADS_LINUX_FAILURE;
+241     }
 242 
-243     status = control\_close();
-244     \textcolor{keywordflow}{if}(status != CONTROL\_SUCCESS)
-245     \{
-246         return\_value = THREADS\_LINUX\_FAILURE;
-247     \}
+243     status = control_close();
+244     if(status != CONTROL_SUCCESS)
+245     {
+246         return_value = THREADS_LINUX_FAILURE;
+247     }
 248 
-249     status = estimation\_close(&\hyperlink{threads__linux_8c_a65f14449a63da2de58fd36ac32df7f96}{estimation\_data});
-250     \textcolor{keywordflow}{if}(status != ESTIMATION\_SUCCESS)
-251     \{
-252         return\_value = THREADS\_LINUX\_FAILURE;
-253     \}
+249     status = estimation_close(&estimation_data);
+250     if(status != ESTIMATION_SUCCESS)
+251     {
+252         return_value = THREADS_LINUX_FAILURE;
+253     }
 254 
-255     status = magnetometer\_close(&\hyperlink{threads__linux_8c_a495506ba39b5cc85a3d4eee9b441fea4}{magnetometer\_measure});
-256     \textcolor{keywordflow}{if}(status != 1)
-257     \{
-258         return\_value = THREADS\_LINUX\_FAILURE;
-259     \}
+255     status = magnetometer_close(&magnetometer_measure);
+256     if(status != 1)
+257     {
+258         return_value = THREADS_LINUX_FAILURE;
+259     }
 260 
-261     status = imu\_close(&\hyperlink{threads__linux_8c_aa5c997a268f9020148799d654d48dc14}{imu\_measure});
-262     \textcolor{keywordflow}{if}(status != 1)
-263     \{
-264         return\_value = THREADS\_LINUX\_FAILURE;
-265     \}
-266     status = gps\_close(&\hyperlink{threads__linux_8c_a5daa6ca8c168d5e8e73b14d96d6e148d}{gps\_measure});
-267     \textcolor{keywordflow}{if}(status != 1)
-268     \{
-269         return\_value = THREADS\_LINUX\_FAILURE;
-270     \}
+261     status = imu_close(&imu_measure);
+262     if(status != 1)
+263     {
+264         return_value = THREADS_LINUX_FAILURE;
+265     }
+266     status = gps_close(&gps_measure);
+267     if(status != 1)
+268     {
+269         return_value = THREADS_LINUX_FAILURE;
+270     }
 271 
-272     status = calibration\_close(&\hyperlink{threads__linux_8c_a6409aa72713a8e9cbecf43c9e6b4ef5f}{calibration\_local\_coordinate\_system\_data}
-      , &\hyperlink{threads__linux_8c_a520f88fc1d70b3ce27e0f9a3d9c6c2df}{calibration\_local\_fields\_data}, &
-      \hyperlink{threads__linux_8c_a54474abecc241cd0ed5dd0a3b7f42a72}{calibration\_altimeter\_data});
-273     \textcolor{keywordflow}{if}(status != CALIBRATION\_SUCCESS)
-274     \{
-275         return\_value = THREADS\_LINUX\_FAILURE;
-276     \}
+272     status = calibration_close(&calibration_local_coordinate_system_data, &
+      calibration_local_fields_data, &calibration_altimeter_data);
+273     if(status != CALIBRATION_SUCCESS)
+274     {
+275         return_value = THREADS_LINUX_FAILURE;
+276     }
 277 
-278     status = sensors\_close();
-279     \textcolor{keywordflow}{if}(status != SENSORS\_SUCCESS)
-280     \{
-281         return\_value = THREADS\_LINUX\_FAILURE;
-282     \}
+278     status = sensors_close();
+279     if(status != SENSORS_SUCCESS)
+280     {
+281         return_value = THREADS_LINUX_FAILURE;
+282     }
 283 
-284     \textcolor{keywordflow}{return} return\_value;
-285 \}
+284     return return_value;
+285 }
 \end{DoxyCode}
 
 
-Here is the call graph for this function\-:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{threads__linux_8c_aff9795d781d7b334d45539707a641c23_cgraph}
-\end{center}
-\end{figure}
 
 
-\hypertarget{threads__linux_8c_a2e381152046e690e7264c1a479071048}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-1@{threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-1}}
-\index{threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-1@{threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-1}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}int threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-1 (
-\begin{DoxyParamCaption}
-\item[{void}]{}
-\end{DoxyParamCaption}
-)}}\label{threads__linux_8c_a2e381152046e690e7264c1a479071048}
+Here is the call graph for this function:
+
+\hypertarget{threads__linux_8c_a2e381152046e690e7264c1a479071048}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!threads\_\-linux\_\-periodic\_\-task\_\-1@{threads\_\-linux\_\-periodic\_\-task\_\-1}}
+\index{threads\_\-linux\_\-periodic\_\-task\_\-1@{threads\_\-linux\_\-periodic\_\-task\_\-1}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{threads\_\-linux\_\-periodic\_\-task\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}int threads\_\-linux\_\-periodic\_\-task\_\-1 (void)}}
+\label{threads__linux_8c_a2e381152046e690e7264c1a479071048}
 
 
-Definition at line 287 of file threads\-\_\-linux.\-c.
+Definition at line 287 of file threads\_\-linux.c.
 
 
 
-References battery\-\_\-data, calibration\-\_\-altimeter\-\_\-data, calibration\-\_\-local\-\_\-coordinate\-\_\-system\-\_\-data, calibration\-\_\-local\-\_\-fields\-\_\-data, control\-\_\-data, D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-N\-O\-T\-\_\-\-R\-U\-N\-N\-I\-N\-G, D\-A\-T\-A\-L\-O\-G\-G\-E\-R\-\_\-\-R\-U\-N\-N\-I\-N\-G, datalogger\-\_\-set\-\_\-\-Ts(), datalogger\-\_\-status(), datalogger\-\_\-update(), estimation\-\_\-data, failure, gps\-\_\-data, gps\-\_\-measure, imu\-\_\-measure, magnetometer\-\_\-measure, pitot\-\_\-data, pwm\-\_\-read\-\_\-data, pwm\-\_\-write\-\_\-data, scp1000\-\_\-data, sonar\-\_\-data, sonar\-\_\-measure, t0, T\-\_\-task\-\_\-1\-\_\-exec\-\_\-global, t\-\_\-task\-\_\-1\-\_\-global, T\-\_\-task\-\_\-2\-\_\-exec\-\_\-global, task\-\_\-1\-\_\-period\-\_\-us, threads\-\_\-reset\-\_\-timer(), and total.
+References battery\_\-data, calibration\_\-altimeter\_\-data, calibration\_\-local\_\-coordinate\_\-system\_\-data, calibration\_\-local\_\-fields\_\-data, control\_\-data, DATALOGGER\_\-NOT\_\-RUNNING, DATALOGGER\_\-RUNNING, datalogger\_\-set\_\-Ts(), datalogger\_\-status(), datalogger\_\-update(), estimation\_\-data, failure, gps\_\-data, gps\_\-measure, imu\_\-measure, magnetometer\_\-measure, pitot\_\-data, pwm\_\-read\_\-data, pwm\_\-write\_\-data, scp1000\_\-data, sonar\_\-data, sonar\_\-measure, t0, T\_\-task\_\-1\_\-exec\_\-global, t\_\-task\_\-1\_\-global, T\_\-task\_\-2\_\-exec\_\-global, task\_\-1\_\-period\_\-us, threads\_\-reset\_\-timer(), and total.
 
 
 
-Referenced by threads\-\_\-linux\-\_\-timer\-\_\-function\-\_\-task\-\_\-1().
+Referenced by threads\_\-linux\_\-timer\_\-function\_\-task\_\-1().
+
+
 
 
 \begin{DoxyCode}
-288 \{
-289     \textcolor{keyword}{static} \textcolor{keywordtype}{int} previous\_calibration\_status = CALIBRATION\_NOT\_RUNNING;
-290     \textcolor{keywordtype}{int} current\_calibration\_status; \textcolor{comment}{// Used to detect lowering edge}
-291     \textcolor{keyword}{static} \textcolor{keywordtype}{int} previous\_datalogger\_status = \hyperlink{datalogger_8h_a1a224da36800f52f56f30619849f7f5d}{DATALOGGER\_NOT\_RUNNING};
-292     \textcolor{keywordtype}{int} current\_datalogger\_status; \textcolor{comment}{// Used to detect rising edge}
+288 {
+289     static int previous_calibration_status = CALIBRATION_NOT_RUNNING;
+290     int current_calibration_status; // Used to detect lowering edge
+291     static int previous_datalogger_status = DATALOGGER_NOT_RUNNING;
+292     int current_datalogger_status; // Used to detect rising edge
 293 
-294     \textcolor{comment}{// Main communication/control thread}
+294     // Main communication/control thread
 295 
-296     \textcolor{comment}{//Acquire}
-297     \hyperlink{main_8c_ac7af894858cf396a219d632f40afdc8d}{total}++;
-298     \textcolor{keywordflow}{if}(protocol\_request\_all\_data(&\hyperlink{threads__linux_8c_a6e03a1c8574304386184af6cad0187a3}{battery\_data}, &\hyperlink{threads__linux_8c_a59e6bf03b78dd52adc07051320f6b954}{gps\_data}, &
-      \hyperlink{main_8c_a0f81e5b5621e6e2b2467daa7d12268c4}{imu\_data}, &\hyperlink{threads__linux_8c_a85a1e7d1f5cb0855de5c10c7da917e99}{pitot\_data}, &\hyperlink{threads__linux_8c_a47c600b0bafcb86f18d675174d1ff92b}{pwm\_read\_data}, &
-      \hyperlink{threads__linux_8c_ad8b6331e520d1bd524e2dc9053510fc2}{pwm\_write\_data}, &\hyperlink{threads__linux_8c_a014e3c8e54ea93cd94fd3fef569125f8}{scp1000\_data}, &\hyperlink{threads__linux_8c_aafb5fffcd42c3ad4ad9768df45a1a0b5}{sonar\_data}) != PROTOCOL\_SUCCESS)
-299     \{
-300         \hyperlink{main_8c_a4f35e5ea2395561d0bd3b2f45612dc2c}{failure}++;
-301     \}
+296     //Acquire
+297     total++;
+298     if(protocol_request_all_data(&battery_data, &gps_data, &imu_data, &
+      pitot_data, &pwm_read_data, &pwm_write_data, &scp1000_data, &sonar_data) != PROTO
+      COL_SUCCESS)
+299     {
+300         failure++;
+301     }
 302 
-303     \textcolor{comment}{// Calibrate and Estimate}
-304     calibration\_calibrate\_all(&\hyperlink{threads__linux_8c_a47c600b0bafcb86f18d675174d1ff92b}{pwm\_read\_data}, &\hyperlink{threads__linux_8c_a014e3c8e54ea93cd94fd3fef569125f8}{scp1000\_data}, &
-      \hyperlink{threads__linux_8c_a6e03a1c8574304386184af6cad0187a3}{battery\_data}, &\hyperlink{threads__linux_8c_a59e6bf03b78dd52adc07051320f6b954}{gps\_data}, &\hyperlink{main_8c_a0f81e5b5621e6e2b2467daa7d12268c4}{imu\_data}, &\hyperlink{threads__linux_8c_a85a1e7d1f5cb0855de5c10c7da917e99}{pitot\_data}, &
-      \hyperlink{threads__linux_8c_aafb5fffcd42c3ad4ad9768df45a1a0b5}{sonar\_data}, &\hyperlink{threads__linux_8c_a6409aa72713a8e9cbecf43c9e6b4ef5f}{calibration\_local\_coordinate\_system\_data}, &
-      \hyperlink{threads__linux_8c_a54474abecc241cd0ed5dd0a3b7f42a72}{calibration\_altimeter\_data}, &
-      \hyperlink{threads__linux_8c_a520f88fc1d70b3ce27e0f9a3d9c6c2df}{calibration\_local\_fields\_data}, &\hyperlink{threads__linux_8c_a5daa6ca8c168d5e8e73b14d96d6e148d}{gps\_measure}, &
-      \hyperlink{threads__linux_8c_aa5c997a268f9020148799d654d48dc14}{imu\_measure}, &\hyperlink{threads__linux_8c_a495506ba39b5cc85a3d4eee9b441fea4}{magnetometer\_measure});
-305     estimation\_update\_state\_estimate(&\hyperlink{threads__linux_8c_a65f14449a63da2de58fd36ac32df7f96}{estimation\_data}, &
-      \hyperlink{threads__linux_8c_a5daa6ca8c168d5e8e73b14d96d6e148d}{gps\_measure}, &\hyperlink{threads__linux_8c_aa5c997a268f9020148799d654d48dc14}{imu\_measure}, &\hyperlink{threads__linux_8c_a495506ba39b5cc85a3d4eee9b441fea4}{magnetometer\_measure}, &
-      \hyperlink{threads__linux_8c_a5fe7e1a4ef5e77fabd20272e2f5e5381}{sonar\_measure}, &\hyperlink{threads__linux_8c_a520f88fc1d70b3ce27e0f9a3d9c6c2df}{calibration\_local\_fields\_data}, 
-      \hyperlink{main2_8c_afffc21b0b726e6f4a572d0eefd3b5d69}{task\_1\_period\_us}/(\textcolor{keywordtype}{double})1e6);
+303     // Calibrate and Estimate
+304     calibration_calibrate_all(&pwm_read_data, &scp1000_data, &battery_data, &
+      gps_data, &imu_data, &pitot_data, &sonar_data, &
+      calibration_local_coordinate_system_data, &calibration_altimeter_data, &
+      calibration_local_fields_data, &gps_measure, &imu_measure, &magnetometer_measure)
+      ;
+305     estimation_update_state_estimate(&estimation_data, &gps_measure, &
+      imu_measure, &magnetometer_measure, &sonar_measure, &
+      calibration_local_fields_data, task_1_period_us/(double)1e6);
 306 
-307     \textcolor{comment}{// Control}
-308     control\_main\_task(\hyperlink{main2_8c_a2a2a647912528f7aa86812528dbfe02f}{t\_task\_1\_global}, &\hyperlink{threads__linux_8c_ad8b6331e520d1bd524e2dc9053510fc2}{pwm\_write\_data}, &
-      \hyperlink{threads__linux_8c_a47c600b0bafcb86f18d675174d1ff92b}{pwm\_read\_data}, &\hyperlink{threads__linux_8c_aff494a26c79d58504615f0502cfa8f31}{control\_data}, &\hyperlink{threads__linux_8c_a65f14449a63da2de58fd36ac32df7f96}{estimation\_data});
+307     // Control
+308     control_main_task(t_task_1_global, &pwm_write_data, &pwm_read_data, &
+      control_data, &estimation_data);
 309 
-310     \textcolor{comment}{// Actuate}
-311     protocol\_send\_actuation\_data(&\hyperlink{threads__linux_8c_ad8b6331e520d1bd524e2dc9053510fc2}{pwm\_write\_data});
+310     // Actuate
+311     protocol_send_actuation_data(&pwm_write_data);
 312 
-313     \textcolor{comment}{// Log}
-314     current\_datalogger\_status = \hyperlink{datalogger_8c_a46fd1290d9ee97d5fc7171e1e0dcb0aa}{datalogger\_status}();
-315     \textcolor{keywordflow}{if}(current\_datalogger\_status == \hyperlink{datalogger_8h_a2cf92051a019c8ec1b5c4f5380758f62}{DATALOGGER\_RUNNING})
-316     \{
-317         \textcolor{keywordflow}{if}(previous\_datalogger\_status == \hyperlink{datalogger_8h_a1a224da36800f52f56f30619849f7f5d}{DATALOGGER\_NOT\_RUNNING}) \textcolor{comment}{// Rising edge}
-318         \{
-319             \hyperlink{datalogger_8c_afb69d166f8d53042825174cee225ea49}{datalogger\_set\_Ts}(\hyperlink{main2_8c_afffc21b0b726e6f4a572d0eefd3b5d69}{task\_1\_period\_us}/1e6);
-320             datalogger\_set\_initial\_altimeter\_parameters(&
-      \hyperlink{threads__linux_8c_a54474abecc241cd0ed5dd0a3b7f42a72}{calibration\_altimeter\_data});
-321             datalogger\_set\_local\_coordinate\_system(&
-      \hyperlink{threads__linux_8c_a6409aa72713a8e9cbecf43c9e6b4ef5f}{calibration\_local\_coordinate\_system\_data});
-322             datalogger\_set\_local\_fields(&\hyperlink{threads__linux_8c_a520f88fc1d70b3ce27e0f9a3d9c6c2df}{calibration\_local\_fields\_data});
-323             \hyperlink{threads__linux_8c_a5ba2e82998677ad5d27022cc793583ec}{threads\_reset\_timer}();
-324         \}
-325         \hyperlink{datalogger_8c_ad89a56e2f057ace8c28d78eb67703e7d}{datalogger\_update}(\hyperlink{main2_8c_a2a2a647912528f7aa86812528dbfe02f}{t\_task\_1\_global}, 
-      \hyperlink{main2_8c_acdaa4a9b0e1be3dfa53b52df6410ad3b}{T\_task\_1\_exec\_global}, \hyperlink{main2_8c_a9629c77cd3dba9d47d15c2e51bdde09d}{T\_task\_2\_exec\_global}, 
-      \hyperlink{main2_8c_a86c2efd6da48b362806cdbb5b1e711d8}{t0}, &\hyperlink{threads__linux_8c_a6e03a1c8574304386184af6cad0187a3}{battery\_data}, &\hyperlink{threads__linux_8c_a59e6bf03b78dd52adc07051320f6b954}{gps\_data}, &\hyperlink{main_8c_a0f81e5b5621e6e2b2467daa7d12268c4}{imu\_data}, &
-      \hyperlink{threads__linux_8c_a85a1e7d1f5cb0855de5c10c7da917e99}{pitot\_data}, &\hyperlink{threads__linux_8c_a47c600b0bafcb86f18d675174d1ff92b}{pwm\_read\_data}, &\hyperlink{threads__linux_8c_ad8b6331e520d1bd524e2dc9053510fc2}{pwm\_write\_data}, &
-      \hyperlink{threads__linux_8c_a014e3c8e54ea93cd94fd3fef569125f8}{scp1000\_data}, &\hyperlink{threads__linux_8c_aafb5fffcd42c3ad4ad9768df45a1a0b5}{sonar\_data}, &\hyperlink{threads__linux_8c_a5daa6ca8c168d5e8e73b14d96d6e148d}{gps\_measure}, &
-      \hyperlink{threads__linux_8c_aa5c997a268f9020148799d654d48dc14}{imu\_measure}, &\hyperlink{threads__linux_8c_a495506ba39b5cc85a3d4eee9b441fea4}{magnetometer\_measure}, &
-      \hyperlink{threads__linux_8c_a65f14449a63da2de58fd36ac32df7f96}{estimation\_data}, &\hyperlink{threads__linux_8c_aff494a26c79d58504615f0502cfa8f31}{control\_data});
-326     \}
-327     previous\_datalogger\_status = current\_datalogger\_status;
+313     // Log
+314     current_datalogger_status = datalogger_status();
+315     if(current_datalogger_status == DATALOGGER_RUNNING)
+316     {
+317         if(previous_datalogger_status == DATALOGGER_NOT_RUNNING) // Rising edge
+318         {
+319             datalogger_set_Ts(task_1_period_us/1e6);
+320             datalogger_set_initial_altimeter_parameters(&
+      calibration_altimeter_data);
+321             datalogger_set_local_coordinate_system(&
+      calibration_local_coordinate_system_data);
+322             datalogger_set_local_fields(&calibration_local_fields_data);
+323             threads_reset_timer();
+324         }
+325         datalogger_update(t_task_1_global, T_task_1_exec_global, 
+      T_task_2_exec_global, t0, &battery_data, &gps_data, &imu_data, &pitot_data, &
+      pwm_read_data, &pwm_write_data, &scp1000_data, &sonar_data, &gps_measure, &
+      imu_measure, &magnetometer_measure, &estimation_data, &control_data);
+326     }
+327     previous_datalogger_status = current_datalogger_status;
 328 
-329     current\_calibration\_status = calibration\_get\_status();
-330     \textcolor{keywordflow}{if}(current\_calibration\_status == CALIBRATION\_RUNNING)
-331     \{
-332         calibration\_imu\_add\_sample\_bias\_estimate(&\hyperlink{main_8c_a0f81e5b5621e6e2b2467daa7d12268c4}{imu\_data});
-333         calibration\_altimeter\_add\_sample\_initial\_pressure(&\hyperlink{threads__linux_8c_a014e3c8e54ea93cd94fd3fef569125f8}{scp1000\_data}, &
-      \hyperlink{threads__linux_8c_a54474abecc241cd0ed5dd0a3b7f42a72}{calibration\_altimeter\_data});
-334     \}
-335     \textcolor{keywordflow}{else} \textcolor{comment}{// Calibration not running}
-336     \{
-337         \textcolor{keywordflow}{if}(previous\_calibration\_status == CALIBRATION\_RUNNING) \textcolor{comment}{// Lowering edge}
-338         \{
-339             calibration\_imu\_finish\_bias\_estimate(&\hyperlink{main_8c_a0f81e5b5621e6e2b2467daa7d12268c4}{imu\_data});
-340             calibration\_altimeter\_finish\_initial\_pressure\_estimate(&
-      \hyperlink{threads__linux_8c_a54474abecc241cd0ed5dd0a3b7f42a72}{calibration\_altimeter\_data});
-341         \}
-342     \}
-343     previous\_calibration\_status = current\_calibration\_status;
+329     current_calibration_status = calibration_get_status();
+330     if(current_calibration_status == CALIBRATION_RUNNING)
+331     {
+332         calibration_imu_add_sample_bias_estimate(&imu_data);
+333         calibration_altimeter_add_sample_initial_pressure(&scp1000_data, &
+      calibration_altimeter_data);
+334     }
+335     else // Calibration not running
+336     {
+337         if(previous_calibration_status == CALIBRATION_RUNNING) // Lowering edge
+338         {
+339             calibration_imu_finish_bias_estimate(&imu_data);
+340             calibration_altimeter_finish_initial_pressure_estimate(&
+      calibration_altimeter_data);
+341         }
+342     }
+343     previous_calibration_status = current_calibration_status;
 344 
-345     \textcolor{keywordflow}{return} THREADS\_LINUX\_SUCCESS;
-346 \}
+345     return THREADS_LINUX_SUCCESS;
+346 }
 \end{DoxyCode}
 
 
-Here is the call graph for this function\-:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{threads__linux_8c_a2e381152046e690e7264c1a479071048_cgraph}
-\end{center}
-\end{figure}
+
+
+Here is the call graph for this function:
 
 
 
+Here is the caller graph for this function:
 
-Here is the caller graph for this function\-:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{threads__linux_8c_a2e381152046e690e7264c1a479071048_icgraph}
-\end{center}
-\end{figure}
-
-
-\hypertarget{threads__linux_8c_ad535241b6b29d076beb2cd75a880aaea}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-2@{threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-2}}
-\index{threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-2@{threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-2}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}int threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-2 (
-\begin{DoxyParamCaption}
-\item[{void}]{}
-\end{DoxyParamCaption}
-)}}\label{threads__linux_8c_ad535241b6b29d076beb2cd75a880aaea}
+\hypertarget{threads__linux_8c_ad535241b6b29d076beb2cd75a880aaea}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!threads\_\-linux\_\-periodic\_\-task\_\-2@{threads\_\-linux\_\-periodic\_\-task\_\-2}}
+\index{threads\_\-linux\_\-periodic\_\-task\_\-2@{threads\_\-linux\_\-periodic\_\-task\_\-2}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{threads\_\-linux\_\-periodic\_\-task\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}int threads\_\-linux\_\-periodic\_\-task\_\-2 (void)}}
+\label{threads__linux_8c_ad535241b6b29d076beb2cd75a880aaea}
 
 
-Definition at line 348 of file threads\-\_\-linux.\-c.
+Definition at line 348 of file threads\_\-linux.c.
 
 
 
-References battery\-\_\-data, calibration\-\_\-altimeter\-\_\-data, calibration\-\_\-local\-\_\-coordinate\-\_\-system\-\_\-data, calibration\-\_\-local\-\_\-fields\-\_\-data, control\-\_\-data, estimation\-\_\-data, failure, gps\-\_\-data, gps\-\_\-measure, imu\-\_\-measure, magnetometer\-\_\-measure, pitot\-\_\-data, pwm\-\_\-read\-\_\-data, pwm\-\_\-write\-\_\-data, scp1000\-\_\-data, sonar\-\_\-data, t0, t\-\_\-task\-\_\-1\-\_\-global, telemetry\-\_\-mode, total, U\-I\-\_\-\-N\-C\-U\-R\-S\-E\-S\-\_\-\-M\-O\-D\-E, and ui\-\_\-update().
+References battery\_\-data, calibration\_\-altimeter\_\-data, calibration\_\-local\_\-coordinate\_\-system\_\-data, calibration\_\-local\_\-fields\_\-data, control\_\-data, estimation\_\-data, failure, gps\_\-data, gps\_\-measure, imu\_\-measure, magnetometer\_\-measure, pitot\_\-data, pwm\_\-read\_\-data, pwm\_\-write\_\-data, scp1000\_\-data, sonar\_\-data, t0, t\_\-task\_\-1\_\-global, telemetry\_\-mode, total, UI\_\-NCURSES\_\-MODE, and ui\_\-update().
 
 
 
-Referenced by threads\-\_\-linux\-\_\-timer\-\_\-function\-\_\-task\-\_\-2().
+Referenced by threads\_\-linux\_\-timer\_\-function\_\-task\_\-2().
+
+
 
 
 \begin{DoxyCode}
-349 \{
-350     \textcolor{comment}{// UI thread}
-351     \textcolor{keywordflow}{if}(\hyperlink{main2_8c_a5045187bb0afe92c41ce73bc602fd3ca}{telemetry\_mode} == \hyperlink{ui_8h_a5f863c47136ccbe4db74101b9a3e83ca}{UI\_NCURSES\_MODE})
-352     \{
-353         \hyperlink{group__ui_ga42e4dac2d138061a74c572358c8ebf49}{ui\_update}(&\hyperlink{threads__linux_8c_a6e03a1c8574304386184af6cad0187a3}{battery\_data}, &\hyperlink{threads__linux_8c_a59e6bf03b78dd52adc07051320f6b954}{gps\_data}, &
-      \hyperlink{main_8c_a0f81e5b5621e6e2b2467daa7d12268c4}{imu\_data}, &\hyperlink{threads__linux_8c_a85a1e7d1f5cb0855de5c10c7da917e99}{pitot\_data}, &\hyperlink{threads__linux_8c_a47c600b0bafcb86f18d675174d1ff92b}{pwm\_read\_data}, &
-      \hyperlink{threads__linux_8c_ad8b6331e520d1bd524e2dc9053510fc2}{pwm\_write\_data}, &\hyperlink{threads__linux_8c_a014e3c8e54ea93cd94fd3fef569125f8}{scp1000\_data}, &\hyperlink{threads__linux_8c_aafb5fffcd42c3ad4ad9768df45a1a0b5}{sonar\_data}, &
-      \hyperlink{threads__linux_8c_a5daa6ca8c168d5e8e73b14d96d6e148d}{gps\_measure}, &\hyperlink{threads__linux_8c_aa5c997a268f9020148799d654d48dc14}{imu\_measure}, &\hyperlink{threads__linux_8c_a495506ba39b5cc85a3d4eee9b441fea4}{magnetometer\_measure}, &
-      \hyperlink{threads__linux_8c_a6409aa72713a8e9cbecf43c9e6b4ef5f}{calibration\_local\_coordinate\_system\_data}, &
-      \hyperlink{threads__linux_8c_a520f88fc1d70b3ce27e0f9a3d9c6c2df}{calibration\_local\_fields\_data}, &
-      \hyperlink{threads__linux_8c_a54474abecc241cd0ed5dd0a3b7f42a72}{calibration\_altimeter\_data}, &\hyperlink{threads__linux_8c_a65f14449a63da2de58fd36ac32df7f96}{estimation\_data}, &
-      \hyperlink{threads__linux_8c_aff494a26c79d58504615f0502cfa8f31}{control\_data}, \hyperlink{main_8c_ac7af894858cf396a219d632f40afdc8d}{total}, \hyperlink{main_8c_a4f35e5ea2395561d0bd3b2f45612dc2c}{failure});
-354     \}
-355     \textcolor{keywordflow}{if}(\hyperlink{main2_8c_a5045187bb0afe92c41ce73bc602fd3ca}{telemetry\_mode} == UI\_MAVLINK\_MODE)
-356     \{
-357         mavlink\_module\_update(\hyperlink{main2_8c_a2a2a647912528f7aa86812528dbfe02f}{t\_task\_1\_global}, \hyperlink{main2_8c_a86c2efd6da48b362806cdbb5b1e711d8}{t0}, &
-      \hyperlink{threads__linux_8c_a6e03a1c8574304386184af6cad0187a3}{battery\_data}, &\hyperlink{threads__linux_8c_a59e6bf03b78dd52adc07051320f6b954}{gps\_data}, &\hyperlink{main_8c_a0f81e5b5621e6e2b2467daa7d12268c4}{imu\_data}, &\hyperlink{threads__linux_8c_a85a1e7d1f5cb0855de5c10c7da917e99}{pitot\_data}, &
-      \hyperlink{threads__linux_8c_a47c600b0bafcb86f18d675174d1ff92b}{pwm\_read\_data}, &\hyperlink{threads__linux_8c_ad8b6331e520d1bd524e2dc9053510fc2}{pwm\_write\_data}, &\hyperlink{threads__linux_8c_a014e3c8e54ea93cd94fd3fef569125f8}{scp1000\_data}, &
-      \hyperlink{threads__linux_8c_aafb5fffcd42c3ad4ad9768df45a1a0b5}{sonar\_data}, &\hyperlink{threads__linux_8c_a5daa6ca8c168d5e8e73b14d96d6e148d}{gps\_measure}, &\hyperlink{threads__linux_8c_aa5c997a268f9020148799d654d48dc14}{imu\_measure}, &
-      \hyperlink{threads__linux_8c_a495506ba39b5cc85a3d4eee9b441fea4}{magnetometer\_measure}, &\hyperlink{threads__linux_8c_a65f14449a63da2de58fd36ac32df7f96}{estimation\_data}, &
-      \hyperlink{threads__linux_8c_aff494a26c79d58504615f0502cfa8f31}{control\_data});
-358     \}
+349 {
+350     // UI thread
+351     if(telemetry_mode == UI_NCURSES_MODE)
+352     {
+353         ui_update(&battery_data, &gps_data, &imu_data, &pitot_data, &
+      pwm_read_data, &pwm_write_data, &scp1000_data, &sonar_data, &gps_measure, &
+      imu_measure, &magnetometer_measure, &calibration_local_coordinate_system_data, &
+      calibration_local_fields_data, &calibration_altimeter_data, &estimation_data, &
+      control_data, total, failure);
+354     }
+355     if(telemetry_mode == UI_MAVLINK_MODE)
+356     {
+357         mavlink_module_update(t_task_1_global, t0, &battery_data, &gps_data, &
+      imu_data, &pitot_data, &pwm_read_data, &pwm_write_data, &scp1000_data, &
+      sonar_data, &gps_measure, &imu_measure, &magnetometer_measure, &estimation_data, 
+      &control_data);
+358     }
 359 
-360     \textcolor{keywordflow}{return} THREADS\_LINUX\_SUCCESS;
-361 \}
+360     return THREADS_LINUX_SUCCESS;
+361 }
 \end{DoxyCode}
 
 
-Here is the call graph for this function\-:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{threads__linux_8c_ad535241b6b29d076beb2cd75a880aaea_cgraph}
-\end{center}
-\end{figure}
+
+
+Here is the call graph for this function:
 
 
 
+Here is the caller graph for this function:
 
-Here is the caller graph for this function\-:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{threads__linux_8c_ad535241b6b29d076beb2cd75a880aaea_icgraph}
-\end{center}
-\end{figure}
-
-
-\hypertarget{threads__linux_8c_ae03c8e3e8ea1514e4e7ca2005777e6f3}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!threads\-\_\-linux\-\_\-timer\-\_\-function\-\_\-task\-\_\-1@{threads\-\_\-linux\-\_\-timer\-\_\-function\-\_\-task\-\_\-1}}
-\index{threads\-\_\-linux\-\_\-timer\-\_\-function\-\_\-task\-\_\-1@{threads\-\_\-linux\-\_\-timer\-\_\-function\-\_\-task\-\_\-1}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{threads\-\_\-linux\-\_\-timer\-\_\-function\-\_\-task\-\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}void threads\-\_\-linux\-\_\-timer\-\_\-function\-\_\-task\-\_\-1 (
-\begin{DoxyParamCaption}
-\item[{void}]{}
-\end{DoxyParamCaption}
-)}}\label{threads__linux_8c_ae03c8e3e8ea1514e4e7ca2005777e6f3}
+\hypertarget{threads__linux_8c_ae03c8e3e8ea1514e4e7ca2005777e6f3}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!threads\_\-linux\_\-timer\_\-function\_\-task\_\-1@{threads\_\-linux\_\-timer\_\-function\_\-task\_\-1}}
+\index{threads\_\-linux\_\-timer\_\-function\_\-task\_\-1@{threads\_\-linux\_\-timer\_\-function\_\-task\_\-1}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{threads\_\-linux\_\-timer\_\-function\_\-task\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}void threads\_\-linux\_\-timer\_\-function\_\-task\_\-1 (void)}}
+\label{threads__linux_8c_ae03c8e3e8ea1514e4e7ca2005777e6f3}
 
 
-Definition at line 457 of file threads\-\_\-linux.\-c.
+Definition at line 457 of file threads\_\-linux.c.
 
 
 
-References flag\-\_\-task\-\_\-1\-\_\-firstexecution, status, t0, T\-\_\-task\-\_\-1\-\_\-exec\-\_\-global, t\-\_\-task\-\_\-1\-\_\-global, T\-\_\-task\-\_\-1\-\_\-max\-\_\-global, T\-\_\-task\-\_\-1\-\_\-mean\-\_\-global, T\-\_\-task\-\_\-1\-\_\-min\-\_\-global, and threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-1().
+References flag\_\-task\_\-1\_\-firstexecution, status, t0, T\_\-task\_\-1\_\-exec\_\-global, t\_\-task\_\-1\_\-global, T\_\-task\_\-1\_\-max\_\-global, T\_\-task\_\-1\_\-mean\_\-global, T\_\-task\_\-1\_\-min\_\-global, and threads\_\-linux\_\-periodic\_\-task\_\-1().
 
 
 
-Referenced by threads\-\_\-linux\-\_\-timer\-\_\-task\-\_\-1().
+Referenced by threads\_\-linux\_\-timer\_\-task\_\-1().
+
+
 
 
 \begin{DoxyCode}
-458 \{
-459     \textcolor{keywordtype}{int} \hyperlink{communication_2communication_8c_a6e27f49150e9a14580fb313cc2777e00}{status} = 0;
-460     \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval timereset;
-461     \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval time;
-462     \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval time\_exec\_start;
-463     \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval time\_exec\_end;
-464     \textcolor{keyword}{static} \textcolor{keywordtype}{double} T\_task,t\_task,t\_task\_previous;
-465     \textcolor{keyword}{static} \textcolor{keywordtype}{double} T\_task\_mean,T\_task\_min,T\_task\_max,T\_task\_exec;
+458 {
+459     int status = 0;
+460     static struct timeval timereset;
+461     static struct timeval time;
+462     static struct timeval time_exec_start;
+463     static struct timeval time_exec_end;
+464     static double T_task,t_task,t_task_previous;
+465     static double T_task_mean,T_task_min,T_task_max,T_task_exec;
 466 
-467     gettimeofday(&time\_exec\_start, NULL);
+467     gettimeofday(&time_exec_start, NULL);
 468 
-469     \textcolor{comment}{// Time calculation}
-470     \textcolor{keywordflow}{if}(\hyperlink{main2_8c_a764ebf75ba887a9ecf7bf8fe124960e0}{flag\_task\_1\_firstexecution})
-471     \{
+469     // Time calculation
+470     if(flag_task_1_firstexecution)
+471     {
 472         gettimeofday(&timereset, NULL);
-473         t\_task = 0.0;
-474         T\_task\_mean = 0.0;
-475         T\_task\_min = 0.0;
-476         T\_task\_max = 0.0;
-477         T\_task\_exec = 0.0;
-478     \}
+473         t_task = 0.0;
+474         T_task_mean = 0.0;
+475         T_task_min = 0.0;
+476         T_task_max = 0.0;
+477         T_task_exec = 0.0;
+478     }
 479 
 480     gettimeofday(&time, NULL);
-481     t\_task = ((time.tv\_sec - timereset.tv\_sec) + (time.tv\_usec - timereset.tv\_usec)*1e-6);
-482     T\_task = t\_task - t\_task\_previous;
-483     t\_task\_previous = t\_task;
+481     t_task = ((time.tv_sec - timereset.tv_sec) + (time.tv_usec - timereset.tv_use
+      c)*1e-6);
+482     T_task = t_task - t_task_previous;
+483     t_task_previous = t_task;
 484 
-485     \textcolor{keywordflow}{if}(\hyperlink{main2_8c_a764ebf75ba887a9ecf7bf8fe124960e0}{flag\_task\_1\_firstexecution})
-486     \{
-487         T\_task\_mean = T\_task;
-488         T\_task\_min  = 1e200;
-489         T\_task\_max  = 0.0;
-490         \hyperlink{main2_8c_a86c2efd6da48b362806cdbb5b1e711d8}{t0} = t\_task;
-491     \}
-492     \textcolor{keywordflow}{else}
-493     \{
-494         T\_task\_mean = 0.05*T\_task + 0.95*T\_task\_mean;
-495         \textcolor{keywordflow}{if}(T\_task < T\_task\_min) T\_task\_min  = T\_task;
-496         \textcolor{keywordflow}{if}(T\_task > T\_task\_max) T\_task\_max  = T\_task;
-497     \}
+485     if(flag_task_1_firstexecution)
+486     {
+487         T_task_mean = T_task;
+488         T_task_min  = 1e200;
+489         T_task_max  = 0.0;
+490         t0 = t_task;
+491     }
+492     else
+493     {
+494         T_task_mean = 0.05*T_task + 0.95*T_task_mean;
+495         if(T_task < T_task_min) T_task_min  = T_task;
+496         if(T_task > T_task_max) T_task_max  = T_task;
+497     }
 498 
-499     \textcolor{comment}{// Run the thread}
-500     status = \hyperlink{threads__linux_8c_a2e381152046e690e7264c1a479071048}{threads\_linux\_periodic\_task\_1}();
+499     // Run the thread
+500     status = threads_linux_periodic_task_1();
 501 
-502     gettimeofday(&time\_exec\_end, NULL);
-503     T\_task\_exec = ((time\_exec\_end.tv\_sec - time\_exec\_start.tv\_sec) + (time\_exec\_end.tv\_usec - 
-      time\_exec\_start.tv\_usec)*1e-6);
+502     gettimeofday(&time_exec_end, NULL);
+503     T_task_exec = ((time_exec_end.tv_sec - time_exec_start.tv_sec) + (time_exec_e
+      nd.tv_usec - time_exec_start.tv_usec)*1e-6);
 504 
-505     \hyperlink{main2_8c_a2a2a647912528f7aa86812528dbfe02f}{t\_task\_1\_global} = t\_task;
-506     \hyperlink{main2_8c_a738c330c86a365e72ce29ebca3f1e572}{T\_task\_1\_mean\_global} = T\_task\_mean;
-507     \hyperlink{main2_8c_a86222e255aeeb47598a4fc91ab6c2b1a}{T\_task\_1\_min\_global} = T\_task\_min;
-508     \hyperlink{main2_8c_aa714e30d738039b5bf665742beb31739}{T\_task\_1\_max\_global} = T\_task\_max;
-509     \hyperlink{main2_8c_acdaa4a9b0e1be3dfa53b52df6410ad3b}{T\_task\_1\_exec\_global} = T\_task\_exec;
+505     t_task_1_global = t_task;
+506     T_task_1_mean_global = T_task_mean;
+507     T_task_1_min_global = T_task_min;
+508     T_task_1_max_global = T_task_max;
+509     T_task_1_exec_global = T_task_exec;
 510 
-511     \hyperlink{main2_8c_a764ebf75ba887a9ecf7bf8fe124960e0}{flag\_task\_1\_firstexecution} = 0;
-512 \}
+511     flag_task_1_firstexecution = 0;
+512 }
 \end{DoxyCode}
 
 
-Here is the call graph for this function\-:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{threads__linux_8c_ae03c8e3e8ea1514e4e7ca2005777e6f3_cgraph}
-\end{center}
-\end{figure}
+
+
+Here is the call graph for this function:
 
 
 
+Here is the caller graph for this function:
 
-Here is the caller graph for this function\-:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{threads__linux_8c_ae03c8e3e8ea1514e4e7ca2005777e6f3_icgraph}
-\end{center}
-\end{figure}
-
-
-\hypertarget{threads__linux_8c_aa65173deca09202aea0f4a81a166545b}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!threads\-\_\-linux\-\_\-timer\-\_\-function\-\_\-task\-\_\-2@{threads\-\_\-linux\-\_\-timer\-\_\-function\-\_\-task\-\_\-2}}
-\index{threads\-\_\-linux\-\_\-timer\-\_\-function\-\_\-task\-\_\-2@{threads\-\_\-linux\-\_\-timer\-\_\-function\-\_\-task\-\_\-2}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{threads\-\_\-linux\-\_\-timer\-\_\-function\-\_\-task\-\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}void threads\-\_\-linux\-\_\-timer\-\_\-function\-\_\-task\-\_\-2 (
-\begin{DoxyParamCaption}
-\item[{void}]{}
-\end{DoxyParamCaption}
-)}}\label{threads__linux_8c_aa65173deca09202aea0f4a81a166545b}
+\hypertarget{threads__linux_8c_aa65173deca09202aea0f4a81a166545b}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!threads\_\-linux\_\-timer\_\-function\_\-task\_\-2@{threads\_\-linux\_\-timer\_\-function\_\-task\_\-2}}
+\index{threads\_\-linux\_\-timer\_\-function\_\-task\_\-2@{threads\_\-linux\_\-timer\_\-function\_\-task\_\-2}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{threads\_\-linux\_\-timer\_\-function\_\-task\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}void threads\_\-linux\_\-timer\_\-function\_\-task\_\-2 (void)}}
+\label{threads__linux_8c_aa65173deca09202aea0f4a81a166545b}
 
 
-Definition at line 514 of file threads\-\_\-linux.\-c.
+Definition at line 514 of file threads\_\-linux.c.
 
 
 
-References flag\-\_\-task\-\_\-2\-\_\-firstexecution, status, T\-\_\-task\-\_\-2\-\_\-exec\-\_\-global, t\-\_\-task\-\_\-2\-\_\-global, T\-\_\-task\-\_\-2\-\_\-max\-\_\-global, T\-\_\-task\-\_\-2\-\_\-mean\-\_\-global, T\-\_\-task\-\_\-2\-\_\-min\-\_\-global, and threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-2().
+References flag\_\-task\_\-2\_\-firstexecution, status, T\_\-task\_\-2\_\-exec\_\-global, t\_\-task\_\-2\_\-global, T\_\-task\_\-2\_\-max\_\-global, T\_\-task\_\-2\_\-mean\_\-global, T\_\-task\_\-2\_\-min\_\-global, and threads\_\-linux\_\-periodic\_\-task\_\-2().
 
 
 
-Referenced by threads\-\_\-linux\-\_\-timer\-\_\-task\-\_\-2().
+Referenced by threads\_\-linux\_\-timer\_\-task\_\-2().
+
+
 
 
 \begin{DoxyCode}
-515 \{
-516     \textcolor{keywordtype}{int} \hyperlink{communication_2communication_8c_a6e27f49150e9a14580fb313cc2777e00}{status} = 0;
-517     \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval timereset;
-518     \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval time;
-519     \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval time\_exec\_start;
-520     \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval time\_exec\_end;
-521     \textcolor{keyword}{static} \textcolor{keywordtype}{double} T\_task,t\_task,t\_task\_previous;
-522     \textcolor{keyword}{static} \textcolor{keywordtype}{double} T\_task\_mean,T\_task\_min,T\_task\_max,T\_task\_exec;
+515 {
+516     int status = 0;
+517     static struct timeval timereset;
+518     static struct timeval time;
+519     static struct timeval time_exec_start;
+520     static struct timeval time_exec_end;
+521     static double T_task,t_task,t_task_previous;
+522     static double T_task_mean,T_task_min,T_task_max,T_task_exec;
 523 
-524     gettimeofday(&time\_exec\_start, NULL);
+524     gettimeofday(&time_exec_start, NULL);
 525 
-526     \textcolor{comment}{// Time calculation}
-527     \textcolor{keywordflow}{if}(\hyperlink{main2_8c_a60e039269ae4a130db1bdbc4a709c437}{flag\_task\_2\_firstexecution})
-528     \{
+526     // Time calculation
+527     if(flag_task_2_firstexecution)
+528     {
 529         gettimeofday(&timereset, NULL);
-530         t\_task = 0.0;
-531         T\_task\_mean = 0.0;
-532         T\_task\_min = 0.0;
-533         T\_task\_max = 0.0;
-534         T\_task\_exec = 0.0;
-535     \}
+530         t_task = 0.0;
+531         T_task_mean = 0.0;
+532         T_task_min = 0.0;
+533         T_task_max = 0.0;
+534         T_task_exec = 0.0;
+535     }
 536 
 537     gettimeofday(&time, NULL);
-538     t\_task = ((time.tv\_sec - timereset.tv\_sec) + (time.tv\_usec - timereset.tv\_usec)*1e-6);
-539     T\_task = t\_task - t\_task\_previous;
-540     t\_task\_previous = t\_task;
+538     t_task = ((time.tv_sec - timereset.tv_sec) + (time.tv_usec - timereset.tv_use
+      c)*1e-6);
+539     T_task = t_task - t_task_previous;
+540     t_task_previous = t_task;
 541 
-542     \textcolor{keywordflow}{if}(\hyperlink{main2_8c_a60e039269ae4a130db1bdbc4a709c437}{flag\_task\_2\_firstexecution})
-543     \{
-544         T\_task\_mean = T\_task;
-545         T\_task\_min  = 1e200;
-546         T\_task\_max  = 0.0;
-547     \}
-548     \textcolor{keywordflow}{else}
-549     \{
-550         T\_task\_mean = 0.05*T\_task + 0.95*T\_task\_mean;
-551         \textcolor{keywordflow}{if}(T\_task < T\_task\_min) T\_task\_min  = T\_task;
-552         \textcolor{keywordflow}{if}(T\_task > T\_task\_max) T\_task\_max  = T\_task;
-553     \}
+542     if(flag_task_2_firstexecution)
+543     {
+544         T_task_mean = T_task;
+545         T_task_min  = 1e200;
+546         T_task_max  = 0.0;
+547     }
+548     else
+549     {
+550         T_task_mean = 0.05*T_task + 0.95*T_task_mean;
+551         if(T_task < T_task_min) T_task_min  = T_task;
+552         if(T_task > T_task_max) T_task_max  = T_task;
+553     }
 554 
-555     \textcolor{comment}{// Run the thread}
-556     status = \hyperlink{threads__linux_8c_ad535241b6b29d076beb2cd75a880aaea}{threads\_linux\_periodic\_task\_2}();
+555     // Run the thread
+556     status = threads_linux_periodic_task_2();
 557 
-558     gettimeofday(&time\_exec\_end, NULL);
-559     T\_task\_exec = ((time\_exec\_end.tv\_sec - time\_exec\_start.tv\_sec) + (time\_exec\_end.tv\_usec - 
-      time\_exec\_start.tv\_usec)*1e-6);
+558     gettimeofday(&time_exec_end, NULL);
+559     T_task_exec = ((time_exec_end.tv_sec - time_exec_start.tv_sec) + (time_exec_e
+      nd.tv_usec - time_exec_start.tv_usec)*1e-6);
 560 
-561     \hyperlink{main2_8c_a08f794ff34d918d3d34d771e11e4aba3}{t\_task\_2\_global} = t\_task;
-562     \hyperlink{main2_8c_af4e19d5a9b24aa56c8ebff6ad1aa2b95}{T\_task\_2\_mean\_global} = T\_task\_mean;
-563     \hyperlink{main2_8c_ab7712cb13ce6206dd138a51e2053e36c}{T\_task\_2\_min\_global} = T\_task\_min;
-564     \hyperlink{main2_8c_a1cd82006c46f46176730e876d272cc14}{T\_task\_2\_max\_global} = T\_task\_max;
-565     \hyperlink{main2_8c_a9629c77cd3dba9d47d15c2e51bdde09d}{T\_task\_2\_exec\_global} = T\_task\_exec;
+561     t_task_2_global = t_task;
+562     T_task_2_mean_global = T_task_mean;
+563     T_task_2_min_global = T_task_min;
+564     T_task_2_max_global = T_task_max;
+565     T_task_2_exec_global = T_task_exec;
 566 
-567     \hyperlink{main2_8c_a60e039269ae4a130db1bdbc4a709c437}{flag\_task\_2\_firstexecution} = 0;
-568 \}
+567     flag_task_2_firstexecution = 0;
+568 }
 \end{DoxyCode}
 
 
-Here is the call graph for this function\-:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{threads__linux_8c_aa65173deca09202aea0f4a81a166545b_cgraph}
-\end{center}
-\end{figure}
+
+
+Here is the call graph for this function:
 
 
 
+Here is the caller graph for this function:
 
-Here is the caller graph for this function\-:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{threads__linux_8c_aa65173deca09202aea0f4a81a166545b_icgraph}
-\end{center}
-\end{figure}
-
-
-\hypertarget{threads__linux_8c_a923a30158ef342937317b179dcb6d0fb}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!threads\-\_\-linux\-\_\-timer\-\_\-start\-\_\-task\-\_\-1@{threads\-\_\-linux\-\_\-timer\-\_\-start\-\_\-task\-\_\-1}}
-\index{threads\-\_\-linux\-\_\-timer\-\_\-start\-\_\-task\-\_\-1@{threads\-\_\-linux\-\_\-timer\-\_\-start\-\_\-task\-\_\-1}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{threads\-\_\-linux\-\_\-timer\-\_\-start\-\_\-task\-\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}void threads\-\_\-linux\-\_\-timer\-\_\-start\-\_\-task\-\_\-1 (
-\begin{DoxyParamCaption}
-\item[{void}]{}
-\end{DoxyParamCaption}
-)}}\label{threads__linux_8c_a923a30158ef342937317b179dcb6d0fb}
+\hypertarget{threads__linux_8c_a923a30158ef342937317b179dcb6d0fb}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!threads\_\-linux\_\-timer\_\-start\_\-task\_\-1@{threads\_\-linux\_\-timer\_\-start\_\-task\_\-1}}
+\index{threads\_\-linux\_\-timer\_\-start\_\-task\_\-1@{threads\_\-linux\_\-timer\_\-start\_\-task\_\-1}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{threads\_\-linux\_\-timer\_\-start\_\-task\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}void threads\_\-linux\_\-timer\_\-start\_\-task\_\-1 (void)}}
+\label{threads__linux_8c_a923a30158ef342937317b179dcb6d0fb}
 
 
-Definition at line 375 of file threads\-\_\-linux.\-c.
+Definition at line 375 of file threads\_\-linux.c.
 
 
 
-References flag\-\_\-task\-\_\-1\-\_\-firstexecution, task\-\_\-1\-\_\-period\-\_\-us, threads\-\_\-linux\-\_\-timer\-\_\-task\-\_\-1(), and timer\-\_\-task\-\_\-1.
+References flag\_\-task\_\-1\_\-firstexecution, task\_\-1\_\-period\_\-us, threads\_\-linux\_\-timer\_\-task\_\-1(), and timer\_\-task\_\-1.
 
 
 
-Referenced by threads\-\_\-linux\-\_\-init().
+Referenced by threads\_\-linux\_\-init().
+
+
 
 
 \begin{DoxyCode}
-376 \{
-377     \textcolor{keyword}{struct }itimerspec itimer;
-378     \textcolor{keyword}{struct }sigevent sigev;
-379     \textcolor{keywordtype}{int} errno = 0;
+376 {
+377     struct itimerspec itimer;
+378     struct sigevent sigev;
+379     int errno = 0;
 380 
-381     \hyperlink{main2_8c_a764ebf75ba887a9ecf7bf8fe124960e0}{flag\_task\_1\_firstexecution} = 1;
+381     flag_task_1_firstexecution = 1;
 382 
-383     itimer.it\_interval.tv\_sec=0;
-384     itimer.it\_interval.tv\_nsec=\hyperlink{main2_8c_afffc21b0b726e6f4a572d0eefd3b5d69}{task\_1\_period\_us} * 1000;
-385     itimer.it\_value=itimer.it\_interval;
+383     itimer.it_interval.tv_sec=0;
+384     itimer.it_interval.tv_nsec=task_1_period_us * 1000;
+385     itimer.it_value=itimer.it_interval;
 386 
-387     memset(&sigev, 0, \textcolor{keyword}{sizeof} (\textcolor{keyword}{struct} sigevent));
-388     sigev.sigev\_value.sival\_int = 0;
-389     sigev.sigev\_notify = SIGEV\_THREAD;
-390     sigev.sigev\_notify\_attributes = NULL;
-391     sigev.sigev\_notify\_function = \hyperlink{threads__linux_8c_a86f471cf8f5e7b5242fa6b68589335a9}{threads\_linux\_timer\_task\_1};
+387     memset(&sigev, 0, sizeof (struct sigevent));
+388     sigev.sigev_value.sival_int = 0;
+389     sigev.sigev_notify = SIGEV_THREAD;
+390     sigev.sigev_notify_attributes = NULL;
+391     sigev.sigev_notify_function = threads_linux_timer_task_1;
 392 
-393     \textcolor{keywordflow}{if} (timer\_create(CLOCK\_REALTIME, &sigev, &\hyperlink{main2_8c_a904a157c5d5f94416cd450f511635af1}{timer\_task\_1}) < 0)
-394     \{
-395         fprintf(stderr, \textcolor{stringliteral}{"[%d]: %s\(\backslash\)n"}, \_\_LINE\_\_, strerror(errno));
+393     if (timer_create(CLOCK_REALTIME, &sigev, &timer_task_1) < 0)
+394     {
+395         fprintf(stderr, "[%d]: %s\n", __LINE__, strerror(errno));
 396         exit(errno);
-397     \}
+397     }
 398 
-399     \textcolor{keywordflow}{if}(timer\_settime(\hyperlink{main2_8c_a904a157c5d5f94416cd450f511635af1}{timer\_task\_1}, 0, &itimer, NULL) < 0)
-400     \{
-401         fprintf(stderr, \textcolor{stringliteral}{"[%d]: %s\(\backslash\)n"}, \_\_LINE\_\_, strerror(errno));
+399     if(timer_settime(timer_task_1, 0, &itimer, NULL) < 0)
+400     {
+401         fprintf(stderr, "[%d]: %s\n", __LINE__, strerror(errno));
 402         exit(errno);
-403     \}
-404 \}
+403     }
+404 }
 \end{DoxyCode}
 
 
-Here is the call graph for this function\-:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{threads__linux_8c_a923a30158ef342937317b179dcb6d0fb_cgraph}
-\end{center}
-\end{figure}
+
+
+Here is the call graph for this function:
 
 
 
+Here is the caller graph for this function:
 
-Here is the caller graph for this function\-:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=310pt]{threads__linux_8c_a923a30158ef342937317b179dcb6d0fb_icgraph}
-\end{center}
-\end{figure}
-
-
-\hypertarget{threads__linux_8c_a59d6f60b682f360c3759cefad7ad2a4e}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!threads\-\_\-linux\-\_\-timer\-\_\-start\-\_\-task\-\_\-2@{threads\-\_\-linux\-\_\-timer\-\_\-start\-\_\-task\-\_\-2}}
-\index{threads\-\_\-linux\-\_\-timer\-\_\-start\-\_\-task\-\_\-2@{threads\-\_\-linux\-\_\-timer\-\_\-start\-\_\-task\-\_\-2}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{threads\-\_\-linux\-\_\-timer\-\_\-start\-\_\-task\-\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}void threads\-\_\-linux\-\_\-timer\-\_\-start\-\_\-task\-\_\-2 (
-\begin{DoxyParamCaption}
-\item[{void}]{}
-\end{DoxyParamCaption}
-)}}\label{threads__linux_8c_a59d6f60b682f360c3759cefad7ad2a4e}
+\hypertarget{threads__linux_8c_a59d6f60b682f360c3759cefad7ad2a4e}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!threads\_\-linux\_\-timer\_\-start\_\-task\_\-2@{threads\_\-linux\_\-timer\_\-start\_\-task\_\-2}}
+\index{threads\_\-linux\_\-timer\_\-start\_\-task\_\-2@{threads\_\-linux\_\-timer\_\-start\_\-task\_\-2}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{threads\_\-linux\_\-timer\_\-start\_\-task\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}void threads\_\-linux\_\-timer\_\-start\_\-task\_\-2 (void)}}
+\label{threads__linux_8c_a59d6f60b682f360c3759cefad7ad2a4e}
 
 
-Definition at line 406 of file threads\-\_\-linux.\-c.
+Definition at line 406 of file threads\_\-linux.c.
 
 
 
-References flag\-\_\-task\-\_\-2\-\_\-firstexecution, task\-\_\-2\-\_\-period\-\_\-us, threads\-\_\-linux\-\_\-timer\-\_\-task\-\_\-2(), and timer\-\_\-task\-\_\-2.
+References flag\_\-task\_\-2\_\-firstexecution, task\_\-2\_\-period\_\-us, threads\_\-linux\_\-timer\_\-task\_\-2(), and timer\_\-task\_\-2.
 
 
 
-Referenced by threads\-\_\-linux\-\_\-init().
+Referenced by threads\_\-linux\_\-init().
+
+
 
 
 \begin{DoxyCode}
-407 \{
-408     \textcolor{keyword}{struct }itimerspec itimer;
-409     \textcolor{keyword}{struct }sigevent sigev;
-410     \textcolor{keywordtype}{int} errno = 0;
+407 {
+408     struct itimerspec itimer;
+409     struct sigevent sigev;
+410     int errno = 0;
 411 
-412     \hyperlink{main2_8c_a60e039269ae4a130db1bdbc4a709c437}{flag\_task\_2\_firstexecution} = 1;
+412     flag_task_2_firstexecution = 1;
 413 
-414     itimer.it\_interval.tv\_sec=0;
-415     itimer.it\_interval.tv\_nsec=\hyperlink{main2_8c_a5166d431d5448a1538e75f5469c19c7b}{task\_2\_period\_us} * 1000;
-416     itimer.it\_value=itimer.it\_interval;
+414     itimer.it_interval.tv_sec=0;
+415     itimer.it_interval.tv_nsec=task_2_period_us * 1000;
+416     itimer.it_value=itimer.it_interval;
 417 
-418     memset (&sigev, 0, \textcolor{keyword}{sizeof} (\textcolor{keyword}{struct} sigevent));
-419     sigev.sigev\_value.sival\_int = 0;
-420     sigev.sigev\_notify = SIGEV\_THREAD;
-421     sigev.sigev\_notify\_attributes = NULL;
-422     sigev.sigev\_notify\_function = \hyperlink{threads__linux_8c_aaff43cd760c084d80d045228b46fe784}{threads\_linux\_timer\_task\_2};
+418     memset (&sigev, 0, sizeof (struct sigevent));
+419     sigev.sigev_value.sival_int = 0;
+420     sigev.sigev_notify = SIGEV_THREAD;
+421     sigev.sigev_notify_attributes = NULL;
+422     sigev.sigev_notify_function = threads_linux_timer_task_2;
 423 
-424     \textcolor{keywordflow}{if}(timer\_create(CLOCK\_REALTIME, &sigev, &\hyperlink{main2_8c_adf6e8e22925f399f086dea8671f39c08}{timer\_task\_2}) < 0)
-425     \{
-426         fprintf(stderr, \textcolor{stringliteral}{"[%d]: %s\(\backslash\)n"}, \_\_LINE\_\_, strerror(errno));
+424     if(timer_create(CLOCK_REALTIME, &sigev, &timer_task_2) < 0)
+425     {
+426         fprintf(stderr, "[%d]: %s\n", __LINE__, strerror(errno));
 427         exit(errno);
-428     \}
+428     }
 429 
-430     \textcolor{keywordflow}{if}(timer\_settime(\hyperlink{main2_8c_adf6e8e22925f399f086dea8671f39c08}{timer\_task\_2}, 0, &itimer, NULL) < 0)
-431     \{
-432         fprintf(stderr, \textcolor{stringliteral}{"[%d]: %s\(\backslash\)n"}, \_\_LINE\_\_, strerror(errno));
+430     if(timer_settime(timer_task_2, 0, &itimer, NULL) < 0)
+431     {
+432         fprintf(stderr, "[%d]: %s\n", __LINE__, strerror(errno));
 433         exit(errno);
-434     \}
-435 \}
+434     }
+435 }
 \end{DoxyCode}
 
 
-Here is the call graph for this function\-:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{threads__linux_8c_a59d6f60b682f360c3759cefad7ad2a4e_cgraph}
-\end{center}
-\end{figure}
+
+
+Here is the call graph for this function:
 
 
 
+Here is the caller graph for this function:
 
-Here is the caller graph for this function\-:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=310pt]{threads__linux_8c_a59d6f60b682f360c3759cefad7ad2a4e_icgraph}
-\end{center}
-\end{figure}
-
-
-\hypertarget{threads__linux_8c_a928ae9705d888293ed43a8109789716a}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!threads\-\_\-linux\-\_\-timer\-\_\-stop\-\_\-task\-\_\-1@{threads\-\_\-linux\-\_\-timer\-\_\-stop\-\_\-task\-\_\-1}}
-\index{threads\-\_\-linux\-\_\-timer\-\_\-stop\-\_\-task\-\_\-1@{threads\-\_\-linux\-\_\-timer\-\_\-stop\-\_\-task\-\_\-1}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{threads\-\_\-linux\-\_\-timer\-\_\-stop\-\_\-task\-\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}void threads\-\_\-linux\-\_\-timer\-\_\-stop\-\_\-task\-\_\-1 (
-\begin{DoxyParamCaption}
-\item[{void}]{}
-\end{DoxyParamCaption}
-)}}\label{threads__linux_8c_a928ae9705d888293ed43a8109789716a}
+\hypertarget{threads__linux_8c_a928ae9705d888293ed43a8109789716a}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!threads\_\-linux\_\-timer\_\-stop\_\-task\_\-1@{threads\_\-linux\_\-timer\_\-stop\_\-task\_\-1}}
+\index{threads\_\-linux\_\-timer\_\-stop\_\-task\_\-1@{threads\_\-linux\_\-timer\_\-stop\_\-task\_\-1}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{threads\_\-linux\_\-timer\_\-stop\_\-task\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}void threads\_\-linux\_\-timer\_\-stop\_\-task\_\-1 (void)}}
+\label{threads__linux_8c_a928ae9705d888293ed43a8109789716a}
 
 
-Definition at line 437 of file threads\-\_\-linux.\-c.
+Definition at line 437 of file threads\_\-linux.c.
 
 
 
-References timer\-\_\-task\-\_\-1.
+References timer\_\-task\_\-1.
 
 
 
-Referenced by threads\-\_\-linux\-\_\-init().
+Referenced by threads\_\-linux\_\-init().
+
+
 
 
 \begin{DoxyCode}
-438 \{
-439     \textcolor{keywordtype}{int} errno = 0;
-440     \textcolor{keywordflow}{if}(timer\_delete(\hyperlink{main2_8c_a904a157c5d5f94416cd450f511635af1}{timer\_task\_1}) < 0)
-441     \{
-442         fprintf(stderr, \textcolor{stringliteral}{"[%d]: %s\(\backslash\)n"}, \_\_LINE\_\_, strerror(errno));
+438 {
+439     int errno = 0;
+440     if(timer_delete(timer_task_1) < 0)
+441     {
+442         fprintf(stderr, "[%d]: %s\n", __LINE__, strerror(errno));
 443         exit(errno);
-444     \}
-445 \}
+444     }
+445 }
 \end{DoxyCode}
 
 
-Here is the caller graph for this function\-:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=310pt]{threads__linux_8c_a928ae9705d888293ed43a8109789716a_icgraph}
-\end{center}
-\end{figure}
 
 
-\hypertarget{threads__linux_8c_a78eb56e9ece1f0050dda425824fb6a71}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!threads\-\_\-linux\-\_\-timer\-\_\-stop\-\_\-task\-\_\-2@{threads\-\_\-linux\-\_\-timer\-\_\-stop\-\_\-task\-\_\-2}}
-\index{threads\-\_\-linux\-\_\-timer\-\_\-stop\-\_\-task\-\_\-2@{threads\-\_\-linux\-\_\-timer\-\_\-stop\-\_\-task\-\_\-2}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{threads\-\_\-linux\-\_\-timer\-\_\-stop\-\_\-task\-\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}void threads\-\_\-linux\-\_\-timer\-\_\-stop\-\_\-task\-\_\-2 (
-\begin{DoxyParamCaption}
-\item[{void}]{}
-\end{DoxyParamCaption}
-)}}\label{threads__linux_8c_a78eb56e9ece1f0050dda425824fb6a71}
+Here is the caller graph for this function:
+
+\hypertarget{threads__linux_8c_a78eb56e9ece1f0050dda425824fb6a71}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!threads\_\-linux\_\-timer\_\-stop\_\-task\_\-2@{threads\_\-linux\_\-timer\_\-stop\_\-task\_\-2}}
+\index{threads\_\-linux\_\-timer\_\-stop\_\-task\_\-2@{threads\_\-linux\_\-timer\_\-stop\_\-task\_\-2}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{threads\_\-linux\_\-timer\_\-stop\_\-task\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}void threads\_\-linux\_\-timer\_\-stop\_\-task\_\-2 (void)}}
+\label{threads__linux_8c_a78eb56e9ece1f0050dda425824fb6a71}
 
 
-Definition at line 447 of file threads\-\_\-linux.\-c.
+Definition at line 447 of file threads\_\-linux.c.
 
 
 
-References timer\-\_\-task\-\_\-2.
+References timer\_\-task\_\-2.
 
 
 
-Referenced by threads\-\_\-linux\-\_\-init().
+Referenced by threads\_\-linux\_\-init().
+
+
 
 
 \begin{DoxyCode}
-448 \{
-449     \textcolor{keywordtype}{int} errno = 0;
-450     \textcolor{keywordflow}{if}(timer\_delete(\hyperlink{main2_8c_adf6e8e22925f399f086dea8671f39c08}{timer\_task\_2}) < 0)
-451     \{
-452         fprintf(stderr, \textcolor{stringliteral}{"[%d]: %s\(\backslash\)n"}, \_\_LINE\_\_, strerror(errno));
+448 {
+449     int errno = 0;
+450     if(timer_delete(timer_task_2) < 0)
+451     {
+452         fprintf(stderr, "[%d]: %s\n", __LINE__, strerror(errno));
 453         exit(errno);
-454     \}
-455 \}
+454     }
+455 }
 \end{DoxyCode}
 
 
-Here is the caller graph for this function\-:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=310pt]{threads__linux_8c_a78eb56e9ece1f0050dda425824fb6a71_icgraph}
-\end{center}
-\end{figure}
 
 
-\hypertarget{threads__linux_8c_a86f471cf8f5e7b5242fa6b68589335a9}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!threads\-\_\-linux\-\_\-timer\-\_\-task\-\_\-1@{threads\-\_\-linux\-\_\-timer\-\_\-task\-\_\-1}}
-\index{threads\-\_\-linux\-\_\-timer\-\_\-task\-\_\-1@{threads\-\_\-linux\-\_\-timer\-\_\-task\-\_\-1}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{threads\-\_\-linux\-\_\-timer\-\_\-task\-\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}void threads\-\_\-linux\-\_\-timer\-\_\-task\-\_\-1 (
-\begin{DoxyParamCaption}
-\item[{union sigval}]{sigval}
-\end{DoxyParamCaption}
-)}}\label{threads__linux_8c_a86f471cf8f5e7b5242fa6b68589335a9}
+Here is the caller graph for this function:
+
+\hypertarget{threads__linux_8c_a86f471cf8f5e7b5242fa6b68589335a9}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!threads\_\-linux\_\-timer\_\-task\_\-1@{threads\_\-linux\_\-timer\_\-task\_\-1}}
+\index{threads\_\-linux\_\-timer\_\-task\_\-1@{threads\_\-linux\_\-timer\_\-task\_\-1}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{threads\_\-linux\_\-timer\_\-task\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}void threads\_\-linux\_\-timer\_\-task\_\-1 (union sigval sigval)}}
+\label{threads__linux_8c_a86f471cf8f5e7b5242fa6b68589335a9}
 
 
-Definition at line 363 of file threads\-\_\-linux.\-c.
+Definition at line 363 of file threads\_\-linux.c.
 
 
 
-References threads\-\_\-linux\-\_\-timer\-\_\-function\-\_\-task\-\_\-1().
+References threads\_\-linux\_\-timer\_\-function\_\-task\_\-1().
 
 
 
-Referenced by threads\-\_\-linux\-\_\-timer\-\_\-start\-\_\-task\-\_\-1().
+Referenced by threads\_\-linux\_\-timer\_\-start\_\-task\_\-1().
+
+
 
 
 \begin{DoxyCode}
-364 \{
-365     sigval.sival\_int = 0; \textcolor{comment}{// Remove warning}
-366     \hyperlink{threads__linux_8c_ae03c8e3e8ea1514e4e7ca2005777e6f3}{threads\_linux\_timer\_function\_task\_1}();
-367 \}
+364 {
+365     sigval.sival_int = 0; // Remove warning
+366     threads_linux_timer_function_task_1();
+367 }
 \end{DoxyCode}
 
 
-Here is the call graph for this function\-:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{threads__linux_8c_a86f471cf8f5e7b5242fa6b68589335a9_cgraph}
-\end{center}
-\end{figure}
+
+
+Here is the call graph for this function:
 
 
 
+Here is the caller graph for this function:
 
-Here is the caller graph for this function\-:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{threads__linux_8c_a86f471cf8f5e7b5242fa6b68589335a9_icgraph}
-\end{center}
-\end{figure}
-
-
-\hypertarget{threads__linux_8c_a86f471cf8f5e7b5242fa6b68589335a9}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!threads\-\_\-linux\-\_\-timer\-\_\-task\-\_\-1@{threads\-\_\-linux\-\_\-timer\-\_\-task\-\_\-1}}
-\index{threads\-\_\-linux\-\_\-timer\-\_\-task\-\_\-1@{threads\-\_\-linux\-\_\-timer\-\_\-task\-\_\-1}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{threads\-\_\-linux\-\_\-timer\-\_\-task\-\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}void threads\-\_\-linux\-\_\-timer\-\_\-task\-\_\-1 (
-\begin{DoxyParamCaption}
-\item[{union sigval sigval}]{}
-\end{DoxyParamCaption}
-)}}\label{threads__linux_8c_a86f471cf8f5e7b5242fa6b68589335a9}
+\hypertarget{threads__linux_8c_a86f471cf8f5e7b5242fa6b68589335a9}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!threads\_\-linux\_\-timer\_\-task\_\-1@{threads\_\-linux\_\-timer\_\-task\_\-1}}
+\index{threads\_\-linux\_\-timer\_\-task\_\-1@{threads\_\-linux\_\-timer\_\-task\_\-1}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{threads\_\-linux\_\-timer\_\-task\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}void threads\_\-linux\_\-timer\_\-task\_\-1 (union sigval {\em sigval})}}
+\label{threads__linux_8c_a86f471cf8f5e7b5242fa6b68589335a9}
 
 
-Definition at line 363 of file threads\-\_\-linux.\-c.
+Definition at line 363 of file threads\_\-linux.c.
 
 
 
-References threads\-\_\-linux\-\_\-timer\-\_\-function\-\_\-task\-\_\-1().
+References threads\_\-linux\_\-timer\_\-function\_\-task\_\-1().
 
 
 
-Referenced by threads\-\_\-linux\-\_\-timer\-\_\-start\-\_\-task\-\_\-1().
+Referenced by threads\_\-linux\_\-timer\_\-start\_\-task\_\-1().
+
+
 
 
 \begin{DoxyCode}
-364 \{
-365     sigval.sival\_int = 0; \textcolor{comment}{// Remove warning}
-366     \hyperlink{threads__linux_8c_ae03c8e3e8ea1514e4e7ca2005777e6f3}{threads\_linux\_timer\_function\_task\_1}();
-367 \}
+364 {
+365     sigval.sival_int = 0; // Remove warning
+366     threads_linux_timer_function_task_1();
+367 }
 \end{DoxyCode}
 
 
-Here is the call graph for this function\-:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{threads__linux_8c_a86f471cf8f5e7b5242fa6b68589335a9_cgraph}
-\end{center}
-\end{figure}
+
+
+Here is the call graph for this function:
 
 
 
+Here is the caller graph for this function:
 
-Here is the caller graph for this function\-:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{threads__linux_8c_a86f471cf8f5e7b5242fa6b68589335a9_icgraph}
-\end{center}
-\end{figure}
-
-
-\hypertarget{threads__linux_8c_aaff43cd760c084d80d045228b46fe784}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!threads\-\_\-linux\-\_\-timer\-\_\-task\-\_\-2@{threads\-\_\-linux\-\_\-timer\-\_\-task\-\_\-2}}
-\index{threads\-\_\-linux\-\_\-timer\-\_\-task\-\_\-2@{threads\-\_\-linux\-\_\-timer\-\_\-task\-\_\-2}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{threads\-\_\-linux\-\_\-timer\-\_\-task\-\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}void threads\-\_\-linux\-\_\-timer\-\_\-task\-\_\-2 (
-\begin{DoxyParamCaption}
-\item[{union sigval}]{sigval}
-\end{DoxyParamCaption}
-)}}\label{threads__linux_8c_aaff43cd760c084d80d045228b46fe784}
+\hypertarget{threads__linux_8c_aaff43cd760c084d80d045228b46fe784}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!threads\_\-linux\_\-timer\_\-task\_\-2@{threads\_\-linux\_\-timer\_\-task\_\-2}}
+\index{threads\_\-linux\_\-timer\_\-task\_\-2@{threads\_\-linux\_\-timer\_\-task\_\-2}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{threads\_\-linux\_\-timer\_\-task\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}void threads\_\-linux\_\-timer\_\-task\_\-2 (union sigval sigval)}}
+\label{threads__linux_8c_aaff43cd760c084d80d045228b46fe784}
 
 
-Definition at line 369 of file threads\-\_\-linux.\-c.
+Definition at line 369 of file threads\_\-linux.c.
 
 
 
-References threads\-\_\-linux\-\_\-timer\-\_\-function\-\_\-task\-\_\-2().
+References threads\_\-linux\_\-timer\_\-function\_\-task\_\-2().
 
 
 
-Referenced by threads\-\_\-linux\-\_\-timer\-\_\-start\-\_\-task\-\_\-2().
+Referenced by threads\_\-linux\_\-timer\_\-start\_\-task\_\-2().
+
+
 
 
 \begin{DoxyCode}
-370 \{
-371     sigval.sival\_int = 0; \textcolor{comment}{// Remove warning}
-372     \hyperlink{threads__linux_8c_aa65173deca09202aea0f4a81a166545b}{threads\_linux\_timer\_function\_task\_2}();
-373 \}
+370 {
+371     sigval.sival_int = 0; // Remove warning
+372     threads_linux_timer_function_task_2();
+373 }
 \end{DoxyCode}
 
 
-Here is the call graph for this function\-:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{threads__linux_8c_aaff43cd760c084d80d045228b46fe784_cgraph}
-\end{center}
-\end{figure}
+
+
+Here is the call graph for this function:
 
 
 
+Here is the caller graph for this function:
 
-Here is the caller graph for this function\-:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{threads__linux_8c_aaff43cd760c084d80d045228b46fe784_icgraph}
-\end{center}
-\end{figure}
-
-
-\hypertarget{threads__linux_8c_aaff43cd760c084d80d045228b46fe784}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!threads\-\_\-linux\-\_\-timer\-\_\-task\-\_\-2@{threads\-\_\-linux\-\_\-timer\-\_\-task\-\_\-2}}
-\index{threads\-\_\-linux\-\_\-timer\-\_\-task\-\_\-2@{threads\-\_\-linux\-\_\-timer\-\_\-task\-\_\-2}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{threads\-\_\-linux\-\_\-timer\-\_\-task\-\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}void threads\-\_\-linux\-\_\-timer\-\_\-task\-\_\-2 (
-\begin{DoxyParamCaption}
-\item[{union sigval sigval}]{}
-\end{DoxyParamCaption}
-)}}\label{threads__linux_8c_aaff43cd760c084d80d045228b46fe784}
+\hypertarget{threads__linux_8c_aaff43cd760c084d80d045228b46fe784}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!threads\_\-linux\_\-timer\_\-task\_\-2@{threads\_\-linux\_\-timer\_\-task\_\-2}}
+\index{threads\_\-linux\_\-timer\_\-task\_\-2@{threads\_\-linux\_\-timer\_\-task\_\-2}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{threads\_\-linux\_\-timer\_\-task\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}void threads\_\-linux\_\-timer\_\-task\_\-2 (union sigval {\em sigval})}}
+\label{threads__linux_8c_aaff43cd760c084d80d045228b46fe784}
 
 
-Definition at line 369 of file threads\-\_\-linux.\-c.
+Definition at line 369 of file threads\_\-linux.c.
 
 
 
-References threads\-\_\-linux\-\_\-timer\-\_\-function\-\_\-task\-\_\-2().
+References threads\_\-linux\_\-timer\_\-function\_\-task\_\-2().
 
 
 
-Referenced by threads\-\_\-linux\-\_\-timer\-\_\-start\-\_\-task\-\_\-2().
+Referenced by threads\_\-linux\_\-timer\_\-start\_\-task\_\-2().
+
+
 
 
 \begin{DoxyCode}
-370 \{
-371     sigval.sival\_int = 0; \textcolor{comment}{// Remove warning}
-372     \hyperlink{threads__linux_8c_aa65173deca09202aea0f4a81a166545b}{threads\_linux\_timer\_function\_task\_2}();
-373 \}
+370 {
+371     sigval.sival_int = 0; // Remove warning
+372     threads_linux_timer_function_task_2();
+373 }
 \end{DoxyCode}
 
 
-Here is the call graph for this function\-:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{threads__linux_8c_aaff43cd760c084d80d045228b46fe784_cgraph}
-\end{center}
-\end{figure}
+
+
+Here is the call graph for this function:
 
 
 
+Here is the caller graph for this function:
 
-Here is the caller graph for this function\-:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{threads__linux_8c_aaff43cd760c084d80d045228b46fe784_icgraph}
-\end{center}
-\end{figure}
-
-
-\hypertarget{threads__linux_8c_a5ba2e82998677ad5d27022cc793583ec}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!threads\-\_\-reset\-\_\-timer@{threads\-\_\-reset\-\_\-timer}}
-\index{threads\-\_\-reset\-\_\-timer@{threads\-\_\-reset\-\_\-timer}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{threads\-\_\-reset\-\_\-timer}]{\setlength{\rightskip}{0pt plus 5cm}int threads\-\_\-reset\-\_\-timer (
-\begin{DoxyParamCaption}
-\item[{void}]{}
-\end{DoxyParamCaption}
-)}}\label{threads__linux_8c_a5ba2e82998677ad5d27022cc793583ec}
+\hypertarget{threads__linux_8c_a5ba2e82998677ad5d27022cc793583ec}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!threads\_\-reset\_\-timer@{threads\_\-reset\_\-timer}}
+\index{threads\_\-reset\_\-timer@{threads\_\-reset\_\-timer}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{threads\_\-reset\_\-timer}]{\setlength{\rightskip}{0pt plus 5cm}int threads\_\-reset\_\-timer (void)}}
+\label{threads__linux_8c_a5ba2e82998677ad5d27022cc793583ec}
 
 
-Definition at line 570 of file threads\-\_\-linux.\-c.
+Definition at line 570 of file threads\_\-linux.c.
 
 
 
-References t0, and t\-\_\-task\-\_\-1\-\_\-global.
+References t0, and t\_\-task\_\-1\_\-global.
 
 
 
-Referenced by threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-1().
+Referenced by threads\_\-linux\_\-periodic\_\-task\_\-1().
+
+
 
 
 \begin{DoxyCode}
-571 \{
-572     \hyperlink{main2_8c_a86c2efd6da48b362806cdbb5b1e711d8}{t0} = \hyperlink{main2_8c_a2a2a647912528f7aa86812528dbfe02f}{t\_task\_1\_global};
-573     \textcolor{keywordflow}{return} THREADS\_LINUX\_SUCCESS;
-574 \}
+571 {
+572     t0 = t_task_1_global;
+573     return THREADS_LINUX_SUCCESS;
+574 }
 \end{DoxyCode}
 
 
-Here is the caller graph for this function\-:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{threads__linux_8c_a5ba2e82998677ad5d27022cc793583ec_icgraph}
-\end{center}
-\end{figure}
 
+
+Here is the caller graph for this function:
 
 
 
 \subsection{Variable Documentation}
-\hypertarget{threads__linux_8c_a6e03a1c8574304386184af6cad0187a3}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!battery\-\_\-data@{battery\-\_\-data}}
-\index{battery\-\_\-data@{battery\-\_\-data}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{battery\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}B\-A\-T\-T\-E\-R\-Y\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T battery\-\_\-data}}\label{threads__linux_8c_a6e03a1c8574304386184af6cad0187a3}
+\hypertarget{threads__linux_8c_a6e03a1c8574304386184af6cad0187a3}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!battery\_\-data@{battery\_\-data}}
+\index{battery\_\-data@{battery\_\-data}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{battery\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}BATTERY\_\-DATA\_\-STRUCT {\bf battery\_\-data}}}
+\label{threads__linux_8c_a6e03a1c8574304386184af6cad0187a3}
 
 
-Definition at line 68 of file threads\-\_\-linux.\-c.
+Definition at line 68 of file threads\_\-linux.c.
 
 
 
-Referenced by threads\-\_\-linux\-\_\-init(), threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-1(), and threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-2().
+Referenced by threads\_\-linux\_\-init(), threads\_\-linux\_\-periodic\_\-task\_\-1(), and threads\_\-linux\_\-periodic\_\-task\_\-2().
 
-\hypertarget{threads__linux_8c_a54474abecc241cd0ed5dd0a3b7f42a72}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!calibration\-\_\-altimeter\-\_\-data@{calibration\-\_\-altimeter\-\_\-data}}
-\index{calibration\-\_\-altimeter\-\_\-data@{calibration\-\_\-altimeter\-\_\-data}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{calibration\-\_\-altimeter\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}C\-A\-L\-I\-B\-R\-A\-T\-I\-O\-N\-\_\-\-A\-L\-T\-I\-M\-E\-T\-E\-R\-\_\-\-S\-T\-R\-U\-C\-T calibration\-\_\-altimeter\-\_\-data}}\label{threads__linux_8c_a54474abecc241cd0ed5dd0a3b7f42a72}
+\hypertarget{threads__linux_8c_a54474abecc241cd0ed5dd0a3b7f42a72}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!calibration\_\-altimeter\_\-data@{calibration\_\-altimeter\_\-data}}
+\index{calibration\_\-altimeter\_\-data@{calibration\_\-altimeter\_\-data}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{calibration\_\-altimeter\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}CALIBRATION\_\-ALTIMETER\_\-STRUCT {\bf calibration\_\-altimeter\_\-data}}}
+\label{threads__linux_8c_a54474abecc241cd0ed5dd0a3b7f42a72}
 
 
-Definition at line 84 of file threads\-\_\-linux.\-c.
+Definition at line 84 of file threads\_\-linux.c.
 
 
 
-Referenced by threads\-\_\-linux\-\_\-init(), threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-1(), and threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-2().
+Referenced by threads\_\-linux\_\-init(), threads\_\-linux\_\-periodic\_\-task\_\-1(), and threads\_\-linux\_\-periodic\_\-task\_\-2().
 
-\hypertarget{threads__linux_8c_a6409aa72713a8e9cbecf43c9e6b4ef5f}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!calibration\-\_\-local\-\_\-coordinate\-\_\-system\-\_\-data@{calibration\-\_\-local\-\_\-coordinate\-\_\-system\-\_\-data}}
-\index{calibration\-\_\-local\-\_\-coordinate\-\_\-system\-\_\-data@{calibration\-\_\-local\-\_\-coordinate\-\_\-system\-\_\-data}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{calibration\-\_\-local\-\_\-coordinate\-\_\-system\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}C\-A\-L\-I\-B\-R\-A\-T\-I\-O\-N\-\_\-\-L\-O\-C\-A\-L\-\_\-\-C\-O\-O\-R\-D\-I\-N\-A\-T\-E\-\_\-\-S\-Y\-S\-T\-E\-M\-\_\-\-S\-T\-R\-U\-C\-T calibration\-\_\-local\-\_\-coordinate\-\_\-system\-\_\-data}}\label{threads__linux_8c_a6409aa72713a8e9cbecf43c9e6b4ef5f}
+\hypertarget{threads__linux_8c_a6409aa72713a8e9cbecf43c9e6b4ef5f}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!calibration\_\-local\_\-coordinate\_\-system\_\-data@{calibration\_\-local\_\-coordinate\_\-system\_\-data}}
+\index{calibration\_\-local\_\-coordinate\_\-system\_\-data@{calibration\_\-local\_\-coordinate\_\-system\_\-data}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{calibration\_\-local\_\-coordinate\_\-system\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}CALIBRATION\_\-LOCAL\_\-COORDINATE\_\-SYSTEM\_\-STRUCT {\bf calibration\_\-local\_\-coordinate\_\-system\_\-data}}}
+\label{threads__linux_8c_a6409aa72713a8e9cbecf43c9e6b4ef5f}
 
 
-Definition at line 85 of file threads\-\_\-linux.\-c.
+Definition at line 85 of file threads\_\-linux.c.
 
 
 
-Referenced by threads\-\_\-linux\-\_\-init(), threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-1(), and threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-2().
+Referenced by threads\_\-linux\_\-init(), threads\_\-linux\_\-periodic\_\-task\_\-1(), and threads\_\-linux\_\-periodic\_\-task\_\-2().
 
-\hypertarget{threads__linux_8c_a520f88fc1d70b3ce27e0f9a3d9c6c2df}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!calibration\-\_\-local\-\_\-fields\-\_\-data@{calibration\-\_\-local\-\_\-fields\-\_\-data}}
-\index{calibration\-\_\-local\-\_\-fields\-\_\-data@{calibration\-\_\-local\-\_\-fields\-\_\-data}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{calibration\-\_\-local\-\_\-fields\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}C\-A\-L\-I\-B\-R\-A\-T\-I\-O\-N\-\_\-\-L\-O\-C\-A\-L\-\_\-\-F\-I\-E\-L\-D\-S\-\_\-\-S\-T\-R\-U\-C\-T calibration\-\_\-local\-\_\-fields\-\_\-data}}\label{threads__linux_8c_a520f88fc1d70b3ce27e0f9a3d9c6c2df}
+\hypertarget{threads__linux_8c_a520f88fc1d70b3ce27e0f9a3d9c6c2df}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!calibration\_\-local\_\-fields\_\-data@{calibration\_\-local\_\-fields\_\-data}}
+\index{calibration\_\-local\_\-fields\_\-data@{calibration\_\-local\_\-fields\_\-data}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{calibration\_\-local\_\-fields\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}CALIBRATION\_\-LOCAL\_\-FIELDS\_\-STRUCT {\bf calibration\_\-local\_\-fields\_\-data}}}
+\label{threads__linux_8c_a520f88fc1d70b3ce27e0f9a3d9c6c2df}
 
 
-Definition at line 86 of file threads\-\_\-linux.\-c.
+Definition at line 86 of file threads\_\-linux.c.
 
 
 
-Referenced by threads\-\_\-linux\-\_\-init(), threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-1(), and threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-2().
+Referenced by threads\_\-linux\_\-init(), threads\_\-linux\_\-periodic\_\-task\_\-1(), and threads\_\-linux\_\-periodic\_\-task\_\-2().
 
-\hypertarget{threads__linux_8c_aff494a26c79d58504615f0502cfa8f31}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!control\-\_\-data@{control\-\_\-data}}
-\index{control\-\_\-data@{control\-\_\-data}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{control\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}C\-O\-N\-T\-R\-O\-L\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T control\-\_\-data}}\label{threads__linux_8c_aff494a26c79d58504615f0502cfa8f31}
+\hypertarget{threads__linux_8c_aff494a26c79d58504615f0502cfa8f31}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!control\_\-data@{control\_\-data}}
+\index{control\_\-data@{control\_\-data}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{control\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}CONTROL\_\-DATA\_\-STRUCT {\bf control\_\-data}}}
+\label{threads__linux_8c_aff494a26c79d58504615f0502cfa8f31}
 
 
-Definition at line 92 of file threads\-\_\-linux.\-c.
+Definition at line 92 of file threads\_\-linux.c.
 
 
 
-Referenced by threads\-\_\-linux\-\_\-init(), threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-1(), and threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-2().
+Referenced by threads\_\-linux\_\-init(), threads\_\-linux\_\-periodic\_\-task\_\-1(), and threads\_\-linux\_\-periodic\_\-task\_\-2().
 
-\hypertarget{threads__linux_8c_a65f14449a63da2de58fd36ac32df7f96}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!estimation\-\_\-data@{estimation\-\_\-data}}
-\index{estimation\-\_\-data@{estimation\-\_\-data}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{estimation\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}E\-S\-T\-I\-M\-A\-T\-I\-O\-N\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T estimation\-\_\-data}}\label{threads__linux_8c_a65f14449a63da2de58fd36ac32df7f96}
+\hypertarget{threads__linux_8c_a65f14449a63da2de58fd36ac32df7f96}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!estimation\_\-data@{estimation\_\-data}}
+\index{estimation\_\-data@{estimation\_\-data}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{estimation\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}ESTIMATION\_\-DATA\_\-STRUCT {\bf estimation\_\-data}}}
+\label{threads__linux_8c_a65f14449a63da2de58fd36ac32df7f96}
 
 
-Definition at line 89 of file threads\-\_\-linux.\-c.
+Definition at line 89 of file threads\_\-linux.c.
 
 
 
-Referenced by threads\-\_\-linux\-\_\-init(), threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-1(), and threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-2().
+Referenced by threads\_\-linux\_\-init(), threads\_\-linux\_\-periodic\_\-task\_\-1(), and threads\_\-linux\_\-periodic\_\-task\_\-2().
 
-\hypertarget{threads__linux_8c_a4f35e5ea2395561d0bd3b2f45612dc2c}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!failure@{failure}}
-\index{failure@{failure}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{failure}]{\setlength{\rightskip}{0pt plus 5cm}int failure = 0}}\label{threads__linux_8c_a4f35e5ea2395561d0bd3b2f45612dc2c}
+\hypertarget{threads__linux_8c_a4f35e5ea2395561d0bd3b2f45612dc2c}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!failure@{failure}}
+\index{failure@{failure}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{failure}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf failure} = 0}}
+\label{threads__linux_8c_a4f35e5ea2395561d0bd3b2f45612dc2c}
 
 
-Definition at line 42 of file threads\-\_\-linux.\-c.
+Definition at line 42 of file threads\_\-linux.c.
 
-\hypertarget{threads__linux_8c_a764ebf75ba887a9ecf7bf8fe124960e0}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!flag\-\_\-task\-\_\-1\-\_\-firstexecution@{flag\-\_\-task\-\_\-1\-\_\-firstexecution}}
-\index{flag\-\_\-task\-\_\-1\-\_\-firstexecution@{flag\-\_\-task\-\_\-1\-\_\-firstexecution}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{flag\-\_\-task\-\_\-1\-\_\-firstexecution}]{\setlength{\rightskip}{0pt plus 5cm}volatile int flag\-\_\-task\-\_\-1\-\_\-firstexecution = 1}}\label{threads__linux_8c_a764ebf75ba887a9ecf7bf8fe124960e0}
+\hypertarget{threads__linux_8c_a764ebf75ba887a9ecf7bf8fe124960e0}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!flag\_\-task\_\-1\_\-firstexecution@{flag\_\-task\_\-1\_\-firstexecution}}
+\index{flag\_\-task\_\-1\_\-firstexecution@{flag\_\-task\_\-1\_\-firstexecution}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{flag\_\-task\_\-1\_\-firstexecution}]{\setlength{\rightskip}{0pt plus 5cm}volatile int {\bf flag\_\-task\_\-1\_\-firstexecution} = 1}}
+\label{threads__linux_8c_a764ebf75ba887a9ecf7bf8fe124960e0}
 
 
-Definition at line 52 of file threads\-\_\-linux.\-c.
+Definition at line 52 of file threads\_\-linux.c.
 
-\hypertarget{threads__linux_8c_a60e039269ae4a130db1bdbc4a709c437}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!flag\-\_\-task\-\_\-2\-\_\-firstexecution@{flag\-\_\-task\-\_\-2\-\_\-firstexecution}}
-\index{flag\-\_\-task\-\_\-2\-\_\-firstexecution@{flag\-\_\-task\-\_\-2\-\_\-firstexecution}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{flag\-\_\-task\-\_\-2\-\_\-firstexecution}]{\setlength{\rightskip}{0pt plus 5cm}volatile int flag\-\_\-task\-\_\-2\-\_\-firstexecution = 1}}\label{threads__linux_8c_a60e039269ae4a130db1bdbc4a709c437}
+\hypertarget{threads__linux_8c_a60e039269ae4a130db1bdbc4a709c437}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!flag\_\-task\_\-2\_\-firstexecution@{flag\_\-task\_\-2\_\-firstexecution}}
+\index{flag\_\-task\_\-2\_\-firstexecution@{flag\_\-task\_\-2\_\-firstexecution}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{flag\_\-task\_\-2\_\-firstexecution}]{\setlength{\rightskip}{0pt plus 5cm}volatile int {\bf flag\_\-task\_\-2\_\-firstexecution} = 1}}
+\label{threads__linux_8c_a60e039269ae4a130db1bdbc4a709c437}
 
 
-Definition at line 63 of file threads\-\_\-linux.\-c.
+Definition at line 63 of file threads\_\-linux.c.
 
-\hypertarget{threads__linux_8c_a59e6bf03b78dd52adc07051320f6b954}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!gps\-\_\-data@{gps\-\_\-data}}
-\index{gps\-\_\-data@{gps\-\_\-data}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{gps\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}G\-P\-S\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T gps\-\_\-data}}\label{threads__linux_8c_a59e6bf03b78dd52adc07051320f6b954}
+\hypertarget{threads__linux_8c_a59e6bf03b78dd52adc07051320f6b954}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!gps\_\-data@{gps\_\-data}}
+\index{gps\_\-data@{gps\_\-data}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{gps\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}GPS\_\-DATA\_\-STRUCT {\bf gps\_\-data}}}
+\label{threads__linux_8c_a59e6bf03b78dd52adc07051320f6b954}
 
 
-Definition at line 69 of file threads\-\_\-linux.\-c.
+Definition at line 69 of file threads\_\-linux.c.
 
 
 
-Referenced by threads\-\_\-linux\-\_\-init(), threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-1(), and threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-2().
+Referenced by threads\_\-linux\_\-init(), threads\_\-linux\_\-periodic\_\-task\_\-1(), and threads\_\-linux\_\-periodic\_\-task\_\-2().
 
-\hypertarget{threads__linux_8c_a5daa6ca8c168d5e8e73b14d96d6e148d}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!gps\-\_\-measure@{gps\-\_\-measure}}
-\index{gps\-\_\-measure@{gps\-\_\-measure}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{gps\-\_\-measure}]{\setlength{\rightskip}{0pt plus 5cm}G\-P\-S\-M\-E\-A\-S\-U\-R\-E gps\-\_\-measure}}\label{threads__linux_8c_a5daa6ca8c168d5e8e73b14d96d6e148d}
+\hypertarget{threads__linux_8c_a5daa6ca8c168d5e8e73b14d96d6e148d}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!gps\_\-measure@{gps\_\-measure}}
+\index{gps\_\-measure@{gps\_\-measure}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{gps\_\-measure}]{\setlength{\rightskip}{0pt plus 5cm}GPSMEASURE {\bf gps\_\-measure}}}
+\label{threads__linux_8c_a5daa6ca8c168d5e8e73b14d96d6e148d}
 
 
-Definition at line 78 of file threads\-\_\-linux.\-c.
+Definition at line 78 of file threads\_\-linux.c.
 
 
 
-Referenced by threads\-\_\-linux\-\_\-init(), threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-1(), and threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-2().
+Referenced by threads\_\-linux\_\-init(), threads\_\-linux\_\-periodic\_\-task\_\-1(), and threads\_\-linux\_\-periodic\_\-task\_\-2().
 
-\hypertarget{threads__linux_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!imu\-\_\-data@{imu\-\_\-data}}
-\index{imu\-\_\-data@{imu\-\_\-data}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{imu\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} imu\-\_\-data}}\label{threads__linux_8c_a3cfea12cbe9ca7f1681c950e4cd68606}
+\hypertarget{threads__linux_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!imu\_\-data@{imu\_\-data}}
+\index{imu\_\-data@{imu\_\-data}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{imu\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf IMU\_\-DATA\_\-STRUCT} {\bf imu\_\-data}}}
+\label{threads__linux_8c_a3cfea12cbe9ca7f1681c950e4cd68606}
 
 
-Definition at line 70 of file threads\-\_\-linux.\-c.
+Definition at line 70 of file threads\_\-linux.c.
 
-\hypertarget{threads__linux_8c_aa5c997a268f9020148799d654d48dc14}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!imu\-\_\-measure@{imu\-\_\-measure}}
-\index{imu\-\_\-measure@{imu\-\_\-measure}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{imu\-\_\-measure}]{\setlength{\rightskip}{0pt plus 5cm}I\-M\-U\-M\-E\-A\-S\-U\-R\-E imu\-\_\-measure}}\label{threads__linux_8c_aa5c997a268f9020148799d654d48dc14}
+\hypertarget{threads__linux_8c_aa5c997a268f9020148799d654d48dc14}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!imu\_\-measure@{imu\_\-measure}}
+\index{imu\_\-measure@{imu\_\-measure}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{imu\_\-measure}]{\setlength{\rightskip}{0pt plus 5cm}IMUMEASURE {\bf imu\_\-measure}}}
+\label{threads__linux_8c_aa5c997a268f9020148799d654d48dc14}
 
 
-Definition at line 79 of file threads\-\_\-linux.\-c.
+Definition at line 79 of file threads\_\-linux.c.
 
 
 
-Referenced by threads\-\_\-linux\-\_\-init(), threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-1(), and threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-2().
+Referenced by threads\_\-linux\_\-init(), threads\_\-linux\_\-periodic\_\-task\_\-1(), and threads\_\-linux\_\-periodic\_\-task\_\-2().
 
-\hypertarget{threads__linux_8c_a495506ba39b5cc85a3d4eee9b441fea4}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!magnetometer\-\_\-measure@{magnetometer\-\_\-measure}}
-\index{magnetometer\-\_\-measure@{magnetometer\-\_\-measure}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{magnetometer\-\_\-measure}]{\setlength{\rightskip}{0pt plus 5cm}M\-A\-G\-N\-E\-T\-O\-M\-E\-T\-E\-R\-M\-E\-A\-S\-U\-R\-E magnetometer\-\_\-measure}}\label{threads__linux_8c_a495506ba39b5cc85a3d4eee9b441fea4}
+\hypertarget{threads__linux_8c_a495506ba39b5cc85a3d4eee9b441fea4}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!magnetometer\_\-measure@{magnetometer\_\-measure}}
+\index{magnetometer\_\-measure@{magnetometer\_\-measure}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{magnetometer\_\-measure}]{\setlength{\rightskip}{0pt plus 5cm}MAGNETOMETERMEASURE {\bf magnetometer\_\-measure}}}
+\label{threads__linux_8c_a495506ba39b5cc85a3d4eee9b441fea4}
 
 
-Definition at line 80 of file threads\-\_\-linux.\-c.
+Definition at line 80 of file threads\_\-linux.c.
 
 
 
-Referenced by threads\-\_\-linux\-\_\-init(), threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-1(), and threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-2().
+Referenced by threads\_\-linux\_\-init(), threads\_\-linux\_\-periodic\_\-task\_\-1(), and threads\_\-linux\_\-periodic\_\-task\_\-2().
 
-\hypertarget{threads__linux_8c_a85a1e7d1f5cb0855de5c10c7da917e99}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!pitot\-\_\-data@{pitot\-\_\-data}}
-\index{pitot\-\_\-data@{pitot\-\_\-data}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{pitot\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}P\-I\-T\-O\-T\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T pitot\-\_\-data}}\label{threads__linux_8c_a85a1e7d1f5cb0855de5c10c7da917e99}
+\hypertarget{threads__linux_8c_a85a1e7d1f5cb0855de5c10c7da917e99}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!pitot\_\-data@{pitot\_\-data}}
+\index{pitot\_\-data@{pitot\_\-data}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{pitot\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}PITOT\_\-DATA\_\-STRUCT {\bf pitot\_\-data}}}
+\label{threads__linux_8c_a85a1e7d1f5cb0855de5c10c7da917e99}
 
 
-Definition at line 71 of file threads\-\_\-linux.\-c.
+Definition at line 71 of file threads\_\-linux.c.
 
 
 
-Referenced by threads\-\_\-linux\-\_\-init(), threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-1(), and threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-2().
+Referenced by threads\_\-linux\_\-init(), threads\_\-linux\_\-periodic\_\-task\_\-1(), and threads\_\-linux\_\-periodic\_\-task\_\-2().
 
-\hypertarget{threads__linux_8c_a47c600b0bafcb86f18d675174d1ff92b}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!pwm\-\_\-read\-\_\-data@{pwm\-\_\-read\-\_\-data}}
-\index{pwm\-\_\-read\-\_\-data@{pwm\-\_\-read\-\_\-data}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{pwm\-\_\-read\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}P\-W\-M\-\_\-\-R\-E\-A\-D\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T pwm\-\_\-read\-\_\-data}}\label{threads__linux_8c_a47c600b0bafcb86f18d675174d1ff92b}
+\hypertarget{threads__linux_8c_a47c600b0bafcb86f18d675174d1ff92b}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!pwm\_\-read\_\-data@{pwm\_\-read\_\-data}}
+\index{pwm\_\-read\_\-data@{pwm\_\-read\_\-data}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{pwm\_\-read\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}PWM\_\-READ\_\-DATA\_\-STRUCT {\bf pwm\_\-read\_\-data}}}
+\label{threads__linux_8c_a47c600b0bafcb86f18d675174d1ff92b}
 
 
-Definition at line 72 of file threads\-\_\-linux.\-c.
+Definition at line 72 of file threads\_\-linux.c.
 
 
 
-Referenced by threads\-\_\-linux\-\_\-init(), threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-1(), and threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-2().
+Referenced by threads\_\-linux\_\-init(), threads\_\-linux\_\-periodic\_\-task\_\-1(), and threads\_\-linux\_\-periodic\_\-task\_\-2().
 
-\hypertarget{threads__linux_8c_ad8b6331e520d1bd524e2dc9053510fc2}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!pwm\-\_\-write\-\_\-data@{pwm\-\_\-write\-\_\-data}}
-\index{pwm\-\_\-write\-\_\-data@{pwm\-\_\-write\-\_\-data}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{pwm\-\_\-write\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}P\-W\-M\-\_\-\-W\-R\-I\-T\-E\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T pwm\-\_\-write\-\_\-data}}\label{threads__linux_8c_ad8b6331e520d1bd524e2dc9053510fc2}
+\hypertarget{threads__linux_8c_ad8b6331e520d1bd524e2dc9053510fc2}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!pwm\_\-write\_\-data@{pwm\_\-write\_\-data}}
+\index{pwm\_\-write\_\-data@{pwm\_\-write\_\-data}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{pwm\_\-write\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}PWM\_\-WRITE\_\-DATA\_\-STRUCT {\bf pwm\_\-write\_\-data}}}
+\label{threads__linux_8c_ad8b6331e520d1bd524e2dc9053510fc2}
 
 
-Definition at line 73 of file threads\-\_\-linux.\-c.
+Definition at line 73 of file threads\_\-linux.c.
 
 
 
-Referenced by threads\-\_\-linux\-\_\-init(), threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-1(), and threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-2().
+Referenced by threads\_\-linux\_\-init(), threads\_\-linux\_\-periodic\_\-task\_\-1(), and threads\_\-linux\_\-periodic\_\-task\_\-2().
 
-\hypertarget{threads__linux_8c_a525dcecf4685bea1fbf92651ac0401fe}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!quittask@{quittask}}
-\index{quittask@{quittask}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{quittask}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char quittask}}\label{threads__linux_8c_a525dcecf4685bea1fbf92651ac0401fe}
+\hypertarget{threads__linux_8c_a525dcecf4685bea1fbf92651ac0401fe}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!quittask@{quittask}}
+\index{quittask@{quittask}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{quittask}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char {\bf quittask}}}
+\label{threads__linux_8c_a525dcecf4685bea1fbf92651ac0401fe}
 
 
-Definition at line 40 of file main2.\-c.
+Definition at line 36 of file main.c.
 
 
 
-Referenced by exit\-\_\-program(), main(), and threads\-\_\-linux\-\_\-init().
+Referenced by exit\_\-program(), main(), and threads\_\-linux\_\-init().
 
-\hypertarget{threads__linux_8c_a014e3c8e54ea93cd94fd3fef569125f8}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!scp1000\-\_\-data@{scp1000\-\_\-data}}
-\index{scp1000\-\_\-data@{scp1000\-\_\-data}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{scp1000\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}S\-C\-P1000\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T scp1000\-\_\-data}}\label{threads__linux_8c_a014e3c8e54ea93cd94fd3fef569125f8}
+\hypertarget{threads__linux_8c_a014e3c8e54ea93cd94fd3fef569125f8}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!scp1000\_\-data@{scp1000\_\-data}}
+\index{scp1000\_\-data@{scp1000\_\-data}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{scp1000\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}SCP1000\_\-DATA\_\-STRUCT {\bf scp1000\_\-data}}}
+\label{threads__linux_8c_a014e3c8e54ea93cd94fd3fef569125f8}
 
 
-Definition at line 74 of file threads\-\_\-linux.\-c.
+Definition at line 74 of file threads\_\-linux.c.
 
 
 
-Referenced by threads\-\_\-linux\-\_\-init(), threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-1(), and threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-2().
+Referenced by threads\_\-linux\_\-init(), threads\_\-linux\_\-periodic\_\-task\_\-1(), and threads\_\-linux\_\-periodic\_\-task\_\-2().
 
-\hypertarget{threads__linux_8c_aafb5fffcd42c3ad4ad9768df45a1a0b5}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!sonar\-\_\-data@{sonar\-\_\-data}}
-\index{sonar\-\_\-data@{sonar\-\_\-data}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{sonar\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}S\-O\-N\-A\-R\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T sonar\-\_\-data}}\label{threads__linux_8c_aafb5fffcd42c3ad4ad9768df45a1a0b5}
+\hypertarget{threads__linux_8c_aafb5fffcd42c3ad4ad9768df45a1a0b5}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!sonar\_\-data@{sonar\_\-data}}
+\index{sonar\_\-data@{sonar\_\-data}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{sonar\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}SONAR\_\-DATA\_\-STRUCT {\bf sonar\_\-data}}}
+\label{threads__linux_8c_aafb5fffcd42c3ad4ad9768df45a1a0b5}
 
 
-Definition at line 75 of file threads\-\_\-linux.\-c.
+Definition at line 75 of file threads\_\-linux.c.
 
 
 
-Referenced by threads\-\_\-linux\-\_\-init(), threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-1(), and threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-2().
+Referenced by threads\_\-linux\_\-init(), threads\_\-linux\_\-periodic\_\-task\_\-1(), and threads\_\-linux\_\-periodic\_\-task\_\-2().
 
-\hypertarget{threads__linux_8c_a5fe7e1a4ef5e77fabd20272e2f5e5381}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!sonar\-\_\-measure@{sonar\-\_\-measure}}
-\index{sonar\-\_\-measure@{sonar\-\_\-measure}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{sonar\-\_\-measure}]{\setlength{\rightskip}{0pt plus 5cm}S\-O\-N\-A\-R\-M\-E\-A\-S\-U\-R\-E sonar\-\_\-measure}}\label{threads__linux_8c_a5fe7e1a4ef5e77fabd20272e2f5e5381}
+\hypertarget{threads__linux_8c_a5fe7e1a4ef5e77fabd20272e2f5e5381}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!sonar\_\-measure@{sonar\_\-measure}}
+\index{sonar\_\-measure@{sonar\_\-measure}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{sonar\_\-measure}]{\setlength{\rightskip}{0pt plus 5cm}SONARMEASURE {\bf sonar\_\-measure}}}
+\label{threads__linux_8c_a5fe7e1a4ef5e77fabd20272e2f5e5381}
 
 
-Definition at line 81 of file threads\-\_\-linux.\-c.
+Definition at line 81 of file threads\_\-linux.c.
 
 
 
-Referenced by threads\-\_\-linux\-\_\-init(), and threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-1().
+Referenced by threads\_\-linux\_\-init(), and threads\_\-linux\_\-periodic\_\-task\_\-1().
 
-\hypertarget{threads__linux_8c_a86c2efd6da48b362806cdbb5b1e711d8}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!t0@{t0}}
-\index{t0@{t0}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{t0}]{\setlength{\rightskip}{0pt plus 5cm}volatile double t0 = 0.\-0}}\label{threads__linux_8c_a86c2efd6da48b362806cdbb5b1e711d8}
+\hypertarget{threads__linux_8c_a86c2efd6da48b362806cdbb5b1e711d8}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!t0@{t0}}
+\index{t0@{t0}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{t0}]{\setlength{\rightskip}{0pt plus 5cm}volatile double {\bf t0} = 0.0}}
+\label{threads__linux_8c_a86c2efd6da48b362806cdbb5b1e711d8}
 
 
-Definition at line 53 of file threads\-\_\-linux.\-c.
+Definition at line 53 of file threads\_\-linux.c.
 
-\hypertarget{threads__linux_8c_acdaa4a9b0e1be3dfa53b52df6410ad3b}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!T\-\_\-task\-\_\-1\-\_\-exec\-\_\-global@{T\-\_\-task\-\_\-1\-\_\-exec\-\_\-global}}
-\index{T\-\_\-task\-\_\-1\-\_\-exec\-\_\-global@{T\-\_\-task\-\_\-1\-\_\-exec\-\_\-global}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{T\-\_\-task\-\_\-1\-\_\-exec\-\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double T\-\_\-task\-\_\-1\-\_\-exec\-\_\-global = 0.\-0}}\label{threads__linux_8c_acdaa4a9b0e1be3dfa53b52df6410ad3b}
+\hypertarget{threads__linux_8c_acdaa4a9b0e1be3dfa53b52df6410ad3b}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!T\_\-task\_\-1\_\-exec\_\-global@{T\_\-task\_\-1\_\-exec\_\-global}}
+\index{T\_\-task\_\-1\_\-exec\_\-global@{T\_\-task\_\-1\_\-exec\_\-global}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{T\_\-task\_\-1\_\-exec\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double {\bf T\_\-task\_\-1\_\-exec\_\-global} = 0.0}}
+\label{threads__linux_8c_acdaa4a9b0e1be3dfa53b52df6410ad3b}
 
 
-Definition at line 47 of file threads\-\_\-linux.\-c.
+Definition at line 47 of file threads\_\-linux.c.
 
-\hypertarget{threads__linux_8c_a2a2a647912528f7aa86812528dbfe02f}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!t\-\_\-task\-\_\-1\-\_\-global@{t\-\_\-task\-\_\-1\-\_\-global}}
-\index{t\-\_\-task\-\_\-1\-\_\-global@{t\-\_\-task\-\_\-1\-\_\-global}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{t\-\_\-task\-\_\-1\-\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double t\-\_\-task\-\_\-1\-\_\-global = 0.\-0}}\label{threads__linux_8c_a2a2a647912528f7aa86812528dbfe02f}
+\hypertarget{threads__linux_8c_a2a2a647912528f7aa86812528dbfe02f}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!t\_\-task\_\-1\_\-global@{t\_\-task\_\-1\_\-global}}
+\index{t\_\-task\_\-1\_\-global@{t\_\-task\_\-1\_\-global}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{t\_\-task\_\-1\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double {\bf t\_\-task\_\-1\_\-global} = 0.0}}
+\label{threads__linux_8c_a2a2a647912528f7aa86812528dbfe02f}
 
 
-Definition at line 46 of file threads\-\_\-linux.\-c.
+Definition at line 46 of file threads\_\-linux.c.
 
-\hypertarget{threads__linux_8c_aa714e30d738039b5bf665742beb31739}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!T\-\_\-task\-\_\-1\-\_\-max\-\_\-global@{T\-\_\-task\-\_\-1\-\_\-max\-\_\-global}}
-\index{T\-\_\-task\-\_\-1\-\_\-max\-\_\-global@{T\-\_\-task\-\_\-1\-\_\-max\-\_\-global}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{T\-\_\-task\-\_\-1\-\_\-max\-\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double T\-\_\-task\-\_\-1\-\_\-max\-\_\-global = 0.\-0}}\label{threads__linux_8c_aa714e30d738039b5bf665742beb31739}
+\hypertarget{threads__linux_8c_aa714e30d738039b5bf665742beb31739}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!T\_\-task\_\-1\_\-max\_\-global@{T\_\-task\_\-1\_\-max\_\-global}}
+\index{T\_\-task\_\-1\_\-max\_\-global@{T\_\-task\_\-1\_\-max\_\-global}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{T\_\-task\_\-1\_\-max\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double {\bf T\_\-task\_\-1\_\-max\_\-global} = 0.0}}
+\label{threads__linux_8c_aa714e30d738039b5bf665742beb31739}
 
 
-Definition at line 50 of file threads\-\_\-linux.\-c.
+Definition at line 50 of file threads\_\-linux.c.
 
-\hypertarget{threads__linux_8c_a738c330c86a365e72ce29ebca3f1e572}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!T\-\_\-task\-\_\-1\-\_\-mean\-\_\-global@{T\-\_\-task\-\_\-1\-\_\-mean\-\_\-global}}
-\index{T\-\_\-task\-\_\-1\-\_\-mean\-\_\-global@{T\-\_\-task\-\_\-1\-\_\-mean\-\_\-global}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{T\-\_\-task\-\_\-1\-\_\-mean\-\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double T\-\_\-task\-\_\-1\-\_\-mean\-\_\-global = 0.\-0}}\label{threads__linux_8c_a738c330c86a365e72ce29ebca3f1e572}
+\hypertarget{threads__linux_8c_a738c330c86a365e72ce29ebca3f1e572}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!T\_\-task\_\-1\_\-mean\_\-global@{T\_\-task\_\-1\_\-mean\_\-global}}
+\index{T\_\-task\_\-1\_\-mean\_\-global@{T\_\-task\_\-1\_\-mean\_\-global}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{T\_\-task\_\-1\_\-mean\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double {\bf T\_\-task\_\-1\_\-mean\_\-global} = 0.0}}
+\label{threads__linux_8c_a738c330c86a365e72ce29ebca3f1e572}
 
 
-Definition at line 48 of file threads\-\_\-linux.\-c.
+Definition at line 48 of file threads\_\-linux.c.
 
-\hypertarget{threads__linux_8c_a86222e255aeeb47598a4fc91ab6c2b1a}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!T\-\_\-task\-\_\-1\-\_\-min\-\_\-global@{T\-\_\-task\-\_\-1\-\_\-min\-\_\-global}}
-\index{T\-\_\-task\-\_\-1\-\_\-min\-\_\-global@{T\-\_\-task\-\_\-1\-\_\-min\-\_\-global}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{T\-\_\-task\-\_\-1\-\_\-min\-\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double T\-\_\-task\-\_\-1\-\_\-min\-\_\-global = 0.\-0}}\label{threads__linux_8c_a86222e255aeeb47598a4fc91ab6c2b1a}
+\hypertarget{threads__linux_8c_a86222e255aeeb47598a4fc91ab6c2b1a}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!T\_\-task\_\-1\_\-min\_\-global@{T\_\-task\_\-1\_\-min\_\-global}}
+\index{T\_\-task\_\-1\_\-min\_\-global@{T\_\-task\_\-1\_\-min\_\-global}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{T\_\-task\_\-1\_\-min\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double {\bf T\_\-task\_\-1\_\-min\_\-global} = 0.0}}
+\label{threads__linux_8c_a86222e255aeeb47598a4fc91ab6c2b1a}
 
 
-Definition at line 49 of file threads\-\_\-linux.\-c.
+Definition at line 49 of file threads\_\-linux.c.
 
-\hypertarget{threads__linux_8c_a9629c77cd3dba9d47d15c2e51bdde09d}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!T\-\_\-task\-\_\-2\-\_\-exec\-\_\-global@{T\-\_\-task\-\_\-2\-\_\-exec\-\_\-global}}
-\index{T\-\_\-task\-\_\-2\-\_\-exec\-\_\-global@{T\-\_\-task\-\_\-2\-\_\-exec\-\_\-global}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{T\-\_\-task\-\_\-2\-\_\-exec\-\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double T\-\_\-task\-\_\-2\-\_\-exec\-\_\-global = 0.\-0}}\label{threads__linux_8c_a9629c77cd3dba9d47d15c2e51bdde09d}
+\hypertarget{threads__linux_8c_a9629c77cd3dba9d47d15c2e51bdde09d}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!T\_\-task\_\-2\_\-exec\_\-global@{T\_\-task\_\-2\_\-exec\_\-global}}
+\index{T\_\-task\_\-2\_\-exec\_\-global@{T\_\-task\_\-2\_\-exec\_\-global}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{T\_\-task\_\-2\_\-exec\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double {\bf T\_\-task\_\-2\_\-exec\_\-global} = 0.0}}
+\label{threads__linux_8c_a9629c77cd3dba9d47d15c2e51bdde09d}
 
 
-Definition at line 58 of file threads\-\_\-linux.\-c.
+Definition at line 58 of file threads\_\-linux.c.
 
-\hypertarget{threads__linux_8c_a08f794ff34d918d3d34d771e11e4aba3}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!t\-\_\-task\-\_\-2\-\_\-global@{t\-\_\-task\-\_\-2\-\_\-global}}
-\index{t\-\_\-task\-\_\-2\-\_\-global@{t\-\_\-task\-\_\-2\-\_\-global}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{t\-\_\-task\-\_\-2\-\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double t\-\_\-task\-\_\-2\-\_\-global = 0.\-0}}\label{threads__linux_8c_a08f794ff34d918d3d34d771e11e4aba3}
+\hypertarget{threads__linux_8c_a08f794ff34d918d3d34d771e11e4aba3}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!t\_\-task\_\-2\_\-global@{t\_\-task\_\-2\_\-global}}
+\index{t\_\-task\_\-2\_\-global@{t\_\-task\_\-2\_\-global}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{t\_\-task\_\-2\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double {\bf t\_\-task\_\-2\_\-global} = 0.0}}
+\label{threads__linux_8c_a08f794ff34d918d3d34d771e11e4aba3}
 
 
-Definition at line 57 of file threads\-\_\-linux.\-c.
+Definition at line 57 of file threads\_\-linux.c.
 
-\hypertarget{threads__linux_8c_a1cd82006c46f46176730e876d272cc14}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!T\-\_\-task\-\_\-2\-\_\-max\-\_\-global@{T\-\_\-task\-\_\-2\-\_\-max\-\_\-global}}
-\index{T\-\_\-task\-\_\-2\-\_\-max\-\_\-global@{T\-\_\-task\-\_\-2\-\_\-max\-\_\-global}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{T\-\_\-task\-\_\-2\-\_\-max\-\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double T\-\_\-task\-\_\-2\-\_\-max\-\_\-global = 0.\-0}}\label{threads__linux_8c_a1cd82006c46f46176730e876d272cc14}
+\hypertarget{threads__linux_8c_a1cd82006c46f46176730e876d272cc14}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!T\_\-task\_\-2\_\-max\_\-global@{T\_\-task\_\-2\_\-max\_\-global}}
+\index{T\_\-task\_\-2\_\-max\_\-global@{T\_\-task\_\-2\_\-max\_\-global}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{T\_\-task\_\-2\_\-max\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double {\bf T\_\-task\_\-2\_\-max\_\-global} = 0.0}}
+\label{threads__linux_8c_a1cd82006c46f46176730e876d272cc14}
 
 
-Definition at line 61 of file threads\-\_\-linux.\-c.
+Definition at line 61 of file threads\_\-linux.c.
 
-\hypertarget{threads__linux_8c_af4e19d5a9b24aa56c8ebff6ad1aa2b95}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!T\-\_\-task\-\_\-2\-\_\-mean\-\_\-global@{T\-\_\-task\-\_\-2\-\_\-mean\-\_\-global}}
-\index{T\-\_\-task\-\_\-2\-\_\-mean\-\_\-global@{T\-\_\-task\-\_\-2\-\_\-mean\-\_\-global}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{T\-\_\-task\-\_\-2\-\_\-mean\-\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double T\-\_\-task\-\_\-2\-\_\-mean\-\_\-global = 0.\-0}}\label{threads__linux_8c_af4e19d5a9b24aa56c8ebff6ad1aa2b95}
+\hypertarget{threads__linux_8c_af4e19d5a9b24aa56c8ebff6ad1aa2b95}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!T\_\-task\_\-2\_\-mean\_\-global@{T\_\-task\_\-2\_\-mean\_\-global}}
+\index{T\_\-task\_\-2\_\-mean\_\-global@{T\_\-task\_\-2\_\-mean\_\-global}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{T\_\-task\_\-2\_\-mean\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double {\bf T\_\-task\_\-2\_\-mean\_\-global} = 0.0}}
+\label{threads__linux_8c_af4e19d5a9b24aa56c8ebff6ad1aa2b95}
 
 
-Definition at line 59 of file threads\-\_\-linux.\-c.
+Definition at line 59 of file threads\_\-linux.c.
 
-\hypertarget{threads__linux_8c_ab7712cb13ce6206dd138a51e2053e36c}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!T\-\_\-task\-\_\-2\-\_\-min\-\_\-global@{T\-\_\-task\-\_\-2\-\_\-min\-\_\-global}}
-\index{T\-\_\-task\-\_\-2\-\_\-min\-\_\-global@{T\-\_\-task\-\_\-2\-\_\-min\-\_\-global}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{T\-\_\-task\-\_\-2\-\_\-min\-\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double T\-\_\-task\-\_\-2\-\_\-min\-\_\-global = 0.\-0}}\label{threads__linux_8c_ab7712cb13ce6206dd138a51e2053e36c}
+\hypertarget{threads__linux_8c_ab7712cb13ce6206dd138a51e2053e36c}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!T\_\-task\_\-2\_\-min\_\-global@{T\_\-task\_\-2\_\-min\_\-global}}
+\index{T\_\-task\_\-2\_\-min\_\-global@{T\_\-task\_\-2\_\-min\_\-global}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{T\_\-task\_\-2\_\-min\_\-global}]{\setlength{\rightskip}{0pt plus 5cm}volatile double {\bf T\_\-task\_\-2\_\-min\_\-global} = 0.0}}
+\label{threads__linux_8c_ab7712cb13ce6206dd138a51e2053e36c}
 
 
-Definition at line 60 of file threads\-\_\-linux.\-c.
+Definition at line 60 of file threads\_\-linux.c.
 
-\hypertarget{threads__linux_8c_afffc21b0b726e6f4a572d0eefd3b5d69}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!task\-\_\-1\-\_\-period\-\_\-us@{task\-\_\-1\-\_\-period\-\_\-us}}
-\index{task\-\_\-1\-\_\-period\-\_\-us@{task\-\_\-1\-\_\-period\-\_\-us}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{task\-\_\-1\-\_\-period\-\_\-us}]{\setlength{\rightskip}{0pt plus 5cm}volatile int task\-\_\-1\-\_\-period\-\_\-us = {\bf T\-A\-S\-K1\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-U\-S}}}\label{threads__linux_8c_afffc21b0b726e6f4a572d0eefd3b5d69}
+\hypertarget{threads__linux_8c_afffc21b0b726e6f4a572d0eefd3b5d69}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!task\_\-1\_\-period\_\-us@{task\_\-1\_\-period\_\-us}}
+\index{task\_\-1\_\-period\_\-us@{task\_\-1\_\-period\_\-us}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{task\_\-1\_\-period\_\-us}]{\setlength{\rightskip}{0pt plus 5cm}volatile int {\bf task\_\-1\_\-period\_\-us} = TASK1\_\-PERIOD\_\-US}}
+\label{threads__linux_8c_afffc21b0b726e6f4a572d0eefd3b5d69}
 
 
-Definition at line 51 of file threads\-\_\-linux.\-c.
+Definition at line 51 of file threads\_\-linux.c.
 
-\hypertarget{threads__linux_8c_a5166d431d5448a1538e75f5469c19c7b}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!task\-\_\-2\-\_\-period\-\_\-us@{task\-\_\-2\-\_\-period\-\_\-us}}
-\index{task\-\_\-2\-\_\-period\-\_\-us@{task\-\_\-2\-\_\-period\-\_\-us}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{task\-\_\-2\-\_\-period\-\_\-us}]{\setlength{\rightskip}{0pt plus 5cm}volatile int task\-\_\-2\-\_\-period\-\_\-us = {\bf T\-A\-S\-K2\-\_\-\-P\-E\-R\-I\-O\-D\-\_\-\-U\-S}}}\label{threads__linux_8c_a5166d431d5448a1538e75f5469c19c7b}
+\hypertarget{threads__linux_8c_a5166d431d5448a1538e75f5469c19c7b}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!task\_\-2\_\-period\_\-us@{task\_\-2\_\-period\_\-us}}
+\index{task\_\-2\_\-period\_\-us@{task\_\-2\_\-period\_\-us}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{task\_\-2\_\-period\_\-us}]{\setlength{\rightskip}{0pt plus 5cm}volatile int {\bf task\_\-2\_\-period\_\-us} = TASK2\_\-PERIOD\_\-US}}
+\label{threads__linux_8c_a5166d431d5448a1538e75f5469c19c7b}
 
 
-Definition at line 62 of file threads\-\_\-linux.\-c.
+Definition at line 62 of file threads\_\-linux.c.
 
-\hypertarget{threads__linux_8c_a5045187bb0afe92c41ce73bc602fd3ca}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!telemetry\-\_\-mode@{telemetry\-\_\-mode}}
-\index{telemetry\-\_\-mode@{telemetry\-\_\-mode}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{telemetry\-\_\-mode}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int telemetry\-\_\-mode = {\bf U\-I\-\_\-\-N\-C\-U\-R\-S\-E\-S\-\_\-\-M\-O\-D\-E}}}\label{threads__linux_8c_a5045187bb0afe92c41ce73bc602fd3ca}
+\hypertarget{threads__linux_8c_a5045187bb0afe92c41ce73bc602fd3ca}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!telemetry\_\-mode@{telemetry\_\-mode}}
+\index{telemetry\_\-mode@{telemetry\_\-mode}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{telemetry\_\-mode}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf telemetry\_\-mode} = UI\_\-NCURSES\_\-MODE}}
+\label{threads__linux_8c_a5045187bb0afe92c41ce73bc602fd3ca}
 
 
-Definition at line 64 of file threads\-\_\-linux.\-c.
+Definition at line 64 of file threads\_\-linux.c.
 
-\hypertarget{threads__linux_8c_a904a157c5d5f94416cd450f511635af1}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!timer\-\_\-task\-\_\-1@{timer\-\_\-task\-\_\-1}}
-\index{timer\-\_\-task\-\_\-1@{timer\-\_\-task\-\_\-1}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{timer\-\_\-task\-\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}timer\-\_\-t timer\-\_\-task\-\_\-1}}\label{threads__linux_8c_a904a157c5d5f94416cd450f511635af1}
+\hypertarget{threads__linux_8c_a904a157c5d5f94416cd450f511635af1}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!timer\_\-task\_\-1@{timer\_\-task\_\-1}}
+\index{timer\_\-task\_\-1@{timer\_\-task\_\-1}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{timer\_\-task\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}timer\_\-t {\bf timer\_\-task\_\-1}}}
+\label{threads__linux_8c_a904a157c5d5f94416cd450f511635af1}
 
 
-Definition at line 45 of file threads\-\_\-linux.\-c.
+Definition at line 45 of file threads\_\-linux.c.
 
-\hypertarget{threads__linux_8c_adf6e8e22925f399f086dea8671f39c08}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!timer\-\_\-task\-\_\-2@{timer\-\_\-task\-\_\-2}}
-\index{timer\-\_\-task\-\_\-2@{timer\-\_\-task\-\_\-2}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{timer\-\_\-task\-\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}timer\-\_\-t timer\-\_\-task\-\_\-2}}\label{threads__linux_8c_adf6e8e22925f399f086dea8671f39c08}
+\hypertarget{threads__linux_8c_adf6e8e22925f399f086dea8671f39c08}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!timer\_\-task\_\-2@{timer\_\-task\_\-2}}
+\index{timer\_\-task\_\-2@{timer\_\-task\_\-2}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{timer\_\-task\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}timer\_\-t {\bf timer\_\-task\_\-2}}}
+\label{threads__linux_8c_adf6e8e22925f399f086dea8671f39c08}
 
 
-Definition at line 56 of file threads\-\_\-linux.\-c.
+Definition at line 56 of file threads\_\-linux.c.
 
-\hypertarget{threads__linux_8c_ac7af894858cf396a219d632f40afdc8d}{\index{threads\-\_\-linux.\-c@{threads\-\_\-linux.\-c}!total@{total}}
-\index{total@{total}!threads_linux.c@{threads\-\_\-linux.\-c}}
-\subsubsection[{total}]{\setlength{\rightskip}{0pt plus 5cm}int total = 0}}\label{threads__linux_8c_ac7af894858cf396a219d632f40afdc8d}
+\hypertarget{threads__linux_8c_ac7af894858cf396a219d632f40afdc8d}{
+\index{threads\_\-linux.c@{threads\_\-linux.c}!total@{total}}
+\index{total@{total}!threads_linux.c@{threads\_\-linux.c}}
+\subsubsection[{total}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf total} = 0}}
+\label{threads__linux_8c_ac7af894858cf396a219d632f40afdc8d}
 
 
-Definition at line 41 of file threads\-\_\-linux.\-c.
+Definition at line 41 of file threads\_\-linux.c.
 

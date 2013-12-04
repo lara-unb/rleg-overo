@@ -1,381 +1,322 @@
-\hypertarget{group__ui}{\section{Functions to deal the User Inteface using ncurses}
+\hypertarget{group__ui}{
+\section{Functions to deal the User Inteface using ncurses}
 \label{group__ui}\index{Functions to deal the User Inteface using ncurses@{Functions to deal the User Inteface using ncurses}}
 }
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-int \hyperlink{group__ui_gab7bfb453918dcc296ff0cea3c79453d0}{ui\-\_\-init} (void)
-\begin{DoxyCompactList}\small\item\em Initialize U\-I. \end{DoxyCompactList}\item 
-int \hyperlink{group__ui_ga65d8b92b634da17c344458cd57e61f3e}{ui\-\_\-close} (void)
-\begin{DoxyCompactList}\small\item\em Close U\-I. \end{DoxyCompactList}\item 
-int \hyperlink{group__ui_ga42e4dac2d138061a74c572358c8ebf49}{ui\-\_\-update} (\hyperlink{structIMU__DATA__STRUCT}{I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$pimu\-\_\-data, \hyperlink{structEFF__DATA__STRUCT}{E\-F\-F\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$peff\-\_\-data, \hyperlink{structMRA__DATA__STRUCT}{M\-R\-A\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$pmra\-\_\-data, \hyperlink{structENC__DATA__STRUCT}{E\-N\-C\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$\hyperlink{main2_8c_aaa441e18ae805c4f3efb0b5231d1cfe7}{enc\-\_\-data}, int \hyperlink{threads__linux_8c_ac7af894858cf396a219d632f40afdc8d}{total}, int \hyperlink{threads__linux_8c_a4f35e5ea2395561d0bd3b2f45612dc2c}{failure})
-\begin{DoxyCompactList}\small\item\em Update Screen with new data of sensors. \end{DoxyCompactList}\item 
-int \hyperlink{group__ui_ga7d5a9d9a75693709de408781d001a6a6}{ui\-\_\-imu\-\_\-data} (\hyperlink{structIMU__DATA__STRUCT}{I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$pimu\-\_\-data)
-\begin{DoxyCompactList}\small\item\em Print I\-M\-U data. \end{DoxyCompactList}\item 
-int \hyperlink{group__ui_gaefec243c5df45db0350c1abbccf20e3b}{ui\-\_\-mra\-\_\-data} (\hyperlink{structMRA__DATA__STRUCT}{M\-R\-A\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$pmra\-\_\-data)
-\begin{DoxyCompactList}\small\item\em Print M\-R\-A data. \end{DoxyCompactList}\end{DoxyCompactItemize}
-
-
-\subsection{Detailed Description}
+int \hyperlink{group__ui_gab7bfb453918dcc296ff0cea3c79453d0}{ui\_\-init} (void)
+\begin{DoxyCompactList}\small\item\em Initialize UI. \item\end{DoxyCompactList}\item 
+int \hyperlink{group__ui_ga65d8b92b634da17c344458cd57e61f3e}{ui\_\-close} (void)
+\begin{DoxyCompactList}\small\item\em Close UI. \item\end{DoxyCompactList}\item 
+int \hyperlink{group__ui_ga42e4dac2d138061a74c572358c8ebf49}{ui\_\-update} (\hyperlink{structIMU__DATA__STRUCT}{IMU\_\-DATA\_\-STRUCT} $\ast$pimu\_\-data, \hyperlink{structEFF__DATA__STRUCT}{EFF\_\-DATA\_\-STRUCT} $\ast$peff\_\-data, \hyperlink{structMRA__DATA__STRUCT}{MRA\_\-DATA\_\-STRUCT} $\ast$pmra\_\-data, \hyperlink{structENC__DATA__STRUCT}{ENC\_\-DATA\_\-STRUCT} $\ast$\hyperlink{main2_8c_aaa441e18ae805c4f3efb0b5231d1cfe7}{enc\_\-data}, int \hyperlink{threads__linux_8c_ac7af894858cf396a219d632f40afdc8d}{total}, int \hyperlink{threads__linux_8c_a4f35e5ea2395561d0bd3b2f45612dc2c}{failure})
+\begin{DoxyCompactList}\small\item\em Update Screen with new data of sensors. \item\end{DoxyCompactList}\item 
+int \hyperlink{group__ui_ga7d5a9d9a75693709de408781d001a6a6}{ui\_\-imu\_\-data} (\hyperlink{structIMU__DATA__STRUCT}{IMU\_\-DATA\_\-STRUCT} $\ast$pimu\_\-data)
+\begin{DoxyCompactList}\small\item\em Print IMU data. \item\end{DoxyCompactList}\item 
+int \hyperlink{group__ui_gaefec243c5df45db0350c1abbccf20e3b}{ui\_\-mra\_\-data} (\hyperlink{structMRA__DATA__STRUCT}{MRA\_\-DATA\_\-STRUCT} $\ast$pmra\_\-data)
+\begin{DoxyCompactList}\small\item\em Print MRA data. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
-\hypertarget{group__ui_ga65d8b92b634da17c344458cd57e61f3e}{\index{Functions to deal the User Inteface using ncurses@{Functions to deal the User Inteface using ncurses}!ui\-\_\-close@{ui\-\_\-close}}
-\index{ui\-\_\-close@{ui\-\_\-close}!Functions to deal the User Inteface using ncurses@{Functions to deal the User Inteface using ncurses}}
-\subsubsection[{ui\-\_\-close}]{\setlength{\rightskip}{0pt plus 5cm}int ui\-\_\-close (
-\begin{DoxyParamCaption}
-\item[{void}]{}
-\end{DoxyParamCaption}
-)}}\label{group__ui_ga65d8b92b634da17c344458cd57e61f3e}
+\hypertarget{group__ui_ga65d8b92b634da17c344458cd57e61f3e}{
+\index{ui@{ui}!ui\_\-close@{ui\_\-close}}
+\index{ui\_\-close@{ui\_\-close}!ui@{ui}}
+\subsubsection[{ui\_\-close}]{\setlength{\rightskip}{0pt plus 5cm}int ui\_\-close (void)}}
+\label{group__ui_ga65d8b92b634da17c344458cd57e61f3e}
 
 
-Close U\-I. 
-
-
-
-Definition at line 41 of file ui.\-c.
+Close UI. 
 
 
 
-References S\-U\-C\-C\-E\-S\-S.
+Definition at line 41 of file ui.c.
 
 
 
-Referenced by main(), and threads\-\_\-linux\-\_\-init().
+References SUCCESS.
+
+
+
+Referenced by main(), and threads\_\-linux\_\-init().
+
+
 
 
 \begin{DoxyCode}
-42 \{
-43 \textcolor{preprocessor}{    #if UI\_MODULE\_ENABLED}
-44 \textcolor{preprocessor}{}        clear();
-45         printw(\textcolor{stringliteral}{"Cleaning up...\(\backslash\)n"});
+42 {
+43     #if UI_MODULE_ENABLED
+44         clear();
+45         printw("Cleaning up...\n");
 46         refresh();
 47         endwin();
-48 \textcolor{preprocessor}{    #endif}
-49 \textcolor{preprocessor}{}
-50           \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};
-51 \}
+48     #endif
+49 
+50           return SUCCESS;
+51 }
 \end{DoxyCode}
 
 
-Here is the caller graph for this function\-:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=262pt]{group__ui_ga65d8b92b634da17c344458cd57e61f3e_icgraph}
-\end{center}
-\end{figure}
 
 
-\hypertarget{group__ui_ga7d5a9d9a75693709de408781d001a6a6}{\index{Functions to deal the User Inteface using ncurses@{Functions to deal the User Inteface using ncurses}!ui\-\_\-imu\-\_\-data@{ui\-\_\-imu\-\_\-data}}
-\index{ui\-\_\-imu\-\_\-data@{ui\-\_\-imu\-\_\-data}!Functions to deal the User Inteface using ncurses@{Functions to deal the User Inteface using ncurses}}
-\subsubsection[{ui\-\_\-imu\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}int ui\-\_\-imu\-\_\-data (
-\begin{DoxyParamCaption}
-\item[{{\bf I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$}]{pimu\-\_\-data}
-\end{DoxyParamCaption}
-)}}\label{group__ui_ga7d5a9d9a75693709de408781d001a6a6}
+Here is the caller graph for this function:
+
+\hypertarget{group__ui_ga7d5a9d9a75693709de408781d001a6a6}{
+\index{ui@{ui}!ui\_\-imu\_\-data@{ui\_\-imu\_\-data}}
+\index{ui\_\-imu\_\-data@{ui\_\-imu\_\-data}!ui@{ui}}
+\subsubsection[{ui\_\-imu\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}int ui\_\-imu\_\-data ({\bf IMU\_\-DATA\_\-STRUCT} $\ast$ {\em pimu\_\-data})}}
+\label{group__ui_ga7d5a9d9a75693709de408781d001a6a6}
 
 
-Print I\-M\-U data. 
+Print IMU data. 
 
 
 
-Definition at line 129 of file ui.\-c.
+Definition at line 130 of file ui.c.
 
 
 
-References I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::acc, I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::calibrated\-::acc, I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::calib, I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::gyr, I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::calibrated\-::gyr, I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::mag, I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::calibrated\-::mag, S\-U\-C\-C\-E\-S\-S, D\-A\-T\-A\-\_\-\-X\-Y\-Z\-::x, D\-A\-T\-A\-\_\-\-X\-Y\-Z\-\_\-\-D\-O\-U\-B\-L\-E\-::x, D\-A\-T\-A\-\_\-\-X\-Y\-Z\-::y, D\-A\-T\-A\-\_\-\-X\-Y\-Z\-\_\-\-D\-O\-U\-B\-L\-E\-::y, D\-A\-T\-A\-\_\-\-X\-Y\-Z\-::z, and D\-A\-T\-A\-\_\-\-X\-Y\-Z\-\_\-\-D\-O\-U\-B\-L\-E\-::z.
+References IMU\_\-DATA\_\-STRUCT::calibrated::acc, IMU\_\-DATA\_\-STRUCT::acc, IMU\_\-DATA\_\-STRUCT::calib, IMU\_\-DATA\_\-STRUCT::calibrated::gyr, IMU\_\-DATA\_\-STRUCT::gyr, IMU\_\-DATA\_\-STRUCT::calibrated::mag, IMU\_\-DATA\_\-STRUCT::mag, SUCCESS, DATA\_\-XYZ\_\-DOUBLE::x, DATA\_\-XYZ::x, DATA\_\-XYZ\_\-DOUBLE::y, DATA\_\-XYZ::y, DATA\_\-XYZ\_\-DOUBLE::z, and DATA\_\-XYZ::z.
 
 
 
-Referenced by ui\-\_\-update().
+Referenced by ui\_\-update().
+
+
 
 
 \begin{DoxyCode}
-130 \{
-131         mvprintw(2, 0, \textcolor{stringliteral}{"Accelerometer X (raw): %d"}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_a448f284bf44eb503affda586ad5fa9d2}{acc}.\hyperlink{structDATA__XYZ_a54c1596e9f9969fd9c21e8458024ecfb}{x});
-132         mvprintw(2, 40, \textcolor{stringliteral}{"Accelerometer X (g): %lf"}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a281a7fdb40a05ed97388f18b9bb90c81}{acc}.
-      \hyperlink{structDATA__XYZ__DOUBLE_a22868cc99a423900e7b82d015a5eb91f}{x});
-133         mvprintw(3, 0, \textcolor{stringliteral}{"Accelerometer Y (raw): %d"}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_a448f284bf44eb503affda586ad5fa9d2}{acc}.\hyperlink{structDATA__XYZ_a94bbb1c889bf53eb6a5fffa2b39322cf}{y});
-134         mvprintw(3, 40, \textcolor{stringliteral}{"Accelerometer Y (g): %lf"}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a281a7fdb40a05ed97388f18b9bb90c81}{acc}.
-      \hyperlink{structDATA__XYZ__DOUBLE_a198a27b5df3b5b0bf461b0e481e22a82}{y});
-135         mvprintw(4, 0, \textcolor{stringliteral}{"Accelerometer Z (raw): %d"}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_a448f284bf44eb503affda586ad5fa9d2}{acc}.\hyperlink{structDATA__XYZ_a69e89ab0ec6e5d72fc5d54f62cc07fb5}{z});
-136         mvprintw(4, 40, \textcolor{stringliteral}{"Accelerometer Z (g): %lf"}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a281a7fdb40a05ed97388f18b9bb90c81}{acc}.
-      \hyperlink{structDATA__XYZ__DOUBLE_a9556e8868c223ff3e28756ea18a284c0}{z});
-137         mvprintw(5, 0, \textcolor{stringliteral}{"Gyrometer X (raw):     %d"}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_a0c1ac26626e4434a2ee124a1928a23a1}{gyr}.\hyperlink{structDATA__XYZ_a54c1596e9f9969fd9c21e8458024ecfb}{x});
-138         mvprintw(5, 40, \textcolor{stringliteral}{"Gyrometer X (rad/sec):   %lf"}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.
-      \hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a8a54aded6ce608f1b7d2b4a0c52c248b}{gyr}.\hyperlink{structDATA__XYZ__DOUBLE_a22868cc99a423900e7b82d015a5eb91f}{x});
-139         mvprintw(6, 0, \textcolor{stringliteral}{"Gyrometer Y (raw):     %d"}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_a0c1ac26626e4434a2ee124a1928a23a1}{gyr}.\hyperlink{structDATA__XYZ_a94bbb1c889bf53eb6a5fffa2b39322cf}{y});
-140         mvprintw(6, 40, \textcolor{stringliteral}{"Gyrometer Y (rad/sec):   %lf"}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.
-      \hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a8a54aded6ce608f1b7d2b4a0c52c248b}{gyr}.\hyperlink{structDATA__XYZ__DOUBLE_a198a27b5df3b5b0bf461b0e481e22a82}{y});
-141         mvprintw(7, 0, \textcolor{stringliteral}{"Gyrometer Z (raw):     %d"}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_a0c1ac26626e4434a2ee124a1928a23a1}{gyr}.\hyperlink{structDATA__XYZ_a69e89ab0ec6e5d72fc5d54f62cc07fb5}{z});
-142         mvprintw(7, 40, \textcolor{stringliteral}{"Gyrometer Z (rad/sec):   %lf"}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.
-      \hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a8a54aded6ce608f1b7d2b4a0c52c248b}{gyr}.\hyperlink{structDATA__XYZ__DOUBLE_a9556e8868c223ff3e28756ea18a284c0}{z});
-143         mvprintw(8, 0, \textcolor{stringliteral}{"Magnetometer X (raw):  %d"}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_a40c7df8b6d49297aa52873cfd9b60daa}{mag}.\hyperlink{structDATA__XYZ_a54c1596e9f9969fd9c21e8458024ecfb}{x});
-144         mvprintw(8, 40, \textcolor{stringliteral}{"Magnetometer X (B):     %lf"}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a2fde6c6759e0fda17e272c32096cb9ec}{mag}.
-      \hyperlink{structDATA__XYZ__DOUBLE_a22868cc99a423900e7b82d015a5eb91f}{x});
-145         mvprintw(9, 0, \textcolor{stringliteral}{"Magnetometer Y (raw):  %d"}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_a40c7df8b6d49297aa52873cfd9b60daa}{mag}.\hyperlink{structDATA__XYZ_a94bbb1c889bf53eb6a5fffa2b39322cf}{y});
-146         mvprintw(9, 40, \textcolor{stringliteral}{"Magnetometer Y (B):     %lf"}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a2fde6c6759e0fda17e272c32096cb9ec}{mag}.
-      \hyperlink{structDATA__XYZ__DOUBLE_a198a27b5df3b5b0bf461b0e481e22a82}{y});
-147         mvprintw(10,0, \textcolor{stringliteral}{"Magnetometer Z (raw):  %d"}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_a40c7df8b6d49297aa52873cfd9b60daa}{mag}.\hyperlink{structDATA__XYZ_a69e89ab0ec6e5d72fc5d54f62cc07fb5}{z});
-148         mvprintw(10,40, \textcolor{stringliteral}{"Magnetometer Z (B):     %lf"}, pimu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a2fde6c6759e0fda17e272c32096cb9ec}{mag}.
-      \hyperlink{structDATA__XYZ__DOUBLE_a9556e8868c223ff3e28756ea18a284c0}{z});
-149         mvprintw(12,0,\textcolor{stringliteral}{"Total Acceleromter: %lf"},sqrt(pimu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a281a7fdb40a05ed97388f18b9bb90c81}{acc}.
-      \hyperlink{structDATA__XYZ__DOUBLE_a22868cc99a423900e7b82d015a5eb91f}{x}*pimu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a281a7fdb40a05ed97388f18b9bb90c81}{acc}.\hyperlink{structDATA__XYZ__DOUBLE_a22868cc99a423900e7b82d015a5eb91f}{x}+pimu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a281a7fdb40a05ed97388f18b9bb90c81}{acc}.\hyperlink{structDATA__XYZ__DOUBLE_a198a27b5df3b5b0bf461b0e481e22a82}{y}*pimu\_data->
-      \hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a281a7fdb40a05ed97388f18b9bb90c81}{acc}.\hyperlink{structDATA__XYZ__DOUBLE_a198a27b5df3b5b0bf461b0e481e22a82}{y}+pimu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a281a7fdb40a05ed97388f18b9bb90c81}{acc}.\hyperlink{structDATA__XYZ__DOUBLE_a9556e8868c223ff3e28756ea18a284c0}{z}*pimu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a281a7fdb40a05ed97388f18b9bb90c81}{acc}.
-      \hyperlink{structDATA__XYZ__DOUBLE_a9556e8868c223ff3e28756ea18a284c0}{z}));
-150         mvprintw(13,0,\textcolor{stringliteral}{"Total Gyrometer: %lf"},sqrt(pimu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a8a54aded6ce608f1b7d2b4a0c52c248b}{gyr}.\hyperlink{structDATA__XYZ__DOUBLE_a22868cc99a423900e7b82d015a5eb91f}{x}*pimu\_data->
-      \hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a8a54aded6ce608f1b7d2b4a0c52c248b}{gyr}.\hyperlink{structDATA__XYZ__DOUBLE_a22868cc99a423900e7b82d015a5eb91f}{x}+pimu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a8a54aded6ce608f1b7d2b4a0c52c248b}{gyr}.\hyperlink{structDATA__XYZ__DOUBLE_a198a27b5df3b5b0bf461b0e481e22a82}{y}*pimu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a8a54aded6ce608f1b7d2b4a0c52c248b}{gyr}.
-      \hyperlink{structDATA__XYZ__DOUBLE_a198a27b5df3b5b0bf461b0e481e22a82}{y}+pimu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a8a54aded6ce608f1b7d2b4a0c52c248b}{gyr}.\hyperlink{structDATA__XYZ__DOUBLE_a9556e8868c223ff3e28756ea18a284c0}{z}*pimu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a8a54aded6ce608f1b7d2b4a0c52c248b}{gyr}.\hyperlink{structDATA__XYZ__DOUBLE_a9556e8868c223ff3e28756ea18a284c0}{z}));
-151         mvprintw(14,0,\textcolor{stringliteral}{"Total Magnetometer: %lf"},sqrt(pimu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a2fde6c6759e0fda17e272c32096cb9ec}{mag}.
-      \hyperlink{structDATA__XYZ__DOUBLE_a22868cc99a423900e7b82d015a5eb91f}{x}*pimu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a2fde6c6759e0fda17e272c32096cb9ec}{mag}.\hyperlink{structDATA__XYZ__DOUBLE_a22868cc99a423900e7b82d015a5eb91f}{x}+pimu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a2fde6c6759e0fda17e272c32096cb9ec}{mag}.\hyperlink{structDATA__XYZ__DOUBLE_a198a27b5df3b5b0bf461b0e481e22a82}{y}*pimu\_data->
-      \hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a2fde6c6759e0fda17e272c32096cb9ec}{mag}.\hyperlink{structDATA__XYZ__DOUBLE_a198a27b5df3b5b0bf461b0e481e22a82}{y}+pimu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a2fde6c6759e0fda17e272c32096cb9ec}{mag}.\hyperlink{structDATA__XYZ__DOUBLE_a9556e8868c223ff3e28756ea18a284c0}{z}*pimu\_data->\hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}.\hyperlink{structIMU__DATA__STRUCT_1_1calibrated_a2fde6c6759e0fda17e272c32096cb9ec}{mag}.
-      \hyperlink{structDATA__XYZ__DOUBLE_a9556e8868c223ff3e28756ea18a284c0}{z}));
-152         \textcolor{comment}{//mvprintw(15, 0, "Encoder (raw): %lf", enc.data);}
-153 
-154         \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};
-155 \}
+131 {
+132         mvprintw(2, 0, "Accelerometer X (raw): %d", pimu_data->acc.x);
+133         mvprintw(2, 40, "Accelerometer X (g): %lf", pimu_data->calib.acc.x);
+134         mvprintw(3, 0, "Accelerometer Y (raw): %d", pimu_data->acc.y);
+135         mvprintw(3, 40, "Accelerometer Y (g): %lf", pimu_data->calib.acc.y);
+136         mvprintw(4, 0, "Accelerometer Z (raw): %d", pimu_data->acc.z);
+137         mvprintw(4, 40, "Accelerometer Z (g): %lf", pimu_data->calib.acc.z);
+138         mvprintw(5, 0, "Gyrometer X (raw):     %d", pimu_data->gyr.x);
+139         mvprintw(5, 40, "Gyrometer X (rad/sec):   %lf", pimu_data->calib.gyr.x);
+140         mvprintw(6, 0, "Gyrometer Y (raw):     %d", pimu_data->gyr.y);
+141         mvprintw(6, 40, "Gyrometer Y (rad/sec):   %lf", pimu_data->calib.gyr.y);
+142         mvprintw(7, 0, "Gyrometer Z (raw):     %d", pimu_data->gyr.z);
+143         mvprintw(7, 40, "Gyrometer Z (rad/sec):   %lf", pimu_data->calib.gyr.z);
+144         mvprintw(8, 0, "Magnetometer X (raw):  %d", pimu_data->mag.x);
+145         mvprintw(8, 40, "Magnetometer X (B):     %lf", pimu_data->calib.mag.x);
+146         mvprintw(9, 0, "Magnetometer Y (raw):  %d", pimu_data->mag.y);
+147         mvprintw(9, 40, "Magnetometer Y (B):     %lf", pimu_data->calib.mag.y);
+148         mvprintw(10,0, "Magnetometer Z (raw):  %d", pimu_data->mag.z);
+149         mvprintw(10,40, "Magnetometer Z (B):     %lf", pimu_data->calib.mag.z);
+150         mvprintw(12,0,"Total Acceleromter: %lf",sqrt(pimu_data->calib.acc.x*pimu_
+      data->calib.acc.x+pimu_data->calib.acc.y*pimu_data->calib.acc.y+pimu_data->calib.
+      acc.z*pimu_data->calib.acc.z));
+151         mvprintw(13,0,"Total Gyrometer: %lf",sqrt(pimu_data->calib.gyr.x*pimu_dat
+      a->calib.gyr.x+pimu_data->calib.gyr.y*pimu_data->calib.gyr.y+pimu_data->calib.
+      gyr.z*pimu_data->calib.gyr.z));
+152         mvprintw(14,0,"Total Magnetometer: %lf",sqrt(pimu_data->calib.mag.x*pimu_
+      data->calib.mag.x+pimu_data->calib.mag.y*pimu_data->calib.mag.y+pimu_data->calib.
+      mag.z*pimu_data->calib.mag.z));
+153         //mvprintw(15, 0, "Encoder (raw): %lf", enc.data);
+154 
+155         return SUCCESS;
+156 }
 \end{DoxyCode}
 
 
-Here is the caller graph for this function\-:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{group__ui_ga7d5a9d9a75693709de408781d001a6a6_icgraph}
-\end{center}
-\end{figure}
 
 
-\hypertarget{group__ui_gab7bfb453918dcc296ff0cea3c79453d0}{\index{Functions to deal the User Inteface using ncurses@{Functions to deal the User Inteface using ncurses}!ui\-\_\-init@{ui\-\_\-init}}
-\index{ui\-\_\-init@{ui\-\_\-init}!Functions to deal the User Inteface using ncurses@{Functions to deal the User Inteface using ncurses}}
-\subsubsection[{ui\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}int ui\-\_\-init (
-\begin{DoxyParamCaption}
-\item[{void}]{}
-\end{DoxyParamCaption}
-)}}\label{group__ui_gab7bfb453918dcc296ff0cea3c79453d0}
+Here is the caller graph for this function:
+
+\hypertarget{group__ui_gab7bfb453918dcc296ff0cea3c79453d0}{
+\index{ui@{ui}!ui\_\-init@{ui\_\-init}}
+\index{ui\_\-init@{ui\_\-init}!ui@{ui}}
+\subsubsection[{ui\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}int ui\_\-init (void)}}
+\label{group__ui_gab7bfb453918dcc296ff0cea3c79453d0}
 
 
-Initialize U\-I. 
+Initialize UI. 
 
 
 
-Definition at line 26 of file ui.\-c.
+Definition at line 26 of file ui.c.
 
 
 
-References S\-U\-C\-C\-E\-S\-S, and T\-R\-U\-E.
+References SUCCESS, and TRUE.
 
 
 
-Referenced by main(), and threads\-\_\-linux\-\_\-init().
+Referenced by main(), and threads\_\-linux\_\-init().
+
+
 
 
 \begin{DoxyCode}
-27 \{
-28 \textcolor{preprocessor}{    #if UI\_MODULE\_ENABLED}
-29 \textcolor{preprocessor}{}        \textcolor{comment}{//NCURSES}
+27 {
+28     #if UI_MODULE_ENABLED
+29         //NCURSES
 30         initscr();
-31         scrollok(stdscr,\hyperlink{gmatlabdatafile_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
-32         \textcolor{comment}{//resizeterm(33,100);}
-33         \textcolor{comment}{//wresize(scr,32,100);}
-34         \textcolor{comment}{//erase();}
-35         timeout(0); \textcolor{comment}{//No delay for getch();}
-36 \textcolor{preprocessor}{    #endif}
-37 \textcolor{preprocessor}{}
-38         \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};
-39 \}
+31         scrollok(stdscr,TRUE);
+32         //resizeterm(33,100);
+33         //wresize(scr,32,100);
+34         //erase();
+35         timeout(0); //No delay for getch();
+36     #endif
+37 
+38         return SUCCESS;
+39 }
 \end{DoxyCode}
 
 
-Here is the caller graph for this function\-:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=250pt]{group__ui_gab7bfb453918dcc296ff0cea3c79453d0_icgraph}
-\end{center}
-\end{figure}
 
 
-\hypertarget{group__ui_gaefec243c5df45db0350c1abbccf20e3b}{\index{Functions to deal the User Inteface using ncurses@{Functions to deal the User Inteface using ncurses}!ui\-\_\-mra\-\_\-data@{ui\-\_\-mra\-\_\-data}}
-\index{ui\-\_\-mra\-\_\-data@{ui\-\_\-mra\-\_\-data}!Functions to deal the User Inteface using ncurses@{Functions to deal the User Inteface using ncurses}}
-\subsubsection[{ui\-\_\-mra\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}int ui\-\_\-mra\-\_\-data (
-\begin{DoxyParamCaption}
-\item[{{\bf M\-R\-A\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$}]{pmra\-\_\-data}
-\end{DoxyParamCaption}
-)}}\label{group__ui_gaefec243c5df45db0350c1abbccf20e3b}
+Here is the caller graph for this function:
+
+\hypertarget{group__ui_gaefec243c5df45db0350c1abbccf20e3b}{
+\index{ui@{ui}!ui\_\-mra\_\-data@{ui\_\-mra\_\-data}}
+\index{ui\_\-mra\_\-data@{ui\_\-mra\_\-data}!ui@{ui}}
+\subsubsection[{ui\_\-mra\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}int ui\_\-mra\_\-data ({\bf MRA\_\-DATA\_\-STRUCT} $\ast$ {\em pmra\_\-data})}}
+\label{group__ui_gaefec243c5df45db0350c1abbccf20e3b}
 
 
-Print M\-R\-A data. 
+Print MRA data. 
 
 
 
-Definition at line 181 of file ui.\-c.
+Definition at line 183 of file ui.c.
 
 
 
-References S\-U\-C\-C\-E\-S\-S, M\-R\-A\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::v\-\_\-ctl, and M\-R\-A\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::v\-\_\-ctl\-\_\-read.
+References SUCCESS, MRA\_\-DATA\_\-STRUCT::v\_\-ctl, and MRA\_\-DATA\_\-STRUCT::v\_\-ctl\_\-read.
 
 
 
-Referenced by ui\-\_\-update().
+Referenced by ui\_\-update().
+
+
 
 
 \begin{DoxyCode}
-182 \{
-183         mvprintw(2,0,\textcolor{stringliteral}{"V\_ctl (bits): %d"},pmra\_data->\hyperlink{structMRA__DATA__STRUCT_a64b4e6bb604e58de593a60c87942b966}{v\_ctl});
-184         mvprintw(3,0,\textcolor{stringliteral}{"V\_ctl\_read (bits): %d"},pmra\_data->\hyperlink{structMRA__DATA__STRUCT_a3a31d57268c33b21ac915fdc27dfe474}{v\_ctl\_read});
-185         \textcolor{comment}{//mvprintw(2,40,"Fx (N): %lf",peff\_data->??);}
-186 
-187         \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};
-188 \}
+184 {
+185         mvprintw(2,0,"V_ctl (bits): %d",pmra_data->v_ctl);
+186         mvprintw(3,0,"V_ctl_read (bits): %d",pmra_data->v_ctl_read);
+187         //mvprintw(2,40,"Fx (N): %lf",peff_data->??);
+188 
+189         return SUCCESS;
+190 }
 \end{DoxyCode}
 
 
-Here is the caller graph for this function\-:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{group__ui_gaefec243c5df45db0350c1abbccf20e3b_icgraph}
-\end{center}
-\end{figure}
 
 
-\hypertarget{group__ui_ga42e4dac2d138061a74c572358c8ebf49}{\index{Functions to deal the User Inteface using ncurses@{Functions to deal the User Inteface using ncurses}!ui\-\_\-update@{ui\-\_\-update}}
-\index{ui\-\_\-update@{ui\-\_\-update}!Functions to deal the User Inteface using ncurses@{Functions to deal the User Inteface using ncurses}}
-\subsubsection[{ui\-\_\-update}]{\setlength{\rightskip}{0pt plus 5cm}int ui\-\_\-update (
-\begin{DoxyParamCaption}
-\item[{{\bf I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$}]{pimu\-\_\-data, }
-\item[{{\bf E\-F\-F\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$}]{peff\-\_\-data, }
-\item[{{\bf M\-R\-A\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$}]{pmra\-\_\-data, }
-\item[{{\bf E\-N\-C\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T} $\ast$}]{enc\-\_\-data, }
-\item[{int}]{total, }
-\item[{int}]{failure}
-\end{DoxyParamCaption}
-)}}\label{group__ui_ga42e4dac2d138061a74c572358c8ebf49}
+Here is the caller graph for this function:
+
+\hypertarget{group__ui_ga42e4dac2d138061a74c572358c8ebf49}{
+\index{ui@{ui}!ui\_\-update@{ui\_\-update}}
+\index{ui\_\-update@{ui\_\-update}!ui@{ui}}
+\subsubsection[{ui\_\-update}]{\setlength{\rightskip}{0pt plus 5cm}int ui\_\-update ({\bf IMU\_\-DATA\_\-STRUCT} $\ast$ {\em pimu\_\-data}, \/  {\bf EFF\_\-DATA\_\-STRUCT} $\ast$ {\em peff\_\-data}, \/  {\bf MRA\_\-DATA\_\-STRUCT} $\ast$ {\em pmra\_\-data}, \/  {\bf ENC\_\-DATA\_\-STRUCT} $\ast$ {\em enc\_\-data}, \/  int {\em total}, \/  int {\em failure})}}
+\label{group__ui_ga42e4dac2d138061a74c572358c8ebf49}
 
 
 Update Screen with new data of sensors. 
 
 
 
-Definition at line 53 of file ui.\-c.
+Definition at line 53 of file ui.c.
 
 
 
-References exit\-\_\-program(), F\-A\-I\-L\-U\-R\-E, S\-U\-C\-C\-E\-S\-S, ui\-\_\-eff\-\_\-data(), ui\-\_\-enc\-\_\-data(), ui\-\_\-imu\-\_\-data(), ui\-\_\-mra\-\_\-data(), and ui\-\_\-overview\-\_\-data().
+References exit\_\-program(), FAILURE, SUCCESS, ui\_\-eff\_\-data(), ui\_\-enc\_\-data(), ui\_\-imu\_\-data(), ui\_\-mra\_\-data(), and ui\_\-overview\_\-data().
 
 
 
-Referenced by periodic\-\_\-task\-\_\-2(), threads\-\_\-linux\-\_\-periodic\-\_\-task\-\_\-2(), and ui\-\_\-task().
+Referenced by periodic\_\-task\_\-2(), threads\_\-linux\_\-periodic\_\-task\_\-2(), and ui\_\-task().
+
+
 
 
 \begin{DoxyCode}
-54 \{
-55         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} user\_char = 0;
+54 {
+55         unsigned char user_char = 0;
 56 
-57         \textcolor{keyword}{static} \textcolor{keyword}{enum} \{UI\_OVERVIEW = 0, UI\_IMU, UI\_EFF, UI\_MRA , UI\_ENC\} ui\_state;
+57         static enum {UI_OVERVIEW = 0, UI_IMU, UI_EFF, UI_MRA , UI_ENC} ui_state;
 58 
 59         erase();
-60         \textcolor{comment}{//wresize(scr,32,100);}
-61         attron(A\_STANDOUT);
+60         //wresize(scr,32,100);
+61         attron(A_STANDOUT);
 62 
-63         mvaddstr(0,15,\textcolor{stringliteral}{"RLEG Data"});
-64         attroff(A\_STANDOUT);
+63         mvaddstr(0,15,"RLEG Data");
+64         attroff(A_STANDOUT);
 65 
-66         \textcolor{keywordflow}{switch}(ui\_state)
-67         \{
-68                 \textcolor{keywordflow}{case} UI\_IMU:
-69                         \textcolor{keywordflow}{if}(\hyperlink{group__ui_ga7d5a9d9a75693709de408781d001a6a6}{ui\_imu\_data}(pimu\_data) != \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS}) \textcolor{keywordflow}{return} 
-      \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
-70                         \textcolor{keywordflow}{break};
-71                 \textcolor{keywordflow}{case} UI\_EFF:
-72                         \textcolor{keywordflow}{if}(\hyperlink{ui_8c_af48496a4ce54378764bc4ca9eddfd498}{ui\_eff\_data}(peff\_data) != \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS}) \textcolor{keywordflow}{return} 
-      \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
-73                         \textcolor{keywordflow}{break};
-74                 \textcolor{keywordflow}{case} UI\_MRA:
-75                         \textcolor{keywordflow}{if}(\hyperlink{group__ui_gaefec243c5df45db0350c1abbccf20e3b}{ui\_mra\_data}(pmra\_data) != \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS}) \textcolor{keywordflow}{return} 
-      \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
-76                         \textcolor{keywordflow}{break};
-77                 \textcolor{keywordflow}{case} UI\_ENC:
-78                         \textcolor{keywordflow}{if}(\hyperlink{ui_8c_a3821f6ba38465f8d170f7b947869e7d9}{ui\_enc\_data}(enc\_data) != \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS}) \textcolor{keywordflow}{return} 
-      \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
-79                         \textcolor{keywordflow}{break};
-80                 \textcolor{keywordflow}{case} UI\_OVERVIEW:
-81                 \textcolor{keywordflow}{default}:
-82                         \textcolor{keywordflow}{if}(\hyperlink{ui_8c_a8d5e19833fec51919aad6e78bb74619a}{ui\_overview\_data}(\hyperlink{main_8c_ac7af894858cf396a219d632f40afdc8d}{total}, \hyperlink{main_8c_a4f35e5ea2395561d0bd3b2f45612dc2c}{failure}, pimu\_data, 
-      peff\_data, pmra\_data, enc\_data) != \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS}) \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
-83                         \textcolor{keywordflow}{break};
-84         \}
+66         switch(ui_state)
+67         {
+68                 case UI_IMU:
+69                         if(ui_imu_data(pimu_data) != SUCCESS) return FAILURE;
+70                         break;
+71                 case UI_EFF:
+72                         if(ui_eff_data(peff_data) != SUCCESS) return FAILURE;
+73                         break;
+74                 case UI_MRA:
+75                         if(ui_mra_data(pmra_data) != SUCCESS) return FAILURE;
+76                         break;
+77         case UI_ENC:
+78                         if(ui_enc_data(enc_data) != SUCCESS) return FAILURE;
+79                         break;
+80                 case UI_OVERVIEW:
+81                 default:
+82                         if(ui_overview_data(total, failure, pimu_data, peff_data,
+       pmra_data, enc_data) != SUCCESS) return FAILURE;
+83                         break;
+84         }
 85 
 86         refresh();
 87 
-88         user\_char = getch(); \textcolor{comment}{//Getting a char typed by the user}
-89         \textcolor{keywordflow}{switch}(user\_char)
-90         \{
-91                 \textcolor{keywordflow}{case} \textcolor{charliteral}{'Q'}:
-92                 \textcolor{keywordflow}{case} \textcolor{charliteral}{'q'}: \textcolor{comment}{//Quit}
-93                         \hyperlink{main_8c_a5f05ce725141ddfab683e059b1cd95ea}{exit\_program}();
-94                         \textcolor{keywordflow}{break};
-95                 \textcolor{keywordflow}{case} \textcolor{charliteral}{'i'}: \textcolor{comment}{//IMU view}
-96                         ui\_state = UI\_IMU;
-97                         \textcolor{keywordflow}{break};
-98                 \textcolor{keywordflow}{case} \textcolor{charliteral}{'f'}: \textcolor{comment}{//EFF view}
-99                         ui\_state = UI\_EFF;
-100                         \textcolor{keywordflow}{break};
-101                 \textcolor{keywordflow}{case} \textcolor{charliteral}{'e'}: \textcolor{comment}{// ENCODER view}
-102                         ui\_state = UI\_ENC;
-103                 \textcolor{keywordflow}{case} \textcolor{charliteral}{'o'}: \textcolor{comment}{//Overview}
-104                         ui\_state = UI\_OVERVIEW;
-105                         \textcolor{keywordflow}{break};
-106                 \textcolor{keywordflow}{case} \textcolor{charliteral}{'m'}: \textcolor{comment}{//MRA}
-107                         ui\_state = UI\_MRA;
-108                 
-109                         \textcolor{keywordflow}{break};
-110                 \textcolor{comment}{/* removed datalogger}
-111 \textcolor{comment}{                case 'd': //Datalogger start/stop}
-112 \textcolor{comment}{                  if(datalogger\_status() == DATALOGGER\_RUNNING)}
-113 \textcolor{comment}{                  \{}
-114 \textcolor{comment}{                    datalogger\_stop();}
-115 \textcolor{comment}{                  \}}
-116 \textcolor{comment}{                  else}
-117 \textcolor{comment}{                  \{}
-118 \textcolor{comment}{                    datalogger\_start();}
-119 \textcolor{comment}{                  \}}
-120 \textcolor{comment}{                  break;}
-121 \textcolor{comment}{                */}
-122                \textcolor{keywordflow}{default}:
-123                  \textcolor{keywordflow}{break};
-124         \}
-125 
-126         \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};
-127 \}
+88         user_char = getch(); //Getting a char typed by the user
+89         switch(user_char)
+90         {
+91                 case 'Q':
+92                 case 'q': //Quit
+93                         exit_program();
+94                         break;
+95                 case 'i': //IMU view
+96                         ui_state = UI_IMU;
+97                         break;
+98                 case 'f': //EFF view
+99                         ui_state = UI_EFF;
+100                         break;
+101             case 'e': // ENCODER view
+102                     ui_state = UI_ENC;
+103                     break;
+104                 case 'o': //Overview
+105                         ui_state = UI_OVERVIEW;
+106                         break;
+107                 case 'm': //MRA
+108                         ui_state = UI_MRA;
+109                 
+110                         break;
+111                 /* removed datalogger
+112                 case 'd': //Datalogger start/stop
+113                   if(datalogger_status() == DATALOGGER_RUNNING)
+114                   {
+115                     datalogger_stop();
+116                   }
+117                   else
+118                   {
+119                     datalogger_start();
+120                   }
+121                   break;
+122                 */
+123                default:
+124                  break;
+125         }
+126 
+127         return SUCCESS;
+128 }
 \end{DoxyCode}
 
 
-Here is the call graph for this function\-:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{group__ui_ga42e4dac2d138061a74c572358c8ebf49_cgraph}
-\end{center}
-\end{figure}
+
+
+Here is the call graph for this function:
 
 
 
-
-Here is the caller graph for this function\-:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{group__ui_ga42e4dac2d138061a74c572358c8ebf49_icgraph}
-\end{center}
-\end{figure}
-
+Here is the caller graph for this function:
 

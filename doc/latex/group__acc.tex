@@ -1,429 +1,488 @@
-\hypertarget{group__acc}{\section{Functions for accelerometer A\-D\-X\-L345}
-\label{group__acc}\index{Functions for accelerometer A\-D\-X\-L345@{Functions for accelerometer A\-D\-X\-L345}}
+\hypertarget{group__acc}{
+\section{Functions for accelerometer ADXL345}
+\label{group__acc}\index{Functions for accelerometer ADXL345@{Functions for accelerometer ADXL345}}
 }
-Collaboration diagram for Functions for accelerometer A\-D\-X\-L345\-:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=328pt]{group__acc}
-\end{center}
-\end{figure}
+
+
+Collaboration diagram for Functions for accelerometer ADXL345:
+
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-int \hyperlink{group__acc_ga534116416343122de29a5b6ade6876bd}{acc\-\_\-write\-\_\-reg} (int \hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\-\_\-dev}, uint8\-\_\-t reg, uint8\-\_\-t data)
-\begin{DoxyCompactList}\small\item\em W\-R\-I\-T\-E T\-O R\-E\-G\-I\-S\-T\-E\-R. \end{DoxyCompactList}\item 
-uint8\-\_\-t $\ast$ \hyperlink{group__acc_ga2a91c44eebbe44f4d3b8c508633512f9}{acc\-\_\-read\-\_\-reg} (int \hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\-\_\-dev}, uint8\-\_\-t reg, uint8\-\_\-t count)
-\begin{DoxyCompactList}\small\item\em R\-E\-A\-D C\-O\-U\-N\-T 8-\/\-B\-I\-T R\-E\-G\-I\-S\-T\-E\-R I\-N S\-E\-Q\-U\-E\-N\-C\-E \end{DoxyCompactList}\item 
-int \hyperlink{group__acc_gae8f9cc6e0d15e61039d846305f86f073}{acc\-\_\-init} (int \hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\-\_\-dev}, uint8\-\_\-t full\-\_\-res, uint16\-\_\-t rate, uint8\-\_\-t range)
-\begin{DoxyCompactList}\small\item\em I\-N\-I\-T\-I\-A\-L\-I\-Z\-E A\-C\-C\-E\-L\-E\-R\-O\-M\-E\-T\-E\-R. \end{DoxyCompactList}\item 
-int \hyperlink{group__acc_ga013bb5ed8a763883fc440549d2b1a6ce}{acc\-\_\-read\-\_\-all\-\_\-data} (int \hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\-\_\-dev}, short int $\ast$data)
-\begin{DoxyCompactList}\small\item\em R\-E\-A\-D A\-L\-L D\-A\-T\-A A\-T O\-N\-C\-E (X, Y and Z) \end{DoxyCompactList}\item 
-short int \hyperlink{group__acc_ga041d6953f2bfc8c5efa4d5bbac812305}{acc\-\_\-read\-\_\-data} (int \hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\-\_\-dev}, int axis)
-\begin{DoxyCompactList}\small\item\em R\-E\-A\-D D\-A\-T\-A (X, Y or Z) \end{DoxyCompactList}\item 
-int \hyperlink{group__acc_ga8509cccabb08e7267677f66f25718731}{acc\-\_\-read\-\_\-all\-\_\-reg} (int \hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\-\_\-dev})
-\begin{DoxyCompactList}\small\item\em Read all accelerometer data and print in stdio. \end{DoxyCompactList}\end{DoxyCompactItemize}
-
-
-\subsection{Detailed Description}
+int \hyperlink{group__acc_ga534116416343122de29a5b6ade6876bd}{acc\_\-write\_\-reg} (int i2c\_\-dev, uint8\_\-t reg, uint8\_\-t data)
+\begin{DoxyCompactList}\small\item\em WRITE TO REGISTER. \item\end{DoxyCompactList}\item 
+uint8\_\-t $\ast$ \hyperlink{group__acc_ga2a91c44eebbe44f4d3b8c508633512f9}{acc\_\-read\_\-reg} (int i2c\_\-dev, uint8\_\-t reg, uint8\_\-t count)
+\begin{DoxyCompactList}\small\item\em READ COUNT 8-\/BIT REGISTER IN SEQUENCE \item\end{DoxyCompactList}\item 
+int \hyperlink{group__acc_gae8f9cc6e0d15e61039d846305f86f073}{acc\_\-init} (int i2c\_\-dev, uint8\_\-t full\_\-res, uint16\_\-t rate, uint8\_\-t range)
+\begin{DoxyCompactList}\small\item\em INITIALIZE ACCELEROMETER. \item\end{DoxyCompactList}\item 
+int \hyperlink{group__acc_ga013bb5ed8a763883fc440549d2b1a6ce}{acc\_\-read\_\-all\_\-data} (int i2c\_\-dev, short int $\ast$data)
+\begin{DoxyCompactList}\small\item\em READ ALL DATA AT ONCE (X, Y and Z). \item\end{DoxyCompactList}\item 
+short int \hyperlink{group__acc_ga041d6953f2bfc8c5efa4d5bbac812305}{acc\_\-read\_\-data} (int i2c\_\-dev, int axis)
+\begin{DoxyCompactList}\small\item\em READ DATA (X, Y or Z). \item\end{DoxyCompactList}\item 
+int \hyperlink{group__acc_ga8509cccabb08e7267677f66f25718731}{acc\_\-read\_\-all\_\-reg} (int i2c\_\-dev)
+\begin{DoxyCompactList}\small\item\em Read all accelerometer data and print in stdio. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
-\hypertarget{group__acc_gae8f9cc6e0d15e61039d846305f86f073}{\index{Functions for accelerometer A\-D\-X\-L345@{Functions for accelerometer A\-D\-X\-L345}!acc\-\_\-init@{acc\-\_\-init}}
-\index{acc\-\_\-init@{acc\-\_\-init}!Functions for accelerometer ADXL345@{Functions for accelerometer A\-D\-X\-L345}}
-\subsubsection[{acc\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}int acc\-\_\-init (
-\begin{DoxyParamCaption}
-\item[{int}]{i2c\-\_\-dev, }
-\item[{uint8\-\_\-t}]{full\-\_\-res, }
-\item[{uint16\-\_\-t}]{rate, }
-\item[{uint8\-\_\-t}]{range}
-\end{DoxyParamCaption}
-)}}\label{group__acc_gae8f9cc6e0d15e61039d846305f86f073}
+\hypertarget{group__acc_gae8f9cc6e0d15e61039d846305f86f073}{
+\index{acc@{acc}!acc\_\-init@{acc\_\-init}}
+\index{acc\_\-init@{acc\_\-init}!acc@{acc}}
+\subsubsection[{acc\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}int acc\_\-init (int {\em i2c\_\-dev}, \/  uint8\_\-t {\em full\_\-res}, \/  uint16\_\-t {\em rate}, \/  uint8\_\-t {\em range})}}
+\label{group__acc_gae8f9cc6e0d15e61039d846305f86f073}
 
 
-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E A\-C\-C\-E\-L\-E\-R\-O\-M\-E\-T\-E\-R. 
+INITIALIZE ACCELEROMETER. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em i2c\-\_\-dev} & Communication Port \\
-\hline
-{\em full\-\_\-res} & Set resolution to 10 bits if value equal 0 else set to Full resolution \\
-\hline
-{\em rate} & Set data output rate (Hz), possible values\-: (3200,1600,800,400,200,100,50,25, 12\-: 12.\-5\-Hz, 6\-: 6.\-25\-Hz) \\
-\hline
-{\em range} & Set range of read, possible values\-: (2\-: +-\/ 2g 4\-: +-\/ 4g 8\-: +-\/ 8g anyother\-: 16g) \\
-\hline
-\end{DoxyParams}
+\item[{\em i2c\_\-dev}]Communication Port \item[{\em full\_\-res}]Set resolution to 10 bits if value equal 0 else set to Full resolution \item[{\em rate}]Set data output rate (Hz), possible values: (3200,1600,800,400,200,100,50,25, 12: 12.5Hz, 6: 6.25Hz) \item[{\em range}]Set range of read, possible values: (2: +-\/ 2g 4: +-\/ 4g 8: +-\/ 8g anyother: 16g) \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-flag with S\-U\-C\-C\-E\-S\-S or F\-A\-I\-L\-U\-R\-E
+flag with SUCCESS or FAILURE
 \end{DoxyReturn}
-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E A\-C\-C\-E\-L\-E\-R\-O\-M\-E\-T\-E\-R.
+INITIALIZE ACCELEROMETER.
 
-Implements the I2\-C communication between Gumstix Overo Fire and A\-D\-X\-L345 \begin{DoxyAuthor}{Author}
+Implements the I2C communication between Gumstix Overo Fire and ADXL345 \begin{DoxyAuthor}{Author}
 Caio Gustavo Mesquita Ângelo 
 \end{DoxyAuthor}
 
 
-Definition at line 11 of file acc\-\_\-functions.\-c.
+Definition at line 11 of file acc\_\-functions.c.
+
+
+
+References ACC\_\-BW\_\-RATE, ACC\_\-DATA\_\-FORMAT, ACC\_\-POWER\_\-CTL, ACC\_\-POWER\_\-CTL\_\-MEAS\_\-MODE, acc\_\-write\_\-reg(), FAILURE, and SUCCESS.
+
+
+
+Referenced by devices\_\-init().
+
+
 
 
 \begin{DoxyCode}
-12 \{ 
-13   uint8\_t data=0;
+12 { 
+13   uint8_t data=0;
 14 
-15   \textcolor{keywordflow}{switch}(range)\{
-16     \textcolor{keywordflow}{case} 2:
+15   switch(range){
+16     case 2:
 17       data=0x08;;
-18       \textcolor{keywordflow}{break};
-19     \textcolor{keywordflow}{case} 4:
+18       break;
+19     case 4:
 20       data=0x09;
-21       \textcolor{keywordflow}{break};
-22     \textcolor{keywordflow}{case} 8:
+21       break;
+22     case 8:
 23       data=0x0A;
-24       \textcolor{keywordflow}{break};
-25     \textcolor{keywordflow}{default}:
+24       break;
+25     default:
 26       data=0x0B;
-27       \textcolor{keywordflow}{break};
-28   \}
+27       break;
+28   }
 29   
-30   \textcolor{keywordflow}{if}(full\_res==0)
+30   if(full_res==0)
 31     data=data&(0xF7);
 32   
-33   \textcolor{keywordflow}{if}((\hyperlink{group__acc_ga534116416343122de29a5b6ade6876bd}{acc\_write\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev}, \hyperlink{communication_2imu__regs_8h_ab4eb7fc69b2a37ee750d3400fc2c53a1}{ACC\_DATA\_FORMAT}, data))<0)\{
-34     perror(\textcolor{stringliteral}{"Data Format unsuccesful"});
-35     \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
-36   \}
+33   if((acc_write_reg(i2c_dev, ACC_DATA_FORMAT, data))<0){
+34     perror("Data Format unsuccesful");
+35     return FAILURE;
+36   }
 37   
-38   data=\hyperlink{communication_2imu__regs_8h_a9a841ba3e094b01ea439584e12b25894}{ACC\_POWER\_CTL\_MEAS\_MODE};
-39   \textcolor{keywordflow}{if}((\hyperlink{group__acc_ga534116416343122de29a5b6ade6876bd}{acc\_write\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev}, \hyperlink{communication_2imu__regs_8h_ad857d62b61f349216faeda06eff5f9c6}{ACC\_POWER\_CTL}, data))<0)\{
-40     perror(\textcolor{stringliteral}{"Power Control unsuccesful"});
-41     \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
-42   \}
+38   data=ACC_POWER_CTL_MEAS_MODE;
+39   if((acc_write_reg(i2c_dev, ACC_POWER_CTL, data))<0){
+40     perror("Power Control unsuccesful");
+41     return FAILURE;
+42   }
 43   
-44   \textcolor{keywordflow}{switch}(rate)\{
-45     \textcolor{keywordflow}{case} 100:
+44   switch(rate){
+45     case 100:
 46       data=0x0A;
-47       \textcolor{keywordflow}{break};
-48     \textcolor{keywordflow}{case} 3200:
+47       break;
+48     case 3200:
 49       data=0x0F;;
-50       \textcolor{keywordflow}{break};
-51     \textcolor{keywordflow}{case} 1600:
+50       break;
+51     case 1600:
 52       data=0x0E;
-53       \textcolor{keywordflow}{break};
-54     \textcolor{keywordflow}{case} 800:
+53       break;
+54     case 800:
 55       data=0x0D;
-56       \textcolor{keywordflow}{break};
-57     \textcolor{keywordflow}{case} 400:
+56       break;
+57     case 400:
 58       data=0x0C;
-59       \textcolor{keywordflow}{break};
-60     \textcolor{keywordflow}{case} 200:
+59       break;
+60     case 200:
 61       data=0x0B;
-62       \textcolor{keywordflow}{break};
-63     \textcolor{keywordflow}{case} 50:
+62       break;
+63     case 50:
 64       data=0x09;
-65       \textcolor{keywordflow}{break}; 
-66     \textcolor{keywordflow}{case} 25:
+65       break; 
+66     case 25:
 67       data=0x08;
-68       \textcolor{keywordflow}{break};
-69     \textcolor{keywordflow}{case} 12:
+68       break;
+69     case 12:
 70       data=0x07;
-71       \textcolor{keywordflow}{break};
-72     \textcolor{keywordflow}{case} 6:
+71       break;
+72     case 6:
 73       data=0x06;
-74       \textcolor{keywordflow}{break};
-75     \textcolor{keywordflow}{default}:
-76       perror(\textcolor{stringliteral}{"Wrong rate value"});
-77       \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
-78   \}
-79   \textcolor{keywordflow}{if}((\hyperlink{group__acc_ga534116416343122de29a5b6ade6876bd}{acc\_write\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev}, \hyperlink{communication_2imu__regs_8h_afbbb5a3aa097a32f98c47158141a882f}{ACC\_BW\_RATE}, data))<0)\{
-80     perror(\textcolor{stringliteral}{"Write in BW\_RATE unsuccesful"});
-81     \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
-82   \}
+74       break;
+75     default:
+76       perror("Wrong rate value");
+77       return FAILURE;
+78   }
+79   if((acc_write_reg(i2c_dev, ACC_BW_RATE, data))<0){
+80     perror("Write in BW_RATE unsuccesful");
+81     return FAILURE;
+82   }
 83   
-84   \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};
-85 \}
+84   return SUCCESS;
+85 }
 \end{DoxyCode}
-\hypertarget{group__acc_ga013bb5ed8a763883fc440549d2b1a6ce}{\index{Functions for accelerometer A\-D\-X\-L345@{Functions for accelerometer A\-D\-X\-L345}!acc\-\_\-read\-\_\-all\-\_\-data@{acc\-\_\-read\-\_\-all\-\_\-data}}
-\index{acc\-\_\-read\-\_\-all\-\_\-data@{acc\-\_\-read\-\_\-all\-\_\-data}!Functions for accelerometer ADXL345@{Functions for accelerometer A\-D\-X\-L345}}
-\subsubsection[{acc\-\_\-read\-\_\-all\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}int acc\-\_\-read\-\_\-all\-\_\-data (
-\begin{DoxyParamCaption}
-\item[{int}]{i2c\-\_\-dev, }
-\item[{short int $\ast$}]{data}
-\end{DoxyParamCaption}
-)}}\label{group__acc_ga013bb5ed8a763883fc440549d2b1a6ce}
 
 
-R\-E\-A\-D A\-L\-L D\-A\-T\-A A\-T O\-N\-C\-E (X, Y and Z) 
 
 
-\begin{DoxyParams}[1]{Parameters}
- & {\em i2c\-\_\-dev} & Communication Port \\
-\hline
-\mbox{\tt out}  & {\em data} & Data's vector\\
-\hline
-\end{DoxyParams}
+Here is the call graph for this function:
+
+
+
+Here is the caller graph for this function:
+
+\hypertarget{group__acc_ga013bb5ed8a763883fc440549d2b1a6ce}{
+\index{acc@{acc}!acc\_\-read\_\-all\_\-data@{acc\_\-read\_\-all\_\-data}}
+\index{acc\_\-read\_\-all\_\-data@{acc\_\-read\_\-all\_\-data}!acc@{acc}}
+\subsubsection[{acc\_\-read\_\-all\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}int acc\_\-read\_\-all\_\-data (int {\em i2c\_\-dev}, \/  short int $\ast$ {\em data})}}
+\label{group__acc_ga013bb5ed8a763883fc440549d2b1a6ce}
+
+
+READ ALL DATA AT ONCE (X, Y and Z). 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em i2c\_\-dev}]Communication Port \item[\mbox{$\rightarrow$} {\em data}]Data's vector\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-flag with S\-U\-C\-C\-E\-S\-S or F\-A\-I\-L\-U\-R\-E 
+flag with SUCCESS or FAILURE 
 \end{DoxyReturn}
 
 
-Definition at line 159 of file acc\-\_\-functions.\-c.
+Definition at line 159 of file acc\_\-functions.c.
+
+
+
+References ACC\_\-DATAX0, acc\_\-read\_\-reg(), FAILURE, and SUCCESS.
+
+
+
+Referenced by read\_\-all\_\-data().
+
+
 
 
 \begin{DoxyCode}
-160 \{
-161   \textcolor{keywordtype}{int} i;
-162   uint8\_t *data8;
-163   \textcolor{keyword}{union }result
-164   \{
-165     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} usgnd[3];
-166     \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} sgnd[3];
-167   \} result;
-168   \textcolor{comment}{//result=(union result*)malloc(3*sizeof(union result));}
-169   \textcolor{keywordflow}{if}( (data8=\hyperlink{group__acc_ga2a91c44eebbe44f4d3b8c508633512f9}{acc\_read\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev},\hyperlink{communication_2imu__regs_8h_afae448fbad872220013e5c3abf0f3d9f}{ACC\_DATAX0},6))==NULL )
-170   \{
-171     \textcolor{comment}{//perror("Read accelerometer register failed");}
-172     \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
-173   \}
-174   \textcolor{comment}{//result.usgnd=(unsigned int*)malloc(3*sizeof(unsigned int));}
-175   \textcolor{keywordflow}{for}(i=0; i<3; i++)
-176   \{
+160 {
+161   int i;
+162   uint8_t *data8;
+163   union result
+164   {
+165     unsigned short int usgnd[3];
+166     short int sgnd[3];
+167   } result;
+168   //result=(union result*)malloc(3*sizeof(union result));
+169   if( (data8=acc_read_reg(i2c_dev,ACC_DATAX0,6))==NULL )
+170   {
+171     //perror("Read accelerometer register failed");
+172     return FAILURE;
+173   }
+174   //result.usgnd=(unsigned int*)malloc(3*sizeof(unsigned int));
+175   for(i=0; i<3; i++)
+176   {
 177     result.usgnd[i]=0;
-178     result.usgnd[i]=result.usgnd[i]|((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} int)data8[i*2])|(((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} int)data8[i*2+1])<<8
-      );
+178     result.usgnd[i]=result.usgnd[i]|((unsigned short int)data8[i*2])|(((unsigned 
+      short int)data8[i*2+1])<<8);
 179     data[i]=result.sgnd[i];
-180   \}
-181   \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};  
-182 \}
+180   }
+181   return SUCCESS;  
+182 }
 \end{DoxyCode}
-\hypertarget{group__acc_ga8509cccabb08e7267677f66f25718731}{\index{Functions for accelerometer A\-D\-X\-L345@{Functions for accelerometer A\-D\-X\-L345}!acc\-\_\-read\-\_\-all\-\_\-reg@{acc\-\_\-read\-\_\-all\-\_\-reg}}
-\index{acc\-\_\-read\-\_\-all\-\_\-reg@{acc\-\_\-read\-\_\-all\-\_\-reg}!Functions for accelerometer ADXL345@{Functions for accelerometer A\-D\-X\-L345}}
-\subsubsection[{acc\-\_\-read\-\_\-all\-\_\-reg}]{\setlength{\rightskip}{0pt plus 5cm}int acc\-\_\-read\-\_\-all\-\_\-reg (
-\begin{DoxyParamCaption}
-\item[{int}]{i2c\-\_\-dev}
-\end{DoxyParamCaption}
-)}}\label{group__acc_ga8509cccabb08e7267677f66f25718731}
+
+
+
+
+Here is the call graph for this function:
+
+
+
+Here is the caller graph for this function:
+
+\hypertarget{group__acc_ga8509cccabb08e7267677f66f25718731}{
+\index{acc@{acc}!acc\_\-read\_\-all\_\-reg@{acc\_\-read\_\-all\_\-reg}}
+\index{acc\_\-read\_\-all\_\-reg@{acc\_\-read\_\-all\_\-reg}!acc@{acc}}
+\subsubsection[{acc\_\-read\_\-all\_\-reg}]{\setlength{\rightskip}{0pt plus 5cm}int acc\_\-read\_\-all\_\-reg (int {\em i2c\_\-dev})}}
+\label{group__acc_ga8509cccabb08e7267677f66f25718731}
 
 
 Read all accelerometer data and print in stdio. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em i2c\-\_\-dev} & Communication Port \\
-\hline
-\end{DoxyParams}
+\item[{\em i2c\_\-dev}]Communication Port \end{DoxyParams}
 
 
-Definition at line 196 of file acc\-\_\-functions.\-c.
+Definition at line 196 of file acc\_\-functions.c.
+
+
+
+References ACC\_\-DEVID, acc\_\-read\_\-reg(), ACC\_\-THRESH\_\-TAP, and conv\_\-byte\_\-hex\_\-bin().
+
+
 
 
 \begin{DoxyCode}
-197 \{
-198   uint8\_t *hvalue0, *hvalue1, *hvalue;
-199   \textcolor{keywordtype}{int} i;
+197 {
+198   uint8_t *hvalue0, *hvalue1, *hvalue;
+199   int i;
 200   
-201   hvalue0=\hyperlink{group__acc_ga2a91c44eebbe44f4d3b8c508633512f9}{acc\_read\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev},\hyperlink{communication_2imu__regs_8h_a007fa8d8ef9d89127ae5da32a2f42283}{ACC\_DEVID},1);
-202   printf(\textcolor{stringliteral}{"\(\backslash\)nhey"});
-203   printf(\textcolor{stringliteral}{"\(\backslash\)nhey3"});
-204   printf(\textcolor{stringliteral}{"\(\backslash\)nhey2"});
-205   printf(\textcolor{stringliteral}{"\(\backslash\)nhey3"});
-206   hvalue1=\hyperlink{group__acc_ga2a91c44eebbe44f4d3b8c508633512f9}{acc\_read\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev},\hyperlink{communication_2imu__regs_8h_afa5af181c4af31e22baa9bd20ff322ef}{ACC\_THRESH\_TAP}, 29);
-207   printf(\textcolor{stringliteral}{"\(\backslash\)nhey3"});
-208   \textcolor{comment}{//hvalue--;}
-209   hvalue=(uint8\_t*)malloc(30*\textcolor{keyword}{sizeof}(uint8\_t));
+201   hvalue0=acc_read_reg(i2c_dev,ACC_DEVID,1);
+202   printf("\nhey");
+203   printf("\nhey3");
+204   printf("\nhey2");
+205   printf("\nhey3");
+206   hvalue1=acc_read_reg(i2c_dev,ACC_THRESH_TAP, 29);
+207   printf("\nhey3");
+208   //hvalue--;
+209   hvalue=(uint8_t*)malloc(30*sizeof(uint8_t));
 210   hvalue[0]=hvalue0[0];
-211   \textcolor{keywordflow}{for}( i=0; i<29; i++)
+211   for( i=0; i<29; i++)
 212     hvalue[i+1]=hvalue1[i];
-213   printf(\textcolor{stringliteral}{"\(\backslash\)nhey4"});
-214   printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_DEVID = 0x%02X = %s"}, hvalue0[0],\hyperlink{communication_2acc__functions_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}(hvalue0));
-215   printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_THRESH\_TAP = 0x%02X = %s"}, hvalue1[0],\hyperlink{communication_2acc__functions_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}(hvalue+1));
-216   printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_OFSX = 0x%02X = %s"}, hvalue[2],\hyperlink{communication_2acc__functions_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}(hvalue+2));
-217   printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_OFSY = 0x%02X = %s"}, hvalue[3],\hyperlink{communication_2acc__functions_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}(hvalue+3));
-218   printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_OFSZ = 0x%02X = %s"}, hvalue[4],\hyperlink{communication_2acc__functions_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}(hvalue+4));
-219   printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_DUR = 0x%02X = %s"}, hvalue[5],\hyperlink{communication_2acc__functions_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}(hvalue+5));
-220   printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_LATENT = 0x%02X = %s"}, hvalue[6],\hyperlink{communication_2acc__functions_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}(hvalue+6));
-221   printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_WINDOW = 0x%02X = %s"}, hvalue[7],\hyperlink{communication_2acc__functions_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}(hvalue+7));
-222   printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_THRESH\_ACT = 0x%02X = %s"}, hvalue[8],\hyperlink{communication_2acc__functions_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}(hvalue+8));
-223   printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_THRESH\_INACT = 0x%02X = %s"}, hvalue[9],\hyperlink{communication_2acc__functions_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}(hvalue+9));
-224   printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_TIME\_INACT = 0x%02X = %s"}, hvalue[10],\hyperlink{communication_2acc__functions_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}(hvalue+10));
-225   printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_ACT\_INACT\_CTL = 0x%02X = %s"}, hvalue[11],\hyperlink{communication_2acc__functions_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}(hvalue+11));
-226   printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_THRESH\_FF = 0x%02X = %s"}, hvalue[12],\hyperlink{communication_2acc__functions_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}(hvalue+12));
-227   printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_TIME\_FF = 0x%02X = %s"}, hvalue[13],\hyperlink{communication_2acc__functions_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}(hvalue+13));
-228   printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_TAP\_AXES = 0x%02X = %s"}, hvalue[14],\hyperlink{communication_2acc__functions_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}(hvalue+14));
-229   printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_ACT\_TAP\_STATUS = 0x%02X = %s"}, hvalue[15],\hyperlink{communication_2acc__functions_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}(hvalue+15));
-230   printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_BW\_RATE = 0x%02X = %s"}, hvalue[16],\hyperlink{communication_2acc__functions_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}(hvalue+16));
-231   printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_POWER\_CTL = 0x%02X = %s"}, hvalue[17],\hyperlink{communication_2acc__functions_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}(hvalue+17));
-232   printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_INT\_ENABLE = 0x%02X = %s"}, hvalue[18],\hyperlink{communication_2acc__functions_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}(hvalue+18));
-233   printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_INT\_MAP = 0x%02X = %s"}, hvalue[19],\hyperlink{communication_2acc__functions_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}(hvalue+19));
-234   printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_INT\_SOURCE = 0x%02X = %s"}, hvalue[20],\hyperlink{communication_2acc__functions_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}(hvalue+20));
-235   printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_DATA\_FORMAT = 0x%02X = %s"}, hvalue1[20],\hyperlink{communication_2acc__functions_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}(hvalue1+21));
-236   printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_DATAX0 = 0x%02X = %s"}, hvalue1[21],\hyperlink{communication_2acc__functions_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}(hvalue1+22));
-237   printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_DATAX1 = 0x%02X = %s"}, hvalue1[22],\hyperlink{communication_2acc__functions_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}(hvalue1+23));
-238   printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_DATAY0 = 0x%02X = %s"}, hvalue1[23],\hyperlink{communication_2acc__functions_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}(hvalue1+24));
-239   printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_DATAY1 = 0x%02X = %s"}, hvalue1[24],\hyperlink{communication_2acc__functions_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}(hvalue1+25));
-240   printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_DATAZ0 = 0x%02X = %s"}, hvalue1[25],\hyperlink{communication_2acc__functions_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}(hvalue1+26));
-241   printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_DATAZ1 = 0x%02X = %s"}, hvalue1[26],\hyperlink{communication_2acc__functions_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}(hvalue1+27));
-242   printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_FIFO\_CTL = 0x%02X = %s"}, hvalue[28],\hyperlink{communication_2acc__functions_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}(hvalue+28));
-243   printf(\textcolor{stringliteral}{"\(\backslash\)nACC\_FIFO\_STATUS = 0x%02X = %s"}, hvalue[29],\hyperlink{communication_2acc__functions_8c_a1a6b2f719b4fef8f97d6d1b8f495148e}{conv\_byte\_hex\_bin}(hvalue+29));
-244   \textcolor{keywordflow}{return} 1;
-245 \}
+213   printf("\nhey4");
+214   printf("\nACC_DEVID = 0x%02X = %s", hvalue0[0],conv_byte_hex_bin(hvalue0));
+215   printf("\nACC_THRESH_TAP = 0x%02X = %s", hvalue1[0],conv_byte_hex_bin(hvalue+1)
+      );
+216   printf("\nACC_OFSX = 0x%02X = %s", hvalue[2],conv_byte_hex_bin(hvalue+2));
+217   printf("\nACC_OFSY = 0x%02X = %s", hvalue[3],conv_byte_hex_bin(hvalue+3));
+218   printf("\nACC_OFSZ = 0x%02X = %s", hvalue[4],conv_byte_hex_bin(hvalue+4));
+219   printf("\nACC_DUR = 0x%02X = %s", hvalue[5],conv_byte_hex_bin(hvalue+5));
+220   printf("\nACC_LATENT = 0x%02X = %s", hvalue[6],conv_byte_hex_bin(hvalue+6));
+221   printf("\nACC_WINDOW = 0x%02X = %s", hvalue[7],conv_byte_hex_bin(hvalue+7));
+222   printf("\nACC_THRESH_ACT = 0x%02X = %s", hvalue[8],conv_byte_hex_bin(hvalue+8))
+      ;
+223   printf("\nACC_THRESH_INACT = 0x%02X = %s", hvalue[9],conv_byte_hex_bin(hvalue+9
+      ));
+224   printf("\nACC_TIME_INACT = 0x%02X = %s", hvalue[10],conv_byte_hex_bin(hvalue+10
+      ));
+225   printf("\nACC_ACT_INACT_CTL = 0x%02X = %s", hvalue[11],conv_byte_hex_bin(hvalue
+      +11));
+226   printf("\nACC_THRESH_FF = 0x%02X = %s", hvalue[12],conv_byte_hex_bin(hvalue+12)
+      );
+227   printf("\nACC_TIME_FF = 0x%02X = %s", hvalue[13],conv_byte_hex_bin(hvalue+13));
+      
+228   printf("\nACC_TAP_AXES = 0x%02X = %s", hvalue[14],conv_byte_hex_bin(hvalue+14))
+      ;
+229   printf("\nACC_ACT_TAP_STATUS = 0x%02X = %s", hvalue[15],conv_byte_hex_bin(hvalu
+      e+15));
+230   printf("\nACC_BW_RATE = 0x%02X = %s", hvalue[16],conv_byte_hex_bin(hvalue+16));
+      
+231   printf("\nACC_POWER_CTL = 0x%02X = %s", hvalue[17],conv_byte_hex_bin(hvalue+17)
+      );
+232   printf("\nACC_INT_ENABLE = 0x%02X = %s", hvalue[18],conv_byte_hex_bin(hvalue+18
+      ));
+233   printf("\nACC_INT_MAP = 0x%02X = %s", hvalue[19],conv_byte_hex_bin(hvalue+19));
+      
+234   printf("\nACC_INT_SOURCE = 0x%02X = %s", hvalue[20],conv_byte_hex_bin(hvalue+20
+      ));
+235   printf("\nACC_DATA_FORMAT = 0x%02X = %s", hvalue1[20],conv_byte_hex_bin(hvalue1
+      +21));
+236   printf("\nACC_DATAX0 = 0x%02X = %s", hvalue1[21],conv_byte_hex_bin(hvalue1+22))
+      ;
+237   printf("\nACC_DATAX1 = 0x%02X = %s", hvalue1[22],conv_byte_hex_bin(hvalue1+23))
+      ;
+238   printf("\nACC_DATAY0 = 0x%02X = %s", hvalue1[23],conv_byte_hex_bin(hvalue1+24))
+      ;
+239   printf("\nACC_DATAY1 = 0x%02X = %s", hvalue1[24],conv_byte_hex_bin(hvalue1+25))
+      ;
+240   printf("\nACC_DATAZ0 = 0x%02X = %s", hvalue1[25],conv_byte_hex_bin(hvalue1+26))
+      ;
+241   printf("\nACC_DATAZ1 = 0x%02X = %s", hvalue1[26],conv_byte_hex_bin(hvalue1+27))
+      ;
+242   printf("\nACC_FIFO_CTL = 0x%02X = %s", hvalue[28],conv_byte_hex_bin(hvalue+28))
+      ;
+243   printf("\nACC_FIFO_STATUS = 0x%02X = %s", hvalue[29],conv_byte_hex_bin(hvalue+2
+      9));
+244   return 1;
+245 }
 \end{DoxyCode}
-\hypertarget{group__acc_ga041d6953f2bfc8c5efa4d5bbac812305}{\index{Functions for accelerometer A\-D\-X\-L345@{Functions for accelerometer A\-D\-X\-L345}!acc\-\_\-read\-\_\-data@{acc\-\_\-read\-\_\-data}}
-\index{acc\-\_\-read\-\_\-data@{acc\-\_\-read\-\_\-data}!Functions for accelerometer ADXL345@{Functions for accelerometer A\-D\-X\-L345}}
-\subsubsection[{acc\-\_\-read\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}short int acc\-\_\-read\-\_\-data (
-\begin{DoxyParamCaption}
-\item[{int}]{i2c\-\_\-dev, }
-\item[{int}]{axis}
-\end{DoxyParamCaption}
-)}}\label{group__acc_ga041d6953f2bfc8c5efa4d5bbac812305}
 
 
-R\-E\-A\-D D\-A\-T\-A (X, Y or Z) 
 
 
-\begin{DoxyParams}[1]{Parameters}
- & {\em i2c\-\_\-dev} & Communication Port \\
-\hline
-\mbox{\tt in}  & {\em axis} & Accelerate's axis to read ('X' or 'Y' or 'Z')\\
-\hline
-\end{DoxyParams}
+Here is the call graph for this function:
+
+\hypertarget{group__acc_ga041d6953f2bfc8c5efa4d5bbac812305}{
+\index{acc@{acc}!acc\_\-read\_\-data@{acc\_\-read\_\-data}}
+\index{acc\_\-read\_\-data@{acc\_\-read\_\-data}!acc@{acc}}
+\subsubsection[{acc\_\-read\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}short int acc\_\-read\_\-data (int {\em i2c\_\-dev}, \/  int {\em axis})}}
+\label{group__acc_ga041d6953f2bfc8c5efa4d5bbac812305}
+
+
+READ DATA (X, Y or Z). 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em i2c\_\-dev}]Communication Port \item[\mbox{$\leftarrow$} {\em axis}]Accelerate's axis to read ('X' or 'Y' or 'Z')\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 
 \end{DoxyReturn}
 
 
-Definition at line 131 of file acc\-\_\-functions.\-c.
+Definition at line 131 of file acc\_\-functions.c.
+
+
+
+References ACC\_\-DATAX0, ACC\_\-DATAY0, ACC\_\-DATAZ0, and acc\_\-read\_\-reg().
+
+
 
 
 \begin{DoxyCode}
-132 \{
-133   uint8\_t *data;
-134   \textcolor{keyword}{union }result
-135   \{
-136     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} usgnd;
-137     \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} sgnd;
-138   \}result;
+132 {
+133   uint8_t *data;
+134   union result
+135   {
+136     unsigned short int usgnd;
+137     short int sgnd;
+138   }result;
 139 
-140   \textcolor{keywordflow}{switch}(axis)\{
-141     \textcolor{keywordflow}{case} \textcolor{charliteral}{'X'}:
-142       data=\hyperlink{group__acc_ga2a91c44eebbe44f4d3b8c508633512f9}{acc\_read\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev},\hyperlink{communication_2imu__regs_8h_afae448fbad872220013e5c3abf0f3d9f}{ACC\_DATAX0},2);
-143       \textcolor{keywordflow}{break};
-144     \textcolor{keywordflow}{case} \textcolor{charliteral}{'Y'}:
-145       data=\hyperlink{group__acc_ga2a91c44eebbe44f4d3b8c508633512f9}{acc\_read\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev},\hyperlink{communication_2imu__regs_8h_a6aa168a0f3e35bfee4da87c32dcb4b46}{ACC\_DATAY0},2);
-146       \textcolor{keywordflow}{break};
-147     \textcolor{keywordflow}{case} \textcolor{charliteral}{'Z'}:
-148       data=\hyperlink{group__acc_ga2a91c44eebbe44f4d3b8c508633512f9}{acc\_read\_reg}(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev},\hyperlink{communication_2imu__regs_8h_ab87ce2339aeb4adb7fb71daa80f3bc68}{ACC\_DATAZ0},2);
-149       \textcolor{keywordflow}{break};
-150     \textcolor{keywordflow}{default}:
-151       \textcolor{comment}{//perror("Wrong argument for axis in acc\_read\_data");}
-152       \textcolor{keywordflow}{return} -1;
-153   \}
+140   switch(axis){
+141     case 'X':
+142       data=acc_read_reg(i2c_dev,ACC_DATAX0,2);
+143       break;
+144     case 'Y':
+145       data=acc_read_reg(i2c_dev,ACC_DATAY0,2);
+146       break;
+147     case 'Z':
+148       data=acc_read_reg(i2c_dev,ACC_DATAZ0,2);
+149       break;
+150     default:
+151       //perror("Wrong argument for axis in acc_read_data");
+152       return -1;
+153   }
 154   result.usgnd=0;
-155   result.usgnd=result.usgnd|(((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} int)data[0]))|(((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \textcolor{keywordtype}{int})data[1])<<8);
-156   \textcolor{keywordflow}{return} result.sgnd;
-157 \}
+155   result.usgnd=result.usgnd|(((unsigned short int)data[0]))|(((unsigned short int
+      )data[1])<<8);
+156   return result.sgnd;
+157 }
 \end{DoxyCode}
-\hypertarget{group__acc_ga2a91c44eebbe44f4d3b8c508633512f9}{\index{Functions for accelerometer A\-D\-X\-L345@{Functions for accelerometer A\-D\-X\-L345}!acc\-\_\-read\-\_\-reg@{acc\-\_\-read\-\_\-reg}}
-\index{acc\-\_\-read\-\_\-reg@{acc\-\_\-read\-\_\-reg}!Functions for accelerometer ADXL345@{Functions for accelerometer A\-D\-X\-L345}}
-\subsubsection[{acc\-\_\-read\-\_\-reg}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t$\ast$ acc\-\_\-read\-\_\-reg (
-\begin{DoxyParamCaption}
-\item[{int}]{i2c\-\_\-dev, }
-\item[{uint8\-\_\-t}]{reg, }
-\item[{uint8\-\_\-t}]{count}
-\end{DoxyParamCaption}
-)}}\label{group__acc_ga2a91c44eebbe44f4d3b8c508633512f9}
 
 
-R\-E\-A\-D C\-O\-U\-N\-T 8-\/\-B\-I\-T R\-E\-G\-I\-S\-T\-E\-R I\-N S\-E\-Q\-U\-E\-N\-C\-E 
 
 
-\begin{DoxyParams}[1]{Parameters}
- & {\em i2c\-\_\-dev} & Communication Port \\
-\hline
-\mbox{\tt in}  & {\em reg} & Register \\
-\hline
-\mbox{\tt in}  & {\em count} & Number of register in sequence (1-\/29)\\
-\hline
-\end{DoxyParams}
+Here is the call graph for this function:
+
+\hypertarget{group__acc_ga2a91c44eebbe44f4d3b8c508633512f9}{
+\index{acc@{acc}!acc\_\-read\_\-reg@{acc\_\-read\_\-reg}}
+\index{acc\_\-read\_\-reg@{acc\_\-read\_\-reg}!acc@{acc}}
+\subsubsection[{acc\_\-read\_\-reg}]{\setlength{\rightskip}{0pt plus 5cm}uint8\_\-t$\ast$ acc\_\-read\_\-reg (int {\em i2c\_\-dev}, \/  uint8\_\-t {\em reg}, \/  uint8\_\-t {\em count})}}
+\label{group__acc_ga2a91c44eebbe44f4d3b8c508633512f9}
+
+
+READ COUNT 8-\/BIT REGISTER IN SEQUENCE 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em i2c\_\-dev}]Communication Port \item[\mbox{$\leftarrow$} {\em reg}]Register \item[\mbox{$\leftarrow$} {\em count}]Number of register in sequence (1-\/29)\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Data of register or N\-U\-L\-L in case of any problem. 
+Data of register or NULL in case of any problem. 
 \end{DoxyReturn}
 
 
-Definition at line 109 of file acc\-\_\-functions.\-c.
+Definition at line 109 of file acc\_\-functions.c.
+
+
+
+Referenced by acc\_\-read\_\-all\_\-data(), acc\_\-read\_\-all\_\-reg(), and acc\_\-read\_\-data().
+
+
 
 
 \begin{DoxyCode}
-110 \{
-111   uint8\_t data[29];
-112   \textcolor{keywordtype}{int} i;
+110 {
+111   uint8_t data[29];
+112   int i;
 113 
-114   \textcolor{comment}{//data=(uint8\_t*)malloc((count+1)*sizeof(data));}
+114   //data=(uint8_t*)malloc((count+1)*sizeof(data));
 115   
 116   data[0] = reg;
 117 
-118   \textcolor{keywordflow}{if} ((write(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev}, &data, 1)) != 1) \{                  
-119         \textcolor{comment}{//perror("write before read");}
-120         \textcolor{keywordflow}{return} NULL;
-121   \}
+118   if ((write(i2c_dev, &data, 1)) != 1) {                 
+119         //perror("write before read");
+120         return NULL;
+121   }
 122   data[0] = 0;
-123   \textcolor{keywordflow}{if} ((read(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev}, &data, count)) != count) \{
-124         \textcolor{comment}{//perror("read");}
-125         \textcolor{keywordflow}{return} NULL;    
-126   \}
+123   if ((read(i2c_dev, &data, count)) != count) {
+124         //perror("read");
+125         return NULL;    
+126   }
 127 
-128   \textcolor{keywordflow}{return} data;
-129 \}
+128   return data;
+129 }
 \end{DoxyCode}
-\hypertarget{group__acc_ga534116416343122de29a5b6ade6876bd}{\index{Functions for accelerometer A\-D\-X\-L345@{Functions for accelerometer A\-D\-X\-L345}!acc\-\_\-write\-\_\-reg@{acc\-\_\-write\-\_\-reg}}
-\index{acc\-\_\-write\-\_\-reg@{acc\-\_\-write\-\_\-reg}!Functions for accelerometer ADXL345@{Functions for accelerometer A\-D\-X\-L345}}
-\subsubsection[{acc\-\_\-write\-\_\-reg}]{\setlength{\rightskip}{0pt plus 5cm}int acc\-\_\-write\-\_\-reg (
-\begin{DoxyParamCaption}
-\item[{int}]{i2c\-\_\-dev, }
-\item[{uint8\-\_\-t}]{reg, }
-\item[{uint8\-\_\-t}]{data}
-\end{DoxyParamCaption}
-)}}\label{group__acc_ga534116416343122de29a5b6ade6876bd}
 
 
-W\-R\-I\-T\-E T\-O R\-E\-G\-I\-S\-T\-E\-R. 
 
 
-\begin{DoxyParams}[1]{Parameters}
- & {\em i2c\-\_\-dev} & Communication Port \\
-\hline
-\mbox{\tt in}  & {\em reg} & Register \\
-\hline
-\mbox{\tt in}  & {\em data} & Data to write \\
-\hline
-\end{DoxyParams}
+Here is the caller graph for this function:
+
+\hypertarget{group__acc_ga534116416343122de29a5b6ade6876bd}{
+\index{acc@{acc}!acc\_\-write\_\-reg@{acc\_\-write\_\-reg}}
+\index{acc\_\-write\_\-reg@{acc\_\-write\_\-reg}!acc@{acc}}
+\subsubsection[{acc\_\-write\_\-reg}]{\setlength{\rightskip}{0pt plus 5cm}int acc\_\-write\_\-reg (int {\em i2c\_\-dev}, \/  uint8\_\-t {\em reg}, \/  uint8\_\-t {\em data})}}
+\label{group__acc_ga534116416343122de29a5b6ade6876bd}
 
 
-Definition at line 87 of file acc\-\_\-functions.\-c.
+WRITE TO REGISTER. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em i2c\_\-dev}]Communication Port \item[\mbox{$\leftarrow$} {\em reg}]Register \item[\mbox{$\leftarrow$} {\em data}]Data to write \end{DoxyParams}
+
+
+Definition at line 87 of file acc\_\-functions.c.
+
+
+
+References ACC\_\-ACT\_\-TAP\_\-STATUS, ACC\_\-DATAX0, ACC\_\-DATAX1, ACC\_\-DATAY0, ACC\_\-DATAY1, ACC\_\-DATAZ0, ACC\_\-DATAZ1, ACC\_\-DEVID, ACC\_\-FIFO\_\-STATUS, ACC\_\-INT\_\-SOURCE, FAILURE, and SUCCESS.
+
+
+
+Referenced by acc\_\-init().
+
+
 
 
 \begin{DoxyCode}
-88 \{
-89   uint8\_t reg\_data[2];
+88 {
+89   uint8_t reg_data[2];
 90 
-91   reg\_data[0] = reg;
-92   reg\_data[1] = data;
+91   reg_data[0] = reg;
+92   reg_data[1] = data;
 93 
-94   \textcolor{keywordflow}{if}( reg==\hyperlink{communication_2imu__regs_8h_a007fa8d8ef9d89127ae5da32a2f42283}{ACC\_DEVID} || reg==\hyperlink{communication_2imu__regs_8h_a823b94e47b6d728fdf91d386d69db3e9}{ACC\_ACT\_TAP\_STATUS} || reg==
-      \hyperlink{communication_2imu__regs_8h_a7f9415e11f76d0666b842a875f5f5fd8}{ACC\_INT\_SOURCE} || reg==\hyperlink{communication_2imu__regs_8h_acb0760254230c73d4744bae2059e7367}{ACC\_FIFO\_STATUS} ||
-95       reg==\hyperlink{communication_2imu__regs_8h_afae448fbad872220013e5c3abf0f3d9f}{ACC\_DATAX0} || reg==\hyperlink{communication_2imu__regs_8h_a63d0e7c719fabce83422ef9856302129}{ACC\_DATAX1} || reg==\hyperlink{communication_2imu__regs_8h_a6aa168a0f3e35bfee4da87c32dcb4b46}{ACC\_DATAY0} || reg==
-      \hyperlink{communication_2imu__regs_8h_a587970363cd2aeb2535ac314e98a2825}{ACC\_DATAY1} || reg==\hyperlink{communication_2imu__regs_8h_ab87ce2339aeb4adb7fb71daa80f3bc68}{ACC\_DATAZ0} || reg==\hyperlink{communication_2imu__regs_8h_afa9ea1f66d9d28dbb328498d6f7fa43d}{ACC\_DATAZ1})
-96   \{
-97       perror(\textcolor{stringliteral}{"Write unsucessful: Read-Only Register"});
-98       \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
-99   \}
+94   if( reg==ACC_DEVID || reg==ACC_ACT_TAP_STATUS || reg==ACC_INT_SOURCE || reg==
+      ACC_FIFO_STATUS ||
+95       reg==ACC_DATAX0 || reg==ACC_DATAX1 || reg==ACC_DATAY0 || reg==ACC_DATAY1 ||
+       reg==ACC_DATAZ0 || reg==ACC_DATAZ1)
+96   {
+97       perror("Write unsucessful: Read-Only Register");
+98       return FAILURE;
+99   }
 100         
-101   \textcolor{keywordflow}{if} ((write(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev}, &reg\_data, 2)) != 2) \{              
-102           perror(\textcolor{stringliteral}{"Write unsuccessful"});
-103           \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE};
-104   \}
+101   if ((write(i2c_dev, &reg_data, 2)) != 2) {             
+102           perror("Write unsuccessful");
+103           return FAILURE;
+104   }
 105 
-106   \textcolor{keywordflow}{return} \hyperlink{calibration_2calibration_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS};
-107 \}
+106   return SUCCESS;
+107 }
 \end{DoxyCode}
+
+
+
+
+Here is the caller graph for this function:
+

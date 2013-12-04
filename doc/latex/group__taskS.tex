@@ -1,170 +1,184 @@
-\hypertarget{group__taskS}{\section{Scheduler for tasks}
+\hypertarget{group__taskS}{
+\section{Scheduler for tasks}
 \label{group__taskS}\index{Scheduler for tasks@{Scheduler for tasks}}
 }
 
 
-Implentation of Scheduler for tasks\-:  
+Implentation of Scheduler for tasks:  
 
 
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{group__taskS_gaf56f9692a592fdc4b0f74aaac3b76168}{timer\-\_\-new\-\_\-task} (\hyperlink{structTASK__S}{T\-A\-S\-K\-\_\-\-S} $\ast$task, timer\-\_\-t timer, void $\ast$run\-Funtion)
-\begin{DoxyCompactList}\small\item\em Create a task. \end{DoxyCompactList}\item 
-void \hyperlink{group__taskS_gac088a054258396a6e2dba77908f22b42}{timer\-\_\-start\-\_\-task} (\hyperlink{structTASK__S}{T\-A\-S\-K\-\_\-\-S} $\ast$task)
-\begin{DoxyCompactList}\small\item\em Start some task. \end{DoxyCompactList}\item 
-void \hyperlink{group__taskS_ga8e48eacaac7d9cf7d82cc71cfbcd4b56}{timer\-\_\-stop\-\_\-task} (\hyperlink{structTASK__S}{T\-A\-S\-K\-\_\-\-S} $\ast$task)
-\begin{DoxyCompactList}\small\item\em Stop some task. \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \hyperlink{group__taskS_ga1e7e694ed290112386d363ee2630dd82}{timer\_\-new\_\-task} (\hyperlink{structTASK__S}{TASK\_\-S} $\ast$task, void($\ast$runFunction)(int))
+\begin{DoxyCompactList}\small\item\em Create a task. \item\end{DoxyCompactList}\item 
+void \hyperlink{group__taskS_gabb62dbc29029e7950ee72aeb78c83dfc}{timer\_\-start\_\-task} (\hyperlink{structTASK__S}{TASK\_\-S} $\ast$task, int period\_\-us)
+\begin{DoxyCompactList}\small\item\em Start some task. \item\end{DoxyCompactList}\item 
+void \hyperlink{group__taskS_ga8e48eacaac7d9cf7d82cc71cfbcd4b56}{timer\_\-stop\_\-task} (\hyperlink{structTASK__S}{TASK\_\-S} $\ast$task)
+\begin{DoxyCompactList}\small\item\em Stop some task. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-Implentation of Scheduler for tasks\-: \begin{DoxyAuthor}{Author}
-Rafael 
+Implentation of Scheduler for tasks: \begin{DoxyAuthor}{Author}
+Rafael Lima 
 \end{DoxyAuthor}
-\begin{DoxyRefDesc}{Todo}
-\item[\hyperlink{todo__todo000004}{Todo}]test it \end{DoxyRefDesc}
+\begin{Desc}
+\item[\hyperlink{todo__todo000004}{Todo}]test it \end{Desc}
 
 
 \subsection{Function Documentation}
-\hypertarget{group__taskS_gaf56f9692a592fdc4b0f74aaac3b76168}{\index{Scheduler for tasks@{Scheduler for tasks}!timer\-\_\-new\-\_\-task@{timer\-\_\-new\-\_\-task}}
-\index{timer\-\_\-new\-\_\-task@{timer\-\_\-new\-\_\-task}!Scheduler for tasks@{Scheduler for tasks}}
-\subsubsection[{timer\-\_\-new\-\_\-task}]{\setlength{\rightskip}{0pt plus 5cm}void timer\-\_\-new\-\_\-task (
-\begin{DoxyParamCaption}
-\item[{{\bf T\-A\-S\-K\-\_\-\-S} $\ast$}]{task, }
-\item[{timer\-\_\-t}]{timer, }
-\item[{void $\ast$}]{run\-Funtion}
-\end{DoxyParamCaption}
-)}}\label{group__taskS_gaf56f9692a592fdc4b0f74aaac3b76168}
+\hypertarget{group__taskS_ga1e7e694ed290112386d363ee2630dd82}{
+\index{taskS@{taskS}!timer\_\-new\_\-task@{timer\_\-new\_\-task}}
+\index{timer\_\-new\_\-task@{timer\_\-new\_\-task}!taskS@{taskS}}
+\subsubsection[{timer\_\-new\_\-task}]{\setlength{\rightskip}{0pt plus 5cm}void timer\_\-new\_\-task ({\bf TASK\_\-S} $\ast$ {\em task}, \/  void($\ast$)(int) {\em runFunction})}}
+\label{group__taskS_ga1e7e694ed290112386d363ee2630dd82}
 
 
 Create a task. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em $\ast$task} & \\
-\hline
-{\em $\ast$void\-Function} & Pointer to the function called to execute \\
-\hline
-\end{DoxyParams}
-\hypertarget{group__taskS_gac088a054258396a6e2dba77908f22b42}{\index{Scheduler for tasks@{Scheduler for tasks}!timer\-\_\-start\-\_\-task@{timer\-\_\-start\-\_\-task}}
-\index{timer\-\_\-start\-\_\-task@{timer\-\_\-start\-\_\-task}!Scheduler for tasks@{Scheduler for tasks}}
-\subsubsection[{timer\-\_\-start\-\_\-task}]{\setlength{\rightskip}{0pt plus 5cm}void timer\-\_\-start\-\_\-task (
-\begin{DoxyParamCaption}
-\item[{{\bf T\-A\-S\-K\-\_\-\-S} $\ast$}]{task}
-\end{DoxyParamCaption}
-)}}\label{group__taskS_gac088a054258396a6e2dba77908f22b42}
+\item[{\em $\ast$task}]\item[{\em $\ast$voidFunction}]Pointer to the function called to execute \end{DoxyParams}
+
+
+Definition at line 16 of file taskScheduler.c.
+
+
+
+Referenced by main().
+
+
+
+
+\begin{DoxyCode}
+16                                                           {
+17   (*task).t_global = 0.0;
+18   (*task).T_exec_global = 0.0;
+19   (*task).T_mean_global = 0.0;
+20   (*task).T_max_global = 0.0;
+21   (*task).period_us = 0.0;
+22   (*task).isFirstExecution = 1;
+23 
+24   (*task).run = runFunction;
+25 }
+\end{DoxyCode}
+
+
+
+
+Here is the caller graph for this function:
+
+\hypertarget{group__taskS_gabb62dbc29029e7950ee72aeb78c83dfc}{
+\index{taskS@{taskS}!timer\_\-start\_\-task@{timer\_\-start\_\-task}}
+\index{timer\_\-start\_\-task@{timer\_\-start\_\-task}!taskS@{taskS}}
+\subsubsection[{timer\_\-start\_\-task}]{\setlength{\rightskip}{0pt plus 5cm}void timer\_\-start\_\-task ({\bf TASK\_\-S} $\ast$ {\em task}, \/  int {\em period\_\-us})}}
+\label{group__taskS_gabb62dbc29029e7950ee72aeb78c83dfc}
 
 
 Start some task. 
 
 
+\begin{DoxyParams}{Parameters}
+\item[{\em $\ast$task}]Struct whith task data \item[{\em period\_\-us}]Period Value to repeat the task \end{DoxyParams}
+\begin{Desc}
+\item[\hyperlink{todo__todo000005}{Todo}]verify how use two tasks \end{Desc}
 
-Definition at line 18 of file task\-Scheduler.\-c.
+
+Definition at line 27 of file taskScheduler.c.
 
 
 
-References f\-\_\-timer\-\_\-task\-\_\-1().
+References TASK\_\-S::isFirstExecution, TASK\_\-S::period\_\-us, TASK\_\-S::run, and TASK\_\-S::timer.
 
 
 
 Referenced by main().
 
 
+
+
 \begin{DoxyCode}
-18                                    \{
-19   \textcolor{keyword}{struct }itimerspec itimer;
-20   \textcolor{keyword}{struct }sigevent sigev;
-21   \textcolor{keywordtype}{int} erno = 0;
-22 
-23   (*task).isFirstExecution = 1;
-24 
-25   itimer.it\_interval.tv\_sec = 0;
-26   itimer.it\_interval.tv\_nsec= (*task).period\_us*1000;
-27   itimer.it\_value = itimer.it\_interval;
-28 
-29   memset(&sigev,0,\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct} sigevent));
-30 
-31   sigev.sigev\_value.sival\_int = 0;
-32   sigev.sigev\_notify = SIGEV\_THREAD;
-33   sigev.sigev\_notify\_attributes = NULL;
-34   sigev.sigev\_notify\_function = \hyperlink{main2_8c_a5ce2b6a7dd4d00c90fe18098091044aa}{f\_timer\_task\_1};
-35 
-36   \textcolor{keywordflow}{if} (timer\_create(CLOCK\_REALTIME, &sigev, &((*task).timer)) < 0)
-37   \{
-38     fprintf(stderr, \textcolor{stringliteral}{"[%d]: %s\(\backslash\)n"}, \_\_LINE\_\_, strerror(erno));
-39     exit(erno);
-40   \}
-41 
-42   \textcolor{keywordflow}{if}(timer\_settime((*task).timer,0,&itimer,NULL) < 0)
-43   \{
-44     fprintf(stderr,\textcolor{stringliteral}{"[%d]: %s\(\backslash\)n"}, \_\_LINE\_\_, strerror(erno));
-45     exit(erno);
-46   \}
-47 \}
+27                                                  {
+28   struct itimerspec itimer;
+29   struct sigevent evp;
+30   int erno = 0;
+31   
+32   task->isFirstExecution = 1;
+33   task->period_us = period_us;
+34 
+35   evp.sigev_value.sival_ptr = &(task->timer);
+36   evp.sigev_notify = SIGEV_SIGNAL;
+37   evp.sigev_signo = SIGUSR1;
+38 
+39   if(timer_create( CLOCK_REALTIME, &evp, &(task->timer))<0)
+40   {
+41     fprintf(stderr, "[%d]: %s\n", __LINE__, strerror(erno));
+42     exit(erno);
+43   }
+44 
+45   // Signal handler configuration
+46   struct sigaction satimer;
+47   satimer.sa_handler = task->run;
+48   sigemptyset( &satimer.sa_mask );
+49   satimer.sa_flags = SA_RESTART;
+50   if ( sigaction( SIGUSR1, &satimer, NULL ) < 0)
+51   {
+52     printf( "ERROR: sigaction.\n" );
+53     fprintf(stderr, "[%d]: %s\n", __LINE__, strerror(erno));
+54     exit(erno);
+55   }
+56 
+57   itimer.it_interval.tv_sec = 0;
+58   itimer.it_interval.tv_nsec= task->period_us*1000;
+59   itimer.it_value = itimer.it_interval;
+60 
+61   if(timer_settime(task->timer,0,&itimer,NULL) < 0)
+62   {
+63     fprintf(stderr,"[%d]: %s\n", __LINE__, strerror(erno));
+64     exit(erno);
+65   }
+66 }
 \end{DoxyCode}
 
 
-Here is the call graph for this function\-:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{group__taskS_gac088a054258396a6e2dba77908f22b42_cgraph}
-\end{center}
-\end{figure}
 
 
+Here is the caller graph for this function:
 
-
-Here is the caller graph for this function\-:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=242pt]{group__taskS_gac088a054258396a6e2dba77908f22b42_icgraph}
-\end{center}
-\end{figure}
-
-
-\hypertarget{group__taskS_ga8e48eacaac7d9cf7d82cc71cfbcd4b56}{\index{Scheduler for tasks@{Scheduler for tasks}!timer\-\_\-stop\-\_\-task@{timer\-\_\-stop\-\_\-task}}
-\index{timer\-\_\-stop\-\_\-task@{timer\-\_\-stop\-\_\-task}!Scheduler for tasks@{Scheduler for tasks}}
-\subsubsection[{timer\-\_\-stop\-\_\-task}]{\setlength{\rightskip}{0pt plus 5cm}void timer\-\_\-stop\-\_\-task (
-\begin{DoxyParamCaption}
-\item[{{\bf T\-A\-S\-K\-\_\-\-S} $\ast$}]{task}
-\end{DoxyParamCaption}
-)}}\label{group__taskS_ga8e48eacaac7d9cf7d82cc71cfbcd4b56}
+\hypertarget{group__taskS_ga8e48eacaac7d9cf7d82cc71cfbcd4b56}{
+\index{taskS@{taskS}!timer\_\-stop\_\-task@{timer\_\-stop\_\-task}}
+\index{timer\_\-stop\_\-task@{timer\_\-stop\_\-task}!taskS@{taskS}}
+\subsubsection[{timer\_\-stop\_\-task}]{\setlength{\rightskip}{0pt plus 5cm}void timer\_\-stop\_\-task ({\bf TASK\_\-S} $\ast$ {\em task})}}
+\label{group__taskS_ga8e48eacaac7d9cf7d82cc71cfbcd4b56}
 
 
 Stop some task. 
 
-\begin{DoxyRefDesc}{Todo}
-\item[\hyperlink{todo__todo000005}{Todo}]verify use of variable 'erno' \end{DoxyRefDesc}
+\begin{Desc}
+\item[\hyperlink{todo__todo000006}{Todo}]verify use of variable 'erno' \end{Desc}
 
 
-Definition at line 102 of file task\-Scheduler.\-c.
+Definition at line 121 of file taskScheduler.c.
 
 
 
 Referenced by main().
 
 
+
+
 \begin{DoxyCode}
-102                                   \{
-103   \textcolor{keywordtype}{int} erno = 0;
-104   \textcolor{keywordflow}{if}(timer\_delete((*task).timer)<0)\{
-105     fprintf(stderr,\textcolor{stringliteral}{"[%d]:%s\(\backslash\)n"},\_\_LINE\_\_,strerror(erno));
-106     exit(erno);
-107   \}
-108 \}
+121                                   {
+122   int erno = 0;
+123   if(timer_delete((*task).timer)<0){
+124     fprintf(stderr,"[%d]:%s\n",__LINE__,strerror(erno));
+125     exit(erno);
+126   }
+127 }
 \end{DoxyCode}
 
 
-Here is the caller graph for this function\-:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=240pt]{group__taskS_ga8e48eacaac7d9cf7d82cc71cfbcd4b56_icgraph}
-\end{center}
-\end{figure}
 
+
+Here is the caller graph for this function:
 

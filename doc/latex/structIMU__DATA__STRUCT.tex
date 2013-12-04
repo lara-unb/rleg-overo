@@ -1,25 +1,19 @@
-\hypertarget{structIMU__DATA__STRUCT}{\section{I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T Struct Reference}
-\label{structIMU__DATA__STRUCT}\index{I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T@{I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T}}
+\hypertarget{structIMU__DATA__STRUCT}{
+\section{IMU\_\-DATA\_\-STRUCT Struct Reference}
+\label{structIMU__DATA__STRUCT}\index{IMU\_\-DATA\_\-STRUCT@{IMU\_\-DATA\_\-STRUCT}}
 }
 
 
-Data of I\-M\-U structure.  
+Data of IMU structure.  
 
 
 
 
-{\ttfamily \#include \char`\"{}communication.\-h\char`\"{}}
+{\ttfamily \#include \char`\"{}communication.h\char`\"{}}
 
 
 
-Collaboration diagram for I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=328pt]{structIMU__DATA__STRUCT__coll__graph}
-\end{center}
-\end{figure}
-\subsection*{Data Structures}
+Collaboration diagram for IMU\_\-DATA\_\-STRUCT:\subsection*{Data Structures}
 \begin{DoxyCompactItemize}
 \item 
 struct \hyperlink{structIMU__DATA__STRUCT_1_1calibrated}{calibrated}
@@ -27,117 +21,131 @@ struct \hyperlink{structIMU__DATA__STRUCT_1_1calibrated}{calibrated}
 \subsection*{Data Fields}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{structDATA__XYZ}{D\-A\-T\-A\-\_\-\-X\-Y\-Z} \hyperlink{structIMU__DATA__STRUCT_a448f284bf44eb503affda586ad5fa9d2}{acc}
-\begin{DoxyCompactList}\small\item\em Accel Vector. \end{DoxyCompactList}\item 
-\hyperlink{structDATA__XYZ}{D\-A\-T\-A\-\_\-\-X\-Y\-Z} \hyperlink{structIMU__DATA__STRUCT_a0c1ac26626e4434a2ee124a1928a23a1}{gyr}
-\begin{DoxyCompactList}\small\item\em Gyrometer Vector. \end{DoxyCompactList}\item 
-\hyperlink{structDATA__XYZ}{D\-A\-T\-A\-\_\-\-X\-Y\-Z} \hyperlink{structIMU__DATA__STRUCT_a40c7df8b6d49297aa52873cfd9b60daa}{mag}
-\begin{DoxyCompactList}\small\item\em Magnetormeter Vector. \end{DoxyCompactList}\item 
-struct \hyperlink{structIMU__DATA__STRUCT_1_1calibrated}{I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::calibrated} \hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}
+\hyperlink{structDATA__XYZ}{DATA\_\-XYZ} \hyperlink{structIMU__DATA__STRUCT_a448f284bf44eb503affda586ad5fa9d2}{acc}
+\begin{DoxyCompactList}\small\item\em Accel Vector. \item\end{DoxyCompactList}\item 
+\hyperlink{structDATA__XYZ}{DATA\_\-XYZ} \hyperlink{structIMU__DATA__STRUCT_a0c1ac26626e4434a2ee124a1928a23a1}{gyr}
+\begin{DoxyCompactList}\small\item\em Gyrometer Vector. \item\end{DoxyCompactList}\item 
+\hyperlink{structDATA__XYZ}{DATA\_\-XYZ} \hyperlink{structIMU__DATA__STRUCT_a40c7df8b6d49297aa52873cfd9b60daa}{mag}
+\begin{DoxyCompactList}\small\item\em Magnetormeter Vector. \item\end{DoxyCompactList}\item 
+struct \hyperlink{structIMU__DATA__STRUCT_1_1calibrated}{IMU\_\-DATA\_\-STRUCT::calibrated} \hyperlink{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{calib}
 \item 
 short int \hyperlink{structIMU__DATA__STRUCT_a81e1dbf765c1d947ca6076aa1bbc73e7}{temp}
 \item 
-double \hyperlink{structIMU__DATA__STRUCT_a3553fcee6beba17fe0c7711ac0483875}{calib\-\_\-temp}
+double \hyperlink{structIMU__DATA__STRUCT_a3553fcee6beba17fe0c7711ac0483875}{calib\_\-temp}
 \item 
-uint8\-\_\-t \hyperlink{structIMU__DATA__STRUCT_a99924252176326418863e511d4fa437b}{new\-\_\-data}
+uint8\_\-t \hyperlink{structIMU__DATA__STRUCT_a99924252176326418863e511d4fa437b}{new\_\-data}
 \end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-Data of I\-M\-U structure. 
+Data of IMU structure. 
 
-Definition at line 93 of file communication.\-h.
+Definition at line 93 of file communication.h.
 
 
 
 \subsection{Field Documentation}
-\hypertarget{structIMU__DATA__STRUCT_a448f284bf44eb503affda586ad5fa9d2}{\index{I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T@{I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T}!acc@{acc}}
-\index{acc@{acc}!IMU_DATA_STRUCT@{I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T}}
-\subsubsection[{acc}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-A\-T\-A\-\_\-\-X\-Y\-Z} I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::acc}}\label{structIMU__DATA__STRUCT_a448f284bf44eb503affda586ad5fa9d2}
+\hypertarget{structIMU__DATA__STRUCT_a448f284bf44eb503affda586ad5fa9d2}{
+\index{IMU\_\-DATA\_\-STRUCT@{IMU\_\-DATA\_\-STRUCT}!acc@{acc}}
+\index{acc@{acc}!IMU_DATA_STRUCT@{IMU\_\-DATA\_\-STRUCT}}
+\subsubsection[{acc}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA\_\-XYZ} {\bf IMU\_\-DATA\_\-STRUCT::acc}}}
+\label{structIMU__DATA__STRUCT_a448f284bf44eb503affda586ad5fa9d2}
 
 
 Accel Vector. 
 
 
 
-Definition at line 94 of file communication.\-h.
+Definition at line 94 of file communication.h.
 
 
 
-Referenced by calibrate\-\_\-imu(), datalogger\-\_\-update(), periodic\-\_\-task\-\_\-2(), read\-\_\-all\-\_\-data(), ui\-\_\-imu\-\_\-data(), and ui\-\_\-overview\-\_\-data().
+Referenced by calibrate\_\-imu(), control\_\-main(), datalogger\_\-update(), periodic\_\-task\_\-2(), read\_\-all\_\-data(), ui\_\-imu\_\-data(), and ui\_\-overview\_\-data().
 
-\hypertarget{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{\index{I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T@{I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T}!calib@{calib}}
-\index{calib@{calib}!IMU_DATA_STRUCT@{I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T}}
-\subsubsection[{calib}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::calibrated} I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::calib}}\label{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}
-
-
-Referenced by calibrate\-\_\-imu(), datalogger\-\_\-update(), ui\-\_\-imu\-\_\-data(), and ui\-\_\-overview\-\_\-data().
-
-\hypertarget{structIMU__DATA__STRUCT_a3553fcee6beba17fe0c7711ac0483875}{\index{I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T@{I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T}!calib\-\_\-temp@{calib\-\_\-temp}}
-\index{calib\-\_\-temp@{calib\-\_\-temp}!IMU_DATA_STRUCT@{I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T}}
-\subsubsection[{calib\-\_\-temp}]{\setlength{\rightskip}{0pt plus 5cm}double I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::calib\-\_\-temp}}\label{structIMU__DATA__STRUCT_a3553fcee6beba17fe0c7711ac0483875}
+\hypertarget{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}{
+\index{IMU\_\-DATA\_\-STRUCT@{IMU\_\-DATA\_\-STRUCT}!calib@{calib}}
+\index{calib@{calib}!IMU_DATA_STRUCT@{IMU\_\-DATA\_\-STRUCT}}
+\subsubsection[{calib}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf IMU\_\-DATA\_\-STRUCT::calibrated} {\bf IMU\_\-DATA\_\-STRUCT::calib}}}
+\label{structIMU__DATA__STRUCT_aeffe3c3c5a7191a5cef16e7aab6c3795}
 
 
-Definition at line 103 of file communication.\-h.
+Referenced by calibrate\_\-imu(), datalogger\_\-update(), ui\_\-imu\_\-data(), and ui\_\-overview\_\-data().
+
+\hypertarget{structIMU__DATA__STRUCT_a3553fcee6beba17fe0c7711ac0483875}{
+\index{IMU\_\-DATA\_\-STRUCT@{IMU\_\-DATA\_\-STRUCT}!calib\_\-temp@{calib\_\-temp}}
+\index{calib\_\-temp@{calib\_\-temp}!IMU_DATA_STRUCT@{IMU\_\-DATA\_\-STRUCT}}
+\subsubsection[{calib\_\-temp}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf IMU\_\-DATA\_\-STRUCT::calib\_\-temp}}}
+\label{structIMU__DATA__STRUCT_a3553fcee6beba17fe0c7711ac0483875}
+
+
+Definition at line 103 of file communication.h.
 
 
 
-Referenced by calibrate\-\_\-imu(), and ui\-\_\-overview\-\_\-data().
+Referenced by calibrate\_\-imu(), and ui\_\-overview\_\-data().
 
-\hypertarget{structIMU__DATA__STRUCT_a0c1ac26626e4434a2ee124a1928a23a1}{\index{I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T@{I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T}!gyr@{gyr}}
-\index{gyr@{gyr}!IMU_DATA_STRUCT@{I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T}}
-\subsubsection[{gyr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-A\-T\-A\-\_\-\-X\-Y\-Z} I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::gyr}}\label{structIMU__DATA__STRUCT_a0c1ac26626e4434a2ee124a1928a23a1}
+\hypertarget{structIMU__DATA__STRUCT_a0c1ac26626e4434a2ee124a1928a23a1}{
+\index{IMU\_\-DATA\_\-STRUCT@{IMU\_\-DATA\_\-STRUCT}!gyr@{gyr}}
+\index{gyr@{gyr}!IMU_DATA_STRUCT@{IMU\_\-DATA\_\-STRUCT}}
+\subsubsection[{gyr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA\_\-XYZ} {\bf IMU\_\-DATA\_\-STRUCT::gyr}}}
+\label{structIMU__DATA__STRUCT_a0c1ac26626e4434a2ee124a1928a23a1}
 
 
 Gyrometer Vector. 
 
 
 
-Definition at line 95 of file communication.\-h.
+Definition at line 95 of file communication.h.
 
 
 
-Referenced by calibrate\-\_\-imu(), datalogger\-\_\-update(), periodic\-\_\-task\-\_\-2(), read\-\_\-all\-\_\-data(), ui\-\_\-imu\-\_\-data(), and ui\-\_\-overview\-\_\-data().
+Referenced by calibrate\_\-imu(), datalogger\_\-update(), periodic\_\-task\_\-2(), read\_\-all\_\-data(), ui\_\-imu\_\-data(), and ui\_\-overview\_\-data().
 
-\hypertarget{structIMU__DATA__STRUCT_a40c7df8b6d49297aa52873cfd9b60daa}{\index{I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T@{I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T}!mag@{mag}}
-\index{mag@{mag}!IMU_DATA_STRUCT@{I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T}}
-\subsubsection[{mag}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-A\-T\-A\-\_\-\-X\-Y\-Z} I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::mag}}\label{structIMU__DATA__STRUCT_a40c7df8b6d49297aa52873cfd9b60daa}
+\hypertarget{structIMU__DATA__STRUCT_a40c7df8b6d49297aa52873cfd9b60daa}{
+\index{IMU\_\-DATA\_\-STRUCT@{IMU\_\-DATA\_\-STRUCT}!mag@{mag}}
+\index{mag@{mag}!IMU_DATA_STRUCT@{IMU\_\-DATA\_\-STRUCT}}
+\subsubsection[{mag}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DATA\_\-XYZ} {\bf IMU\_\-DATA\_\-STRUCT::mag}}}
+\label{structIMU__DATA__STRUCT_a40c7df8b6d49297aa52873cfd9b60daa}
 
 
 Magnetormeter Vector. 
 
 
 
-Definition at line 96 of file communication.\-h.
+Definition at line 96 of file communication.h.
 
 
 
-Referenced by calibrate\-\_\-imu(), datalogger\-\_\-update(), periodic\-\_\-task\-\_\-2(), read\-\_\-all\-\_\-data(), ui\-\_\-imu\-\_\-data(), and ui\-\_\-overview\-\_\-data().
+Referenced by calibrate\_\-imu(), datalogger\_\-update(), periodic\_\-task\_\-2(), read\_\-all\_\-data(), ui\_\-imu\_\-data(), and ui\_\-overview\_\-data().
 
-\hypertarget{structIMU__DATA__STRUCT_a99924252176326418863e511d4fa437b}{\index{I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T@{I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T}!new\-\_\-data@{new\-\_\-data}}
-\index{new\-\_\-data@{new\-\_\-data}!IMU_DATA_STRUCT@{I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T}}
-\subsubsection[{new\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::new\-\_\-data}}\label{structIMU__DATA__STRUCT_a99924252176326418863e511d4fa437b}
-
-
-Definition at line 104 of file communication.\-h.
-
+\hypertarget{structIMU__DATA__STRUCT_a99924252176326418863e511d4fa437b}{
+\index{IMU\_\-DATA\_\-STRUCT@{IMU\_\-DATA\_\-STRUCT}!new\_\-data@{new\_\-data}}
+\index{new\_\-data@{new\_\-data}!IMU_DATA_STRUCT@{IMU\_\-DATA\_\-STRUCT}}
+\subsubsection[{new\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}uint8\_\-t {\bf IMU\_\-DATA\_\-STRUCT::new\_\-data}}}
+\label{structIMU__DATA__STRUCT_a99924252176326418863e511d4fa437b}
 
 
-Referenced by datalogger\-\_\-update(), and read\-\_\-all\-\_\-data().
-
-\hypertarget{structIMU__DATA__STRUCT_a81e1dbf765c1d947ca6076aa1bbc73e7}{\index{I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T@{I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T}!temp@{temp}}
-\index{temp@{temp}!IMU_DATA_STRUCT@{I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T}}
-\subsubsection[{temp}]{\setlength{\rightskip}{0pt plus 5cm}short int I\-M\-U\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::temp}}\label{structIMU__DATA__STRUCT_a81e1dbf765c1d947ca6076aa1bbc73e7}
-
-
-Definition at line 102 of file communication.\-h.
+Definition at line 104 of file communication.h.
 
 
 
-Referenced by calibrate\-\_\-imu(), read\-\_\-all\-\_\-data(), and ui\-\_\-overview\-\_\-data().
+Referenced by datalogger\_\-update(), and read\_\-all\_\-data().
+
+\hypertarget{structIMU__DATA__STRUCT_a81e1dbf765c1d947ca6076aa1bbc73e7}{
+\index{IMU\_\-DATA\_\-STRUCT@{IMU\_\-DATA\_\-STRUCT}!temp@{temp}}
+\index{temp@{temp}!IMU_DATA_STRUCT@{IMU\_\-DATA\_\-STRUCT}}
+\subsubsection[{temp}]{\setlength{\rightskip}{0pt plus 5cm}short int {\bf IMU\_\-DATA\_\-STRUCT::temp}}}
+\label{structIMU__DATA__STRUCT_a81e1dbf765c1d947ca6076aa1bbc73e7}
+
+
+Definition at line 102 of file communication.h.
 
 
 
-The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+Referenced by calibrate\_\-imu(), read\_\-all\_\-data(), and ui\_\-overview\_\-data().
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
 \item 
-communication/\hyperlink{communication_2communication_8h}{communication.\-h}\end{DoxyCompactItemize}
+communication/\hyperlink{communication_8h}{communication.h}\end{DoxyCompactItemize}

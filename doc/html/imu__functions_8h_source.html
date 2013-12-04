@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>RLEG: communication/imu_functions.h Source File</title>
+<title>Rleg: communication/imu_functions.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javaScript" src="search/search.js"></script>
@@ -18,6 +18,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="tabs">
     <ul>
       <li><a href="index.html"><span>Main&nbsp;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&nbsp;Pages</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="annotated.html"><span>Data&nbsp;Structures</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -38,166 +40,114 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="tabs">
     <ul>
       <li><a href="files.html"><span>File&nbsp;List</span></a></li>
+      <li><a href="globals.html"><span>Globals</span></a></li>
     </ul>
   </div>
-<h1>communication/imu_functions.h</h1><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
-<a name="l00008"></a>00008 <span class="preprocessor">#ifndef IMU_FUNCTIONS_H_INCLUDED</span>
-<a name="l00009"></a>00009 <span class="preprocessor"></span><span class="preprocessor">#define IMU_FUNCTIONS_H_INCLUDED</span>
-<a name="l00010"></a>00010 <span class="preprocessor"></span>
-<a name="l00011"></a>00011 <span class="preprocessor">#include &lt;stdio.h&gt;</span>
-<a name="l00012"></a>00012 <span class="preprocessor">#include &lt;stdint.h&gt;</span>
-<a name="l00013"></a>00013 <span class="preprocessor">#include &lt;stdlib.h&gt;</span>
-<a name="l00014"></a>00014 <span class="preprocessor">#include &lt;string.h&gt;</span>
-<a name="l00015"></a>00015 <span class="preprocessor">#include &lt;errno.h&gt;</span>
-<a name="l00016"></a>00016 <span class="preprocessor">#include &lt;unistd.h&gt;</span>
-<a name="l00017"></a>00017 <span class="preprocessor">#include &lt;sys/types.h&gt;</span>
-<a name="l00018"></a>00018 <span class="preprocessor">#include &lt;sys/stat.h&gt;</span>
-<a name="l00019"></a>00019 <span class="preprocessor">#include &lt;sys/ioctl.h&gt;</span>
-<a name="l00020"></a>00020 <span class="preprocessor">#include &lt;fcntl.h&gt;</span>
-<a name="l00021"></a>00021 <span class="preprocessor">#include &lt;linux/i2c-dev.h&gt;</span>
-<a name="l00022"></a>00022 
-<a name="l00023"></a>00023 <span class="preprocessor">#include &quot;imu_regs.h&quot;</span>
+<h1>communication/imu_functions.h</h1><a href="imu__functions_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00010"></a>00010 <span class="preprocessor">#ifndef IMU_FUNCTIONS_H_INCLUDED</span>
+<a name="l00011"></a>00011 <span class="preprocessor"></span><span class="preprocessor">#define IMU_FUNCTIONS_H_INCLUDED</span>
+<a name="l00012"></a>00012 <span class="preprocessor"></span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &lt;stdio.h&gt;</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &lt;stdint.h&gt;</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include &lt;stdlib.h&gt;</span>
+<a name="l00016"></a>00016 <span class="preprocessor">#include &lt;string.h&gt;</span>
+<a name="l00017"></a>00017 <span class="preprocessor">#include &lt;errno.h&gt;</span>
+<a name="l00018"></a>00018 <span class="preprocessor">#include &lt;unistd.h&gt;</span>
+<a name="l00019"></a>00019 <span class="preprocessor">#include &lt;sys/types.h&gt;</span>
+<a name="l00020"></a>00020 <span class="preprocessor">#include &lt;sys/stat.h&gt;</span>
+<a name="l00021"></a>00021 <span class="preprocessor">#include &lt;sys/ioctl.h&gt;</span>
+<a name="l00022"></a>00022 <span class="preprocessor">#include &lt;fcntl.h&gt;</span>
+<a name="l00023"></a>00023 <span class="preprocessor">#include &lt;linux/i2c-dev.h&gt;</span>
 <a name="l00024"></a>00024 
-<a name="l00025"></a>00025 <span class="preprocessor">#define ASCII_0 0x30</span>
-<a name="l00026"></a>00026 <span class="preprocessor"></span>
-<a name="l00027"></a>00027 <span class="preprocessor">#define SUCCESS 1</span>
-<a name="l00028"></a>00028 <span class="preprocessor"></span><span class="preprocessor">#define FAILURE -1</span>
-<a name="l00029"></a>00029 <span class="preprocessor"></span>
-<a name="l00030"></a>00030 <span class="preprocessor">#define ADD_ADXL345 0x53</span>
-<a name="l00031"></a>00031 <span class="preprocessor"></span><span class="preprocessor">#define ADD_ITG3200 0x68</span>
-<a name="l00032"></a>00032 <span class="preprocessor"></span><span class="preprocessor">#define ADD_HMC5883 0x1E</span>
-<a name="l00033"></a>00033 <span class="preprocessor"></span>
-<a name="l00035"></a>00035 <span class="comment">//      FUNCTIONS FOR   //</span>
-<a name="l00036"></a>00036 <span class="comment">//      ACCELEROMETER   //</span>
-<a name="l00037"></a>00037 <span class="comment">//      ADXL345         //</span>
-<a name="l00039"></a>00039 <span class="comment"></span>
-<a name="l00047"></a>00047 <span class="keywordtype">int</span> acc_write_reg(<span class="keywordtype">int</span> i2c_dev, uint8_t reg, uint8_t data);
-<a name="l00048"></a>00048 
-<a name="l00058"></a>00058 uint8_t* acc_read_reg(<span class="keywordtype">int</span> i2c_dev, uint8_t reg, uint8_t count);
-<a name="l00059"></a>00059 
-<a name="l00075"></a>00075 <span class="keywordtype">int</span> acc_init(<span class="keywordtype">int</span> i2c_dev, uint8_t full_res, uint16_t rate, uint8_t range);
-<a name="l00076"></a>00076 <span class="comment">/* Parameters</span>
-<a name="l00077"></a>00077 <span class="comment">- full_res =</span>
-<a name="l00078"></a>00078 <span class="comment">0:      10 bits</span>
-<a name="l00079"></a>00079 <span class="comment">else:   full resolution</span>
-<a name="l00080"></a>00080 <span class="comment">- rate (Hz) = </span>
-<a name="l00081"></a>00081 <span class="comment">3200, 1600, 800, 400, 200, 100, 50, 25</span>
-<a name="l00082"></a>00082 <span class="comment">12:     12.5Hz</span>
-<a name="l00083"></a>00083 <span class="comment">6:      6.25Hz</span>
-<a name="l00084"></a>00084 <span class="comment">- range =</span>
-<a name="l00085"></a>00085 <span class="comment">2:      +- 2g</span>
-<a name="l00086"></a>00086 <span class="comment">4:      +- 4g</span>
-<a name="l00087"></a>00087 <span class="comment">8:      +- 8g</span>
-<a name="l00088"></a>00088 <span class="comment">else:   +- 16g</span>
-<a name="l00089"></a>00089 <span class="comment">*/</span>
+<a name="l00025"></a>00025 <span class="preprocessor">#include &quot;<a class="code" href="imu__regs_8h.html" title="Registers that are present in each device from the IMU (ADXL345, ITG3200 and HMC5883)...">imu_regs.h</a>&quot;</span>
+<a name="l00026"></a>00026 
+<a name="l00027"></a><a class="code" href="imu__functions_8h.html#aa3f75ad2972ec8996ce5206feac0e52c">00027</a> <span class="preprocessor">#define ASCII_0 0x30</span>
+<a name="l00028"></a>00028 <span class="preprocessor"></span>
+<a name="l00029"></a><a class="code" href="imu__functions_8h.html#aa90cac659d18e8ef6294c7ae337f6b58">00029</a> <span class="preprocessor">#define SUCCESS 1</span>
+<a name="l00030"></a><a class="code" href="imu__functions_8h.html#a6d58f9ac447476b4e084d7ca383f5183">00030</a> <span class="preprocessor"></span><span class="preprocessor">#define FAILURE -1</span>
+<a name="l00031"></a>00031 <span class="preprocessor"></span>
+<a name="l00036"></a><a class="code" href="imu__functions_8h.html#a909f4a5773e20e672cdb4088e1cfa22f">00036</a> <span class="preprocessor">#define ADD_ADXL345 0x53</span>
+<a name="l00037"></a><a class="code" href="imu__functions_8h.html#ab9fd1068a3f5fcba24d92918aaf0dcb5">00037</a> <span class="preprocessor"></span><span class="preprocessor">#define ADD_ITG3200 0x68</span>
+<a name="l00038"></a><a class="code" href="imu__functions_8h.html#a383c09d3e3bbe30097f7eb8d081fb856">00038</a> <span class="preprocessor"></span><span class="preprocessor">#define ADD_HMC5883 0x1E</span>
+<a name="l00039"></a>00039 <span class="preprocessor"></span>
+<a name="l00041"></a>00041 <span class="comment">//     FUNCTIONS FOR   // </span>
+<a name="l00042"></a>00042 <span class="comment">//     ACCELEROMETER   //</span>
+<a name="l00043"></a>00043 <span class="comment">//     ADXL345         //</span>
+<a name="l00045"></a>00045 <span class="comment"></span>
+<a name="l00059"></a>00059 <span class="keywordtype">int</span> <a class="code" href="group__acc.html#ga534116416343122de29a5b6ade6876bd" title="WRITE TO REGISTER.">acc_write_reg</a>(<span class="keywordtype">int</span> i2c_dev, uint8_t reg, uint8_t data);
+<a name="l00060"></a>00060 
+<a name="l00070"></a>00070 uint8_t* <a class="code" href="group__acc.html#ga2a91c44eebbe44f4d3b8c508633512f9" title="READ COUNT 8-BIT REGISTER IN SEQUENCE">acc_read_reg</a>(<span class="keywordtype">int</span> i2c_dev, uint8_t reg, uint8_t count);
+<a name="l00071"></a>00071 
+<a name="l00089"></a>00089 <span class="keywordtype">int</span> <a class="code" href="group__acc.html#gae8f9cc6e0d15e61039d846305f86f073" title="Rev 0 - 11/11/2012 RLEG project - 2012.">acc_init</a>(<span class="keywordtype">int</span> i2c_dev, uint8_t full_res, uint16_t rate, uint8_t range);
 <a name="l00090"></a>00090 
-<a name="l00099"></a>00099 <span class="keywordtype">int</span> acc_read_all_data(<span class="keywordtype">int</span> i2c_dev, <span class="keywordtype">short</span> <span class="keywordtype">int</span> *data);
+<a name="l00099"></a>00099 <span class="keywordtype">int</span> <a class="code" href="group__acc.html#ga013bb5ed8a763883fc440549d2b1a6ce" title="READ ALL DATA AT ONCE (X, Y and Z).">acc_read_all_data</a>(<span class="keywordtype">int</span> i2c_dev, <span class="keywordtype">short</span> <span class="keywordtype">int</span> *data);
 <a name="l00100"></a>00100 
-<a name="l00109"></a>00109 <span class="keywordtype">short</span> <span class="keywordtype">int</span> acc_read_data(<span class="keywordtype">int</span> i2c_dev, <span class="keywordtype">int</span> axis);
+<a name="l00109"></a>00109 <span class="keywordtype">short</span> <span class="keywordtype">int</span> <a class="code" href="group__acc.html#ga041d6953f2bfc8c5efa4d5bbac812305" title="READ DATA (X, Y or Z).">acc_read_data</a>(<span class="keywordtype">int</span> i2c_dev, <span class="keywordtype">int</span> axis);
 <a name="l00110"></a>00110 
-<a name="l00111"></a>00111 <span class="keywordtype">char</span>* conv_byte_hex_bin(uint8_t* hvalue);
+<a name="l00111"></a>00111 <span class="keywordtype">char</span>* <a class="code" href="acc__functions_8c.html#a1a6b2f719b4fef8f97d6d1b8f495148e">conv_byte_hex_bin</a>(uint8_t* hvalue);
 <a name="l00112"></a>00112 
-<a name="l00118"></a>00118 <span class="keywordtype">int</span> acc_read_all_reg(<span class="keywordtype">int</span> i2c_dev);
+<a name="l00118"></a>00118 <span class="keywordtype">int</span> <a class="code" href="group__acc.html#ga8509cccabb08e7267677f66f25718731" title="Read all accelerometer data and print in stdio.">acc_read_all_reg</a>(<span class="keywordtype">int</span> i2c_dev);
 <a name="l00119"></a>00119 
 <a name="l00121"></a>00121 <span class="comment">//      FUNCTIONS FOR   //</span>
 <a name="l00122"></a>00122 <span class="comment">//      GYROMETER       //</span>
 <a name="l00123"></a>00123 <span class="comment">//      ITG3200         //</span>
 <a name="l00125"></a>00125 <span class="comment"></span>
-<a name="l00126"></a>00126 <span class="comment">/* WRITE TO REGISTER */</span>
-<a name="l00127"></a>00127 <span class="keywordtype">int</span> gyr_write_reg(<span class="keywordtype">int</span> i2c_dev, uint8_t reg, uint8_t data);
-<a name="l00128"></a>00128 
-<a name="l00129"></a>00129 <span class="comment">/* READ  COUNT 8-BIT REGISTER IN SEQUENCE*/</span>
-<a name="l00130"></a>00130 uint8_t* gyr_read_reg(<span class="keywordtype">int</span> i2c_dev, uint8_t reg, uint8_t count);
-<a name="l00131"></a>00131 <span class="comment">/*</span>
-<a name="l00132"></a>00132 <span class="comment">count:  number of registers in sequence (1 - 9)</span>
-<a name="l00133"></a>00133 <span class="comment">*/</span>
-<a name="l00134"></a>00134 
-<a name="l00135"></a>00135 <span class="comment">/* INITIALIZE GYROMETER */</span>
-<a name="l00136"></a>00136 <span class="keywordtype">int</span> gyr_init(<span class="keywordtype">int</span> i2c_dev, <span class="keywordtype">float</span> rate, <span class="keywordtype">short</span> <span class="keywordtype">int</span> lpf_bw, <span class="keywordtype">char</span> clk_source, <span class="keywordtype">char</span> *act);
-<a name="l00137"></a>00137 <span class="comment">/* Parameters</span>
-<a name="l00138"></a>00138 <span class="comment">- lpf_bw (low pass filter bandwidth in Hz) = 256, 188, 98, 42, 20, 10 or 5</span>
-<a name="l00139"></a>00139 <span class="comment">- rate (output data rate in Hz)</span>
-<a name="l00140"></a>00140 <span class="comment">&lt;= 1000 (Fint), if lpf_bw is not 256</span>
-<a name="l00141"></a>00141 <span class="comment">&lt;= 8000 (Fint), if lpf_bw is 256</span>
-<a name="l00142"></a>00142 <span class="comment">Real rate will be the closest superior rate possible, respecting the formula Rate = Fint/n, 1&lt;=n&lt;=255</span>
-<a name="l00143"></a>00143 <span class="comment">- clk_source =</span>
-<a name="l00144"></a>00144 <span class="comment">&#39;I&#39;     Internal oscillator</span>
-<a name="l00145"></a>00145 <span class="comment">&#39;X&#39;     PLL with X Gyro reference</span>
-<a name="l00146"></a>00146 <span class="comment">&#39;Y&#39;     PLL with Y Gyro reference</span>
-<a name="l00147"></a>00147 <span class="comment">&#39;Z&#39;     Pll with Z Gyro reference</span>
-<a name="l00148"></a>00148 <span class="comment">Obs:    It is highly recommended that the device is configured to use one of the gyros as the</span>
-<a name="l00149"></a>00149 <span class="comment">        clock reference, due to the improved stability</span>
-<a name="l00150"></a>00150 <span class="comment">- act (activated gyro data) =</span>
-<a name="l00151"></a>00151 <span class="comment">&quot;XYZ&quot;   All axes are activated</span>
-<a name="l00152"></a>00152 <span class="comment">&quot;YZ&quot;    Only Y and Z axes are activated</span>
-<a name="l00153"></a>00153 <span class="comment">&quot;XZ&quot;    Only X and Z axes are activated</span>
-<a name="l00154"></a>00154 <span class="comment">&quot;XY&quot;    Only X and Y axes are activated</span>
-<a name="l00155"></a>00155 <span class="comment">&quot;X&quot;     Only X axis is activated</span>
-<a name="l00156"></a>00156 <span class="comment">&quot;Y&quot;     Only Y axis is activated</span>
-<a name="l00157"></a>00157 <span class="comment">&quot;Z&quot;     Only Z axis is activated</span>
-<a name="l00158"></a>00158 <span class="comment">&quot;&quot;      Device in very low power sleep mode</span>
-<a name="l00159"></a>00159 <span class="comment">*/</span>
-<a name="l00160"></a>00160 
-<a name="l00161"></a>00161 <span class="comment">/* READ ALL DATA AT ONCE (X, Y, Z and T) */</span>
-<a name="l00162"></a>00162 <span class="keywordtype">int</span> gyr_read_all_data(<span class="keywordtype">int</span> i2c_dev, <span class="keywordtype">short</span> <span class="keywordtype">int</span> *data);
-<a name="l00163"></a>00163 
-<a name="l00164"></a>00164 <span class="comment">/* READ DATA (X, Y, Z or T) */</span>
-<a name="l00165"></a>00165 <span class="keywordtype">short</span> <span class="keywordtype">int</span> gyr_read_data(<span class="keywordtype">int</span> i2c_dev, <span class="keywordtype">int</span> type);
-<a name="l00166"></a>00166 <span class="comment">/* </span>
-<a name="l00167"></a>00167 <span class="comment">type: &#39;X&#39; or &#39;Y&#39; or &#39;Z&#39; or &#39;T&#39;(temperature)</span>
-<a name="l00168"></a>00168 <span class="comment">*/</span>
-<a name="l00169"></a>00169 
-<a name="l00171"></a>00171 <span class="comment">//      FUNCTIONS FOR   //</span>
-<a name="l00172"></a>00172 <span class="comment">//      MAGNETOMETER    //</span>
-<a name="l00173"></a>00173 <span class="comment">//      HMC5883         //</span>
-<a name="l00175"></a>00175 <span class="comment"></span>
-<a name="l00179"></a>00179 <span class="keywordtype">int</span> mag_write_reg(<span class="keywordtype">int</span> i2c_dev, uint8_t reg, uint8_t data);
+<a name="l00138"></a>00138 <span class="keywordtype">int</span> <a class="code" href="group__gyr.html#ga3eba167b8ab0614bfe7bafeae8b5570d" title="WRITE TO REGISTER.">gyr_write_reg</a>(<span class="keywordtype">int</span> i2c_dev, uint8_t reg, uint8_t data);
+<a name="l00139"></a>00139 
+<a name="l00148"></a>00148 uint8_t* <a class="code" href="group__gyr.html#gad817a3b69d4c3026b7a9b6de32753e7b" title="READ COUNT 8-BIT REGISTER IN SEQUENCE.">gyr_read_reg</a>(<span class="keywordtype">int</span> i2c_dev, uint8_t reg, uint8_t count);
+<a name="l00149"></a>00149 
+<a name="l00179"></a>00179 <span class="keywordtype">int</span> <a class="code" href="group__gyr.html#ga6d02be352b4491a236c9695a6a24d174" title="INITIALIZE GYROMETER.">gyr_init</a>(<span class="keywordtype">int</span> i2c_dev, <span class="keywordtype">float</span> rate, <span class="keywordtype">short</span> <span class="keywordtype">int</span> lpf_bw, <span class="keywordtype">char</span> clk_source, <span class="keywordtype">char</span> *act);
 <a name="l00180"></a>00180 
-<a name="l00186"></a>00186 uint8_t* mag_read_reg(<span class="keywordtype">int</span> i2c_dev, uint8_t reg, uint8_t count);
-<a name="l00187"></a>00187 
-<a name="l00191"></a>00191 <span class="keywordtype">int</span> mag_init(<span class="keywordtype">int</span> i2c_dev, uint8_t rate, uint8_t range, uint8_t samples_avg, uint8_t meas_mode, uint8_t op_mode);
-<a name="l00192"></a>00192 <span class="comment">/* Parameters</span>
-<a name="l00193"></a>00193 <span class="comment">- rate (data output rate in Hz) = 3, 15, 30, 75</span>
-<a name="l00194"></a>00194 <span class="comment">0:      0.75Hz</span>
-<a name="l00195"></a>00195 <span class="comment">1:      1.5Hz</span>
-<a name="l00196"></a>00196 <span class="comment">7:      7.5Hz</span>
-<a name="l00197"></a>00197 <span class="comment">- samples_avg (number of sampled averaged per measurement output) = 1, 2, 4, 8</span>
-<a name="l00198"></a>00198 <span class="comment">- meas_mode (measurement mode):</span>
-<a name="l00199"></a>00199 <span class="comment">0:      Normal measurement configuration. The device follows normal measurement flow.</span>
-<a name="l00200"></a>00200 <span class="comment">        The positive and negative pins of the resistive load are left floating and high impedance</span>
-<a name="l00201"></a>00201 <span class="comment">1:      Positive bias configuration for X, Y, and Z axes. In this configuration, a positive current</span>
-<a name="l00202"></a>00202 <span class="comment">        is forced across the resistive load for all three axes</span>
-<a name="l00203"></a>00203 <span class="comment">2:      Negative bias configuration for X, Y, and Z axes. In this configuration, a negative current</span>
-<a name="l00204"></a>00204 <span class="comment">        is forced across the resistive load for all three axes</span>
-<a name="l00205"></a>00205 <span class="comment">- range:</span>
-<a name="l00206"></a>00206 <span class="comment">        Range (Ga)      Resolution (mG/LSb)</span>
-<a name="l00207"></a>00207 <span class="comment">0:      +- 0.88         0.73</span>
-<a name="l00208"></a>00208 <span class="comment">1:      +- 1.3          0.92</span>
-<a name="l00209"></a>00209 <span class="comment">2:      +- 1.9          1.22</span>
-<a name="l00210"></a>00210 <span class="comment">3:      +- 2.5          1.52</span>
-<a name="l00211"></a>00211 <span class="comment">4:      +- 4.0          2.27</span>
-<a name="l00212"></a>00212 <span class="comment">5:      +- 4.7          2.56</span>
-<a name="l00213"></a>00213 <span class="comment">6:      +- 5.6          3.03</span>
-<a name="l00214"></a>00214 <span class="comment">7:      +- 8.1          4.35</span>
-<a name="l00215"></a>00215 <span class="comment">*/</span>
-<a name="l00216"></a>00216 
-<a name="l00217"></a>00217 <span class="comment">/* READ ALL DATA AT ONCE (X, Y and Z) */</span>
-<a name="l00218"></a>00218 <span class="keywordtype">int</span> mag_read_all_data(<span class="keywordtype">int</span> i2c_dev, <span class="keywordtype">short</span> <span class="keywordtype">int</span> *data);
+<a name="l00188"></a>00188 <span class="keywordtype">int</span> <a class="code" href="group__gyr.html#ga79875465c3a29fd9ec77308c80a8bc37" title="READ ALL DATA AT ONCE (X, Y, Z and T).">gyr_read_all_data</a>(<span class="keywordtype">int</span> i2c_dev, <span class="keywordtype">short</span> <span class="keywordtype">int</span> *data);
+<a name="l00189"></a>00189 
+<a name="l00198"></a>00198 <span class="keywordtype">short</span> <span class="keywordtype">int</span> <a class="code" href="group__gyr.html#ga271b37e9ace81b18bb2f83787247d262" title="READ DATA (X, Y, Z or T).">gyr_read_data</a>(<span class="keywordtype">int</span> i2c_dev, <span class="keywordtype">int</span> type);
+<a name="l00199"></a>00199 
+<a name="l00201"></a>00201 <span class="comment">//      FUNCTIONS FOR   //</span>
+<a name="l00202"></a>00202 <span class="comment">//      MAGNETOMETER    //</span>
+<a name="l00203"></a>00203 <span class="comment">//      HMC5883         //</span>
+<a name="l00205"></a>00205 <span class="comment"></span>
+<a name="l00218"></a>00218 <span class="keywordtype">int</span> <a class="code" href="group__imu.html#gab5d0ae421cd4bb10b1b7a1eda167416b" title="WRITE TO REGISTER.">mag_write_reg</a>(<span class="keywordtype">int</span> i2c_dev, uint8_t reg, uint8_t data);
 <a name="l00219"></a>00219 
-<a name="l00220"></a>00220 <span class="comment">/* READ DATA (X, Y or Z) */</span>
-<a name="l00221"></a>00221 <span class="keywordtype">short</span> <span class="keywordtype">int</span> mag_read_data(<span class="keywordtype">int</span> i2c_dev, <span class="keywordtype">int</span> axis);
-<a name="l00222"></a>00222 <span class="comment">/* </span>
-<a name="l00223"></a>00223 <span class="comment">axis: &#39;X&#39; or &#39;Y&#39; or &#39;Z&#39;</span>
-<a name="l00224"></a>00224 <span class="comment">*/</span>
-<a name="l00225"></a>00225 
-<a name="l00226"></a>00226 <span class="preprocessor">#endif</span>
+<a name="l00227"></a>00227 uint8_t* <a class="code" href="group__mag.html#ga6830eaeae2298320e1e8c902e4edd709" title="READ COUNT 8-BIT REGISTER IN SEQUENCE.">mag_read_reg</a>(<span class="keywordtype">int</span> i2c_dev, uint8_t reg, uint8_t count);
+<a name="l00228"></a>00228 
+<a name="l00232"></a>00232 <span class="keywordtype">int</span> <a class="code" href="imu__functions_8h.html#a014f908c9faa37c1ec75177a17012a01" title="INITIALIZE MAGNETOMETER.">mag_init</a>(<span class="keywordtype">int</span> i2c_dev, uint8_t rate, uint8_t range, uint8_t samples_avg, uint8_t meas_mode, uint8_t op_mode);
+<a name="l00233"></a>00233 <span class="comment">/* Parameters</span>
+<a name="l00234"></a>00234 <span class="comment">- rate (data output rate in Hz) = 3, 15, 30, 75</span>
+<a name="l00235"></a>00235 <span class="comment">0:      0.75Hz</span>
+<a name="l00236"></a>00236 <span class="comment">1:      1.5Hz</span>
+<a name="l00237"></a>00237 <span class="comment">7:      7.5Hz</span>
+<a name="l00238"></a>00238 <span class="comment">- samples_avg (number of sampled averaged per measurement output) = 1, 2, 4, 8</span>
+<a name="l00239"></a>00239 <span class="comment">- meas_mode (measurement mode):</span>
+<a name="l00240"></a>00240 <span class="comment">0:      Normal measurement configuration. The device follows normal measurement flow.</span>
+<a name="l00241"></a>00241 <span class="comment">        The positive and negative pins of the resistive load are left floating and high impedance</span>
+<a name="l00242"></a>00242 <span class="comment">1:      Positive bias configuration for X, Y, and Z axes. In this configuration, a positive current</span>
+<a name="l00243"></a>00243 <span class="comment">        is forced across the resistive load for all three axes</span>
+<a name="l00244"></a>00244 <span class="comment">2:      Negative bias configuration for X, Y, and Z axes. In this configuration, a negative current</span>
+<a name="l00245"></a>00245 <span class="comment">        is forced across the resistive load for all three axes</span>
+<a name="l00246"></a>00246 <span class="comment">- range:</span>
+<a name="l00247"></a>00247 <span class="comment">        Range (Ga)      Resolution (mG/LSb)</span>
+<a name="l00248"></a>00248 <span class="comment">0:      +- 0.88         0.73</span>
+<a name="l00249"></a>00249 <span class="comment">1:      +- 1.3          0.92</span>
+<a name="l00250"></a>00250 <span class="comment">2:      +- 1.9          1.22</span>
+<a name="l00251"></a>00251 <span class="comment">3:      +- 2.5          1.52</span>
+<a name="l00252"></a>00252 <span class="comment">4:      +- 4.0          2.27</span>
+<a name="l00253"></a>00253 <span class="comment">5:      +- 4.7          2.56</span>
+<a name="l00254"></a>00254 <span class="comment">6:      +- 5.6          3.03</span>
+<a name="l00255"></a>00255 <span class="comment">7:      +- 8.1          4.35</span>
+<a name="l00256"></a>00256 <span class="comment">*/</span>
+<a name="l00257"></a>00257 
+<a name="l00264"></a>00264 <span class="keywordtype">int</span> <a class="code" href="group__mag.html#gab42ae0d0a2a6f37cf36d856c072b7f34" title="READ ALL DATA AT ONCE (X, Y and Z).">mag_read_all_data</a>(<span class="keywordtype">int</span> i2c_dev, <span class="keywordtype">short</span> <span class="keywordtype">int</span> *data);
+<a name="l00265"></a>00265 
+<a name="l00272"></a>00272 <span class="keywordtype">short</span> <span class="keywordtype">int</span> <a class="code" href="group__mag.html#ga542a31ccd07cd2c3e8e2b68cdb6d219e" title="READ DATA (X, Y or Z).">mag_read_data</a>(<span class="keywordtype">int</span> i2c_dev, <span class="keywordtype">int</span> axis);
+<a name="l00273"></a>00273 
+<a name="l00274"></a>00274 <span class="preprocessor">#endif</span>
 </pre></div></div>
 <!--- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&nbsp;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&nbsp;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -206,7 +156,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu Jun 6 20:09:26 2013 for RLEG by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Dec 4 12:19:21 2013 for Rleg by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

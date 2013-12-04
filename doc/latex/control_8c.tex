@@ -1,70 +1,63 @@
-\hypertarget{control_8c}{\section{control/control.c File Reference}
-\label{control_8c}\index{control/control.\-c@{control/control.\-c}}
+\hypertarget{control_8c}{
+\section{control/control.c File Reference}
+\label{control_8c}\index{control/control.c@{control/control.c}}
 }
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{control_8c_affcc9c00d6ed4b976ae2d0e53b60f51f}{control\-\_\-main} (\hyperlink{threads__linux_8c_a2a2a647912528f7aa86812528dbfe02f}{t\-\_\-task\-\_\-1\-\_\-global},\&\hyperlink{threads__linux_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\-\_\-data},\&\hyperlink{main2_8c_a5650ece8c3a277c7f158d75ae65265fa}{eff\-\_\-data},\&\hyperlink{main2_8c_abc42e18d2909e9bc119316283f4ed9db}{mra\-\_\-data})
-\begin{DoxyCompactList}\small\item\em Function\-: control\-\_\-main Summary\-: Calculate the control signal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \hyperlink{control_8c_affcc9c00d6ed4b976ae2d0e53b60f51f}{control\_\-main} (\hyperlink{threads__linux_8c_a2a2a647912528f7aa86812528dbfe02f}{t\_\-task\_\-1\_\-global},\&\hyperlink{threads__linux_8c_a3cfea12cbe9ca7f1681c950e4cd68606}{imu\_\-data},\&\hyperlink{main2_8c_a5650ece8c3a277c7f158d75ae65265fa}{eff\_\-data},\&\hyperlink{main2_8c_abc42e18d2909e9bc119316283f4ed9db}{mra\_\-data})
+\begin{DoxyCompactList}\small\item\em Function: control\_\-main Summary: Calculate the control signal. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
-\hypertarget{control_8c_affcc9c00d6ed4b976ae2d0e53b60f51f}{\index{control.\-c@{control.\-c}!control\-\_\-main@{control\-\_\-main}}
-\index{control\-\_\-main@{control\-\_\-main}!control.c@{control.\-c}}
-\subsubsection[{control\-\_\-main}]{\setlength{\rightskip}{0pt plus 5cm}void control\-\_\-main (
-\begin{DoxyParamCaption}
-\item[{{\bf t\-\_\-task\-\_\-1\-\_\-global}}]{, }
-\item[{\&}]{imu\-\_\-data, }
-\item[{\&}]{eff\-\_\-data, }
-\item[{\&}]{mra\-\_\-data}
-\end{DoxyParamCaption}
-)}}\label{control_8c_affcc9c00d6ed4b976ae2d0e53b60f51f}
+\hypertarget{control_8c_affcc9c00d6ed4b976ae2d0e53b60f51f}{
+\index{control.c@{control.c}!control\_\-main@{control\_\-main}}
+\index{control\_\-main@{control\_\-main}!control.c@{control.c}}
+\subsubsection[{control\_\-main}]{\setlength{\rightskip}{0pt plus 5cm}void control\_\-main ({\bf t\_\-task\_\-1\_\-global}, \/  \& {\em imu\_\-data}, \/  \& {\em eff\_\-data}, \/  \& {\em mra\_\-data})}}
+\label{control_8c_affcc9c00d6ed4b976ae2d0e53b60f51f}
 
 
-Function\-: control\-\_\-main Summary\-: Calculate the control signal. 
+Function: control\_\-main Summary: Calculate the control signal. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em t\-\_\-task\-\_\-1\-\_\-global} & containing the ... \\
-\hline
-{\em imu\-\_\-data} & containing data from accelerometer, gyrometer and magnetometer \\
-\hline
-{\em eff\-\_\-data} & containing data from load cell \\
-\hline
-{\em mra\-\_\-data} & struct containing the control signal\\
-\hline
-\end{DoxyParams}
+\item[{\em t\_\-task\_\-1\_\-global}]containing the ... \item[{\em imu\_\-data}]containing data from accelerometer, gyrometer and magnetometer \item[{\em eff\_\-data}]containing data from load cell \item[{\em mra\_\-data}]struct containing the control signal\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 nothing 
 \end{DoxyReturn}
 
 
-Definition at line 11 of file control.\-c.
+Definition at line 11 of file control.c.
 
 
 
-References imu\-\_\-data, mra\-\_\-data, and M\-R\-A\-\_\-\-D\-A\-T\-A\-\_\-\-S\-T\-R\-U\-C\-T\-::v\-\_\-ctl.
+References IMU\_\-DATA\_\-STRUCT::acc, imu\_\-data, mra\_\-data, MRA\_\-DATA\_\-STRUCT::v\_\-ctl, DATA\_\-XYZ::x, and DATA\_\-XYZ::z.
+
+
 
 
 \begin{DoxyCode}
-11                                                                     \{
-12 \textcolor{keywordtype}{int} t\_gait = 0;
-13 \textcolor{keywordtype}{int} gait\_cycle = 2000000;\textcolor{comment}{//Gait cycle takes 2 seconds}
-14 \textcolor{keywordtype}{int} heelstrike\_threshold = 3;
+11                                                                     {
+12 int t_gait = 0;
+13 int gait_cycle = 2000000;//Gait cycle takes 2 seconds
+14 int heelstrike_threshold = 3;
 15 
-16         \textcolor{comment}{//In case of heel strike the gait cycle starts}
-17         \textcolor{comment}{//Heel strike detection: module of acceleration vector (which has components in x and z axis)
-       higher than threshold.}
-18         \textcolor{keywordflow}{if} ((((\hyperlink{main_8c_a0f81e5b5621e6e2b2467daa7d12268c4}{imu\_data}->acc.x)^2 + (\hyperlink{main_8c_a0f81e5b5621e6e2b2467daa7d12268c4}{imu\_data}->acc.z)^2)^0.5) > heelstrike\_threshold)\{
-19           t\_gait = 0;
-20         \textcolor{comment}{//Between 10% and 60% of the gait cycle, actuation voltage is 0V}
-21         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (t\_gait>(0.1*gait\_cycle) && t\_gait<=(0.6*gait\_cycle))\{
-22           \textcolor{comment}{//control voltage 0V}
-23           \hyperlink{main2_8c_abc42e18d2909e9bc119316283f4ed9db}{mra\_data}.\hyperlink{structMRA__DATA__STRUCT_a64b4e6bb604e58de593a60c87942b966}{v\_ctl}=0;
-24         \textcolor{comment}{//More than 60% of the gait cycle, set actuation voltage to 4V.}
-25         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (t\_gait>(0.6*gait\_cycle) && t\_gait<(0.8*gait\_cycle))\{
-26           \hyperlink{main2_8c_abc42e18d2909e9bc119316283f4ed9db}{mra\_data}.\hyperlink{structMRA__DATA__STRUCT_a64b4e6bb604e58de593a60c87942b966}{v\_ctl}=4000;
-27         \}
+16         //In case of heel strike the gait cycle starts
+17         //Heel strike detection: module of acceleration vector (which has compone
+      nts in x and z axis) higher than threshold.
+18         if ((((imu_data->acc.x)^2 + (imu_data->acc.z)^2)^0.5) > heelstrike_thresh
+      old){
+19           t_gait = 0;
+20         //Between 10% and 60% of the gait cycle, actuation voltage is 0V
+21         } else if (t_gait>(0.1*gait_cycle) && t_gait<=(0.6*gait_cycle)){
+22           //control voltage 0V
+23           mra_data.v_ctl=0;
+24         //More than 60% of the gait cycle, set actuation voltage to 4V.
+25         } else if (t_gait>(0.6*gait_cycle) && t_gait<(0.8*gait_cycle)){
+26           mra_data.v_ctl=4000;
+27         }
 28 
-29 \}
+29 }
 \end{DoxyCode}
+
+

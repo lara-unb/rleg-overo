@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>RLEG: communication/imu_regs.h Source File</title>
+<title>Rleg: communication/imu_regs.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javaScript" src="search/search.js"></script>
@@ -18,6 +18,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="tabs">
     <ul>
       <li><a href="index.html"><span>Main&nbsp;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&nbsp;Pages</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="annotated.html"><span>Data&nbsp;Structures</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -38,93 +40,92 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="tabs">
     <ul>
       <li><a href="files.html"><span>File&nbsp;List</span></a></li>
+      <li><a href="globals.html"><span>Globals</span></a></li>
     </ul>
   </div>
-<h1>communication/imu_regs.h</h1><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/*</span>
-<a name="l00002"></a>00002 <span class="comment">Registers that are present in each device from the IMU (ADXL345, ITG3200 and HMC5883)</span>
-<a name="l00003"></a>00003 <span class="comment">*/</span>
-<a name="l00004"></a>00004 <span class="preprocessor">#ifndef IMU_REGS_H</span>
-<a name="l00005"></a>00005 <span class="preprocessor"></span><span class="preprocessor">#define IMU_REGS_H</span>
-<a name="l00006"></a>00006 <span class="preprocessor"></span>
-<a name="l00007"></a>00007 <span class="comment">/* Registers in ADXL345 (acc) - Register map */</span>
-<a name="l00008"></a>00008 <span class="comment">/*      REGISTER_NAME           ADDRESS         TYPE    DESCRIPTION */</span>
-<a name="l00009"></a>00009 <span class="preprocessor">#define ACC_DEVID               0x00    //      R       Device ID</span>
-<a name="l00010"></a>00010 <span class="preprocessor"></span><span class="preprocessor">#define ACC_THRESH_TAP          0x1D    //      R/W     Tap Threshold</span>
-<a name="l00011"></a>00011 <span class="preprocessor"></span><span class="preprocessor">#define ACC_OFSX                0x1E    //      R/W     X-axis offset</span>
-<a name="l00012"></a>00012 <span class="preprocessor"></span><span class="preprocessor">#define ACC_OFSY                0x1F    //      R/W     Y-axis offset</span>
-<a name="l00013"></a>00013 <span class="preprocessor"></span><span class="preprocessor">#define ACC_OFSZ                0x20    //      R/W     Z-axis offset</span>
-<a name="l00014"></a>00014 <span class="preprocessor"></span><span class="preprocessor">#define ACC_DUR                 0x21    //      R/W     Tap duration</span>
-<a name="l00015"></a>00015 <span class="preprocessor"></span><span class="preprocessor">#define ACC_LATENT              0x22    //      R/W     Tap latency</span>
-<a name="l00016"></a>00016 <span class="preprocessor"></span><span class="preprocessor">#define ACC_WINDOW              0x23    //      R/W     Tap window</span>
-<a name="l00017"></a>00017 <span class="preprocessor"></span><span class="preprocessor">#define ACC_THRESH_ACT          0x24    //      R/W     Activity threshold</span>
-<a name="l00018"></a>00018 <span class="preprocessor"></span><span class="preprocessor">#define ACC_THRESH_INACT        0x25    //      R/W     Inactivity threshold</span>
-<a name="l00019"></a>00019 <span class="preprocessor"></span><span class="preprocessor">#define ACC_TIME_INACT          0x26    //      R/W     Inactivity time</span>
-<a name="l00020"></a>00020 <span class="preprocessor"></span><span class="preprocessor">#define ACC_ACT_INACT_CTL       0x27    //      R/W     Axis enable control for activity and inactivity detection</span>
-<a name="l00021"></a>00021 <span class="preprocessor"></span><span class="preprocessor">#define ACC_THRESH_FF           0x28    //      R/W     Free-fall threshold</span>
-<a name="l00022"></a>00022 <span class="preprocessor"></span><span class="preprocessor">#define ACC_TIME_FF             0x29    //      R/W     Free-fall time</span>
-<a name="l00023"></a>00023 <span class="preprocessor"></span><span class="preprocessor">#define ACC_TAP_AXES            0x2A    //      R/W     Axis control for tap/double tap</span>
-<a name="l00024"></a>00024 <span class="preprocessor"></span><span class="preprocessor">#define ACC_ACT_TAP_STATUS      0x2B    //      R       Source of tap/double tap</span>
-<a name="l00025"></a>00025 <span class="preprocessor"></span><span class="preprocessor">#define ACC_BW_RATE             0x2C    //      R/W     Data rate and power mode control</span>
-<a name="l00026"></a>00026 <span class="preprocessor"></span><span class="preprocessor">#define ACC_POWER_CTL           0x2D    //      R/W     Power-saving features control</span>
-<a name="l00027"></a>00027 <span class="preprocessor"></span><span class="preprocessor">#define ACC_INT_ENABLE          0x2E    //      R/W     Interrupt enable control</span>
-<a name="l00028"></a>00028 <span class="preprocessor"></span><span class="preprocessor">#define ACC_INT_MAP             0x2F    //      R/W     Interrupt mapping control</span>
-<a name="l00029"></a>00029 <span class="preprocessor"></span><span class="preprocessor">#define ACC_INT_SOURCE          0x30    //      R       Source of interrupts</span>
-<a name="l00030"></a>00030 <span class="preprocessor"></span><span class="preprocessor">#define ACC_DATA_FORMAT         0x31    //      R/W     Data format control</span>
-<a name="l00031"></a>00031 <span class="preprocessor"></span><span class="preprocessor">#define ACC_DATAX0              0x32    //      R       X-Axis Data 0</span>
-<a name="l00032"></a>00032 <span class="preprocessor"></span><span class="preprocessor">#define ACC_DATAX1              0x33    //      R       X-Axis Data 1</span>
-<a name="l00033"></a>00033 <span class="preprocessor"></span><span class="preprocessor">#define ACC_DATAY0              0x34    //      R       Y-Axis Data 0</span>
-<a name="l00034"></a>00034 <span class="preprocessor"></span><span class="preprocessor">#define ACC_DATAY1              0x35    //      R       Y-Axis Data 1</span>
-<a name="l00035"></a>00035 <span class="preprocessor"></span><span class="preprocessor">#define ACC_DATAZ0              0x36    //      R       Z-Axis Data 0</span>
-<a name="l00036"></a>00036 <span class="preprocessor"></span><span class="preprocessor">#define ACC_DATAZ1              0x37    //      R       Z-Axis Data 1</span>
-<a name="l00037"></a>00037 <span class="preprocessor"></span><span class="preprocessor">#define ACC_FIFO_CTL            0x38    //      R/W     FIFO control</span>
-<a name="l00038"></a>00038 <span class="preprocessor"></span><span class="preprocessor">#define ACC_FIFO_STATUS         0x39    //      R       FIFO status</span>
-<a name="l00039"></a>00039 <span class="preprocessor"></span>
-<a name="l00040"></a>00040 <span class="preprocessor">#define ACC_DATA_FORMAT_FULLRES_FULLRANGE       0x0B    // value in DATA_FORMAT to full resolution and full range (16g)</span>
-<a name="l00041"></a>00041 <span class="preprocessor"></span><span class="preprocessor">#define ACC_POWER_CTL_MEAS_MODE                 0x08    // value in POWER_CTL to activate measurement mode </span>
-<a name="l00042"></a>00042 <span class="preprocessor"></span>
-<a name="l00043"></a>00043 <span class="comment">/* Registers in ITG3200 (gyr) */</span>
-<a name="l00044"></a>00044 <span class="comment">/*      REGISTER_NAME           ADDRESS         TYPE    DESCRIPTION */</span>
-<a name="l00045"></a>00045 <span class="preprocessor">#define GYR_WHO_AM_I            0x00    //      R/W     Who Am I: I2C address</span>
-<a name="l00046"></a>00046 <span class="preprocessor"></span><span class="preprocessor">#define GYR_SMPLRT_DIV          0x15    //      R/W     Sample rate divider</span>
-<a name="l00047"></a>00047 <span class="preprocessor"></span><span class="preprocessor">#define GYR_DLPF_FS             0x16    //      R/W     Parameters related to the sensor acquisition</span>
-<a name="l00048"></a>00048 <span class="preprocessor"></span><span class="preprocessor">#define GYR_INT_CFG             0x17    //      R/W     Interrupt configuration</span>
-<a name="l00049"></a>00049 <span class="preprocessor"></span><span class="preprocessor">#define GYR_INT_STATUS          0x1A    //      R       Status of the device interrupts</span>
-<a name="l00050"></a>00050 <span class="preprocessor"></span><span class="preprocessor">#define GYR_TEMP_OUT_H          0x1B    //      R       Data output Temperature MSB</span>
-<a name="l00051"></a>00051 <span class="preprocessor"></span><span class="preprocessor">#define GYR_TEMP_OUT_L          0x1C    //      R       Data output Temperature LSB</span>
-<a name="l00052"></a>00052 <span class="preprocessor"></span><span class="preprocessor">#define GYR_GYRO_XOUT_H         0x1D    //      R       Data output X MSB</span>
-<a name="l00053"></a>00053 <span class="preprocessor"></span><span class="preprocessor">#define GYR_GYRO_XOUT_L         0x1E    //      R       Data output X LSB</span>
-<a name="l00054"></a>00054 <span class="preprocessor"></span><span class="preprocessor">#define GYR_GYRO_YOUT_H         0x1F    //      R       Data output Y MSB</span>
-<a name="l00055"></a>00055 <span class="preprocessor"></span><span class="preprocessor">#define GYR_GYRO_YOUT_L         0x20    //      R       Data output Y LSB</span>
-<a name="l00056"></a>00056 <span class="preprocessor"></span><span class="preprocessor">#define GYR_GYRO_ZOUT_H         0x21    //      R       Data output Z MSB</span>
-<a name="l00057"></a>00057 <span class="preprocessor"></span><span class="preprocessor">#define GYR_GYRO_ZOUT_L         0x22    //      R       Data output Z LSB</span>
-<a name="l00058"></a>00058 <span class="preprocessor"></span><span class="preprocessor">#define GYR_PWR_MGM             0x3E    //      R/W     Power management</span>
-<a name="l00059"></a>00059 <span class="preprocessor"></span>
-<a name="l00060"></a>00060 
-<a name="l00061"></a>00061 <span class="comment">/* Registers in HMC5883 (mag) */</span>
-<a name="l00062"></a>00062 <span class="comment">/*      REGISTER_NAME           ADDRESS         TYPE    DESCRIPTION */</span>
-<a name="l00063"></a>00063 <span class="preprocessor">#define MAG_CONFIG_A            0x00    //      R/W     Configuration register A</span>
-<a name="l00064"></a>00064 <span class="preprocessor"></span><span class="preprocessor">#define MAG_CONFIG_B            0x01    //      R/W     Configuration register B</span>
-<a name="l00065"></a>00065 <span class="preprocessor"></span><span class="preprocessor">#define MAG_MODE                0x02    //      R/W     Mode</span>
-<a name="l00066"></a>00066 <span class="preprocessor"></span><span class="preprocessor">#define MAG_DATAX1              0x03    //      R       Data output X MSB</span>
-<a name="l00067"></a>00067 <span class="preprocessor"></span><span class="preprocessor">#define MAG_DATAX0              0x04    //      R       Data output X LSB</span>
-<a name="l00068"></a>00068 <span class="preprocessor"></span><span class="preprocessor">#define MAG_DATAZ1              0x05    //      R       Data output Z MSB</span>
-<a name="l00069"></a>00069 <span class="preprocessor"></span><span class="preprocessor">#define MAG_DATAZ0              0x06    //      R       Data output Z LSB</span>
-<a name="l00070"></a>00070 <span class="preprocessor"></span><span class="preprocessor">#define MAG_DATAY1              0x07    //      R       Data output Y MSB</span>
-<a name="l00071"></a>00071 <span class="preprocessor"></span><span class="preprocessor">#define MAG_DATAY0              0x08    //      R       Data output Y LSB</span>
-<a name="l00072"></a>00072 <span class="preprocessor"></span><span class="preprocessor">#define MAG_STATUS              0x09    //      R       Status</span>
-<a name="l00073"></a>00073 <span class="preprocessor"></span><span class="preprocessor">#define MAG_ID_A                0x0A    //      R       Identification register A</span>
-<a name="l00074"></a>00074 <span class="preprocessor"></span><span class="preprocessor">#define MAG_ID_B                0x0B    //      R       Identification register B</span>
-<a name="l00075"></a>00075 <span class="preprocessor"></span><span class="preprocessor">#define MAG_ID_C                0x0C    //      R       Identification register C</span>
-<a name="l00076"></a>00076 <span class="preprocessor"></span>
-<a name="l00077"></a>00077 
-<a name="l00078"></a>00078 <span class="preprocessor">#endif </span><span class="comment">/* ifndef IMU_REGS_H */</span>
+<h1>communication/imu_regs.h</h1><a href="imu__regs_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00005"></a>00005 <span class="preprocessor">#ifndef IMU_REGS_H</span>
+<a name="l00006"></a>00006 <span class="preprocessor"></span><span class="preprocessor">#define IMU_REGS_H</span>
+<a name="l00007"></a>00007 <span class="preprocessor"></span>
+<a name="l00008"></a>00008 <span class="comment">/* Registers in ADXL345 (acc) - Register map */</span>
+<a name="l00009"></a>00009 <span class="comment">/*      REGISTER_NAME           ADDRESS         TYPE    DESCRIPTION */</span>
+<a name="l00010"></a><a class="code" href="imu__regs_8h.html#a007fa8d8ef9d89127ae5da32a2f42283">00010</a> <span class="preprocessor">#define ACC_DEVID               0x00    //      R       Device ID</span>
+<a name="l00011"></a><a class="code" href="imu__regs_8h.html#afa5af181c4af31e22baa9bd20ff322ef">00011</a> <span class="preprocessor"></span><span class="preprocessor">#define ACC_THRESH_TAP          0x1D    //      R/W     Tap Threshold</span>
+<a name="l00012"></a><a class="code" href="imu__regs_8h.html#a77c6ef240a05f13a0930689bd37cb374">00012</a> <span class="preprocessor"></span><span class="preprocessor">#define ACC_OFSX                0x1E    //      R/W     X-axis offset</span>
+<a name="l00013"></a><a class="code" href="imu__regs_8h.html#af341dbd5a648888c6c913d6748fc8f5f">00013</a> <span class="preprocessor"></span><span class="preprocessor">#define ACC_OFSY                0x1F    //      R/W     Y-axis offset</span>
+<a name="l00014"></a><a class="code" href="imu__regs_8h.html#a207fe79eb2b8aca3aadb2084b5ba6bd7">00014</a> <span class="preprocessor"></span><span class="preprocessor">#define ACC_OFSZ                0x20    //      R/W     Z-axis offset</span>
+<a name="l00015"></a><a class="code" href="imu__regs_8h.html#a1c9b8802f8dc28836556e65327277a88">00015</a> <span class="preprocessor"></span><span class="preprocessor">#define ACC_DUR                 0x21    //      R/W     Tap duration</span>
+<a name="l00016"></a><a class="code" href="imu__regs_8h.html#a864be324b6a5b1da1e8e68b963a0ac75">00016</a> <span class="preprocessor"></span><span class="preprocessor">#define ACC_LATENT              0x22    //      R/W     Tap latency</span>
+<a name="l00017"></a><a class="code" href="imu__regs_8h.html#a25f619edd8cce5ee1ec9fe460c21de8a">00017</a> <span class="preprocessor"></span><span class="preprocessor">#define ACC_WINDOW              0x23    //      R/W     Tap window</span>
+<a name="l00018"></a><a class="code" href="imu__regs_8h.html#a52e0bfb98923d425eed21bc62c6bbc7d">00018</a> <span class="preprocessor"></span><span class="preprocessor">#define ACC_THRESH_ACT          0x24    //      R/W     Activity threshold</span>
+<a name="l00019"></a><a class="code" href="imu__regs_8h.html#afd582edd280d4991ae459c3bad1cce10">00019</a> <span class="preprocessor"></span><span class="preprocessor">#define ACC_THRESH_INACT        0x25    //      R/W     Inactivity threshold</span>
+<a name="l00020"></a><a class="code" href="imu__regs_8h.html#a6d42aa9100e912d4a2e02bc0139a9e94">00020</a> <span class="preprocessor"></span><span class="preprocessor">#define ACC_TIME_INACT          0x26    //      R/W     Inactivity time</span>
+<a name="l00021"></a><a class="code" href="imu__regs_8h.html#a972cbcd264205b5d2fa1820998d90953">00021</a> <span class="preprocessor"></span><span class="preprocessor">#define ACC_ACT_INACT_CTL       0x27    //      R/W     Axis enable control for activity and inactivity detection</span>
+<a name="l00022"></a><a class="code" href="imu__regs_8h.html#a2ed19ca4d2ed9ef6a453b0619b3a2bd3">00022</a> <span class="preprocessor"></span><span class="preprocessor">#define ACC_THRESH_FF           0x28    //      R/W     Free-fall threshold</span>
+<a name="l00023"></a><a class="code" href="imu__regs_8h.html#a6c3f83bc53e13995181fdcd31d278684">00023</a> <span class="preprocessor"></span><span class="preprocessor">#define ACC_TIME_FF             0x29    //      R/W     Free-fall time</span>
+<a name="l00024"></a><a class="code" href="imu__regs_8h.html#a605aaa715d1d0cef144ce001ff7376bb">00024</a> <span class="preprocessor"></span><span class="preprocessor">#define ACC_TAP_AXES            0x2A    //      R/W     Axis control for tap/double tap</span>
+<a name="l00025"></a><a class="code" href="imu__regs_8h.html#a823b94e47b6d728fdf91d386d69db3e9">00025</a> <span class="preprocessor"></span><span class="preprocessor">#define ACC_ACT_TAP_STATUS      0x2B    //      R       Source of tap/double tap</span>
+<a name="l00026"></a><a class="code" href="imu__regs_8h.html#afbbb5a3aa097a32f98c47158141a882f">00026</a> <span class="preprocessor"></span><span class="preprocessor">#define ACC_BW_RATE             0x2C    //      R/W     Data rate and power mode control</span>
+<a name="l00027"></a><a class="code" href="imu__regs_8h.html#ad857d62b61f349216faeda06eff5f9c6">00027</a> <span class="preprocessor"></span><span class="preprocessor">#define ACC_POWER_CTL           0x2D    //      R/W     Power-saving features control</span>
+<a name="l00028"></a><a class="code" href="imu__regs_8h.html#aca9fce28d6c56145be183eec10197f6e">00028</a> <span class="preprocessor"></span><span class="preprocessor">#define ACC_INT_ENABLE          0x2E    //      R/W     Interrupt enable control</span>
+<a name="l00029"></a><a class="code" href="imu__regs_8h.html#af9f0753ca3e024bd00d312d109a29190">00029</a> <span class="preprocessor"></span><span class="preprocessor">#define ACC_INT_MAP             0x2F    //      R/W     Interrupt mapping control</span>
+<a name="l00030"></a><a class="code" href="imu__regs_8h.html#a7f9415e11f76d0666b842a875f5f5fd8">00030</a> <span class="preprocessor"></span><span class="preprocessor">#define ACC_INT_SOURCE          0x30    //      R       Source of interrupts</span>
+<a name="l00031"></a><a class="code" href="imu__regs_8h.html#ab4eb7fc69b2a37ee750d3400fc2c53a1">00031</a> <span class="preprocessor"></span><span class="preprocessor">#define ACC_DATA_FORMAT         0x31    //      R/W     Data format control</span>
+<a name="l00032"></a><a class="code" href="imu__regs_8h.html#afae448fbad872220013e5c3abf0f3d9f">00032</a> <span class="preprocessor"></span><span class="preprocessor">#define ACC_DATAX0              0x32    //      R       X-Axis Data 0</span>
+<a name="l00033"></a><a class="code" href="imu__regs_8h.html#a63d0e7c719fabce83422ef9856302129">00033</a> <span class="preprocessor"></span><span class="preprocessor">#define ACC_DATAX1              0x33    //      R       X-Axis Data 1</span>
+<a name="l00034"></a><a class="code" href="imu__regs_8h.html#a6aa168a0f3e35bfee4da87c32dcb4b46">00034</a> <span class="preprocessor"></span><span class="preprocessor">#define ACC_DATAY0              0x34    //      R       Y-Axis Data 0</span>
+<a name="l00035"></a><a class="code" href="imu__regs_8h.html#a587970363cd2aeb2535ac314e98a2825">00035</a> <span class="preprocessor"></span><span class="preprocessor">#define ACC_DATAY1              0x35    //      R       Y-Axis Data 1</span>
+<a name="l00036"></a><a class="code" href="imu__regs_8h.html#ab87ce2339aeb4adb7fb71daa80f3bc68">00036</a> <span class="preprocessor"></span><span class="preprocessor">#define ACC_DATAZ0              0x36    //      R       Z-Axis Data 0</span>
+<a name="l00037"></a><a class="code" href="imu__regs_8h.html#afa9ea1f66d9d28dbb328498d6f7fa43d">00037</a> <span class="preprocessor"></span><span class="preprocessor">#define ACC_DATAZ1              0x37    //      R       Z-Axis Data 1</span>
+<a name="l00038"></a><a class="code" href="imu__regs_8h.html#addf1efb4b116aafd315a8bbe8cc59a7d">00038</a> <span class="preprocessor"></span><span class="preprocessor">#define ACC_FIFO_CTL            0x38    //      R/W     FIFO control</span>
+<a name="l00039"></a><a class="code" href="imu__regs_8h.html#acb0760254230c73d4744bae2059e7367">00039</a> <span class="preprocessor"></span><span class="preprocessor">#define ACC_FIFO_STATUS         0x39    //      R       FIFO status</span>
+<a name="l00040"></a>00040 <span class="preprocessor"></span>
+<a name="l00041"></a><a class="code" href="imu__regs_8h.html#aff938fe75d77c0b227cdc69fc3644c8e">00041</a> <span class="preprocessor">#define ACC_DATA_FORMAT_FULLRES_FULLRANGE       0x0B    // value in DATA_FORMAT to full resolution and full range (16g)</span>
+<a name="l00042"></a><a class="code" href="imu__regs_8h.html#a9a841ba3e094b01ea439584e12b25894">00042</a> <span class="preprocessor"></span><span class="preprocessor">#define ACC_POWER_CTL_MEAS_MODE                 0x08    // value in POWER_CTL to activate measurement mode </span>
+<a name="l00043"></a>00043 <span class="preprocessor"></span>
+<a name="l00044"></a>00044 <span class="comment">/* Registers in ITG3200 (gyr) */</span>
+<a name="l00045"></a>00045 <span class="comment">/*      REGISTER_NAME           ADDRESS         TYPE    DESCRIPTION */</span>
+<a name="l00046"></a><a class="code" href="imu__regs_8h.html#ab2499ff4167376accdbdec09f5e1b021">00046</a> <span class="preprocessor">#define GYR_WHO_AM_I            0x00    //      R/W     Who Am I: I2C address</span>
+<a name="l00047"></a><a class="code" href="imu__regs_8h.html#a04a18568e6e39825c98be5ec2976bec4">00047</a> <span class="preprocessor"></span><span class="preprocessor">#define GYR_SMPLRT_DIV          0x15    //      R/W     Sample rate divider</span>
+<a name="l00048"></a><a class="code" href="imu__regs_8h.html#a78908b66de8b46d12895e7cb66af6f5c">00048</a> <span class="preprocessor"></span><span class="preprocessor">#define GYR_DLPF_FS             0x16    //      R/W     Parameters related to the sensor acquisition</span>
+<a name="l00049"></a><a class="code" href="imu__regs_8h.html#ad0b8386ab023e17beb305025abf96e18">00049</a> <span class="preprocessor"></span><span class="preprocessor">#define GYR_INT_CFG             0x17    //      R/W     Interrupt configuration</span>
+<a name="l00050"></a><a class="code" href="imu__regs_8h.html#abbf4fe8a5d7dac37f157bab1f0862ce8">00050</a> <span class="preprocessor"></span><span class="preprocessor">#define GYR_INT_STATUS          0x1A    //      R       Status of the device interrupts</span>
+<a name="l00051"></a><a class="code" href="imu__regs_8h.html#a7d00eaf1ea076429433ad0c787b48200">00051</a> <span class="preprocessor"></span><span class="preprocessor">#define GYR_TEMP_OUT_H          0x1B    //      R       Data output Temperature MSB</span>
+<a name="l00052"></a><a class="code" href="imu__regs_8h.html#aa12ad44d3f86a5313497885a34afe556">00052</a> <span class="preprocessor"></span><span class="preprocessor">#define GYR_TEMP_OUT_L          0x1C    //      R       Data output Temperature LSB</span>
+<a name="l00053"></a><a class="code" href="imu__regs_8h.html#a45d3d3c92328dd02072aae7d8cf14ad0">00053</a> <span class="preprocessor"></span><span class="preprocessor">#define GYR_GYRO_XOUT_H         0x1D    //      R       Data output X MSB</span>
+<a name="l00054"></a><a class="code" href="imu__regs_8h.html#a7edf900d4085e539e860d992b07cbb7a">00054</a> <span class="preprocessor"></span><span class="preprocessor">#define GYR_GYRO_XOUT_L         0x1E    //      R       Data output X LSB</span>
+<a name="l00055"></a><a class="code" href="imu__regs_8h.html#a7664c10b8291231d44694e154c218fab">00055</a> <span class="preprocessor"></span><span class="preprocessor">#define GYR_GYRO_YOUT_H         0x1F    //      R       Data output Y MSB</span>
+<a name="l00056"></a><a class="code" href="imu__regs_8h.html#ae3ad108b021efe0774088b0c03a8aeb7">00056</a> <span class="preprocessor"></span><span class="preprocessor">#define GYR_GYRO_YOUT_L         0x20    //      R       Data output Y LSB</span>
+<a name="l00057"></a><a class="code" href="imu__regs_8h.html#ae4d2753664f152db1bef259f99975b4c">00057</a> <span class="preprocessor"></span><span class="preprocessor">#define GYR_GYRO_ZOUT_H         0x21    //      R       Data output Z MSB</span>
+<a name="l00058"></a><a class="code" href="imu__regs_8h.html#a058bb84bb6c319e18e7c2458a3408038">00058</a> <span class="preprocessor"></span><span class="preprocessor">#define GYR_GYRO_ZOUT_L         0x22    //      R       Data output Z LSB</span>
+<a name="l00059"></a><a class="code" href="imu__regs_8h.html#a5eba4af610a1ec85320e940bf44855eb">00059</a> <span class="preprocessor"></span><span class="preprocessor">#define GYR_PWR_MGM             0x3E    //      R/W     Power management</span>
+<a name="l00060"></a>00060 <span class="preprocessor"></span>
+<a name="l00061"></a>00061 
+<a name="l00062"></a>00062 <span class="comment">/* Registers in HMC5883 (mag) */</span>
+<a name="l00063"></a>00063 <span class="comment">/*      REGISTER_NAME           ADDRESS         TYPE    DESCRIPTION */</span>
+<a name="l00064"></a><a class="code" href="imu__regs_8h.html#a4c80cd6ce866f16a3d999ee2c5635ec9">00064</a> <span class="preprocessor">#define MAG_CONFIG_A            0x00    //      R/W     Configuration register A</span>
+<a name="l00065"></a><a class="code" href="imu__regs_8h.html#a094173f77219df894d97eed44405d942">00065</a> <span class="preprocessor"></span><span class="preprocessor">#define MAG_CONFIG_B            0x01    //      R/W     Configuration register B</span>
+<a name="l00066"></a><a class="code" href="imu__regs_8h.html#a0173afba6efc0e164495bf506a9758d2">00066</a> <span class="preprocessor"></span><span class="preprocessor">#define MAG_MODE                0x02    //      R/W     Mode</span>
+<a name="l00067"></a><a class="code" href="imu__regs_8h.html#a4f883328e7ae117996e334145ddd0032">00067</a> <span class="preprocessor"></span><span class="preprocessor">#define MAG_DATAX1              0x03    //      R       Data output X MSB</span>
+<a name="l00068"></a><a class="code" href="imu__regs_8h.html#a76c386f49bf2df2249b4451b678ff642">00068</a> <span class="preprocessor"></span><span class="preprocessor">#define MAG_DATAX0              0x04    //      R       Data output X LSB</span>
+<a name="l00069"></a><a class="code" href="imu__regs_8h.html#a81d7d9236ec69a1a229e4fa7c6299fde">00069</a> <span class="preprocessor"></span><span class="preprocessor">#define MAG_DATAZ1              0x05    //      R       Data output Z MSB</span>
+<a name="l00070"></a><a class="code" href="imu__regs_8h.html#a7de4792aada1295759c6df1c753b1b57">00070</a> <span class="preprocessor"></span><span class="preprocessor">#define MAG_DATAZ0              0x06    //      R       Data output Z LSB</span>
+<a name="l00071"></a><a class="code" href="imu__regs_8h.html#ae218906702b1e40c2b6970f97dd0cfe4">00071</a> <span class="preprocessor"></span><span class="preprocessor">#define MAG_DATAY1              0x07    //      R       Data output Y MSB</span>
+<a name="l00072"></a><a class="code" href="imu__regs_8h.html#a6c34afc5d76c7fb304c1f4c45df5b274">00072</a> <span class="preprocessor"></span><span class="preprocessor">#define MAG_DATAY0              0x08    //      R       Data output Y LSB</span>
+<a name="l00073"></a><a class="code" href="imu__regs_8h.html#a2567224274546e46211b7dd92547b3ca">00073</a> <span class="preprocessor"></span><span class="preprocessor">#define MAG_STATUS              0x09    //      R       Status</span>
+<a name="l00074"></a><a class="code" href="imu__regs_8h.html#adb89beeadc89db58b4045cc15ccf6b59">00074</a> <span class="preprocessor"></span><span class="preprocessor">#define MAG_ID_A                0x0A    //      R       Identification register A</span>
+<a name="l00075"></a><a class="code" href="imu__regs_8h.html#a67e7b90cbee72251900005e158ab03b3">00075</a> <span class="preprocessor"></span><span class="preprocessor">#define MAG_ID_B                0x0B    //      R       Identification register B</span>
+<a name="l00076"></a><a class="code" href="imu__regs_8h.html#af83c43db5da095c0cbc24e343f9ffb7d">00076</a> <span class="preprocessor"></span><span class="preprocessor">#define MAG_ID_C                0x0C    //      R       Identification register C</span>
+<a name="l00077"></a>00077 <span class="preprocessor"></span>
+<a name="l00078"></a>00078 
+<a name="l00079"></a>00079 <span class="preprocessor">#endif </span><span class="comment">/* ifndef IMU_REGS_H */</span>
 </pre></div></div>
 <!--- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&nbsp;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&nbsp;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -133,7 +134,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu Jun 6 20:09:26 2013 for RLEG by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Dec 4 12:19:21 2013 for Rleg by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

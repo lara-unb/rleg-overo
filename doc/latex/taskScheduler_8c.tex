@@ -1,142 +1,101 @@
-\hypertarget{taskScheduler_8c}{\section{task\-Scheduler.\-c File Reference}
-\label{taskScheduler_8c}\index{task\-Scheduler.\-c@{task\-Scheduler.\-c}}
+\hypertarget{taskScheduler_8c}{
+\section{taskScheduler.c File Reference}
+\label{taskScheduler_8c}\index{taskScheduler.c@{taskScheduler.c}}
 }
-{\ttfamily \#include \char`\"{}task\-Scheduler.\-h\char`\"{}}\\*
-Include dependency graph for task\-Scheduler.\-c\-:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{taskScheduler_8c__incl}
-\end{center}
-\end{figure}
-\subsection*{Functions}
+{\ttfamily \#include $<$string.h$>$}\par
+{\ttfamily \#include $<$stdio.h$>$}\par
+{\ttfamily \#include $<$stdlib.h$>$}\par
+{\ttfamily \#include $<$time.h$>$}\par
+{\ttfamily \#include $<$pthread.h$>$}\par
+{\ttfamily \#include $<$unistd.h$>$}\par
+{\ttfamily \#include $<$signal.h$>$}\par
+{\ttfamily \#include $<$sys/time.h$>$}\par
+{\ttfamily \#include \char`\"{}taskScheduler.h\char`\"{}}\par
+Include dependency graph for taskScheduler.c:\subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{taskScheduler_8c_a2346be42760ac3f89c3e9e9414d83645}{timer\-\_\-new\-\_\-task} (\hyperlink{structTASK__S}{T\-A\-S\-K\-\_\-\-S} $\ast$task, void $\ast$run\-Funtion)
+void \hyperlink{group__taskS_ga1e7e694ed290112386d363ee2630dd82}{timer\_\-new\_\-task} (\hyperlink{structTASK__S}{TASK\_\-S} $\ast$task, void($\ast$runFunction)(int))
+\begin{DoxyCompactList}\small\item\em Create a task. \item\end{DoxyCompactList}\item 
+void \hyperlink{group__taskS_gabb62dbc29029e7950ee72aeb78c83dfc}{timer\_\-start\_\-task} (\hyperlink{structTASK__S}{TASK\_\-S} $\ast$task, int period\_\-us)
+\begin{DoxyCompactList}\small\item\em Start some task. \item\end{DoxyCompactList}\item 
+void \hyperlink{taskScheduler_8c_a39e4b92cd20da5838951ab5b0ad19fbb}{timer\_\-function\_\-task} (\hyperlink{structTASK__S}{TASK\_\-S} $\ast$task)
 \item 
-void \hyperlink{group__taskS_gac088a054258396a6e2dba77908f22b42}{timer\-\_\-start\-\_\-task} (\hyperlink{structTASK__S}{T\-A\-S\-K\-\_\-\-S} $\ast$task)
-\begin{DoxyCompactList}\small\item\em Start some task. \end{DoxyCompactList}\item 
-void \hyperlink{taskScheduler_8c_a39e4b92cd20da5838951ab5b0ad19fbb}{timer\-\_\-function\-\_\-task} (\hyperlink{structTASK__S}{T\-A\-S\-K\-\_\-\-S} $\ast$task)
-\item 
-void \hyperlink{group__taskS_ga8e48eacaac7d9cf7d82cc71cfbcd4b56}{timer\-\_\-stop\-\_\-task} (\hyperlink{structTASK__S}{T\-A\-S\-K\-\_\-\-S} $\ast$task)
-\begin{DoxyCompactList}\small\item\em Stop some task. \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \hyperlink{group__taskS_ga8e48eacaac7d9cf7d82cc71cfbcd4b56}{timer\_\-stop\_\-task} (\hyperlink{structTASK__S}{TASK\_\-S} $\ast$task)
+\begin{DoxyCompactList}\small\item\em Stop some task. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
-\hypertarget{taskScheduler_8c_a39e4b92cd20da5838951ab5b0ad19fbb}{\index{task\-Scheduler.\-c@{task\-Scheduler.\-c}!timer\-\_\-function\-\_\-task@{timer\-\_\-function\-\_\-task}}
-\index{timer\-\_\-function\-\_\-task@{timer\-\_\-function\-\_\-task}!taskScheduler.c@{task\-Scheduler.\-c}}
-\subsubsection[{timer\-\_\-function\-\_\-task}]{\setlength{\rightskip}{0pt plus 5cm}void timer\-\_\-function\-\_\-task (
-\begin{DoxyParamCaption}
-\item[{{\bf T\-A\-S\-K\-\_\-\-S} $\ast$}]{task}
-\end{DoxyParamCaption}
-)}}\label{taskScheduler_8c_a39e4b92cd20da5838951ab5b0ad19fbb}
-\begin{DoxyRefDesc}{Todo}
-\item[\hyperlink{todo__todo000003}{Todo}]make a function to set all times to zero \end{DoxyRefDesc}
+\hypertarget{taskScheduler_8c_a39e4b92cd20da5838951ab5b0ad19fbb}{
+\index{taskScheduler.c@{taskScheduler.c}!timer\_\-function\_\-task@{timer\_\-function\_\-task}}
+\index{timer\_\-function\_\-task@{timer\_\-function\_\-task}!taskScheduler.c@{taskScheduler.c}}
+\subsubsection[{timer\_\-function\_\-task}]{\setlength{\rightskip}{0pt plus 5cm}void timer\_\-function\_\-task ({\bf TASK\_\-S} $\ast$ {\em task})}}
+\label{taskScheduler_8c_a39e4b92cd20da5838951ab5b0ad19fbb}
 
 
-Definition at line 49 of file task\-Scheduler.\-c.
+\begin{Desc}
+\item[\hyperlink{todo__todo000003}{Todo}]make a function to set all times to zero \end{Desc}
 
 
 
-References status, and t0.
+
+Definition at line 68 of file taskScheduler.c.
+
+
 
 
 \begin{DoxyCode}
-50 \{
-51   \textcolor{keywordtype}{int} \hyperlink{communication_2communication_8c_a6e27f49150e9a14580fb313cc2777e00}{status} = 0;
-52   \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval timereset;
-53   \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval time;
-54   \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval time\_exec\_start;
-55   \textcolor{keyword}{static} \textcolor{keyword}{struct }timeval time\_exec\_end;
-56   \textcolor{keyword}{static} \textcolor{keywordtype}{double} T\_task,t\_task,t\_task\_previous;
-57   \textcolor{keyword}{static} \textcolor{keywordtype}{double} T\_task\_mean,T\_task\_min,T\_task\_max,T\_task\_exec;
-58 
-59   gettimeofday(&time\_exec\_start, NULL);
-60 
-61   \textcolor{comment}{// Time calculation}
-62   \textcolor{keywordflow}{if}((*task).isFirstExecution)
-63     \{
-64       gettimeofday(&timereset, NULL);
-66     \}
-67 
-68   gettimeofday(&time, NULL);
-69   t\_task = ((time.tv\_sec - timereset.tv\_sec) + (time.tv\_usec - timereset.tv\_usec)*1e-6);
-70   T\_task = t\_task - t\_task\_previous;
-71   t\_task\_previous = t\_task;
-72 
-73   \textcolor{keywordflow}{if}((*task).isFirstExecution)
-74     \{
-75       T\_task\_mean = T\_task;
-76       T\_task\_min  = 1e200;
-77       T\_task\_max  = 0.0;
-78       \hyperlink{main2_8c_a86c2efd6da48b362806cdbb5b1e711d8}{t0} = t\_task;
-79     \}
-80   \textcolor{keywordflow}{else}
-81     \{
-82       T\_task\_mean = 0.05*T\_task + 0.95*T\_task\_mean;
-83       \textcolor{keywordflow}{if}(T\_task < T\_task\_min) T\_task\_min  = T\_task;
-84       \textcolor{keywordflow}{if}(T\_task > T\_task\_max) T\_task\_max  = T\_task;
-85     \}
+69 {
+70   //int status = 0;
+71   static struct timeval timereset;
+72   static struct timeval time;
+73   static struct timeval time_exec_start;
+74   static struct timeval time_exec_end;
+75   static double T_task,t_task,t_task_previous;
+76   static double T_task_mean,T_task_min,T_task_max,T_task_exec;
+77 
+78   gettimeofday(&time_exec_start, NULL);
+79 
+80   // Time calculation
+81   if((*task).isFirstExecution)
+82     {
+83       gettimeofday(&timereset, NULL);
+85     }
 86 
-87   \textcolor{comment}{// Run the thread}
-88   status = (*task).runFunction();
-89 
-90   gettimeofday(&time\_exec\_end, NULL);
-91   T\_task\_exec = ((time\_exec\_end.tv\_sec - time\_exec\_start.tv\_sec) + (time\_exec\_end.tv\_usec - time\_exec\_start
-      .tv\_usec)*1e-6);
-92 
-93   (*task).t\_global = t\_task;
-94   (*task).T\_mean\_global = T\_task\_mean;
-95   (*task).T\_min\_global = T\_task\_min;
-96   (*task).T\_max\_global = T\_task\_max;
-97   (*task).T\_exec\_global = T\_task\_exec;
-98 
-99   (*task).isFirstExecution = 0;
-100 \}
+87   gettimeofday(&time, NULL);
+88   t_task = ((time.tv_sec - timereset.tv_sec) + (time.tv_usec - timereset.tv_usec)
+      *1e-6);
+89   T_task = t_task - t_task_previous;
+90   t_task_previous = t_task;
+91 
+92   if((*task).isFirstExecution)
+93     {
+94       T_task_mean = T_task;
+95       T_task_min  = 1e200;
+96       T_task_max  = 0.0;
+97       //t0 = t_task;
+98     }
+99   else
+100     {
+101       T_task_mean = 0.05*T_task + 0.95*T_task_mean;
+102       if(T_task < T_task_min) T_task_min  = T_task;
+103       if(T_task > T_task_max) T_task_max  = T_task;
+104     }
+105 
+106   // Run the thread
+107   //status = task->run();
+108 
+109   gettimeofday(&time_exec_end, NULL);
+110   T_task_exec = ((time_exec_end.tv_sec - time_exec_start.tv_sec) + (time_exec_end
+      .tv_usec - time_exec_start.tv_usec)*1e-6);
+111 
+112   (*task).t_global = t_task;
+113   (*task).T_mean_global = T_task_mean;
+114   (*task).T_min_global = T_task_min;
+115   (*task).T_max_global = T_task_max;
+116   (*task).T_exec_global = T_task_exec;
+117 
+118   (*task).isFirstExecution = 0;
+119 }
 \end{DoxyCode}
-\hypertarget{taskScheduler_8c_a2346be42760ac3f89c3e9e9414d83645}{\index{task\-Scheduler.\-c@{task\-Scheduler.\-c}!timer\-\_\-new\-\_\-task@{timer\-\_\-new\-\_\-task}}
-\index{timer\-\_\-new\-\_\-task@{timer\-\_\-new\-\_\-task}!taskScheduler.c@{task\-Scheduler.\-c}}
-\subsubsection[{timer\-\_\-new\-\_\-task}]{\setlength{\rightskip}{0pt plus 5cm}void timer\-\_\-new\-\_\-task (
-\begin{DoxyParamCaption}
-\item[{{\bf T\-A\-S\-K\-\_\-\-S} $\ast$}]{task, }
-\item[{void $\ast$}]{run\-Funtion}
-\end{DoxyParamCaption}
-)}}\label{taskScheduler_8c_a2346be42760ac3f89c3e9e9414d83645}
-
-
-Definition at line 7 of file task\-Scheduler.\-c.
-
-
-
-References T\-A\-S\-K\-\_\-\-S\-::run.
-
-
-
-Referenced by main().
-
-
-\begin{DoxyCode}
-7                                                   \{
-8   (*task).t\_global = 0.0;
-9   (*task).T\_exec\_global = 0.0;
-10   (*task).T\_mean\_global = 0.0;
-11   (*task).T\_max\_global = 0.0;
-12   (*task).period\_us = 0.0;
-13   (*task).isFirstExecution = 1;
-14 
-15   task->\hyperlink{structTASK__S_abe9c219d2f60c43991788786735599f2}{run} = runFunction;
-16 \}
-\end{DoxyCode}
-
-
-Here is the caller graph for this function\-:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=240pt]{taskScheduler_8c_a2346be42760ac3f89c3e9e9414d83645_icgraph}
-\end{center}
-\end{figure}
 
 

@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>RLEG: communication/gpio_functions.h Source File</title>
+<title>Rleg: communication/gpio_functions.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javaScript" src="search/search.js"></script>
@@ -18,6 +18,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="tabs">
     <ul>
       <li><a href="index.html"><span>Main&nbsp;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&nbsp;Pages</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="annotated.html"><span>Data&nbsp;Structures</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -38,9 +40,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="tabs">
     <ul>
       <li><a href="files.html"><span>File&nbsp;List</span></a></li>
+      <li><a href="globals.html"><span>Globals</span></a></li>
     </ul>
   </div>
-<h1>communication/gpio_functions.h</h1><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/*</span>
+<h1>communication/gpio_functions.h</h1><a href="gpio__functions_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/*</span>
 <a name="l00002"></a>00002 <span class="comment">Author: Caio Gustavo Mesquita Ângelo</span>
 <a name="l00003"></a>00003 <span class="comment">Rev 0 - 18/11/2012</span>
 <a name="l00004"></a>00004 <span class="comment">RLEG project - 2012</span>
@@ -56,18 +59,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00014"></a>00014 <span class="preprocessor">#include &lt;stdint.h&gt;</span>
 <a name="l00015"></a>00015 <span class="preprocessor">#include &lt;sys/types.h&gt;</span>
 <a name="l00016"></a>00016 
-<a name="l00017"></a>00017 <span class="preprocessor">#define SUCCESS         1</span>
-<a name="l00018"></a>00018 <span class="preprocessor"></span><span class="preprocessor">#define FAILURE         -1</span>
+<a name="l00017"></a><a class="code" href="gpio__functions_8h.html#aa90cac659d18e8ef6294c7ae337f6b58">00017</a> <span class="preprocessor">#define SUCCESS         1</span>
+<a name="l00018"></a><a class="code" href="gpio__functions_8h.html#a6d58f9ac447476b4e084d7ca383f5183">00018</a> <span class="preprocessor"></span><span class="preprocessor">#define FAILURE         -1</span>
 <a name="l00019"></a>00019 <span class="preprocessor"></span>
 <a name="l00020"></a>00020 <span class="comment">/* READ GPIO VALUE */</span>
-<a name="l00021"></a>00021 <span class="keywordtype">int</span> gpio_read(uint8_t gpio);
+<a name="l00021"></a>00021 <span class="keywordtype">int</span> <a class="code" href="gpio__functions_8c.html#ae18413a0edf151e47a7aa6be21c5144a">gpio_read</a>(uint8_t gpio);
 <a name="l00022"></a>00022 <span class="comment">/* Parameter</span>
 <a name="l00023"></a>00023 <span class="comment">gpio:   string number of GPIO (e.g. &quot;186&quot;)</span>
 <a name="l00024"></a>00024 <span class="comment">returns 0 or 1</span>
 <a name="l00025"></a>00025 <span class="comment">*/</span>
 <a name="l00026"></a>00026 
 <a name="l00027"></a>00027 <span class="comment">/* WRITE GPIO VALUE */</span>
-<a name="l00028"></a>00028 <span class="keywordtype">int</span> gpio_write(uint8_t gpio, uint8_t value);
+<a name="l00028"></a>00028 <span class="keywordtype">int</span> <a class="code" href="gpio__functions_8c.html#a9672ca43e65fa527cd6bf43db9aea594">gpio_write</a>(uint8_t gpio, uint8_t value);
 <a name="l00029"></a>00029 <span class="comment">/* Parameters</span>
 <a name="l00030"></a>00030 <span class="comment">gpio:   string number of GPIO (e.g. &quot;186&quot;)</span>
 <a name="l00031"></a>00031 <span class="comment">value:  0 or 1</span>
@@ -75,7 +78,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00033"></a>00033 <span class="comment">*/</span>
 <a name="l00034"></a>00034 
 <a name="l00035"></a>00035 <span class="comment">/* (FAST/FORCE) WRITE GPIO VALUE WITHOUT VERIFYING DIRECTION */</span>
-<a name="l00036"></a>00036 <span class="keywordtype">int</span> gpio_f_write(uint8_t gpio, uint8_t value);
+<a name="l00036"></a>00036 <span class="keywordtype">int</span> <a class="code" href="gpio__functions_8c.html#a95e72f46197cf1c0d985f760c7c4b35a">gpio_f_write</a>(uint8_t gpio, uint8_t value);
 <a name="l00037"></a>00037 <span class="comment">/* Parameters</span>
 <a name="l00038"></a>00038 <span class="comment">gpio:   number of GPIO (e.g. 186)</span>
 <a name="l00039"></a>00039 <span class="comment">value:  0 or 1</span>
@@ -89,7 +92,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&nbsp;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&nbsp;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -98,7 +101,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu Jun 6 20:09:26 2013 for RLEG by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Dec 4 12:19:21 2013 for Rleg by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

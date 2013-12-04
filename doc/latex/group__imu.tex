@@ -1,100 +1,84 @@
-\hypertarget{group__imu}{\section{I\-M\-U sensors}
-\label{group__imu}\index{I\-M\-U sensors@{I\-M\-U sensors}}
+\hypertarget{group__imu}{
+\section{IMU sensors}
+\label{group__imu}\index{IMU sensors@{IMU sensors}}
 }
-Collaboration diagram for I\-M\-U sensors\-:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=328pt]{group__imu}
-\end{center}
-\end{figure}
+
+
+Collaboration diagram for IMU sensors:
+
 \subsection*{Modules}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{group__calibrate}{Routines to calibrate sensors}
 \item 
-\hyperlink{group__acc}{Functions for accelerometer A\-D\-X\-L345}
+\hyperlink{group__acc}{Functions for accelerometer ADXL345}
 \item 
-\hyperlink{group__gyr}{Functions for Gyrometer I\-T\-G3200}
+\hyperlink{group__gyr}{Functions for Gyrometer ITG3200}
 \item 
-\hyperlink{group__mag}{Functions to Magnetometer H\-M\-C5883}
+\hyperlink{group__mag}{Functions to Magnetometer HMC5883}
 \end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-int \hyperlink{group__imu_gab5d0ae421cd4bb10b1b7a1eda167416b}{mag\-\_\-write\-\_\-reg} (int \hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\-\_\-dev}, uint8\-\_\-t reg, uint8\-\_\-t data)
-\begin{DoxyCompactList}\small\item\em W\-R\-I\-T\-E T\-O R\-E\-G\-I\-S\-T\-E\-R. \end{DoxyCompactList}\end{DoxyCompactItemize}
-
-
-\subsection{Detailed Description}
+int \hyperlink{group__imu_gab5d0ae421cd4bb10b1b7a1eda167416b}{mag\_\-write\_\-reg} (int i2c\_\-dev, uint8\_\-t reg, uint8\_\-t data)
+\begin{DoxyCompactList}\small\item\em WRITE TO REGISTER. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
-\hypertarget{group__imu_gab5d0ae421cd4bb10b1b7a1eda167416b}{\index{I\-M\-U sensors@{I\-M\-U sensors}!mag\-\_\-write\-\_\-reg@{mag\-\_\-write\-\_\-reg}}
-\index{mag\-\_\-write\-\_\-reg@{mag\-\_\-write\-\_\-reg}!IMU sensors@{I\-M\-U sensors}}
-\subsubsection[{mag\-\_\-write\-\_\-reg}]{\setlength{\rightskip}{0pt plus 5cm}int mag\-\_\-write\-\_\-reg (
-\begin{DoxyParamCaption}
-\item[{int}]{i2c\-\_\-dev, }
-\item[{uint8\-\_\-t}]{reg, }
-\item[{uint8\-\_\-t}]{data}
-\end{DoxyParamCaption}
-)}}\label{group__imu_gab5d0ae421cd4bb10b1b7a1eda167416b}
+\hypertarget{group__imu_gab5d0ae421cd4bb10b1b7a1eda167416b}{
+\index{imu@{imu}!mag\_\-write\_\-reg@{mag\_\-write\_\-reg}}
+\index{mag\_\-write\_\-reg@{mag\_\-write\_\-reg}!imu@{imu}}
+\subsubsection[{mag\_\-write\_\-reg}]{\setlength{\rightskip}{0pt plus 5cm}int mag\_\-write\_\-reg (int {\em i2c\_\-dev}, \/  uint8\_\-t {\em reg}, \/  uint8\_\-t {\em data})}}
+\label{group__imu_gab5d0ae421cd4bb10b1b7a1eda167416b}
 
 
-W\-R\-I\-T\-E T\-O R\-E\-G\-I\-S\-T\-E\-R. 
+WRITE TO REGISTER. 
 
 
-\begin{DoxyParams}[1]{Parameters}
- & {\em i2c\-\_\-dev} & \\
-\hline
- & {\em reg} & \\
-\hline
-\mbox{\tt in}  & {\em } & W\-R\-I\-T\-E T\-O R\-E\-G\-I\-S\-T\-E\-R.\\
-\hline
-\end{DoxyParams}
-Implements the I2\-C communication between Gumstix Overo Fire and H\-M\-C5883 \begin{DoxyAuthor}{Author}
+\begin{DoxyParams}{Parameters}
+\item[{\em i2c\_\-dev}]\item[{\em reg}]\item[\mbox{$\leftarrow$} {\em }]WRITE TO REGISTER.\end{DoxyParams}
+Implements the I2C communication between Gumstix Overo Fire and HMC5883 \begin{DoxyAuthor}{Author}
 Caio Gustavo Mesquita Ângelo 
 \end{DoxyAuthor}
 
 
-Definition at line 10 of file mag\-\_\-functions.\-c.
+Definition at line 10 of file mag\_\-functions.c.
 
 
 
-Referenced by mag\-\_\-init().
+References MAG\_\-MODE.
+
+
+
+Referenced by mag\_\-init().
+
+
 
 
 \begin{DoxyCode}
-11 \{
-12   uint8\_t reg\_data[2];
+11 {
+12   uint8_t reg_data[2];
 13 
-14   reg\_data[0] = reg;
-15   reg\_data[1] = data;
+14   reg_data[0] = reg;
+15   reg_data[1] = data;
 16 
-17   \textcolor{keywordflow}{if}( \hyperlink{communication_2imu__regs_8h_a0173afba6efc0e164495bf506a9758d2}{MAG\_MODE}<reg )
-18   \{
-19       \textcolor{comment}{//perror("Write unsucessful: Not a valid writable register");}
-20       \textcolor{keywordflow}{return} -1;
-21   \}
+17   if( MAG_MODE<reg )
+18   {
+19       //perror("Write unsucessful: Not a valid writable register");
+20       return -1;
+21   }
 22         
-23   \textcolor{keywordflow}{if} (write(\hyperlink{CommunicationV0_2communication_8c_a7751bd45ac1064efb35adf1f19c25db8}{i2c\_dev}, &reg\_data, 2) != 2) \{                
-24           \textcolor{comment}{//perror("Write unsuccessful");}
-25           \textcolor{keywordflow}{return} -1;
-26   \}
+23   if (write(i2c_dev, &reg_data, 2) != 2) {               
+24           //perror("Write unsuccessful");
+25           return -1;
+26   }
 27 
-28   \textcolor{keywordflow}{return} 1;
-29 \}
+28   return 1;
+29 }
 \end{DoxyCode}
 
 
-Here is the caller graph for this function\-:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=250pt]{group__imu_gab5d0ae421cd4bb10b1b7a1eda167416b_icgraph}
-\end{center}
-\end{figure}
 
+
+Here is the caller graph for this function:
 

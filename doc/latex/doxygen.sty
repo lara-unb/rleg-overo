@@ -7,20 +7,7 @@
 \RequirePackage{calc}
 \RequirePackage{color}
 \RequirePackage{fancyhdr}
-\RequirePackage{longtable}
 \RequirePackage{verbatim}
-\RequirePackage{ifthen}
-\RequirePackage{xtab}
-\RequirePackage{multirow}
-\RequirePackage[table]{xcolor}
-
-% Use helvetica font instead of times roman
-\RequirePackage{helvet}
-\RequirePackage{sectsty}
-\RequirePackage{tocloft}
-\providecommand{\rmdefault}{phv}
-\providecommand{\bfdefault}{bc}
-
 
 % Setup fancy headings
 \pagestyle{fancyplain}
@@ -33,44 +20,24 @@
 \renewcommand{\sectionmark}[1]{%
   \markright{\thesection\ #1}%
 }
-\fancyhead[LE]{\fancyplain{}{\bfseries\thepage}}
-\fancyhead[CE]{\fancyplain{}{}}
-\fancyhead[RE]{\fancyplain{}{\bfseries\leftmark}}
-\fancyhead[LO]{\fancyplain{}{\bfseries\rightmark}}
-\fancyhead[CO]{\fancyplain{}{}}
-\fancyhead[RO]{\fancyplain{}{\bfseries\thepage}}
-\fancyfoot[LE]{\fancyplain{}{}}
-\fancyfoot[CE]{\fancyplain{}{}}
-\fancyfoot[RE]{\fancyplain{}{\bfseries\scriptsize Generated on Thu Aug 1 2013 11\-:01\-:38 for Rleg by Doxygen }}
-\fancyfoot[LO]{\fancyplain{}{\bfseries\scriptsize Generated on Thu Aug 1 2013 11\-:01\-:38 for Rleg by Doxygen }}
-\fancyfoot[CO]{\fancyplain{}{}}
-\fancyfoot[RO]{\fancyplain{}{}}
+\lhead[\fancyplain{}{\bfseries\thepage}]{%
+  \fancyplain{}{\bfseries\rightmark}%
+}
+\rhead[\fancyplain{}{\bfseries\leftmark}]{%
+  \fancyplain{}{\bfseries\thepage}%
+}
+\rfoot[\fancyplain{}{\bfseries\scriptsize%
+  Generated on Wed Dec 4 12:19:21 2013 for Rleg by Doxygen }]{}
+\lfoot[]{\fancyplain{}{\bfseries\scriptsize%
+  Generated on Wed Dec 4 12:19:21 2013 for Rleg by Doxygen }}
+\cfoot{}
+
 %---------- Internal commands used in this style file ----------------
-
-\newcommand\tabfill[1]{%
-  \dimen@\linewidth%
-  \advance\dimen@\@totalleftmargin%
-  \advance\dimen@-\dimen\@curtab%
-  \parbox[t]\dimen@{\raggedright #1\ifhmode\strut\fi}%
-}
-
-\newcommand{\ensurespace}[1]{%
-  \begingroup
-    \setlength{\dimen@}{#1}%
-    \vskip\z@\@plus\dimen@
-    \penalty -100\vskip\z@\@plus -\dimen@
-    \vskip\dimen@
-    \penalty 9999%
-    \vskip -\dimen@
-    \vskip\z@skip % hide the previous |\vskip| from |\addvspace|
-  \endgroup
-}
 
 % Generic environment used by all paragraph-based environments defined
 % below. Note that the command \title{...} needs to be defined inside
 % those environments!
 \newenvironment{DoxyDesc}[1]{%
-  \ensurespace{4\baselineskip}%
   \begin{list}{}%
   {%
     \settowidth{\labelwidth}{40pt}%
@@ -97,11 +64,11 @@
 
 % Used by @code ... @endcode
 \newenvironment{DoxyCode}{%
-
-
-\begin{scriptsize}\begin{alltt}%
+  \footnotesize%
+  \verbatim%
 }{%
-\end{alltt}\end{scriptsize}%
+  \endverbatim%
+  \normalsize%
 }
 
 % Used by @example, @include, @includelineno and @dontinclude
@@ -213,13 +180,6 @@
   \end{DoxyDesc}%
 }
 
-% Used by @copyright
-\newenvironment{DoxyCopyright}[1]{%
-  \begin{DoxyDesc}{#1}%
-}{%
-  \end{DoxyDesc}%
-}
-
 % Used by @remark
 \newenvironment{DoxyRemark}[1]{%
   \begin{DoxyDesc}{#1}%
@@ -284,62 +244,19 @@
 }
 
 % Used by parameter lists
-\newenvironment{DoxyParams}[2][]{%
-  \begin{DoxyDesc}{#2}%
-    \item[] \hspace{\fill} \vspace{-40pt}%
-    \settowidth{\labelwidth}{40pt}%
-    \setlength{\LTleft}{0pt}%
-    \setlength{\tabcolsep}{0.01\textwidth}%
-    \ifthenelse{\equal{#1}{}}%
-    {\begin{longtable}{|>{\raggedleft\hspace{0pt}}p{0.15\textwidth}|%
-                        p{0.815\textwidth}|}}%
-    {\ifthenelse{\equal{#1}{1}}%
-      {\begin{longtable}{|>{\centering}p{0.10\textwidth}|%
-                         >{\raggedleft\hspace{0pt}}p{0.15\textwidth}|%
-                         p{0.685\textwidth}|}}%
-      {\begin{longtable}{|>{\centering}p{0.10\textwidth}|%
-                         >{\centering\hspace{0pt}}p{0.15\textwidth}|%
-                         >{\raggedleft\hspace{0pt}}p{0.15\textwidth}|%
-                         p{0.515\textwidth}|}}%
-    }\hline%
-}{%
-    \end{longtable}%
-  \end{DoxyDesc}%
-}
-
-% Used for fields of simple structs
-\newenvironment{DoxyFields}[1]{%
+\newenvironment{DoxyParams}[1]{%
   \begin{DoxyDesc}{#1}%
-    \item[] \hspace{\fill} \vspace{-40pt}%
-    \settowidth{\labelwidth}{40pt}%
-    \setlength{\LTleft}{0pt}%
-    \setlength{\tabcolsep}{0.01\textwidth}%
-    \begin{longtable}{|>{\raggedleft\hspace{0pt}}p{0.15\textwidth}|%
-                         p{0.15\textwidth}|%
-                         p{0.635\textwidth}|}%
-    \hline%
+    \begin{description}%
 }{%
-    \end{longtable}%
+    \end{description}%
   \end{DoxyDesc}%
-}
-
-% is used for parameters within a detailed function description
-\newenvironment{DoxyParamCaption}{%
-  \renewcommand{\item}[2][]{##1 {\em ##2}}%
-  }{%
 }
 
 % Used by return value lists
 \newenvironment{DoxyRetVals}[1]{%
   \begin{DoxyDesc}{#1}%
     \begin{description}%
-      \item[] \hspace{\fill} \vspace{-25pt}%
-      \setlength{\tabcolsep}{0.01\textwidth}%
-      \begin{longtable}{|>{\raggedleft\hspace{0pt}}p{0.25\textwidth}|%
-                          p{0.705\textwidth}|}%
-      \hline%
 }{%
-      \end{longtable}%
     \end{description}%
   \end{DoxyDesc}%
 }
@@ -348,16 +265,7 @@
 \newenvironment{DoxyExceptions}[1]{%
   \begin{DoxyDesc}{#1}%
     \begin{description}%
-      \item[] \hspace{\fill} \vspace{-25pt}%
-      \definecolor{tableShade}{HTML}{F8F8F8}%
-      \rowcolors{1}{white}{tableShade}%
-      \arrayrulecolor{gray}%
-      \setlength{\tabcolsep}{0.01\textwidth}%
-      \begin{longtable}{|>{\raggedleft\hspace{0pt}}p{0.25\textwidth}|%
-                          p{0.705\textwidth}|}%
-      \hline%
 }{%
-      \end{longtable}%
     \end{description}%
   \end{DoxyDesc}%
 }
@@ -366,16 +274,7 @@
 \newenvironment{DoxyTemplParams}[1]{%
   \begin{DoxyDesc}{#1}%
     \begin{description}%
-      \item[] \hspace{\fill} \vspace{-25pt}%
-      \definecolor{tableShade}{HTML}{F8F8F8}%
-      \rowcolors{1}{white}{tableShade}%
-      \arrayrulecolor{gray}%
-      \setlength{\tabcolsep}{0.01\textwidth}%
-      \begin{longtable}{|>{\raggedleft\hspace{0pt}}p{0.25\textwidth}|%
-                          p{0.705\textwidth}|}%
-      \hline%
 }{%
-      \end{longtable}%
     \end{description}%
   \end{DoxyDesc}%
 }
@@ -404,13 +303,12 @@
 {
 \setlength{\tmplength}
      {\linewidth/(#1)-\tabcolsep*2-\arrayrulewidth*(#1+1)/(#1)}
-      \par\begin{xtabular*}{\linewidth}
+      \par\begin{tabular*}{\linewidth}
              {*{#1}{|>{\PBS\raggedright\hspace{0pt}}p{\the\tmplength}}|}
 }
-{\end{xtabular*}\par}
+{\end{tabular*}\par}
 \newcommand{\entrylabel}[1]{
-   {\parbox[b]{\labelwidth-4pt}{\makebox[0pt][l]{%
-   \usefont{OT1}{phv}{bc}{n}\color{darkgray}#1}\vspace{1.5\baselineskip}}}}
+   {\parbox[b]{\labelwidth-4pt}{\makebox[0pt][l]{\textbf{#1}}\vspace{1.5\baselineskip}}}}
 \newenvironment{Desc}
 {\begin{list}{}
   {
@@ -422,53 +320,21 @@
   }
 }
 {\end{list}}
-\newsavebox{\xrefbox}
-\newlength{\xreflength}
-\newcommand{\xreflabel}[1]{%
-  \sbox{\xrefbox}{#1}%
-  \setlength{\xreflength}{\wd\xrefbox}%
-  \ifthenelse{\xreflength>\labelwidth}{%
-    \begin{minipage}{\textwidth}%
-      \setlength{\parindent}{0pt}%
-      \hangindent=15pt\bfseries #1\vspace{1.2\itemsep}%
-    \end{minipage}%
-  }{%
-   \parbox[b]{\labelwidth}{\makebox[0pt][l]{\textbf{#1}}}%
-  }}%
-\newenvironment{DoxyRefList}{%
-  \begin{list}{}{%
-    \setlength{\labelwidth}{10pt}%
-    \setlength{\leftmargin}{\labelwidth}%
-    \addtolength{\leftmargin}{\labelsep}%
-    \renewcommand{\makelabel}{\xreflabel}%
-    }%
-  }%
-{\end{list}}
-\newenvironment{DoxyRefDesc}[1]
-{\begin{list}{}{%
-  \renewcommand\makelabel[1]{\textbf{##1}}
-  \settowidth\labelwidth{\makelabel{#1}}
-  \setlength\leftmargin{\labelwidth+\labelsep}}}
-{\end{list}}
 \newenvironment{Indent}
   {\begin{list}{}{\setlength{\leftmargin}{0.5cm}}
       \item[]\ignorespaces}
   {\unskip\end{list}}
 \setlength{\parindent}{0cm}
 \setlength{\parskip}{0.2cm}
-\addtocounter{secnumdepth}{2}
+\addtocounter{secnumdepth}{1}
+\sloppy
 \usepackage[T1]{fontenc}
 \makeatletter
 \renewcommand{\paragraph}{\@startsection{paragraph}{4}{0ex}%
-   {-1.0ex}%
-   {1.0ex}%
-   {\usefont{OT1}{phv}{bc}{n}\color{darkgray}}}
-\renewcommand{\subparagraph}{\@startsection{subparagraph}{5}{0ex}%
-   {-1.0ex}%
-   {1.0ex}%
-   {\usefont{OT1}{phv}{bc}{n}\color{darkgray}}}
+   {-3.25ex plus -1ex minus -0.2ex}%
+   {1.5ex plus 0.2ex}%
+   {\normalfont\normalsize\bfseries}}
 \makeatother
-\allsectionsfont{\usefont{OT1}{phv}{bc}{n}\selectfont\color{darkgray}}
 \stepcounter{secnumdepth}
 \stepcounter{tocdepth}
 \definecolor{comment}{rgb}{0.5,0.0,0.0}
