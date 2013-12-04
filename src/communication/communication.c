@@ -7,7 +7,6 @@
 #include <stdio.h>
 #include "communication.h"
 
-
 int status;
 
 int devices_init(IMU_PARAM_STRUCT *imu_param, SPI_PARAM_STRUCT *spi_param, MRA_DATA_STRUCT *mra_data)
@@ -149,6 +148,8 @@ int read_all_data(int i2c_dev, int spi_dev, IMU_DATA_STRUCT *imu_data,EFF_DATA_S
 	enc_data->new_data=FAILURE;
   if(enc_read_pos(enc_data->spi_dev,&(enc_data->position))==FAILURE)
     enc_data->new_data = FAILURE;
+    /**@TODO create calibration function*/
+    enc_data->calib.position = ((4096 - enc_data->position)/11.37778);
 #endif
 
   if( imu_data->new_data==FAILURE || eff_data->new_data==FAILURE || mra_data->new_data==FAILURE || enc_data->new_data == FAILURE)

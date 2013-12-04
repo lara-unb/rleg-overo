@@ -31,3 +31,7 @@ void calibrate_imu(IMU_DATA_STRUCT *imu_data)
   
   return;
 }
+
+void calibrate_enc(ENC_DATA_STRUCT *enc_data){
+  enc_data->calib.position = ((ENC_MAX - enc_data->position)/ENC_FS);
+}

@@ -29,7 +29,27 @@
 #define GYR_FS_Y	0.001214142
 #define GYR_FS_Z	0.001214142
 
+// No tested
+#define ENC_FS      0.08789062  // (2pi)/(2^12)
+#define ENC_MAX     4096        // 2^12 
+
+/**
+ * Calibrate all sensors
+ * @ingroup calibrate
+ */
 void calibrate_all(IMU_DATA_STRUCT *imu_data);
+
+/**
+ * Calibrate imu sensors
+ * @ingroup calibrate
+ */
 void calibrate_imu(IMU_DATA_STRUCT *imu_data);
+
+/**
+ * Calibrate encoder to return values in the
+ * rage of 0 to 90
+ * @ingroup 
+ */
+void calibrate_enc(ENC_DATA_STRUCT *enc_data);
 
 #endif

@@ -222,7 +222,7 @@ int dac_write(int spi_dev, uint8_t ch, uint8_t _shdn, unsigned short int data)
 	if (ret == 1) return FAILURE;//pabort("can't send spi message");
 //printf("\nRx = 0x%X 0x%X 0x%X\n",rx[0],rx[1],rx[2]);
 //printf("\nValor retornado pelo conversor AD: %d\n\n",rx[2]+((rx[1]&0x0F)<<8));
-	return 1;
+	return SUCCESS;
 }
 
 int spi_trans_bytes(int spi_dev,uint8_t *send, uint8_t *receive,int n){
@@ -230,8 +230,12 @@ int spi_trans_bytes(int spi_dev,uint8_t *send, uint8_t *receive,int n){
 	 //< define send data 
 	uint8_t *tx;
 	tx = send;
-	uint8_t rx[ARRAY_SIZE(tx)] = {0, }; 
+	uint8_t rx[ARRAY_SIZE(tx)] = {0, };
 	//rx[0] = 0;
+	int i;
+
+	if(ARRAY_SIZE(tx)<n)
+		return FAILURE;
 
 	/*
 	* Transmitting data (full duplex):
@@ -239,7 +243,7 @@ int spi_trans_bytes(int spi_dev,uint8_t *send, uint8_t *receive,int n){
 	struct spi_ioc_transfer tr = {
 		.tx_buf = (unsigned long)tx,
 		.rx_buf = (unsigned long)rx,
-		.len = n,
+		.len = ARRAY_SIZE(tx),
 		.delay_usecs = delay,
 		.speed_hz = 0,
 		.bits_per_word = 0,
@@ -248,8 +252,9 @@ int spi_trans_bytes(int spi_dev,uint8_t *send, uint8_t *receive,int n){
 
 	//Check transmittion:
 	if(ret == 1) return FAILURE;//pabort("can't send spi message");
-	printf("\nret != 1\n");
-	*receive = rx[0];//get the received data
+	/** @TODO Fix this to show all data*/
+	for( i=0; i<n; i++)
+		receive[i] = rx[i];//get the received data
 
-	return 1;
+	return SUCCESS;
 }

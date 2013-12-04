@@ -37,7 +37,8 @@ int enc_zero_set(int spi_dev){
 int enc_read_pos(int spi_dev,unsigned short int *data){
 
     uint8_t send[] = {ENCODER_RD_POS,ENCODER_NO_OP};
-    uint8_t receive[2] = {0,};
+    uint8_t receive[ARRAY_SIZE(send)] = {0, };
+    uint8_t buffer[ARRAY_SIZE(send)] = {0, } ;
     
     /* Send command */
     spi_trans_bytes(spi_dev,send,receive,1);
@@ -45,15 +46,26 @@ int enc_read_pos(int spi_dev,unsigned short int *data){
         return FAILURE; 
     }
 
+    send[0]=ENCODER_NO_OP;
+
+    if(spi_trans_bytes(spi_dev,send,receive,2) != SUCCESS) { 
+        return FAILURE; 
+    }
+
+    buffer[0] = receive[0];
+
 	/**
-	* TODO Check this function, in case of error put delay before each byte data
+	* @TODO Check this function, in case of error put delay before each byte data
 	*/
     if(spi_trans_bytes(spi_dev,send,receive,2) != SUCCESS) { 
         return FAILURE; 
     }
 
-   data[0] = receive[0];
-   data[1] = receive[1];
+    buffer[1] = receive[0];
+
+    *data = buffer[0]*256+buffer[1];
+
+    //printf("\nreceive = 0x %2x %2x %d\n",buffer[0],buffer[1],data);
 
    return SUCCESS;
 }
@@ -68,12 +80,13 @@ int enc_wait_for_ack(int spi_dev, uint8_t ack, int max_errors)
 	//spi_trans_bytes(spi_dev,send,receive,1);
     while (receive != ack) {
         spi_trans_bytes(spi_dev,&send,&receive,1);
-        printf("\nReceive = 0x%x \n",receive);
+        //printf("\nReceive = 0x%x \n",receive);
         if (receive != ENCODER_WAIT_RESP) {
             errors++;
             if (errors > max_errors) { return FAILURE; }
         }
     }
+
 
     return SUCCESS;
 }

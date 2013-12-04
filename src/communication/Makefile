@@ -26,7 +26,7 @@ gpio_functions.o: gpio_functions.c gpio_functions.h
 encoder_functions.o: encoder_functions.c encoder_functions.h
 	$(CC) $(CCFLAGS) -c encoder_functions.c
 
-communication.o: communication.c communication.h imu_functions.h imu_regs.h encoder_functions.h
+communication.o: communication.c communication.h imu_functions.h imu_regs.h encoder_functions.h encoder_functions.c#../calibration/calibration.h ../calibration/calibration.c
 	$(CC) $(CCFLAGS) -c communication.c
 
 .PHONY: print

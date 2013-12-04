@@ -22,7 +22,7 @@
 #define GPIO_DAC_LDAC		67
 
 #define USE_ENCODER             1
-#define USE_IMU                 0
+#define USE_IMU                 1
 #define USE_SPI                 1
 
 /**

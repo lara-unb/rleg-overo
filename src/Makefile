@@ -22,12 +22,6 @@ OBJECTS+= $(wildcard gdatalogger/*.o)
 
 #EXECUTABLE = newrleg
 
-$(EXECUTABLE): $(OBJECTS)
-	$(CC) $(CCFLAGS) $(OBJECTS) -o $@
-
-$(MAIN).o: $(MAIN).c $(MAIN).h
-	$(CC) $(CCFLAGS) -c $(MAIN).c
-
 datalogger.o: datalogger.c datalogger.h
 	$(CC) $(CCFLAGS) -c datalogger.c
 
@@ -39,6 +33,12 @@ taskScheduler.o: taskScheduler.c taskScheduler.h
 
 calibration.o: calibration.c calibration.h
 	$(CC) $(CCFLAGS) -c calibration.c
+
+$(MAIN).o: $(MAIN).c $(HEADERS)
+	$(CC) $(CCFLAGS) -c $(MAIN).c
+
+$(EXECUTABLE): $(OBJECTS)
+	$(CC) $(CCFLAGS) $(OBJECTS) -o $@
 
 
 .PHONY: print
