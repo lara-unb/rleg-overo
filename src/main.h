@@ -13,14 +13,20 @@
  * @defgroup mainConfig Configuration of the main
  * @{
  */
-#define TASK1_PERIOD  100 //us
+#define TASK1_PERIOD  100000 //us
 
 /**@}*/
 
 int main(void);
 
-static void ui_task(int signo);
-static void control_task(int signo);
+/**
+ * Main Periodic Task
+ * @param signo 
+ */
+static void main_task(int signo);
+
+static void ui_task();
+static void control_task();
 
 void exit_program(void);
 
