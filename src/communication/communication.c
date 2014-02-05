@@ -79,6 +79,14 @@ int devices_init(IMU_PARAM_STRUCT *imu_param, SPI_PARAM_STRUCT *spi_param, MRA_D
   return SUCCESS;
 }
 
+int devices_close(IMU_PARAM_STRUCT *imu_param, SPI_PARAM_STRUCT *spi_param, MRA_DATA_STRUCT *mra_data)
+{
+  close(imu_param->i2c_dev);
+  close(spi_param->spi_dev);
+
+  return SUCCESS;
+}
+
 int read_all_data(int i2c_dev, int spi_dev, IMU_DATA_STRUCT *imu_data,EFF_DATA_STRUCT *eff_data, MRA_DATA_STRUCT *mra_data , ENC_DATA_STRUCT *enc_data)
 {
   short int data[4];
@@ -133,8 +141,8 @@ int read_all_data(int i2c_dev, int spi_dev, IMU_DATA_STRUCT *imu_data,EFF_DATA_S
   //Read MR actuator voltage control
     if( (adc_read(spi_dev,7,1,data))==SUCCESS )
     {
-	mra_data->v_ctl_read=data[0];
-	mra_data->new_data=SUCCESS;
+	    mra_data->v_ctl_read=data[0];
+      mra_data->new_data=SUCCESS;
     }
   }
   //if( f==1 )

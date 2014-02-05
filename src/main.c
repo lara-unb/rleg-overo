@@ -117,7 +117,7 @@ static void control_task(){
   if(read_all_data(imu_param.i2c_dev, spi_param.spi_dev, &imu_data,&eff_data, &mra_data, &enc_data) != SUCCESS) failure++;
   
 /* Control */
-  mra_data.v_ctl=1275 + (uint8_t)(800*cosf(task1.t_global*1000));
+  mra_data.v_ctl= 1275 - (uint8_t)(800*cosf(task1.t_global*1000));
   //control_main(task1.t_global,&imu_data,&eff_data,&mra_data);
 /* Actuate */
   actuate(spi_param.spi_dev,&mra_data);
