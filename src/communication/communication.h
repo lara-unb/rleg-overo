@@ -143,6 +143,17 @@ typedef struct mra_data{
   int devices_init(IMU_PARAM_STRUCT *imu_param, SPI_PARAM_STRUCT *spi_param, MRA_DATA_STRUCT *mra_data);
   
   /**
+   * @brief Fuction to close all communication with the sensors and devices
+   * @details [long description]
+   * @todo Complete and test this function
+   * @param imu_param [description]
+   * @param spi_param [description]
+   * @param mra_data [description]
+   * @return [description]
+   */
+  int devices_close(IMU_PARAM_STRUCT *imu_param, SPI_PARAM_STRUCT *spi_param, MRA_DATA_STRUCT *mra_data);
+  
+  /**
    * READ ALL DATA FROM SENSORS AND ADC
    * @param i2c_dev 
    * @param spi_dev

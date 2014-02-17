@@ -81,6 +81,10 @@ int devices_init(IMU_PARAM_STRUCT *imu_param, SPI_PARAM_STRUCT *spi_param, MRA_D
 
 int devices_close(IMU_PARAM_STRUCT *imu_param, SPI_PARAM_STRUCT *spi_param, MRA_DATA_STRUCT *mra_data)
 {
+  //Writing 0 and Disable DAC
+  mra_data->v_ctl=0;
+  actuate(spi_param->spi_dev, mra_data);
+
   close(imu_param->i2c_dev);
   close(spi_param->spi_dev);
 

@@ -28,6 +28,9 @@ static void main_task(int signo);
 static void ui_task();
 static void control_task();
 
+static void ui_hook(int signo);
+static void control_hook(int signo);
+
 void exit_program(void);
 
 #endif //MAIN_H

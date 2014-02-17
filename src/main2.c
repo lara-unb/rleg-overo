@@ -201,9 +201,7 @@ int main(void)
         return_value = FAILURE;
     }
 */
-     close(imu_param.i2c_dev);
-     close(spi_param.spi_dev);
-
+    devices_close(&imu_param, &spi_param, &mra_data);
 
     return return_value;
 }
@@ -226,45 +224,9 @@ int periodic_task_1(void)
     total++;
     if( read_all_data(imu_param.i2c_dev, spi_param.spi_dev, &imu_data, &eff_data, &mra_data, &enc_data) != SUCCESS)
       failure++;
-        /*buff_i=buff_i%5;
-        buff[0][0][buff_i]=imu_data.acc.x;
-	buff[0][1][buff_i]=imu_data.acc.y;
-	buff[0][2][buff_i]=imu_data.acc.z;
-	buff[1][0][buff_i]=imu_data.gyr.x;
-	buff[1][0][buff_i]=imu_data.gyr.x;
-	buff[1][1][buff_i]=imu_data.gyr.y;
-	buff[1][2][buff_i]=imu_data.gyr.z;
-	buff[2][0][buff_i]=imu_data.mag.x;
-	buff[2][1][buff_i]=imu_data.mag.y;
-	buff[2][2][buff_i]=imu_data.mag.z;
-	buff_i++;
-	
-	for( i=0; i<3; i++)
-	{
-	  
-	  for( j=0; j<3; j++)
-	    for( k=1; k<3; k++)
-	    {
-	      if( buff[i][j][k]==buff[i][j][0] )
-		equal=1;
-	      else
-		equal=0;
-	    }
-	  if( equal==1)
-	    i=3;
-	}
-	if( equal==1 )
-	{
-	  devices_init(&imu_param, &spi_param, &mra_data);
-	  equal=0;
-	}*/
-/*    if(read_all_data(imu_param.i2c_dev, spi_param.spi_dev, &imu_data, &eff_data) != SUCCESS)
-    {
-        failure++;
-    }
-*/
+        
     // Calibrate and Estimate
-    //calibrate_all(&imu_data);
+    calibrate_all(&imu_data);
     //calibration_calibrate_all(&pwm_read_data, &scp1000_data, &battery_data, &gps_data, &imu_data, &pitot_data, &sonar_data, &calibration_local_coordinate_system_data, &calibration_altimeter_data, &calibration_local_fields_data, &gps_measure, &imu_measure, &magnetometer_measure);
     //estimation_update_state_estimate(&estimation_data, &gps_measure, &imu_measure, &magnetometer_measure, &sonar_measure, &calibration_local_fields_data, task_1_period_us/(double)1e6);
 

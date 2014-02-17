@@ -13,7 +13,7 @@
 
 #include "taskScheduler.h"
 
-void timer_new_task(TASK_S *task,void (*runFunction)(int)){
+void timer_new_task(TASK_S *task,void (*runFunction)(void)){
   (*task).t_global = 0.0;
   (*task).T_exec_global = 0.0;
   (*task).T_mean_global = 0.0;
@@ -24,7 +24,7 @@ void timer_new_task(TASK_S *task,void (*runFunction)(int)){
   (*task).run = runFunction;
 }
 
-void timer_start_task(TASK_S *task,int period_us){
+void timer_start_task(TASK_S *task,void (*alertFunction)(int),int period_us){
   struct itimerspec itimer;
   struct sigevent evp;
   int erno = 0;
@@ -32,9 +32,15 @@ void timer_start_task(TASK_S *task,int period_us){
   task->isFirstExecution = 1;
   task->period_us = period_us;
 
-  evp.sigev_value.sival_ptr = &(task->timer);
+  /*evp.sigev_value.sival_ptr = &(task->timer);
   evp.sigev_notify = SIGEV_SIGNAL;
-  evp.sigev_signo = SIGUSR1;
+  evp.sigev_signo = SIGUSR1;*/
+
+  memset (&evp, 0, sizeof (struct sigevent));
+  evp.sigev_value.sival_int = 0;
+  evp.sigev_notify = SIGEV_THREAD;
+  evp.sigev_notify_attributes = NULL;
+  evp.sigev_notify_function = alertFunction;
 
   if(timer_create( CLOCK_REALTIME, &evp, &(task->timer))<0)
   {
@@ -42,14 +48,16 @@ void timer_start_task(TASK_S *task,int period_us){
     exit(erno);
   }
 
-  // Signal handler configuration
+  /*/ Signal handler configuration
   struct sigaction satimer;
   satimer.sa_handler = task->run;
   sigemptyset( &satimer.sa_mask );
-  satimer.sa_flags = SA_RESTART;
-  if ( sigaction( SIGUSR1, &satimer, NULL ) < 0)
+  satimer.sa_flags = SA_RESTART;*/
+
+  //if ( sigaction( SIGUSR1, &satimer, NULL ) < 0)
+  if(timer_create(CLOCK_REALTIME, &evp, task->timer) < 0)
   {
-    printf( "ERROR: sigaction.\n" );
+    //printf( "ERROR: sigaction.\n" );
     fprintf(stderr, "[%d]: %s\n", __LINE__, strerror(erno));
     exit(erno);
   }
@@ -67,7 +75,7 @@ void timer_start_task(TASK_S *task,int period_us){
 
 void timer_function_task(TASK_S *task)
 {
-  //int status = 0;
+  int status = 0;
   static struct timeval timereset;
   static struct timeval time;
   static struct timeval time_exec_start;
@@ -104,7 +112,7 @@ void timer_function_task(TASK_S *task)
     }
 
   // Run the thread
-  //status = task->run();
+  task->run();
 
   gettimeofday(&time_exec_end, NULL);
   T_task_exec = ((time_exec_end.tv_sec - time_exec_start.tv_sec) + (time_exec_end.tv_usec - time_exec_start.tv_usec)*1e-6);

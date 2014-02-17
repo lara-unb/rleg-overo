@@ -11,12 +11,15 @@
 #include "taskScheduler.h"
 #include "ui.h"
 //#include "control/control.h"
+ #include "datalogger.h"
+ #include "calibration/calibration.h"
 
 /*Strutures for tasks:*/
-  TASK_S task1;
+  TASK_S task1,task_ui,task_control;
 
 /* Task period*/
 #define TASK_UI_PERIOD 100000 //100ms
+#define TASK_CONTROL_PERIOD 20000 //20ms
 
 /*Strutures for configuration*/
   IMU_PARAM_STRUCT imu_param;
@@ -60,7 +63,9 @@ int main(void){
   spi_param.cs=0;
 
   // Periodic task :
-  timer_new_task(&task1,main_task);
+  //timer_new_task(&task1,main_task);
+  timer_new_task(&task_ui,ui_task);
+  timer_new_task(&task_control,control_task);
   
 /*Initialization:*/
   if(devices_init(&imu_param,&spi_param,&mra_data)!=SUCCESS){
@@ -73,8 +78,9 @@ int main(void){
     return FAILURE;
   }
 
-  timer_start_task(&task1,TASK1_PERIOD);
-  //timer_start_task(task2);
+  //timer_start_task(&task1,TASK1_PERIOD);
+  timer_start_task(&task_ui,ui_hook,TASK_UI_PERIOD);
+  timer_start_task(&task_control,control_hook,TASK_CONTROL_PERIOD);
 
 /* Main loop: */
   while(quittask == 0){
@@ -83,21 +89,31 @@ int main(void){
 
 /*Shutting Down:*/
   timer_stop_task(&task1);
+  timer_stop_task(&task_ui);
+  timer_stop_task(&task_control);
   usleep(2000);
-  //timer_stop_task(&task2);
 
   if(ui_close()==FAILURE){
     return_value = FAILURE;
   }
 
-  close(imu_param.i2c_dev);
-  close(spi_param.spi_dev);
+  devices_close(&imu_param, &spi_param, &mra_data);
 
   return return_value;
 }
 
 static void main_task(int signo){
   ui_task();
+  control_task();
+}
+
+static void ui_hook(int signo){
+  timer_function_task(&task_ui);
+  ui_task();
+}
+
+static void control_hook(int signo){
+  timer_function_task(&task_control);
   control_task();
 }
 
@@ -111,16 +127,41 @@ static void ui_task(){
 }
 
 static void control_task(){
+   static int previous_datalogger_status = DATALOGGER_NOT_RUNNING;
+  int current_datalogger_status; // Used to detect rising edge
+  char user =0;
+
+
   total++;
 
 /*Input*/
   if(read_all_data(imu_param.i2c_dev, spi_param.spi_dev, &imu_data,&eff_data, &mra_data, &enc_data) != SUCCESS) failure++;
+
+  calibrate_all(&imu_data);
   
+  current_datalogger_status = datalogger_status();
+    if( (current_datalogger_status == DATALOGGER_RUNNING))
+    {
+        if(previous_datalogger_status == DATALOGGER_NOT_RUNNING) // Rising edge
+        {
+            datalogger_set_Ts(task_control.period_us/1e6);
+            reset_timer();
+        }
+        datalogger_update(task_control.t_global, task_control.T_exec_global, task_ui.T_exec_global, t0, &imu_data, &eff_data, &mra_data /*&imu_measure, &magnetometer_measure, &estimation_data, &control_data*/);
+    }
+    previous_datalogger_status = current_datalogger_status;
 /* Control */
-  mra_data.v_ctl= 1275 - (uint8_t)(800*cosf(task1.t_global*1000));
+  mra_data.v_ctl= 1275 - (uint8_t)(800*cosf(task_control.t_global*1000));
   //control_main(task1.t_global,&imu_data,&eff_data,&mra_data);
 /* Actuate */
   actuate(spi_param.spi_dev,&mra_data);
+}
+
+
+int reset_timer(void)
+{
+    t0 = task_control.t_global;
+    return SUCCESS;
 }
 
 /// @TODO Review of this function:

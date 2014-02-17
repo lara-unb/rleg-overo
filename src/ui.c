@@ -106,20 +106,17 @@ int ui_update(IMU_DATA_STRUCT *pimu_data, EFF_DATA_STRUCT *peff_data, MRA_DATA_S
 			break;
 		case 'm': //MRA
 			ui_state = UI_MRA;
-		
 			break;
-		/* removed datalogger
-       	        case 'd': //Datalogger start/stop
-                  if(datalogger_status() == DATALOGGER_RUNNING)
+       	case 'd': //Datalogger start/stop
+                if(datalogger_status() == DATALOGGER_RUNNING)
                   {
                     datalogger_stop();
                   }
-                  else
+                else
                   {
                     datalogger_start();
-		  }
+		  		  }
                   break;
-		*/
                default:
 	         break;
 	}
@@ -233,8 +230,8 @@ int ui_overview_data(int total, int failures, IMU_DATA_STRUCT *pimu_data, EFF_DA
 	mvprintw(16, 0, "Voltage Control Read (bits):\t%4d", pmra_data->v_ctl_read);
 
     mvprintw(18, 0, "Runtime: %4.2lf", t);
-    //removed datalogger:
-    if(1)//if(datalogger_status() == DATALOGGER_NOT_RUNNING)
+
+    if(datalogger_status() == DATALOGGER_NOT_RUNNING)
     {
         mvprintw(18, 40, "Datalogger stopped");
     }
