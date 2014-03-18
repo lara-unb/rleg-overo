@@ -1,9 +1,9 @@
 <map id="main2.c" name="main2.c">
-<area shape="rect" href="$communication_8h.html" title="communication/communication.h" alt="" coords="517,155,728,181"/>
-<area shape="rect" href="$datalogger_8h.html" title="datalogger.h" alt="" coords="1309,80,1400,107"/>
-<area shape="rect" href="$ui_8h.html" title="ui.h" alt="" coords="1424,80,1467,107"/>
-<area shape="rect" href="$main2_8h.html" title="main2.h" alt="" coords="1491,80,1557,107"/>
-<area shape="rect" href="$calibration_2calibration_8h.html" title="calibration/calibration.h" alt="" coords="1131,80,1285,107"/>
+<area shape="rect" href="$calibration_8h.html" title="calibration.h" alt="" coords="585,80,676,107"/>
+<area shape="rect" href="$communication_8h.html" title="communication/communication.h" alt="" coords="525,155,736,181"/>
+<area shape="rect" href="$datalogger_8h.html" title="datalogger.h" alt="" coords="1273,80,1364,107"/>
+<area shape="rect" href="$ui_8h.html" title="ui.h" alt="" coords="1388,80,1431,107"/>
+<area shape="rect" href="$main2_8h.html" title="main2.h" alt="" coords="1455,80,1521,107"/>
 <area shape="rect" href="$imu__functions_8h.html" title="Rev 0 &#45; 06/11/2012 RLEG project &#45; 2012. " alt="" coords="543,229,655,256"/>
 <area shape="rect" href="$imu__regs_8h.html" title="Registers that are present in each device from the IMU (ADXL345, ITG3200 and HMC5883) ..." alt="" coords="5,304,91,331"/>
 <area shape="rect" href="$spi__functions_8h.html" title="spi_functions.h" alt="" coords="920,229,1027,256"/>

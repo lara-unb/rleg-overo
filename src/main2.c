@@ -9,7 +9,7 @@
 #include <pthread.h>
 #include <math.h>
 //#include "gmatrix.h"
-//#include "calibration.h"
+#include "calibration.h"
 //#include "protocol.h"
 //#include "estimation.h"
 //#include "control.h"
@@ -17,7 +17,7 @@
 #include "datalogger.h"
 #include "ui.h"
 #include "main2.h"
-#include "calibration/calibration.h"
+//#include "calibration/calibration.h"
 
 /* This runs tasks in three points:
  * 1) In the while(quittask == 0) loop: background (semi-periodic, usleep governed) tasks (datalogger update)

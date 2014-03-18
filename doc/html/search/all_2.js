@@ -23,9 +23,8 @@ var searchData=
   ['control_2eh',['control.h',['../control_8h.html',1,'']]],
   ['control_5fdata',['control_data',['../threads__linux_8c.html#aff494a26c79d58504615f0502cfa8f31',1,'threads_linux.c']]],
   ['control_5fhook',['control_hook',['../main_8c.html#ad9efce3aca735bfa0d91c2b512c3029b',1,'control_hook(int signo):&#160;main.c'],['../main_8h.html#ad9efce3aca735bfa0d91c2b512c3029b',1,'control_hook(int signo):&#160;main.h']]],
-  ['control_5fmain',['control_main',['../control_8c.html#affcc9c00d6ed4b976ae2d0e53b60f51f',1,'control.c']]],
   ['control_5ftask',['control_task',['../main_8c.html#a260fc92769e04b9feb7b3f34e3db39e6',1,'control_task():&#160;main.c'],['../main_8h.html#a260fc92769e04b9feb7b3f34e3db39e6',1,'control_task():&#160;main.h']]],
-  ['control_5ftest',['control_test',['../control_8c.html#a38de5e4671192be1f916c20c5badc397',1,'control.c']]],
+  ['control_5ftest',['control_test',['../control_8c.html#a7a852025afdb38d6b6d74525d3ce8ef8',1,'control.c']]],
   ['conv_5fbyte_5fhex_5fbin',['conv_byte_hex_bin',['../acc__functions_8c.html#a1a6b2f719b4fef8f97d6d1b8f495148e',1,'conv_byte_hex_bin(uint8_t *hvalue):&#160;acc_functions.c'],['../imu__functions_8h.html#a1a6b2f719b4fef8f97d6d1b8f495148e',1,'conv_byte_hex_bin(uint8_t *hvalue):&#160;acc_functions.c']]],
   ['cs',['cs',['../structSPI__PARAM__STRUCT.html#ae0d62e0a5554783d710b677a017e246f',1,'SPI_PARAM_STRUCT']]],
   ['configuration_20of_20the_20main',['Configuration of the main',['../group__mainConfig.html',1,'']]]

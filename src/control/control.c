@@ -1,3 +1,5 @@
+#include "control.h"
+
 /** Function: control_main
  * Summary:      Calculate the control signal
  *
@@ -7,11 +9,11 @@
  * @param  mra_data struct containing the control signal
  *
  * @return  nothing
- */
-void control_main (t_task_1_global, &imu_data, &eff_data, &mra_data){
-int t_gait = 0;
-int gait_cycle = 2000000;//Gait cycle takes 2 seconds
-int heelstrike_threshold = 3;
+ *
+void control_main (double time_global, IMU_DATA_STRUCT *imu_data, MRA_DATA_STRUCT *mra_data , ENC_DATA_STRUCT *enc_data){
+	int t_gait = 0;
+	int gait_cycle = 2000000;//Gait cycle takes 2 seconds
+	int heelstrike_threshold = 3;
 
 	//In case of heel strike the gait cycle starts
 	//Heel strike detection: module of acceleration vector (which has components in x and z axis) higher than threshold.
@@ -41,6 +43,18 @@ void control_byKneeAngle(&ang_data,&mra_data){
     mra_data.v_ctl = 6000;
 }
 */
-void control_test(t_task_1_global, &imu_data, &eff_data, &mra_data){
-	
+
+/**
+ * @brief [brief description]
+ * @details [long description]
+ * 
+ * @param time_global [description]
+ * @param imu_data [description]
+ * @param mra_data [description]
+ * @param enc_data [description]
+ * 
+ * @TODO create a dimmer.
+ */
+void control_test(double time_global, IMU_DATA_STRUCT *imu_data, MRA_DATA_STRUCT *mra_data , ENC_DATA_STRUCT *enc_data){
+	mra_data->v_ctl = ((int)time_global)%V_CTRL_MAX;
 }

@@ -30,13 +30,14 @@
 <area shape="rect" href="$group__enc.html#gad82fb44f2e735628ec95e003e4a1f93c" title="send command and delay between reads " alt="" coords="980,208,1100,235"/>
 <area shape="rect" href="$group__gyr.html#gad817a3b69d4c3026b7a9b6de32753e7b" title="READ COUNT 8&#45;BIT REGISTER IN SEQUENCE. " alt="" coords="992,259,1088,285"/>
 <area shape="rect" href="$group__mag.html#ga6830eaeae2298320e1e8c902e4edd709" title="READ COUNT 8&#45;BIT REGISTER IN SEQUENCE. " alt="" coords="988,309,1092,336"/>
-<area shape="rect" href="$group__ui.html#ga42e4dac2d138061a74c572358c8ebf49" title="Update Screen with new data of sensors. " alt="" coords="248,639,325,665"/>
+<area shape="rect" href="$group__ui.html#ga42e4dac2d138061a74c572358c8ebf49" title="Update Screen with new data of sensors. " alt="" coords="248,664,325,691"/>
 <area shape="rect" href="$group__ui.html#ga7d5a9d9a75693709de408781d001a6a6" title="Print IMU data. " alt="" coords="387,664,477,691"/>
 <area shape="rect" href="$ui_8c.html#af48496a4ce54378764bc4ca9eddfd498" title="ui_eff_data" alt="" coords="391,715,473,741"/>
 <area shape="rect" href="$group__ui.html#gaefec243c5df45db0350c1abbccf20e3b" title="Print MRA data. " alt="" coords="387,765,477,792"/>
 <area shape="rect" href="$ui_8c.html#a3821f6ba38465f8d170f7b947869e7d9" title="Print ENCODER data. " alt="" coords="387,816,477,843"/>
 <area shape="rect" href="$ui_8c.html#a8d5e19833fec51919aad6e78bb74619a" title="Print ALL sensors data. " alt="" coords="373,512,491,539"/>
-<area shape="rect" href="$ui_8c.html#a5f05ce725141ddfab683e059b1cd95ea" title="Internal function to end program. " alt="" coords="384,867,480,893"/>
+<area shape="rect" href="$ui_8c.html#ab000e58df846f819c70409f08ca2a47e" title="Print the menu. " alt="" coords="397,867,467,893"/>
+<area shape="rect" href="$ui_8c.html#a5f05ce725141ddfab683e059b1cd95ea" title="Internal function to end program. " alt="" coords="384,917,480,944"/>
 <area shape="rect" href="$datalogger_8c.html#aae2ffbc6cbf8f1cfecceb42c5139530a" title="datalogger_stop" alt="" coords="547,563,659,589"/>
 <area shape="rect" href="$datalogger_8c.html#a1f254ef380d595d6605c10811fd0dee6" title="datalogger_start" alt="" coords="545,613,660,640"/>
 <area shape="rect" href="$main_8c.html#a5b2b1fdd5e517470c10e84a2b2bcc5c8" title="Review of this function: " alt="" coords="567,512,639,539"/>

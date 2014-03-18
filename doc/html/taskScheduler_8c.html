@@ -140,6 +140,8 @@ Functions</h2></td></tr>
 <p>Definition at line <a class="el" href="taskScheduler_8c_source.html#l00076">76</a> of file <a class="el" href="taskScheduler_8c_source.html">taskScheduler.c</a>.</p>
 
 <p>References <a class="el" href="taskScheduler_8h_source.html#l00030">TASK_S::run</a>, and <a class="el" href="communication_8c_source.html#l00010">status</a>.</p>
+
+<p>Referenced by <a class="el" href="main_8c_source.html#l00113">control_hook()</a>, and <a class="el" href="main_8c_source.html#l00108">ui_hook()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;{</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="communication_8c.html#a6e27f49150e9a14580fb313cc2777e00">status</a> = 0;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keyword">static</span> <span class="keyword">struct </span>timeval timereset;</div>
@@ -193,12 +195,21 @@ Functions</h2></td></tr>
 <div class="ttc" id="communication_8c_html_a6e27f49150e9a14580fb313cc2777e00"><div class="ttname"><a href="communication_8c.html#a6e27f49150e9a14580fb313cc2777e00">status</a></div><div class="ttdeci">int status</div><div class="ttdef"><b>Definition:</b> <a href="communication_8c_source.html#l00010">communication.c:10</a></div></div>
 <div class="ttc" id="structTASK__S_html_aa78abd634204d47c5db61c50b0629d6b"><div class="ttname"><a href="structTASK__S.html#aa78abd634204d47c5db61c50b0629d6b">TASK_S::run</a></div><div class="ttdeci">void(* run)()</div><div class="ttdoc">hook to the action </div><div class="ttdef"><b>Definition:</b> <a href="taskScheduler_8h_source.html#l00030">taskScheduler.h:30</a></div></div>
 </div><!-- fragment -->
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="taskScheduler_8c_a39e4b92cd20da5838951ab5b0ad19fbb_icgraph.png" border="0" usemap="#taskScheduler_8c_a39e4b92cd20da5838951ab5b0ad19fbb_icgraph" alt=""/></div>
+<map name="taskScheduler_8c_a39e4b92cd20da5838951ab5b0ad19fbb_icgraph" id="taskScheduler_8c_a39e4b92cd20da5838951ab5b0ad19fbb_icgraph">
+<area shape="rect" href="main_8c.html#ad9efce3aca735bfa0d91c2b512c3029b" title="control_hook" alt="" coords="189,5,285,32"/><area shape="rect" href="main_8c.html#a23403eb775af5097d2009382d0969ab1" title="ui_hook" alt="" coords="204,56,271,83"/><area shape="rect" href="main2_8h.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="335,31,383,57"/></map>
+</div>
+</p>
+
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 18 2014 10:40:49 for Rleg by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Mar 18 2014 14:30:11 for Rleg by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

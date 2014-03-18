@@ -83,30 +83,38 @@ int ui_update(IMU_DATA_STRUCT *pimu_data, EFF_DATA_STRUCT *peff_data, MRA_DATA_S
 			break;
 	}
 
+	ui_menu();
+
 	refresh();
 
 	user_char = getch(); //Getting a char typed by the user
 	switch(user_char)
 	{
-	        case 'Q':
+	    case 'Q':
 		case 'q': //Quit
 			exit_program();
 			break;
+		case 'I':
 		case 'i': //IMU view
 			ui_state = UI_IMU;
 			break;
+		case 'F':
 		case 'f': //EFF view
 			ui_state = UI_EFF;
 			break;
+		case 'E':
  	    case 'e': // ENCODER view
 		    ui_state = UI_ENC;
 		    break;
+		case 'O':
 		case 'o': //Overview
 			ui_state = UI_OVERVIEW;
 			break;
+		case 'M':
 		case 'm': //MRA
 			ui_state = UI_MRA;
 			break;
+		case 'D':
        	case 'd': //Datalogger start/stop
                 if(datalogger_status() == DATALOGGER_RUNNING)
                   {
@@ -207,8 +215,8 @@ int ui_overview_data(int total, int failures, IMU_DATA_STRUCT *pimu_data, EFF_DA
 	mvprintw(9, 0, "IMU Gyrometer (rad/s):\t\tX:%8.5lf\tY:%8.5lf\tZ:%8.5lf", pimu_data->calib.gyr.x, pimu_data->calib.gyr.y, pimu_data->calib.gyr.z);
 	mvprintw(10, 0, "IMU Magnetometer (B):\t\tX:%8.5lf\tY:%8.5lf\tZ:%8.5lf", pimu_data->calib.mag.x, pimu_data->calib.mag.y, pimu_data->calib.mag.z);
 
-	mvprintw(12, 0, "Temp (bits):\t%d", pimu_data->temp);
-	mvprintw(12,40, "Temp (ºC):\t%lf", pimu_data->calib_temp);
+	mvprintw(12, 0, "Temp (bits):      %d", pimu_data->temp);
+	mvprintw(12,40, "Temp (ºC):     %lf", pimu_data->calib_temp);
 
 	mvprintw(13,0, "Encoder (bits):\t%d",enc_data->position);
 	mvprintw(13,40, "Encoder (degree):\t%d",enc_data->calib.position);
@@ -249,12 +257,17 @@ int ui_overview_data(int total, int failures, IMU_DATA_STRUCT *pimu_data, EFF_DA
         mvprintw(15, 0, "Calibration running");
     }
 */
+
+	return SUCCESS;
+}
+
+int ui_menu(){
 	mvprintw(20, 0, "I: IMU");
 	mvprintw(20, 20, "F: Efforts");
 	mvprintw(20, 40, "M: Magneto-rheological Actuator");
 	mvprintw(21, 0, "E: Encoder");
 	mvprintw(21, 20, "O: Overview");
-	//mvprintw(21, 40, "D: Datalogger Start/Stop");
+	mvprintw(21, 40, "D: Datalogger Start/Stop");
 	mvprintw(22, 0, "Q: Quit\n");
 
 	return SUCCESS;

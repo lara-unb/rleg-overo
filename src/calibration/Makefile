@@ -9,10 +9,7 @@ EXECUTABLE =
 .PHONY: all
 all: $(SOURCES) $(HEADERS) $(OBJECTS) $(EXECUTABLE)
 
-#$(EXECUTABLE): $(OBJECTS)
-#        $(CC) $(CCFLAGS) $(OBJECTS) -o $@
-
-calibration.o: calibration.c $(HEADERS)
+calibration.o: $(HEADERS)
 	$(CC) -c calibration.c 
 
 

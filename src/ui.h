@@ -56,6 +56,10 @@ int ui_mra_data(MRA_DATA_STRUCT *pmra_data);
  */
 int ui_overview_data(int total, int failures, IMU_DATA_STRUCT *pimu_data, EFF_DATA_STRUCT *peff_data, MRA_DATA_STRUCT *pmra_data, ENC_DATA_STRUCT *enc_data);
 
+/**
+ * Print the menu
+ */
+int ui_menu();
 
 //int ui_local_data(CALIBRATION_LOCAL_COORDINATE_SYSTEM_STRUCT *plocal_coordinate_system_data, CALIBRATION_LOCAL_FIELDS_STRUCT *plocal_fields_data, CALIBRATION_ALTIMETER_STRUCT *paltimeter_data);
 //int ui_estimation(ESTIMATION_DATA_STRUCT *pestimator_data);

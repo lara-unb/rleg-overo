@@ -97,7 +97,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;pthread.h&gt;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;math.h&gt;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">//#include &quot;gmatrix.h&quot;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">//#include &quot;calibration.h&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="calibration_8h.html">calibration.h</a>&quot;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">//#include &quot;protocol.h&quot;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">//#include &quot;estimation.h&quot;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">//#include &quot;control.h&quot;</span></div>
@@ -105,7 +105,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="datalogger_8h.html">datalogger.h</a>&quot;</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ui_8h.html">ui.h</a>&quot;</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="main2_8h.html">main2.h</a>&quot;</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="calibration_2calibration_8h.html">calibration/calibration.h</a>&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">//#include &quot;calibration/calibration.h&quot;</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">/* This runs tasks in three points:</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> * 1) In the while(quittask == 0) loop: background (semi-periodic, usleep governed) tasks (datalogger update)</span></div>
@@ -726,6 +726,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="main2_8c_html_a0e411070b7f487a8ab6a60b180f50e12"><div class="ttname"><a href="main2_8c.html#a0e411070b7f487a8ab6a60b180f50e12">timer_start_task_1</a></div><div class="ttdeci">void timer_start_task_1(void)</div><div class="ttdef"><b>Definition:</b> <a href="main2_8c_source.html#l00342">main2.c:342</a></div></div>
 <div class="ttc" id="communication_8c_html_a26f82e8af3b5ce23d5cd3a41db6e0b68"><div class="ttname"><a href="communication_8c.html#a26f82e8af3b5ce23d5cd3a41db6e0b68">read_all_data</a></div><div class="ttdeci">int read_all_data(int i2c_dev, int spi_dev, IMU_DATA_STRUCT *imu_data, EFF_DATA_STRUCT *eff_data, MRA_DATA_STRUCT *mra_data, ENC_DATA_STRUCT *enc_data)</div><div class="ttdoc">READ ALL DATA FROM SENSORS AND ADC. </div><div class="ttdef"><b>Definition:</b> <a href="communication_8c_source.html#l00094">communication.c:94</a></div></div>
 <div class="ttc" id="main2_8c_html_a5b2b1fdd5e517470c10e84a2b2bcc5c8"><div class="ttname"><a href="main2_8c.html#a5b2b1fdd5e517470c10e84a2b2bcc5c8">get_time</a></div><div class="ttdeci">int get_time(double *time_control_task_s, double *Ts_control_task_s, double *mean_time_control_task_s, double *t0_control_task_s)</div><div class="ttdoc">Review of this function: </div><div class="ttdef"><b>Definition:</b> <a href="main2_8c_source.html#l00545">main2.c:545</a></div></div>
+<div class="ttc" id="calibration_8h_html"><div class="ttname"><a href="calibration_8h.html">calibration.h</a></div></div>
 <div class="ttc" id="main2_8c_html_aaa441e18ae805c4f3efb0b5231d1cfe7"><div class="ttname"><a href="main2_8c.html#aaa441e18ae805c4f3efb0b5231d1cfe7">enc_data</a></div><div class="ttdeci">ENC_DATA_STRUCT enc_data</div><div class="ttdef"><b>Definition:</b> <a href="main2_8c_source.html#l00077">main2.c:77</a></div></div>
 <div class="ttc" id="main2_8c_html_af4e19d5a9b24aa56c8ebff6ad1aa2b95"><div class="ttname"><a href="main2_8c.html#af4e19d5a9b24aa56c8ebff6ad1aa2b95">T_task_2_mean_global</a></div><div class="ttdeci">volatile double T_task_2_mean_global</div><div class="ttdef"><b>Definition:</b> <a href="main2_8c_source.html#l00060">main2.c:60</a></div></div>
 <div class="ttc" id="main2_8c_html_a904a157c5d5f94416cd450f511635af1"><div class="ttname"><a href="main2_8c.html#a904a157c5d5f94416cd450f511635af1">timer_task_1</a></div><div class="ttdeci">timer_t timer_task_1</div><div class="ttdef"><b>Definition:</b> <a href="main2_8c_source.html#l00045">main2.c:45</a></div></div>
@@ -738,7 +739,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="structIMU__DATA__STRUCT_html_a0c1ac26626e4434a2ee124a1928a23a1"><div class="ttname"><a href="structIMU__DATA__STRUCT.html#a0c1ac26626e4434a2ee124a1928a23a1">IMU_DATA_STRUCT::gyr</a></div><div class="ttdeci">DATA_XYZ gyr</div><div class="ttdoc">Gyrometer Vector. </div><div class="ttdef"><b>Definition:</b> <a href="communication_8h_source.html#l00095">communication.h:95</a></div></div>
 <div class="ttc" id="main2_8c_html_a840291bc02cba5474a4cb46a9b9566fe"><div class="ttname"><a href="main2_8c.html#a840291bc02cba5474a4cb46a9b9566fe">main</a></div><div class="ttdeci">int main(void)</div><div class="ttdef"><b>Definition:</b> <a href="main2_8c_source.html#l00088">main2.c:88</a></div></div>
 <div class="ttc" id="group__ui_html_ga42e4dac2d138061a74c572358c8ebf49"><div class="ttname"><a href="group__ui.html#ga42e4dac2d138061a74c572358c8ebf49">ui_update</a></div><div class="ttdeci">int ui_update(IMU_DATA_STRUCT *pimu_data, EFF_DATA_STRUCT *peff_data, MRA_DATA_STRUCT *pmra_data, ENC_DATA_STRUCT *enc_data, int total, int failure)</div><div class="ttdoc">Update Screen with new data of sensors. </div><div class="ttdef"><b>Definition:</b> <a href="ui_8c_source.html#l00053">ui.c:53</a></div></div>
-<div class="ttc" id="calibration_2calibration_8h_html"><div class="ttname"><a href="calibration_2calibration_8h.html">calibration.h</a></div></div>
 <div class="ttc" id="main2_8c_html_a9c6b2109fb9402446f92995db60951b5"><div class="ttname"><a href="main2_8c.html#a9c6b2109fb9402446f92995db60951b5">imu_param</a></div><div class="ttdeci">IMU_PARAM_STRUCT imu_param</div><div class="ttdef"><b>Definition:</b> <a href="main2_8c_source.html#l00072">main2.c:72</a></div></div>
 <div class="ttc" id="structDATA__XYZ_html_a54c1596e9f9969fd9c21e8458024ecfb"><div class="ttname"><a href="structDATA__XYZ.html#a54c1596e9f9969fd9c21e8458024ecfb">DATA_XYZ::x</a></div><div class="ttdeci">short int x</div><div class="ttdef"><b>Definition:</b> <a href="communication_8h_source.html#l00076">communication.h:76</a></div></div>
 <div class="ttc" id="structEFF__DATA__STRUCT_html"><div class="ttname"><a href="structEFF__DATA__STRUCT.html">EFF_DATA_STRUCT</a></div><div class="ttdef"><b>Definition:</b> <a href="communication_8h_source.html#l00112">communication.h:112</a></div></div>
@@ -753,7 +753,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 18 2014 10:40:49 for Rleg by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Mar 18 2014 14:30:11 for Rleg by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

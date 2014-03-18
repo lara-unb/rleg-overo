@@ -31,6 +31,8 @@ static void control_task();
 static void ui_hook(int signo);
 static void control_hook(int signo);
 
+int reset_timer(void);
+
 void exit_program(void);
 
 #endif //MAIN_H

@@ -1,7 +1,7 @@
 #ifndef CALIBRATION_H
 #define CALIBRATION_H
 
-//#include "communication/communication.h"
+#include "communication/communication.h"
 
 #define SUCCESS		1
 #define FAILURE		-1

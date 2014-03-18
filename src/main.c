@@ -11,8 +11,8 @@
 #include "taskScheduler.h"
 #include "ui.h"
 //#include "control/control.h"
- #include "datalogger.h"
- #include "calibration/calibration.h"
+#include "datalogger.h"
+#include "calibration/calibration.h"
 
 /*Strutures for tasks:*/
   TASK_S task1,task_ui,task_control;
@@ -106,13 +106,13 @@ static void main_task(int signo){
 }
 
 static void ui_hook(int signo){
-  //timer_function_task(&task_ui);
-  ui_task();
+  timer_function_task(&task_ui);
+  //ui_task();
 }
 
 static void control_hook(int signo){
-  //timer_function_task(&task_control);
-  control_task();
+  timer_function_task(&task_control);
+  //control_task();
 }
 
 static void ui_task(){
@@ -125,7 +125,7 @@ static void ui_task(){
 }
 
 static void control_task(){
-   static int previous_datalogger_status = DATALOGGER_NOT_RUNNING;
+  static int previous_datalogger_status = DATALOGGER_NOT_RUNNING;
   int current_datalogger_status; // Used to detect rising edge
   char user =0;
 
@@ -149,8 +149,9 @@ static void control_task(){
     }
     previous_datalogger_status = current_datalogger_status;
 /* Control */
-  mra_data.v_ctl= 1275 - (uint8_t)(800*cosf(task_control.t_global*1000));
-  //control_main(task1.t_global,&imu_data,&eff_data,&mra_data);
+  //mra_data.v_ctl= 1275 - (uint8_t)(800*cosf(task_control.t_global*1000));
+    mra_data.v_ctl = ((int)(total*4))%409;
+  //control_test(task1.t_global,&imu_data,&eff_data,&mra_data);
 /* Actuate */
   actuate(spi_param.spi_dev,&mra_data);
 }
