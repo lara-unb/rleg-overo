@@ -1,8 +1,0 @@
-<map id="PGMATRIX_PSEUDOINVERSE_PLUS" name="PGMATRIX_PSEUDOINVERSE_PLUS">
-<area shape="rect" id="node3" href="$gmatrix_8h.html#adf8dc9cfae5700de80c88604082ffa10" title="PGMATRIX_ALLOC" alt="" coords="583,5,724,35"/>
-<area shape="rect" id="node5" href="$gmatrix__plus_8h.html#a6cacc3f1b48d458d5cfc9e03159e3d81" title="PGMATRIX_CREATE_ZEROES" alt="" coords="312,57,528,87"/>
-<area shape="rect" id="node10" href="$gmatrix_8h.html#a9a73b4e0a77f386c0bae1bba75298d1d" title="PGMATRIX_FREE" alt="" coords="353,111,487,140"/>
-<area shape="rect" id="node12" href="$gmatrix_8h.html#a9e709a477348c680c0a9ad5eab2725f6" title="PGMATRIX_MULTIPLY_COPY\l_EXTENDED" alt="" coords="316,163,524,210"/>
-<area shape="rect" id="node14" href="$gmatrix__linalg_8h.html#ac549c7f4bf706e7ec89de04b2573fffa" title="PGMATRIX_SVD" alt="" coords="357,233,483,263"/>
-<area shape="rect" id="node8" href="$gmatrix_8h.html#a9b78ef8288b8e5448313d92d7427366d" title="PGMATRIX_ZEROES" alt="" coords="576,59,731,88"/>
-</map>

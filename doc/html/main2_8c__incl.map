@@ -1,12 +1,12 @@
 <map id="main2.c" name="main2.c">
-<area shape="rect" id="node23" href="$communication_8h.html" title="communication/communication.h" alt="" coords="524,160,737,189"/>
-<area shape="rect" id="node81" href="$datalogger_8h.html" title="datalogger.h" alt="" coords="1319,83,1412,112"/>
-<area shape="rect" id="node83" href="$ui_8h.html" title="ui.h" alt="" coords="1436,83,1479,112"/>
-<area shape="rect" id="node85" href="$main2_8h.html" title="main2.h" alt="" coords="1503,83,1569,112"/>
-<area shape="rect" id="node87" href="$calibration_2calibration_8h.html" title="calibration/calibration.h" alt="" coords="1140,83,1295,112"/>
-<area shape="rect" id="node25" href="$imu__functions_8h.html" title="Rev 0 &#45; 06/11/2012 RLEG project &#45; 2012." alt="" coords="549,237,664,267"/>
-<area shape="rect" id="node45" href="$imu__regs_8h.html" title="Registers that are present in each device from the IMU (ADXL345, ITG3200 and HMC5883)" alt="" coords="5,315,91,344"/>
-<area shape="rect" id="node47" href="$spi__functions_8h.html" title="spi_functions.h" alt="" coords="932,237,1041,267"/>
-<area shape="rect" id="node61" href="$gpio__functions_8h.html" title="gpio_functions.h" alt="" coords="357,237,475,267"/>
-<area shape="rect" id="node68" href="$encoder__functions_8h.html" title="Rev 0 &#45; 18/06/2013 RLEG project &#45; 2013." alt="" coords="688,237,827,267"/>
+<area shape="rect" href="$communication_8h.html" title="communication/communication.h" alt="" coords="517,155,728,181"/>
+<area shape="rect" href="$datalogger_8h.html" title="datalogger.h" alt="" coords="1309,80,1400,107"/>
+<area shape="rect" href="$ui_8h.html" title="ui.h" alt="" coords="1424,80,1467,107"/>
+<area shape="rect" href="$main2_8h.html" title="main2.h" alt="" coords="1491,80,1557,107"/>
+<area shape="rect" href="$calibration_2calibration_8h.html" title="calibration/calibration.h" alt="" coords="1131,80,1285,107"/>
+<area shape="rect" href="$imu__functions_8h.html" title="Rev 0 &#45; 06/11/2012 RLEG project &#45; 2012. " alt="" coords="543,229,655,256"/>
+<area shape="rect" href="$imu__regs_8h.html" title="Registers that are present in each device from the IMU (ADXL345, ITG3200 and HMC5883) ..." alt="" coords="5,304,91,331"/>
+<area shape="rect" href="$spi__functions_8h.html" title="spi_functions.h" alt="" coords="920,229,1027,256"/>
+<area shape="rect" href="$gpio__functions_8h.html" title="gpio_functions.h" alt="" coords="353,229,468,256"/>
+<area shape="rect" href="$encoder__functions_8h.html" title="Rev 0 &#45; 18/06/2013 RLEG project &#45; 2013. " alt="" coords="679,229,815,256"/>
 </map>

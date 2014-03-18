@@ -1,5 +1,5 @@
 <map id="datalogger_file_exists" name="datalogger_file_exists">
-<area shape="rect" id="node3" href="$datalogger_8h.html#a1977ef253746fd8c008a3641d9822551" title="datalogger_init" alt="" coords="203,32,309,61"/>
-<area shape="rect" id="node5" href="$main2_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="393,5,444,35"/>
-<area shape="rect" id="node7" href="$threads__linux_8c.html#aff9795d781d7b334d45539707a641c23" title="threads_linux_init" alt="" coords="357,59,480,88"/>
+<area shape="rect" href="$datalogger_8h.html#a1977ef253746fd8c008a3641d9822551" title="datalogger_init" alt="" coords="201,31,305,57"/>
+<area shape="rect" href="$main2_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="392,5,440,32"/>
+<area shape="rect" href="$threads__linux_8c.html#aff9795d781d7b334d45539707a641c23" title="threads_linux_init" alt="" coords="355,56,477,83"/>
 </map>

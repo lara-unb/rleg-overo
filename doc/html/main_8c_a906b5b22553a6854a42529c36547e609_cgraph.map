@@ -1,0 +1,27 @@
+<map id="ui_task" name="ui_task">
+<area shape="rect" href="$communication_8c.html#a26f82e8af3b5ce23d5cd3a41db6e0b68" title="READ ALL DATA FROM SENSORS AND ADC. " alt="" coords="117,157,216,184"/>
+<area shape="rect" href="$group__ui.html#ga42e4dac2d138061a74c572358c8ebf49" title="Update Screen with new data of sensors. " alt="" coords="128,487,205,513"/>
+<area shape="rect" href="$group__acc.html#ga013bb5ed8a763883fc440549d2b1a6ce" title="READ ALL DATA AT ONCE (X, Y and Z) " alt="" coords="267,157,392,184"/>
+<area shape="rect" href="$spi__functions_8c.html#ae385345c227d9f67ab490b94ed628988" title="READ DATA FROM A/D CONVERTER MCP3208. " alt="" coords="292,208,367,235"/>
+<area shape="rect" href="$group__enc.html#ga813c09cc4d9af8b357fe440a9438e685" title="READ POSITION. " alt="" coords="279,259,380,285"/>
+<area shape="rect" href="$gpio__functions_8c.html#a9672ca43e65fa527cd6bf43db9aea594" title="gpio_write" alt="" coords="289,5,369,32"/>
+<area shape="rect" href="$group__gyr.html#ga79875465c3a29fd9ec77308c80a8bc37" title="READ ALL DATA AT ONCE (X, Y, Z and T) " alt="" coords="268,56,391,83"/>
+<area shape="rect" href="$group__mag.html#gab42ae0d0a2a6f37cf36d856c072b7f34" title="READ ALL DATA AT ONCE (X, Y and Z) " alt="" coords="264,107,395,133"/>
+<area shape="rect" href="$group__acc.html#ga2a91c44eebbe44f4d3b8c508633512f9" title="READ COUNT 8&#45;BIT REGISTER IN SEQUENCE " alt="" coords="456,157,555,184"/>
+<area shape="rect" href="$spi__functions_8c.html#a3ae450d2b3ece27bb6036f811a7625a9" title="TRANSFER N BYTES. " alt="" coords="645,259,757,285"/>
+<area shape="rect" href="$group__enc.html#gad82fb44f2e735628ec95e003e4a1f93c" title="send command and delay between reads " alt="" coords="445,284,565,311"/>
+<area shape="rect" href="$group__gyr.html#gad817a3b69d4c3026b7a9b6de32753e7b" title="READ COUNT 8&#45;BIT REGISTER IN SEQUENCE. " alt="" coords="457,56,553,83"/>
+<area shape="rect" href="$group__mag.html#ga6830eaeae2298320e1e8c902e4edd709" title="READ COUNT 8&#45;BIT REGISTER IN SEQUENCE. " alt="" coords="453,107,557,133"/>
+<area shape="rect" href="$group__ui.html#ga7d5a9d9a75693709de408781d001a6a6" title="Print IMU data. " alt="" coords="284,309,375,336"/>
+<area shape="rect" href="$ui_8c.html#af48496a4ce54378764bc4ca9eddfd498" title="ui_eff_data" alt="" coords="288,360,371,387"/>
+<area shape="rect" href="$group__ui.html#gaefec243c5df45db0350c1abbccf20e3b" title="Print MRA data. " alt="" coords="284,411,375,437"/>
+<area shape="rect" href="$ui_8c.html#a3821f6ba38465f8d170f7b947869e7d9" title="Print ENCODER data. " alt="" coords="284,461,375,488"/>
+<area shape="rect" href="$ui_8c.html#a8d5e19833fec51919aad6e78bb74619a" title="Print ALL sensors data. " alt="" coords="271,512,388,539"/>
+<area shape="rect" href="$datalogger_8c.html#a46fd1290d9ee97d5fc7171e1e0dcb0aa" title="datalogger_status" alt="" coords="444,563,567,589"/>
+<area shape="rect" href="$ui_8c.html#a5f05ce725141ddfab683e059b1cd95ea" title="Internal function to end program. " alt="" coords="281,715,377,741"/>
+<area shape="rect" href="$datalogger_8c.html#aae2ffbc6cbf8f1cfecceb42c5139530a" title="datalogger_stop" alt="" coords="449,613,561,640"/>
+<area shape="rect" href="$datalogger_8c.html#a1f254ef380d595d6605c10811fd0dee6" title="datalogger_start" alt="" coords="448,664,563,691"/>
+<area shape="rect" href="$main_8c.html#a5b2b1fdd5e517470c10e84a2b2bcc5c8" title="Review of this function: " alt="" coords="469,512,541,539"/>
+<area shape="rect" href="$datalogger_8c.html#a54b06d9395b2e370a5a72beb7f9524b2" title="datalogger_lock_mutex" alt="" coords="624,639,779,665"/>
+<area shape="rect" href="$datalogger_8c.html#a85453211c0c809083c36cc56b275aeeb" title="datalogger_unlock_mutex" alt="" coords="617,588,785,615"/>
+</map>

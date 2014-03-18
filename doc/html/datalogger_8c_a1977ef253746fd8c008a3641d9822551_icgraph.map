@@ -1,4 +1,4 @@
 <map id="datalogger_init" name="datalogger_init">
-<area shape="rect" id="node3" href="$main2_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="196,5,247,35"/>
-<area shape="rect" id="node5" href="$threads__linux_8c.html#aff9795d781d7b334d45539707a641c23" title="threads_linux_init" alt="" coords="160,59,283,88"/>
+<area shape="rect" href="$main2_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="197,5,245,32"/>
+<area shape="rect" href="$threads__linux_8c.html#aff9795d781d7b334d45539707a641c23" title="threads_linux_init" alt="" coords="160,56,283,83"/>
 </map>

@@ -1,4 +1,4 @@
 <map id="datalogger_write_file" name="datalogger_write_file">
-<area shape="rect" id="node3" href="$main2_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="231,5,281,35"/>
-<area shape="rect" id="node5" href="$threads__linux_8c.html#aff9795d781d7b334d45539707a641c23" title="threads_linux_init" alt="" coords="195,59,317,88"/>
+<area shape="rect" href="$main2_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="229,5,277,32"/>
+<area shape="rect" href="$threads__linux_8c.html#aff9795d781d7b334d45539707a641c23" title="threads_linux_init" alt="" coords="192,56,315,83"/>
 </map>

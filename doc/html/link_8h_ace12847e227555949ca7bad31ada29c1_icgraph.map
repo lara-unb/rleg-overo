@@ -1,6 +1,0 @@
-<map id="Link_create" name="Link_create">
-<area shape="rect" id="node3" href="$robot_8c.html#a030c05a337b160cdbf4d98c458bda2ed" title="Adds a Link to a given robot." alt="" coords="144,32,253,61"/>
-<area shape="rect" id="node5" href="$cartesian__pose__controller_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="332,5,383,35"/>
-<area shape="rect" id="node7" href="$schunk__high_8cpp.html#a7a7d0840a561060c393d377d5cb61f55" title="Robot&#39;s DH Parameters." alt="" coords="303,59,412,88"/>
-<area shape="rect" id="node9" href="$schunk__high_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="461,59,512,88"/>
-</map>

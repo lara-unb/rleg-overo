@@ -1,5 +1,5 @@
 <map id="IMU_DATA_STRUCT" name="IMU_DATA_STRUCT">
-<area shape="rect" id="node2" href="$structIMU__DATA__STRUCT_1_1calibrated.html" title="IMU_DATA_STRUCT::calibrated" alt="" coords="5,136,221,165"/>
-<area shape="rect" id="node4" href="$structDATA__XYZ__DOUBLE.html" title="Vector definition on double." alt="" coords="37,5,189,35"/>
-<area shape="rect" id="node6" href="$structDATA__XYZ.html" title="A structure to represent a 3d Vector." alt="" coords="245,136,336,165"/>
+<area shape="rect" href="$structIMU__DATA__STRUCT_1_1calibrated.html" title="IMU_DATA_STRUCT::calibrated" alt="" coords="5,128,208,155"/>
+<area shape="rect" href="$structDATA__XYZ__DOUBLE.html" title="Vector definition on double. " alt="" coords="35,5,179,32"/>
+<area shape="rect" href="$structDATA__XYZ.html" title="A structure to represent a 3d Vector. " alt="" coords="232,128,315,155"/>
 </map>

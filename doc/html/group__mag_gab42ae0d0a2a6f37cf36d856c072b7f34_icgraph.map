@@ -1,11 +1,14 @@
 <map id="mag_read_all_data" name="mag_read_all_data">
-<area shape="rect" id="node3" href="$communication_8h.html#a26f82e8af3b5ce23d5cd3a41db6e0b68" title="READ ALL DATA FROM SENSORS AND ADC." alt="" coords="184,59,283,88"/>
-<area shape="rect" id="node5" href="$main_8c.html#af2478600d5d8aaeda10d1eb1ce463919" title="control_task" alt="" coords="341,5,435,35"/>
-<area shape="rect" id="node9" href="$main2_8h.html#a26855b7739897854265d51aa61329390" title="periodic_task_1" alt="" coords="332,112,444,141"/>
-<area shape="rect" id="node19" href="$main_8c.html#ad6a9f022b4d089093836712320731f6a" title="ui_task" alt="" coords="356,59,420,88"/>
-<area shape="rect" id="node7" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="544,32,595,61"/>
-<area shape="rect" id="node11" href="$main2_8h.html#a90885bae1b9535b16e014fb928e98e37" title="timer_function_task_1" alt="" coords="495,112,644,141"/>
-<area shape="rect" id="node13" href="$main2_8c.html#a5ce2b6a7dd4d00c90fe18098091044aa" title="f_timer_task_1" alt="" coords="695,112,801,141"/>
-<area shape="rect" id="node15" href="$main2_8h.html#a0e411070b7f487a8ab6a60b180f50e12" title="timer_start_task_1" alt="" coords="851,112,981,141"/>
-<area shape="rect" id="node17" href="$main2_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="1029,112,1080,141"/>
+<area shape="rect" href="$communication_8h.html#a26f82e8af3b5ce23d5cd3a41db6e0b68" title="READ ALL DATA FROM SENSORS AND ADC. " alt="" coords="184,136,283,163"/>
+<area shape="rect" href="$main_8c.html#a260fc92769e04b9feb7b3f34e3db39e6" title="control_task" alt="" coords="341,136,432,163"/>
+<area shape="rect" href="$main2_8h.html#a26855b7739897854265d51aa61329390" title="periodic_task_1" alt="" coords="331,212,443,239"/>
+<area shape="rect" href="$main_8c.html#a906b5b22553a6854a42529c36547e609" title="ui_task" alt="" coords="355,60,419,87"/>
+<area shape="rect" href="$main_8c.html#ad9efce3aca735bfa0d91c2b512c3029b" title="control_hook" alt="" coords="517,136,613,163"/>
+<area shape="rect" href="$main2_8h.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="717,85,765,112"/>
+<area shape="rect" href="$main_8c.html#ab6a8d67869b1d733299a568f3d80fd76" title="main_task" alt="" coords="525,85,605,112"/>
+<area shape="rect" href="$main2_8h.html#a90885bae1b9535b16e014fb928e98e37" title="timer_function_task_1" alt="" coords="492,237,639,264"/>
+<area shape="rect" href="$main2_8c.html#a5ce2b6a7dd4d00c90fe18098091044aa" title="f_timer_task_1" alt="" coords="688,237,795,264"/>
+<area shape="rect" href="$main2_8h.html#a0e411070b7f487a8ab6a60b180f50e12" title="timer_start_task_1" alt="" coords="844,237,972,264"/>
+<area shape="rect" href="$main2_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="1023,237,1071,264"/>
+<area shape="rect" href="$main_8c.html#a23403eb775af5097d2009382d0969ab1" title="ui_hook" alt="" coords="532,35,599,61"/>
 </map>

@@ -1,0 +1,43 @@
+<map id="main_task" name="main_task">
+<area shape="rect" href="$main_8c.html#a260fc92769e04b9feb7b3f34e3db39e6" title="control_task" alt="" coords="387,309,477,336"/>
+<area shape="rect" href="$main_8c.html#a906b5b22553a6854a42529c36547e609" title="ui_task" alt="" coords="136,259,200,285"/>
+<area shape="rect" href="$communication_8c.html#a1d5f01d0124cff7030b5c4951b4bbefa" title="Applies the control signal to the actuator. " alt="" coords="571,56,635,83"/>
+<area shape="rect" href="$group__calibrate.html#ga043045246cf217758281222214c4addc" title="Calibrate all sensors. " alt="" coords="557,360,648,387"/>
+<area shape="rect" href="$datalogger_8c.html#afb69d166f8d53042825174cee225ea49" title="datalogger_set_Ts" alt="" coords="540,259,665,285"/>
+<area shape="rect" href="$datalogger_8c.html#a46fd1290d9ee97d5fc7171e1e0dcb0aa" title="datalogger_status" alt="" coords="541,461,664,488"/>
+<area shape="rect" href="$datalogger_8c.html#ad89a56e2f057ace8c28d78eb67703e7d" title="datalogger_update" alt="" coords="539,309,667,336"/>
+<area shape="rect" href="$communication_8c.html#a26f82e8af3b5ce23d5cd3a41db6e0b68" title="READ ALL DATA FROM SENSORS AND ADC. " alt="" coords="553,208,652,235"/>
+<area shape="rect" href="$main_8c.html#a97a188c3a74115770124cf0bf0c1e407" title="reset_timer" alt="" coords="560,411,645,437"/>
+<area shape="rect" href="$spi__functions_8c.html#a5c52e64c336d59215ce0a4b6f340dc9f" title="WRITE DATA TO D/A CONVERTER MCP3922. " alt="" coords="768,5,843,32"/>
+<area shape="rect" href="$gpio__functions_8c.html#a9672ca43e65fa527cd6bf43db9aea594" title="gpio_write" alt="" coords="765,56,845,83"/>
+<area shape="rect" href="$datalogger_8c.html#a54b06d9395b2e370a5a72beb7f9524b2" title="datalogger_lock_mutex" alt="" coords="728,436,883,463"/>
+<area shape="rect" href="$datalogger_8c.html#a85453211c0c809083c36cc56b275aeeb" title="datalogger_unlock_mutex" alt="" coords="721,487,889,513"/>
+<area shape="rect" href="$gdatalogger_8c.html#a32674e7c2afa8b78e99a0070cf4bcaf9" title="gDataLogger_InsertVariable" alt="" coords="716,360,895,387"/>
+<area shape="rect" href="$gdatalogger_8c.html#a05dc8ce832b941280d7de26057992640" title="gDataLogger_MatfileUpdate" alt="" coords="951,360,1129,387"/>
+<area shape="rect" href="$gqueue_8c.html#a7324fa957e7713c05cab4eb7993dc2ee" title="gQUEUE_RequestWriteIndex" alt="" coords="944,436,1136,463"/>
+<area shape="rect" href="$gmatlabdatafile_8c.html#a3ecf28836f545707551fe8b8005c8954" title="gMATLABDataFile_SaveVector" alt="" coords="1199,296,1399,323"/>
+<area shape="rect" href="$gqueue_8c.html#a7138af0e73adef329c891210ba747a2e" title="gQUEUE_GetNumberOfUnreadData" alt="" coords="1185,347,1412,373"/>
+<area shape="rect" href="$gqueue_8c.html#ab5ba087de92285fb4f9ed8c46440ac6f" title="gQUEUE_RequestReadIndex" alt="" coords="1204,397,1393,424"/>
+<area shape="rect" href="$gqueue_8c.html#abab4c6aeb3d57e43aa16285fe4f59f66" title="gQUEUE_UnwrapReadIndex" alt="" coords="1463,397,1647,424"/>
+<area shape="rect" href="$gqueue_8c.html#a070de567ba00fb02d6c480840c15d31d" title="gQUEUE_UnwrapWriteIndex" alt="" coords="1205,448,1392,475"/>
+<area shape="rect" href="$group__acc.html#ga013bb5ed8a763883fc440549d2b1a6ce" title="READ ALL DATA AT ONCE (X, Y and Z) " alt="" coords="743,107,868,133"/>
+<area shape="rect" href="$spi__functions_8c.html#ae385345c227d9f67ab490b94ed628988" title="READ DATA FROM A/D CONVERTER MCP3208. " alt="" coords="768,157,843,184"/>
+<area shape="rect" href="$group__enc.html#ga813c09cc4d9af8b357fe440a9438e685" title="READ POSITION. " alt="" coords="755,208,856,235"/>
+<area shape="rect" href="$group__gyr.html#ga79875465c3a29fd9ec77308c80a8bc37" title="READ ALL DATA AT ONCE (X, Y, Z and T) " alt="" coords="744,259,867,285"/>
+<area shape="rect" href="$group__mag.html#gab42ae0d0a2a6f37cf36d856c072b7f34" title="READ ALL DATA AT ONCE (X, Y and Z) " alt="" coords="740,309,871,336"/>
+<area shape="rect" href="$group__acc.html#ga2a91c44eebbe44f4d3b8c508633512f9" title="READ COUNT 8&#45;BIT REGISTER IN SEQUENCE " alt="" coords="991,107,1089,133"/>
+<area shape="rect" href="$spi__functions_8c.html#a3ae450d2b3ece27bb6036f811a7625a9" title="TRANSFER N BYTES. " alt="" coords="1243,183,1355,209"/>
+<area shape="rect" href="$group__enc.html#gad82fb44f2e735628ec95e003e4a1f93c" title="send command and delay between reads " alt="" coords="980,208,1100,235"/>
+<area shape="rect" href="$group__gyr.html#gad817a3b69d4c3026b7a9b6de32753e7b" title="READ COUNT 8&#45;BIT REGISTER IN SEQUENCE. " alt="" coords="992,259,1088,285"/>
+<area shape="rect" href="$group__mag.html#ga6830eaeae2298320e1e8c902e4edd709" title="READ COUNT 8&#45;BIT REGISTER IN SEQUENCE. " alt="" coords="988,309,1092,336"/>
+<area shape="rect" href="$group__ui.html#ga42e4dac2d138061a74c572358c8ebf49" title="Update Screen with new data of sensors. " alt="" coords="248,639,325,665"/>
+<area shape="rect" href="$group__ui.html#ga7d5a9d9a75693709de408781d001a6a6" title="Print IMU data. " alt="" coords="387,664,477,691"/>
+<area shape="rect" href="$ui_8c.html#af48496a4ce54378764bc4ca9eddfd498" title="ui_eff_data" alt="" coords="391,715,473,741"/>
+<area shape="rect" href="$group__ui.html#gaefec243c5df45db0350c1abbccf20e3b" title="Print MRA data. " alt="" coords="387,765,477,792"/>
+<area shape="rect" href="$ui_8c.html#a3821f6ba38465f8d170f7b947869e7d9" title="Print ENCODER data. " alt="" coords="387,816,477,843"/>
+<area shape="rect" href="$ui_8c.html#a8d5e19833fec51919aad6e78bb74619a" title="Print ALL sensors data. " alt="" coords="373,512,491,539"/>
+<area shape="rect" href="$ui_8c.html#a5f05ce725141ddfab683e059b1cd95ea" title="Internal function to end program. " alt="" coords="384,867,480,893"/>
+<area shape="rect" href="$datalogger_8c.html#aae2ffbc6cbf8f1cfecceb42c5139530a" title="datalogger_stop" alt="" coords="547,563,659,589"/>
+<area shape="rect" href="$datalogger_8c.html#a1f254ef380d595d6605c10811fd0dee6" title="datalogger_start" alt="" coords="545,613,660,640"/>
+<area shape="rect" href="$main_8c.html#a5b2b1fdd5e517470c10e84a2b2bcc5c8" title="Review of this function: " alt="" coords="567,512,639,539"/>
+</map>

@@ -3,7 +3,7 @@ CC = arm-linux-gnueabi-gcc -lpthread -lrt -lm -lcurses -I/usr/arm-linux-gnueabi/
 CCFLAGS = -Wall
 
 # Main files definition:
-MAIN = main2
+MAIN = main
 SOURCES = $(MAIN).c datalogger.c ui.c calibration.c taskScheduler.c
 HEADERS = $(MAIN).h datalogger.h ui.h taskScheduler.h #$(wildcard *.h)
 

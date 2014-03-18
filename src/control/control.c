@@ -41,3 +41,6 @@ void control_byKneeAngle(&ang_data,&mra_data){
     mra_data.v_ctl = 6000;
 }
 */
+void control_test(t_task_1_global, &imu_data, &eff_data, &mra_data){
+	
+}

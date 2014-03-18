@@ -1,5 +1,0 @@
-<map id="amt203_eeprom_read" name="amt203_eeprom_read">
-<area shape="rect" id="node3" href="$AMT203__model_8c.html#aa1d351a2063f5d1bee269462d4256075" title="amt203_wait_for_ack" alt="" coords="200,5,347,35"/>
-<area shape="rect" id="node5" href="$AMT203__model_8c.html#aded9dccef363584017a0740784dd544d" title="amt203_xfer_byte" alt="" coords="396,32,521,61"/>
-<area shape="rect" id="node7" href="$AMT203__model_8c.html#a25012053a8f351c9c388e8d2d1c298f9" title="amt203_delay" alt="" coords="572,32,673,61"/>
-</map>

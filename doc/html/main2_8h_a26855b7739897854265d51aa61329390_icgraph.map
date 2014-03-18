@@ -1,6 +1,6 @@
 <map id="periodic_task_1" name="periodic_task_1">
-<area shape="rect" id="node3" href="$main2_8h.html#a90885bae1b9535b16e014fb928e98e37" title="timer_function_task_1" alt="" coords="169,5,319,35"/>
-<area shape="rect" id="node5" href="$main2_8c.html#a5ce2b6a7dd4d00c90fe18098091044aa" title="f_timer_task_1" alt="" coords="369,5,476,35"/>
-<area shape="rect" id="node7" href="$main2_8h.html#a0e411070b7f487a8ab6a60b180f50e12" title="timer_start_task_1" alt="" coords="525,5,656,35"/>
-<area shape="rect" id="node9" href="$main2_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="704,5,755,35"/>
+<area shape="rect" href="$main2_8h.html#a90885bae1b9535b16e014fb928e98e37" title="timer_function_task_1" alt="" coords="167,5,313,32"/>
+<area shape="rect" href="$main2_8c.html#a5ce2b6a7dd4d00c90fe18098091044aa" title="f_timer_task_1" alt="" coords="363,5,469,32"/>
+<area shape="rect" href="$main2_8h.html#a0e411070b7f487a8ab6a60b180f50e12" title="timer_start_task_1" alt="" coords="519,5,647,32"/>
+<area shape="rect" href="$main2_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="697,5,745,32"/>
 </map>

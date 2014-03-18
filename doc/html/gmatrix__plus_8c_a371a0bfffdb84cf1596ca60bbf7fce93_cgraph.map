@@ -1,8 +1,0 @@
-<map id="PGMATRIX_MULTIPLY_CONST_COPY_FREE" name="PGMATRIX_MULTIPLY_CONST_COPY_FREE">
-<area shape="rect" id="node3" href="$gmatrix_8h.html#a44bb4db341b4b4a005d69d49eb76624b" title="PGMATRIX_COPY" alt="" coords="313,5,449,35"/>
-<area shape="rect" id="node5" href="$gmatrix__plus_8h.html#a6cacc3f1b48d458d5cfc9e03159e3d81" title="PGMATRIX_CREATE_ZEROES" alt="" coords="273,59,489,88"/>
-<area shape="rect" id="node11" href="$gmatrix_8h.html#a9a73b4e0a77f386c0bae1bba75298d1d" title="PGMATRIX_FREE" alt="" coords="315,112,448,141"/>
-<area shape="rect" id="node13" href="$gmatrix_8h.html#a1846d69369b550d1b4a9106467f5f2af" title="PGMATRIX_MULTIPLY_CONST" alt="" coords="272,165,491,195"/>
-<area shape="rect" id="node7" href="$gmatrix_8h.html#adf8dc9cfae5700de80c88604082ffa10" title="PGMATRIX_ALLOC" alt="" coords="545,32,687,61"/>
-<area shape="rect" id="node9" href="$gmatrix_8h.html#a9b78ef8288b8e5448313d92d7427366d" title="PGMATRIX_ZEROES" alt="" coords="539,85,693,115"/>
-</map>

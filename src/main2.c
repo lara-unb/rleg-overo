@@ -182,25 +182,6 @@ int main(void)
         return_value = FAILURE;
     }
     
-/*
-    status = protocol_close();
-    if(status != PROTOCOL_SUCCESS)
-    {
-        return_value = FAILURE;
-    }
-
-    status = control_close();
-    if(status != CONTROL_SUCCESS)
-    {
-        return_value = FAILURE;
-    }
-
-    status = estimation_close(&estimation_data);
-    if(status != ESTIMATION_SUCCESS)
-    {
-        return_value = FAILURE;
-    }
-*/
     devices_close(&imu_param, &spi_param, &mra_data);
 
     return return_value;

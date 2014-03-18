@@ -1,11 +1,11 @@
 <map id="datalogger_close" name="datalogger_close">
-<area shape="rect" id="node3" href="$datalogger_8c.html#a54b06d9395b2e370a5a72beb7f9524b2" title="datalogger_lock_mutex" alt="" coords="181,5,336,35"/>
-<area shape="rect" id="node5" href="$datalogger_8c.html#a85453211c0c809083c36cc56b275aeeb" title="datalogger_unlock_mutex" alt="" coords="173,59,344,88"/>
-<area shape="rect" id="node7" href="$gdatalogger_8c.html#a0ac95f84c6ee484c4ad0351530f1c468" title="gDataLogger_Close" alt="" coords="191,163,327,192"/>
-<area shape="rect" id="node9" href="$gdatalogger_8c.html#a05dc8ce832b941280d7de26057992640" title="gDataLogger_MatfileUpdate" alt="" coords="392,111,576,140"/>
-<area shape="rect" id="node17" href="$gmatlabdatafile_8c.html#a3ecf28836f545707551fe8b8005c8954" title="gMATLABDataFile_SaveVector" alt="" coords="639,164,844,193"/>
-<area shape="rect" id="node20" href="$gmatlabdatafile_8c.html#ad38283a16cbd66a2834b2ca9f5c6c6e0" title="gMATLABDataFile_Close" alt="" coords="399,215,569,244"/>
-<area shape="rect" id="node11" href="$gqueue_8c.html#a7138af0e73adef329c891210ba747a2e" title="gQUEUE_GetNumberOfUnreadData" alt="" coords="624,57,859,87"/>
-<area shape="rect" id="node13" href="$gqueue_8c.html#ab5ba087de92285fb4f9ed8c46440ac6f" title="gQUEUE_RequestReadIndex" alt="" coords="644,111,839,140"/>
-<area shape="rect" id="node15" href="$gqueue_8c.html#abab4c6aeb3d57e43aa16285fe4f59f66" title="gQUEUE_UnwrapReadIndex" alt="" coords="907,111,1099,140"/>
+<area shape="rect" href="$datalogger_8c.html#a54b06d9395b2e370a5a72beb7f9524b2" title="datalogger_lock_mutex" alt="" coords="181,5,336,32"/>
+<area shape="rect" href="$datalogger_8c.html#a85453211c0c809083c36cc56b275aeeb" title="datalogger_unlock_mutex" alt="" coords="175,56,343,83"/>
+<area shape="rect" href="$gdatalogger_8c.html#a0ac95f84c6ee484c4ad0351530f1c468" title="gDataLogger_Close" alt="" coords="192,157,325,184"/>
+<area shape="rect" href="$gdatalogger_8c.html#a05dc8ce832b941280d7de26057992640" title="gDataLogger_MatfileUpdate" alt="" coords="393,107,572,133"/>
+<area shape="rect" href="$gmatlabdatafile_8c.html#a3ecf28836f545707551fe8b8005c8954" title="gMATLABDataFile_SaveVector" alt="" coords="636,157,836,184"/>
+<area shape="rect" href="$gmatlabdatafile_8c.html#ad38283a16cbd66a2834b2ca9f5c6c6e0" title="gMATLABDataFile_Close" alt="" coords="399,208,567,235"/>
+<area shape="rect" href="$gqueue_8c.html#a7138af0e73adef329c891210ba747a2e" title="gQUEUE_GetNumberOfUnreadData" alt="" coords="623,56,849,83"/>
+<area shape="rect" href="$gqueue_8c.html#ab5ba087de92285fb4f9ed8c46440ac6f" title="gQUEUE_RequestReadIndex" alt="" coords="641,107,831,133"/>
+<area shape="rect" href="$gqueue_8c.html#abab4c6aeb3d57e43aa16285fe4f59f66" title="gQUEUE_UnwrapReadIndex" alt="" coords="900,107,1084,133"/>
 </map>

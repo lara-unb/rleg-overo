@@ -1,0 +1,14 @@
+<map id="communication/imu_functions.h" name="communication/imu_functions.h">
+<area shape="rect" href="$acc__functions_8c.html" title="communication/acc_functions.c" alt="" coords="31,80,233,107"/>
+<area shape="rect" href="$communication_8h.html" title="communication/communication.h" alt="" coords="257,80,468,107"/>
+<area shape="rect" href="$gyr__functions_8c.html" title="communication/gyr_functions.c" alt="" coords="492,80,692,107"/>
+<area shape="rect" href="$mag__functions_8c.html" title="communication/mag_functions.c" alt="" coords="716,80,924,107"/>
+<area shape="rect" href="$calibration_2calibration_8h.html" title="calibration/calibration.h" alt="" coords="88,155,243,181"/>
+<area shape="rect" href="$main_8c.html" title="main.c" alt="" coords="5,229,64,256"/>
+<area shape="rect" href="$main2_8c.html" title="main2.c" alt="" coords="267,229,333,256"/>
+<area shape="rect" href="$calibration_8c.html" title="calibration.c" alt="" coords="317,155,408,181"/>
+<area shape="rect" href="$communication_8c.html" title="Communication Routines. " alt="" coords="432,155,643,181"/>
+<area shape="rect" href="$datalogger_8c.html" title="datalogger.c" alt="" coords="667,155,757,181"/>
+<area shape="rect" href="$ui_8c.html" title="ui.c" alt="" coords="781,155,824,181"/>
+<area shape="rect" href="$calibration_2calibration_8c.html" title="calibration/calibration.c" alt="" coords="88,229,243,256"/>
+</map>

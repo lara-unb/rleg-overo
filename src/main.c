@@ -18,7 +18,7 @@
   TASK_S task1,task_ui,task_control;
 
 /* Task period*/
-#define TASK_UI_PERIOD 100000 //100ms
+#define TASK_UI_PERIOD 200000 //200ms
 #define TASK_CONTROL_PERIOD 20000 //20ms
 
 /*Strutures for configuration*/
@@ -63,7 +63,6 @@ int main(void){
   spi_param.cs=0;
 
   // Periodic task :
-  //timer_new_task(&task1,main_task);
   timer_new_task(&task_ui,ui_task);
   timer_new_task(&task_control,control_task);
   
@@ -88,7 +87,6 @@ int main(void){
   }
 
 /*Shutting Down:*/
-  timer_stop_task(&task1);
   timer_stop_task(&task_ui);
   timer_stop_task(&task_control);
   usleep(2000);
@@ -108,12 +106,12 @@ static void main_task(int signo){
 }
 
 static void ui_hook(int signo){
-  timer_function_task(&task_ui);
+  //timer_function_task(&task_ui);
   ui_task();
 }
 
 static void control_hook(int signo){
-  timer_function_task(&task_control);
+  //timer_function_task(&task_control);
   control_task();
 }
 

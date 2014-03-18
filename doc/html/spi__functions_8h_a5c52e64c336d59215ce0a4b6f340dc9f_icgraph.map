@@ -1,0 +1,18 @@
+<map id="dac_write" name="dac_write">
+<area shape="rect" href="$communication_8h.html#a1d5f01d0124cff7030b5c4951b4bbefa" title="Applies the control signal to the actuator. " alt="" coords="131,157,195,184"/>
+<area shape="rect" href="$main_8c.html#a260fc92769e04b9feb7b3f34e3db39e6" title="control_task" alt="" coords="249,56,340,83"/>
+<area shape="rect" href="$communication_8h.html#a8d3a9e120ac8bc590a870d2a874e485a" title="Fuction to close all communication with the sensors and devices. " alt="" coords="244,132,345,159"/>
+<area shape="rect" href="$communication_8h.html#a2d1e523ff70db11ca4096f97af5da000" title="INITIALIZATION OF SENSORS AND DEVICES. " alt="" coords="251,183,339,209"/>
+<area shape="rect" href="$main2_8h.html#a26855b7739897854265d51aa61329390" title="periodic_task_1" alt="" coords="395,284,507,311"/>
+<area shape="rect" href="$main2_8h.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="605,107,653,133"/>
+<area shape="rect" href="$main_8c.html#ab6a8d67869b1d733299a568f3d80fd76" title="main_task" alt="" coords="411,31,491,57"/>
+<area shape="rect" href="$main_8c.html#ad9efce3aca735bfa0d91c2b512c3029b" title="control_hook" alt="" coords="403,81,499,108"/>
+<area shape="rect" href="$main2_8h.html#a944f7352f18ed248c1b1143f51edc391" title="periodic_task_2" alt="" coords="395,233,507,260"/>
+<area shape="rect" href="$main2_8h.html#a01c18e97a4488be2912eb738b2e7f890" title="timer_function_task_2" alt="" coords="556,233,703,260"/>
+<area shape="rect" href="$main2_8c.html#a735ebf3d0d37c7d8187199e6565bcb5c" title="f_timer_task_2" alt="" coords="752,233,859,260"/>
+<area shape="rect" href="$main2_8h.html#ae59c93969d017f18e3e38b2f9f7888ca" title="timer_start_task_2" alt="" coords="908,233,1036,260"/>
+<area shape="rect" href="$main2_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="1087,259,1135,285"/>
+<area shape="rect" href="$main2_8h.html#a90885bae1b9535b16e014fb928e98e37" title="timer_function_task_1" alt="" coords="556,284,703,311"/>
+<area shape="rect" href="$main2_8c.html#a5ce2b6a7dd4d00c90fe18098091044aa" title="f_timer_task_1" alt="" coords="752,284,859,311"/>
+<area shape="rect" href="$main2_8h.html#a0e411070b7f487a8ab6a60b180f50e12" title="timer_start_task_1" alt="" coords="908,284,1036,311"/>
+</map>

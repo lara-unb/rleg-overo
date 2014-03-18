@@ -1,0 +1,17 @@
+<map id="spi_trans_bytes" name="spi_trans_bytes">
+<area shape="rect" href="$group__enc.html#ga813c09cc4d9af8b357fe440a9438e685" title="READ POSITION. " alt="" coords="340,136,441,163"/>
+<area shape="rect" href="$group__enc.html#gad82fb44f2e735628ec95e003e4a1f93c" title="send command and delay between reads " alt="" coords="169,161,289,188"/>
+<area shape="rect" href="$group__enc.html#gaebbe7b9d3c2571f7481cefacbe36c498" title="SET ZERO POINT. " alt="" coords="341,199,440,225"/>
+<area shape="rect" href="$communication_8h.html#a26f82e8af3b5ce23d5cd3a41db6e0b68" title="READ ALL DATA FROM SENSORS AND ADC. " alt="" coords="491,136,589,163"/>
+<area shape="rect" href="$main_8c.html#a260fc92769e04b9feb7b3f34e3db39e6" title="control_task" alt="" coords="648,136,739,163"/>
+<area shape="rect" href="$main2_8h.html#a26855b7739897854265d51aa61329390" title="periodic_task_1" alt="" coords="637,212,749,239"/>
+<area shape="rect" href="$main_8c.html#a906b5b22553a6854a42529c36547e609" title="ui_task" alt="" coords="661,60,725,87"/>
+<area shape="rect" href="$main2_8h.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="1024,85,1072,112"/>
+<area shape="rect" href="$main_8c.html#ab6a8d67869b1d733299a568f3d80fd76" title="main_task" alt="" coords="832,85,912,112"/>
+<area shape="rect" href="$main_8c.html#ad9efce3aca735bfa0d91c2b512c3029b" title="control_hook" alt="" coords="824,187,920,213"/>
+<area shape="rect" href="$main2_8h.html#a90885bae1b9535b16e014fb928e98e37" title="timer_function_task_1" alt="" coords="799,237,945,264"/>
+<area shape="rect" href="$main2_8c.html#a5ce2b6a7dd4d00c90fe18098091044aa" title="f_timer_task_1" alt="" coords="995,237,1101,264"/>
+<area shape="rect" href="$main2_8h.html#a0e411070b7f487a8ab6a60b180f50e12" title="timer_start_task_1" alt="" coords="1151,237,1279,264"/>
+<area shape="rect" href="$main2_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="1329,237,1377,264"/>
+<area shape="rect" href="$main_8c.html#a23403eb775af5097d2009382d0969ab1" title="ui_hook" alt="" coords="839,35,905,61"/>
+</map>

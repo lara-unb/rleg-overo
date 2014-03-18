@@ -1,7 +1,0 @@
-<map id="Q_copy" name="Q_copy">
-<area shape="rect" id="node3" href="$dualquaternion_8c.html#a6a31e7cb25e1ad1ea6e55ffc22cb4657" title="Allocated and initializes a DualQuaternion." alt="" coords="120,5,299,35"/>
-<area shape="rect" id="node5" href="$dualquaternion_8c.html#a35b3966af2f77ad5a8f47126948720fb" title="DualQuaternion Rotation." alt="" coords="171,59,248,88"/>
-<area shape="rect" id="node7" href="$classCartesian__pose__controller.html#ab55ab40074c82ba8cc010fe68fc76d5b" title="Cartesian_pose_controller\l::printPose" alt="" coords="347,50,520,97"/>
-<area shape="rect" id="node9" href="$classCartesian__pose__controller.html#ab937d166862f2756eb3d08f37a0a090d" title="Cartesian_pose_controller\l::control" alt="" coords="568,50,741,97"/>
-<area shape="rect" id="node11" href="$cartesian__pose__controller_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="789,59,840,88"/>
-</map>

@@ -1,5 +1,5 @@
 <map id="IMU_PARAM_STRUCT" name="IMU_PARAM_STRUCT">
-<area shape="rect" id="node2" href="$structIMU__PARAM__STRUCT_1_1param__acc.html" title="Accelerometer Parameters." alt="" coords="8,5,243,35"/>
-<area shape="rect" id="node4" href="$structIMU__PARAM__STRUCT_1_1param__gyr.html" title="Gyrometer Parameters." alt="" coords="9,59,241,88"/>
-<area shape="rect" id="node6" href="$structIMU__PARAM__STRUCT_1_1param__mag.html" title="Magnetometer Parameters." alt="" coords="5,112,245,141"/>
+<area shape="rect" href="$structIMU__PARAM__STRUCT_1_1param__acc.html" title="Accelerometer Parameters. " alt="" coords="8,5,232,32"/>
+<area shape="rect" href="$structIMU__PARAM__STRUCT_1_1param__gyr.html" title="Gyrometer Parameters. " alt="" coords="9,56,231,83"/>
+<area shape="rect" href="$structIMU__PARAM__STRUCT_1_1param__mag.html" title="Magnetometer Parameters. " alt="" coords="5,107,235,133"/>
 </map>

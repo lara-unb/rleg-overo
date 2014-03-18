@@ -1,9 +1,0 @@
-<map id="amt203_delay" name="amt203_delay">
-<area shape="rect" id="node3" href="$AMT203__model_8c.html#aded9dccef363584017a0740784dd544d" title="amt203_xfer_byte" alt="" coords="159,131,284,160"/>
-<area shape="rect" id="node5" href="$AMT203__model_8c.html#aa1d351a2063f5d1bee269462d4256075" title="amt203_wait_for_ack" alt="" coords="333,104,480,133"/>
-<area shape="rect" id="node7" href="$AMT203__model_8h.html#a7de9976acfdbd89389441f16a80d2c88" title="amt203_position_read" alt="" coords="529,5,679,35"/>
-<area shape="rect" id="node9" href="$AMT203__model_8h.html#aa5f42cd9b4a737500fcc269e638e5a45" title="amt203_zero_set" alt="" coords="543,61,665,91"/>
-<area shape="rect" id="node11" href="$AMT203__model_8h.html#a42f2cc241b91cc7ec9587ba3234accbf" title="amt203_eeprom_write" alt="" coords="529,120,679,149"/>
-<area shape="rect" id="node13" href="$AMT203__model_8h.html#a79aab08c8244993463d302465ade2acc" title="amt203_eeprom_read" alt="" coords="531,184,677,213"/>
-<area shape="rect" id="node15" href="$AMT203__model_8h.html#a2c183ebc92d35b7d09e9aaef549d4564" title="amt203_init" alt="" coords="363,259,451,288"/>
-</map>

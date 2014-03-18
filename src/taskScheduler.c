@@ -36,7 +36,7 @@ void timer_start_task(TASK_S *task,void (*alertFunction)(int),int period_us){
   evp.sigev_notify = SIGEV_SIGNAL;
   evp.sigev_signo = SIGUSR1;*/
 
-  memset (&evp, 0, sizeof (struct sigevent));
+  //memset (&evp, 0, sizeof (struct sigevent));
   evp.sigev_value.sival_int = 0;
   evp.sigev_notify = SIGEV_THREAD;
   evp.sigev_notify_attributes = NULL;

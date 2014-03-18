@@ -1,16 +1,17 @@
 <map id="threads_linux_timer_task_2" name="threads_linux_timer_task_2">
-<area shape="rect" id="node3" href="$threads__linux_8c.html#aa65173deca09202aea0f4a81a166545b" title="threads_linux_timer\l_function_task_2" alt="" coords="191,182,324,229"/>
-<area shape="rect" id="node5" href="$threads__linux_8c.html#ad535241b6b29d076beb2cd75a880aaea" title="threads_linux_periodic\l_task_2" alt="" coords="375,182,524,229"/>
-<area shape="rect" id="node7" href="$ui_8c.html#a1559840369fc944a83a3666ef7959413" title="ui_update" alt="" coords="575,191,652,220"/>
-<area shape="rect" id="node9" href="$ui_8c.html#a7d5a9d9a75693709de408781d001a6a6" title="ui_imu_data" alt="" coords="717,5,808,35"/>
-<area shape="rect" id="node11" href="$ui_8c.html#af48496a4ce54378764bc4ca9eddfd498" title="ui_eff_data" alt="" coords="720,59,805,88"/>
-<area shape="rect" id="node13" href="$ui_8c.html#aefec243c5df45db0350c1abbccf20e3b" title="ui_mra_data" alt="" coords="716,112,809,141"/>
-<area shape="rect" id="node15" href="$ui_8c.html#a6577e01f0ebf9ac1677c616228a64a46" title="ui_overview_data" alt="" coords="701,216,824,245"/>
-<area shape="rect" id="node19" href="$datalogger_8c.html#a46fd1290d9ee97d5fc7171e1e0dcb0aa" title="datalogger_status" alt="" coords="872,163,997,192"/>
-<area shape="rect" id="node25" href="$main2_8c.html#a5f05ce725141ddfab683e059b1cd95ea" title="exit_program" alt="" coords="715,371,811,400"/>
-<area shape="rect" id="node28" href="$datalogger_8c.html#aae2ffbc6cbf8f1cfecceb42c5139530a" title="datalogger_stop" alt="" coords="877,269,992,299"/>
-<area shape="rect" id="node32" href="$datalogger_8c.html#a1f254ef380d595d6605c10811fd0dee6" title="datalogger_start" alt="" coords="877,323,992,352"/>
-<area shape="rect" id="node17" href="$main2_8c.html#a5b2b1fdd5e517470c10e84a2b2bcc5c8" title="get_time" alt="" coords="899,216,971,245"/>
-<area shape="rect" id="node21" href="$datalogger_8c.html#a54b06d9395b2e370a5a72beb7f9524b2" title="datalogger_lock_mutex" alt="" coords="1053,243,1208,272"/>
-<area shape="rect" id="node23" href="$datalogger_8c.html#a85453211c0c809083c36cc56b275aeeb" title="datalogger_unlock_mutex" alt="" coords="1045,296,1216,325"/>
+<area shape="rect" href="$threads__linux_8c.html#aa65173deca09202aea0f4a81a166545b" title="threads_linux_timer\l_function_task_2" alt="" coords="191,200,324,243"/>
+<area shape="rect" href="$threads__linux_8c.html#ad535241b6b29d076beb2cd75a880aaea" title="threads_linux_periodic\l_task_2" alt="" coords="375,200,524,243"/>
+<area shape="rect" href="$group__ui.html#ga42e4dac2d138061a74c572358c8ebf49" title="Update Screen with new data of sensors. " alt="" coords="573,208,651,235"/>
+<area shape="rect" href="$group__ui.html#ga7d5a9d9a75693709de408781d001a6a6" title="Print IMU data. " alt="" coords="712,5,803,32"/>
+<area shape="rect" href="$ui_8c.html#af48496a4ce54378764bc4ca9eddfd498" title="ui_eff_data" alt="" coords="716,56,799,83"/>
+<area shape="rect" href="$group__ui.html#gaefec243c5df45db0350c1abbccf20e3b" title="Print MRA data. " alt="" coords="712,107,803,133"/>
+<area shape="rect" href="$ui_8c.html#a3821f6ba38465f8d170f7b947869e7d9" title="Print ENCODER data. " alt="" coords="712,157,803,184"/>
+<area shape="rect" href="$ui_8c.html#a8d5e19833fec51919aad6e78bb74619a" title="Print ALL sensors data. " alt="" coords="699,259,816,285"/>
+<area shape="rect" href="$datalogger_8c.html#a46fd1290d9ee97d5fc7171e1e0dcb0aa" title="datalogger_status" alt="" coords="865,208,988,235"/>
+<area shape="rect" href="$ui_8c.html#a5f05ce725141ddfab683e059b1cd95ea" title="Internal function to end program. " alt="" coords="709,411,805,437"/>
+<area shape="rect" href="$datalogger_8c.html#aae2ffbc6cbf8f1cfecceb42c5139530a" title="datalogger_stop" alt="" coords="871,309,983,336"/>
+<area shape="rect" href="$datalogger_8c.html#a1f254ef380d595d6605c10811fd0dee6" title="datalogger_start" alt="" coords="869,360,984,387"/>
+<area shape="rect" href="$main_8c.html#a5b2b1fdd5e517470c10e84a2b2bcc5c8" title="Review of this function: " alt="" coords="891,259,963,285"/>
+<area shape="rect" href="$datalogger_8c.html#a54b06d9395b2e370a5a72beb7f9524b2" title="datalogger_lock_mutex" alt="" coords="1045,335,1200,361"/>
+<area shape="rect" href="$datalogger_8c.html#a85453211c0c809083c36cc56b275aeeb" title="datalogger_unlock_mutex" alt="" coords="1039,284,1207,311"/>
 </map>

@@ -1,0 +1,13 @@
+<map id="devices_init" name="devices_init">
+<area shape="rect" href="$group__acc.html#gae8f9cc6e0d15e61039d846305f86f073" title="Rev 0 &#45; 11/11/2012 RLEG project &#45; 2012. " alt="" coords="144,31,211,57"/>
+<area shape="rect" href="$communication_8c.html#a1d5f01d0124cff7030b5c4951b4bbefa" title="Applies the control signal to the actuator. " alt="" coords="145,107,209,133"/>
+<area shape="rect" href="$group__gyr.html#ga6d02be352b4491a236c9695a6a24d174" title="INITIALIZE GYROMETER. " alt="" coords="145,157,209,184"/>
+<area shape="rect" href="$imu__functions_8h.html#a014f908c9faa37c1ec75177a17012a01" title="INITIALIZE MAGNETOMETER. " alt="" coords="143,208,212,235"/>
+<area shape="rect" href="$spi__functions_8c.html#a70764aca888e93b0329e7a62c9312704" title="spi Functions to deal communication by SPI protocol " alt="" coords="147,259,208,285"/>
+<area shape="rect" href="$group__acc.html#ga534116416343122de29a5b6ade6876bd" title="WRITE TO REGISTER. " alt="" coords="264,5,365,32"/>
+<area shape="rect" href="$spi__functions_8c.html#a5c52e64c336d59215ce0a4b6f340dc9f" title="WRITE DATA TO D/A CONVERTER MCP3922. " alt="" coords="277,56,352,83"/>
+<area shape="rect" href="$gpio__functions_8c.html#a9672ca43e65fa527cd6bf43db9aea594" title="gpio_write" alt="" coords="275,107,355,133"/>
+<area shape="rect" href="$group__gyr.html#ga3eba167b8ab0614bfe7bafeae8b5570d" title="WRITE TO REGISTER. " alt="" coords="265,157,364,184"/>
+<area shape="rect" href="$group__imu.html#gab5d0ae421cd4bb10b1b7a1eda167416b" title="Rev 0 &#45; 11/11/2012 RLEG project &#45; 2012. " alt="" coords="263,208,367,235"/>
+<area shape="rect" href="$spi__functions_8c.html#aabfca8320b0c76774f01467703e17302" title="pabort" alt="" coords="287,259,343,285"/>
+</map>

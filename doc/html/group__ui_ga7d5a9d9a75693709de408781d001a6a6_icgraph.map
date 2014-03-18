@@ -1,15 +1,17 @@
 <map id="ui_imu_data" name="ui_imu_data">
-<area shape="rect" id="node3" href="$group__ui.html#ga42e4dac2d138061a74c572358c8ebf49" title="Update Screen with new data of sensors." alt="" coords="148,59,225,88"/>
-<area shape="rect" id="node5" href="$main_8c.html#ad6a9f022b4d089093836712320731f6a" title="ui_task" alt="" coords="319,5,383,35"/>
-<area shape="rect" id="node9" href="$main2_8h.html#a944f7352f18ed248c1b1143f51edc391" title="periodic_task_2" alt="" coords="295,59,407,88"/>
-<area shape="rect" id="node19" href="$threads__linux_8c.html#ad535241b6b29d076beb2cd75a880aaea" title="threads_linux_periodic\l_task_2" alt="" coords="276,111,425,158"/>
-<area shape="rect" id="node7" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="525,5,576,35"/>
-<area shape="rect" id="node11" href="$main2_8h.html#a01c18e97a4488be2912eb738b2e7f890" title="timer_function_task_2" alt="" coords="476,59,625,88"/>
-<area shape="rect" id="node13" href="$main2_8c.html#a735ebf3d0d37c7d8187199e6565bcb5c" title="f_timer_task_2" alt="" coords="689,59,796,88"/>
-<area shape="rect" id="node15" href="$main2_8h.html#ae59c93969d017f18e3e38b2f9f7888ca" title="timer_start_task_2" alt="" coords="861,59,992,88"/>
-<area shape="rect" id="node17" href="$main2_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="1079,59,1129,88"/>
-<area shape="rect" id="node21" href="$threads__linux_8c.html#aa65173deca09202aea0f4a81a166545b" title="threads_linux_timer\l_function_task_2" alt="" coords="484,111,617,158"/>
-<area shape="rect" id="node23" href="$threads__linux_8c.html#aaff43cd760c084d80d045228b46fe784" title="threads_linux_timer\l_task_2" alt="" coords="676,111,809,158"/>
-<area shape="rect" id="node25" href="$threads__linux_8c.html#a59d6f60b682f360c3759cefad7ad2a4e" title="threads_linux_timer\l_start_task_2" alt="" coords="860,111,993,158"/>
-<area shape="rect" id="node27" href="$threads__linux_8c.html#aff9795d781d7b334d45539707a641c23" title="threads_linux_init" alt="" coords="1043,120,1165,149"/>
+<area shape="rect" href="$group__ui.html#ga42e4dac2d138061a74c572358c8ebf49" title="Update Screen with new data of sensors. " alt="" coords="147,124,224,151"/>
+<area shape="rect" href="$main_8c.html#a906b5b22553a6854a42529c36547e609" title="ui_task" alt="" coords="316,48,380,75"/>
+<area shape="rect" href="$main2_8h.html#a944f7352f18ed248c1b1143f51edc391" title="periodic_task_2" alt="" coords="292,124,404,151"/>
+<area shape="rect" href="$threads__linux_8c.html#ad535241b6b29d076beb2cd75a880aaea" title="threads_linux_periodic\l_task_2" alt="" coords="273,175,423,217"/>
+<area shape="rect" href="$main2_8h.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="713,23,761,49"/>
+<area shape="rect" href="$main_8c.html#ab6a8d67869b1d733299a568f3d80fd76" title="main_task" alt="" coords="507,23,587,49"/>
+<area shape="rect" href="$main_8c.html#a23403eb775af5097d2009382d0969ab1" title="ui_hook" alt="" coords="513,73,580,100"/>
+<area shape="rect" href="$main2_8h.html#a01c18e97a4488be2912eb738b2e7f890" title="timer_function_task_2" alt="" coords="473,124,620,151"/>
+<area shape="rect" href="$main2_8c.html#a735ebf3d0d37c7d8187199e6565bcb5c" title="f_timer_task_2" alt="" coords="684,124,791,151"/>
+<area shape="rect" href="$main2_8h.html#ae59c93969d017f18e3e38b2f9f7888ca" title="timer_start_task_2" alt="" coords="857,124,985,151"/>
+<area shape="rect" href="$main2_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="1075,124,1123,151"/>
+<area shape="rect" href="$threads__linux_8c.html#aa65173deca09202aea0f4a81a166545b" title="threads_linux_timer\l_function_task_2" alt="" coords="480,175,613,217"/>
+<area shape="rect" href="$threads__linux_8c.html#aaff43cd760c084d80d045228b46fe784" title="threads_linux_timer\l_task_2" alt="" coords="671,175,804,217"/>
+<area shape="rect" href="$threads__linux_8c.html#a59d6f60b682f360c3759cefad7ad2a4e" title="threads_linux_timer\l_start_task_2" alt="" coords="855,175,988,217"/>
+<area shape="rect" href="$threads__linux_8c.html#aff9795d781d7b334d45539707a641c23" title="threads_linux_init" alt="" coords="1037,183,1160,209"/>
 </map>

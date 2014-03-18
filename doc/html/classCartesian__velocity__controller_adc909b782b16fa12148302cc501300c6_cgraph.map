@@ -1,4 +1,0 @@
-<map id="Cartesian_velocity_controller::Cartesian_velocity_controller" name="Cartesian_velocity_controller::Cartesian_velocity_controller">
-<area shape="rect" id="node3" href="$classCartesian__velocity__controller.html#a2f020f22b2e63da5afeff3f083e4095c" title="Receive schunk_msgs::Velocities and updates this Cartesian_velocity_controller&#39;s internal variables..." alt="" coords="200,5,387,69"/>
-<area shape="rect" id="node5" href="$classCartesian__controller.html#a3ba54e8b35632526c5e8eb2ab5d7de0d" title="Cartesian_controller\l::stopSchunk" alt="" coords="435,14,573,61"/>
-</map>
