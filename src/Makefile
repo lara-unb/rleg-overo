@@ -85,4 +85,4 @@ $(CLEANDIRS):
 .PHONY: documentation
 documentation:
 	doxygen Doxyfile
-	# cd ../doc/; doxygen -w html header.html footer.html custondoxygen.css
+#	cd ../doc/; doxygen -w html header.html footer.html custondoxygen.css

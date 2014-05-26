@@ -150,8 +150,7 @@ static void control_task(){
     previous_datalogger_status = current_datalogger_status;
 /* Control */
   //mra_data.v_ctl= 1275 - (uint8_t)(800*cosf(task_control.t_global*1000));
-    mra_data.v_ctl = ((int)(total*4))%409;
-  //control_test(task1.t_global,&imu_data,&eff_data,&mra_data);
+  control_test(task1.t_global,&imu_data,&eff_data,&mra_data);
 /* Actuate */
   actuate(spi_param.spi_dev,&mra_data);
 }

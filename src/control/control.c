@@ -53,8 +53,8 @@ void control_byKneeAngle(&ang_data,&mra_data){
  * @param mra_data [description]
  * @param enc_data [description]
  * 
- * @TODO create a dimmer.
+ * @TODO do some PWM control.
  */
 void control_test(double time_global, IMU_DATA_STRUCT *imu_data, MRA_DATA_STRUCT *mra_data , ENC_DATA_STRUCT *enc_data){
-	mra_data->v_ctl = ((int)time_global)%V_CTRL_MAX;
+	mra_data->v_ctl = (((int)time_global)%200 > 100)? V_CTRL_MAX:0;
 }

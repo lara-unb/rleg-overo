@@ -75,7 +75,6 @@ void timer_start_task(TASK_S *task,void (*alertFunction)(int),int period_us){
 
 void timer_function_task(TASK_S *task)
 {
-  int status = 0;
   static struct timeval timereset;
   static struct timeval time;
   static struct timeval time_exec_start;

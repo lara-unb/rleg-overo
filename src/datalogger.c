@@ -12,12 +12,7 @@
 #include "gdatalogger/gmatlabdatafile.h"
 #include "gdatalogger/gdatalogger.h"
 #include "communication/communication.h"
-//#include "gmatrix.h"
-/*#include "imu.h"
-#include "magnetometer.h"
-#include "sonar.h"
-#include "gps.h"
-#include "sensors.h"
+/*
 #include "calibration.h"
 #include "estimation.h"
 #include "control.h"
@@ -157,54 +152,6 @@ int datalogger_init(void)
     //gDataLogger_DeclareVariable(&gDataLogger, "imu_calibrated_valid_magnetometer_data", "", 1, 1, DATALOGGER_STANDARD_QUEUE_SIZE);
     #endif // DATALOGGER_LOG_CALIBRATED_IMU
 
-
-/*
-    #if DATALOGGER_LOG_LOCAL_COORDINATE_SYSTEM
-    gDataLogger_DeclareVariable(&gDataLogger, "initial_altitude", "m", 1, 1, 1);
-    gDataLogger_DeclareVariable(&gDataLogger, "initial_latitude", "radians", 1, 1, 1);
-    gDataLogger_DeclareVariable(&gDataLogger, "initial_longitude", "radians", 1, 1, 1);
-    gDataLogger_DeclareVariable(&gDataLogger, "initial_ecef_x", "m", 1, 1, 1);
-    gDataLogger_DeclareVariable(&gDataLogger, "initial_ecef_y", "m", 1, 1, 1);
-    gDataLogger_DeclareVariable(&gDataLogger, "initial_ecef_z", "m", 1, 1, 1);
-    gDataLogger_DeclareVariable(&gDataLogger, "rotation_matrix", "matrix", 3, 3, 1);
-    #endif // DATALOGGER_LOG_LOCAL_COORDINATE_SYSTEM
-
-    #if DATALOGGER_LOG_LOCAL_FIELDS
-    gDataLogger_DeclareVariable(&gDataLogger, "local_magnetic", "field", 3, 1, 1);
-    gDataLogger_DeclareVariable(&gDataLogger, "local_gravity", "field", 3, 1, 1);
-    gDataLogger_DeclareVariable(&gDataLogger, "magnetic_magnitude", "uT", 1, 1, 1);
-    gDataLogger_DeclareVariable(&gDataLogger, "gravity_magnitude", "ms2", 1, 1, 1);
-    #endif // DATALOGGER_LOG_LOCAL_FIELDS
-
-    #if DATALOGGER_LOG_ESTIMATOR
-    gDataLogger_DeclareVariable(&gDataLogger, "estimated_roll_angle_radians", "radians", 1, 1, DATALOGGER_STANDARD_QUEUE_SIZE);
-    gDataLogger_DeclareVariable(&gDataLogger, "estimated_pitch_angle_radians", "radians", 1, 1, DATALOGGER_STANDARD_QUEUE_SIZE);
-    gDataLogger_DeclareVariable(&gDataLogger, "estimated_yaw_angle_radians", "radians", 1, 1, DATALOGGER_STANDARD_QUEUE_SIZE);
-    gDataLogger_DeclareVariable(&gDataLogger, "estimated_q0", "quaternion", 1, 1, DATALOGGER_STANDARD_QUEUE_SIZE);
-    gDataLogger_DeclareVariable(&gDataLogger, "estimated_q1", "quaternion", 1, 1, DATALOGGER_STANDARD_QUEUE_SIZE);
-    gDataLogger_DeclareVariable(&gDataLogger, "estimated_q2", "quaternion", 1, 1, DATALOGGER_STANDARD_QUEUE_SIZE);
-    gDataLogger_DeclareVariable(&gDataLogger, "estimated_q3", "quaternion", 1, 1, DATALOGGER_STANDARD_QUEUE_SIZE);
-    gDataLogger_DeclareVariable(&gDataLogger, "estimated_x_position_meters", "meters", 1, 1, DATALOGGER_STANDARD_QUEUE_SIZE);
-    gDataLogger_DeclareVariable(&gDataLogger, "estimated_y_position_meters", "meters", 1, 1, DATALOGGER_STANDARD_QUEUE_SIZE);
-    gDataLogger_DeclareVariable(&gDataLogger, "estimated_z_position_meters", "meters", 1, 1, DATALOGGER_STANDARD_QUEUE_SIZE);
-    gDataLogger_DeclareVariable(&gDataLogger, "estimated_x_velocity_meters_second", "meters", 1, 1, DATALOGGER_STANDARD_QUEUE_SIZE);
-    gDataLogger_DeclareVariable(&gDataLogger, "estimated_y_velocity_meters_second", "meters", 1, 1, DATALOGGER_STANDARD_QUEUE_SIZE);
-    gDataLogger_DeclareVariable(&gDataLogger, "estimated_z_velocity_meters_second", "meters", 1, 1, DATALOGGER_STANDARD_QUEUE_SIZE);
-    #endif // DATALOGGER_LOG_ESTIMATOR
-
-    #if DATALOGGER_LOG_CONTROLLERS
-    gDataLogger_DeclareVariable(&gDataLogger, "control_roll_angle_trim_radians", "radians", 1, 1, DATALOGGER_STANDARD_QUEUE_SIZE);
-    gDataLogger_DeclareVariable(&gDataLogger, "control_pitch_angle_trim_radians", "radians", 1, 1, DATALOGGER_STANDARD_QUEUE_SIZE);
-    gDataLogger_DeclareVariable(&gDataLogger, "control_yaw_angle_trim_radians", "radians", 1, 1, DATALOGGER_STANDARD_QUEUE_SIZE);
-    gDataLogger_DeclareVariable(&gDataLogger, "control_left_aileron_trim", "us", 1, 1, DATALOGGER_STANDARD_QUEUE_SIZE);
-    gDataLogger_DeclareVariable(&gDataLogger, "control_right_aileron_trim", "us", 1, 1, DATALOGGER_STANDARD_QUEUE_SIZE);
-    gDataLogger_DeclareVariable(&gDataLogger, "control_elevator_trim", "us", 1, 1, DATALOGGER_STANDARD_QUEUE_SIZE);
-    gDataLogger_DeclareVariable(&gDataLogger, "control_rudder_trim", "us", 1, 1, DATALOGGER_STANDARD_QUEUE_SIZE);
-    gDataLogger_DeclareVariable(&gDataLogger, "control_roll_angle_reference_radians", "radians", 1, 1, DATALOGGER_STANDARD_QUEUE_SIZE);
-    gDataLogger_DeclareVariable(&gDataLogger, "control_pitch_angle_reference_radians", "radians", 1, 1, DATALOGGER_STANDARD_QUEUE_SIZE);
-    gDataLogger_DeclareVariable(&gDataLogger, "control_yaw_angle_reference_radians", "radians", 1, 1, DATALOGGER_STANDARD_QUEUE_SIZE);
-    #endif // DATALOGGER_LOG_CONTROLLERS
-*/
     datalogger_initialized = DATALOGGER_INITIALIZED;
     datalogger_unlock_mutex();
     #endif //DATALOGGER_MODULE_ENABLED
@@ -365,178 +312,12 @@ int datalogger_update(double t_s, double t_control_exec_s, double t_ui_exec_s, d
     tmp_ci = pmagnetometer_measure->mx; // Remove warning
     #endif // DATALOGGER_LOG_CALIBRATED_IMU
 
- /*
-    #if DATALOGGER_LOG_ESTIMATOR
-    gDataLogger_InsertVariable(&gDataLogger, "estimated_roll_angle_radians", &(pestimation_data->roll_angle_radians));
-    gDataLogger_InsertVariable(&gDataLogger, "estimated_pitch_angle_radians", &(pestimation_data->pitch_angle_radians));
-    gDataLogger_InsertVariable(&gDataLogger, "estimated_yaw_angle_radians", &(pestimation_data->yaw_angle_radians));
-    gDataLogger_InsertVariable(&gDataLogger, "estimated_q0", &(pestimation_data->q0));
-    gDataLogger_InsertVariable(&gDataLogger, "estimated_q1", &(pestimation_data->q1));
-    gDataLogger_InsertVariable(&gDataLogger, "estimated_q2", &(pestimation_data->q2));
-    gDataLogger_InsertVariable(&gDataLogger, "estimated_q3", &(pestimation_data->q3));
-    gDataLogger_InsertVariable(&gDataLogger, "estimated_x_position_meters", &(pestimation_data->x_position_meters));
-    gDataLogger_InsertVariable(&gDataLogger, "estimated_y_position_meters", &(pestimation_data->y_position_meters));
-    gDataLogger_InsertVariable(&gDataLogger, "estimated_z_position_meters", &(pestimation_data->z_position_meters));
-    gDataLogger_InsertVariable(&gDataLogger, "estimated_x_velocity_meters_second", &(pestimation_data->x_velocity_meters_second));
-    gDataLogger_InsertVariable(&gDataLogger, "estimated_y_velocity_meters_second", &(pestimation_data->y_velocity_meters_second));
-    gDataLogger_InsertVariable(&gDataLogger, "estimated_z_velocity_meters_second", &(pestimation_data->z_velocity_meters_second));
-	#else
-    double tmp_est = 0.0;
-	tmp_est = pestimation_data->roll_angle_radians; // Remove warning
-    #endif // DATALOGGER_LOG_ESTIMATOR
-
-    #if DATALOGGER_LOG_CONTROLLERS
-	gDataLogger_InsertVariable(&gDataLogger, "control_roll_angle_trim_radians", &(pcontrol_data->roll_angle_trim_radians));
-	gDataLogger_InsertVariable(&gDataLogger, "control_pitch_angle_trim_radians", &(pcontrol_data->pitch_angle_trim_radians));
-	gDataLogger_InsertVariable(&gDataLogger, "control_yaw_angle_trim_radians", &(pcontrol_data->yaw_angle_trim_radians));
-	gDataLogger_InsertVariable(&gDataLogger, "control_left_aileron_trim", &(pcontrol_data->left_aileron_trim));
-	gDataLogger_InsertVariable(&gDataLogger, "control_right_aileron_trim", &(pcontrol_data->right_aileron_trim));
-	gDataLogger_InsertVariable(&gDataLogger, "control_elevator_trim", &(pcontrol_data->elevator_trim));
-	gDataLogger_InsertVariable(&gDataLogger, "control_rudder_trim", &(pcontrol_data->rudder_trim));
-	gDataLogger_InsertVariable(&gDataLogger, "control_roll_angle_reference_radians", &(pcontrol_data->roll_angle_reference_radians));
-	gDataLogger_InsertVariable(&gDataLogger, "control_pitch_angle_reference_radians", &(pcontrol_data->pitch_angle_reference_radians));
-	gDataLogger_InsertVariable(&gDataLogger, "control_yaw_angle_reference_radians", &(pcontrol_data->yaw_angle_reference_radians));
-    #else
-    double tmp_control = 0.0;
-    tmp_control = pcontrol_data->roll_angle_trim_radians;
-    #endif // DATALOGGER_LOG_CONTROLLERS
-*/
+ 
     datalogger_unlock_mutex();
 
     return DATALOGGER_SUCCESS;
 }
-/*
-int datalogger_set_local_fields(CALIBRATION_LOCAL_FIELDS_STRUCT *plocal_fields_data)
-{
-    static int datalogger_local_fields_inserted = DATALOGGER_VARIABLE_NOT_INSERTED;
 
-    datalogger_lock_mutex();
-
-    if(datalogger_initialized != DATALOGGER_INITIALIZED)
-    {
-        datalogger_unlock_mutex();
-        return DATALOGGER_ERROR_NOT_INITIALIZED;
-    }
-
-    #if DATALOGGER_LOG_LOCAL_FIELDS
-    if(plocal_fields_data->system_initialized != CALIBRATION_LOCAL_FIELDS_INITIALIZED)
-    {
-        datalogger_unlock_mutex();
-    	return DATALOGGER_FAILURE;
-    }
-    if(datalogger_local_fields_inserted == DATALOGGER_VARIABLE_NOT_INSERTED)
-    {
-        double tmp_matrix[3][1];
-
-        tmp_matrix[0][0] = PGMATRIX_DATA(plocal_fields_data->local_magnetic, 1, 1);
-        tmp_matrix[1][0] = PGMATRIX_DATA(plocal_fields_data->local_magnetic, 2, 1);
-        tmp_matrix[2][0] = PGMATRIX_DATA(plocal_fields_data->local_magnetic, 3, 1);
-        gDataLogger_InsertVariable(&gDataLogger, "local_magnetic", &tmp_matrix[0][0]);
-
-        tmp_matrix[0][0] = PGMATRIX_DATA(plocal_fields_data->local_gravity, 1, 1);
-        tmp_matrix[1][0] = PGMATRIX_DATA(plocal_fields_data->local_gravity, 2, 1);
-        tmp_matrix[2][0] = PGMATRIX_DATA(plocal_fields_data->local_gravity, 3, 1);
-        gDataLogger_InsertVariable(&gDataLogger, "local_gravity", &tmp_matrix[0][0]);
-
-        gDataLogger_InsertVariable(&gDataLogger, "magnetic_magnitude", &(plocal_fields_data->magnetic_magnitude));
-        gDataLogger_InsertVariable(&gDataLogger, "gravity_magnitude", &(plocal_fields_data->gravity_magnitude));
-    }
-    else
-  	{
-        datalogger_unlock_mutex();
-    	return DATALOGGER_VARIBALE_ALREADY_INSERTED;
-   	}
-    #else
-    double tmp = 0.0;
-    tmp = plocal_fields_data->magnetic_magnitude; // Remove warning
-    datalogger_local_fields_inserted = DATALOGGER_VARIABLE_NOT_INSERTED;
-    #endif // DATALOGGER_LOG_LOCAL_FIELDS
-    datalogger_unlock_mutex();
-    return DATALOGGER_SUCCESS;
-}
-*/
-/*
-int datalogger_set_local_coordinate_system(CALIBRATION_LOCAL_COORDINATE_SYSTEM_STRUCT *plocal_coordinate_system_data)
-{
-    static int datalogger_local_coordinate_inserted = DATALOGGER_VARIABLE_NOT_INSERTED;
-    datalogger_lock_mutex();
-    if(datalogger_initialized != DATALOGGER_INITIALIZED)
-    {
-        datalogger_unlock_mutex();
-        return DATALOGGER_ERROR_NOT_INITIALIZED;
-    }
-
-    #if DATALOGGER_LOG_LOCAL_COORDINATE_SYSTEM
-    if(plocal_coordinate_system_data->system_initialized != CALIBRATION_LOCAL_COORDINATE_SYSTEM_INITIALIZED)
-  	{
-        datalogger_unlock_mutex();
-    	return DATALOGGER_FAILURE;
-   	}
-
-    if(datalogger_local_coordinate_inserted == DATALOGGER_VARIABLE_NOT_INSERTED)
-    {
-        datalogger_local_coordinate_inserted = DATALOGGER_VARIABLE_INSERTED;
-        double tmp_matrix[3][3];
-
-        tmp_matrix[0][0] = PGMATRIX_DATA(plocal_coordinate_system_data->protation_matrix, 1, 1);
-        tmp_matrix[1][0] = PGMATRIX_DATA(plocal_coordinate_system_data->protation_matrix, 2, 1);
-        tmp_matrix[2][0] = PGMATRIX_DATA(plocal_coordinate_system_data->protation_matrix, 3, 1);
-        tmp_matrix[0][1] = PGMATRIX_DATA(plocal_coordinate_system_data->protation_matrix, 1, 2);
-        tmp_matrix[1][1] = PGMATRIX_DATA(plocal_coordinate_system_data->protation_matrix, 2, 2);
-        tmp_matrix[2][1] = PGMATRIX_DATA(plocal_coordinate_system_data->protation_matrix, 3, 2);
-        tmp_matrix[0][2] = PGMATRIX_DATA(plocal_coordinate_system_data->protation_matrix, 1, 3);
-        tmp_matrix[1][2] = PGMATRIX_DATA(plocal_coordinate_system_data->protation_matrix, 2, 3);
-        tmp_matrix[2][2] = PGMATRIX_DATA(plocal_coordinate_system_data->protation_matrix, 3, 3);
-
-        gDataLogger_InsertVariable(&gDataLogger, "initial_altitude", &(plocal_coordinate_system_data->altitude_meters));
-        gDataLogger_InsertVariable(&gDataLogger, "initial_latitude", &(plocal_coordinate_system_data->latitude_radians));
-        gDataLogger_InsertVariable(&gDataLogger, "initial_longitude", &(plocal_coordinate_system_data->longitude_radians));
-        gDataLogger_InsertVariable(&gDataLogger, "initial_ecef_x", &(plocal_coordinate_system_data->x0));
-        gDataLogger_InsertVariable(&gDataLogger, "initial_ecef_y", &(plocal_coordinate_system_data->y0));
-        gDataLogger_InsertVariable(&gDataLogger, "initial_ecef_z", &(plocal_coordinate_system_data->z0));
-        gDataLogger_InsertVariable(&gDataLogger, "rotation_matrix", &tmp_matrix[0][0]);
-    }
-    else
-   	{
-        datalogger_unlock_mutex();
-    	return DATALOGGER_VARIBALE_ALREADY_INSERTED;
-   	}
-    #else
-    double tmp = 0.0;
-    tmp = plocal_coordinate_system_data->altitude_meters; // Remove warning
-    datalogger_local_coordinate_inserted = DATALOGGER_VARIABLE_NOT_INSERTED;
-    #endif // DATALOGGER_LOG_LOCAL_COORDINATE_SYSTEM
-
-    datalogger_unlock_mutex();
-    return DATALOGGER_SUCCESS;
-}
-
-int datalogger_set_initial_filter_parameters(void)
-{
-    static int datalogger_filter_parameters_inserted = DATALOGGER_VARIABLE_NOT_INSERTED;
-
-    datalogger_lock_mutex();
-
-    if(datalogger_initialized != DATALOGGER_INITIALIZED)
-    {
-        datalogger_unlock_mutex();
-        return DATALOGGER_ERROR_NOT_INITIALIZED;
-    }
-    if(datalogger_filter_parameters_inserted == DATALOGGER_VARIABLE_NOT_INSERTED)
-    {
-        datalogger_filter_parameters_inserted = DATALOGGER_VARIABLE_INSERTED;
-        // TODO! Add X0,P0 and sensor covariances.
-    }
-    else
-   	{
-        datalogger_unlock_mutex();
-    	return DATALOGGER_VARIBALE_ALREADY_INSERTED;
-   	}
-
-    datalogger_unlock_mutex();
-    return DATALOGGER_SUCCESS;
-}
-*/
 int datalogger_set_Ts(double Ts)
 {
     static int datalogger_Ts_inserted = DATALOGGER_VARIABLE_NOT_INSERTED;

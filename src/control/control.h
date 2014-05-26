@@ -7,7 +7,7 @@
 #define ANGLE_HIGH        ANGLE_MAX - 10 
 #define ANGLE_LOW         10
 
-/* Control */
+/* Control Settings*/
 #define V_CTRL_MAX        4095
 
 #include "../communication/communication.h"
