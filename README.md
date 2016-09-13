@@ -14,4 +14,4 @@ This is a software to run in a [Gumstix - Overo](http://gumstix.org/) based embb
 
 
 ## Reference:
- * [ANGELO, CAIO GUSTAVO MESQUITA, Desenvolvimento do sistema embarcado de uma prótese robótica para amputados transfemurais](http://www.lara.unb.br/~antonio/files/docs/Caio%20Angelo%20-%20Relatorio%20TG.pdf)
+ * [ANGELO, CAIO GUSTAVO MESQUITA, Desenvolvimento do sistema embarcado de uma prótese robótica para amputados transfemurais](http://www.ene.unb.br/antonio/resources/reports/cgmangelo2012.pdf)
