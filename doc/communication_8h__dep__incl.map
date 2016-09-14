@@ -1,0 +1,14 @@
+<map id="communication/communication.h" name="communication/communication.h">
+<area shape="rect" href="$calibration_2calibration_8h.html" title="calibration/calibration.h" alt="" coords="53,80,208,107"/>
+<area shape="rect" href="$main_8c.html" title="main.c" alt="" coords="184,155,243,181"/>
+<area shape="rect" href="$calibration_8c.html" title="calibration.c" alt="" coords="267,155,357,181"/>
+<area shape="rect" href="$calibration_8h.html" title="calibration.h" alt="" coords="384,80,475,107"/>
+<area shape="rect" href="$main2_8c.html" title="main2.c" alt="" coords="381,155,448,181"/>
+<area shape="rect" href="$communication_8c.html" title="Communication Routines. " alt="" coords="637,80,848,107"/>
+<area shape="rect" href="$control_8h.html" title="control/control.h" alt="" coords="499,80,613,107"/>
+<area shape="rect" href="$datalogger_8c.html" title="datalogger.c" alt="" coords="872,80,963,107"/>
+<area shape="rect" href="$ui_8c.html" title="ui.c" alt="" coords="987,80,1029,107"/>
+<area shape="rect" href="$calibration_2calibration_8c.html" title="calibration/calibration.c" alt="" coords="5,155,160,181"/>
+<area shape="rect" href="$threads__linux_8c.html" title="threads_linux.c" alt="" coords="472,155,581,181"/>
+<area shape="rect" href="$control_8c.html" title="control/control.c" alt="" coords="605,155,720,181"/>
+</map>

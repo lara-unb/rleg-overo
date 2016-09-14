@@ -1,0 +1,17 @@
+<map id="communication/spi_functions.h" name="communication/spi_functions.h">
+<area shape="rect" href="$communication_8h.html" title="communication/communication.h" alt="" coords="324,88,535,115"/>
+<area shape="rect" href="$encoder__functions_8c.html" title="Rev 0 &#45; 19/06/2013 RLEG project &#45; 2013. " alt="" coords="559,80,719,123"/>
+<area shape="rect" href="$spi__functions_8c.html" title="communication/spi_functions.c" alt="" coords="743,88,943,115"/>
+<area shape="rect" href="$calibration_2calibration_8h.html" title="calibration/calibration.h" alt="" coords="53,171,208,197"/>
+<area shape="rect" href="$main_8c.html" title="main.c" alt="" coords="184,245,243,272"/>
+<area shape="rect" href="$calibration_8c.html" title="calibration.c" alt="" coords="267,245,357,272"/>
+<area shape="rect" href="$calibration_8h.html" title="calibration.h" alt="" coords="384,171,475,197"/>
+<area shape="rect" href="$main2_8c.html" title="main2.c" alt="" coords="381,245,448,272"/>
+<area shape="rect" href="$communication_8c.html" title="Communication Routines. " alt="" coords="637,171,848,197"/>
+<area shape="rect" href="$control_8h.html" title="control/control.h" alt="" coords="499,171,613,197"/>
+<area shape="rect" href="$datalogger_8c.html" title="datalogger.c" alt="" coords="872,171,963,197"/>
+<area shape="rect" href="$ui_8c.html" title="ui.c" alt="" coords="987,171,1029,197"/>
+<area shape="rect" href="$calibration_2calibration_8c.html" title="calibration/calibration.c" alt="" coords="5,245,160,272"/>
+<area shape="rect" href="$threads__linux_8c.html" title="threads_linux.c" alt="" coords="472,245,581,272"/>
+<area shape="rect" href="$control_8c.html" title="control/control.c" alt="" coords="605,245,720,272"/>
+</map>

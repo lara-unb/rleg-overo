@@ -1,0 +1,5 @@
+<map id="devices_close" name="devices_close">
+<area shape="rect" href="$communication_8c.html#a1d5f01d0124cff7030b5c4951b4bbefa" title="Applies the control signal to the actuator. " alt="" coords="157,31,221,57"/>
+<area shape="rect" href="$spi__functions_8c.html#a5c52e64c336d59215ce0a4b6f340dc9f" title="WRITE DATA TO D/A CONVERTER MCP3922. " alt="" coords="272,5,347,32"/>
+<area shape="rect" href="$gpio__functions_8c.html#a9672ca43e65fa527cd6bf43db9aea594" title="gpio_write" alt="" coords="269,56,349,83"/>
+</map>

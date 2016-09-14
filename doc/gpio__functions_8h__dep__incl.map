@@ -1,0 +1,16 @@
+<map id="communication/gpio_functions.h" name="communication/gpio_functions.h">
+<area shape="rect" href="$communication_8h.html" title="communication/communication.h" alt="" coords="324,104,535,131"/>
+<area shape="rect" href="$gpio__functions_8c.html" title="communication/gpio\l_functions.c" alt="" coords="559,96,695,139"/>
+<area shape="rect" href="$calibration_2calibration_8h.html" title="calibration/calibration.h" alt="" coords="53,187,208,213"/>
+<area shape="rect" href="$main_8c.html" title="main.c" alt="" coords="184,261,243,288"/>
+<area shape="rect" href="$calibration_8c.html" title="calibration.c" alt="" coords="267,261,357,288"/>
+<area shape="rect" href="$calibration_8h.html" title="calibration.h" alt="" coords="384,187,475,213"/>
+<area shape="rect" href="$main2_8c.html" title="main2.c" alt="" coords="381,261,448,288"/>
+<area shape="rect" href="$communication_8c.html" title="Communication Routines. " alt="" coords="637,187,848,213"/>
+<area shape="rect" href="$control_8h.html" title="control/control.h" alt="" coords="499,187,613,213"/>
+<area shape="rect" href="$datalogger_8c.html" title="datalogger.c" alt="" coords="872,187,963,213"/>
+<area shape="rect" href="$ui_8c.html" title="ui.c" alt="" coords="987,187,1029,213"/>
+<area shape="rect" href="$calibration_2calibration_8c.html" title="calibration/calibration.c" alt="" coords="5,261,160,288"/>
+<area shape="rect" href="$threads__linux_8c.html" title="threads_linux.c" alt="" coords="472,261,581,288"/>
+<area shape="rect" href="$control_8c.html" title="control/control.c" alt="" coords="605,261,720,288"/>
+</map>

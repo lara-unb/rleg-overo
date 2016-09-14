@@ -1,0 +1,9 @@
+<map id="calibration.c" name="calibration.c">
+<area shape="rect" href="$communication_8h.html" title="communication/communication.h" alt="" coords="535,155,745,181"/>
+<area shape="rect" href="$calibration_8h.html" title="calibration.h" alt="" coords="481,80,572,107"/>
+<area shape="rect" href="$imu__functions_8h.html" title="Rev 0 &#45; 06/11/2012 RLEG project &#45; 2012. " alt="" coords="881,229,993,256"/>
+<area shape="rect" href="$imu__regs_8h.html" title="Registers that are present in each device from the IMU (ADXL345, ITG3200 and HMC5883) ..." alt="" coords="1408,304,1493,331"/>
+<area shape="rect" href="$spi__functions_8h.html" title="spi_functions.h" alt="" coords="452,229,559,256"/>
+<area shape="rect" href="$gpio__functions_8h.html" title="gpio_functions.h" alt="" coords="583,229,697,256"/>
+<area shape="rect" href="$encoder__functions_8h.html" title="Rev 0 &#45; 18/06/2013 RLEG project &#45; 2013. " alt="" coords="721,229,857,256"/>
+</map>

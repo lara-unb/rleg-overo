@@ -1,0 +1,14 @@
+<map id="gyr_read_reg" name="gyr_read_reg">
+<area shape="rect" href="$group__gyr.html#ga79875465c3a29fd9ec77308c80a8bc37" title="READ ALL DATA AT ONCE (X, Y, Z and T) " alt="" coords="151,56,273,83"/>
+<area shape="rect" href="$group__gyr.html#ga271b37e9ace81b18bb2f83787247d262" title="READ DATA (X, Y, Z or T) " alt="" coords="160,107,264,133"/>
+<area shape="rect" href="$communication_8h.html#a26f82e8af3b5ce23d5cd3a41db6e0b68" title="READ ALL DATA FROM SENSORS AND ADC. " alt="" coords="323,56,421,83"/>
+<area shape="rect" href="$main_8c.html#a260fc92769e04b9feb7b3f34e3db39e6" title="control_task" alt="" coords="480,56,571,83"/>
+<area shape="rect" href="$main2_8h.html#a26855b7739897854265d51aa61329390" title="periodic_task_1" alt="" coords="469,107,581,133"/>
+<area shape="rect" href="$main_8c.html#a906b5b22553a6854a42529c36547e609" title="ui_task" alt="" coords="493,5,557,32"/>
+<area shape="rect" href="$main2_8h.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="680,56,728,83"/>
+<area shape="rect" href="$main_8c.html#ab6a8d67869b1d733299a568f3d80fd76" title="main_task" alt="" coords="664,5,744,32"/>
+<area shape="rect" href="$main2_8h.html#a90885bae1b9535b16e014fb928e98e37" title="timer_function_task_1" alt="" coords="631,107,777,133"/>
+<area shape="rect" href="$main2_8c.html#a5ce2b6a7dd4d00c90fe18098091044aa" title="f_timer_task_1" alt="" coords="827,107,933,133"/>
+<area shape="rect" href="$main2_8h.html#a0e411070b7f487a8ab6a60b180f50e12" title="timer_start_task_1" alt="" coords="983,107,1111,133"/>
+<area shape="rect" href="$main2_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="1161,107,1209,133"/>
+</map>
