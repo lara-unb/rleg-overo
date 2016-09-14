@@ -1,9 +1,0 @@
-<map id="gyr_init" name="gyr_init">
-<area shape="rect" href="$communication_8h.html#a2d1e523ff70db11ca4096f97af5da000" title="INITIALIZATION OF SENSORS AND DEVICES. " alt="" coords="117,31,205,57"/>
-<area shape="rect" href="$main2_8h.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="285,5,333,32"/>
-<area shape="rect" href="$main2_8h.html#a944f7352f18ed248c1b1143f51edc391" title="periodic_task_2" alt="" coords="253,56,365,83"/>
-<area shape="rect" href="$main2_8h.html#a01c18e97a4488be2912eb738b2e7f890" title="timer_function_task_2" alt="" coords="415,56,561,83"/>
-<area shape="rect" href="$main2_8c.html#a735ebf3d0d37c7d8187199e6565bcb5c" title="f_timer_task_2" alt="" coords="611,56,717,83"/>
-<area shape="rect" href="$main2_8h.html#ae59c93969d017f18e3e38b2f9f7888ca" title="timer_start_task_2" alt="" coords="767,56,895,83"/>
-<area shape="rect" href="$main2_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="945,56,993,83"/>
-</map>
